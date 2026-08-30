@@ -24,7 +24,11 @@
 #include "core/arts.h"
 
 #include "vehcaraudio.h"
+#include "vehengineaudio.h"
+#include "vehsurfaceaudio.h"
 
+class AudSoundBase;
+class Vector3;
 class vehCarDamage;
 class vehCarSim;
 
@@ -90,8 +94,15 @@ public:
 
     // ?UpdateEcho@vehNitroCarAudio@@QAEXXZ
     ARTS_IMPORT void UpdateEcho();
+
+public:
+    // Members from 0x130; everything below that belongs to vehCarAudio.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    f32 NitroVolume; // 0x130
+    i32 field_134; // 0x134
+    AudSoundBase* NitroSound; // 0x138
 };
 
 // ??_7vehNitroCarAudio@@6B@
 // vtable at 0x005B31D8
-// check_size(vehNitroCarAudio, 0x13C); // size known, members are not - cannot verify
+check_size(vehNitroCarAudio, 0x13C);

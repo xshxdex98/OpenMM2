@@ -24,15 +24,17 @@
 #include "core/arts.h"
 
 #include "lvl/lvlinstance.h"
+#include "vector7/vector3.h"
 
 class Matrix34;
-class Vector3;
 class aiVehicleData;
 class aiVehicleSpline;
 class dgPhysEntity;
+class lvlInstance_vtbl;
 class modShader;
 class modStatic;
 class phBound;
+class vehBreakableMgr;
 
 class aiVehicleInstance : public lvlInstance
 {
@@ -94,8 +96,23 @@ public:
 private:
     // ?InitBreakable@aiVehicleInstance@@AAE_NPBD0H@Z
     ARTS_IMPORT bool InitBreakable(const char* arg1, const char* arg2, i32 arg3);
+
+public:
+    // Members from 0x014; everything below that belongs to lvlInstance.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    aiVehicleSpline* Spline; // 0x014
+    i16 SignalFrequency; // 0x018
+    u8 SignalState; // 0x01A
+    u8[1] pad_1B; // 0x01B
+    i16 LOD; // 0x01C
+    i16 Variant; // 0x01E
+    vehBreakableMgr* BreakableMgr; // 0x020
+    Vector3 HeadlightPosition; // 0x024
+    u8[8] pad_28; // 0x028
+    Vector3 VehiclePosition; // 0x030
+    u8[8] pad_34; // 0x034
 };
 
 // ??_7aiVehicleInstance@@6B@
 // vtable at 0x005B590C
-// check_size(aiVehicleInstance, 0x3C); // size known, members are not - cannot verify
+check_size(aiVehicleInstance, 0x3C);

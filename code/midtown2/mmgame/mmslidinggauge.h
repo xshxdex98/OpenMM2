@@ -25,6 +25,7 @@
 
 #include "mmlineargauge.h"
 
+class gfxBitmap;
 class mmExternalView;
 
 class mmSlidingGauge : public mmLinearGauge
@@ -38,6 +39,11 @@ public:
 
     // ?Init@mmSlidingGauge@@QAEXPADPAM1HPAVmmExternalView@@H@Z
     ARTS_IMPORT void Init(char* arg1, f32* arg2, f32* arg3, i32 arg4, mmExternalView* arg5, i32 arg6);
+
+public:
+    // Members from 0x020; everything below that belongs to mmLinearGauge.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    i32 BitmapDimension; // 0x020
 };
 
-// check_size(mmSlidingGauge, 0x24); // size known, members are not - cannot verify
+check_size(mmSlidingGauge, 0x24);

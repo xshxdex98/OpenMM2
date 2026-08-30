@@ -24,10 +24,12 @@
 #include "core/arts.h"
 
 #include "lvl/lvlinstance.h"
+#include "vector7/vector3.h"
 
 class Matrix34;
-class Vector3;
 class dgPhysEntity;
+class lvlInstance_vtbl;
+class vehTrailer;
 
 class vehTrailerInstance : public lvlInstance
 {
@@ -67,8 +69,16 @@ public:
 
     // ?Init@vehTrailerInstance@@QAEXPBDABVVector3@@H@Z
     ARTS_IMPORT void Init(const char* arg1, const Vector3& arg2, i32 arg3);
+
+public:
+    // Members from 0x014; everything below that belongs to lvlInstance.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    vehTrailer* Trailer; // 0x014
+    i32 Variant; // 0x018
+    Vector3 TrailerHitchPosition; // 0x01C
+    u8[8] pad_20; // 0x020
 };
 
 // ??_7vehTrailerInstance@@6B@
 // vtable at 0x005B2F84
-// check_size(vehTrailerInstance, 0x28); // size known, members are not - cannot verify
+check_size(vehTrailerInstance, 0x28);

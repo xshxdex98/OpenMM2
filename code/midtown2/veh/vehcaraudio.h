@@ -25,7 +25,12 @@
 
 #include "audio/aud3dobject.h"
 
+#include "vehengineaudio.h"
+#include "vehsurfaceaudio.h"
+
 class AudImpact;
+class AudSoundBase;
+class Vector3;
 class vehCarDamage;
 class vehCarSim;
 
@@ -125,8 +130,36 @@ public:
 private:
     // ?LoadImpacts@vehCarAudio@@AAE_NPAD0@Z
     ARTS_IMPORT bool LoadImpacts(char* arg1, char* arg2);
+
+public:
+    // Members from 0x060; everything below that belongs to Aud3DObject.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    f32 field_60; // 0x060
+    f32 field_64; // 0x064
+    i32 field_68; // 0x068
+    i32 field_6c; // 0x06C
+    f32 MinAmpSpeed; // 0x070
+    f32 field_74; // 0x074
+    f32 HornVolume; // 0x078
+    f32 Pan; // 0x07C
+    vehSurfaceAudio SurfaceAudio; // 0x080
+    u8[128] pad_84; // 0x084
+    vehEngineAudio EngineAudio; // 0x104
+    u8[4] pad_108; // 0x108
+    AudSoundBase* HornSound; // 0x10C
+    AudSoundBase* ClutchSound; // 0x110
+    f32 ClutchSampleVolume; // 0x114
+    vehCarSim* CarSim; // 0x118
+    i32 HornSampleIndex; // 0x11C
+    i32 ClutchSampleIndex; // 0x120
+    i32 LastGear; // 0x124
+    i32 field_128; // 0x128
+    u8 field_12c; // 0x12C
+    bool EchoOn; // 0x12D
+    u8 field_12e; // 0x12E
+    u8 field_12f; // 0x12F
 };
 
 // ??_7vehCarAudio@@6B@
 // vtable at 0x005B3190
-// check_size(vehCarAudio, 0x130); // size known, members are not - cannot verify
+check_size(vehCarAudio, 0x130);

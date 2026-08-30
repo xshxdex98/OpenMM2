@@ -26,13 +26,13 @@
 #include "arts7/asbirthrule.h"
 #include "arts7/asparticles.h"
 #include "dg/dgphysentity.h"
-#include "ph/phcolliderjointed.h"
 #include "ph/phinertialcs.h"
 #include "ph/phsleep.h"
-#include "veh/vehwheelcheap.h"
 
+class Base_vtbl;
 struct ImpactCBData;
 class aiVehicleInstance;
+class datCallback;
 class lvlInstance;
 
 class aiVehicleActive : public dgPhysEntity
@@ -83,13 +83,22 @@ public:
 public:
     // Members from 0x258; everything below that belongs to dgPhysEntity.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    u8 field_2C8[16]; // 0x2C8
-    phInertialCS field_2D8; // 0x2D8
-    phSleep field_48C; // 0x48C
-    vehWheelCheap field_4DC; // 0x4DC
-    vehWheelCheap field_664; // 0x664
-    vehWheelCheap field_7EC; // 0x7EC
-    vehWheelCheap field_974; // 0x974
+    f32 CurDamage; // 0x2C8
+    f32 MaxDamage; // 0x2CC
+    i32 field_2D0; // 0x2D0
+    lvlInstance* Instance; // 0x2D4
+    phInertialCS ICS; // 0x2D8
+    u8[432] pad_2DC; // 0x2DC
+    phSleep Sleep; // 0x48C
+    u8[76] pad_490; // 0x490
+    vehWeelCheap WheelFrontLeft; // 0x4DC
+    u8[388] pad_4E0; // 0x4E0
+    vehWeelCheap WheelFrontRight; // 0x664
+    u8[388] pad_668; // 0x668
+    vehWeelCheap WheelBackLeft; // 0x7EC
+    u8[388] pad_7F0; // 0x7F0
+    vehWeelCheap WheelBackRight; // 0x974
+    u8[388] pad_978; // 0x978
 };
 
 // ??_7aiVehicleActive@@6B@

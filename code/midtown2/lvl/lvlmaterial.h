@@ -26,6 +26,7 @@
 #include "ph/phmaterial.h"
 
 class datAsciiTokenizer;
+class phMaterial_vtbl;
 
 class lvlMaterial : public phMaterial
 {
@@ -45,14 +46,12 @@ public:
 public:
     // Members from 0x030; everything below that belongs to phMaterial.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i32 field_30; // 0x030
-    i32 field_34; // 0x034
-    i32 field_38; // 0x038
-    i32 field_3C; // 0x03C
-    u16 field_40; // 0x040
-    u16 field_42; // 0x042
-    f32 field_44; // 0x044
-    i32 field_48; // 0x048
+    f32 Drag; // 0x030
+    f32 Width; // 0x034
+    f32 Height; // 0x038
+    f32 Depth; // 0x03C
+    __int16[2] PtxIndex; // 0x040
+    f32[2] PtxThreshold; // 0x044
 };
 
 // ??_7lvlMaterial@@6B@

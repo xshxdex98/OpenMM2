@@ -23,11 +23,15 @@
 
 #include "core/arts.h"
 
+#include "arts7/asparticles.h"
+#include "ph/phinertialcs.h"
+#include "ph/phsleep.h"
+
 #include "dgphysentity.h"
 
+class Base_vtbl;
 class dgBangerInstance;
 class lvlInstance;
-class phInertialCS;
 
 class dgBangerActive : public dgPhysEntity
 {
@@ -58,8 +62,18 @@ public:
 
     // ?Detach@dgBangerActive@@QAEXXZ
     ARTS_IMPORT void Detach();
+
+public:
+    // Members from 0x258; everything below that belongs to dgPhysEntity.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    phSleep Sleep; // 0x26C
+    u8[76] pad_270; // 0x270
+    lvlInstance* Instance; // 0x2BC
+    asParticles Particles; // 0x2C0
+    u8[80] pad_2C4; // 0x2C4
+    f32 Timer; // 0x314
 };
 
 // ??_7dgBangerActive@@6B@
 // vtable at 0x005B1398
-// check_size(dgBangerActive, 0x318); // size known, members are not - cannot verify
+check_size(dgBangerActive, 0x318);

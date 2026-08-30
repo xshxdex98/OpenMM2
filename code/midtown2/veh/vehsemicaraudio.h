@@ -24,7 +24,11 @@
 #include "core/arts.h"
 
 #include "vehcaraudio.h"
+#include "vehengineaudio.h"
+#include "vehsurfaceaudio.h"
 
+class AudSoundBase;
+class Vector3;
 class vehCarDamage;
 class vehCarSim;
 
@@ -90,8 +94,18 @@ public:
 
     // ?UpdateReverse@vehSemiCarAudio@@QAEXXZ
     ARTS_IMPORT void UpdateReverse();
+
+public:
+    // Members from 0x130; everything below that belongs to vehCarAudio.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    f32 ReverseVolume; // 0x130
+    f32 AirBrakeVolume; // 0x134
+    AudSoundBase* ReverseSound; // 0x138
+    AudSoundBase* AirBrakeSound; // 0x13C
+    i32 field_140; // 0x140
+    i32 field_144; // 0x144
 };
 
 // ??_7vehSemiCarAudio@@6B@
 // vtable at 0x005B31B4
-// check_size(vehSemiCarAudio, 0x148); // size known, members are not - cannot verify
+check_size(vehSemiCarAudio, 0x148);

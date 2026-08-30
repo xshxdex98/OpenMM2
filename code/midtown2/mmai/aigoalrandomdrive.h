@@ -89,8 +89,16 @@ private:
 
     // ?UpcomingAccident@aiGoalRandomDrive@@AAEHXZ
     ARTS_IMPORT i32 UpcomingAccident();
+
+public:
+    // Members from 0x008; everything below that belongs to aiGoal.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    aiRailSet* RailSet; // 0x008
+    aiVehicleSpline* VehicleSpline; // 0x00C
+    i16 CalcLane; // 0x010
+    i16 Stopped; // 0x012
 };
 
 // ??_7aiGoalRandomDrive@@6B@
 // vtable at 0x005B5BF4
-// check_size(aiGoalRandomDrive, 0x14); // size known, members are not - cannot verify
+check_size(aiGoalRandomDrive, 0x14);

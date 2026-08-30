@@ -25,8 +25,9 @@
 
 #include "lvl/lvlinstance.h"
 #include "vector7/matrix34.h"
+#include "vector7/vector3.h"
 
-class Vector3;
+class lvlInstance_vtbl;
 
 class mmWaypointInstance : public lvlInstance
 {
@@ -58,14 +59,14 @@ public:
 public:
     // Members from 0x014; everything below that belongs to lvlInstance.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i32 field_14; // 0x014
-    i32 field_18; // 0x018
-    i32 field_1C; // 0x01C
-    Matrix34 field_20; // 0x020
-    u8 field_50[4]; // 0x050
-    u8 field_54; // 0x054
-    u8 field_55[3]; // 0x055
-    i32 field_58; // 0x058
+    Vector3 Scale; // 0x014
+    u8[8] pad_18; // 0x018
+    Matrix34 Matrix; // 0x020
+    u8[44] pad_24; // 0x024
+    i32 HasBeenDrawn; // 0x050
+    bool Visible; // 0x054
+    u8[3] pad_55; // 0x055
+    i32 ShaderSet; // 0x058
 };
 
 // ??_7mmWaypointInstance@@6B@

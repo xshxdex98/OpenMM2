@@ -28,6 +28,8 @@
 #include "dgbangerinstance.h"
 
 class Vector3;
+class lvlInstance;
+class lvlInstance_vtbl;
 
 class dgHitBangerInstance : public dgBangerInstance
 {
@@ -56,7 +58,9 @@ public:
 public:
     // Members from 0x018; everything below that belongs to dgBangerInstance.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    Matrix34 field_28; // 0x028
+    char[16] gap; // 0x018
+    Matrix34 Matrix; // 0x028
+    u8[44] pad_2C; // 0x02C
 };
 
 // ??_7dgHitBangerInstance@@6B@

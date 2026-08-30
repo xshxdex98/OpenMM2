@@ -23,7 +23,8 @@
 
 #include "core/arts.h"
 
-class Vector3;
+#include "vector7/vector3.h"
+
 class lvlSegmentInfo;
 class phSegment;
 
@@ -35,6 +36,14 @@ public:
 
     // ?Set@lvlSegment@@QAEXABVVector3@@0HPAVlvlSegmentInfo@@@Z
     ARTS_IMPORT void Set(const Vector3& arg1, const Vector3& arg2, i32 arg3, lvlSegmentInfo* arg4);
+
+public:
+    // Members from 0x01C; everything below that belongs to phSegment.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    bool IsVertical; // 0x01C
+    u8[3] pad_1D; // 0x01D
+    f32 InvLength; // 0x020
+    lvlSegmentInfo* SegmentInfo; // 0x024
 };
 
-// check_size(lvlSegment, 0x28); // size known, members are not - cannot verify
+check_size(lvlSegment, 0x28);

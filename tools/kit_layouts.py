@@ -91,13 +91,60 @@ def map_type(text):
     return t + "*" * stars
 
 
-def convert(cls, fields, size):
+def with_base(cls, fields, sizes, bases, seen=None):
+    """A class's members, with any embedded base spliced in ahead of them.
+
+    The kit writes a derived class as its base embedded at 0 followed by its own members:
+
+        struct MM2::vehCarAudio  // sizeof=0x130
+        {
+            /* 0x0000 */ MM2::Aud3DObject ;      <- the base, recorded separately by mm2types.py
+            /* 0x0060 */ float field_60;         <- own members start at the base's size
+        };
+
+    So a derived class's list does not begin at 0 and cannot tile on its own, which is why 126 of
+    them were refused outright. data/layouts.json stores the FULL flattened layout from offset 0 -
+    tools/genheaders.py then emits only the members at or beyond the base's size, which is how
+    `class asBirthRule : public asNode` comes out declaring its own fields from 0x18 up. So the
+    base's members have to be spliced back in here.
+
+    Recursive, because a base can itself be derived. `seen` breaks a cycle rather than recursing
+    until the stack gives out - the hierarchy is recovered data and need not be acyclic.
+    """
+    seen = seen or set()
+    own = sorted((f for f in fields.get(cls, []) if f.get("name") and f.get("offset") is not None),
+                 key=lambda f: f["offset"])
+    if not own or own[0]["offset"] == 0:
+        return own, None
+
+    base = bases.get(cls)
+    if not base:
+        return None, "starts at 0x%X with no base recorded" % own[0]["offset"]
+    if base in seen:
+        return None, "cycle through %s" % base
+    if base not in fields:
+        return None, "base %s has no layout in the kit" % base
+
+    # The base must account for exactly the space before the first own member. If it does not, the
+    # two are describing different objects and splicing them would invent a layout.
+    base_size = sizes.get(base)
+    if base_size != own[0]["offset"]:
+        return None, ("base %s is 0x%X but own members start at 0x%X"
+                      % (base, base_size or 0, own[0]["offset"]))
+
+    inherited, why = with_base(base, fields, sizes, bases, seen | {cls})
+    if inherited is None:
+        return None, "base %s: %s" % (base, why)
+
+    return inherited + own, None
+
+
+def convert(cls, members, size):
     """One class's member list, or (None, reason) if it cannot be trusted."""
-    members = [f for f in fields if f.get("name") and f.get("offset") is not None]
     if not members:
         return None, "no members"
 
-    members.sort(key=lambda f: f["offset"])
+    members = sorted(members, key=lambda f: f["offset"])
 
     # A duplicate offset means two names for the same storage - a union, or a mistake. Either way
     # the list no longer tiles, and guessing which one to keep is not this tool's business.
@@ -158,6 +205,7 @@ def main():
 
     sizes = kit.get("sizes") or {}
     fields = kit.get("fields") or {}
+    bases = kit.get("bases") or {}
 
     # What the binary actually hands to operator new, from tools/verify_sizes.py --json. The kit's
     # sizeof is a recovered value and can be wrong: it says vehSiren is 0x164 where every call site
@@ -188,7 +236,12 @@ def main():
                              % (size, real)))
             continue
 
-        members, why = convert(cls, fields[cls], size)
+        flat, why = with_base(cls, fields, sizes, bases)
+        if flat is None:
+            rejected.append((cls, why))
+            continue
+
+        members, why = convert(cls, flat, size)
         if members is None:
             rejected.append((cls, why))
             continue

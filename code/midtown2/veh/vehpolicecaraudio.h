@@ -24,8 +24,12 @@
 #include "core/arts.h"
 
 #include "vehcaraudio.h"
+#include "vehengineaudio.h"
+#include "vehsurfaceaudio.h"
 
+class AudSoundBase;
 class Stream;
+class Vector3;
 struct tagSirenData;
 class vehCarDamage;
 class vehCarSim;
@@ -144,8 +148,13 @@ private:
 
     // ?s_iNumCopsPursuingPlayer@vehPoliceCarAudio@@0HA
     ARTS_IMPORT static i32 s_iNumCopsPursuingPlayer;
+
+public:
+    // Members from 0x130; everything below that belongs to vehCarAudio.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    unsigned __int8[280] _buffer; // 0x130
 };
 
 // ??_7vehPoliceCarAudio@@6B@
 // vtable at 0x005B2E18
-// check_size(vehPoliceCarAudio, 0x248); // size known, members are not - cannot verify
+check_size(vehPoliceCarAudio, 0x248);

@@ -23,6 +23,8 @@
 
 #include "core/arts.h"
 
+#include "vector7/vector3.h"
+
 #include "aigoal.h"
 
 class aiRailSet;
@@ -51,8 +53,18 @@ public:
 
     // ?ReplayDebug@aiGoalRegainRail@@QAEXXZ
     ARTS_IMPORT void ReplayDebug();
+
+public:
+    // Members from 0x008; everything below that belongs to aiGoal.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    aiRailSet* RailSet; // 0x008
+    aiVehicleAmbient* VehicleAmbient; // 0x00C
+    Vector3 StartPos; // 0x010
+    u8[8] pad_14; // 0x014
+    f32 RoadDist; // 0x01C
+    f32 RegainDist; // 0x020
 };
 
 // ??_7aiGoalRegainRail@@6B@
 // vtable at 0x005B5BDC
-// check_size(aiGoalRegainRail, 0x24); // size known, members are not - cannot verify
+check_size(aiGoalRegainRail, 0x24);

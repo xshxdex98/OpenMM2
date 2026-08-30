@@ -65,9 +65,13 @@ private:
 public:
     // Members from 0x008; everything below that belongs to aiGoal.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    u8 field_8[16]; // 0x008
-    i32 field_18; // 0x018
-    i32 field_1C; // 0x01C
+    u8 field_8; // 0x008
+    u8[3] pad_9; // 0x009
+    f32 Side; // 0x00C
+    f32 Heading; // 0x010
+    f32 PlayerSideReactDist; // 0x014
+    aiRailSet* RailSet; // 0x018
+    aiVehicleAmbient* VehicleAmbient; // 0x01C
 };
 
 // ??_7aiGoalAvoidPlayer@@6B@

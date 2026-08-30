@@ -19,8 +19,8 @@ Two numbers matter and they are different:
 | | | |
 |---|--:|---|
 | Ported | 2.02% | `#...........................` |
-| Ready to port | 66.9% | `###################.........` |
-| Size known, members not | 16.9% | `#####.......................` |
+| Ready to port | 69.2% | `###################.........` |
+| Size known, members not | 14.6% | `####........................` |
 
 | Metric | Value |
 |---|--:|
@@ -29,8 +29,8 @@ Two numbers matter and they are different:
 | Machine code | 1.7 MB |
 | Code ported | 34.7 KB |
 | Classes | 535 |
-| Classes with a member layout | 262 (49%) |
-| Classes with only a size | 81 |
+| Classes with a member layout | 277 (52%) |
+| Classes with only a size | 66 |
 | Virtual methods | 1938 |
 | Vftables | 340 |
 | `game.asm` remaining | 23.2 MB, 10897 PROCs |
@@ -47,13 +47,13 @@ layout is known.
 |---|--:|--:|--:|--:|--:|--:|
 | `misc` | 128 | 3559 | 512.7 KB | 29.8% | 5.1% | 78% |
 | `mm` | 106 | 1732 | 329.8 KB | 19.2% | 0.2% | 64% |
-| `ai` | 42 | 773 | 245.2 KB | 14.3% | 0.5% | 47% |
+| `ai` | 42 | 773 | 245.2 KB | 14.3% | 0.5% | 56% |
 | `ph` | 27 | 437 | 164.2 KB | 9.5% | 0.0% | 75% |
-| `veh` | 34 | 585 | 91.5 KB | 5.3% | 0.0% | 68% |
+| `veh` | 34 | 585 | 91.5 KB | 5.3% | 0.0% | 84% |
 | `gfx` | 13 | 189 | 46.6 KB | 2.7% | 13.3% | 55% |
 | `sdl` | 4 | 37 | 46.5 KB | 2.7% | 0.0% | 99% |
-| `dg` | 28 | 263 | 44.3 KB | 2.6% | 0.0% | 50% |
-| `lvl` | 18 | 221 | 36.3 KB | 2.1% | 0.0% | 57% |
+| `dg` | 28 | 263 | 44.3 KB | 2.6% | 0.0% | 56% |
+| `lvl` | 18 | 221 | 36.3 KB | 2.1% | 0.0% | 58% |
 | `as` | 18 | 246 | 34.9 KB | 2.0% | 0.0% | 84% |
 | `aud` | 19 | 322 | 23.9 KB | 1.4% | 0.0% | 0% |
 | `cam` | 12 | 136 | 22.1 KB | 1.3% | 0.0% | 68% |
@@ -88,7 +88,7 @@ layout is known.
 - **1938 virtual methods across 340 vftables.** Constructors must be ported together
   with every virtual of their class, or the vtable the compiler emits will not link.
 - Largest class not yet ported: **`aiVehiclePhysics`** at 58.7 KB.
-- **273 classes (569.4 KB, 33% of code) have no known layout** and are blocked: their
+- **258 classes (530.6 KB, 31% of code) have no known layout** and are blocked: their
   member offsets would have to be guessed, which is how you get silent corruption.
 
 ### Biggest blocked classes
@@ -102,13 +102,13 @@ Recovering these layouts unblocks the most code per unit of effort.
 | `gfxPipeline` | 57 | 21.1 KB |
 | `phContactMgr` | 37 | 15.6 KB |
 | `mmPlayer` | 39 | 13.3 KB |
-| `aiGoalRandomDrive` | 20 | 13.2 KB |
 | `dgTrailerJoint` | 33 | 11.6 KB |
 | `mmMultiBlitz` | 20 | 7.2 KB |
 | `phCollision` | 7 | 7.0 KB |
 | `mmSingleCircuit` | 30 | 6.8 KB |
 | `mmSingleRace` | 30 | 6.8 KB |
 | `aiPoliceOfficer` | 25 | 6.6 KB |
+| `mmSingleBlitz` | 26 | 6.3 KB |
 
 ### Biggest ready classes
 
@@ -134,7 +134,6 @@ Layout known, so these can be started today.
 | Date | Ported | Code ported | game.asm |
 |---|--:|--:|--:|
 | 2026-08-29 | 2.00% | 34.4 KB | 23.4 MB |
-| 2026-08-29 | 2.00% | 34.4 KB | 23.4 MB |
 | 2026-08-29 | 2.01% | 34.6 KB | 23.4 MB |
 | 2026-08-29 | 2.01% | 34.6 KB | 23.4 MB |
 | 2026-08-29 | 2.01% | 34.6 KB | 23.4 MB |
@@ -148,6 +147,7 @@ Layout known, so these can be started today.
 | 2026-08-30 | 2.01% | 34.6 KB | 23.2 MB |
 | 2026-08-30 | 2.01% | 34.6 KB | 23.2 MB |
 | 2026-08-30 | 2.01% | 34.6 KB | 23.2 MB |
+| 2026-08-30 | 2.02% | 34.7 KB | 23.2 MB |
 
 Each run of `tools/progress.py` appends a snapshot to
 `data/progress_history.jsonl`; pass `--no-record` to print without recording.
