@@ -936,3 +936,38 @@ py tools/verify_arity.py
 ```
 
 **Regenerate the data**: `py tools/symbols.py && py tools/vtables.py && py tools/genheaders.py && py tools/inventory.py`
+
+---
+
+## Picking the next function: screen before you write
+
+Three tests reject a port, and all three can be applied **before** any C++ exists. Applying them
+up front is the difference between choosing a target and discovering a wasted build.
+
+1. **Arity.** The mangled name's stack bytes must equal the code's `ret imm16`.
+   `py tools/verify_arity.py` lists every symbol where they disagree.
+2. **Extent.** No dword in `.data`/`.rdata` may point strictly *inside* the function. Build gate 6
+   enforces this; a pointer into the middle of a function is usually a switch jump table, and it
+   cannot survive the symbol being repointed at C++.
+3. **Purity.** No calls and no absolute addresses, so the body needs nothing added to
+   `LINKABLE_GLOBALS` and no unrecovered class layout.
+
+Against the tree as of this writing: **544** unported functions pass the first two tests, and
+**146** pass all three. That 146 is the honest ready-to-port list.
+
+### Known-unportable, with the reason
+
+Do not re-derive these; each cost a build or worse.
+
+| Symbol | Why |
+|---|---|
+| `Vector3::Add`, `Vector3::Subtract`, `Vector3::operator*=` | name encodes 4 bytes of arguments, code pops 8 |
+| `Vector3::AddScaled` | name encodes 12, code pops 8 |
+| `Vector3::InvScale` | passes the arity check and is still wrong: takes a pointer where the name says `float`, and returns a dot product in `st0` where the name says `void` |
+| `Matrix34::Transform` | four dwords in `.data` are a switch jump table pointing inside it, and `game.asm` spells one as `?Transform@... + 96`, i.e. relative to the symbol. Porting repoints that at the C++ body. The note is also in `matrix34.cpp` itself. |
+| `gfxTexture::GetColor` | body really is four bytes, but the recorded extent is 128 and `.data` points at `0x0045D190` inside it. Needs the extent narrowed first. |
+
+`aiPath` supplies 35 of the 146 pure candidates and **none are takeable yet**: its `SharpTurn*`
+accessors read `[this+0x24]` as a dword and index `[this+0x28]`, but `data/layouts.json` types 0x24
+as `u8` and has no member at 0x28 at all. Correcting that layout unlocks the richest remaining vein
+in the binary.

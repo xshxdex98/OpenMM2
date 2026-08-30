@@ -186,7 +186,7 @@ transcription of anything, it is a Direct3D 7 device implemented on OpenGL.
 `-gl` reaches the menus and gameplay at 2560x1440 with dgVoodoo removed from the game folder.
 **`-gl` is mandatory** once dgVoodoo is gone: without a wrapper the original DirectDraw path cannot
 set a display mode on a modern driver, and the failure presents misleadingly as "your display does
-not meet requirements". See `docs/SESSION_STATE.md`.
+not meet requirements". See `docs/running.md`.
 
 Two facts shaped the design and are easy to get wrong:
 
