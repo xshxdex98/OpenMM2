@@ -41,17 +41,37 @@ ASM = os.path.join(os.environ.get("MM2_ASM_DIR", r"C:\mm2ghidra\out"), "game.asm
 # Relative branches encode a displacement to a target that does not exist in a standalone test, so
 # they cannot be round-tripped this way. They are also the one class the exporter already gets
 # right, as `db <opcode>` followed by `dd <symbol> - ($ + 4)`.
+#
+# ONLY THE RELATIVE ONES. `call dword ptr [ecx + 54h]` is a vtable dispatch - no displacement to a
+# label, nothing for the linker to rewrite, and the single most common call shape in this codebase.
+# Excluding it along with `call 4049E0h` left every virtual call in the game as `db 0FFh, 051h,
+# 054h`. capstone prints a relative target as a bare address and an indirect one as a register or
+# memory operand, which is exactly the distinction needed.
 BRANCH = re.compile(r"^(j[a-z]{1,3}|call|loop[a-z]*|xbegin)$")
+REL_TARGET = re.compile(r"^0x[0-9a-fA-F]+$")
+
+
+def is_relative_branch(mnemonic, operands):
+    return bool(BRANCH.match(mnemonic)) and bool(REL_TARGET.match(operands.strip()))
+
+
 HEXB = re.compile(r"0([0-9A-Fa-f]{2})h")
 
 
-def instruction_stream(path):
+def instruction_stream(path, known=None):
     """Recover instruction boundaries from the exported assembly.
 
     The exporter writes one `db` line per instruction, with any symbolised operand on a following
     `dd` line, so the file itself carries the boundaries Ghidra established. Re-deriving them by
     linear disassembly would desync on the data-in-code this binary is full of.
+
+    Since the exporter started emitting mnemonics, this file is no longer pure bytes, so a
+    previously-verified mnemonic line is resolved back through `known` (data/encodings.tsv). That
+    keeps the tool runnable against its own output instead of needing an all-`db` export kept aside
+    somewhere: a form already in the table contributes its known bytes and is re-verified, and a
+    form still emitted as `db` is tested for the first time. The set can only grow.
     """
+    known = known or {}
     pure = collections.Counter()
     symbolic = 0
     in_code = False
@@ -92,6 +112,10 @@ def instruction_stream(path):
                 continue
             if s.startswith("dd ") or s.startswith("dw "):
                 cur_sym = True
+                continue
+            if s in known:
+                flush()
+                pure[known[s]] += 1
                 continue
             flush()
     flush()
@@ -170,7 +194,9 @@ def main():
     if not os.path.exists(ASM):
         sys.exit("no game.asm at %s - run tools/ghidra/ExportAsm.java first" % ASM)
 
-    pure, symbolic = instruction_stream(ASM)
+    sys.path.insert(0, HERE)
+    import encodings_table
+    pure, symbolic = instruction_stream(ASM, encodings_table.load())
     md = capstone.Cs(capstone.CS_ARCH_X86, capstone.CS_MODE_32)
 
     cand, undecodable = [], 0
@@ -179,7 +205,7 @@ def main():
         if len(ins) != 1 or ins[0].size != len(b):
             undecodable += n
             continue
-        if BRANCH.match(ins[0].mnemonic):
+        if is_relative_branch(ins[0].mnemonic, ins[0].op_str):
             continue
         cand.append({"b": b, "mn": ins[0].mnemonic, "n": n,
                      "text": to_masm(ins[0].mnemonic, ins[0].op_str), "ok": True})
@@ -263,6 +289,23 @@ def main():
         dest = sys.argv[sys.argv.index("--json") + 1]
         json.dump(verdict, open(dest, "w"))
         print("\nwrote per-encoding verdict for %d forms to %s" % (len(verdict), dest))
+
+    if "--table" in sys.argv:
+        # The exporter must emit the EXACT text that was verified here, not its own rendering of
+        # the same instruction. Ghidra and capstone disagree about operand spelling, and a
+        # differently-spelled mnemonic is an unverified one - it may well assemble to other bytes.
+        # So the text travels with the verdict rather than being regenerated on the Java side.
+        dest = sys.argv[sys.argv.index("--table") + 1]
+        with open(dest, "w", newline="\n") as f:
+            f.write("# instruction bytes -> MASM text, verified byte-identical by "
+                    "tools/verify_encodings.py.\n")
+            f.write("# Regenerate with: py tools/verify_encodings.py --table %s\n"
+                    % os.path.relpath(dest, ROOT).replace("\\", "/"))
+            for c in cand:
+                if verdict.get(c["b"].hex()) == "mnemonic":
+                    f.write("%s\t%s\n" % (c["b"].hex(), c["text"]))
+        print("wrote %d verified encodings to %s" % (a and sum(1 for c in cand
+              if verdict.get(c["b"].hex()) == "mnemonic"), dest))
 
 
 if __name__ == "__main__":

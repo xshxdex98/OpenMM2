@@ -1,4 +1,4 @@
 {
- "generator_sha256": "238dcf1f921874f8965833f1a37156a76df950843db1018ea4d0ce07600a5f9c",
+ "generator_sha256": "ee9ff6674aa829e97b31d9253461e2c70ea5e4e30918eb4038523eb514bb9e84",
  "note": "SHA-256 of tools/ghidra/ExportAsm.java that produced the current game.asm.pristine. Re-record with: py tools/build.py --stamp-export"
 }

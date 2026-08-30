@@ -33,7 +33,7 @@ Two numbers matter and they are different:
 | Classes with only a size | 98 |
 | Virtual methods | 1938 |
 | Vftables | 340 |
-| `game.asm` remaining | 23.4 MB, 10904 PROCs |
+| `game.asm` remaining | 23.2 MB, 10904 PROCs |
 
 The size of `game.asm` *is* the progress bar: it starts holding the whole game and
 shrinks with every function ported.
@@ -141,9 +141,9 @@ Layout known, so these can be started today.
 | 2026-08-29 | 1.98% | 34.1 KB | 23.4 MB |
 | 2026-08-29 | 1.98% | 34.1 KB | 23.4 MB |
 | 2026-08-29 | 1.98% | 34.1 KB | 23.4 MB |
-| 2026-08-29 | 1.98% | 34.1 KB | 23.4 MB |
 | 2026-08-29 | 2.00% | 34.4 KB | 23.4 MB |
 | 2026-08-29 | 2.00% | 34.4 KB | 23.4 MB |
+| 2026-08-29 | 2.01% | 34.6 KB | 23.4 MB |
 | 2026-08-29 | 2.01% | 34.6 KB | 23.4 MB |
 | 2026-08-29 | 2.01% | 34.6 KB | 23.4 MB |
 | 2026-08-29 | 2.01% | 34.6 KB | 23.4 MB |

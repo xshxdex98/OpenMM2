@@ -28,17 +28,15 @@ literally the size of `game.asm`.
 `ExportAsm.java` (a Ghidra script, run headless) walks every function and emits a `PROC` per
 function under its exact MSVC mangled name.
 
-**It emits instruction bytes, not mnemonics.** The obvious approach is re-emitting disassembly as
-MASM text, but Ghidra's syntax is not MASM's — operand order, size prefixes, hex literal spelling
-and segment overrides all differ — and each difference is a chance to silently alter an
-instruction. Original bytes cannot be altered. Only operands holding an address need to become
-real symbols, and those are patched in as `dd`:
+**It emits a mnemonic only where that mnemonic provably assembles back to retail's exact bytes,
+and raw bytes everywhere else.** Operands holding an address become real symbols, patched in as
+`dd`:
 
 ```asm
 PUBLIC ?Update@mmGameManager@@UAEXXZ
 ?Update@mmGameManager@@UAEXXZ PROC
-    db 055h
-    db 08Bh, 0ECh
+    push ebp
+    mov ebp, esp
     db 08Bh, 00Dh
     dd offset ?Instance@asCullManager@@1PAV1@A     ; mov ecx, [asCullManager::Instance]
     db 068h
@@ -49,8 +47,51 @@ PUBLIC ?Update@mmGameManager@@UAEXXZ
 A relative call becomes `dd SYMBOL - ($ + 4)`, so when the target is later ported to C++ the
 linker retargets it automatically. That is the entire mechanism.
 
-The tradeoff is that `game.asm` is not pleasant to read. It does not need to be — reading is what
-`MM2_RE_KIT/MM2_PSEUDOCODE/` is for. `game.asm` only has to assemble, link, and shrink.
+### Why the mnemonic has to be proven, not just plausible
+
+This file was originally all `db`, on the grounds that Ghidra's syntax is not MASM's — operand
+order, size prefixes, hex literal spelling and segment overrides all differ — and each difference
+is a chance to silently alter an instruction.
+
+The reasoning was sound but the conclusion was too strong. The real hazard is narrower and
+sharper: **x86 has redundant encodings**, so a correctly-spelled mnemonic can still assemble to
+different bytes of a *different length*, which moves every address after it and breaks the layout
+guarantee below. It does so silently, because the file still assembles and still links.
+
+`tools/verify_encodings.py` settles which mnemonics are safe by measurement rather than argument.
+It recovers every distinct encoding in the binary, assembles each one in its own 16-byte `ALIGN`
+slot with the real `ml.exe`, and keeps only those that come back byte-identical. The survivors go
+to `data/encodings.tsv`, and `ExportAsm.java` emits a mnemonic *only* for a byte sequence in that
+table — so the text emitted is exactly the text that was verified, never a re-derivation.
+
+Over 530,096 testable instructions:
+
+| | count | share |
+|---|---|---|
+| emitted as mnemonic (byte-identical) | 529,228 | 99.84% |
+| must stay `db` (MASM re-encodes) | 857 | 0.16% |
+| must stay `db` (syntax unsupported) | 11 | 0.00% |
+
+The 857 are genuine ambiguities. `fadd st, st` is `DC C0` in retail but `D8 C0` from MASM;
+`test edx, eax` and `test eax, edx` differ only in the direction bit; `add eax, 0` has a short and
+a long form. Those keep their bytes forever, and the fallback is per *instruction*, not per file.
+
+Two further rules the table cannot express, both enforced in `ExportAsm.java`:
+
+- **An instruction with a label inside it keeps its bytes.** `emitBytes` can place a label between
+  two `db` directives, which is how a reference *into* an instruction resolves — a jump table
+  computed off a base, or a jump into the middle of an instruction, both of which this binary
+  really does. A single mnemonic line has nowhere to put that label.
+- **The prologue must match the one `verify_encodings.py` assembles against**, `ASSUME GS:NOTHING`
+  included. Otherwise the table's guarantee does not apply to the emitted file — one
+  `add byte ptr gs:[eax], al`, a run of zero bytes in data-in-code, fails the assembly without it.
+
+Anything that measures `game.asm` must go through `tools/encodings_table.py`, which owns the
+text→bytes map. `tools/asm.py` uses it to size the padding that replaces a ported function, and
+`tools/patches.py` to walk `.text` and locate a patch by address. Both used to count commas in
+`db` lines; both would silently miscount a mnemonic line, and `asm.py` miscounting means `.text`
+shrinks and every later address moves. Neither may treat an unmeasurable line as zero — they
+raise instead.
 
 ## Layout must be preserved exactly
 

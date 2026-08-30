@@ -256,19 +256,23 @@ def parse_db(line):
     return out
 
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import encodings_table as encodings  # noqa: E402
+
 TEXT_BASE = 0x00401000
 
-
-def build_address_index(lines):
+def build_address_index(lines, mnemonics):
     """Map every emitted .text address to the (line, position) that produces it.
 
     ExportAsm writes .text in strict address order with no ALIGN, so walking the directives and
     accumulating their lengths reproduces the addresses exactly. Only `db` positions are recorded -
     a `dd` is a symbolic reference and its bytes are decided by the linker, so it can be counted
-    but not patched.
+    but not patched. A mnemonic line is counted from the encoding table and recorded too, because
+    a patch landing inside one can still be applied by expanding that line back to `db` first.
     """
     index = {}
     addr = None
+    unknown = []
 
     for i, line in enumerate(lines):
         s = line.strip()
@@ -288,6 +292,25 @@ def build_address_index(lines):
             addr += len(vals)
         elif s.startswith("dd "):
             addr += 4
+        elif s in mnemonics:
+            raw = mnemonics[s]
+            for k in range(len(raw)):
+                index[addr + k] = (i, k)
+            addr += len(raw)
+        elif s and not s.startswith(";") and not s.endswith(":") and not s.startswith("PUBLIC") \
+                and " PROC" not in s and " ENDP" not in s and not s.startswith("ALIGN") \
+                and not s.startswith("INCLUDE") and not s.startswith("dw "):
+            # An instruction line the table does not explain. Counting it as zero-length would
+            # silently shift every address after it, so record it and let the caller refuse rather
+            # than apply a patch to the wrong bytes.
+            unknown.append((i, s))
+
+    if unknown:
+        print("  %d assembly line(s) of unknown length; addresses after the first are unreliable"
+              % len(unknown))
+        for i, s in unknown[:5]:
+            print("     line %d: %s" % (i + 1, s))
+        return None
 
     return index
 
@@ -309,7 +332,8 @@ def main():
     if text is None:
         print("         patch addresses will NOT be verified")
 
-    index = build_address_index(lines)
+    mnemonics = encodings.load()
+    index = build_address_index(lines, mnemonics)
 
     applied, refused = [], []
 
@@ -351,6 +375,17 @@ def main():
             refused.append((patch.name,
                             "0x%08X is not inside the emitted .text" % patch.address))
             continue
+
+        # A patch may land inside an instruction the exporter emitted as a mnemonic. The bytes are
+        # the same bytes - `mov eax, 3E0h` and `db 0B8h, 0E0h, 003h, 000h, 000h` are one and the
+        # same instruction - so expand that line back to its byte form and patch it there. Doing it
+        # this way keeps every patch defined by address and value, exactly as before, instead of
+        # teaching each one how to rewrite a mnemonic operand.
+        for line_i, _ in where:
+            s = lines[line_i].strip()
+            if parse_db(lines[line_i]) is None and s in mnemonics:
+                lines[line_i] = ("    db "
+                                 + ", ".join("0%02Xh" % b for b in mnemonics[s]))
 
         found = []
         for line_i, pos in where:

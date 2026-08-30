@@ -27,6 +27,9 @@ from collections import OrderedDict
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
+sys.path.insert(0, HERE)
+
+import encodings_table as encodings  # noqa: E402
 
 CODE = os.path.join(ROOT, "code", "midtown2")
 ASM = os.environ.get("MM2_ASM", os.path.join(ROOT, "code", "midtown2", "game.asm"))
@@ -100,18 +103,25 @@ def read_procs(path):
 def emitted_bytes(block):
     """How many bytes a run of emitted directives assembles to.
 
-    game.asm is written as raw bytes with symbol references patched in, so this only has to
-    understand two forms: a `db` list, and a `dd` (four bytes, whatever the expression).
+    This decides how much padding replaces a ported function, and the padding must come to exactly
+    the number of bytes removed. Undercount and .text shrinks, every address after it moves, and
+    -FIXED -BASE:0x400000 stops describing the image - with no error anywhere, because the file
+    still assembles and still links.
+
+    That is why an unmeasurable line is a hard failure rather than a zero. game.asm used to be
+    nothing but `db` and `dd`, so counting commas was enough; it now also carries real mnemonics
+    (see tools/verify_encodings.py), whose lengths come from the same table that drove their
+    emission.
     """
+    table = encodings.load()
     total = 0
 
     for line in block:
-        s = line.strip()
-
-        if s.startswith("db "):
-            total += s[3:].count(",") + 1
-        elif s.startswith("dd "):
-            total += 4
+        n = encodings.line_length(line.strip(), table)
+        if n is None:
+            raise ValueError("cannot measure this line, so the padding would be wrong: %r"
+                             % line.strip())
+        total += n
 
     return total
 

@@ -30,7 +30,9 @@
 //
 //@category OpenMM2
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -78,6 +80,25 @@ public class ExportAsm extends GhidraScript {
 
     Map<Long, String> symbolAt = new HashMap<>();
     TreeMap<Long, String> sortedSymbols = new TreeMap<>();
+
+    // Instruction bytes (lowercase hex) -> the MASM text that assembles back to exactly those
+    // bytes. Built by tools/verify_encodings.py, which assembles every distinct encoding in the
+    // binary with the real ml.exe and keeps only the ones that round-trip byte-identically.
+    //
+    // WHY A TABLE RATHER THAN Ghidra's OWN DISASSEMBLY TEXT. Ghidra and MASM disagree about
+    // operand spelling, and an unverified spelling is worse than useless here: x86 has redundant
+    // encodings, so a differently-spelled mnemonic can assemble to different bytes of a DIFFERENT
+    // LENGTH. That moves every address after it, which breaks -FIXED -BASE:0x400000 and every
+    // layout anchor - and it does it silently, because the file still assembles. Emitting only
+    // text that has been proven byte-identical is the only safe way to do this.
+    //
+    // 30,318 of the 30,438 distinct encodings in midtown2.exe qualify (99.83% of instruction
+    // occurrences). The rest stay `db` forever; `fadd st, st` is DC C0 in retail but D8 C0 from
+    // MASM, and no amount of care changes that.
+    Map<String, String> verifiedEncodings = new HashMap<>();
+    int emittedMnemonic = 0;
+    int emittedAsBytes = 0;
+    int mnemonicBlockedByLabel = 0;
 
     // Code addresses that are referenced but carry no symbol of their own - switch-case targets
     // and jump-table entries, mostly. Each one needs a label emitted at exactly its address, or
@@ -155,6 +176,7 @@ public class ExportAsm extends GhidraScript {
 
         new File(outDir).mkdirs();
 
+        loadVerifiedEncodings(new File(outDir, "encodings.tsv"));
         buildSymbolIndex();
         buildImportIndex();
 
@@ -258,6 +280,9 @@ public class ExportAsm extends GhidraScript {
         println("  refs with no symbol  : " + refNoSymbol);
         println("  refs not located in bytes: " + refNotLocated);
         println("  imports              : " + imports.size());
+        println("  emitted as mnemonic  : " + emittedMnemonic);
+        println("  emitted as db        : " + emittedAsBytes);
+        println("  db due to interior label: " + mnemonicBlockedByLabel);
     }
 
     void buildSymbolIndex() {
@@ -406,6 +431,11 @@ public class ExportAsm extends GhidraScript {
         w.println(".XMM");
         w.println(".MODEL FLAT");
         w.println("ASSUME FS:NOTHING");
+        // Must match the prologue tools/verify_encodings.py assembles against. One
+        // `add byte ptr gs:[eax], al` - a run of zero bytes in data-in-code that
+        // disassembles as a gs-prefixed add - fails with "use of register assumed to
+        // ERROR" without it, and the table's guarantee only holds if the two headers agree.
+        w.println("ASSUME GS:NOTHING");
         w.println("OPTION CASEMAP:NONE");
         // MASM scopes a label defined inside a PROC to that PROC. This binary is full of
         // cross-procedure jumps - Ghidra even carves switch cases out as separate functions - so
@@ -854,7 +884,21 @@ public class ExportAsm extends GhidraScript {
         }
 
         if (patches.isEmpty()) {
+            // No symbolised operand, so nothing in this instruction has to be rewritten by the
+            // linker and it can be emitted as text - provided the text is one verify_encodings.py
+            // proved assembles back to these exact bytes, and provided no label has to land inside
+            // it. Everything else keeps the byte form.
+            String text = verifiedEncodings.get(hex(bytes));
+            if (text != null && !hasInteriorLabel(addr, bytes.length)) {
+                w.println("    " + text);
+                emittedMnemonic++;
+                return;
+            }
+            if (text != null) {
+                mnemonicBlockedByLabel++;
+            }
             emitBytes(w, bytes, 0, bytes.length, addr);
+            emittedAsBytes++;
             return;
         }
 
@@ -2081,6 +2125,73 @@ public class ExportAsm extends GhidraScript {
 
     long readDword(long a) throws Exception {
         return ((long) currentProgram.getMemory().getInt(toAddr(a))) & 0xFFFFFFFFL;
+    }
+
+    /**
+     * Load the verified byte-to-mnemonic table, if one has been placed next to the output.
+     *
+     * Absence is not an error: the export simply falls back to the all-`db` form it produced
+     * before this existed, which is correct, just unreadable. That matters because the table lives
+     * in the repo at data/encodings.tsv while the script runs from C:/mm2ghidra/scripts, and the
+     * headless launcher re-splits its arguments on spaces - so the repo path, which contains
+     * "Dev Workspace", cannot be passed in. The table has to be copied to a space-free location
+     * the same way this script is, and forgetting to do so must degrade rather than corrupt.
+     */
+    void loadVerifiedEncodings(File table) {
+        if (!table.exists()) {
+            println("no encodings.tsv next to the output - emitting all instructions as db.");
+            println("  copy data/encodings.tsv there to get mnemonics; see tools/verify_encodings.py");
+            return;
+        }
+
+        try (BufferedReader r = new BufferedReader(new FileReader(table))) {
+            String line;
+            while ((line = r.readLine()) != null) {
+                if (line.isEmpty() || line.charAt(0) == '#') {
+                    continue;
+                }
+                int tab = line.indexOf('\t');
+                if (tab > 0) {
+                    verifiedEncodings.put(line.substring(0, tab), line.substring(tab + 1));
+                }
+            }
+        } catch (Exception e) {
+            println("could not read " + table + ": " + e + " - emitting all instructions as db.");
+            verifiedEncodings.clear();
+            return;
+        }
+
+        println("verified encodings: " + verifiedEncodings.size());
+    }
+
+    static String hex(byte[] bytes) {
+        StringBuilder sb = new StringBuilder(bytes.length * 2);
+        for (byte b : bytes) {
+            sb.append(Character.forDigit((b >> 4) & 0xF, 16));
+            sb.append(Character.forDigit(b & 0xF, 16));
+        }
+        return sb.toString();
+    }
+
+    /**
+     * True if any address strictly inside this instruction needs a label of its own.
+     *
+     * emitBytes can place a label between two `db` directives, so a reference INTO an instruction
+     * - a jump table computed off a base, or a jump into the middle of an instruction, both of
+     * which this binary really does - resolves fine in the byte form. A single mnemonic line has
+     * nowhere to put that label, and MASM would report the reference as an undefined symbol.
+     *
+     * So an instruction with an interior label keeps its bytes. There are few of them and they are
+     * exactly the places where the byte form is the honest rendering anyway.
+     */
+    boolean hasInteriorLabel(long addr, int length) {
+        for (int i = 1; i < length; i++) {
+            long here = addr + i;
+            if (neededLabels.contains(here) || symbolAt.containsKey(here)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     void emitBytes(PrintWriter w, byte[] bytes, int from, int len) {

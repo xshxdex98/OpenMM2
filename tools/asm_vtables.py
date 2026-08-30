@@ -96,6 +96,9 @@ from collections import OrderedDict, namedtuple
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
+sys.path.insert(0, HERE)
+
+import encodings_table as encodings  # noqa: E402
 
 CODE = os.path.join(ROOT, "code", "midtown2")
 ASM = os.environ.get("MM2_ASM", os.path.join(ROOT, "code", "midtown2", "game.asm"))
@@ -1133,17 +1136,20 @@ def describe_audit(rows):
 def verify_byte_count(before, after):
     """Assert the rewrite emitted the same number of bytes. Cheap insurance, run in dry runs.
 
-    game.asm is raw bytes with symbol references patched in, so only `db` lists and `dd` words
-    contribute - the same rule tools/asm.py counts by.
+    Counted through tools/encodings_table.py, the same measurer tools/asm.py and tools/patches.py
+    use. The blocks this rewrites are vtables in the data sections, so in practice they are `dd`
+    entries and the old comma-counting rule agreed - but it would have undercounted a mnemonic line
+    identically on both sides and reported "unchanged" for a rewrite that was not. Sharing the
+    measurer means there is one definition of how long a line is, rather than four that can drift.
     """
     def total(lines):
         n = 0
         for line in lines:
-            s = line.strip()
-            if s.startswith("db "):
-                n += s[3:].count(",") + 1
-            elif s.startswith("dd "):
-                n += 4
+            k = encodings.line_length(line.strip(), encodings.load())
+            if k is None:
+                raise ValueError("cannot measure %r, so the byte count would be wrong"
+                                 % line.strip())
+            n += k
         return n
 
     return total(before), total(after)
