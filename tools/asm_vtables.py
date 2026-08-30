@@ -415,15 +415,28 @@ def plan(marks=None, lines=None, classes=None):
         # --- companion symbols the compiler will also emit under names the assembly already owns
         #
         # A virtual destructor does not put ~C in the vtable, it puts a compiler-generated
-        # DELETING destructor there. MSVC generates `??_G<C>` (scalar); it generates `??_E<C>`
-        # (vector) only where delete[] is used on the type. So `??_G<C>` will collide if the
-        # assembly still defines it, and must be stripped as a PROC alongside the table.
+        # DELETING destructor there. Which one depends on the compiler, and this was written the
+        # wrong way round until the first real handover proved it:
+        #
+        #   1999 MSVC  emitted ??_G<C> (scalar) into mmCityInfo's slot, ??_E<C> (vector) into
+        #              mmCityList's - it chose per class.
+        #   MSVC 14.51 emits ??_E<C> for both. Measured, not assumed: after building
+        #              mmcityinfo.cpp, `dumpbin -SYMBOLS build/obj/mmcityinfo.obj` lists
+        #              ??_EmmCityInfo@@UAEPAXI@Z and no ??_G at all.
+        #
+        # So ??_E is the one that collides and must be stripped; ??_G is left in the assembly.
+        # Leaving it is not merely harmless, it is required: the original ??_G is called directly
+        # by assembly that deletes the object, and stripping it produced exactly one unresolved
+        # external at the first attempt. Left alone it still works, because its `call` to the
+        # destructor is rewritten by asm.py to reach the C++ one like any other call site.
+        #
+        # Re-check this after a toolchain upgrade; the dumpbin line above is the whole test.
         for s in index.values():
             if s.get("class") != cls or not s["code"]:
                 continue
-            if s["mangled"].startswith("??_G"):
+            if s["mangled"].startswith("??_E"):
                 companion.append(s["mangled"])
-            elif s["mangled"].startswith("??_E"):
+            elif s["mangled"].startswith("??_G"):
                 orphans.append(s["mangled"])
             elif (s.get("demangled") or "").startswith("[thunk]:"):
                 # A multiple-inheritance adjustor thunk - the little `sub ecx, 180; jmp Real`
@@ -441,11 +454,12 @@ def plan(marks=None, lines=None, classes=None):
         prim = primary_vftable(cls)
         if prim and not vtables[prim].stripped:
             slot0 = vtables[prim].targets[0] if vtables[prim].targets else None
-            if slot0 and slot0.startswith("??_E"):
+            if slot0 and slot0.startswith("??_G"):
                 warnings.append(
-                    "%s: slot 0 holds %s (VECTOR deleting destructor). MSVC will emit ??_G "
-                    "(scalar) instead. Identical for delete, different for delete[] - confirm "
-                    "nothing array-deletes this type." % (cls, slot0))
+                    "%s: slot 0 holds %s (SCALAR deleting destructor), but MSVC 14.51 emits ??_E "
+                    "(vector) instead - so the C++ table will name a different symbol here. The "
+                    "two are identical for delete and differ only for delete[]; confirm nothing "
+                    "array-deletes this type." % (cls, slot0))
 
             pures = [i for i, t in enumerate(vtables[prim].targets) if "purecall" in t]
             if pures:

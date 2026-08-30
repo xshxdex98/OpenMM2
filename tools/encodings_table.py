@@ -75,6 +75,15 @@ def line_length(stripped, table):
     s = stripped
     if not s or s.startswith(";"):
         return 0
+    # A trailing comment contributes no bytes. tools/asm_vtables.py annotates the lines it rewrites
+    # ("__vft_orig_005B524C LABEL BYTE   ; was ??_7mmCityInfo@@6B@..."), and everything below
+    # matches on the end of the line. Safe to cut at the first semicolon because ExportAsm.java
+    # emits data only as `db 0XXh` runs - there are no quoted strings for one to hide in.
+    cut = s.find(";")
+    if cut > 0:
+        s = s[:cut].strip()
+        if not s:
+            return 0
     if s.startswith("db "):
         # tools/asm.py pads a stripped function with `db <n> dup (0CCh)`, which is n bytes, not the
         # one byte a comma count would give.
@@ -86,6 +95,13 @@ def line_length(stripped, table):
         return 4
     if s.startswith("dw "):
         return 2
+    if s.startswith("dq "):
+        return 8
+    # `D_5B0000 LABEL BYTE` names an address without occupying one. These only appear in the data
+    # sections, which is why they surfaced the first time tools/asm_vtables.py - the only consumer
+    # that walks .rdata - started measuring through here.
+    if re.match(r"^\S+\s+LABEL\s+\w+\s*$", s):
+        return 0
     if s in table:
         return len(table[s])
     # tools/asm.py rewrites `db 0E8h` + `dd SYM - ($ + 4)` into `call SYM` once SYM is EXTERN,

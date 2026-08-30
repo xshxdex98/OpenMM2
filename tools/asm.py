@@ -29,6 +29,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 
+import asm_vtables  # noqa: E402
 import encodings_table as encodings  # noqa: E402
 
 CODE = os.path.join(ROOT, "code", "midtown2")
@@ -138,6 +139,21 @@ def main():
     marks = scan_headers(CODE)
     lines, procs = read_procs(ASM)
 
+    # Hand over the vftable of every class whose constructor or destructor is ARTS_EXPORT.
+    # A polymorphic class cannot be ported without this: the moment MSVC sees a ctor or dtor
+    # for a class with virtuals it emits its own ??_7C@@6B@, and the link fails with a
+    # duplicate against the copy still sitting in .rdata inside game.asm.
+    #
+    # THIS MUST RUN BEFORE THE PADDING LOOP. `procs` holds line indices into `lines`, and
+    # padding replaces an n-line PROC with a 2-line comment, so every index after the first
+    # stripped function would be wrong. hand_over() is index-preserving by construction and
+    # is therefore the only one of the two that can go first.
+    handover = asm_vtables.hand_over(lines, marks)
+    print(handover.report)
+    if not handover.ok:
+        return 1
+    lines = handover.lines
+
     exports = [m for m, k in marks.items() if k == "EXPORT"]
     imports = [m for m, k in marks.items() if k == "IMPORT"]
 
@@ -204,6 +220,7 @@ def main():
     exports = [m for m in exports if not code_symbols or m in ported_symbols]
 
     strip = [m for m in exports if m in procs]
+    strip += [m for m in sorted(handover.strip_procs) if m in procs and m not in strip]
     already = [m for m in exports if m not in procs]
 
     print("\n%d ARTS_EXPORT symbols still have a PROC and will be stripped" % len(strip))
@@ -432,6 +449,13 @@ def main():
         f.write("\n\n%s\n" % MARKER)
         for m in sorted(strip):
             f.write("EXTERN %s:PROC\n" % m)
+
+    # Declare each handed-over vftable EXTERN so the assembly that still stores a vptr - every
+    # constructor of the class that is not yet ported - resolves to the C++ table instead of the
+    # old one. add_externs appends to the file just written, so it has to come after it.
+    if handover.externs:
+        asm_vtables.add_externs(handover.externs, EXTERNS)
+        print("declared %d vftable EXTERN(s)" % len(handover.externs))
 
     print("\nstripped %d PROCs (%d padded, %d kept under an alias), rewrote %d call sites, %d EXTERNs"
           % (len(strip), padded, kept, rewritten, len(strip)))

@@ -318,11 +318,23 @@ destructor. MSVC will emit `??_G<C>`, the scalar one, unless `delete[]` is used 
 are identical for `delete` and differ for `delete[]`. `plan()` warns per class; confirm nothing
 array-deletes the type. The `??_E` symbol stays in the assembly as an orphan.
 
-**5. `EXTERN <vftable>:BYTE` is not yet exercised in this build.** `ExportAsm.java` reserves that
-form for external data (`externData`, lines 172–174) but the list is empty today, so no `:BYTE`
-extern has ever been through `ml.exe` here. What *is* proven, 779 times over, is the construct that
-matters — `dd offset <extern>` assembling and relocating correctly for the `:DWORD` import externs.
-This is the first thing to confirm on the first real handover, and it fails loudly if it fails.
+**5. `EXTERN <vftable>:BYTE` — now exercised, and it works.** This used to read "not yet exercised
+in this build". `mmCityInfo` was the first real handover: one `:BYTE` extern through `ml.exe`,
+`.rdata` byte-identical to retail afterwards, and gates 11 and 12 both reporting
+`differing ANYWHERE ELSE : 0`.
+
+That handover also corrected a wrong assumption in `asm_vtables.py` worth repeating here, because
+it will bite again on the next class. **The deleting destructor MSVC emits is not the one the 1999
+compiler emitted.** 1999 MSVC chose per class — `??_G` (scalar) for `mmCityInfo`, `??_E` (vector)
+for `mmCityList`. MSVC 14.51 emits `??_E` for both. The tool had it the other way round, so it
+stripped `??_G` as a "companion the compiler regenerates", nothing regenerated it, and the link
+failed with a single unresolved external.
+
+The rule is now: **strip `??_E`, leave `??_G`.** Leaving it is required rather than merely
+harmless — the original `??_G` is called directly by assembly that deletes the object, and it keeps
+working because `asm.py` rewrites its call to the destructor like any other call site. Re-check
+after a toolchain upgrade with `dumpbin -SYMBOLS build/obj/<class>.obj`; that one line is the whole
+test.
 
 **6. A plain `dd offset ??_7C@@6B@` that is not a vptr.** All 693 plain references are left to bind
 to the C++ table, which is right for a vptr initialiser and wrong for a data word that merely holds

@@ -27,10 +27,10 @@ class mmCityInfo
 {
 public:
     // ??0mmCityInfo@@QAE@XZ
-    ARTS_IMPORT mmCityInfo();
+    ARTS_EXPORT mmCityInfo();
 
     // ??1mmCityInfo@@UAE@XZ
-    ARTS_IMPORT virtual ~mmCityInfo();
+    ARTS_EXPORT virtual ~mmCityInfo();
 
     // ?Load@mmCityInfo@@QAEHPAD@Z
     ARTS_IMPORT i32 Load(char* arg1);
