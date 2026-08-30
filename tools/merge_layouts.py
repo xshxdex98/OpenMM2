@@ -99,6 +99,21 @@ def main():
             # about the class, and then nothing is merged.
             existing = layouts.get(cls)
             if existing is not None:
+                # A hand-read taken straight out of the binary outranks every recovered source,
+                # because it is the only one produced by someone actually reading the code that
+                # uses the fields. data/layouts_corrections.json carries the evidence for each
+                # entry inline, and the size check below still applies - a correction may respell
+                # the bytes at a known offset, never change how many there are.
+                if info.get("source") == "hand-analysis":
+                    if existing.get("size") != info.get("size"):
+                        rejected.append((cls, name, "correction says sizeof=0x%X, layouts.json "
+                                         "says 0x%X" % (info.get("size") or 0,
+                                                        existing.get("size") or 0)))
+                        continue
+                    layouts[cls] = info
+                    merged.append((cls, name, info.get("size"), len(info.get("members") or [])))
+                    continue
+
                 from_kit = (info.get("source") == "MM2_RE_KIT")
                 inferred = (existing.get("source") or "").startswith(
                     ("layouts_from_", "inferred_"))

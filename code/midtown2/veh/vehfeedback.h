@@ -46,7 +46,7 @@ public:
     ARTS_EXPORT virtual i32 GetNumActuators();
 
     // ?SetActuatorValue@vehFeedback@@UAEHHM@Z
-    ARTS_IMPORT virtual i32 SetActuatorValue(i32 arg1, f32 arg2);
+    ARTS_EXPORT virtual i32 SetActuatorValue(i32 arg1, f32 arg2);
 
     // ?PlayFeedbackSample@vehFeedback@@UAEHHHPAMPAH@Z
     ARTS_IMPORT virtual i32 PlayFeedbackSample(i32 arg1, i32 arg2, f32* arg3, i32* arg4);
@@ -61,7 +61,7 @@ public:
     ARTS_IMPORT virtual i32 Update();
 
     // ?ClearAllSamples@vehFeedback@@UAEH_N@Z
-    ARTS_IMPORT virtual i32 ClearAllSamples(bool arg1);
+    ARTS_EXPORT virtual i32 ClearAllSamples(bool arg1);
 
     // ?GetPad@vehFeedback@@QAEPAVioPad@@XZ
     ARTS_IMPORT ioPad* GetPad();
@@ -77,17 +77,22 @@ public:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    u32 field_4; // 0x004
-    u32 field_8; // 0x008
-    f32 field_C; // 0x00C
+    i32 PadID; // 0x004
+    ioPad* Pad; // 0x008
+    f32 MaxTimingUnit; // 0x00C
     Timer Timers[2]; // 0x010
-    u32 field_18; // 0x018
-    u32 field_1C; // 0x01C
-    f32 field_20; // 0x020
-    u8 field_24[128]; // 0x024
-    u32 field_A4; // 0x0A4
-    u8 field_A8[128]; // 0x0A8
-    u32 field_128; // 0x128
+    f32 ActuatorValues[2]; // 0x018
+    f32 TimingUnit; // 0x020
+    f32* Ch0SampleValues[8]; // 0x024
+    i32* Ch0SampleLabels[8]; // 0x044
+    i32 Ch0SampleIds[8]; // 0x064
+    i32 Ch0SampleState[8]; // 0x084
+    i32 Ch0SampleCount; // 0x0A4
+    f32* Ch1SampleValues[8]; // 0x0A8
+    i32* Ch1SampleLabels[8]; // 0x0C8
+    i32 Ch1SampleIds[8]; // 0x0E8
+    i32 Ch1SampleState[8]; // 0x108
+    i32 Ch1SampleCount; // 0x128
 };
 
 // ??_7vehFeedback@@6B@

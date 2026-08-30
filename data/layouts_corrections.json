@@ -1,0 +1,166 @@
+{
+ "_comment": [
+  "Hand-corrected layouts: classes where the recovered type is demonstrably wrong about a",
+  "member's TYPE, with the evidence for each written down beside it. Offsets and sizeof are",
+  "never changed here - only how the bytes at a known offset are spelled - and merge_layouts",
+  "refuses an entry whose size disagrees with the one already recorded.",
+  "",
+  "This is the narrowest of the layout sources and should stay that way. An inference belongs in",
+  "layouts_from_*.json, a recovered type in layouts_kit.json; this file is only for a reading",
+  "taken directly out of the binary that contradicts both."
+ ],
+ "layouts": {
+  "vehFeedback": {
+   "kind": "class",
+   "size": 300,
+   "confidence": "CONFIRMED",
+   "source": "hand-analysis",
+   "evidence": [
+    "The IDB type gives dword0/dwordC/gap24[128] - correct offsets, no types - so the fields at",
+    "0x18 and 0x1C came out u32 when they hold floats, and everything from 0x24 came out as two",
+    "opaque byte arrays.",
+    "",
+    "0x18: ?SetActuatorValue@vehFeedback@@UAEHHM@Z at 0x004D57F0 is",
+    "    *(float *)&this[a2 + 6] = a3;   this[a2 + 4] = Timer::Ticks();",
+    "with a2 bounded by `a2 <= 1`. this[a2+6] is 0x18 + 4*a2 and this[a2+4] is 0x10 + 4*a2, so",
+    "0x18 is two floats and 0x10 is the two Timers already recorded.",
+    "",
+    "0x24: ?PlayFeedbackSample@vehFeedback@@UAEHHHPAMPAH@Z at 0x004D5830 indexes",
+    "    v6 = &this[132 * a2]",
+    "so the region is TWO 132-byte blocks, and 0x24 + 2*132 = 0x12C, the size the binary",
+    "allocates. Within a block at base B it writes 4*v9+36 -> B+0x00 (the f32* argument),",
+    "4*v9+68 -> B+0x20 (the i32* argument), 4*v9+100 -> B+0x40 (the i32 argument),",
+    "128*a2+132+4*v5 -> B+0x60, and increments *((_DWORD *)v6 + 41) -> B+0x80. v5 is a free-slot",
+    "index found by scanning B+0x00 and capped at 8, which is what fixes each array at 8 entries.",
+    "",
+    "The constructor at 0x004D56C0 agrees independently: its loop runs 8 times at stride 4 over",
+    "the eight bases 0x24, 0x44, 0x64, 0x84, 0xA8, 0xC8, 0xE8 and 0x108, writing -1 to 0x84 and",
+    "0x108 - the two SampleState arrays - and 0 to the rest.",
+    "",
+    "Flat per-channel arrays rather than a nested struct only because layouts.json cannot express",
+    "one; the offsets are what the still-assembly code actually reads."
+   ],
+   "members": [
+    {
+     "offset": 0,
+     "type": "void**",
+     "name": "vTable",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 4,
+     "type": "i32",
+     "name": "PadID",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 8,
+     "type": "ioPad*",
+     "name": "Pad",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 12,
+     "type": "f32",
+     "name": "MaxTimingUnit",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 16,
+     "type": "Timer",
+     "name": "Timers",
+     "count": 2,
+     "width": 4
+    },
+    {
+     "offset": 24,
+     "type": "f32",
+     "name": "ActuatorValues",
+     "count": 2,
+     "width": 4
+    },
+    {
+     "offset": 32,
+     "type": "f32",
+     "name": "TimingUnit",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 36,
+     "type": "f32*",
+     "name": "Ch0SampleValues",
+     "count": 8,
+     "width": 4
+    },
+    {
+     "offset": 68,
+     "type": "i32*",
+     "name": "Ch0SampleLabels",
+     "count": 8,
+     "width": 4
+    },
+    {
+     "offset": 100,
+     "type": "i32",
+     "name": "Ch0SampleIds",
+     "count": 8,
+     "width": 4
+    },
+    {
+     "offset": 132,
+     "type": "i32",
+     "name": "Ch0SampleState",
+     "count": 8,
+     "width": 4
+    },
+    {
+     "offset": 164,
+     "type": "i32",
+     "name": "Ch0SampleCount",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 168,
+     "type": "f32*",
+     "name": "Ch1SampleValues",
+     "count": 8,
+     "width": 4
+    },
+    {
+     "offset": 200,
+     "type": "i32*",
+     "name": "Ch1SampleLabels",
+     "count": 8,
+     "width": 4
+    },
+    {
+     "offset": 232,
+     "type": "i32",
+     "name": "Ch1SampleIds",
+     "count": 8,
+     "width": 4
+    },
+    {
+     "offset": 264,
+     "type": "i32",
+     "name": "Ch1SampleState",
+     "count": 8,
+     "width": 4
+    },
+    {
+     "offset": 296,
+     "type": "i32",
+     "name": "Ch1SampleCount",
+     "count": 0,
+     "width": 4
+    }
+   ]
+  }
+ }
+}

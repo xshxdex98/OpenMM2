@@ -42,24 +42,24 @@
 // therefore points partly here and partly at 1999 code. That is what makes a ten-slot class
 // portable a few functions at a time, and it is the property this file exercises.
 //
-// SetActuatorValue is deliberately among them. It writes floats into the fields at 0x18 and 0x1C,
-// which data/layouts.json types u32, and reaching them would need a bit-cast. The offsets are not
-// in doubt - the original is `*(float *)&this[a2 + 6] = a3` - but writing a float through a u32
-// field is the kind of thing that reads as though nobody checked. It goes over when those two
-// fields are typed properly, alongside the 0x24 channel arrays described below.
+// The fields at 0x18 and 0x1C, and everything from 0x24, were untyped when this file was first
+// written, which is why SetActuatorValue and ClearAllSamples were left in the assembly. They are
+// typed now - see data/layouts_corrections.json for the evidence - so both are here.
 //
-// WHAT LIVES AT 0x24, for whoever types it. The constructor and PlayFeedbackSample agree that it
-// is TWO 132-byte channel blocks, not the opaque byte arrays the header currently shows.
-// PlayFeedbackSample indexes `this[132 * channel]`, and the constructor's loop writes eight base
-// offsets at stride 4 for eight iterations. Each block is:
+// WHAT LIVES AT 0x24. Two 132-byte channel blocks, each four 8-element arrays and a count:
 //
-//     +0x00  f32* values[8]      +0x20  i32* labels[8]     +0x40  i32 ids[8]
-//     +0x60  i32  state[8]       (-1 from the constructor, 0 once a sample plays)
-//     +0x80  i32  count
+//     +0x00  f32* SampleValues[8]   the pointer a sample writes its value through
+//     +0x20  i32* SampleLabels[8]   +0x40  i32 SampleIds[8]
+//     +0x60  i32  SampleState[8]    -1 when free, 0 once a sample plays
+//     +0x80  i32  SampleCount
 //
-// and 0x24 + 2*132 comes to 0x12C, which is the class size the binary allocates.
+// and 0x24 + 2*132 = 0x12C, the size the binary allocates. They are flat per-channel arrays rather
+// than a nested struct only because data/layouts.json cannot express one.
 
 #include "vehfeedback.h"
+
+// For Timer::Ticks(), which SetActuatorValue stamps into Timers[].
+#include "misc/timer.h"
 
 // ??1vehFeedback@@UAE@XZ - 0x004D5740
 //
@@ -73,12 +73,12 @@ vehFeedback::~vehFeedback()
 // ?SetFeedback@vehFeedback@@UAEH_N@Z - 0x004D57A0
 //
 // Reports whether force feedback is available rather than enabling anything: the original is
-// `return this[2] != 0`, testing the ioPad at 0x08. Its bool argument is accepted and ignored,
+// `return this[2] != 0`, testing the ioPad at 0x08 (Pad). Its bool argument is accepted and ignored,
 // which is why the parameter is unnamed rather than absent - dropping it would change the mangled
 // name and the slot would no longer match.
 i32 vehFeedback::SetFeedback(bool /*arg1*/)
 {
-    return field_8 != 0;
+    return Pad != nullptr;
 }
 
 // ?SetTimingUnit@vehFeedback@@UAEHM@Z - 0x004D57B0
@@ -92,10 +92,10 @@ i32 vehFeedback::SetFeedback(bool /*arg1*/)
 // widening is the behaviour, not an artifact of the decompiler.
 i32 vehFeedback::SetTimingUnit(f32 arg1)
 {
-    if (static_cast<f64>(arg1) >= static_cast<f64>(field_C))
+    if (static_cast<f64>(arg1) >= static_cast<f64>(MaxTimingUnit))
         return 0;
 
-    field_20 = arg1;
+    TimingUnit = arg1;
     return 1;
 }
 
@@ -106,4 +106,61 @@ i32 vehFeedback::SetTimingUnit(f32 arg1)
 i32 vehFeedback::GetNumActuators()
 {
     return 0;
+}
+
+// ?SetActuatorValue@vehFeedback@@UAEHHM@Z - 0x004D57F0
+//
+// THE BOUND IS UNSIGNED IN THE ORIGINAL - `unsigned int a2` against `a2 <= 1` - so a negative
+// index does not pass it, and the cast here is what preserves that. Comparing a signed i32 against
+// 1 would let -1 through and write four bytes before ActuatorValues. The mangled name says the
+// parameter is `H`, a signed int, so the signedness lives in the comparison rather than the type.
+//
+// Returns 0 unconditionally, including when it did nothing.
+i32 vehFeedback::SetActuatorValue(i32 arg1, f32 arg2)
+{
+    if (Pad && static_cast<u32>(arg1) <= 1)
+    {
+        ActuatorValues[arg1] = arg2;
+        Timers[arg1].StartTime = Timer::Ticks();
+    }
+
+    return 0;
+}
+
+// ?ClearAllSamples@vehFeedback@@UAEH_N@Z - 0x004D5910
+//
+// Frees every sample slot in both channels. The original walks all eight arrays in one loop over
+// the slot index, writing the two counts redundantly on every iteration; written here as a loop
+// per channel, which touches exactly the same bytes.
+//
+// SampleState goes to -1 rather than 0 - that is the free marker, and the constructor sets it the
+// same way. PlayFeedbackSample writes 0 there when it takes a slot.
+i32 vehFeedback::ClearAllSamples(bool arg1)
+{
+    for (i32 i = 0; i < 8; ++i)
+    {
+        Ch0SampleValues[i] = nullptr;
+        Ch0SampleLabels[i] = nullptr;
+        Ch0SampleIds[i] = 0;
+        Ch0SampleState[i] = -1;
+
+        Ch1SampleValues[i] = nullptr;
+        Ch1SampleLabels[i] = nullptr;
+        Ch1SampleIds[i] = 0;
+        Ch1SampleState[i] = -1;
+    }
+
+    Ch0SampleCount = 0;
+    Ch1SampleCount = 0;
+
+    // Zero both actuators, but only when asked and only if there is a pad to zero them on. The
+    // original reaches SetActuatorValue through the vtable at slot 4; calling it directly is the
+    // same dispatch, since it is virtual and this is the same object.
+    if (Pad && arg1)
+    {
+        SetActuatorValue(0, 0.0f);
+        SetActuatorValue(1, 0.0f);
+    }
+
+    return 1;
 }

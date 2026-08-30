@@ -12,12 +12,16 @@
     "",
     "Five of the ten virtuals stay in the assembly on purpose - the C++ table then points partly",
     "here and partly at 1999 code, which is what makes a ten-slot class portable a few functions at",
-    "a time. SetActuatorValue is among them until the fields at 0x18 and 0x1C are typed f32; see the",
-    "note at the top of vehfeedback.cpp."
+    "note at the top of vehfeedback.cpp.",
+    "SetActuatorValue and ClearAllSamples joined once the fields at 0x18 and everything from 0x24",
+    "were typed - see data/layouts_corrections.json. Three virtuals remain in the assembly:",
+    "PlayFeedbackSample, PlayFeedbackSampleID and GetNextUnit, plus Update."
   ],
   "ported": [
     "??1vehFeedback@@UAE@XZ",
+    "?ClearAllSamples@vehFeedback@@UAEH_N@Z",
     "?GetNumActuators@vehFeedback@@UAEHXZ",
+    "?SetActuatorValue@vehFeedback@@UAEHHM@Z",
     "?SetFeedback@vehFeedback@@UAEH_N@Z",
     "?SetTimingUnit@vehFeedback@@UAEHM@Z"
   ]
