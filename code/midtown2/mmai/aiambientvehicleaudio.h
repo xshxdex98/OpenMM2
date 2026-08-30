@@ -25,7 +25,7 @@
 
 #include "audio/aud3dobject.h"
 
-class Aud3DManagerData;
+template <typename T> class Aud3DManagerData;
 class AudCreature;
 class AudImpact;
 class Vector3;

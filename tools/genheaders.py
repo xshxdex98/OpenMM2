@@ -283,6 +283,31 @@ def backfillable(name):
     return name not in HANDWRITTEN
 
 
+TEMPLATE_USE = re.compile(r"\b([A-Za-z_]\w*)\s*<([^<>]*)>")
+
+
+def template_prefix(name):
+    """`template <typename T> ` for a class template, empty for everything else."""
+    arity = TEMPLATES.get(name)
+    if not arity:
+        return ""
+    params = ", ".join("typename T%d" % i for i in range(arity)) if arity > 1 else "typename T"
+    return "template <%s> " % params
+
+
+def learn_templates(syms):
+    """Record every class template named in a demangled type, with its argument count."""
+    for sym in syms:
+        for text in (sym.get("type"), sym.get("demangled"), sym.get("name")):
+            if not text or "<" not in text:
+                continue
+            for name, args in TEMPLATE_USE.findall(text):
+                if name == "operator":
+                    continue
+                arity = len([a for a in args.split(",") if a.strip()]) or 1
+                TEMPLATES[name] = max(TEMPLATES.get(name, 0), arity)
+
+
 def usable_members(cls, info):
     """The members of `cls` that can actually be declared, in recorded order.
 
@@ -880,7 +905,7 @@ def emit_class(cls, syms, index, subsys):
     fwd = [r for r in fwd if r not in global_enums]
     if fwd:
         # The class-key comes from the binary, not from a guess - see class_key/STRUCT_TAGS.
-        out += ["%s %s;" % (class_key(r), r) for r in fwd]
+        out += ["%s%s %s;" % (template_prefix(r), class_key(r), r) for r in fwd]
         out.append("")
 
     # Nested classes are declared inside their outer class; emit the leaf name only.
@@ -1107,6 +1132,24 @@ def filename(cls):
     return cls.split("::")[0].lower() + ".h"
 
 
+# CLASS TEMPLATES, DERIVED FROM THE SYMBOL TABLE RATHER THAN LISTED.
+#
+# A template forward-declared as a plain class is a syntax error at every use: MSVC reports the
+# `<` as C2059 and then discards the declaration, which is what aiambientvehicleaudio.h was doing
+# eight times over.
+#
+# The type CANNOT simply be simplified away, because a static data member's mangled name encodes
+# it: s_ppHornAudioContainer mangles as ?s_ppHornAudioContainer@aiAmbientVehicleAudio@@0PAPAV?$Aud
+# 3DManagerData@VvehHornAudio@@@@A, and spelling the member void** would mangle to PAPAX and stop
+# matching the binary. The declaration has to stay templated, so the forward declaration has to be
+# a template too.
+#
+# `?$` in a mangled name is exactly MSVC's marker for one, and the binary contains a single real
+# case - Aud3DManagerData, with four instantiations. (`?$AA@` also matches the marker but is the
+# mangling of a string literal's terminator, not a type, which is why this reads the demangled
+# spelling instead.) An incomplete template is fine here: every use is through a pointer.
+TEMPLATES = {}
+
 HIER = {}
 LAYOUT = {}
 MM2T = {}
@@ -1176,6 +1219,7 @@ def main():
         syms = json.load(f)
 
     learn_struct_tags(syms)
+    learn_templates(syms)
 
     if os.path.exists(HIERARCHY):
         with open(HIERARCHY, encoding="utf-8") as f:
