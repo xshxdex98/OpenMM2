@@ -32,13 +32,13 @@ class mmSlidingGauge : public mmLinearGauge
 {
 public:
     // ??1mmSlidingGauge@@QAE@XZ
-    ARTS_IMPORT ~mmSlidingGauge();
+    ARTS_EXPORT ~mmSlidingGauge();
 
     // ?Draw@mmSlidingGauge@@QAEXXZ
-    ARTS_IMPORT void Draw();
+    ARTS_EXPORT void Draw();
 
     // ?Init@mmSlidingGauge@@QAEXPADPAM1HPAVmmExternalView@@H@Z
-    ARTS_IMPORT void Init(char* arg1, f32* arg2, f32* arg3, i32 arg4, mmExternalView* arg5, i32 arg6);
+    ARTS_EXPORT void Init(char* arg1, f32* arg2, f32* arg3, i32 arg4, mmExternalView* arg5, i32 arg6);
 
 public:
     // Members from 0x020; everything below that belongs to mmLinearGauge.

@@ -1,0 +1,15 @@
+{
+  "_comment": [
+    "mmSlidingGauge in full - all three functions, so nothing of the class stays in game.asm.",
+    "Not polymorphic; the destructor is a jmp thunk to mmLinearGauge's.",
+    "",
+    "READ FROM THE DISASSEMBLY. MM2_RE_KIT covers only the destructor here - Draw and Init fall in",
+    "the 28.7% of functions it has no pseudocode for - so both were decoded from midtown2.exe and",
+    "the offsets are quoted in mmslidinggauge.cpp for checking."
+  ],
+  "ported": [
+    "??1mmSlidingGauge@@QAE@XZ",
+    "?Draw@mmSlidingGauge@@QAEXXZ",
+    "?Init@mmSlidingGauge@@QAEXPADPAM1HPAVmmExternalView@@H@Z"
+  ]
+}
