@@ -141,31 +141,32 @@ private:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i32 field_4; // 0x004
-    i32 field_8; // 0x008
-    i32 field_C; // 0x00C
-    i32 field_10; // 0x010
-    i32 field_14; // 0x014
-    i32 field_18; // 0x018
-    i32 field_1C; // 0x01C
-    i32 field_20; // 0x020
-    i32 field_24; // 0x024
-    i32 field_28; // 0x028
-    i32 field_2C; // 0x02C
-    i32 field_30; // 0x030
-    i32 field_34; // 0x034
-    i32 field_38; // 0x038
-    i32 field_3C; // 0x03C
-    i32 field_40; // 0x040
-    i32 field_44; // 0x044
-    u8 field_48; // 0x048
+    f32 Pan; // 0x004
+    f32 field_8; // 0x008
+    f32 Attenuation; // 0x00C
+    f32 LastDoppler; // 0x010
+    f32 MinDropOffSqr; // 0x014
+    f32 MaxDropOffSqr; // 0x018
+    i32 field_1c; // 0x01C
+    f32 PositionPtrPseudoDistChangeRate; // 0x020
+    f32 PositionPtrPseudoDist; // 0x024
+    f32 PositionPtrLastPseudoDist; // 0x028
+    f32 LeftPositionPtrDistSqr; // 0x02C
+    f32 RightPositionPtrDistSqr; // 0x030
+    f32 DropOffDivisor; // 0x034
+    f32 LeftPercentToMaxDist; // 0x038
+    f32 RightPercentToMaxDist; // 0x03C
+    i32 Priority; // 0x040
+    i32 ObjectId3D; // 0x044
+    bool Is3D; // 0x048
     u8 field_49; // 0x049
-    u8 field_4A[2]; // 0x04A
-    i32 field_4C; // 0x04C
-    i32 field_50; // 0x050
-    i32 field_54; // 0x054
-    i32 field_58; // 0x058
-    i32 field_5C; // 0x05C
+    u8 field_4a; // 0x04A
+    u8 field_4b; // 0x04B
+    Vector3* LeftPositionPtr; // 0x04C
+    Vector3* RightPositionPtr; // 0x050
+    Vector3** VectorPoints; // 0x054
+    i32 VectorPointMode; // 0x058
+    i32 NumVectorPoints; // 0x05C
 };
 
 // ??_7Aud3DObject@@6B@

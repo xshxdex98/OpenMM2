@@ -1,0 +1,8632 @@
+{
+ "layouts": {
+  "Aud3DObject": {
+   "kind": "class",
+   "size": 96,
+   "members": [
+    {
+     "name": "vtable",
+     "offset": 0,
+     "type": "void*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Pan",
+     "offset": 4,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_8",
+     "offset": 8,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Attenuation",
+     "offset": 12,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "LastDoppler",
+     "offset": 16,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MinDropOffSqr",
+     "offset": 20,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MaxDropOffSqr",
+     "offset": 24,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_1c",
+     "offset": 28,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "PositionPtrPseudoDistChangeRate",
+     "offset": 32,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "PositionPtrPseudoDist",
+     "offset": 36,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "PositionPtrLastPseudoDist",
+     "offset": 40,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "LeftPositionPtrDistSqr",
+     "offset": 44,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "RightPositionPtrDistSqr",
+     "offset": 48,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "DropOffDivisor",
+     "offset": 52,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "LeftPercentToMaxDist",
+     "offset": 56,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "RightPercentToMaxDist",
+     "offset": 60,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Priority",
+     "offset": 64,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ObjectId3D",
+     "offset": 68,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Is3D",
+     "offset": 72,
+     "type": "bool",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "field_49",
+     "offset": 73,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "field_4a",
+     "offset": 74,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "field_4b",
+     "offset": 75,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "LeftPositionPtr",
+     "offset": 76,
+     "type": "Vector3*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "RightPositionPtr",
+     "offset": 80,
+     "type": "Vector3*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "VectorPoints",
+     "offset": 84,
+     "type": "Vector3**",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "VectorPointMode",
+     "offset": 88,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "NumVectorPoints",
+     "offset": 92,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "Base": {
+   "kind": "class",
+   "size": 4,
+   "members": [
+    {
+     "name": "__vftable",
+     "offset": 0,
+     "type": "Base_vtbl*",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "CArrayList": {
+   "kind": "class",
+   "size": 8,
+   "members": [
+    {
+     "name": "count",
+     "offset": 0,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "pad_2",
+     "offset": 2,
+     "type": "u8[2]",
+     "width": 2,
+     "src": "kit-padding"
+    },
+    {
+     "name": "data",
+     "offset": 4,
+     "type": "i32*",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "DMusicObject": {
+   "kind": "class",
+   "size": 56,
+   "members": [
+    {
+     "name": "_buffer",
+     "offset": 0,
+     "type": "unsigned __int8[56]",
+     "width": 56,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "DirSnd": {
+   "kind": "class",
+   "size": 60,
+   "members": [
+    {
+     "name": "__vftable",
+     "offset": 0,
+     "type": "DirSnd_vtbl*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "lpDSBuffer",
+     "offset": 4,
+     "type": "IDirectSoundBuffer*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "lpDS",
+     "offset": 8,
+     "type": "IDirectSound*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "hWnd",
+     "offset": 12,
+     "type": "HWND__*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unk_10",
+     "offset": 16,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pNextDevice",
+     "offset": 20,
+     "type": "tag_dsdevdesc*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pCurrentDevice",
+     "offset": 24,
+     "type": "tag_dsdevdesc*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "lpDS3DListener",
+     "offset": 28,
+     "type": "IDirectSound3DListener*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "deviceCount",
+     "offset": 32,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "bitDepth",
+     "offset": 36,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "flags",
+     "offset": 40,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "is3DEnabled",
+     "offset": 44,
+     "type": "bool",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "isInitialized",
+     "offset": 45,
+     "type": "bool",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "pad_2E",
+     "offset": 46,
+     "type": "u8[2]",
+     "width": 2,
+     "src": "kit-padding"
+    },
+    {
+     "name": "isSoundEnabled",
+     "offset": 48,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "deviceCaps",
+     "offset": 52,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ppSoundDevices",
+     "offset": 56,
+     "type": "tag_dsdevdesc**",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "LocString": {
+   "kind": "class",
+   "size": 512,
+   "members": [
+    {
+     "name": "buffer",
+     "offset": 0,
+     "type": "char[512]",
+     "width": 512,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "LuaRaycastResult": {
+   "kind": "class",
+   "size": 8,
+   "members": [
+    {
+     "name": "segment",
+     "offset": 0,
+     "type": "lvlSegment*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "isect",
+     "offset": 4,
+     "type": "lvlIntersection*",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "MMDMusicManager": {
+   "kind": "class",
+   "size": 88,
+   "members": [
+    {
+     "name": "_buffer",
+     "offset": 0,
+     "type": "unsigned __int8[88]",
+     "width": 88,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "Matrix34": {
+   "kind": "class",
+   "size": 48,
+   "members": [
+    {
+     "name": "m00",
+     "offset": 0,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "m01",
+     "offset": 4,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "m02",
+     "offset": 8,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "m10",
+     "offset": 12,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "m11",
+     "offset": 16,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "m12",
+     "offset": 20,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "m20",
+     "offset": 24,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "m21",
+     "offset": 28,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "m22",
+     "offset": 32,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "m30",
+     "offset": 36,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "m31",
+     "offset": 40,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "m32",
+     "offset": 44,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "Matrix44": {
+   "kind": "class",
+   "size": 64,
+   "members": [
+    {
+     "name": "m00",
+     "offset": 0,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "m01",
+     "offset": 4,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "m02",
+     "offset": 8,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "m03",
+     "offset": 12,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "m10",
+     "offset": 16,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "m11",
+     "offset": 20,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "m12",
+     "offset": 24,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "m13",
+     "offset": 28,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "m20",
+     "offset": 32,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "m21",
+     "offset": 36,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "m22",
+     "offset": 40,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "m23",
+     "offset": 44,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "m30",
+     "offset": 48,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "m31",
+     "offset": 52,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "m32",
+     "offset": 56,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "m33",
+     "offset": 60,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "NETSESSION_DESC": {
+   "kind": "class",
+   "size": 272,
+   "members": [
+    {
+     "name": "info",
+     "offset": 0,
+     "type": "char[256]",
+     "width": 256,
+     "src": "kit"
+    },
+    {
+     "name": "version",
+     "offset": 256,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "details",
+     "offset": 260,
+     "type": "NETSESSION_DESC::<unnamed_type_details>",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "___u3",
+     "offset": 264,
+     "type": "$A7DFA09CBDD48EDA6BCC399D80B97FF7",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pedestrianDensity",
+     "offset": 268,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "NetStartArray": {
+   "kind": "class",
+   "size": 40,
+   "members": [
+    {
+     "name": "Slots",
+     "offset": 0,
+     "type": "unsigned int[10]",
+     "width": 40,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "OppIconInfo": {
+   "kind": "class",
+   "size": 40,
+   "members": [
+    {
+     "name": "Color",
+     "offset": 0,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Enabled",
+     "offset": 4,
+     "type": "bool",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "pad_5",
+     "offset": 5,
+     "type": "u8[3]",
+     "width": 3,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Matrix",
+     "offset": 8,
+     "type": "Matrix34*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Place",
+     "offset": 12,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Text",
+     "offset": 16,
+     "type": "char[16]",
+     "width": 16,
+     "src": "kit"
+    },
+    {
+     "name": "Bitmap",
+     "offset": 32,
+     "type": "gfxBitmap*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Scale",
+     "offset": 36,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "PhysicsStats": {
+   "kind": "class",
+   "size": 72,
+   "members": [
+    {
+     "name": "TotalUpdateTime",
+     "offset": 0,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ObjPairCollectingTime",
+     "offset": 4,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "TotalCollisionTime",
+     "offset": 8,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MoverUpdateTime",
+     "offset": 12,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MoverGatherTime",
+     "offset": 16,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ObjToObjCollisionTime",
+     "offset": 20,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ObjToObjImpactTime",
+     "offset": 24,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "CarImpactTime",
+     "offset": 28,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ObjTerrainCollisionTime",
+     "offset": 32,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ObjTerrainImpactTime",
+     "offset": 36,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "PostCollisionTime",
+     "offset": 40,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "CollisionsTime",
+     "offset": 44,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MoverVsMover",
+     "offset": 48,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MoverVsCollidable",
+     "offset": 52,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "TotalProbes",
+     "offset": 56,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "TotalProbeTime",
+     "offset": 60,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ExternalProbes",
+     "offset": 64,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ExternalProbeTime",
+     "offset": 68,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "Stream": {
+   "kind": "class",
+   "size": 28,
+   "members": [
+    {
+     "name": "Methods",
+     "offset": 0,
+     "type": "coreFileMethods*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Handle",
+     "offset": 4,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Buffer",
+     "offset": 8,
+     "type": "i8*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "CurrentFileOffset",
+     "offset": 12,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "CurrentBufferOffset",
+     "offset": 16,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "CurrentBufferSize",
+     "offset": 20,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "BufferSize",
+     "offset": 24,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "TexelDamageTri": {
+   "kind": "class",
+   "size": 8,
+   "members": [
+    {
+     "name": "Indices",
+     "offset": 0,
+     "type": "unsigned __int16[3]",
+     "width": 6,
+     "src": "kit"
+    },
+    {
+     "name": "Texture",
+     "offset": 6,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "Timer": {
+   "kind": "class",
+   "size": 4,
+   "members": [
+    {
+     "name": "StartTime",
+     "offset": 0,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "Vector2": {
+   "kind": "class",
+   "size": 8,
+   "members": [
+    {
+     "name": "X",
+     "offset": 0,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Y",
+     "offset": 4,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "Vector3": {
+   "kind": "class",
+   "size": 12,
+   "members": [
+    {
+     "name": "X",
+     "offset": 0,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Y",
+     "offset": 4,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Z",
+     "offset": 8,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "Vector4": {
+   "kind": "class",
+   "size": 16,
+   "members": [
+    {
+     "name": "X",
+     "offset": 0,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Y",
+     "offset": 4,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Z",
+     "offset": 8,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "W",
+     "offset": 12,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "aiCityData": {
+   "kind": "class",
+   "size": 52,
+   "members": [
+    {
+     "name": "__vftable",
+     "offset": 0,
+     "type": "aiCityData_vtbl*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "_buffer",
+     "offset": 4,
+     "type": "unsigned __int8[48]",
+     "width": 48,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "aiGoal": {
+   "kind": "class",
+   "size": 8,
+   "members": [
+    {
+     "name": "field_0",
+     "offset": 0,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "UpdateCount",
+     "offset": 4,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "aiIntersection": {
+   "kind": "class",
+   "size": 44,
+   "members": [
+    {
+     "name": "paths",
+     "offset": 0,
+     "type": "aiPath**",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pathCount",
+     "offset": 4,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "pad_6",
+     "offset": 6,
+     "type": "u8[2]",
+     "width": 2,
+     "src": "kit-padding"
+    },
+    {
+     "name": "prevVeh",
+     "offset": 8,
+     "type": "aiVehicle*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "nextVeh",
+     "offset": 12,
+     "type": "aiVehicle*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "roomId",
+     "offset": 16,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "id",
+     "offset": 18,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "center",
+     "offset": 20,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_18",
+     "offset": 24,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "trafficLights",
+     "offset": 32,
+     "type": "aiTrafficLightSet*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "vehicles",
+     "offset": 36,
+     "type": "aiObstacle*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "bangers",
+     "offset": 40,
+     "type": "aiObstacle*",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "aiMapComponentList": {
+   "kind": "class",
+   "size": 8,
+   "members": [
+    {
+     "name": "Count",
+     "offset": 0,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "pad_2",
+     "offset": 2,
+     "type": "u8[2]",
+     "width": 2,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Components",
+     "offset": 4,
+     "type": "aiMapComponentListEntry**",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "aiMapStats": {
+   "kind": "class",
+   "size": 40,
+   "members": [
+    {
+     "name": "_fSubwayUpdate",
+     "offset": 0,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "_fCableCarUpdate",
+     "offset": 4,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "_fCTFOppUpdate",
+     "offset": 8,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "_fPedUpdate",
+     "offset": 12,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "_fAmbientUpdate",
+     "offset": 16,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "_fCopUpdate",
+     "offset": 20,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "_nPedQty",
+     "offset": 24,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "_fOppUpdate",
+     "offset": 28,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "_nAmbientQty",
+     "offset": 32,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "_fTotUpdate",
+     "offset": 36,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "aiObstacle": {
+   "kind": "class",
+   "size": 4,
+   "members": [
+    {
+     "name": "__vftable",
+     "offset": 0,
+     "type": "aiObstacle_vtbl*",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "aiPath": {
+   "kind": "class",
+   "size": 356,
+   "members": [
+    {
+     "name": "field_0",
+     "offset": 0,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "RInterRoadIdx",
+     "offset": 4,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Count",
+     "offset": 8,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "Id",
+     "offset": 10,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "Flags",
+     "offset": 12,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "NumBlocks",
+     "offset": 14,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "Blocks",
+     "offset": 16,
+     "type": "i16*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "HalfWidth",
+     "offset": 20,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "SpeedLimit",
+     "offset": 24,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "NumPeds",
+     "offset": 28,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "PedFirst",
+     "offset": 32,
+     "type": "aiPedestrian*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "NumRoadTurns",
+     "offset": 36,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "RoadTurns",
+     "offset": 40,
+     "type": "void*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "AmbPlayerFlags",
+     "offset": 44,
+     "type": "i8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "PedPlayerFlags",
+     "offset": 45,
+     "type": "i8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "pad_2E",
+     "offset": 46,
+     "type": "u8[2]",
+     "width": 2,
+     "src": "kit-padding"
+    },
+    {
+     "name": "field_30",
+     "offset": 48,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_34",
+     "offset": 52,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "LNumLanes",
+     "offset": 56,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "LNumTrams",
+     "offset": 58,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "LNumTrains",
+     "offset": 60,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "LUnk1",
+     "offset": 62,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "LAmbientType",
+     "offset": 64,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "pad_42",
+     "offset": 66,
+     "type": "u8[2]",
+     "width": 2,
+     "src": "kit-padding"
+    },
+    {
+     "name": "LLaneDistances",
+     "offset": 68,
+     "type": "f32*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "LOuterDistances",
+     "offset": 72,
+     "type": "f32*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "LUnk2",
+     "offset": 76,
+     "type": "float[10]",
+     "width": 40,
+     "src": "kit"
+    },
+    {
+     "name": "LLaneShit",
+     "offset": 116,
+     "type": "f32*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "LTramData",
+     "offset": 120,
+     "type": "void*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "LTrainData",
+     "offset": 124,
+     "type": "void*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "LUnk3",
+     "offset": 128,
+     "type": "void*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "LAmbients",
+     "offset": 132,
+     "type": "aiVehicleAmbient*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "LSplines",
+     "offset": 136,
+     "type": "aiVehicleSpline*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "LUnk4",
+     "offset": 140,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "LObstacles",
+     "offset": 144,
+     "type": "aiObstacle*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "LBangers",
+     "offset": 148,
+     "type": "void*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "LPedestrians",
+     "offset": 152,
+     "type": "aiPedestrian*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "RNumLanes",
+     "offset": 156,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "RNumTrams",
+     "offset": 158,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "RNumTrains",
+     "offset": 160,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "RUnk1",
+     "offset": 162,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "RAmbientType",
+     "offset": 164,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "pad_A6",
+     "offset": 166,
+     "type": "u8[2]",
+     "width": 2,
+     "src": "kit-padding"
+    },
+    {
+     "name": "RLaneDistances",
+     "offset": 168,
+     "type": "f32*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ROuterDistances",
+     "offset": 172,
+     "type": "f32*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "RUnk2",
+     "offset": 176,
+     "type": "float[10]",
+     "width": 40,
+     "src": "kit"
+    },
+    {
+     "name": "RLaneShit",
+     "offset": 216,
+     "type": "f32*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "RTramData",
+     "offset": 220,
+     "type": "void*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "RTrainData",
+     "offset": 224,
+     "type": "void*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "RUnk3",
+     "offset": 228,
+     "type": "void*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "RAmbients",
+     "offset": 232,
+     "type": "aiVehicleAmbient*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "RSplines",
+     "offset": 236,
+     "type": "aiVehicleSpline*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "RUnk4",
+     "offset": 240,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "RObstacles",
+     "offset": 244,
+     "type": "aiObstacle*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "RBangers",
+     "offset": 248,
+     "type": "void*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "RPedestrians",
+     "offset": 252,
+     "type": "aiPedestrian*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "RSectionDist",
+     "offset": 256,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "SectionOrigin",
+     "offset": 260,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "SectionAxis",
+     "offset": 264,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_10C",
+     "offset": 268,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Tangents",
+     "offset": 276,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "LIntersection",
+     "offset": 280,
+     "type": "aiIntersection*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "LInterUnk1",
+     "offset": 284,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "LInterVehicleRule",
+     "offset": 286,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "LInterRoadIdx",
+     "offset": 288,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "LInterUnk3",
+     "offset": 290,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "LInterTrafficLightOrigin",
+     "offset": 292,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_128",
+     "offset": 296,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "LInterTrafficLightAxis",
+     "offset": 304,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_134",
+     "offset": 308,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "RIntersection",
+     "offset": 316,
+     "type": "aiIntersection*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "RInterUnk1",
+     "offset": 320,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "RInterVehicleRule",
+     "offset": 322,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "RInterUnk2",
+     "offset": 324,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "RInterUnk3",
+     "offset": 326,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "RInterTrafficLightOrigin",
+     "offset": 328,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_14C",
+     "offset": 332,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "RInterTrafficLightAxis",
+     "offset": 340,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_158",
+     "offset": 344,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "AllwaysGo",
+     "offset": 352,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "AllwaysStop",
+     "offset": 354,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "aiPoliceForce": {
+   "kind": "class",
+   "size": 60,
+   "members": [
+    {
+     "name": "timer",
+     "offset": 0,
+     "type": "Timer",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "NumPerps",
+     "offset": 4,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "NumChasers",
+     "offset": 6,
+     "type": "__int16[3]",
+     "width": 6,
+     "src": "kit"
+    },
+    {
+     "name": "PlayerCars",
+     "offset": 12,
+     "type": "vehCar [3]*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_10",
+     "offset": 16,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "CopCars",
+     "offset": 24,
+     "type": "vehCar [3][3]*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_1C",
+     "offset": 28,
+     "type": "u8[32]",
+     "width": 32,
+     "src": "kit-padding"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "aiRailSet": {
+   "kind": "class",
+   "size": 128,
+   "members": [
+    {
+     "name": "BackBumperDist",
+     "offset": 0,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "FrontBumperDist",
+     "offset": 4,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "LSideDist",
+     "offset": 8,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "RSideDist",
+     "offset": 12,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "EnterInt",
+     "offset": 16,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "pad_12",
+     "offset": 18,
+     "type": "u8[2]",
+     "width": 2,
+     "src": "kit-padding"
+    },
+    {
+     "name": "RoadDist",
+     "offset": 20,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ResumeDist",
+     "offset": 24,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "SubSectionDist",
+     "offset": 28,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "TurnDist",
+     "offset": 32,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "LaneRandomness",
+     "offset": 36,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "WaitCount",
+     "offset": 40,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "SSIdx",
+     "offset": 42,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "CurLane",
+     "offset": 44,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "NextLane",
+     "offset": 46,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "TargetLane",
+     "offset": 48,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "pad_32",
+     "offset": 50,
+     "type": "u8[2]",
+     "width": 2,
+     "src": "kit-padding"
+    },
+    {
+     "name": "RailType",
+     "offset": 52,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "NextLink",
+     "offset": 56,
+     "type": "aiPath*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "CurLink",
+     "offset": 60,
+     "type": "aiPath*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_40",
+     "offset": 64,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "field_42",
+     "offset": 66,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "CurAccelFactor",
+     "offset": 68,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ExheedLimit",
+     "offset": 72,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "TargetVelocity",
+     "offset": 76,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "CarReactDist",
+     "offset": 80,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "VehicleAccelFactor",
+     "offset": 84,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "SeparationDist",
+     "offset": 88,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "IntersectionReactDist",
+     "offset": 92,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_60",
+     "offset": 96,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_64",
+     "offset": 100,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_68",
+     "offset": 104,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_6C",
+     "offset": 108,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_70",
+     "offset": 112,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_74",
+     "offset": 116,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_78",
+     "offset": 120,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_7C",
+     "offset": 124,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "aiRouteNode": {
+   "kind": "class",
+   "size": 36,
+   "members": [
+    {
+     "name": "unk_0x00",
+     "offset": 0,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Position",
+     "offset": 4,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_8",
+     "offset": 8,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Angle",
+     "offset": 16,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unk_14",
+     "offset": 20,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unk_18",
+     "offset": 24,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "RoadVertexIndex",
+     "offset": 26,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "unk_1C",
+     "offset": 28,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "unk_1E",
+     "offset": 30,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "unk_20",
+     "offset": 32,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "unk_22",
+     "offset": 34,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "aiTrafficLightSet": {
+   "kind": "class",
+   "size": 52,
+   "members": [
+    {
+     "name": "_buffer",
+     "offset": 0,
+     "type": "unsigned __int8[52]",
+     "width": 52,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "asLineSparks": {
+   "kind": "class",
+   "size": 96,
+   "members": [
+    {
+     "name": "_buffer",
+     "offset": 0,
+     "type": "unsigned __int8[96]",
+     "width": 96,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "asMeshCardInfo": {
+   "kind": "class",
+   "size": 16,
+   "members": [
+    {
+     "name": "Count",
+     "offset": 0,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "PositionsIndex",
+     "offset": 4,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Positions",
+     "offset": 8,
+     "type": "Vector2*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "TexCoords",
+     "offset": 12,
+     "type": "Vector2*",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "asMeshCardVertex": {
+   "kind": "class",
+   "size": 16,
+   "members": [
+    {
+     "name": "x",
+     "offset": 0,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "y",
+     "offset": 4,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "z",
+     "offset": 8,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "w",
+     "offset": 12,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "asNetwork": {
+   "kind": "class",
+   "size": 112,
+   "members": [
+    {
+     "name": "SysMessageCB",
+     "offset": 0,
+     "type": "datCallback",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_4",
+     "offset": 4,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "AppMessageCB",
+     "offset": 12,
+     "type": "datCallback",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_10",
+     "offset": 16,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "pDPlay",
+     "offset": 24,
+     "type": "IDirectPlay4*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pLobby",
+     "offset": 28,
+     "type": "IDirectPlayLobby3*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "PlayerID",
+     "offset": 32,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pConnection",
+     "offset": 36,
+     "type": "DPLCONNECTION*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pGUID",
+     "offset": 40,
+     "type": "_GUID*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "nRecvBufSize",
+     "offset": 44,
+     "type": "void*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pRecvBuf",
+     "offset": 48,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "float34",
+     "offset": 52,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MaxPlayers",
+     "offset": 56,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "SessionOpen",
+     "offset": 60,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "InLobby",
+     "offset": 64,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "dword44",
+     "offset": 68,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "dword48",
+     "offset": 72,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "IsHost",
+     "offset": 76,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "pad_4D",
+     "offset": 77,
+     "type": "u8[3]",
+     "width": 3,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Time",
+     "offset": 80,
+     "type": "Timer",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Elapsed",
+     "offset": 84,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "NetScore",
+     "offset": 88,
+     "type": "netZoneScore",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_5C",
+     "offset": 92,
+     "type": "u8[20]",
+     "width": 20,
+     "src": "kit-padding"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "asParticles": {
+   "kind": "class",
+   "size": 84,
+   "members": [
+    {
+     "name": "__vftable",
+     "offset": 0,
+     "type": "asParticles_vtbl*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "dword4",
+     "offset": 4,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "SparkCount",
+     "offset": 8,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "dwordC",
+     "offset": 12,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pSparks",
+     "offset": 16,
+     "type": "asSparkPos*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Texture",
+     "offset": 20,
+     "type": "gfxTexture*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MeshCardInfo",
+     "offset": 24,
+     "type": "asMeshCardInfo",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_1C",
+     "offset": 28,
+     "type": "u8[12]",
+     "width": 12,
+     "src": "kit-padding"
+    },
+    {
+     "name": "field_28",
+     "offset": 40,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_2C",
+     "offset": 44,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "dword30",
+     "offset": 48,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "dword34",
+     "offset": 52,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "dword38",
+     "offset": 56,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pBirthRule",
+     "offset": 60,
+     "type": "asBirthRule*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "dword40",
+     "offset": 64,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "dword44",
+     "offset": 68,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "dword48",
+     "offset": 72,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "dword4C",
+     "offset": 76,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "dword50",
+     "offset": 80,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "asSparkPos": {
+   "kind": "class",
+   "size": 28,
+   "members": [
+    {
+     "name": "TexCoordOffset",
+     "offset": 0,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "OffsetMask",
+     "offset": 1,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "SomeFlag",
+     "offset": 2,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "pad_3",
+     "offset": 3,
+     "type": "u8[1]",
+     "width": 1,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Scale",
+     "offset": 4,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Color",
+     "offset": 8,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ShadowHeight",
+     "offset": 12,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Pos",
+     "offset": 16,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_14",
+     "offset": 20,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "cityTimeWeatherLighting": {
+   "kind": "class",
+   "size": 76,
+   "members": [
+    {
+     "name": "KeyHeading",
+     "offset": 0,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "KeyPitch",
+     "offset": 4,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "KeyColor",
+     "offset": 8,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_C",
+     "offset": 12,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Fill1Heading",
+     "offset": 20,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Fill1Pitch",
+     "offset": 24,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Fill1Color",
+     "offset": 28,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_20",
+     "offset": 32,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Fill2Heading",
+     "offset": 40,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Fill2Pitch",
+     "offset": 44,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Fill2Color",
+     "offset": 48,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_34",
+     "offset": 52,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "AmbientLevel3",
+     "offset": 60,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "AmbientLevel2",
+     "offset": 64,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "AmbientLevel1",
+     "offset": 68,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Ambient",
+     "offset": 72,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "coreFileMethods": {
+   "kind": "class",
+   "size": 36,
+   "members": [
+    {
+     "name": "open",
+     "offset": 0,
+     "type": "int (__cdecl )(const char , bool)**",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "create",
+     "offset": 4,
+     "type": "int (__cdecl )(const char )**",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "read",
+     "offset": 8,
+     "type": "int (__cdecl )(int, void , int)**",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "write",
+     "offset": 12,
+     "type": "int (__cdecl )(int, void const, int)**",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "seek",
+     "offset": 16,
+     "type": "int (__cdecl )(int, int, seekWhence)*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "close",
+     "offset": 20,
+     "type": "int (__cdecl )(int)*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "enumFiles",
+     "offset": 24,
+     "type": "int (__cdecl )(const char , void (__cdecl )(const char , bool, void ), void )******",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "size",
+     "offset": 28,
+     "type": "int (__cdecl )(int)*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "flush",
+     "offset": 32,
+     "type": "int (__cdecl )(int)*",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "datBaseTokenizer": {
+   "kind": "class",
+   "size": 28,
+   "members": [
+    {
+     "name": "__vftable",
+     "offset": 0,
+     "type": "datBaseTokenizer_vtbl*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Name",
+     "offset": 4,
+     "type": "const char*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "TokenCount",
+     "offset": 8,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Stream",
+     "offset": 12,
+     "type": "Stream*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "CurrentToken",
+     "offset": 16,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "CachedTokens",
+     "offset": 20,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "TokenBuffer",
+     "offset": 24,
+     "type": "char[1]",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "pad_19",
+     "offset": 25,
+     "type": "u8[3]",
+     "width": 3,
+     "src": "kit-padding"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "datCallback": {
+   "kind": "class",
+   "size": 12,
+   "members": [
+    {
+     "name": "_class",
+     "offset": 0,
+     "type": "Base*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "_callback",
+     "offset": 4,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "_parameter",
+     "offset": 8,
+     "type": "void*",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "datParser": {
+   "kind": "class",
+   "size": 84,
+   "members": [
+    {
+     "name": "name",
+     "offset": 0,
+     "type": "char[64]",
+     "width": 64,
+     "src": "kit"
+    },
+    {
+     "name": "numRecords",
+     "offset": 64,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "_unk_44",
+     "offset": 68,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "record",
+     "offset": 72,
+     "type": "datParserRecord*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "_unk_4c",
+     "offset": 76,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "indentLevel",
+     "offset": 80,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "datParserRecord": {
+   "kind": "class",
+   "size": 84,
+   "members": [
+    {
+     "name": "type",
+     "offset": 0,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "dataCount",
+     "offset": 4,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "dataLength",
+     "offset": 6,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "name",
+     "offset": 8,
+     "type": "char[64]",
+     "width": 64,
+     "src": "kit"
+    },
+    {
+     "name": "dataPtr",
+     "offset": 72,
+     "type": "void*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "callback",
+     "offset": 76,
+     "type": "void*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "child",
+     "offset": 80,
+     "type": "datParserRecord*",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "datRefCount": {
+   "kind": "class",
+   "size": 8,
+   "members": [
+    {
+     "name": "__vftable",
+     "offset": 0,
+     "type": "datRefCount_vtbl*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "refCount",
+     "offset": 4,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "dgPath": {
+   "kind": "class",
+   "size": 56,
+   "members": [
+    {
+     "name": "Name",
+     "offset": 0,
+     "type": "char[32]",
+     "width": 32,
+     "src": "kit"
+    },
+    {
+     "name": "Points",
+     "offset": 32,
+     "type": "dgPathPoint*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "NumPoints",
+     "offset": 36,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "NumPoints2",
+     "offset": 40,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Unk1",
+     "offset": 44,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Type",
+     "offset": 48,
+     "type": "dgPathType",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Spacing",
+     "offset": 52,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "dgPathPoint": {
+   "kind": "class",
+   "size": 16,
+   "members": [
+    {
+     "name": "x",
+     "offset": 0,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "y",
+     "offset": 4,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "z",
+     "offset": 8,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unk",
+     "offset": 12,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "dgPathSet": {
+   "kind": "class",
+   "size": 784,
+   "members": [
+    {
+     "name": "__vftable",
+     "offset": 0,
+     "type": "dgPathSet_vtbl*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Paths",
+     "offset": 4,
+     "type": "dgPath [192]*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_8",
+     "offset": 8,
+     "type": "u8[764]",
+     "width": 764,
+     "src": "kit-padding"
+    },
+    {
+     "name": "PathCount",
+     "offset": 772,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unk0",
+     "offset": 776,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unk1",
+     "offset": 780,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "dgStatePack": {
+   "kind": "class",
+   "size": 108,
+   "members": [
+    {
+     "name": "GameMode",
+     "offset": 0,
+     "type": "dgGameMode",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "RaceId",
+     "offset": 4,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "TrafficDensity",
+     "offset": 8,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "PedestrianDensity",
+     "offset": 12,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "CopDensity",
+     "offset": 16,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "OpponentDensity",
+     "offset": 20,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unk_18",
+     "offset": 24,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unk_1C",
+     "offset": 28,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unk_20",
+     "offset": 32,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unk_24",
+     "offset": 36,
+     "type": "bool",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "pad_25",
+     "offset": 37,
+     "type": "u8[3]",
+     "width": 3,
+     "src": "kit-padding"
+    },
+    {
+     "name": "NumberOfCTFRacers",
+     "offset": 40,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "DisableAI",
+     "offset": 44,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unk_30",
+     "offset": 48,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MaxAmbientVehicles",
+     "offset": 52,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MaxAmbientPedestrians",
+     "offset": 56,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unk_3C",
+     "offset": 60,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "EnableCableCars",
+     "offset": 64,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "EnableSubways",
+     "offset": 68,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "NumLaps",
+     "offset": 72,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "TextureQuality",
+     "offset": 76,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unk_50",
+     "offset": 80,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "TimeOfDay",
+     "offset": 84,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "WeatherType",
+     "offset": 88,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "SkillLevel",
+     "offset": 92,
+     "type": "dgSkillLevel",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "AudioFlags",
+     "offset": 96,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "EnablePedestrians",
+     "offset": 100,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unk_68",
+     "offset": 104,
+     "type": "void*",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "fxShard": {
+   "kind": "class",
+   "size": 92,
+   "members": [
+    {
+     "name": "Velocity",
+     "offset": 0,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_4",
+     "offset": 4,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "RotationAxis",
+     "offset": 12,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_10",
+     "offset": 16,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "AliveTime",
+     "offset": 24,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "RotationSpeed",
+     "offset": 28,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Matrix",
+     "offset": 32,
+     "type": "Matrix34",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_24",
+     "offset": 36,
+     "type": "u8[44]",
+     "width": 44,
+     "src": "kit-padding"
+    },
+    {
+     "name": "TexUCoord",
+     "offset": 80,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "TexVCoord",
+     "offset": 84,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "dword_58",
+     "offset": 88,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "fxTexelDamage": {
+   "kind": "class",
+   "size": 36,
+   "members": [
+    {
+     "name": "AdjunctCount",
+     "offset": 0,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "TriCount",
+     "offset": 4,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "TextureCount",
+     "offset": 8,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Positions",
+     "offset": 12,
+     "type": "Vector3*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "TexCoords",
+     "offset": 16,
+     "type": "Vector2*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "DamageTris",
+     "offset": 20,
+     "type": "TexelDamageTri*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "CurrentShaders",
+     "offset": 24,
+     "type": "modShader*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "CleanShaders",
+     "offset": 28,
+     "type": "modShader*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "DamageTextures",
+     "offset": 32,
+     "type": "gfxTexture**",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "gfxBitmap": {
+   "kind": "class",
+   "size": 20,
+   "members": [
+    {
+     "name": "Name",
+     "offset": 0,
+     "type": "const char*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Width",
+     "offset": 4,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "Height",
+     "offset": 6,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "pSurface",
+     "offset": 8,
+     "type": "IDirectDrawSurface7*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "RefCount",
+     "offset": 12,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Next",
+     "offset": 16,
+     "type": "gfxBitmap*",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "gfxImage": {
+   "kind": "class",
+   "size": 28,
+   "members": [
+    {
+     "name": "Width",
+     "offset": 0,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "Height",
+     "offset": 2,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "Size",
+     "offset": 4,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "Type",
+     "offset": 6,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "PaletteType",
+     "offset": 7,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "TexEnv",
+     "offset": 8,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pImageData",
+     "offset": 12,
+     "type": "void*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pPaletteData",
+     "offset": 16,
+     "type": "void*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "RefCount",
+     "offset": 20,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Next",
+     "offset": 24,
+     "type": "gfxImage*",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "gfxInterface": {
+   "kind": "class",
+   "size": 624,
+   "members": [
+    {
+     "name": "GUID",
+     "offset": 0,
+     "type": "_GUID",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_4",
+     "offset": 4,
+     "type": "u8[12]",
+     "width": 12,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Name",
+     "offset": 16,
+     "type": "char[64]",
+     "width": 64,
+     "src": "kit"
+    },
+    {
+     "name": "DeviceCaps",
+     "offset": 80,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "DeviceType",
+     "offset": 84,
+     "type": "gfxDeviceType",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ResolutionCount",
+     "offset": 88,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ResolutionChoice",
+     "offset": 92,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "AcceptableDepths",
+     "offset": 96,
+     "type": "gfxDepthFlags",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "AvailableMemory",
+     "offset": 100,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "VendorID",
+     "offset": 104,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "DeviceID",
+     "offset": 108,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Resolutions",
+     "offset": 112,
+     "type": "gfxResData[64]",
+     "width": 256,
+     "src": "kit"
+    },
+    {
+     "name": "pad_170",
+     "offset": 368,
+     "type": "u8[256]",
+     "width": 256,
+     "src": "kit-padding"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "gfxLight": {
+   "kind": "class",
+   "size": 104,
+   "members": [
+    {
+     "name": "Type",
+     "offset": 0,
+     "type": "_D3DLIGHTTYPE",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Diffuse",
+     "offset": 4,
+     "type": "Vector4",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_8",
+     "offset": 8,
+     "type": "u8[12]",
+     "width": 12,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Specular",
+     "offset": 20,
+     "type": "Vector4",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_18",
+     "offset": 24,
+     "type": "u8[12]",
+     "width": 12,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Ambient",
+     "offset": 36,
+     "type": "Vector4",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_28",
+     "offset": 40,
+     "type": "u8[12]",
+     "width": 12,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Position",
+     "offset": 52,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_38",
+     "offset": 56,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Direction",
+     "offset": 64,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_44",
+     "offset": 68,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Range",
+     "offset": 76,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Falloff",
+     "offset": 80,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Attenuation0",
+     "offset": 84,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Attenuation1",
+     "offset": 88,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Attenuation2",
+     "offset": 92,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Theta",
+     "offset": 96,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Phi",
+     "offset": 100,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "gfxMaterial": {
+   "kind": "class",
+   "size": 72,
+   "members": [
+    {
+     "name": "Diffuse",
+     "offset": 0,
+     "type": "Vector4",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_4",
+     "offset": 4,
+     "type": "u8[12]",
+     "width": 12,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Ambient",
+     "offset": 16,
+     "type": "Vector4",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_14",
+     "offset": 20,
+     "type": "u8[12]",
+     "width": 12,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Specular",
+     "offset": 32,
+     "type": "Vector4",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_24",
+     "offset": 36,
+     "type": "u8[12]",
+     "width": 12,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Emissive",
+     "offset": 48,
+     "type": "Vector4",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_34",
+     "offset": 52,
+     "type": "u8[12]",
+     "width": 12,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Shininess",
+     "offset": 64,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Color",
+     "offset": 68,
+     "type": "ColorARGB",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "gfxPacket": {
+   "kind": "class",
+   "size": 44,
+   "members": [
+    {
+     "name": "Next",
+     "offset": 0,
+     "type": "gfxPacket*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "VertexBuffer",
+     "offset": 4,
+     "type": "IDirect3DVertexBuffer7*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Positions",
+     "offset": 8,
+     "type": "i32*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Vertices",
+     "offset": 12,
+     "type": "void*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "VertexTypeDesc",
+     "offset": 16,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "StartVertex",
+     "offset": 18,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "AdjunctCount",
+     "offset": 20,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "TriCount",
+     "offset": 22,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "Indices",
+     "offset": 24,
+     "type": "u16*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unk_1C",
+     "offset": 28,
+     "type": "u8*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unk_20",
+     "offset": 32,
+     "type": "u8*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unk_24",
+     "offset": 36,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "pad_25",
+     "offset": 37,
+     "type": "u8[3]",
+     "width": 3,
+     "src": "kit-padding"
+    },
+    {
+     "name": "unk_28",
+     "offset": 40,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "gfxRenderState": {
+   "kind": "class",
+   "size": 152,
+   "members": [
+    {
+     "name": "Data",
+     "offset": 0,
+     "type": "gfxRenderStateData",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_4",
+     "offset": 4,
+     "type": "u8[76]",
+     "width": 76,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Material",
+     "offset": 80,
+     "type": "gfxMaterial",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_54",
+     "offset": 84,
+     "type": "u8[68]",
+     "width": 68,
+     "src": "kit-padding"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "gfxRenderStateData": {
+   "kind": "class",
+   "size": 80,
+   "members": [
+    {
+     "name": "Clipping",
+     "offset": 0,
+     "type": "bool",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "Lighting",
+     "offset": 1,
+     "type": "bool",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "SrcBlend",
+     "offset": 2,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "DestBlend",
+     "offset": 3,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "VertexBlend",
+     "offset": 4,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "pad_5",
+     "offset": 5,
+     "type": "u8[3]",
+     "width": 3,
+     "src": "kit-padding"
+    },
+    {
+     "name": "TextureArg",
+     "offset": 8,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "BlendSet",
+     "offset": 12,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "FogStart",
+     "offset": 16,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "FogEnd",
+     "offset": 20,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ZEnable",
+     "offset": 24,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "ShadeMode",
+     "offset": 25,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "ZWriteEnable",
+     "offset": 26,
+     "type": "bool",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "CullMode",
+     "offset": 27,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "ZFunc",
+     "offset": 28,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "AlphaRef",
+     "offset": 29,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "AlphaFunc",
+     "offset": 30,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "DitherEnable",
+     "offset": 31,
+     "type": "bool",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "AlphaEnable",
+     "offset": 32,
+     "type": "bool",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "TexturePerspective",
+     "offset": 33,
+     "type": "bool",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "FillMode",
+     "offset": 34,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "ZBias",
+     "offset": 35,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "AntiAlias",
+     "offset": 36,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "FogVertexMode",
+     "offset": 37,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "AddrU",
+     "offset": 38,
+     "type": "unsigned __int8[2]",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "AddrV",
+     "offset": 40,
+     "type": "unsigned __int8[2]",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "pad_2A",
+     "offset": 42,
+     "type": "u8[2]",
+     "width": 2,
+     "src": "kit-padding"
+    },
+    {
+     "name": "unk_2C",
+     "offset": 44,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Ambient",
+     "offset": 48,
+     "type": "ColorARGB",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "FogColor",
+     "offset": 52,
+     "type": "ColorARGB",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "FogDensity",
+     "offset": 56,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ColorOp1",
+     "offset": 60,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "ColorOp2",
+     "offset": 61,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "SpecularEnable",
+     "offset": 62,
+     "type": "bool",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "FogEnable",
+     "offset": 63,
+     "type": "bool",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "NormalizeNormals",
+     "offset": 64,
+     "type": "bool",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "RangeFogEnable",
+     "offset": 65,
+     "type": "bool",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "pad_42",
+     "offset": 66,
+     "type": "u8[2]",
+     "width": 2,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Texture",
+     "offset": 68,
+     "type": "gfxTexture [2]*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_48",
+     "offset": 72,
+     "type": "u8[4]",
+     "width": 4,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Material",
+     "offset": 76,
+     "type": "gfxMaterial*",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "gfxResData": {
+   "kind": "class",
+   "size": 8,
+   "members": [
+    {
+     "name": "ScreenWidth",
+     "offset": 0,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "ScreenHeight",
+     "offset": 2,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "ColorDepth",
+     "offset": 4,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "Flags",
+     "offset": 6,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "gfxTexture": {
+   "kind": "class",
+   "size": 52,
+   "members": [
+    {
+     "name": "BindIndex",
+     "offset": 0,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Name",
+     "offset": 4,
+     "type": "const char*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Width",
+     "offset": 8,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "Height",
+     "offset": 10,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "TexEnv",
+     "offset": 12,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "DominantColor",
+     "offset": 16,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "DirectDrawSurface",
+     "offset": 20,
+     "type": "IDirectDrawSurface7*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "DirectDrawPalette",
+     "offset": 24,
+     "type": "IDirectDrawPalette*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "CacheEntry",
+     "offset": 28,
+     "type": "gfxTextureCacheEntry*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "CachePool",
+     "offset": 32,
+     "type": "gfxTextureCachePool*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "RefCount",
+     "offset": 36,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Next",
+     "offset": 40,
+     "type": "gfxTexture*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "NextLOD",
+     "offset": 44,
+     "type": "gfxTexture*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "LOD",
+     "offset": 48,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "MaxLOD",
+     "offset": 49,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "pad_32",
+     "offset": 50,
+     "type": "u8[2]",
+     "width": 2,
+     "src": "kit-padding"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "gfxTextureCacheEntry": {
+   "kind": "class",
+   "size": 16,
+   "members": [
+    {
+     "name": "pTexture",
+     "offset": 0,
+     "type": "gfxTexture*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pSurface",
+     "offset": 4,
+     "type": "IDirectDrawSurface7*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "LastAccessTime",
+     "offset": 8,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Next",
+     "offset": 12,
+     "type": "gfxTextureCacheEntry*",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "gfxTextureCachePool": {
+   "kind": "class",
+   "size": 52,
+   "members": [
+    {
+     "name": "Width",
+     "offset": 0,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "Height",
+     "offset": 2,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "MipMapCount",
+     "offset": 4,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "TextureCount",
+     "offset": 6,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "EntryCount",
+     "offset": 8,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "HasNoSurface",
+     "offset": 10,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "First",
+     "offset": 12,
+     "type": "gfxTextureCacheEntry*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Next",
+     "offset": 16,
+     "type": "gfxTextureCachePool*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "PixelFormat",
+     "offset": 20,
+     "type": "_DDPIXELFORMAT",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_18",
+     "offset": 24,
+     "type": "u8[28]",
+     "width": 28,
+     "src": "kit-padding"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "gfxViewport": {
+   "kind": "class",
+   "size": 380,
+   "members": [
+    {
+     "name": "m_Projection",
+     "offset": 0,
+     "type": "Matrix44",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_4",
+     "offset": 4,
+     "type": "u8[60]",
+     "width": 60,
+     "src": "kit-padding"
+    },
+    {
+     "name": "m_ViewModel",
+     "offset": 64,
+     "type": "Matrix44",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_44",
+     "offset": 68,
+     "type": "u8[60]",
+     "width": 60,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Camera",
+     "offset": 128,
+     "type": "Matrix44",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_84",
+     "offset": 132,
+     "type": "u8[60]",
+     "width": 60,
+     "src": "kit-padding"
+    },
+    {
+     "name": "World",
+     "offset": 192,
+     "type": "Matrix44",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_C4",
+     "offset": 196,
+     "type": "u8[60]",
+     "width": 60,
+     "src": "kit-padding"
+    },
+    {
+     "name": "field_100",
+     "offset": 256,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_104",
+     "offset": 260,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_108",
+     "offset": 264,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_10C",
+     "offset": 268,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_110",
+     "offset": 272,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_114",
+     "offset": 276,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_118",
+     "offset": 280,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_11C",
+     "offset": 284,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Flags",
+     "offset": 288,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "DefaultAspect",
+     "offset": 292,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_128",
+     "offset": 296,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "pad_129",
+     "offset": 297,
+     "type": "u8[3]",
+     "width": 3,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Near",
+     "offset": 300,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Far",
+     "offset": 304,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_134",
+     "offset": 308,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_138",
+     "offset": 312,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_13C",
+     "offset": 316,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_140",
+     "offset": 320,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_144",
+     "offset": 324,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_148",
+     "offset": 328,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_14C",
+     "offset": 332,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_150",
+     "offset": 336,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_154",
+     "offset": 340,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_158",
+     "offset": 344,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "m_Viewport",
+     "offset": 348,
+     "type": "_D3DVIEWPORT7",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_160",
+     "offset": 352,
+     "type": "u8[20]",
+     "width": 20,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Fov",
+     "offset": 372,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Aspect",
+     "offset": 376,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "ioEvent": {
+   "kind": "class",
+   "size": 16,
+   "members": [
+    {
+     "name": "type",
+     "offset": 0,
+     "type": "ioEvent::ioEventType",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "x",
+     "offset": 4,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "y",
+     "offset": 8,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "value",
+     "offset": 12,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "ltLensFlare": {
+   "kind": "class",
+   "size": 32,
+   "members": [
+    {
+     "name": "_buffer",
+     "offset": 0,
+     "type": "unsigned __int8[32]",
+     "width": 32,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "ltLight": {
+   "kind": "class",
+   "size": 76,
+   "members": [
+    {
+     "name": "Type",
+     "offset": 0,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Position",
+     "offset": 4,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_8",
+     "offset": 8,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Direction",
+     "offset": 16,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_14",
+     "offset": 20,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Color",
+     "offset": 28,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_20",
+     "offset": 32,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Intensity",
+     "offset": 40,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unk_2C",
+     "offset": 44,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "SpotExponent",
+     "offset": 48,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "HighlightTexture",
+     "offset": 52,
+     "type": "gfxTexture*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unk_38",
+     "offset": 56,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ProjectionSize",
+     "offset": 60,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "EnableProjection",
+     "offset": 64,
+     "type": "bool",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "unk_41",
+     "offset": 65,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "unk_42",
+     "offset": 66,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "unk_43",
+     "offset": 67,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "ShadowMode",
+     "offset": 68,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unk_48",
+     "offset": 72,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "lvlInstance": {
+   "kind": "class",
+   "size": 20,
+   "members": [
+    {
+     "name": "__vftable",
+     "offset": 0,
+     "type": "lvlInstance_vtbl*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Owner",
+     "offset": 4,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "Subtype",
+     "offset": 5,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "room",
+     "offset": 6,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "Flags",
+     "offset": 8,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "GeomIndex",
+     "offset": 10,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "Previous",
+     "offset": 12,
+     "type": "lvlInstance*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Next",
+     "offset": 16,
+     "type": "lvlInstance*",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "lvlRoomInfo": {
+   "kind": "class",
+   "size": 40,
+   "members": [
+    {
+     "name": "Flags",
+     "offset": 0,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "InstanceFlags",
+     "offset": 2,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "FirstInstance",
+     "offset": 4,
+     "type": "lvlInstance*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "StaticInstance",
+     "offset": 8,
+     "type": "lvlInstance*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "BoundSphere",
+     "offset": 12,
+     "type": "Vector4",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_10",
+     "offset": 16,
+     "type": "u8[12]",
+     "width": 12,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Color",
+     "offset": 28,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MinY",
+     "offset": 32,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MaxY",
+     "offset": 36,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "lvlSegmentInfo": {
+   "kind": "class",
+   "size": 12,
+   "members": [
+    {
+     "name": "StartRoomId",
+     "offset": 0,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "EndRoomId",
+     "offset": 4,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Polygon",
+     "offset": 8,
+     "type": "sdlPolyCached*",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "lvlTrackManager": {
+   "kind": "class",
+   "size": 88,
+   "members": [
+    {
+     "name": "MaxNumTracks",
+     "offset": 0,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_04",
+     "offset": 4,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_08",
+     "offset": 8,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "HalfWheelWidth",
+     "offset": 12,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "OneDivWheelWidth",
+     "offset": 16,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "TracksData",
+     "offset": 20,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_18",
+     "offset": 24,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_1c",
+     "offset": 28,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_20",
+     "offset": 32,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_24",
+     "offset": 36,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_28",
+     "offset": 40,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_2c",
+     "offset": 44,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_30",
+     "offset": 48,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_34",
+     "offset": 52,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_38",
+     "offset": 56,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_3c",
+     "offset": 60,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_40",
+     "offset": 64,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_44",
+     "offset": 68,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_48",
+     "offset": 72,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_4c",
+     "offset": 76,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "WheelMatrixPtr",
+     "offset": 80,
+     "type": "Matrix34*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_54",
+     "offset": 84,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "mmCityInfo": {
+   "kind": "class",
+   "size": 160,
+   "members": [
+    {
+     "name": "__vftable",
+     "offset": 0,
+     "type": "mmCityInfo_vtbl*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "localisedName",
+     "offset": 4,
+     "type": "char[40]",
+     "width": 40,
+     "src": "kit"
+    },
+    {
+     "name": "mapName",
+     "offset": 44,
+     "type": "char[40]",
+     "width": 40,
+     "src": "kit"
+    },
+    {
+     "name": "raceDir",
+     "offset": 84,
+     "type": "char[40]",
+     "width": 40,
+     "src": "kit"
+    },
+    {
+     "name": "blitzNames",
+     "offset": 124,
+     "type": "i8*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "checkpointNames",
+     "offset": 128,
+     "type": "i8*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "circuitNames",
+     "offset": 132,
+     "type": "i8*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "isValid",
+     "offset": 136,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "blitzCount",
+     "offset": 140,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "checkpointCount",
+     "offset": 144,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "circuitCount",
+     "offset": 148,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "_unk",
+     "offset": 152,
+     "type": "int[2]",
+     "width": 8,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "mmCityList": {
+   "kind": "class",
+   "size": 16,
+   "members": [
+    {
+     "name": "__vftable",
+     "offset": 0,
+     "type": "mmCityList_vtbl*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "cityInfos",
+     "offset": 4,
+     "type": "mmCityInfo**",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "numCities",
+     "offset": 8,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "curCity",
+     "offset": 12,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "mmGearIndicator": {
+   "kind": "class",
+   "size": 64,
+   "members": [
+    {
+     "name": "BitmapGears",
+     "offset": 0,
+     "type": "gfxBitmap [12]*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_4",
+     "offset": 4,
+     "type": "u8[44]",
+     "width": 44,
+     "src": "kit-padding"
+    },
+    {
+     "name": "DestX",
+     "offset": 48,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "DestY",
+     "offset": 52,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ExternalView",
+     "offset": 56,
+     "type": "mmExternalView*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Player",
+     "offset": 60,
+     "type": "mmPlayer*",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "mmInfoBase": {
+   "kind": "class",
+   "size": 136,
+   "members": [
+    {
+     "name": "__vftable",
+     "offset": 0,
+     "type": "mmInfoBase_vtbl*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "IOPath",
+     "offset": 4,
+     "type": "char[128]",
+     "width": 128,
+     "src": "kit"
+    },
+    {
+     "name": "Type",
+     "offset": 132,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "mmLinearGauge": {
+   "kind": "class",
+   "size": 32,
+   "members": [
+    {
+     "name": "MinValue",
+     "offset": 0,
+     "type": "f32*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MaxValue",
+     "offset": 4,
+     "type": "f32*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "DestX",
+     "offset": 8,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "DestY",
+     "offset": 12,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "BitmapGauge",
+     "offset": 16,
+     "type": "gfxBitmap*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "BitmapLabel",
+     "offset": 20,
+     "type": "gfxBitmap*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "DimensionType",
+     "offset": 24,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ExternalView",
+     "offset": 28,
+     "type": "mmExternalView*",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "mmSpeedIndicator": {
+   "kind": "class",
+   "size": 56,
+   "members": [
+    {
+     "name": "BitmapSpeeds",
+     "offset": 0,
+     "type": "gfxBitmap [10]*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_4",
+     "offset": 4,
+     "type": "u8[36]",
+     "width": 36,
+     "src": "kit-padding"
+    },
+    {
+     "name": "DestX",
+     "offset": 40,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "DestY",
+     "offset": 44,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ExternalView",
+     "offset": 48,
+     "type": "mmExternalView*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "CarSim",
+     "offset": 52,
+     "type": "vehCarSim*",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "mmText": {
+   "kind": "class",
+   "size": 2,
+   "members": [
+    {
+     "name": "byte0",
+     "offset": 0,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "byte1",
+     "offset": 1,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "mmTextData": {
+   "kind": "class",
+   "size": 272,
+   "members": [
+    {
+     "name": "Pos",
+     "offset": 0,
+     "type": "Vector2",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_4",
+     "offset": 4,
+     "type": "u8[4]",
+     "width": 4,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Flags",
+     "offset": 8,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Font",
+     "offset": 12,
+     "type": "HFONT__*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Text",
+     "offset": 16,
+     "type": "char[256]",
+     "width": 256,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "mmVehInfo": {
+   "kind": "class",
+   "size": 292,
+   "members": [
+    {
+     "name": "__vftable",
+     "offset": 0,
+     "type": "mmVehInfo_vtbl*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "baseName",
+     "offset": 4,
+     "type": "char[40]",
+     "width": 40,
+     "src": "kit"
+    },
+    {
+     "name": "description",
+     "offset": 44,
+     "type": "char[80]",
+     "width": 80,
+     "src": "kit"
+    },
+    {
+     "name": "colors",
+     "offset": 124,
+     "type": "char[100]",
+     "width": 100,
+     "src": "kit"
+    },
+    {
+     "name": "flags",
+     "offset": 224,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "order",
+     "offset": 228,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "isValid",
+     "offset": 232,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unlockScore",
+     "offset": 236,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unlockFlags",
+     "offset": 240,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "isLocked",
+     "offset": 244,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "horsepower",
+     "offset": 248,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "topSpeed",
+     "offset": 252,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "durability",
+     "offset": 256,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "mass",
+     "offset": 260,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "rewardFlags",
+     "offset": 264,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unk_10C",
+     "offset": 268,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "scoringBias",
+     "offset": 272,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "uiDist",
+     "offset": 276,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unk_118",
+     "offset": 280,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unk_11C",
+     "offset": 284,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "tuningCrc",
+     "offset": 288,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "mmVehList": {
+   "kind": "class",
+   "size": 16,
+   "members": [
+    {
+     "name": "__vftable",
+     "offset": 0,
+     "type": "mmVehList_vtbl*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "vehInfos",
+     "offset": 4,
+     "type": "mmVehInfo**",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "defaultVehicle",
+     "offset": 8,
+     "type": "mmVehInfo*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "numVehicles",
+     "offset": 12,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "modModel": {
+   "kind": "class",
+   "size": 12,
+   "members": [
+    {
+     "name": "numMaterials",
+     "offset": 0,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "numMatrices",
+     "offset": 1,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "flags",
+     "offset": 2,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "reserved",
+     "offset": 3,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "shaders",
+     "offset": 4,
+     "type": "modShader*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "packets",
+     "offset": 8,
+     "type": "gfxPacket**",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "modPackage": {
+   "kind": "class",
+   "size": 48,
+   "members": [
+    {
+     "name": "next",
+     "offset": 0,
+     "type": "modPackage*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "stream",
+     "offset": 4,
+     "type": "Stream*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "file",
+     "offset": 8,
+     "type": "char[32]",
+     "width": 32,
+     "src": "kit"
+    },
+    {
+     "name": "magic",
+     "offset": 40,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "fileSize",
+     "offset": 44,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "modShader": {
+   "kind": "class",
+   "size": 8,
+   "members": [
+    {
+     "name": "Texture",
+     "offset": 0,
+     "type": "gfxTexture*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Material",
+     "offset": 4,
+     "type": "gfxMaterial*",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "modStatic": {
+   "kind": "class",
+   "size": 16,
+   "members": [
+    {
+     "name": "PacketCount",
+     "offset": 0,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "Flags",
+     "offset": 1,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "FvfFlags",
+     "offset": 2,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "ShaderIndices",
+     "offset": 4,
+     "type": "u8*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ppPackets",
+     "offset": 8,
+     "type": "gfxPacket**",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ppPacketLists",
+     "offset": 12,
+     "type": "gfxPacketList**",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "netZoneScore": {
+   "kind": "class",
+   "size": 24,
+   "members": [
+    {
+     "name": "plobby",
+     "offset": 0,
+     "type": "IDirectPlayLobby3*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "GUID",
+     "offset": 4,
+     "type": "_GUID",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_8",
+     "offset": 8,
+     "type": "u8[12]",
+     "width": 12,
+     "src": "kit-padding"
+    },
+    {
+     "name": "pZoneScore",
+     "offset": 20,
+     "type": "void*",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "pedAnimation": {
+   "kind": "class",
+   "size": 108,
+   "members": [
+    {
+     "name": "AnimationCount",
+     "offset": 0,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Animations",
+     "offset": 4,
+     "type": "pedAnimation::Sequence*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "matrix348",
+     "offset": 8,
+     "type": "Matrix34",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_C",
+     "offset": 12,
+     "type": "u8[44]",
+     "width": 44,
+     "src": "kit-padding"
+    },
+    {
+     "name": "pModel",
+     "offset": 56,
+     "type": "modModel*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ppShaders",
+     "offset": 60,
+     "type": "modShader**",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pSkeleton",
+     "offset": 64,
+     "type": "crSkeleton*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "SkeletonData",
+     "offset": 68,
+     "type": "crSkeletonData",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pvoid4C",
+     "offset": 72,
+     "type": "f32*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pvoid50",
+     "offset": 76,
+     "type": "Vector2*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pvoid54",
+     "offset": 80,
+     "type": "u8*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pvoid58",
+     "offset": 84,
+     "type": "u8*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "dword5C",
+     "offset": 88,
+     "type": "u8**",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pColors",
+     "offset": 92,
+     "type": "u32*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "SphereIndex",
+     "offset": 96,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "nColorCount",
+     "offset": 100,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "HashTableIndex",
+     "offset": 104,
+     "type": "u16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "pad_6A",
+     "offset": 106,
+     "type": "u8[2]",
+     "width": 2,
+     "src": "kit-padding"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "phBound": {
+   "kind": "class",
+   "size": 76,
+   "members": [
+    {
+     "name": "__vftable",
+     "offset": 0,
+     "type": "phBound_vtbl*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MaterialCount",
+     "offset": 4,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Type",
+     "offset": 8,
+     "type": "phBound::BoundType",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Min",
+     "offset": 12,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_10",
+     "offset": 16,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Max",
+     "offset": 24,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_1C",
+     "offset": 28,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "IsOffset",
+     "offset": 36,
+     "type": "bool",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "pad_25",
+     "offset": 37,
+     "type": "u8[3]",
+     "width": 3,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Offset",
+     "offset": 40,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_2C",
+     "offset": 44,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Radius",
+     "offset": 52,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Flexibility",
+     "offset": 56,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "IsFlexible",
+     "offset": 60,
+     "type": "bool",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "pad_3D",
+     "offset": 61,
+     "type": "u8[3]",
+     "width": 3,
+     "src": "kit-padding"
+    },
+    {
+     "name": "o16",
+     "offset": 64,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Penetration",
+     "offset": 68,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "PenetrationBarelyMoved",
+     "offset": 72,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "phCollider": {
+   "kind": "class",
+   "size": 52,
+   "members": [
+    {
+     "name": "unknown",
+     "offset": 0,
+     "type": "unsigned __int8[48]",
+     "width": 48,
+     "src": "kit"
+    },
+    {
+     "name": "colliderId",
+     "offset": 48,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "phHotEdge": {
+   "kind": "class",
+   "size": 4,
+   "members": [
+    {
+     "name": "Indices",
+     "offset": 0,
+     "type": "unsigned __int16[2]",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "phInertialCS": {
+   "kind": "class",
+   "size": 436,
+   "members": [
+    {
+     "name": "field_0",
+     "offset": 0,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_4",
+     "offset": 4,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Active",
+     "offset": 8,
+     "type": "bool",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "pad_9",
+     "offset": 9,
+     "type": "u8[3]",
+     "width": 3,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Mass",
+     "offset": 12,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "InvMass",
+     "offset": 16,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "AngInertia",
+     "offset": 20,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_18",
+     "offset": 24,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "InvAngInertia",
+     "offset": 32,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_24",
+     "offset": 36,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "MaxVelocity",
+     "offset": 44,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_30",
+     "offset": 48,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_34",
+     "offset": 52,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_38",
+     "offset": 56,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ScaledVelocity",
+     "offset": 60,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_40",
+     "offset": 64,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "AngularVelocity",
+     "offset": 72,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_4C",
+     "offset": 76,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Matrix",
+     "offset": 84,
+     "type": "Matrix34",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_58",
+     "offset": 88,
+     "type": "u8[44]",
+     "width": 44,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Velocity",
+     "offset": 132,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_88",
+     "offset": 136,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Acceleration",
+     "offset": 144,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_94",
+     "offset": 148,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Force",
+     "offset": 156,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_A0",
+     "offset": 160,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Torque",
+     "offset": 168,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_AC",
+     "offset": 172,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "field_B4",
+     "offset": 180,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_B8",
+     "offset": 184,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "field_C0",
+     "offset": 192,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_C4",
+     "offset": 196,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Oversample",
+     "offset": 204,
+     "type": "bool",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "pad_CD",
+     "offset": 205,
+     "type": "u8[3]",
+     "width": 3,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Force2",
+     "offset": 208,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_D4",
+     "offset": 212,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Torque2",
+     "offset": 220,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_E0",
+     "offset": 224,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "NetPush",
+     "offset": 232,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_EC",
+     "offset": 236,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "NetTurn",
+     "offset": 244,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_F8",
+     "offset": 248,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "TotalAppliedPush",
+     "offset": 256,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_104",
+     "offset": 260,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "LastTotalAppliedPush",
+     "offset": 268,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_110",
+     "offset": 272,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "IsBeingPushed",
+     "offset": 280,
+     "type": "bool",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "pad_119",
+     "offset": 281,
+     "type": "u8[3]",
+     "width": 3,
+     "src": "kit-padding"
+    },
+    {
+     "name": "field_11C",
+     "offset": 284,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_120",
+     "offset": 288,
+     "type": "Matrix34",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_124",
+     "offset": 292,
+     "type": "u8[44]",
+     "width": 44,
+     "src": "kit-padding"
+    },
+    {
+     "name": "field_150",
+     "offset": 336,
+     "type": "Matrix34",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_154",
+     "offset": 340,
+     "type": "u8[44]",
+     "width": 44,
+     "src": "kit-padding"
+    },
+    {
+     "name": "field_180",
+     "offset": 384,
+     "type": "Matrix34",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_184",
+     "offset": 388,
+     "type": "u8[44]",
+     "width": 44,
+     "src": "kit-padding"
+    },
+    {
+     "name": "field_1B0",
+     "offset": 432,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "phIntersection": {
+   "kind": "class",
+   "size": 156,
+   "members": [
+    {
+     "name": "IntersectionPoint",
+     "offset": 0,
+     "type": "lvlIntersectionPoint",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_4",
+     "offset": 4,
+     "type": "u8[32]",
+     "width": 32,
+     "src": "kit-padding"
+    },
+    {
+     "name": "PolyIndex",
+     "offset": 36,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_28",
+     "offset": 40,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_2C",
+     "offset": 44,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_30",
+     "offset": 48,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "StartPos",
+     "offset": 52,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_38",
+     "offset": 56,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "EndPos",
+     "offset": 64,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_44",
+     "offset": 68,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "field_4C",
+     "offset": 76,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_50",
+     "offset": 80,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Poly",
+     "offset": 88,
+     "type": "phPolygon*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MaterialIndex",
+     "offset": 92,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_60",
+     "offset": 96,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_64",
+     "offset": 100,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_68",
+     "offset": 104,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Bound",
+     "offset": 108,
+     "type": "phBound*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_70",
+     "offset": 112,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_74",
+     "offset": 116,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_78",
+     "offset": 120,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_7C",
+     "offset": 124,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_80",
+     "offset": 128,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "field_88",
+     "offset": 136,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_8C",
+     "offset": 140,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "field_94",
+     "offset": 148,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Flags",
+     "offset": 152,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "pad_9A",
+     "offset": 154,
+     "type": "u8[2]",
+     "width": 2,
+     "src": "kit-padding"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "phIntersectionPoint": {
+   "kind": "class",
+   "size": 36,
+   "members": [
+    {
+     "name": "Point",
+     "offset": 0,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_4",
+     "offset": 4,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Normal",
+     "offset": 12,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_10",
+     "offset": 16,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "NormalizedDistance",
+     "offset": 24,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Penetration",
+     "offset": 28,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "IntersectResult",
+     "offset": 32,
+     "type": "u8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "pad_21",
+     "offset": 33,
+     "type": "u8[3]",
+     "width": 3,
+     "src": "kit-padding"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "phJoint": {
+   "kind": "class",
+   "size": 108,
+   "members": [
+    {
+     "name": "__vftable",
+     "offset": 0,
+     "type": "phJoint_vtbl*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ICS1",
+     "offset": 4,
+     "type": "phInertialCS*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ICS2",
+     "offset": 8,
+     "type": "phInertialCS*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Offset1",
+     "offset": 12,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_10",
+     "offset": 16,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Offset2",
+     "offset": 24,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_1C",
+     "offset": 28,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "PremultipliedOffset",
+     "offset": 36,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_28",
+     "offset": 40,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "PremultipliedOffset1",
+     "offset": 48,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_34",
+     "offset": 52,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "InvMassMatrix",
+     "offset": 60,
+     "type": "Matrix34",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_40",
+     "offset": 64,
+     "type": "u8[44]",
+     "width": 44,
+     "src": "kit-padding"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "phMaterial": {
+   "kind": "class",
+   "size": 48,
+   "members": [
+    {
+     "name": "__vftable",
+     "offset": 0,
+     "type": "phMaterial_vtbl*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Name",
+     "offset": 4,
+     "type": "char[20]",
+     "width": 20,
+     "src": "kit"
+    },
+    {
+     "name": "unknown24",
+     "offset": 24,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unknown28",
+     "offset": 28,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unknown32",
+     "offset": 32,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "EffectIndex",
+     "offset": 36,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "SoundIndex",
+     "offset": 38,
+     "type": "i16",
+     "width": 2,
+     "src": "kit"
+    },
+    {
+     "name": "Elasticity",
+     "offset": 40,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Friction",
+     "offset": 44,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "phPhysicsManager": {
+   "kind": "class",
+   "size": 4,
+   "members": [
+    {
+     "name": "__vftable",
+     "offset": 0,
+     "type": "phPhysicsManager_vtbl*",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "phPolygon": {
+   "kind": "class",
+   "size": 96,
+   "members": [
+    {
+     "name": "Normal",
+     "offset": 0,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_4",
+     "offset": 4,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Radius",
+     "offset": 12,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "EdgeNormalCross",
+     "offset": 16,
+     "type": "Vector4[4]",
+     "width": 16,
+     "src": "kit"
+    },
+    {
+     "name": "pad_20",
+     "offset": 32,
+     "type": "u8[48]",
+     "width": 48,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Indices",
+     "offset": 80,
+     "type": "unsigned __int16[4]",
+     "width": 8,
+     "src": "kit"
+    },
+    {
+     "name": "Indices2",
+     "offset": 88,
+     "type": "unsigned __int16[4]",
+     "width": 8,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "phSegment": {
+   "kind": "class",
+   "size": 28,
+   "members": [
+    {
+     "name": "Flag",
+     "offset": 0,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "StartPos",
+     "offset": 4,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_8",
+     "offset": 8,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "EndPos",
+     "offset": 16,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_14",
+     "offset": 20,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "phSleep": {
+   "kind": "class",
+   "size": 80,
+   "members": [
+    {
+     "name": "dword_00",
+     "offset": 0,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "dword_04",
+     "offset": 4,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "dword_08",
+     "offset": 8,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "dword_0c",
+     "offset": 12,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_10",
+     "offset": 16,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "LastAcceleration",
+     "offset": 24,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_1C",
+     "offset": 28,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "ICS",
+     "offset": 36,
+     "type": "phInertialCS*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Collider",
+     "offset": 40,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "dword_2c",
+     "offset": 44,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "dword_30",
+     "offset": 48,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "AwakeFrameCount",
+     "offset": 52,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MaxAwakeFrames",
+     "offset": 56,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "SomeMagTrigger",
+     "offset": 60,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "AccelMagThreshold",
+     "offset": 64,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "NextAwakeTime",
+     "offset": 68,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "State",
+     "offset": 72,
+     "type": "phSleepState",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "AsleepCB",
+     "offset": 76,
+     "type": "datCallback*",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "sdlPage16": {
+   "kind": "class",
+   "size": 32,
+   "members": [
+    {
+     "name": "unk_00",
+     "offset": 0,
+     "type": "i8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "PerimeterCount",
+     "offset": 1,
+     "type": "i8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "unk_02",
+     "offset": 2,
+     "type": "i8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "unk_03",
+     "offset": 3,
+     "type": "i8",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "CodedVertices",
+     "offset": 4,
+     "type": "Vector3*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Floats",
+     "offset": 8,
+     "type": "f32*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unk_0C",
+     "offset": 12,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "PerimeterVertices",
+     "offset": 16,
+     "type": "u16*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Attributes",
+     "offset": 20,
+     "type": "u16*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Textures",
+     "offset": 24,
+     "type": "gfxTexture**",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "unk_1C",
+     "offset": 28,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "string": {
+   "kind": "class",
+   "size": 8,
+   "members": [
+    {
+     "name": "buffer",
+     "offset": 0,
+     "type": "i8*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "length",
+     "offset": 4,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "vehBreakable": {
+   "kind": "class",
+   "size": 76,
+   "members": [
+    {
+     "name": "IsAttached",
+     "offset": 0,
+     "type": "bool",
+     "width": 1,
+     "src": "kit"
+    },
+    {
+     "name": "pad_1",
+     "offset": 1,
+     "type": "u8[3]",
+     "width": 3,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Flags",
+     "offset": 4,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Matrix",
+     "offset": 8,
+     "type": "Matrix34",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_C",
+     "offset": 12,
+     "type": "u8[44]",
+     "width": 44,
+     "src": "kit-padding"
+    },
+    {
+     "name": "Model",
+     "offset": 56,
+     "type": "lvlInstance::GeomTableEntry*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "BangerDataIndex",
+     "offset": 60,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "GeometryIndex",
+     "offset": 64,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Instance",
+     "offset": 68,
+     "type": "lvlInstance*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Next",
+     "offset": 72,
+     "type": "vehBreakable*",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "vehBreakableMgr": {
+   "kind": "class",
+   "size": 32,
+   "members": [
+    {
+     "name": "First",
+     "offset": 0,
+     "type": "vehBreakable*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "ImpulseThreshold",
+     "offset": 4,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Matrix",
+     "offset": 8,
+     "type": "Matrix34*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Variant",
+     "offset": 12,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_10",
+     "offset": 16,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_14",
+     "offset": 20,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_18",
+     "offset": 24,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_1C",
+     "offset": 28,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "vehCarAudioContainer": {
+   "kind": "class",
+   "size": 24,
+   "members": [
+    {
+     "name": "field_0",
+     "offset": 0,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "VehType",
+     "offset": 4,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "CarAudioPtr",
+     "offset": 8,
+     "type": "vehCarAudio*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "PoliceCarAudioPtr",
+     "offset": 12,
+     "type": "vehPoliceCarAudio*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "SemiCarAudioPtr",
+     "offset": 16,
+     "type": "vehSemiCarAudio*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "NitroCarAudioPtr",
+     "offset": 20,
+     "type": "vehNitroCarAudio*",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "vehEngineAudio": {
+   "kind": "class",
+   "size": 8,
+   "members": [
+    {
+     "name": "SampleCount",
+     "offset": 0,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Samples",
+     "offset": 4,
+     "type": "vehEngineSampleWrapper**",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "vehSurfaceAudio": {
+   "kind": "class",
+   "size": 132,
+   "members": [
+    {
+     "name": "LastSurfaceSound",
+     "offset": 0,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_4",
+     "offset": 4,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "IsPlayingSkidSound",
+     "offset": 8,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "SurfaceDataCount",
+     "offset": 12,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_10",
+     "offset": 16,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "TireWobbleSampleIndex",
+     "offset": 20,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_18",
+     "offset": 24,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_1c",
+     "offset": 28,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MaxSuspensionVolume",
+     "offset": 32,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MinSuspensionVolume",
+     "offset": 36,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "VolumeMultiplier",
+     "offset": 40,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MinSuspensionVelocity",
+     "offset": 44,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MaxSuspensionVelocity",
+     "offset": 48,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_34",
+     "offset": 52,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "TireWobbleMinVolume",
+     "offset": 56,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "TireWobbleMaxVolume",
+     "offset": 60,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "TireWobbleMinPitch",
+     "offset": 64,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "TireWobbleMaxPitch",
+     "offset": 68,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "TireWobblePitchDivisor",
+     "offset": 72,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_4c",
+     "offset": 76,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_50",
+     "offset": 80,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_54",
+     "offset": 84,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_58",
+     "offset": 88,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "SurfaceDatas",
+     "offset": 92,
+     "type": "vehSurfaceAudioData**",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "SuspensionSound",
+     "offset": 96,
+     "type": "AudSoundBase*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "WobbleSoundPtr",
+     "offset": 100,
+     "type": "AudSoundBase*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "WHL0",
+     "offset": 104,
+     "type": "vehWheel*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "WHL1",
+     "offset": 108,
+     "type": "vehWheel*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "WHL2",
+     "offset": 112,
+     "type": "vehWheel*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "WHL3",
+     "offset": 116,
+     "type": "vehWheel*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "PositionPtr",
+     "offset": 120,
+     "type": "Vector3*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "CarDamage",
+     "offset": 124,
+     "type": "vehCarDamage*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_80",
+     "offset": 128,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "vehSurfaceAudioData": {
+   "kind": "class",
+   "size": 56,
+   "members": [
+    {
+     "name": "SurfaceSound",
+     "offset": 0,
+     "type": "AudSoundBase*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "SkidWaveData",
+     "offset": 4,
+     "type": "vehSurfaceAudioSubData*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "SampleIndex",
+     "offset": 8,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "NumSkidSamples",
+     "offset": 12,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MaxSpeed",
+     "offset": 16,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MinSurfaceVolume",
+     "offset": 20,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MaxSurfaceVolume",
+     "offset": 24,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_1c",
+     "offset": 28,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MinSkidVolume",
+     "offset": 32,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MaxSkidVolume",
+     "offset": 36,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_28",
+     "offset": 40,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MinSurfacePitch",
+     "offset": 44,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MaxSurfacePitch",
+     "offset": 48,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_34",
+     "offset": 52,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "vehSurfaceAudioSubData": {
+   "kind": "class",
+   "size": 16,
+   "members": [
+    {
+     "name": "MinSlippage",
+     "offset": 0,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "MaxSlippage",
+     "offset": 4,
+     "type": "f32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "SkidSound",
+     "offset": 8,
+     "type": "AudSoundBase*",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "SampleIndex",
+     "offset": 12,
+     "type": "i32",
+     "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "vglVCT1_t": {
+   "kind": "class",
+   "size": 32,
+   "members": [
+    {
+     "name": "position",
+     "offset": 0,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_4",
+     "offset": 4,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "reserved",
+     "offset": 12,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "color",
+     "offset": 16,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "specular",
+     "offset": 20,
+     "type": "u32",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "texCoords",
+     "offset": 24,
+     "type": "Vector2",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_1C",
+     "offset": 28,
+     "type": "u8[4]",
+     "width": 4,
+     "src": "kit-padding"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "vglVNT1_t": {
+   "kind": "class",
+   "size": 32,
+   "members": [
+    {
+     "name": "position",
+     "offset": 0,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_4",
+     "offset": 4,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "normals",
+     "offset": 12,
+     "type": "Vector3",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_10",
+     "offset": 16,
+     "type": "u8[8]",
+     "width": 8,
+     "src": "kit-padding"
+    },
+    {
+     "name": "texCoords",
+     "offset": 24,
+     "type": "Vector2",
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "pad_1C",
+     "offset": 28,
+     "type": "u8[4]",
+     "width": 4,
+     "src": "kit-padding"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  }
+ }
+}

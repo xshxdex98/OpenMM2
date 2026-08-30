@@ -28,8 +28,13 @@ class aiGoal
 public:
     // ?Update@aiGoal@@UAEXXZ
     ARTS_IMPORT virtual void Update();
+
+public:
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    i32 field_0; // 0x000
+    i32 UpdateCount; // 0x004
 };
 
 // ??_7aiGoal@@6B@
 // vtable at 0x005B5BC4
-// check_size(aiGoal, 0x8); // size known, members are not - cannot verify
+check_size(aiGoal, 0x8);

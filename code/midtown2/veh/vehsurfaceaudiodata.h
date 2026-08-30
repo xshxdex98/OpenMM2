@@ -25,6 +25,7 @@
 
 class AudSoundBase;
 class Stream;
+class vehSurfaceAudioSubData;
 
 class vehSurfaceAudioData
 {
@@ -85,20 +86,20 @@ public:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i32 field_0; // 0x000
-    i32 field_4; // 0x004
-    u8 field_8[4]; // 0x008
-    i32 field_C; // 0x00C
-    u8 field_10[4]; // 0x010
-    i32 field_14; // 0x014
-    i32 field_18; // 0x018
-    i32 field_1C; // 0x01C
-    i32 field_20; // 0x020
-    i32 field_24; // 0x024
-    i32 field_28; // 0x028
-    i32 field_2C; // 0x02C
-    i32 field_30; // 0x030
-    i32 field_34; // 0x034
+    AudSoundBase* SurfaceSound; // 0x000
+    vehSurfaceAudioSubData* SkidWaveData; // 0x004
+    i32 SampleIndex; // 0x008
+    i32 NumSkidSamples; // 0x00C
+    f32 MaxSpeed; // 0x010
+    f32 MinSurfaceVolume; // 0x014
+    f32 MaxSurfaceVolume; // 0x018
+    f32 field_1c; // 0x01C
+    f32 MinSkidVolume; // 0x020
+    f32 MaxSkidVolume; // 0x024
+    f32 field_28; // 0x028
+    f32 MinSurfacePitch; // 0x02C
+    f32 MaxSurfacePitch; // 0x030
+    f32 field_34; // 0x034
 };
 
 check_size(vehSurfaceAudioData, 0x38);

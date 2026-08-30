@@ -23,11 +23,19 @@
 
 #include "core/arts.h"
 
+class sdlPolyCached;
+
 class lvlSegmentInfo
 {
 public:
     // ?AllocateState@lvlSegmentInfo@@QAEXXZ
     ARTS_IMPORT void AllocateState();
+
+public:
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    i32 StartRoomId; // 0x000
+    i32 EndRoomId; // 0x004
+    sdlPolyCached* Polygon; // 0x008
 };
 
-// check_size(lvlSegmentInfo, 0xC); // size known, members are not - cannot verify
+check_size(lvlSegmentInfo, 0xC);

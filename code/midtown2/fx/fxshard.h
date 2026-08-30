@@ -23,6 +23,7 @@
 
 #include "core/arts.h"
 
+#include "vector7/matrix34.h"
 #include "vector7/vector3.h"
 
 class modShader;
@@ -44,6 +45,20 @@ public:
 
     // ?Update@fxShard@@QAEXXZ
     ARTS_IMPORT void Update();
+
+public:
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    Vector3 Velocity; // 0x000
+    u8[8] pad_4; // 0x004
+    Vector3 RotationAxis; // 0x00C
+    u8[8] pad_10; // 0x010
+    f32 AliveTime; // 0x018
+    f32 RotationSpeed; // 0x01C
+    Matrix34 Matrix; // 0x020
+    u8[44] pad_24; // 0x024
+    f32 TexUCoord; // 0x050
+    f32 TexVCoord; // 0x054
+    i32 dword_58; // 0x058
 };
 
-// check_size(fxShard, 0x5C); // size known, members are not - cannot verify
+check_size(fxShard, 0x5C);

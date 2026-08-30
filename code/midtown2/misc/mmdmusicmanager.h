@@ -72,18 +72,7 @@ public:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    u8 field_0[4]; // 0x000
-    u8 field_4[12]; // 0x004
-    i32 field_10; // 0x010
-    i32 field_14; // 0x014
-    u8 field_18[48]; // 0x018
-    i32 field_48; // 0x048
-    i32 field_4C; // 0x04C
-    u8 field_50[1]; // 0x050
-    u8 field_51; // 0x051
-    u8 field_52; // 0x052
-    u8 field_53; // 0x053
-    i32 field_54; // 0x054
+    unsigned __int8[88] _buffer; // 0x000
 };
 
 check_size(MMDMusicManager, 0x58);

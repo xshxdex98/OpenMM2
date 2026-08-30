@@ -23,6 +23,8 @@
 
 #include "core/arts.h"
 
+#include "vector7/vector3.h"
+
 class datCallback;
 class phColliderBase;
 class phInertialCS;
@@ -65,11 +67,24 @@ public:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i32 field_0; // 0x000
-    i32 field_4; // 0x004
-    u8 field_8; // 0x008
-    u8 field_9[67]; // 0x009
-    i32 field_4C; // 0x04C
+    i32 dword_00; // 0x000
+    i32 dword_04; // 0x004
+    i32 dword_08; // 0x008
+    Vector3 dword_0c; // 0x00C
+    u8[8] pad_10; // 0x010
+    Vector3 LastAcceleration; // 0x018
+    u8[8] pad_1C; // 0x01C
+    phInertialCS* ICS; // 0x024
+    i32 Collider; // 0x028
+    i32 dword_2c; // 0x02C
+    i32 dword_30; // 0x030
+    i32 AwakeFrameCount; // 0x034
+    i32 MaxAwakeFrames; // 0x038
+    f32 SomeMagTrigger; // 0x03C
+    f32 AccelMagThreshold; // 0x040
+    f32 NextAwakeTime; // 0x044
+    phSleepState State; // 0x048
+    datCallback* AsleepCB; // 0x04C
 };
 
 check_size(phSleep, 0x50);

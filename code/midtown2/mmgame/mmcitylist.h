@@ -24,6 +24,7 @@
 #include "core/arts.h"
 
 class mmCityInfo;
+class mmCityList_vtbl;
 
 class mmCityList
 {
@@ -66,9 +67,9 @@ public:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i32 field_4; // 0x004
-    i32 field_8; // 0x008
-    i32 field_C; // 0x00C
+    mmCityInfo** cityInfos; // 0x004
+    i32 numCities; // 0x008
+    i32 curCity; // 0x00C
 };
 
 // ??_7mmCityList@@6B@

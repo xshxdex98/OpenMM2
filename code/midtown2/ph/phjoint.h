@@ -24,9 +24,10 @@
 #include "core/arts.h"
 
 #include "vector7/matrix34.h"
+#include "vector7/vector3.h"
 
-class Vector3;
 class phInertialCS;
+class phJoint_vtbl;
 
 class phJoint
 {
@@ -72,21 +73,18 @@ public:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i32 field_4; // 0x004
-    i32 field_8; // 0x008
-    i32 field_C; // 0x00C
-    i32 field_10; // 0x010
-    i32 field_14; // 0x014
-    i32 field_18; // 0x018
-    i32 field_1C; // 0x01C
-    i32 field_20; // 0x020
-    i32 field_24; // 0x024
-    i32 field_28; // 0x028
-    i32 field_2C; // 0x02C
-    i32 field_30; // 0x030
-    i32 field_34; // 0x034
-    i32 field_38; // 0x038
-    Matrix34 field_3C; // 0x03C
+    phInertialCS* ICS1; // 0x004
+    phInertialCS* ICS2; // 0x008
+    Vector3 Offset1; // 0x00C
+    u8[8] pad_10; // 0x010
+    Vector3 Offset2; // 0x018
+    u8[8] pad_1C; // 0x01C
+    Vector3 PremultipliedOffset; // 0x024
+    u8[8] pad_28; // 0x028
+    Vector3 PremultipliedOffset1; // 0x030
+    u8[8] pad_34; // 0x034
+    Matrix34 InvMassMatrix; // 0x03C
+    u8[44] pad_40; // 0x040
 };
 
 // ??_7phJoint@@6B@

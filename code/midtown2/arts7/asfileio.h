@@ -62,6 +62,7 @@ protected:
     ARTS_IMPORT virtual const char* GetClassName();
 
 public:
+    // Members from 0x004; everything below that belongs to Base.
     // Offset order is mandatory - the original code reads these at fixed offsets.
     i8* Name; // 0x004
 };

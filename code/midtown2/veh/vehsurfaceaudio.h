@@ -23,9 +23,11 @@
 
 #include "core/arts.h"
 
+class AudSoundBase;
 class Vector3;
 class vehCarDamage;
 class vehCarSim;
+class vehSurfaceAudioData;
 class vehWheel;
 
 class vehSurfaceAudio
@@ -117,6 +119,42 @@ public:
 
     // ?UpdateTireWobble@vehSurfaceAudio@@QAEXPAVvehCarSim@@MM@Z
     ARTS_IMPORT void UpdateTireWobble(vehCarSim* arg1, f32 arg2, f32 arg3);
+
+public:
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    i32 LastSurfaceSound; // 0x000
+    i32 field_4; // 0x004
+    i32 IsPlayingSkidSound; // 0x008
+    i32 SurfaceDataCount; // 0x00C
+    i32 field_10; // 0x010
+    i32 TireWobbleSampleIndex; // 0x014
+    i32 field_18; // 0x018
+    i32 field_1c; // 0x01C
+    f32 MaxSuspensionVolume; // 0x020
+    f32 MinSuspensionVolume; // 0x024
+    f32 VolumeMultiplier; // 0x028
+    f32 MinSuspensionVelocity; // 0x02C
+    f32 MaxSuspensionVelocity; // 0x030
+    i32 field_34; // 0x034
+    f32 TireWobbleMinVolume; // 0x038
+    f32 TireWobbleMaxVolume; // 0x03C
+    f32 TireWobbleMinPitch; // 0x040
+    f32 TireWobbleMaxPitch; // 0x044
+    f32 TireWobblePitchDivisor; // 0x048
+    f32 field_4c; // 0x04C
+    f32 field_50; // 0x050
+    i32 field_54; // 0x054
+    i32 field_58; // 0x058
+    vehSurfaceAudioData** SurfaceDatas; // 0x05C
+    AudSoundBase* SuspensionSound; // 0x060
+    AudSoundBase* WobbleSoundPtr; // 0x064
+    vehWheel* WHL0; // 0x068
+    vehWheel* WHL1; // 0x06C
+    vehWheel* WHL2; // 0x070
+    vehWheel* WHL3; // 0x074
+    Vector3* PositionPtr; // 0x078
+    vehCarDamage* CarDamage; // 0x07C
+    i32 field_80; // 0x080
 };
 
-// check_size(vehSurfaceAudio, 0x84); // size known, members are not - cannot verify
+check_size(vehSurfaceAudio, 0x84);

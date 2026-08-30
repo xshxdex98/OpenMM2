@@ -23,6 +23,8 @@
 
 #include "core/arts.h"
 
+class mmVehInfo_vtbl;
+
 class mmVehInfo
 {
 public:
@@ -49,8 +51,31 @@ public:
 
     // ?Print@mmVehInfo@@QAEXXZ
     ARTS_IMPORT void Print();
+
+public:
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    char[40] baseName; // 0x004
+    char[80] description; // 0x02C
+    char[100] colors; // 0x07C
+    i32 flags; // 0x0E0
+    i32 order; // 0x0E4
+    i32 isValid; // 0x0E8
+    i32 unlockScore; // 0x0EC
+    i32 unlockFlags; // 0x0F0
+    i32 isLocked; // 0x0F4
+    i32 horsepower; // 0x0F8
+    i32 topSpeed; // 0x0FC
+    i32 durability; // 0x100
+    i32 mass; // 0x104
+    i32 rewardFlags; // 0x108
+    i32 unk_10C; // 0x10C
+    f32 scoringBias; // 0x110
+    f32 uiDist; // 0x114
+    f32 unk_118; // 0x118
+    f32 unk_11C; // 0x11C
+    u32 tuningCrc; // 0x120
 };
 
 // ??_7mmVehInfo@@6B@
 // vtable at 0x005B5248
-// check_size(mmVehInfo, 0x124); // size known, members are not - cannot verify
+check_size(mmVehInfo, 0x124);

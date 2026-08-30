@@ -45,14 +45,7 @@ public:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i32 field_0; // 0x000
-    i32 field_4; // 0x004
-    i32 field_8; // 0x008
-    i32 field_C; // 0x00C
-    i32 field_10; // 0x010
-    f32 field_14; // 0x014
-    i32 field_18; // 0x018
-    f32 field_1C; // 0x01C
+    unsigned __int8[32] _buffer; // 0x000
 };
 
 check_size(ltLensFlare, 0x20);

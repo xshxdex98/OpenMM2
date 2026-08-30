@@ -59,6 +59,7 @@ public:
     ARTS_IMPORT virtual void FirstImpactCallback();
 
 public:
+    // Members from 0x004; everything below that belongs to Base.
     // Offset order is mandatory - the original code reads these at fixed offsets.
     phColliderJointed JointedCollider; // 0x004
     u32 field_B4; // 0x0B4

@@ -23,6 +23,8 @@
 
 #include "core/arts.h"
 
+class Base_vtbl;
+
 class Base
 {
 public:

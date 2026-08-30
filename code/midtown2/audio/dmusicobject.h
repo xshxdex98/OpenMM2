@@ -132,21 +132,7 @@ private:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i32 field_0; // 0x000
-    i32 field_4; // 0x004
-    i32 field_8; // 0x008
-    i32 field_C; // 0x00C
-    i32 field_10; // 0x010
-    i32 field_14; // 0x014
-    u8 field_18; // 0x018
-    u8 field_19[3]; // 0x019
-    i32 field_1C; // 0x01C
-    i32 field_20; // 0x020
-    i32 field_24; // 0x024
-    i32 field_28; // 0x028
-    i32 field_2C; // 0x02C
-    i32 field_30; // 0x030
-    i32 field_34; // 0x034
+    unsigned __int8[56] _buffer; // 0x000
 };
 
 check_size(DMusicObject, 0x38);

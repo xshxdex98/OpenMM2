@@ -63,8 +63,8 @@ private:
     ARTS_IMPORT void AvoidPlayer();
 
 public:
+    // Members from 0x008; everything below that belongs to aiGoal.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i32 field_4; // 0x004
     u8 field_8[16]; // 0x008
     i32 field_18; // 0x018
     i32 field_1C; // 0x01C

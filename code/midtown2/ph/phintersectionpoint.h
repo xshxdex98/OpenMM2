@@ -23,8 +23,9 @@
 
 #include "core/arts.h"
 
+#include "vector7/vector3.h"
+
 class Matrix34;
-class Vector3;
 
 class phIntersectionPoint
 {
@@ -37,6 +38,17 @@ public:
 
     // ?Transform@phIntersectionPoint@@QAEXPBVMatrix34@@@Z
     ARTS_IMPORT void Transform(const Matrix34* arg1);
+
+public:
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    Vector3 Point; // 0x000
+    u8[8] pad_4; // 0x004
+    Vector3 Normal; // 0x00C
+    u8[8] pad_10; // 0x010
+    f32 NormalizedDistance; // 0x018
+    f32 Penetration; // 0x01C
+    u8 IntersectResult; // 0x020
+    u8[3] pad_21; // 0x021
 };
 
-// check_size(phIntersectionPoint, 0x24); // size known, members are not - cannot verify
+check_size(phIntersectionPoint, 0x24);

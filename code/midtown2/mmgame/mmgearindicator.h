@@ -23,6 +23,7 @@
 
 #include "core/arts.h"
 
+class gfxBitmap;
 class mmExternalView;
 class mmPlayer;
 
@@ -37,6 +38,15 @@ public:
 
     // ?Init@mmGearIndicator@@QAEXPAVmmExternalView@@PAVmmPlayer@@@Z
     ARTS_IMPORT void Init(mmExternalView* arg1, mmPlayer* arg2);
+
+public:
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    gfxBitmap [12]* BitmapGears; // 0x000
+    u8[44] pad_4; // 0x004
+    i32 DestX; // 0x030
+    i32 DestY; // 0x034
+    mmExternalView* ExternalView; // 0x038
+    mmPlayer* Player; // 0x03C
 };
 
-// check_size(mmGearIndicator, 0x40); // size known, members are not - cannot verify
+check_size(mmGearIndicator, 0x40);

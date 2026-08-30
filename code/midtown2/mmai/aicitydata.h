@@ -23,6 +23,8 @@
 
 #include "core/arts.h"
 
+class aiCityData_vtbl;
+
 class aiCityData
 {
 public:
@@ -34,20 +36,7 @@ public:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    u8 field_4; // 0x004
-    u8 field_5[3]; // 0x005
-    f32 field_8; // 0x008
-    i32 field_C; // 0x00C
-    u16 field_10; // 0x010
-    u8 field_12[2]; // 0x012
-    i32 field_14; // 0x014
-    i32 field_18; // 0x018
-    i32 field_1C; // 0x01C
-    i32 field_20; // 0x020
-    i32 field_24; // 0x024
-    i32 field_28; // 0x028
-    void* field_2C; // 0x02C
-    i32 field_30; // 0x030
+    unsigned __int8[48] _buffer; // 0x004
 };
 
 // ??_7aiCityData@@6B@

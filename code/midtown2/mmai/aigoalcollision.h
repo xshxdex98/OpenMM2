@@ -53,8 +53,8 @@ public:
     ARTS_IMPORT i32 Priority();
 
 public:
+    // Members from 0x008; everything below that belongs to aiGoal.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i32 field_4; // 0x004
     i32 field_8; // 0x008
     i32 field_C; // 0x00C
 };

@@ -23,6 +23,7 @@
 
 #include "core/arts.h"
 
+class gfxBitmap;
 class mmExternalView;
 class vehCarSim;
 
@@ -37,6 +38,15 @@ public:
 
     // ?Init@mmSpeedIndicator@@QAEXPAVmmExternalView@@PAVvehCarSim@@@Z
     ARTS_IMPORT void Init(mmExternalView* arg1, vehCarSim* arg2);
+
+public:
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    gfxBitmap [10]* BitmapSpeeds; // 0x000
+    u8[36] pad_4; // 0x004
+    i32 DestX; // 0x028
+    i32 DestY; // 0x02C
+    mmExternalView* ExternalView; // 0x030
+    vehCarSim* CarSim; // 0x034
 };
 
-// check_size(mmSpeedIndicator, 0x38); // size known, members are not - cannot verify
+check_size(mmSpeedIndicator, 0x38);

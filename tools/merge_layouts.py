@@ -84,9 +84,31 @@ def main():
             if not isinstance(info, dict):
                 continue
 
-            if cls in layouts:
-                rejected.append((cls, name, "already in the IDA type library"))
-                continue
+            # THE ONE CASE WHERE AN EXISTING ENTRY IS REPLACED.
+            #
+            # Rule 1 says an inference never displaces the IDA type library, and that stands. But
+            # data/layouts.json is not purely that library: most of it was inferred from what
+            # constructors write, which recovers correct OFFSETS and nothing else - every field
+            # comes out `i32 field_NN` whatever it really holds. data/layouts_kit.json IS the
+            # recovered library, with the 1999 names and types, so here the priority runs the other
+            # way and it replaces the inference.
+            #
+            # Guarded by SIZE AGREEMENT, which is the whole safety argument: two sources that agree
+            # on sizeof are describing the same object, so swapping one member list for the other
+            # cannot change what check_size asserts. A disagreement means one of them is wrong
+            # about the class, and then nothing is merged.
+            existing = layouts.get(cls)
+            if existing is not None:
+                from_kit = (info.get("source") == "MM2_RE_KIT")
+                inferred = (existing.get("source") or "").startswith(
+                    ("layouts_from_", "inferred_"))
+                if not (from_kit and inferred):
+                    rejected.append((cls, name, "already in the IDA type library"))
+                    continue
+                if existing.get("size") != info.get("size"):
+                    rejected.append((cls, name, "kit says sizeof=0x%X, layouts.json says 0x%X"
+                                     % (info.get("size") or 0, existing.get("size") or 0)))
+                    continue
 
             # Sources spell the grade differently; compare case-insensitively rather than
             # silently rejecting 12 genuinely confirmed classes for using lowercase.

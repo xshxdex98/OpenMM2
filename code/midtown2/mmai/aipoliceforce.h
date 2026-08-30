@@ -23,6 +23,8 @@
 
 #include "core/arts.h"
 
+#include "misc/timer.h"
+
 class vehCar;
 
 class aiPoliceForce
@@ -51,6 +53,16 @@ public:
 
     // ?Update@aiPoliceForce@@QAEXXZ
     ARTS_IMPORT void Update();
+
+public:
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    Timer timer; // 0x000
+    i16 NumPerps; // 0x004
+    __int16[3] NumChasers; // 0x006
+    vehCar [3]* PlayerCars; // 0x00C
+    u8[8] pad_10; // 0x010
+    vehCar [3][3]* CopCars; // 0x018
+    u8[32] pad_1C; // 0x01C
 };
 
-// check_size(aiPoliceForce, 0x3C); // size known, members are not - cannot verify
+check_size(aiPoliceForce, 0x3C);

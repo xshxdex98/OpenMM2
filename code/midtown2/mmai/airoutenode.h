@@ -23,6 +23,8 @@
 
 #include "core/arts.h"
 
+#include "vector7/vector3.h"
+
 class aiRouteNode
 {
 public:
@@ -34,6 +36,20 @@ public:
 
     // ?Reset@aiRouteNode@@QAEXXZ
     ARTS_IMPORT void Reset();
+
+public:
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    i32 unk_0x00; // 0x000
+    Vector3 Position; // 0x004
+    u8[8] pad_8; // 0x008
+    f32 Angle; // 0x010
+    i32 unk_14; // 0x014
+    i16 unk_18; // 0x018
+    i16 RoadVertexIndex; // 0x01A
+    i16 unk_1C; // 0x01C
+    i16 unk_1E; // 0x01E
+    i16 unk_20; // 0x020
+    i16 unk_22; // 0x022
 };
 
-// check_size(aiRouteNode, 0x24); // size known, members are not - cannot verify
+check_size(aiRouteNode, 0x24);

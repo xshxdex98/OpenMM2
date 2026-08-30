@@ -23,6 +23,7 @@
 
 #include "core/arts.h"
 
+class gfxBitmap;
 class mmExternalView;
 
 class mmLinearGauge
@@ -42,6 +43,17 @@ public:
 
     // ?InitOverlay@mmLinearGauge@@QAEXPAD@Z
     ARTS_IMPORT void InitOverlay(char* arg1);
+
+public:
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    f32* MinValue; // 0x000
+    f32* MaxValue; // 0x004
+    i32 DestX; // 0x008
+    i32 DestY; // 0x00C
+    gfxBitmap* BitmapGauge; // 0x010
+    gfxBitmap* BitmapLabel; // 0x014
+    i32 DimensionType; // 0x018
+    mmExternalView* ExternalView; // 0x01C
 };
 
-// check_size(mmLinearGauge, 0x20); // size known, members are not - cannot verify
+check_size(mmLinearGauge, 0x20);

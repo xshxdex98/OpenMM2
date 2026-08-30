@@ -74,6 +74,46 @@ public:
 
     // ?SolveXZPosition@aiRailSet@@QAEXAAVVector3@@M@Z
     ARTS_IMPORT void SolveXZPosition(Vector3& arg1, f32 arg2);
+
+public:
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    f32 BackBumperDist; // 0x000
+    f32 FrontBumperDist; // 0x004
+    f32 LSideDist; // 0x008
+    f32 RSideDist; // 0x00C
+    i16 EnterInt; // 0x010
+    u8[2] pad_12; // 0x012
+    f32 RoadDist; // 0x014
+    f32 ResumeDist; // 0x018
+    f32 SubSectionDist; // 0x01C
+    f32 TurnDist; // 0x020
+    f32 LaneRandomness; // 0x024
+    i16 WaitCount; // 0x028
+    i16 SSIdx; // 0x02A
+    i16 CurLane; // 0x02C
+    i16 NextLane; // 0x02E
+    i16 TargetLane; // 0x030
+    u8[2] pad_32; // 0x032
+    i32 RailType; // 0x034
+    aiPath* NextLink; // 0x038
+    aiPath* CurLink; // 0x03C
+    i16 field_40; // 0x040
+    i16 field_42; // 0x042
+    f32 CurAccelFactor; // 0x044
+    f32 ExheedLimit; // 0x048
+    f32 TargetVelocity; // 0x04C
+    f32 CarReactDist; // 0x050
+    f32 VehicleAccelFactor; // 0x054
+    f32 SeparationDist; // 0x058
+    f32 IntersectionReactDist; // 0x05C
+    f32 field_60; // 0x060
+    f32 field_64; // 0x064
+    f32 field_68; // 0x068
+    f32 field_6C; // 0x06C
+    f32 field_70; // 0x070
+    f32 field_74; // 0x074
+    f32 field_78; // 0x078
+    f32 field_7C; // 0x07C
 };
 
-// check_size(aiRailSet, 0x80); // size known, members are not - cannot verify
+check_size(aiRailSet, 0x80);

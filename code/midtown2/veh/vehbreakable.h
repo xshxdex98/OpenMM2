@@ -23,6 +23,7 @@
 
 #include "core/arts.h"
 
+#include "lvl/lvlinstance.h"
 #include "vector7/matrix34.h"
 
 class modStatic;
@@ -38,15 +39,16 @@ public:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    u8 field_0; // 0x000
-    u8 field_1[3]; // 0x001
-    i32 field_4; // 0x004
-    Matrix34 field_8; // 0x008
-    i32 field_38; // 0x038
-    i32 field_3C; // 0x03C
-    i32 field_40; // 0x040
-    i32 field_44; // 0x044
-    i32 field_48; // 0x048
+    bool IsAttached; // 0x000
+    u8[3] pad_1; // 0x001
+    i32 Flags; // 0x004
+    Matrix34 Matrix; // 0x008
+    u8[44] pad_C; // 0x00C
+    lvlInstance::GeomTableEntry* Model; // 0x038
+    i32 BangerDataIndex; // 0x03C
+    i32 GeometryIndex; // 0x040
+    lvlInstance* Instance; // 0x044
+    vehBreakable* Next; // 0x048
 };
 
 check_size(vehBreakable, 0x4C);

@@ -35,6 +35,9 @@ HEAD = re.compile(r"^struct MM2::(\w+)\s+//\s+sizeof=0x([0-9A-Fa-f]+)\s*$")
 FIELD = re.compile(r"hook::Field<\s*(\d+)\s*,\s*(.+?)\s*>\s+(\w+)\s*;")
 BASE = re.compile(r"^\s*/\*\s*0x0000\s*\*/\s*MM2::(\w+)\s*;\s*$")
 VSLOT = re.compile(r"^\s*/\*\s*0x([0-9A-Fa-f]+)\s*\*/\s*.*?\)\s*(\w+)\s*;\s*$")
+# The IDB's own layout style: the offset really is in the comment here. Anchored with four
+# hex digits so it cannot match the VSLOT form above, whose comments are slot offsets.
+PLAIN = re.compile(r"^\s*/\*\s*0x([0-9A-Fa-f]{4})\s*\*/\s+(.+?)\s+(\w+)\s*(\[\d+\])?\s*;\s*$")
 
 
 def parse():
@@ -86,6 +89,29 @@ def parse():
             if m:
                 fields[cur].append(OrderedDict(
                     offset=int(m.group(1)), type=m.group(2), name=m.group(3)))
+                continue
+
+            # The IDB's own recovered layouts, written with the offset in the comment:
+            #
+            #     /* 0x002C */ float LeftPositionPtrDistSqr;
+            #     /* 0x004C */ MM2::Vector3 * LeftPositionPtr;
+            #
+            # Only the hook::Field form above was being read, so these were skipped entirely - 386
+            # structs and 4,582 members, 4,328 of them carrying a REAL 1999 name rather than
+            # field_NN. That is the most valuable thing in the kit and it was going unused, which
+            # is why classes like Aud3DObject emitted `i32 field_1C` for what the IDB knows as
+            # `float MaxDropOffSqr`.
+            #
+            # Unlike the hook::Field form, HERE THE COMMENT IS THE REAL OFFSET. The warning at the
+            # top of this file applies only to the MM2Hook wrapper, where the comment is an index
+            # into the wrapper and the offset is the template argument.
+            m = PLAIN.match(line)
+            if m:
+                offset = int(m.group(1), 16)
+                ftype, name, array = m.group(2).strip(), m.group(3), m.group(4)
+                if array:
+                    ftype += array
+                fields[cur].append(OrderedDict(offset=offset, type=ftype, name=name))
 
     return sizes, fields, bases, vtables
 

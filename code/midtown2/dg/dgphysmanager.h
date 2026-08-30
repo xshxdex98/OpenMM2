@@ -121,6 +121,7 @@ public:
     ARTS_IMPORT static lvlInstance* PlayerInst;
 
 public:
+    // Members from 0x004; everything below that belongs to phPhysicsManager.
     // Offset order is mandatory - the original code reads these at fixed offsets.
     i32 field_4; // 0x004
     u8 field_8[148]; // 0x008

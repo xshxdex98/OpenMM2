@@ -25,6 +25,7 @@
 
 class Stream;
 class Vector3;
+class vehEngineSampleWrapper;
 
 class vehEngineAudio
 {
@@ -73,6 +74,11 @@ public:
 
     // ?UpdateRPM@vehEngineAudio@@QAEXMMMM@Z
     ARTS_IMPORT void UpdateRPM(f32 arg1, f32 arg2, f32 arg3, f32 arg4);
+
+public:
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    i32 SampleCount; // 0x000
+    vehEngineSampleWrapper** Samples; // 0x004
 };
 
-// check_size(vehEngineAudio, 0x8); // size known, members are not - cannot verify
+check_size(vehEngineAudio, 0x8);

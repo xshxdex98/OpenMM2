@@ -23,6 +23,9 @@
 
 #include "core/arts.h"
 
+class dgPath;
+class dgPathSet_vtbl;
+
 class dgPathSet
 {
 public:
@@ -37,8 +40,16 @@ public:
 
     // ?Load@dgPathSet@@QAE_NPBD0@Z
     ARTS_IMPORT bool Load(const char* arg1, const char* arg2);
+
+public:
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    dgPath [192]* Paths; // 0x004
+    u8[764] pad_8; // 0x008
+    i32 PathCount; // 0x304
+    i32 unk0; // 0x308
+    i32 unk1; // 0x30C
 };
 
 // ??_7dgPathSet@@6B@
 // vtable at 0x005B1B0C
-// check_size(dgPathSet, 0x310); // size known, members are not - cannot verify
+check_size(dgPathSet, 0x310);
