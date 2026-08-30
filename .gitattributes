@@ -1,6 +1,10 @@
-# Normalise text in the repository, check out native. Without this, editing on Windows
-# rewrites whole files as CRLF and every diff becomes unreadable.
-* text=auto
+# Normalise text to LF in the repository AND in the working tree.
+#
+# `text=auto` alone normalises the repository but checks out native line endings, which on
+# Windows means CRLF - and since this tree is LF on disk, every one of 534 files then reads as
+# modified immediately after a clone or a rebase, with no content difference. `eol=lf` pins both
+# sides so the tree stays clean. MSVC compiles LF sources without complaint.
+* text=auto eol=lf
 
 *.cpp   text
 *.h     text
