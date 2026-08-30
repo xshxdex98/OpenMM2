@@ -61,9 +61,18 @@ The cost is that the build is unusual and the constraints below are not negotiab
 
 ### Link constraints, all forced
 
-- **`-NODEFAULTLIB`.** The 1999 CRT is inside the assembled image. Pulling in the modern CRT gives
-  duplicate symbols and two competing heaps. In practice: no `<string>`, no `<vector>`, no `std::`
-  containers, no modern `new`.
+- **No modern CRT, in practice.** `-NODEFAULTLIB` itself is gone, so a symbol `game.obj` does not
+  define can be satisfied from `libcmt` rather than being a hard link error needing a hand-written
+  stub. That is the whole of the gain, and it is small. Three walls still stand, all measured:
+
+  1. `libucrt`'s objects are not self-contained. Pulling any one drags the UCRT runtime with it,
+     and that references **stdcall-decorated** Win32 imports (`__imp__SetLastError@4`) which the
+     import libraries here deliberately do not provide.
+  2. Nothing needing CRT **initialisation** works - the entry point is the game's 1999 `start`, so
+     the modern initialiser never runs. No `printf`, no `malloc`, so no `std::` containers.
+  3. The floating-point routines must stay 1999 regardless, or `/arch:IA32` below is pointless.
+
+  In practice: use the game's `Printf`/`Displayf` and its `operator new`.
 - **`operator new` / `delete` are the game's**, at `0x577360` / `0x577380`, routing into
   `memMemoryAllocator`. C++ `new` must resolve to those.
 - **`-FIXED -BASE:0x400000`.** There is no relocation table; the image loads at one address.

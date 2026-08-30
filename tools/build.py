@@ -192,6 +192,13 @@ def compile_sources(cl):
                "-O2", "-arch:IA32", "-W3", "-GS-", "-GR-",
                "-Zc:sizedDealloc-",
 
+               # Static CRT, stated rather than left to the compiler's default. This was
+               # immaterial while the link ran -NODEFAULTLIB, because the /DEFAULTLIB directive
+               # each object carries was ignored; now that the flag is gone the directive decides
+               # which CRT is searched, and it should not be decided implicitly. Static also means
+               # no VCRUNTIME DLL dependency on a binary that has to run like a 1999 executable.
+               "-MT",
+
                # Compile the OpenGL device layer. This does NOT enable it: agiGLEnabled() still
                # returns false unless -gl is on the command line, and nothing under agigl/ is
                # registered in data/ported.json, so no original PROC is stripped. It only means the

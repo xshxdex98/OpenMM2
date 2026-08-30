@@ -361,6 +361,43 @@ def main():
     if unhandled:
         print("  %d relative references could not be rewritten" % unhandled)
 
+    # Hand the stateless 1999 CRT routines over to the modern CRT by removing their PUBLIC
+    # declaration. The PROC and its bytes stay exactly where they are - .text does not move by one
+    # byte - the name simply stops being exported, so the linker resolves references from our C++
+    # against libucrt instead. game.asm's own calls are internal and still reach the original.
+    #
+    # This is what makes dropping -NODEFAULTLIB mean anything. Without it the link succeeds but
+    # libucrt is never searched, because game.obj already claims every name in the objects that
+    # would have supplied it. See data/crt_shared.json for what may and may not go in the list.
+    shared = set()
+    crt_path = os.path.join(ROOT, "data", "crt_shared.json")
+    if os.path.exists(crt_path):
+        with open(crt_path, encoding="utf-8") as f:
+            for key, names in json.load(f).items():
+                if not key.startswith("_"):
+                    shared.update(names)
+
+    # Removing the PUBLIC line is NOT sufficient, and the failure is confusing: MASM makes a PROC
+    # visible by default, so `__itoa PROC` still exports __itoa with no PUBLIC anywhere, and the
+    # link still fails with "already defined in game.obj". The PROC must be declared PRIVATE -
+    # which is why Open1560's game.asm is written `sub_4049E0 PROC PRIVATE` throughout.
+    unshared, privatised = 0, 0
+    if shared:
+        for i, line in enumerate(out):
+            s = line.strip()
+            if s.startswith("PUBLIC ") and s[7:].strip() in shared:
+                out[i] = "; " + s + "   ; shared with the modern CRT - data/crt_shared.json"
+                unshared += 1
+                continue
+            m = PROC.match(line)
+            if m and m.group(1) in shared and " PRIVATE" not in line:
+                out[i] = line.rstrip() + " PRIVATE"
+                privatised += 1
+        print("\nCRT routines handed to the modern library: %d PUBLIC removed, %d PROC privatised"
+              % (unshared, privatised))
+        for name in sorted(n for n in shared if n not in procs):
+            print("  no PROC in the assembly (data symbol or absent): %s" % name)
+
     if not args.write:
         print("\ndry run; pass --write to apply")
         return 0

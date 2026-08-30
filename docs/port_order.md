@@ -30,9 +30,11 @@ yet**. Before function #1:
 Two constraints on that build line, both non-negotiable and both already documented in
 `tools/link.py`:
 
-- **`-NODEFAULTLIB`.** The 1999 CRT is inside `game.obj`. Your C++ must not pull in the modern CRT
-  or you get duplicate symbols and two competing heaps. In practice: no `<string>`, no `<vector>`,
-  no `std::` anything, no modern `new`.
+- **Write as if there were no CRT.** `-NODEFAULTLIB` has been dropped, but that only means a
+  symbol `game.obj` does not define can come from `libcmt` instead of failing the link outright.
+  It does not open the standard library: no `printf`, no `malloc`, no `std::` anything, no modern
+  `new`. Use the game's `Printf`/`Displayf` and its `operator new`. `tools/link.py` documents the
+  three reasons in full.
 - **`-FIXED -BASE:0x400000`.** No relocation table exists, so the image can only load at
   `0x400000`.
 
