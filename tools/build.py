@@ -554,7 +554,7 @@ def main():
     if res.returncode != 0:
         sys.exit("FAILED: an operand changed by something other than a section delta")
 
-    step(15, "recording progress")
+    step(17, "recording progress")
     res = subprocess.run([sys.executable, os.path.join(HERE, "progress.py")],
                          capture_output=True, text=True)
     print("\n".join("  " + l for l in res.stdout.splitlines()[:3]))
