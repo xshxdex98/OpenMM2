@@ -20,6 +20,7 @@
   "ported": [
     "??1vehFeedback@@UAE@XZ",
     "?ClearAllSamples@vehFeedback@@UAEH_N@Z",
+    "?GetNextUnit@vehFeedback@@UAEMH@Z",
     "?GetNumActuators@vehFeedback@@UAEHXZ",
     "?PlayFeedbackSample@vehFeedback@@UAEHHHPAMPAH@Z",
     "?SetActuatorValue@vehFeedback@@UAEHHM@Z",

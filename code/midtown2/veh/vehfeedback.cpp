@@ -49,8 +49,8 @@
 // WHAT LIVES AT 0x24. Two 132-byte channel blocks, each four 8-element arrays and a count:
 //
 //     +0x00  f32* SampleValues[8]   the pointer a sample writes its value through
-//     +0x20  i32* SampleLabels[8]   +0x40  i32 SampleIds[8]
-//     +0x60  i32  SampleState[8]    -1 when free, 0 once a sample plays
+//     +0x20  i32* SampleLabels[8]   +0x40  i32 SampleLength[8]  units in the sample
+//     +0x60  i32  SamplePos[8]      -1 when free, 0 at the start, then a cursor
 //     +0x80  i32  SampleCount
 //
 // and 0x24 + 2*132 = 0x12C, the size the binary allocates. They are flat per-channel arrays rather
@@ -133,7 +133,7 @@ i32 vehFeedback::SetActuatorValue(i32 arg1, f32 arg2)
 // the slot index, writing the two counts redundantly on every iteration; written here as a loop
 // per channel, which touches exactly the same bytes.
 //
-// SampleState goes to -1 rather than 0 - that is the free marker, and the constructor sets it the
+// SamplePos goes to -1 rather than 0 - that is the free marker, and the constructor sets it the
 // same way. PlayFeedbackSample writes 0 there when it takes a slot.
 i32 vehFeedback::ClearAllSamples(bool arg1)
 {
@@ -141,13 +141,13 @@ i32 vehFeedback::ClearAllSamples(bool arg1)
     {
         Ch0SampleValues[i] = nullptr;
         Ch0SampleLabels[i] = nullptr;
-        Ch0SampleIds[i] = 0;
-        Ch0SampleState[i] = -1;
+        Ch0SampleLength[i] = 0;
+        Ch0SamplePos[i] = -1;
 
         Ch1SampleValues[i] = nullptr;
         Ch1SampleLabels[i] = nullptr;
-        Ch1SampleIds[i] = 0;
-        Ch1SampleState[i] = -1;
+        Ch1SampleLength[i] = 0;
+        Ch1SamplePos[i] = -1;
     }
 
     Ch0SampleCount = 0;
@@ -175,8 +175,8 @@ i32 vehFeedback::ClearAllSamples(bool arg1)
 //     v9 = a2 + 32 * a2 + v5;             // == 33 * a2 + v5
 //     this[4*v9 +  36] = a4;              // SampleValues[v5] = the f32* argument
 //     this[4*v9 +  68] = a5;              // SampleLabels[v5] = the i32* argument
-//     this[4*v9 + 100] = a3;              // SampleIds[v5]    = the i32 argument
-//     this[128*a2 + 132 + 4*v5 + 4*a2] = 0;   // SampleState[v5] = 0, i.e. in use
+//     this[4*v9 + 100] = a3;              // SampleLength[v5]    = the i32 argument
+//     this[128*a2 + 132 + 4*v5 + 4*a2] = 0;   // SamplePos[v5] = 0, i.e. in use
 //     ++*((_DWORD *)v6 + 41);             // ++SampleCount
 //
 // Every one of those offsets is 132*a2 plus a multiple of 32 from the block base, which is what
@@ -195,8 +195,8 @@ i32 vehFeedback::PlayFeedbackSample(i32 arg1, i32 arg2, f32* arg3, i32* arg4)
 {
     f32** values = arg1 ? Ch1SampleValues : Ch0SampleValues;
     i32** labels = arg1 ? Ch1SampleLabels : Ch0SampleLabels;
-    i32* ids = arg1 ? Ch1SampleIds : Ch0SampleIds;
-    i32* state = arg1 ? Ch1SampleState : Ch0SampleState;
+    i32* ids = arg1 ? Ch1SampleLength : Ch0SampleLength;
+    i32* state = arg1 ? Ch1SamplePos : Ch0SamplePos;
     i32& count = arg1 ? Ch1SampleCount : Ch0SampleCount;
 
     // Stops before reading values[8]: the eighth failed test increments slot to 8 and returns.
@@ -215,4 +215,75 @@ i32 vehFeedback::PlayFeedbackSample(i32 arg1, i32 arg2, f32* arg3, i32* arg4)
     ++count;
 
     return 1;
+}
+
+// ?GetNextUnit@vehFeedback@@UAEMH@Z - 0x004D5980
+//
+// Advances every playing sample in a channel by one unit and returns the value that should reach
+// the hardware. Where two samples disagree the higher label wins, and between equal labels the
+// larger value does - so the label is a priority and the result is a max, not a sum.
+//
+// THIS IS THE FUNCTION THAT NAMED THE FIELDS. Nothing that only fills the arrays could show what
+// they mean; this is the one that reads them back:
+//
+//     v7 = SamplePos[slot];  SamplePos[slot] = v7 + 1;   a cursor, not a state flag
+//     if ( v7 < SampleLength[slot] )                     the third array is a length
+//     value = SampleValues[slot][v7]                     both pointers are indexed BY the cursor
+//     label = SampleLabels[slot][v7]
+//
+// and when the cursor reaches the length the slot is released, which is where the constructor's -1
+// and PlayFeedbackSample's 0 turn out to be a free marker and a start position.
+//
+// The cursor is advanced whether or not it is still in range, and the release test uses the
+// ALREADY-INCREMENTED value - so a sample is freed on the call that consumes its last unit, not on
+// the one after. Both are reproduced rather than tidied.
+//
+// The parameter is the channel, despite the kit naming it `label_ids`; every use of it in the
+// original is `132 * it`. See the WRONG table in tools/kit_paramnames.py.
+f32 vehFeedback::GetNextUnit(i32 arg1)
+{
+    f32** values = arg1 ? Ch1SampleValues : Ch0SampleValues;
+    i32** labels = arg1 ? Ch1SampleLabels : Ch0SampleLabels;
+    i32* length = arg1 ? Ch1SampleLength : Ch0SampleLength;
+    i32* cursor = arg1 ? Ch1SamplePos : Ch0SamplePos;
+    i32& count = arg1 ? Ch1SampleCount : Ch0SampleCount;
+
+    f32 result = 0.0f;
+    i32 best = -1;
+
+    for (i32 slot = 0; slot < 8; ++slot)
+    {
+        if (!values[slot])
+            continue;
+
+        i32 at = cursor[slot];
+        cursor[slot] = at + 1;
+
+        if (at < length[slot])
+        {
+            i32 label = labels[slot][at];
+            f32 value = values[slot][at];
+
+            if (label > best)
+            {
+                result = value;
+                best = label;
+            }
+            else if (label == best && value > result)
+            {
+                result = value;
+            }
+        }
+
+        if (at + 1 == length[slot])
+        {
+            values[slot] = nullptr;
+            labels[slot] = nullptr;
+            length[slot] = 0;
+            cursor[slot] = -1;
+            --count;
+        }
+    }
+
+    return result;
 }

@@ -120,6 +120,7 @@
   "?GetEulers@Matrix34@@QBE?AVVector3@@XZ",
   "?GetLookAt@Matrix34@@QBEXPAVVector3@@0M@Z",
   "?GetMIPMapEnv@gfxTexture@@QAEXAAIAAM@Z",
+  "?GetNextUnit@vehFeedback@@UAEMH@Z",
   "?GetNumActuators@vehFeedback@@UAEHXZ",
   "?GetPolar@Matrix34@@QBEXPAVVector4@@PAVVector3@@M@Z",
   "?GetPolar@Vector3@@QBEXABV1@PAVVector4@@PAV1@@Z",

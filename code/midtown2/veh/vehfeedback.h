@@ -55,7 +55,7 @@ public:
     ARTS_IMPORT virtual i32 PlayFeedbackSampleID(i32 arg1);
 
     // ?GetNextUnit@vehFeedback@@UAEMH@Z
-    ARTS_IMPORT virtual f32 GetNextUnit(i32 label_ids);
+    ARTS_EXPORT virtual f32 GetNextUnit(i32 arg1);
 
     // ?Update@vehFeedback@@UAEHXZ
     ARTS_IMPORT virtual i32 Update();
@@ -85,13 +85,13 @@ public:
     f32 TimingUnit; // 0x020
     f32* Ch0SampleValues[8]; // 0x024
     i32* Ch0SampleLabels[8]; // 0x044
-    i32 Ch0SampleIds[8]; // 0x064
-    i32 Ch0SampleState[8]; // 0x084
+    i32 Ch0SampleLength[8]; // 0x064
+    i32 Ch0SamplePos[8]; // 0x084
     i32 Ch0SampleCount; // 0x0A4
     f32* Ch1SampleValues[8]; // 0x0A8
     i32* Ch1SampleLabels[8]; // 0x0C8
-    i32 Ch1SampleIds[8]; // 0x0E8
-    i32 Ch1SampleState[8]; // 0x108
+    i32 Ch1SampleLength[8]; // 0x0E8
+    i32 Ch1SamplePos[8]; // 0x108
     i32 Ch1SampleCount; // 0x128
 };
 

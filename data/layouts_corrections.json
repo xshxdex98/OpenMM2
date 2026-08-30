@@ -38,7 +38,18 @@
     "0x108 - the two SampleState arrays - and 0 to the rest.",
     "",
     "Flat per-channel arrays rather than a nested struct only because layouts.json cannot express",
-    "one; the offsets are what the still-assembly code actually reads."
+    "one; the offsets are what the still-assembly code actually reads.",
+    "",
+    "NAMES CORRECTED AFTER READING GetNextUnit at 0x004D5980, which is the only function that",
+    "consumes these arrays rather than filling them. What PlayFeedbackSample stores looked like an",
+    "id and a state flag; GetNextUnit shows otherwise:",
+    "    v7 = SamplePos[slot]; SamplePos[slot] = v7 + 1;      a per-sample CURSOR, not a flag",
+    "    if ( v7 < SampleLength[slot] ) ...                   the third array is a LENGTH",
+    "    value = SampleValues[slot][v7]                       both pointers are indexed BY it",
+    "    label = SampleLabels[slot][v7]",
+    "and when the cursor reaches the length the slot is released - values and labels nulled, length",
+    "0, cursor back to -1, count decremented. The constructor's -1 and PlayFeedbackSample's 0 are",
+    "therefore a free marker and a start position, which is consistent with both."
    ],
    "members": [
     {
@@ -107,14 +118,14 @@
     {
      "offset": 100,
      "type": "i32",
-     "name": "Ch0SampleIds",
+     "name": "Ch0SampleLength",
      "count": 8,
      "width": 4
     },
     {
      "offset": 132,
      "type": "i32",
-     "name": "Ch0SampleState",
+     "name": "Ch0SamplePos",
      "count": 8,
      "width": 4
     },
@@ -142,14 +153,14 @@
     {
      "offset": 232,
      "type": "i32",
-     "name": "Ch1SampleIds",
+     "name": "Ch1SampleLength",
      "count": 8,
      "width": 4
     },
     {
      "offset": 264,
      "type": "i32",
-     "name": "Ch1SampleState",
+     "name": "Ch1SamplePos",
      "count": 8,
      "width": 4
     },

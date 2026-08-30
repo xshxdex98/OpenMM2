@@ -52,6 +52,18 @@ RESERVED = {
 }
 
 
+# Recovered names that are demonstrably WRONG, with the evidence. Hex-Rays names a parameter from
+# how it is first used, and where that reading is mistaken the name is worse than argN - it reads as
+# though someone checked it. Kept as a hand-curated list because no rule can detect the mistake;
+# only reading the function can.
+WRONG = {
+    # ?GetNextUnit@vehFeedback@@UAEMH@Z - named `label_ids`, but the parameter is the CHANNEL
+    # index: every use is `132 * it`, selecting one of the two 132-byte channel blocks. The labels
+    # are a per-sample array reached through SampleLabels, nothing to do with this argument.
+    "?GetNextUnit@vehFeedback@@UAEMH@Z": {"label_ids"},
+}
+
+
 def parameter_names(text):
     """Names from one signature's argument list, with None where the kit had a placeholder.
 
@@ -99,6 +111,9 @@ def main():
                 if not s:
                     continue
                 names = parameter_names(s.group(1))
+                wrong = WRONG.get(pending)
+                if wrong:
+                    names = [None if n in wrong else n for n in names]
                 if any(names):
                     found[pending] = names
                 pending = None
