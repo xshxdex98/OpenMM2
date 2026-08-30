@@ -1,0 +1,36 @@
+{
+  "_comment": [
+    "ENABLED (wave one). These three carry the -gl runtime branch and their else arms are exact transcriptions containing no DirectDraw or Direct3D COM. With -gl absent the game must behave exactly as before, which is what makes them testable at all.",
+    "",
+    "The OpenGL device layer. Registration list for code/midtown2/agigl/.",
+    "",
+    "IT IS DELIBERATELY EMPTY, AND THAT IS THE FINDING, NOT AN OVERSIGHT. Nothing under agigl/ has",
+    "ever been compiled: tools/build.py does not pass -DARTS_AGIGL, so every translation unit in that",
+    "directory contributes only its define_dummy_symbol today. Registering a symbol strips the",
+    "original PROC out of game.asm permanently, and a first compile is not the moment to do that to a",
+    "build that currently boots to GameLoop with zero access violations.",
+    "",
+    "WHAT GOES IN FIRST, IN THIS ORDER. These three are the whole activation surface: they carry the",
+    "-gl runtime branch, their else arms are exact transcriptions with no DirectDraw or Direct3D COM",
+    "in them, and between them they are the only callers of BeginGfx2D/BeginGfx3D/EndGfx2D/EndGfx3D",
+    "in the image. Registering them with -gl absent must produce a game identical to today, which is",
+    "what makes them individually testable:",
+    "",
+    "  ?InitDirectDraw@@YAXXZ",
+    "  ?BeginGfx@gfxPipeline@@SA_NXZ",
+    "  ?EndGfx@gfxPipeline@@SAXXZ",
+    "",
+    "WHAT GOES IN SECOND, AND ONLY AS A COMPLETE SET. The frame loop is a one-way door - every one of",
+    "these dereferences lpD3DDev, lpdsRend or lpdsFront in its original body, so there is no else arm",
+    "to write and registering any of them replaces the DirectDraw frame loop for every run. The",
+    "boundary, and what breaks if the set is short, is in docs/opengl_activation.md.",
+    "",
+    "Prerequisites for either wave: -DARTS_AGIGL in tools/build.py, then -DARTS_AGIGL_PIPELINE, then",
+    "the two generated headers listed in docs/opengl_plan.md that still do not compile."
+  ],
+  "ported": [
+    "?InitDirectDraw@@YAXXZ",
+    "?BeginGfx@gfxPipeline@@SA_NXZ",
+    "?EndGfx@gfxPipeline@@SAXXZ"
+  ]
+}

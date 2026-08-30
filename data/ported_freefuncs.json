@@ -1,0 +1,36 @@
+{
+ "_comment": [
+  "Free functions reimplemented in C++ by the free-function pass.",
+  "Merge into data/ported.json."
+ ],
+ "ported": [
+  "?AddDeadZone@@YAMMM@Z",
+  "?CleanName@@YAPBDPBD@Z",
+  "?FindTValueSegToOrigin@@YAMABVVector3@@0@Z",
+  "?IsNearZero@@YAHMM@Z",
+  "?IsOnStack@@YA_NPAX@Z",
+  "?IsPointBehindPlane@@YA_NABVVector3@@00M@Z",
+  "?IsPointInBox@@YA_NABVVector3@@MMM@Z",
+  "?IsPointInRegion@@YA_NMMPBVVector3@@H@Z",
+  "?IsPointNearPlane@@YA_NABVVector3@@00M@Z",
+  "?Lerp@@YAMMMM@Z",
+  "?Max@@YAMMM@Z",
+  "?OrderIntersections@@YAXPAM000PAH1@Z",
+  "?RealQuadratic@@YAHMMPAM0M@Z",
+  "?UpperCase@@YAXPAD@Z",
+  "?cmpPtx@@YAHPBX0@Z",
+  "?frand@@YAMH@Z",
+  "?frand@@YAMXZ",
+  "?gfxFVFOffset@@YAIII@Z",
+  "?ilog2@@YAHH@Z",
+  "?inRange@@YAHMMM@Z",
+  "?irand@@YAHH@Z",
+  "?irand@@YAHXZ",
+  "?jdiv_round_up@@YAJJJ@Z",
+  "?jround_up@@YAJJJ@Z",
+  "?max@@YAMMM@Z",
+  "?min@@YAMMM@Z",
+  "?wpmax@@YAMMM@Z",
+  "?wpmin@@YAMMM@Z"
+ ]
+}

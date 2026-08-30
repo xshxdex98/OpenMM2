@@ -1,0 +1,14 @@
+{
+    "_comment": [
+        "gfxAutoDetect, ported so it can carry a -gl branch.",
+        "",
+        "The original probes every video adapter in the machine by creating a DirectDraw and a Direct3D",
+        "device on each one. That is what makes OpenMM2 sit on a black screen, flicker and hop between",
+        "monitors before the intro plays. Under -gl the renderer is already known, so the branch fills in",
+        "one synthetic interface and returns; with -gl absent it calls the original machine code, which is",
+        "kept via data/keep_original.json."
+    ],
+    "ported": [
+        "?gfxAutoDetect@@YA_NPA_N@Z"
+    ]
+}

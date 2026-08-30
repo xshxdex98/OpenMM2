@@ -1,0 +1,125 @@
+{
+ "_meta": {
+  "generated_by": "hand recovery round 2 for the OpenGL device layer; method and evidence are written up in docs/gfx_layouts.md sections 10-14",
+  "supersedes_nothing": "this file adds to data/layouts_gfx_recovered.json; it does not restate anything already emitted there",
+  "sources": [
+   "C:/mm2ghidra/bin/midtown2.exe - disassembled directly with capstone 5.0.7 through a PE section-mapping helper. Every offset in this file was read off raw instruction bytes, not off Hex-Rays output.",
+   "C:/mm2ghidra/out/game.asm.pristine - used to confirm symbol-to-address binding and to prove callers/non-callers",
+   "the binary's own .data strings, which preserve verbatim lines of the 1999 C++ source (the Errorf format strings spell field names and casts)",
+   "Open1560Dev/Open1560/code/midtown/agi/viewport.h - the MM1 counterpart class, for the family's real field-name vocabulary"
+  ],
+  "rules": "docs/layout_sources.md. Only gfxStridedData is offered for merge; everything else here is already in data/layouts.json and is recorded as corroboration or as a pending hand edit."
+ },
+
+ "layouts": {
+  "gfxStridedData": {
+   "kind": "struct",
+   "size": 48,
+   "confidence": "CONFIRMED",
+   "note": "MM2's own mirror of the DirectX 7 D3DDRAWPRIMITIVESTRIDEDDATA, truncated to TWO texture-coordinate sets rather than the SDK's D3DDP_MAXTEXCOORD of 8. Six D3DDP_PTRSTRIDE pairs = 0x30. See docs/gfx_layouts.md section 10 for the two independent stack frames that prove the size and the field order.",
+   "members": [
+    {"offset": 0,  "type": "void*", "name": "PositionData",    "count": 0, "width": 4},
+    {"offset": 4,  "type": "u32",   "name": "PositionStride",  "count": 0, "width": 4},
+    {"offset": 8,  "type": "void*", "name": "NormalData",      "count": 0, "width": 4},
+    {"offset": 12, "type": "u32",   "name": "NormalStride",    "count": 0, "width": 4},
+    {"offset": 16, "type": "void*", "name": "DiffuseData",     "count": 0, "width": 4},
+    {"offset": 20, "type": "u32",   "name": "DiffuseStride",   "count": 0, "width": 4},
+    {"offset": 24, "type": "void*", "name": "SpecularData",    "count": 0, "width": 4},
+    {"offset": 28, "type": "u32",   "name": "SpecularStride",  "count": 0, "width": 4},
+    {"offset": 32, "type": "void*", "name": "TexCoord0Data",   "count": 0, "width": 4},
+    {"offset": 36, "type": "u32",   "name": "TexCoord0Stride", "count": 0, "width": 4},
+    {"offset": 40, "type": "void*", "name": "TexCoord1Data",   "count": 0, "width": 4},
+    {"offset": 44, "type": "u32",   "name": "TexCoord1Stride", "count": 0, "width": 4}
+   ]
+  }
+ },
+
+ "verified_unchanged": {
+  "_note": "already correct in data/layouts.json. Re-derived here from raw disassembly so nobody 'corrects' them later. No merge is needed or wanted; merge_layouts.py rule 1 would refuse them anyway.",
+
+  "gfxVertexBuffer": {
+   "size_hex": "0x10",
+   "was": "UNVERIFIED (IDA type library only)",
+   "now": "CONFIRMED",
+   "evidence": [
+    "gfxPipeline::CreateVertexBuffer (0x004AB830) spells the size as a literal TWICE: 'push 0x10; call 0x577360' at 0x004AB8DD and again at 0x004AB904, each immediately before the ctor at 0x004AB660. The previous round reported no literal allocation site; there are two.",
+    "ctor(IDirect3DVertexBuffer7*) at 0x004AB660 writes [this+0x00], [+0x04], [+0x08], [+0x0C] and stops",
+    "ctor(uint count, uint fvf) at 0x004AB690 writes [this+0x00], [+0x04], word [+0x08], word [+0x0A], [+0x0C] and stops - the two 16-bit stores pin VertCount at 0x08 and m_ElementSize at 0x0A exactly",
+    "no instruction anywhere in the class or in gfxPipeline's ten VB functions touches offset 0x10 or beyond"
+   ],
+   "name_evidence": "the binary's .data preserves four verbatim source lines naming the fields: 'lpD3DDev->DrawPrimitiveVB((D3DPRIMITIVETYPE)dm,vb->m_VB,startOffset,count,0)' and 'lpD3DDev->DrawPrimitive((D3DPRIMITIVETYPE)dm,vb->m_FVF,(void*)((u32)vb->m_Verts + vb->m_ElementSize * startOffset),count,0)' (plus the two indexed variants)."
+  },
+
+  "gfxRenderState": {
+   "size_hex": "0x50",
+   "verdict": "the previous round's claim is CONFIRMED; MM2Hook's 0x98 is wrong",
+   "independent_evidence": [
+    "gfxRenderState::Default (0x004B1DA0) does 'mov ecx,[esi+0x4C]' / 'mov [esi+0x4C], 0x006856F0' - it stores the ADDRESS of gfxMaterial::FlatWhite into the object's last dword. gfxRenderStateData already carries 'gfxMaterial* m_Material' at 0x4C in data/layouts.json. 0x4C + 4 = 0x50.",
+    "a scan of every absolute dword in .text falling in [0x685690,0x685745) shows dense references to 0x006856A0..0x006856EC (RSTATE's own fields) and then a clean break: nothing in the whole binary references 0x006856F0..0x00685733 except gfxRenderState::Default and the gfxMaterial::Reset thunk at 0x004B1B80. The bytes MM2Hook read as trailing members of RSTATE are a separate global."
+   ]
+  },
+
+  "gfxRenderState_0x98_refuted": {
+   "mechanism": "gfxRenderState = { gfxRenderStateData State; } where State.m_Material at 0x4C is a gfxMaterial POINTER whose default value is &gfxMaterial::FlatWhite. MM2Hook saw a gfxMaterial-shaped blob immediately after RSTATE and modelled it as an embedded 'gfxMaterial Material' member, giving 0x50 + 0x48 = 0x98. The blob is the separate global FlatWhite that the pointer points at."
+  }
+ },
+
+ "pending_hand_edits": {
+  "_note": "merge_layouts.py rule 1 refuses any class already in data/layouts.json, correctly. These are corrections and name improvements that a human must apply deliberately to data/layouts.json, with the evidence in docs/gfx_layouts.md in view. Offsets are unchanged by all of them except gfxMaterial's size.",
+
+  "gfxMaterial": {
+   "change": "size 0x44 -> 0x48, and add 'u32 Color' at 0x44",
+   "status": "the corrected entry is already emitted in data/layouts_gfx_recovered.json; it will be refused by rule 1 and needs the hand edit",
+   "round2_confirmation": "gfxMaterial::Reset at 0x004B1BB0 in raw bytes: 'c7 41 44 ff ff ff ff' = 'mov dword ptr [ecx+0x44], 0xFFFFFFFF', then 'c3'. A dword store at 0x44 means the object is at least 0x48. This is not a Hex-Rays artefact; it is the instruction.",
+   "second_proof": "gfxMaterial::FlatWhite occupies 0x006856F0..0x00685737 - Reset's thunk at 0x004B1B80 sets ecx to 0x006856F0, gfxRenderState::Default writes 0x00685734 (= FlatWhite+0x44), and the next symbol sm_Modelview begins at 0x00685738 (= FlatWhite+0x48)."
+  },
+
+  "gfxVertexBuffer_names": {
+   "change": "name-only; offsets and size are unchanged and already correct",
+   "0x00": "layouts.json calls this 'Prev'. The ctor does '[this+0] = sm_First; sm_First = this' and the dtor unlinks by walking [p], so it is the forward link of an intrusive singly-linked list. 'Next' would be the accurate name; MM2Hook also says Next for the equivalent link in gfxBitmap.",
+   "0x04": "a UNION discriminated by m_FVF at 0x0C. When m_FVF == 0 the object wraps a real D3D vertex buffer and 0x04 is 'IDirect3DVertexBuffer7* m_VB'; when m_FVF != 0 the object is system memory and 0x04 is 'void* m_Verts'. Both names appear verbatim in the binary's source strings.",
+   "0x08": "also a union. In the system-memory case it is 'u16 VertCount' (+ m_ElementSize at 0x0A), as the (uint,uint) ctor's 16-bit stores prove. In the D3D-VB case it is a dword: gfxPipeline::PersistVertexBuffer (0x004ABC50) stores a malloc'd backup pointer there, gfxVertexBuffer::RestoreAll (0x004AB730) memcpy's from it, and the dtor frees it. Suggest documenting it as a union rather than renaming."
+  },
+
+  "gfxViewport_names": {
+   "change": "name-only; every offset below is already correct in data/layouts.json",
+   "0x120": "Flags -> keep. Confirmed as a dirty mask: DoFlush (0x004B18D0) tests bit 0 then bit 1 then stores 0. Bit 0 = viewport rect dirty (leads to SetViewport(&m_Viewport) at +0x15C); bit 1 = projection dirty, set by both Perspective and Ortho ('or ecx,2').",
+   "0x124": "DefaultAspect -> keep, and it is width/height: SetWindow (0x004B14C0) computes 'fild [w]; fidiv [h]; fstp [ecx+0x124]'.",
+   "0x128": "field_128 -> a projection-mode flag word. Bit 0 = orthographic: Perspective does 'and al,0xFE', Ortho does 'or al,1', SetWindow tests bit 0 to decide whether to re-run Perspective. The ctor initialises it to 2. MM1's counterpart agiViewParameters ends with 'b32 Orthographic'.",
+   "0x12C": "field_12C -> Near. Was PROBABLE (MM2Hook's guess); now CONFIRMED. Perspective's 3rd argument lands here ('mov eax,[ebp+0x10]; mov [esi+0x12C],eax') and IsSphereVisible compares the sphere's z against it.",
+   "0x130": "field_130 -> Far. Was PROBABLE; now CONFIRMED. Perspective's 4th argument lands here; the ctor defaults it to 0x447A0000 = 1000.0f; IsSphereVisible does 'fld [ebp-8]; fsub radius; fcomp [esi+0x130]'.",
+   "0x134": "field_134 -> TanHalfFovX. Perspective stores tan(Fov*pi/360) * Aspect here.",
+   "0x138": "field_138 -> TanHalfFovY. Perspective stores tan(Fov*pi/360) here. Because the horizontal extent is the vertical one times Aspect, Fov at 0x174 is the VERTICAL field of view, in degrees.",
+   "0x13C": "field_13C + field_140 -> Vector2 LeftPlane",
+   "0x144": "field_144 + field_148 -> Vector2 RightPlane",
+   "0x14C": "field_14C + field_150 -> Vector2 TopPlane",
+   "0x154": "field_154 + field_158 -> Vector2 BottomPlane",
+   "plane_evidence": "IsSphereVisible (0x004B19D0) evaluates exactly four dot products: x*[0x13C] + z*[0x140], x*[0x144] + z*[0x148], y*[0x14C] + z*[0x150], y*[0x154] + z*[0x158], each compared against the radius. The two x-planes are built in Perspective from the aspect-scaled half-angle and the two y-planes from the unscaled one. MM1's agiViewParameters declares 'Vector2 LeftPlane; Vector2 RightPlane; Vector2 TopPlane; Vector2 BottomPlane;' in that same order, consumed by the same SphereVisible algorithm.",
+   "plane_caveat": "which member of each PAIR is Left vs Right (and Top vs Bottom) rests on MM1's declaration order, not on MM2 evidence. Open1560's own header carries a 'TODO: Are these in the right order?' against Top/Bottom. The grouping into four Vector2 planes is CONFIRMED; the left/right and top/bottom assignment within a pair is PROBABLE.",
+   "0x100_to_0x11C": "NOT recovered and deliberately left as field_100..field_11C. See docs/gfx_layouts.md section 13."
+  },
+
+  "gfxRenderStateData_field_2C": {
+   "change": "none - do not rename it",
+   "finding": "field_2C, and the 0x2A/0x2B gap before it, are DEAD in the retail binary. No absolute reference to RSTATE+0x2C (0x006856CC) or LASTRSTATE+0x2C (0x006854CC) exists anywhere in .text; no gfxRenderState method touches +0x2A, +0x2B or +0x2C, DoFlush included; and disassembling a 0xC0-byte window around all 131 sites that reference the RSTATE/LASTRSTATE base addresses turns up no genuine hit. No name can be recovered because nothing uses it."
+  }
+ },
+
+ "dead_code_findings": {
+  "_note": "not layout facts, but they change what the port has to do first. All counts are from an exhaustive E8/E9 relative-call scan plus an absolute-dword scan over the whole image.",
+  "zero_callers": {
+   "gfxPipeline::Draw(gfxDrawMode,uint,int,gfxStridedData const&)": "0x004AAAF0",
+   "gfxPipeline::Draw(gfxDrawMode,uint,int,void*)": "0x004AAB50",
+   "gfxPipeline::DrawIdx(gfxDrawMode,uint,int,gfxStridedData const&,uint,ushort*)": "0x004AABB0",
+   "gfxPipeline::DrawIdx(gfxDrawMode,uint,int,void*,uint,ushort*)": "0x004AAC20",
+   "gfxPipeline::DrawVB": "0x004ABA50",
+   "gfxPipeline::DrawIdxVB": "0x004ABB40",
+   "gfxPipeline::CreateVertexBuffer": "0x004AB830",
+   "gfxPipeline::DestroyVertexBuffer": "0x004AB950",
+   "gfxPipeline::DoLockVertexBuffer": "0x004AB970",
+   "gfxPipeline::PersistVertexBuffer": "0x004ABC50",
+   "gfxPipeline::CreateReadbackImage": "0x004AAC90"
+  },
+  "consequence": "every draw in retail MM2 goes through gfxPacket::Draw (0x004B3340 and 0x004B34E0), which calls lpD3DDev's vtable directly. The six gfxPipeline draw entry points and the entire vertex-buffer creation path are dead exported code. Recovering gfxStridedData does not unblock a hot path; gfxPacket does."
+ }
+}

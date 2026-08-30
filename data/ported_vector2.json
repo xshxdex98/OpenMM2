@@ -1,0 +1,16 @@
+{
+ "_comment": [
+  "Vector2 - the whole class, three functions and 45 bytes of machine code, read off the",
+  "disassembly at 0x45CC50-0x45CC94. Merge into data/ported.json.",
+  "",
+  "These three were held back while code/midtown2/vector7/vector2.cpp sat in wip/. The file is",
+  "back under code/ and compiles on its own now, so the registration comes back with it: the .cpp,",
+  "the ARTS_EXPORT in the header and the entry here have to move together, or tools/asm.py stops",
+  "the build in one direction or the other."
+ ],
+ "ported": [
+  "??0Vector2@@QAE@XZ",
+  "?Mag@Vector2@@QBEMXZ",
+  "?Mag2@Vector2@@QBEMXZ"
+ ]
+}

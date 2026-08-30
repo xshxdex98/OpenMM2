@@ -1,0 +1,29 @@
+{
+ "_comment": [
+  "Round 6, chosen by a pre-screen rather than by hand, because rounds 5's rejects each cost a",
+  "build to discover. The screen applies the three gates that reject a port BEFORE any C++ exists:",
+  "  - tools/verify_arity.py's test, that the mangled name's stack bytes equal the code's `ret`;",
+  "  - build gate 6's test, that no dword in .data/.rdata points strictly inside the extent;",
+  "  - a purity test, that the body makes no call and touches no absolute address, so it needs",
+  "    nothing added to LINKABLE_GLOBALS and no unrecovered layout.",
+  "544 unported functions pass the first two; 146 pass all three.",
+  "",
+  "The eight gfxTexture entries are empty in retail - the mipmap-environment feature was compiled",
+  "out and the entry points left behind. Porting them as no-ops is exact, not lazy.",
+  "",
+  "aiPath supplies 35 of the 146 and none are here: its SharpTurn accessors read [this+0x24] as a",
+  "dword and index [this+0x28], but data/layouts.json types 0x24 as u8 and has no member at 0x28.",
+  "The class needs its layout corrected before any of that vein can be taken."
+ ],
+ "ported": [
+  "?CalcMIPMapEnv@gfxTexture@@SAXHHAAG0@Z",
+  "?CreateFromTexture@gfxTexture@@QAEPAV1@PBDHHHH@Z",
+  "?EnableTrilinearMipMaping@gfxTexture@@SAX_N@Z",
+  "?GetDefaultMIPMapEnv@gfxTexture@@SAXAAIAAM@Z",
+  "?GetMIPMapEnv@gfxTexture@@QAEXAAIAAM@Z",
+  "?MakeUnresident@gfxTexture@@QAEXXZ",
+  "?SetDefaultMIPMapEnv@gfxTexture@@SAXIM@Z",
+  "?SetMIPMapEnv@gfxTexture@@QAEXIM@Z",
+  "?Zero@crAnimFrame@@QAEXXZ"
+ ]
+}

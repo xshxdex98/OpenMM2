@@ -1,0 +1,828 @@
+{
+ "_meta": {
+  "generated_by": "a sweep of every `push <imm>; call operator new; ... call <ctor>` site in midtown2.exe",
+  "binary": "midtown2.exe sha256 992c53c9250cf822b44bf4a4013bd5805229bbbeb7b478a4c2556531bc5340f3",
+  "cross_checked_against": "C:/mm2ghidra/out/game.asm.pristine",
+  "what_the_size_means": "the literal pushed to operator new IS the 1999 compiler's sizeof for that class. It is emitted by the compiler, not written by a human, and no inference stands between it and the truth.",
+  "WARNING": "every class in here is ALREADY in data/layouts.json, so tools/merge_layouts.py rule 1 refuses all of it - correctly. These are corrections to existing IDA type-library entries and each one needs a deliberate hand edit. See docs/short_layouts.md.",
+  "members_are_complete_for": [
+   "eqEventHandler",
+   "mmInput"
+  ],
+  "everything_else": "size only. NO member list is given, because none was recovered. Do not invent one to make it tile - a fabricated tiling produces a check_size that passes and certifies nothing."
+ },
+ "layouts": {
+  "eqEventHandler": {
+   "kind": "struct",
+   "size": 352,
+   "confidence": "CONFIRMED",
+   "members": [
+    {
+     "offset": 0,
+     "type": "u32",
+     "name": "field_0",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 4,
+     "type": "u32",
+     "name": "field_4",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 8,
+     "type": "u32",
+     "name": "field_8",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 12,
+     "type": "u32",
+     "name": "field_C",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 16,
+     "type": "eqEventMonitor*",
+     "name": "Clients",
+     "count": 8,
+     "width": 4
+    },
+    {
+     "offset": 48,
+     "type": "i32",
+     "name": "MouseX",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 52,
+     "type": "i32",
+     "name": "MouseY",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 56,
+     "type": "u32",
+     "name": "field_38",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 60,
+     "type": "u32",
+     "name": "field_3C",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 64,
+     "type": "u32",
+     "name": "field_40",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 68,
+     "type": "u32",
+     "name": "field_44",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 72,
+     "type": "i8",
+     "name": "field_48",
+     "count": 256,
+     "width": 1
+    },
+    {
+     "offset": 328,
+     "type": "u8",
+     "name": "field_148",
+     "count": 24,
+     "width": 1
+    }
+   ],
+   "evidence": {
+    "new_site": "0x00401CD4 in ?BeginPhase@@YAX_N@Z",
+    "instructions": "push 0x160 ; call ??2@YAPAXI@Z ; mov ecx, eax ; call ??0eqEventHandler@@QAE@XZ",
+    "pristine_asm": "db 068h, 060h, 001h, 000h, 000h / db 0E8h / dd ??2@YAPAXI@Z - ($ + 4)",
+    "size_in_layouts_json": 328,
+    "note": "0x000-0x148 is unchanged from the IDA type library and is corroborated by the constructor at 0x004A16C0, which memsets Clients[8] at 0x010 and 0x100 bytes at 0x048, ending exactly at 0x148. Nothing in eqEventHandler's own 12 methods, and no caller of the SuperQ singleton at 0x00661788, ever touches 0x148-0x160. field_148 is an admitted gap of the right width, not a guess at its contents - the point is the total size."
+   }
+  },
+  "mmInput": {
+   "kind": "struct",
+   "size": 584,
+   "confidence": "CONFIRMED",
+   "members": [
+    {
+     "offset": 0,
+     "type": "asNode",
+     "name": "Base",
+     "count": 0,
+     "width": 24
+    },
+    {
+     "offset": 24,
+     "type": "u32",
+     "name": "field_18",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 28,
+     "type": "u32",
+     "name": "field_1C",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 32,
+     "type": "u8",
+     "name": "field_20",
+     "count": 4,
+     "width": 1
+    },
+    {
+     "offset": 36,
+     "type": "u32",
+     "name": "field_24",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 40,
+     "type": "u8",
+     "name": "field_28",
+     "count": 284,
+     "width": 1
+    },
+    {
+     "offset": 324,
+     "type": "u32",
+     "name": "field_144",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 328,
+     "type": "u32",
+     "name": "field_148",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 332,
+     "type": "u32",
+     "name": "field_14C",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 336,
+     "type": "u8",
+     "name": "field_150",
+     "count": 16,
+     "width": 1
+    },
+    {
+     "offset": 352,
+     "type": "u32",
+     "name": "field_160",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 356,
+     "type": "u8",
+     "name": "field_164",
+     "count": 4,
+     "width": 1
+    },
+    {
+     "offset": 360,
+     "type": "f32",
+     "name": "field_168",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 364,
+     "type": "f32",
+     "name": "field_16C",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 368,
+     "type": "u8",
+     "name": "field_170",
+     "count": 20,
+     "width": 1
+    },
+    {
+     "offset": 388,
+     "type": "u32",
+     "name": "field_184",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 392,
+     "type": "u32",
+     "name": "field_188",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 396,
+     "type": "u32",
+     "name": "field_18C",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 400,
+     "type": "u8",
+     "name": "field_190",
+     "count": 20,
+     "width": 1
+    },
+    {
+     "offset": 420,
+     "type": "u32",
+     "name": "field_1A4",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 424,
+     "type": "f32",
+     "name": "field_1A8",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 428,
+     "type": "f32",
+     "name": "field_1AC",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 432,
+     "type": "f32",
+     "name": "field_1B0",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 436,
+     "type": "f32",
+     "name": "field_1B4",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 440,
+     "type": "f32",
+     "name": "field_1B8",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 444,
+     "type": "f32",
+     "name": "field_1BC",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 448,
+     "type": "f32",
+     "name": "field_1C0",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 452,
+     "type": "f32",
+     "name": "field_1C4",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 456,
+     "type": "f32",
+     "name": "field_1C8",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 460,
+     "type": "f32",
+     "name": "field_1CC",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 464,
+     "type": "f32",
+     "name": "field_1D0",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 468,
+     "type": "u32",
+     "name": "field_1D4",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 472,
+     "type": "u32",
+     "name": "field_1D8",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 476,
+     "type": "i32",
+     "name": "field_1DC",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 480,
+     "type": "i32",
+     "name": "field_1E0",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 484,
+     "type": "f32",
+     "name": "field_1E4",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 488,
+     "type": "f32",
+     "name": "field_1E8",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 492,
+     "type": "f32",
+     "name": "field_1EC",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 496,
+     "type": "f32",
+     "name": "field_1F0",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 500,
+     "type": "i32",
+     "name": "field_1F4",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 504,
+     "type": "i32",
+     "name": "field_1F8",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 508,
+     "type": "u32",
+     "name": "field_1FC",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 512,
+     "type": "i8",
+     "name": "KeyboardBuffer",
+     "count": 64,
+     "width": 1
+    },
+    {
+     "offset": 576,
+     "type": "i32",
+     "name": "KeyboardBufferCount",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 580,
+     "type": "u32",
+     "name": "field_244",
+     "count": 0,
+     "width": 4
+    }
+   ],
+   "evidence": {
+    "new_site": "0x00401D74 in ?BeginPhase@@YAX_N@Z",
+    "instructions": "push 0x248 ; call ??2@YAPAXI@Z ; mov ecx, eax ; call ??0mmInput@@QAE@XZ",
+    "pristine_asm": "db 068h, 048h, 002h, 000h, 000h / db 0E8h / dd ??2@YAPAXI@Z - ($ + 4)",
+    "size_in_layouts_json": 476,
+    "per_member": {
+     "field_1DC": "?Update@mmInput@@UAEXXZ 0x0052C9D1 - dword copied from [0x006A38DC]",
+     "field_1E0": "?Update@mmInput@@UAEXXZ 0x0052C9DD - dword copied from [0x006A38D8]",
+     "field_1E4": "?Update@mmInput@@UAEXXZ 0x0052C9EF - fstp",
+     "field_1E8": "?Update@mmInput@@UAEXXZ 0x0052CA01 - fstp",
+     "field_1EC": "?Update@mmInput@@UAEXXZ 0x0052CA13 - fstp of [0x005B0364] / field_1E4",
+     "field_1F0": "?Update@mmInput@@UAEXXZ 0x0052CA25 - fstp of [0x005B0364] / field_1E8",
+     "field_1F4": "?BuildCaptureIO@mmInput@@QAEHHPAVmmIO@@TeqEvent@@@Z 0x0052C622 / 0x0052C62E / 0x0052C6F9 sets it to the small constants 4 / 5 / 3, then passes it as the 2nd argument of ?SanityCheck@mmInput@@QAEHPAVmmIO@@HH@Z at 0x0052C715",
+     "field_1F8": "same function, 0x0052C6E5 / 0x0052C709; passed as SanityCheck's 3rd argument at 0x0052C70F",
+     "field_1FC": "NEVER OBSERVED, by any mmInput method or by any caller through the singleton at 0x006B1CF0. Named as a gap so the members either side of it keep their real offsets.",
+     "KeyboardBuffer": "?GetBufferedKeyboardData@mmInput@@AAEXXZ 0x0052CCC5: lea eax,[esi+0x200] ; push 0x40 ; call ?GetBufferedInput@ioKeyboard@@SAHPADH@Z - so the buffer is exactly 0x40 chars. Read as a byte at 0x0052CD0D: movsx ecx, byte ptr [ecx+edx+0x200]",
+     "KeyboardBufferCount": "0x0052CCD4 stores GetBufferedInput's return; ?GetNextKeyboardEvent@mmInput@@AAEHPATeqEvent@@@Z decrements it at 0x0052CCEE and uses it as the index into KeyboardBuffer; ?Flush@mmInput@@QAEXXZ zeroes it at 0x0052CBDC",
+     "field_244": "NEVER OBSERVED. The last 4 bytes of the object."
+    },
+    "corroboration": "mmInput's own 69 methods reach +0x244 (a dword, so end 0x248) and never go past it - independently reaching 0x68 beyond the 0x1DC the type library claims."
+   }
+  },
+  "ControlCustom": {
+   "kind": "struct",
+   "size": null,
+   "real_size_from_operator_new": 29208,
+   "size_in_layouts_json": 140,
+   "direction": "SHORT by 0x718C",
+   "confidence": "SIZE-CONFIRMED, MEMBERS-UNKNOWN",
+   "members": [],
+   "evidence": {
+    "new_site": "0x00408054 in ??0mmInterface@@QAE@XZ",
+    "max_this_offset_reached_by_own_methods": 29208,
+    "layout_looks_copied_from": "OptionsBase / UIMenu, both 0x8C"
+   }
+  },
+  "CrashCourse": {
+   "kind": "struct",
+   "size": null,
+   "real_size_from_operator_new": 2128,
+   "size_in_layouts_json": 140,
+   "direction": "SHORT by 0x7C4",
+   "confidence": "SIZE-CONFIRMED, MEMBERS-UNKNOWN",
+   "members": [],
+   "evidence": {
+    "new_site": "0x00407F64 in ??0mmInterface@@QAE@XZ",
+    "max_this_offset_reached_by_own_methods": 2125,
+    "layout_looks_copied_from": "UIMenu, 0x8C"
+   }
+  },
+  "Vehicle": {
+   "kind": "struct",
+   "size": null,
+   "real_size_from_operator_new": 376,
+   "size_in_layouts_json": 140,
+   "direction": "SHORT by 0xEC",
+   "confidence": "SIZE-CONFIRMED, MEMBERS-UNKNOWN",
+   "members": [],
+   "evidence": {
+    "new_site": "0x00407EA9 in ??0mmInterface@@QAE@XZ",
+    "max_this_offset_reached_by_own_methods": 376,
+    "layout_looks_copied_from": "VehicleSelectBase / UIMenu, both 0x8C"
+   }
+  },
+  "Dialog_City2": {
+   "kind": "struct",
+   "size": null,
+   "real_size_from_operator_new": 208,
+   "size_in_layouts_json": 188,
+   "direction": "SHORT by 0x14",
+   "confidence": "SIZE-CONFIRMED, MEMBERS-UNKNOWN",
+   "members": [],
+   "evidence": {
+    "new_site": "0x0040895B in ??0mmInterface@@QAE@XZ",
+    "max_this_offset_reached_by_own_methods": 208,
+    "layout_looks_copied_from": "PUMenuBase, 0xBC"
+   }
+  },
+  "Dialog_DriverRec": {
+   "kind": "struct",
+   "size": null,
+   "real_size_from_operator_new": 240,
+   "size_in_layouts_json": 188,
+   "direction": "SHORT by 0x34",
+   "confidence": "SIZE-CONFIRMED, MEMBERS-UNKNOWN",
+   "members": [],
+   "evidence": {
+    "new_site": "0x00408324 in ??0mmInterface@@QAE@XZ",
+    "max_this_offset_reached_by_own_methods": 228,
+    "layout_looks_copied_from": "PUMenuBase, 0xBC"
+   }
+  },
+  "Dialog_Eject": {
+   "kind": "struct",
+   "size": null,
+   "real_size_from_operator_new": 760,
+   "size_in_layouts_json": 188,
+   "direction": "SHORT by 0x23C",
+   "confidence": "SIZE-CONFIRMED, MEMBERS-UNKNOWN",
+   "members": [],
+   "evidence": {
+    "new_site": "0x004089A0 in ??0mmInterface@@QAE@XZ",
+    "max_this_offset_reached_by_own_methods": 748,
+    "layout_looks_copied_from": "PUMenuBase, 0xBC"
+   }
+  },
+  "Dialog_HallOfFame": {
+   "kind": "struct",
+   "size": null,
+   "real_size_from_operator_new": 240,
+   "size_in_layouts_json": 188,
+   "direction": "SHORT by 0x34",
+   "confidence": "SIZE-CONFIRMED, MEMBERS-UNKNOWN",
+   "members": [],
+   "evidence": {
+    "new_site": "0x00408382 in ??0mmInterface@@QAE@XZ",
+    "max_this_offset_reached_by_own_methods": 240,
+    "layout_looks_copied_from": "PUMenuBase, 0xBC"
+   }
+  },
+  "Dialog_ReplayEdit": {
+   "kind": "struct",
+   "size": null,
+   "real_size_from_operator_new": 276,
+   "size_in_layouts_json": 188,
+   "direction": "SHORT by 0x58",
+   "confidence": "SIZE-CONFIRMED, MEMBERS-UNKNOWN",
+   "members": [],
+   "evidence": {
+    "new_site": "0x004088FD in ??0mmInterface@@QAE@XZ",
+    "max_this_offset_reached_by_own_methods": 276,
+    "layout_looks_copied_from": "PUMenuBase, 0xBC"
+   }
+  },
+  "Dialog_Serial": {
+   "kind": "struct",
+   "size": null,
+   "real_size_from_operator_new": 324,
+   "size_in_layouts_json": 188,
+   "direction": "SHORT by 0x88",
+   "confidence": "SIZE-CONFIRMED, MEMBERS-UNKNOWN",
+   "members": [],
+   "evidence": {
+    "new_site": "0x004081E5 in ??0mmInterface@@QAE@XZ",
+    "max_this_offset_reached_by_own_methods": 285,
+    "layout_looks_copied_from": "PUMenuBase, 0xBC"
+   }
+  },
+  "Dialog_TCPIP": {
+   "kind": "struct",
+   "size": null,
+   "real_size_from_operator_new": 236,
+   "size_in_layouts_json": 188,
+   "direction": "SHORT by 0x30",
+   "confidence": "SIZE-CONFIRMED, MEMBERS-UNKNOWN",
+   "members": [],
+   "evidence": {
+    "new_site": "0x00408129 in ??0mmInterface@@QAE@XZ",
+    "max_this_offset_reached_by_own_methods": 236,
+    "layout_looks_copied_from": "PUMenuBase, 0xBC"
+   }
+  },
+  "MainMenu": {
+   "kind": "struct",
+   "size": null,
+   "real_size_from_operator_new": 256,
+   "size_in_layouts_json": 184,
+   "direction": "SHORT by 0x48",
+   "confidence": "SIZE-CONFIRMED, MEMBERS-UNKNOWN",
+   "members": [],
+   "evidence": {
+    "new_site": "0x00407E4F in ??0mmInterface@@QAE@XZ",
+    "max_this_offset_reached_by_own_methods": 256,
+    "layout_looks_copied_from": "UIMenu 0x8C plus two recovered fields"
+   }
+  },
+  "NetSelectMenu": {
+   "kind": "struct",
+   "size": null,
+   "real_size_from_operator_new": 616,
+   "size_in_layouts_json": 512,
+   "direction": "SHORT by 0x68",
+   "confidence": "SIZE-CONFIRMED, MEMBERS-UNKNOWN",
+   "members": [],
+   "evidence": {
+    "new_site": "0x00407F38 in ??0mmInterface@@QAE@XZ",
+    "max_this_offset_reached_by_own_methods": 616,
+    "layout_looks_copied_from": null
+   }
+  },
+  "RaceMenu": {
+   "kind": "struct",
+   "size": null,
+   "real_size_from_operator_new": 312,
+   "size_in_layouts_json": 292,
+   "direction": "SHORT by 0x14",
+   "confidence": "SIZE-CONFIRMED, MEMBERS-UNKNOWN",
+   "members": [],
+   "evidence": {
+    "new_site": "0x00407F0C in ??0mmInterface@@QAE@XZ",
+    "max_this_offset_reached_by_own_methods": 312,
+    "layout_looks_copied_from": "RaceMenuBase, 0x124"
+   }
+  },
+  "UICompositeScroll": {
+   "kind": "struct",
+   "size": null,
+   "real_size_from_operator_new": 212,
+   "size_in_layouts_json": 108,
+   "direction": "SHORT by 0x68",
+   "confidence": "SIZE-CONFIRMED, MEMBERS-UNKNOWN",
+   "members": [],
+   "evidence": {
+    "new_site": "0x004E15B9 in ?AddCompScroll@UIMenu@@QAEPAVUICompositeScroll@@HMMMMMHPAHHHVdatCallback@@@Z",
+    "max_this_offset_reached_by_own_methods": 212,
+    "layout_looks_copied_from": "uiWidget, 0x6C"
+   }
+  },
+  "gizFerryMgr": {
+   "kind": "struct",
+   "size": null,
+   "real_size_from_operator_new": 52,
+   "size_in_layouts_json": 44,
+   "direction": "SHORT by 0x8",
+   "confidence": "SIZE-CONFIRMED, MEMBERS-UNKNOWN",
+   "members": [],
+   "evidence": {
+    "new_site": "0x004158DB in ?init_gizmo_mgr@@YAPAVgizFerryMgr@@PAVmmGame@@PBD1@Z",
+    "max_this_offset_reached_by_own_methods": 49,
+    "layout_looks_copied_from": null
+   }
+  },
+  "mmMultiRoam": {
+   "kind": "struct",
+   "size": null,
+   "real_size_from_operator_new": 45576,
+   "size_in_layouts_json": 45564,
+   "direction": "SHORT by 0xC",
+   "confidence": "SIZE-CONFIRMED, MEMBERS-UNKNOWN",
+   "members": [],
+   "evidence": {
+    "new_site": "0x00402B57 in ??0mmGameManager@@QAE@XZ",
+    "max_this_offset_reached_by_own_methods": 45576,
+    "layout_looks_copied_from": null
+   }
+  },
+  "mmPlayerConfig": {
+   "kind": "struct",
+   "size": null,
+   "real_size_from_operator_new": 29048,
+   "size_in_layouts_json": 29036,
+   "direction": "SHORT by 0xC",
+   "confidence": "SIZE-CONFIRMED, MEMBERS-UNKNOWN",
+   "members": [],
+   "evidence": {
+    "new_site": "0x0050C8A8 in ??0PUAudioOptions@@QAE@HMMMM@Z",
+    "max_this_offset_reached_by_own_methods": 29041,
+    "layout_looks_copied_from": null
+   }
+  },
+  "mmPopup": {
+   "kind": "struct",
+   "size": null,
+   "real_size_from_operator_new": 96,
+   "size_in_layouts_json": 1,
+   "direction": "SHORT by 0x5F",
+   "confidence": "SIZE-CONFIRMED, MEMBERS-UNKNOWN",
+   "members": [],
+   "evidence": {
+    "new_site": "0x00412DD2 in ?Init@mmGame@@UAEHXZ",
+    "max_this_offset_reached_by_own_methods": 96,
+    "layout_looks_copied_from": null
+   }
+  },
+  "mmVehList": {
+   "kind": "struct",
+   "size": null,
+   "real_size_from_operator_new": 16,
+   "size_in_layouts_json": 1,
+   "direction": "SHORT by 0xF",
+   "confidence": "SIZE-CONFIRMED, MEMBERS-UNKNOWN",
+   "members": [],
+   "evidence": {
+    "new_site": "0x00402A2B in ??0mmGameManager@@QAE@XZ",
+    "max_this_offset_reached_by_own_methods": 16,
+    "layout_looks_copied_from": null
+   }
+  },
+  "phInertialCS": {
+   "kind": "struct",
+   "size": null,
+   "real_size_from_operator_new": 436,
+   "size_in_layouts_json": 280,
+   "direction": "SHORT by 0x9C",
+   "confidence": "SIZE-CONFIRMED, MEMBERS-UNKNOWN",
+   "members": [],
+   "evidence": {
+    "new_site": "0x005A7D23 in ??0dgRagdoll@@QAE@XZ",
+    "max_this_offset_reached_by_own_methods": 436,
+    "layout_looks_copied_from": null
+   }
+  },
+  "vehCarAudioContainer": {
+   "kind": "struct",
+   "size": null,
+   "real_size_from_operator_new": 24,
+   "size_in_layouts_json": 1,
+   "direction": "SHORT by 0x17",
+   "confidence": "SIZE-CONFIRMED, MEMBERS-UNKNOWN",
+   "members": [],
+   "evidence": {
+    "new_site": "0x0042C233 in ?InitAudio@vehCar@@QAEXPBDH@Z",
+    "max_this_offset_reached_by_own_methods": 24,
+    "layout_looks_copied_from": null
+   }
+  },
+  "Dialog_Replay": {
+   "kind": "struct",
+   "size": null,
+   "real_size_from_operator_new": 360,
+   "size_in_layouts_json": 432,
+   "direction": "TOO LARGE by 0x48",
+   "confidence": "SIZE-CONFIRMED, MEMBERS-UNKNOWN",
+   "members": [],
+   "evidence": {
+    "new_site": "0x004085E6 in ??0mmInterface@@QAE@XZ",
+    "max_this_offset_reached_by_own_methods": 360,
+    "layout_looks_copied_from": null
+   }
+  },
+  "HostRaceMenu": {
+   "kind": "struct",
+   "size": null,
+   "real_size_from_operator_new": 440,
+   "size_in_layouts_json": 624,
+   "direction": "TOO LARGE by 0xB8",
+   "confidence": "SIZE-CONFIRMED, MEMBERS-UNKNOWN",
+   "members": [],
+   "evidence": {
+    "new_site": "0x004080C6 in ??0mmInterface@@QAE@XZ",
+    "max_this_offset_reached_by_own_methods": 440,
+    "layout_looks_copied_from": "size collides with gfxInterface, 0x270"
+   }
+  },
+  "NetArena": {
+   "kind": "struct",
+   "size": null,
+   "real_size_from_operator_new": 324,
+   "size_in_layouts_json": 460,
+   "direction": "TOO LARGE by 0x88",
+   "confidence": "SIZE-CONFIRMED, MEMBERS-UNKNOWN",
+   "members": [],
+   "evidence": {
+    "new_site": "0x004080F2 in ??0mmInterface@@QAE@XZ",
+    "max_this_offset_reached_by_own_methods": 324,
+    "layout_looks_copied_from": "size collides with aiMap, 0x1CC"
+   }
+  },
+  "gfxTextureMovie": {
+   "kind": "struct",
+   "size": null,
+   "real_size_from_operator_new": 28,
+   "size_in_layouts_json": 40,
+   "direction": "TOO LARGE by 0xC",
+   "confidence": "SIZE-CONFIRMED, MEMBERS-UNKNOWN",
+   "members": [],
+   "evidence": {
+    "new_site": "0x004B49DF in ?gfxGetTextureMovie@@YAPAVgfxTextureMovie@@AAPAPAVgfxTexture@@PBD_N@Z",
+    "max_this_offset_reached_by_own_methods": 28,
+    "layout_looks_copied_from": null
+   }
+  },
+  "mmInterface": {
+   "kind": "struct",
+   "size": null,
+   "real_size_from_operator_new": 30544,
+   "size_in_layouts_json": 30912,
+   "direction": "TOO LARGE by 0x170",
+   "confidence": "SIZE-CONFIRMED, MEMBERS-UNKNOWN",
+   "members": [],
+   "evidence": {
+    "new_site": "0x004017EF in ?MainPhase@@YAX_NH@Z",
+    "max_this_offset_reached_by_own_methods": 30540,
+    "layout_looks_copied_from": null
+   }
+  }
+ }
+}

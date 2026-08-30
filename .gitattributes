@@ -1,0 +1,16 @@
+# Normalise text in the repository, check out native. Without this, editing on Windows
+# rewrites whole files as CRLF and every diff becomes unreadable.
+* text=auto
+
+*.cpp   text
+*.h     text
+*.py    text
+*.md    text
+*.json  text
+*.asm   text
+
+*.png   binary
+*.dds   binary
+*.ar    binary
+*.bnd   binary
+*.bms   binary

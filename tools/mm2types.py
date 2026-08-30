@@ -1,0 +1,141 @@
+# -*- coding: utf-8 -*-
+"""Mine the `MM2::` namespace in the IDB type dump for sizes, offsets and vtable slot names.
+
+The dump carries two type sets for the same game. The plain names (`struct aiPath`) are the IDB's
+own recovered layouts, with full member lists. The `MM2::`-prefixed ones come from MM2Hook, the
+community mod framework, and look different:
+
+    struct MM2::aiVehiclePhysics  // sizeof=0x9770
+    {
+        MM2::aiVehicle ;                            <- base class, embedded at 0
+        hook::Field<38544,float> _brake;            <- offset is the TEMPLATE ARGUMENT
+    };
+
+The `/* 0x00NN */` comment on those lines is the index within the hook wrapper, not the field
+offset, so reading it would be wrong by a wide margin. The real offset is the first template
+parameter.
+
+This set is sparse on member names but has `sizeof` for 152 classes the IDB has no plain layout
+for, which is exactly what `check_size` needs. It also carries 156 `_vtbl` structs naming virtual
+methods in slot order - an independent check on the hierarchy recovered from vftable bytes.
+"""
+import json
+import os
+import re
+from collections import OrderedDict
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
+
+TYPES = os.environ.get("MM2_TYPES",
+                       os.path.join(ROOT, "MM2_RE_KIT", "MM2_PSEUDOCODE", "_ALL_TYPES.h"))
+OUT = os.path.join(ROOT, "data", "mm2types.json")
+
+HEAD = re.compile(r"^struct MM2::(\w+)\s+//\s+sizeof=0x([0-9A-Fa-f]+)\s*$")
+FIELD = re.compile(r"hook::Field<\s*(\d+)\s*,\s*(.+?)\s*>\s+(\w+)\s*;")
+BASE = re.compile(r"^\s*/\*\s*0x0000\s*\*/\s*MM2::(\w+)\s*;\s*$")
+VSLOT = re.compile(r"^\s*/\*\s*0x([0-9A-Fa-f]+)\s*\*/\s*.*?\)\s*(\w+)\s*;\s*$")
+
+
+def parse():
+    sizes = OrderedDict()
+    fields = OrderedDict()
+    bases = OrderedDict()
+    vtables = OrderedDict()
+
+    cur = None
+    cur_vtbl = None
+
+    with open(TYPES, encoding="utf-8", errors="replace") as f:
+        for line in f:
+            line = line.rstrip("\n")
+
+            m = HEAD.match(line)
+            if m:
+                name, size = m.group(1), int(m.group(2), 16)
+
+                if name.endswith("_vtbl"):
+                    cur, cur_vtbl = None, name[:-5]
+                    vtables[cur_vtbl] = []
+                else:
+                    cur, cur_vtbl = name, None
+                    sizes[name] = size
+                    fields.setdefault(name, [])
+                continue
+
+            if line.startswith("};"):
+                cur = cur_vtbl = None
+                continue
+
+            if cur_vtbl is not None:
+                m = VSLOT.match(line)
+                if m:
+                    vtables[cur_vtbl].append(
+                        OrderedDict(slot=int(m.group(1), 16) // 4, name=m.group(2)))
+                continue
+
+            if cur is None:
+                continue
+
+            m = BASE.match(line)
+            if m and m.group(1) != cur:
+                bases[cur] = m.group(1)
+                continue
+
+            m = FIELD.search(line)
+            if m:
+                fields[cur].append(OrderedDict(
+                    offset=int(m.group(1)), type=m.group(2), name=m.group(3)))
+
+    return sizes, fields, bases, vtables
+
+
+def main():
+    sizes, fields, bases, vtables = parse()
+
+    print("MM2:: namespace:")
+    print("  classes with a size : %d" % len(sizes))
+    print("  hook::Field members : %d" % sum(len(v) for v in fields.values()))
+    print("  base classes        : %d" % len(bases))
+    print("  vtables             : %d (%d named slots)"
+          % (len(vtables), sum(len(v) for v in vtables.values())))
+
+    data = OrderedDict(sizes=sizes, fields=fields, bases=bases, vtables=vtables)
+
+    with open(OUT, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=1)
+
+    print("wrote %s" % OUT)
+
+    # Cross-check the bases against the hierarchy recovered from vftable bytes. These are wholly
+    # independent - one is MM2Hook's hand-maintained type set, the other is read out of the
+    # binary - so agreement is real evidence and disagreement is worth knowing about.
+    hier_path = os.path.join(ROOT, "data", "hierarchy.json")
+    if not os.path.exists(hier_path):
+        return
+
+    with open(hier_path, encoding="utf-8") as f:
+        hier = json.load(f)
+
+    agree = differ = 0
+    examples = []
+
+    for cls, base in bases.items():
+        ours = (hier.get(cls) or {}).get("base")
+        if not ours:
+            continue
+
+        if ours == base:
+            agree += 1
+        else:
+            differ += 1
+            if len(examples) < 10:
+                examples.append("%s: vftables say %s, MM2Hook says %s" % (cls, ours, base))
+
+    print("\n  base class agreement vs vftable recovery: %d agree, %d differ" % (agree, differ))
+    for e in examples:
+        print("    %s" % e)
+
+
+if __name__ == "__main__":
+    main()

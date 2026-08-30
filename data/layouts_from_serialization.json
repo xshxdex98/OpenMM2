@@ -1,0 +1,6610 @@
+{
+ "_meta": {
+  "generated_by": "tools/serialization_layouts.py",
+  "source": "MM2_RE_KIT/MM2_PSEUDOCODE/<Class>/<Class>.c, every source function verified by address against data/symbols.json (the retail linker map)",
+  "schema": "data/layouts.json plus per-class confidence/evidence/corroboration and a per-member evidence kind and source function",
+  "WARNING": "'size_lower_bound' is a FLOOR, never a size. Only 'size' (present when MM2Hook corroborates) may be fed to check_size(). Pinning a struct too small is a silent corruption.",
+  "datParser_type_enum": {
+   "0": "string",
+   "1": "bool",
+   "2": "char",
+   "3": "short",
+   "4": "int",
+   "5": "float",
+   "6": "Vector2",
+   "7": "Vector3",
+   "8": "Vector4",
+   "9": "subparser"
+  },
+  "evidence_kinds": {
+   "datParser": "datParser::AddRecord/AddValue - offset, width and the 1999 field NAME",
+   "format": "a printf-style call inside a Dump/Print/Debug method - offset, width, NAME",
+   "format-weak": "a printf-style call somewhere else - the label may be prose",
+   "subobject": "Base::FileIO(this + N, ...) - a sub-object of a known class at N",
+   "stream": "Stream::Read/Write(s, this + N, LEN) - offset and exact width, no name",
+   "memset": "memset(this + N, 0, LEN) - a block's extent only",
+   "memcpy": "memcpy/qmemcpy touching this + N - a copied block's extent only"
+  },
+  "control_group": {
+   "exact_hits": 51,
+   "refines_an_unnamed_filler": 4,
+   "inside_a_typed_member": 0,
+   "past_idb_sizeof": 0,
+   "total": 55,
+   "accuracy": 92.7,
+   "regions_ending_on_a_boundary": 11,
+   "regions_not": 0
+  },
+  "independent_checks": {
+   "mm2hook_sizeof_agrees": 38,
+   "mm2hook_sizeof_disagrees": 2,
+   "base_size_floor_agrees": 31,
+   "base_size_floor_disagrees": 7
+  }
+ },
+ "layouts": {
+  "Aud3DObjectManager": {
+   "kind": "struct",
+   "confidence": "WEAK",
+   "already_known": false,
+   "code_bytes": 3491,
+   "size": null,
+   "size_confirmed_by": null,
+   "size_note": "MM2Hook's None for this class is a stub and was not used as a ceiling",
+   "size_lower_bound": 160,
+   "size_lower_bound_hex": "0xA0",
+   "base": "asNode",
+   "base_size": 24,
+   "bytes_accounted_for": 124,
+   "highest_byte_touched": 160,
+   "coverage_pct": null,
+   "evidence": [
+    "memset"
+   ],
+   "corroboration": [
+    "first own field 0x3C is at or past base end 0x18"
+   ],
+   "source_functions": [
+    "0x50F360"
+   ],
+   "named_fields": 0,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 60,
+     "offset_hex": "0x3C",
+     "type": null,
+     "name": "field_3C",
+     "recovered_name": false,
+     "count": 0,
+     "width": 100,
+     "evidence": "memset",
+     "source_fn": "0x50F360",
+     "sites": 1
+    }
+   ]
+  },
+  "AudStreamingMusic": {
+   "kind": "struct",
+   "confidence": "WEAK",
+   "already_known": false,
+   "code_bytes": 1220,
+   "size": null,
+   "size_confirmed_by": null,
+   "size_note": "MM2Hook's None for this class is a stub and was not used as a ceiling",
+   "size_lower_bound": 124,
+   "size_lower_bound_hex": "0x7C",
+   "base": "asNode",
+   "base_size": 24,
+   "bytes_accounted_for": 64,
+   "highest_byte_touched": 124,
+   "coverage_pct": null,
+   "evidence": [
+    "memset"
+   ],
+   "corroboration": [
+    "first own field 0x54 is at or past base end 0x18"
+   ],
+   "source_functions": [
+    "0x50E810"
+   ],
+   "named_fields": 0,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 84,
+     "offset_hex": "0x54",
+     "type": null,
+     "name": "field_54",
+     "recovered_name": false,
+     "count": 0,
+     "width": 40,
+     "evidence": "memset",
+     "source_fn": "0x50E810",
+     "sites": 1
+    }
+   ]
+  },
+  "CArrayList": {
+   "kind": "struct",
+   "confidence": "WEAK",
+   "already_known": true,
+   "code_bytes": 368,
+   "size": 8,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 2,
+   "size_lower_bound_hex": "0x2",
+   "base": null,
+   "base_size": null,
+   "bytes_accounted_for": 2,
+   "highest_byte_touched": 2,
+   "coverage_pct": 25.0,
+   "evidence": [
+    "stream"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x8 (lower bound 0x2)"
+   ],
+   "source_functions": [
+    "0x543DB0",
+    "0x543DE0"
+   ],
+   "named_fields": 0,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 0,
+     "offset_hex": "0x0",
+     "type": null,
+     "name": "field_0",
+     "recovered_name": false,
+     "count": 0,
+     "width": 2,
+     "evidence": "stream",
+     "source_fn": "0x543DB0",
+     "sites": 2
+    }
+   ]
+  },
+  "Matrix33": {
+   "kind": "struct",
+   "confidence": "WEAK",
+   "already_known": false,
+   "code_bytes": 2000,
+   "size": null,
+   "size_confirmed_by": null,
+   "size_note": "MM2Hook's None for this class is a stub and was not used as a ceiling",
+   "size_lower_bound": 36,
+   "size_lower_bound_hex": "0x24",
+   "base": null,
+   "base_size": null,
+   "bytes_accounted_for": 36,
+   "highest_byte_touched": 36,
+   "coverage_pct": null,
+   "evidence": [
+    "memcpy"
+   ],
+   "corroboration": [],
+   "source_functions": [
+    "0x4968B0"
+   ],
+   "named_fields": 0,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 0,
+     "offset_hex": "0x0",
+     "type": null,
+     "name": "field_0",
+     "recovered_name": false,
+     "count": 0,
+     "width": 36,
+     "evidence": "memcpy",
+     "source_fn": "0x4968B0",
+     "sites": 2
+    }
+   ]
+  },
+  "aiGoalAvoidPlayer": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 2512,
+   "size": 32,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 24,
+   "size_lower_bound_hex": "0x18",
+   "base": "aiGoal",
+   "base_size": 8,
+   "bytes_accounted_for": 20,
+   "highest_byte_touched": 24,
+   "coverage_pct": 62.5,
+   "evidence": [
+    "format"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x20 (lower bound 0x18)",
+    "first own field 0xC is at or past base end 0x8"
+   ],
+   "source_functions": [
+    "0x56B520"
+   ],
+   "named_fields": 3,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 12,
+     "offset_hex": "0xC",
+     "type": "f32",
+     "name": "Side",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x56B520",
+     "sites": 1
+    },
+    {
+     "offset": 16,
+     "offset_hex": "0x10",
+     "type": "f32",
+     "name": "Heading",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x56B520",
+     "sites": 1
+    },
+    {
+     "offset": 20,
+     "offset_hex": "0x14",
+     "type": "f32",
+     "name": "PlayerSideReactDist",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x56B520",
+     "sites": 1
+    }
+   ]
+  },
+  "aiGoalRegainRail": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 2528,
+   "size": 36,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 36,
+   "size_lower_bound_hex": "0x24",
+   "base": "aiGoal",
+   "base_size": 8,
+   "bytes_accounted_for": 28,
+   "highest_byte_touched": 36,
+   "coverage_pct": 77.8,
+   "evidence": [
+    "format"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x24 (lower bound 0x24)",
+    "first own field 0x10 is at or past base end 0x8"
+   ],
+   "source_functions": [
+    "0x56BF00"
+   ],
+   "named_fields": 3,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 16,
+     "offset_hex": "0x10",
+     "type": "Vector3",
+     "name": "StartPos",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "format",
+     "source_fn": "0x56BF00",
+     "sites": 1
+    },
+    {
+     "offset": 28,
+     "offset_hex": "0x1C",
+     "type": "f32",
+     "name": "RoadDist",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x56BF00",
+     "sites": 1
+    },
+    {
+     "offset": 32,
+     "offset_hex": "0x20",
+     "type": "f32",
+     "name": "RegainDist",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x56BF00",
+     "sites": 1
+    }
+   ]
+  },
+  "aiMap": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": true,
+   "code_bytes": 30027,
+   "size": 460,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 110,
+   "size_lower_bound_hex": "0x6E",
+   "base": "asNode",
+   "base_size": 24,
+   "bytes_accounted_for": 34,
+   "highest_byte_touched": 110,
+   "coverage_pct": 7.4,
+   "evidence": [
+    "format",
+    "stream"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x1CC (lower bound 0x6E)",
+    "first own field 0x28 is at or past base end 0x18"
+   ],
+   "source_functions": [
+    "0x535DF0",
+    "0x538840"
+   ],
+   "named_fields": 5,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 40,
+     "offset_hex": "0x28",
+     "type": "i16",
+     "name": "NumIntersections",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x538840",
+     "sites": 2
+    },
+    {
+     "offset": 48,
+     "offset_hex": "0x30",
+     "type": "i16",
+     "name": "NumPaths",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x538840",
+     "sites": 2
+    },
+    {
+     "offset": 64,
+     "offset_hex": "0x40",
+     "type": "i16",
+     "name": "NumAmbients",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x538840",
+     "sites": 1
+    },
+    {
+     "offset": 80,
+     "offset_hex": "0x50",
+     "type": "i16",
+     "name": "NumCops",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x538840",
+     "sites": 1
+    },
+    {
+     "offset": 108,
+     "offset_hex": "0x6C",
+     "type": "i16",
+     "name": "NumOpponents",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x538840",
+     "sites": 1
+    }
+   ]
+  },
+  "aiPath": {
+   "kind": "struct",
+   "confidence": "PROBABLE",
+   "already_known": true,
+   "code_bytes": 23488,
+   "size": 356,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 352,
+   "size_lower_bound_hex": "0x160",
+   "base": null,
+   "base_size": null,
+   "bytes_accounted_for": 184,
+   "highest_byte_touched": 352,
+   "coverage_pct": 51.7,
+   "evidence": [
+    "stream"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x164 (lower bound 0x160)"
+   ],
+   "source_functions": [
+    "0x544350",
+    "0x544770",
+    "0x545230"
+   ],
+   "named_fields": 0,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 0,
+     "offset_hex": "0x0",
+     "type": null,
+     "name": "field_0",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x544350",
+     "sites": 3
+    },
+    {
+     "offset": 4,
+     "offset_hex": "0x4",
+     "type": null,
+     "name": "field_4",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 8,
+     "offset_hex": "0x8",
+     "type": null,
+     "name": "field_8",
+     "recovered_name": false,
+     "count": 0,
+     "width": 2,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 10,
+     "offset_hex": "0xA",
+     "type": null,
+     "name": "field_A",
+     "recovered_name": false,
+     "count": 0,
+     "width": 2,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 12,
+     "offset_hex": "0xC",
+     "type": null,
+     "name": "field_C",
+     "recovered_name": false,
+     "count": 0,
+     "width": 2,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 14,
+     "offset_hex": "0xE",
+     "type": null,
+     "name": "field_E",
+     "recovered_name": false,
+     "count": 0,
+     "width": 2,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 20,
+     "offset_hex": "0x14",
+     "type": null,
+     "name": "field_14",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 24,
+     "offset_hex": "0x18",
+     "type": null,
+     "name": "field_18",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 56,
+     "offset_hex": "0x38",
+     "type": null,
+     "name": "field_38",
+     "recovered_name": false,
+     "count": 0,
+     "width": 2,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 58,
+     "offset_hex": "0x3A",
+     "type": null,
+     "name": "field_3A",
+     "recovered_name": false,
+     "count": 0,
+     "width": 2,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 60,
+     "offset_hex": "0x3C",
+     "type": null,
+     "name": "field_3C",
+     "recovered_name": false,
+     "count": 0,
+     "width": 2,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 62,
+     "offset_hex": "0x3E",
+     "type": null,
+     "name": "field_3E",
+     "recovered_name": false,
+     "count": 0,
+     "width": 2,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 64,
+     "offset_hex": "0x40",
+     "type": null,
+     "name": "field_40",
+     "recovered_name": false,
+     "count": 0,
+     "width": 2,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 76,
+     "offset_hex": "0x4C",
+     "type": null,
+     "name": "field_4C",
+     "recovered_name": false,
+     "count": 0,
+     "width": 40,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 156,
+     "offset_hex": "0x9C",
+     "type": null,
+     "name": "field_9C",
+     "recovered_name": false,
+     "count": 0,
+     "width": 2,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 158,
+     "offset_hex": "0x9E",
+     "type": null,
+     "name": "field_9E",
+     "recovered_name": false,
+     "count": 0,
+     "width": 2,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 160,
+     "offset_hex": "0xA0",
+     "type": null,
+     "name": "field_A0",
+     "recovered_name": false,
+     "count": 0,
+     "width": 2,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 162,
+     "offset_hex": "0xA2",
+     "type": null,
+     "name": "field_A2",
+     "recovered_name": false,
+     "count": 0,
+     "width": 2,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 164,
+     "offset_hex": "0xA4",
+     "type": null,
+     "name": "field_A4",
+     "recovered_name": false,
+     "count": 0,
+     "width": 2,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 176,
+     "offset_hex": "0xB0",
+     "type": null,
+     "name": "field_B0",
+     "recovered_name": false,
+     "count": 0,
+     "width": 40,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 284,
+     "offset_hex": "0x11C",
+     "type": null,
+     "name": "field_11C",
+     "recovered_name": false,
+     "count": 0,
+     "width": 2,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 286,
+     "offset_hex": "0x11E",
+     "type": null,
+     "name": "field_11E",
+     "recovered_name": false,
+     "count": 0,
+     "width": 2,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 288,
+     "offset_hex": "0x120",
+     "type": null,
+     "name": "field_120",
+     "recovered_name": false,
+     "count": 0,
+     "width": 2,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 292,
+     "offset_hex": "0x124",
+     "type": null,
+     "name": "field_124",
+     "recovered_name": false,
+     "count": 0,
+     "width": 12,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 304,
+     "offset_hex": "0x130",
+     "type": null,
+     "name": "field_130",
+     "recovered_name": false,
+     "count": 0,
+     "width": 12,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 320,
+     "offset_hex": "0x140",
+     "type": null,
+     "name": "field_140",
+     "recovered_name": false,
+     "count": 0,
+     "width": 2,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 322,
+     "offset_hex": "0x142",
+     "type": null,
+     "name": "field_142",
+     "recovered_name": false,
+     "count": 0,
+     "width": 2,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 324,
+     "offset_hex": "0x144",
+     "type": null,
+     "name": "field_144",
+     "recovered_name": false,
+     "count": 0,
+     "width": 2,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 328,
+     "offset_hex": "0x148",
+     "type": null,
+     "name": "field_148",
+     "recovered_name": false,
+     "count": 0,
+     "width": 12,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    },
+    {
+     "offset": 340,
+     "offset_hex": "0x154",
+     "type": null,
+     "name": "field_154",
+     "recovered_name": false,
+     "count": 0,
+     "width": 12,
+     "evidence": "stream",
+     "source_fn": "0x544770",
+     "sites": 1
+    }
+   ]
+  },
+  "aiPedestrian": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 24286,
+   "size": null,
+   "size_confirmed_by": null,
+   "size_note": "MM2Hook's 2 for this class is a stub and was not used as a ceiling",
+   "size_lower_bound": 120,
+   "size_lower_bound_hex": "0x78",
+   "base": null,
+   "base_size": null,
+   "bytes_accounted_for": 60,
+   "highest_byte_touched": 120,
+   "coverage_pct": null,
+   "evidence": [
+    "format"
+   ],
+   "corroboration": [],
+   "source_functions": [
+    "0x550C40",
+    "0x550DE0"
+   ],
+   "named_fields": 14,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 0,
+     "offset_hex": "0x0",
+     "type": "i16",
+     "name": "Direction",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x550C40",
+     "sites": 1
+    },
+    {
+     "offset": 8,
+     "offset_hex": "0x8",
+     "type": "i16",
+     "name": "Ped",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x550C40",
+     "sites": 1
+    },
+    {
+     "offset": 12,
+     "offset_hex": "0xC",
+     "type": "i16",
+     "name": "RdVertIdx",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x550C40",
+     "sites": 1
+    },
+    {
+     "offset": 14,
+     "offset_hex": "0xE",
+     "type": "i16",
+     "name": "LastState",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x550C40",
+     "sites": 1
+    },
+    {
+     "offset": 16,
+     "offset_hex": "0x10",
+     "type": "i16",
+     "name": "State",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x550C40",
+     "sites": 1
+    },
+    {
+     "offset": 22,
+     "offset_hex": "0x16",
+     "type": "i16",
+     "name": "PlayerInReverse",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x550C40",
+     "sites": 1
+    },
+    {
+     "offset": 28,
+     "offset_hex": "0x1C",
+     "type": "f32",
+     "name": "Heading",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x550C40",
+     "sites": 1
+    },
+    {
+     "offset": 32,
+     "offset_hex": "0x20",
+     "type": "f32",
+     "name": "CurSpeed",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x550C40",
+     "sites": 1
+    },
+    {
+     "offset": 36,
+     "offset_hex": "0x24",
+     "type": "f32",
+     "name": "SideDist",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x550C40",
+     "sites": 1
+    },
+    {
+     "offset": 40,
+     "offset_hex": "0x28",
+     "type": "f32",
+     "name": "OOTurnDistance",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x550C40",
+     "sites": 1
+    },
+    {
+     "offset": 44,
+     "offset_hex": "0x2C",
+     "type": "f32",
+     "name": "RdDist",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x550C40",
+     "sites": 1
+    },
+    {
+     "offset": 48,
+     "offset_hex": "0x30",
+     "type": "f32",
+     "name": "AvoidInitSideDist",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x550C40",
+     "sites": 1
+    },
+    {
+     "offset": 96,
+     "offset_hex": "0x60",
+     "type": "Vector3",
+     "name": "Position",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "format",
+     "source_fn": "0x550C40",
+     "sites": 2
+    },
+    {
+     "offset": 108,
+     "offset_hex": "0x6C",
+     "type": "Vector3",
+     "name": "TargetPt",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "format",
+     "source_fn": "0x550C40",
+     "sites": 1
+    }
+   ]
+  },
+  "aiRailSet": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 9552,
+   "size": 128,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 96,
+   "size_lower_bound_hex": "0x60",
+   "base": null,
+   "base_size": null,
+   "bytes_accounted_for": 80,
+   "highest_byte_touched": 96,
+   "coverage_pct": 62.5,
+   "evidence": [
+    "format"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x80 (lower bound 0x60)"
+   ],
+   "source_functions": [
+    "0x558DC0"
+   ],
+   "named_fields": 23,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 0,
+     "offset_hex": "0x0",
+     "type": "f32",
+     "name": "BackBumperDist",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x558DC0",
+     "sites": 1
+    },
+    {
+     "offset": 4,
+     "offset_hex": "0x4",
+     "type": "f32",
+     "name": "FrontBumperDist",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x558DC0",
+     "sites": 1
+    },
+    {
+     "offset": 8,
+     "offset_hex": "0x8",
+     "type": "f32",
+     "name": "LSideDist",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x558DC0",
+     "sites": 1
+    },
+    {
+     "offset": 12,
+     "offset_hex": "0xC",
+     "type": "f32",
+     "name": "RSideDist",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x558DC0",
+     "sites": 1
+    },
+    {
+     "offset": 16,
+     "offset_hex": "0x10",
+     "type": "i16",
+     "name": "EnterInt",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x558DC0",
+     "sites": 1
+    },
+    {
+     "offset": 20,
+     "offset_hex": "0x14",
+     "type": "f32",
+     "name": "RoadDist",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x558DC0",
+     "sites": 1
+    },
+    {
+     "offset": 24,
+     "offset_hex": "0x18",
+     "type": "f32",
+     "name": "ResumeDist",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x558DC0",
+     "sites": 1
+    },
+    {
+     "offset": 28,
+     "offset_hex": "0x1C",
+     "type": "f32",
+     "name": "SubSectionDist",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x558DC0",
+     "sites": 1
+    },
+    {
+     "offset": 32,
+     "offset_hex": "0x20",
+     "type": "f32",
+     "name": "TurnDist",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x558DC0",
+     "sites": 1
+    },
+    {
+     "offset": 36,
+     "offset_hex": "0x24",
+     "type": "f32",
+     "name": "LaneRandomness",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x558DC0",
+     "sites": 1
+    },
+    {
+     "offset": 40,
+     "offset_hex": "0x28",
+     "type": "i16",
+     "name": "WaitCount",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x558DC0",
+     "sites": 1
+    },
+    {
+     "offset": 42,
+     "offset_hex": "0x2A",
+     "type": "i16",
+     "name": "SSIdx",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x558DC0",
+     "sites": 1
+    },
+    {
+     "offset": 44,
+     "offset_hex": "0x2C",
+     "type": "i16",
+     "name": "CurLane",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x558DC0",
+     "sites": 1
+    },
+    {
+     "offset": 46,
+     "offset_hex": "0x2E",
+     "type": "i16",
+     "name": "NextLane",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x558DC0",
+     "sites": 1
+    },
+    {
+     "offset": 48,
+     "offset_hex": "0x30",
+     "type": "i16",
+     "name": "TargetLane",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x558DC0",
+     "sites": 1
+    },
+    {
+     "offset": 52,
+     "offset_hex": "0x34",
+     "type": "i32",
+     "name": "RailType",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x558DC0",
+     "sites": 1
+    },
+    {
+     "offset": 68,
+     "offset_hex": "0x44",
+     "type": "f32",
+     "name": "CurAccelFactor",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x558DC0",
+     "sites": 1
+    },
+    {
+     "offset": 72,
+     "offset_hex": "0x48",
+     "type": "f32",
+     "name": "ExheedLimit",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x558DC0",
+     "sites": 1
+    },
+    {
+     "offset": 76,
+     "offset_hex": "0x4C",
+     "type": "f32",
+     "name": "TargetVelocity",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x558DC0",
+     "sites": 1
+    },
+    {
+     "offset": 80,
+     "offset_hex": "0x50",
+     "type": "f32",
+     "name": "CarReactDist",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x558DC0",
+     "sites": 1
+    },
+    {
+     "offset": 84,
+     "offset_hex": "0x54",
+     "type": "f32",
+     "name": "VehicleAccelFactor",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x558DC0",
+     "sites": 1
+    },
+    {
+     "offset": 88,
+     "offset_hex": "0x58",
+     "type": "f32",
+     "name": "SeparationDist",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x558DC0",
+     "sites": 1
+    },
+    {
+     "offset": 92,
+     "offset_hex": "0x5C",
+     "type": "f32",
+     "name": "IntersectionReactDist",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x558DC0",
+     "sites": 1
+    }
+   ]
+  },
+  "aiVehicleActive": {
+   "kind": "struct",
+   "confidence": "WEAK",
+   "already_known": false,
+   "code_bytes": 3030,
+   "size": 2812,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 860,
+   "size_lower_bound_hex": "0x35C",
+   "base": "dgPhysEntity",
+   "base_size": 180,
+   "bytes_accounted_for": 228,
+   "highest_byte_touched": 860,
+   "coverage_pct": 8.1,
+   "evidence": [
+    "memcpy"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0xAFC (lower bound 0x35C)",
+    "first own field 0x30 is INSIDE the base (ends 0xB4)"
+   ],
+   "source_functions": [
+    "0x553440",
+    "0x553890"
+   ],
+   "named_fields": 0,
+   "conflicts": [
+    "first own field 0x30 is INSIDE the base (ends 0xB4)"
+   ],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 48,
+     "offset_hex": "0x30",
+     "type": null,
+     "name": "field_30",
+     "recovered_name": false,
+     "count": 0,
+     "width": 48,
+     "evidence": "memcpy",
+     "source_fn": "0x553440",
+     "sites": 2
+    },
+    {
+     "offset": 812,
+     "offset_hex": "0x32C",
+     "type": null,
+     "name": "field_32C",
+     "recovered_name": false,
+     "count": 0,
+     "width": 48,
+     "evidence": "memcpy",
+     "source_fn": "0x553890",
+     "sites": 2
+    }
+   ]
+  },
+  "aiVehicleData": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 512,
+   "size": 188,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 172,
+   "size_lower_bound_hex": "0xAC",
+   "base": "asNode",
+   "base_size": 24,
+   "bytes_accounted_for": 100,
+   "highest_byte_touched": 172,
+   "coverage_pct": 53.2,
+   "evidence": [
+    "datParser"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0xBC (lower bound 0xAC)",
+    "first own field 0x18 is at or past base end 0x18"
+   ],
+   "source_functions": [
+    "0x56F7C0"
+   ],
+   "named_fields": 13,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 24,
+     "offset_hex": "0x18",
+     "type": "Vector3",
+     "name": "Size",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "datParser",
+     "source_fn": "0x56F7C0",
+     "sites": 1
+    },
+    {
+     "offset": 36,
+     "offset_hex": "0x24",
+     "type": "Vector3",
+     "name": "MaxAng",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "datParser",
+     "source_fn": "0x56F7C0",
+     "sites": 1
+    },
+    {
+     "offset": 48,
+     "offset_hex": "0x30",
+     "type": "Vector3",
+     "name": "CG",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "datParser",
+     "source_fn": "0x56F7C0",
+     "sites": 1
+    },
+    {
+     "offset": 132,
+     "offset_hex": "0x84",
+     "type": "f32",
+     "name": "Mass",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x56F7C0",
+     "sites": 1
+    },
+    {
+     "offset": 136,
+     "offset_hex": "0x88",
+     "type": "f32",
+     "name": "Friction",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x56F7C0",
+     "sites": 1
+    },
+    {
+     "offset": 140,
+     "offset_hex": "0x8C",
+     "type": "f32",
+     "name": "Elasticity",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x56F7C0",
+     "sites": 1
+    },
+    {
+     "offset": 144,
+     "offset_hex": "0x90",
+     "type": "f32",
+     "name": "MaxDamage",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x56F7C0",
+     "sites": 1
+    },
+    {
+     "offset": 148,
+     "offset_hex": "0x94",
+     "type": "f32",
+     "name": "PtxThresh",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x56F7C0",
+     "sites": 1
+    },
+    {
+     "offset": 152,
+     "offset_hex": "0x98",
+     "type": "f32",
+     "name": "Spring",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x56F7C0",
+     "sites": 1
+    },
+    {
+     "offset": 156,
+     "offset_hex": "0x9C",
+     "type": "f32",
+     "name": "Damping",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x56F7C0",
+     "sites": 1
+    },
+    {
+     "offset": 160,
+     "offset_hex": "0xA0",
+     "type": "f32",
+     "name": "RubberSpring",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x56F7C0",
+     "sites": 1
+    },
+    {
+     "offset": 164,
+     "offset_hex": "0xA4",
+     "type": "f32",
+     "name": "RubberDamp",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x56F7C0",
+     "sites": 1
+    },
+    {
+     "offset": 168,
+     "offset_hex": "0xA8",
+     "type": "f32",
+     "name": "Limit",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x56F7C0",
+     "sites": 1
+    }
+   ]
+  },
+  "aiVehiclePhysics": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 60064,
+   "size": 38768,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 38744,
+   "size_lower_bound_hex": "0x9758",
+   "base": "aiVehicle",
+   "base_size": null,
+   "bytes_accounted_for": 40,
+   "highest_byte_touched": 38744,
+   "coverage_pct": 0.1,
+   "evidence": [
+    "format"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x9770 (lower bound 0x9758)"
+   ],
+   "source_functions": [
+    "0x5677F0"
+   ],
+   "named_fields": 11,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 38504,
+     "offset_hex": "0x9668",
+     "type": "Vector3",
+     "name": "TargetPt",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "format",
+     "source_fn": "0x5677F0",
+     "sites": 1
+    },
+    {
+     "offset": 38520,
+     "offset_hex": "0x9678",
+     "type": "i16",
+     "name": "NumWayPts",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x5677F0",
+     "sites": 1
+    },
+    {
+     "offset": 38522,
+     "offset_hex": "0x967A",
+     "type": "i16",
+     "name": "WayPtIdx",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x5677F0",
+     "sites": 1
+    },
+    {
+     "offset": 38526,
+     "offset_hex": "0x967E",
+     "type": "i16",
+     "name": "CurMapCompType",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x5677F0",
+     "sites": 1
+    },
+    {
+     "offset": 38528,
+     "offset_hex": "0x9680",
+     "type": "i16",
+     "name": "CurMapCompIdx",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x5677F0",
+     "sites": 1
+    },
+    {
+     "offset": 38530,
+     "offset_hex": "0x9682",
+     "type": "i16",
+     "name": "CurLap",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x5677F0",
+     "sites": 1
+    },
+    {
+     "offset": 38534,
+     "offset_hex": "0x9686",
+     "type": "i16",
+     "name": "DamageState",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x5677F0",
+     "sites": 1
+    },
+    {
+     "offset": 38544,
+     "offset_hex": "0x9690",
+     "type": "f32",
+     "name": "Brake",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x5677F0",
+     "sites": 1
+    },
+    {
+     "offset": 38548,
+     "offset_hex": "0x9694",
+     "type": "f32",
+     "name": "Throttle",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x5677F0",
+     "sites": 1
+    },
+    {
+     "offset": 38552,
+     "offset_hex": "0x9698",
+     "type": "f32",
+     "name": "Steering",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x5677F0",
+     "sites": 1
+    },
+    {
+     "offset": 38740,
+     "offset_hex": "0x9754",
+     "type": "f32",
+     "name": "AudioMaxDistance",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x5677F0",
+     "sites": 1
+    }
+   ]
+  },
+  "aiVehicleSpline": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 10839,
+   "size": 396,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 256,
+   "size_lower_bound_hex": "0x100",
+   "base": "aiVehicle",
+   "base_size": null,
+   "bytes_accounted_for": 22,
+   "highest_byte_touched": 256,
+   "coverage_pct": 5.6,
+   "evidence": [
+    "format"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x18C (lower bound 0x100)"
+   ],
+   "source_functions": [
+    "0x56A360"
+   ],
+   "named_fields": 8,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 234,
+     "offset_hex": "0xEA",
+     "type": "i16",
+     "name": "Tries",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x56A360",
+     "sites": 1
+    },
+    {
+     "offset": 236,
+     "offset_hex": "0xEC",
+     "type": "i16",
+     "name": "State",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x56A360",
+     "sites": 1
+    },
+    {
+     "offset": 238,
+     "offset_hex": "0xEE",
+     "type": "i16",
+     "name": "LastState",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x56A360",
+     "sites": 1
+    },
+    {
+     "offset": 240,
+     "offset_hex": "0xF0",
+     "type": "i16",
+     "name": "TotReactTicks",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x56A360",
+     "sites": 1
+    },
+    {
+     "offset": 242,
+     "offset_hex": "0xF2",
+     "type": "i16",
+     "name": "CurReactTicks",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "format",
+     "source_fn": "0x56A360",
+     "sites": 1
+    },
+    {
+     "offset": 244,
+     "offset_hex": "0xF4",
+     "type": "f32",
+     "name": "CurSpeed",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x56A360",
+     "sites": 1
+    },
+    {
+     "offset": 248,
+     "offset_hex": "0xF8",
+     "type": "f32",
+     "name": "OOTurnDist",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x56A360",
+     "sites": 1
+    },
+    {
+     "offset": 252,
+     "offset_hex": "0xFC",
+     "type": "f32",
+     "name": "TireRotation",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x56A360",
+     "sites": 1
+    }
+   ]
+  },
+  "asViewCS": {
+   "kind": "struct",
+   "confidence": "WEAK",
+   "already_known": false,
+   "code_bytes": 3104,
+   "size": null,
+   "size_confirmed_by": null,
+   "size_note": "MM2Hook's None for this class is a stub and was not used as a ceiling",
+   "size_lower_bound": 72,
+   "size_lower_bound_hex": "0x48",
+   "base": "asLinearCS",
+   "base_size": 128,
+   "bytes_accounted_for": 128,
+   "highest_byte_touched": 72,
+   "coverage_pct": null,
+   "evidence": [
+    "memcpy"
+   ],
+   "corroboration": [
+    "first own field 0x18 is INSIDE the base (ends 0x80)"
+   ],
+   "source_functions": [
+    "0x5967E0"
+   ],
+   "named_fields": 0,
+   "conflicts": [
+    "first own field 0x18 is INSIDE the base (ends 0x80)"
+   ],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 24,
+     "offset_hex": "0x18",
+     "type": null,
+     "name": "field_18",
+     "recovered_name": false,
+     "count": 0,
+     "width": 48,
+     "evidence": "memcpy",
+     "source_fn": "0x5967E0",
+     "sites": 2
+    }
+   ]
+  },
+  "camAICS": {
+   "kind": "struct",
+   "confidence": "WEAK",
+   "already_known": false,
+   "code_bytes": 1424,
+   "size": null,
+   "size_confirmed_by": null,
+   "size_note": "MM2Hook's 272 for this class is a base placeholder and was not used as a ceiling",
+   "size_lower_bound": 76,
+   "size_lower_bound_hex": "0x4C",
+   "base": "camCarCS",
+   "base_size": 272,
+   "bytes_accounted_for": 272,
+   "highest_byte_touched": 76,
+   "coverage_pct": null,
+   "evidence": [
+    "memcpy"
+   ],
+   "corroboration": [
+    "first own field 0x1C is INSIDE the base (ends 0x110)"
+   ],
+   "source_functions": [
+    "0x520AE0"
+   ],
+   "named_fields": 0,
+   "conflicts": [
+    "first own field 0x1C is INSIDE the base (ends 0x110)"
+   ],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 28,
+     "offset_hex": "0x1C",
+     "type": null,
+     "name": "field_1C",
+     "recovered_name": false,
+     "count": 0,
+     "width": 48,
+     "evidence": "memcpy",
+     "source_fn": "0x520AE0",
+     "sites": 2
+    }
+   ]
+  },
+  "camAppCS": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 3088,
+   "size": 264,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 216,
+   "size_lower_bound_hex": "0xD8",
+   "base": "camBaseCS",
+   "base_size": 144,
+   "bytes_accounted_for": 208,
+   "highest_byte_touched": 216,
+   "coverage_pct": 78.8,
+   "evidence": [
+    "datParser",
+    "subobject"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x108 (lower bound 0xD8)",
+    "first own field 0x94 is at or past base end 0x90"
+   ],
+   "source_functions": [
+    "0x5229D0"
+   ],
+   "named_fields": 14,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 0,
+     "offset_hex": "0x0",
+     "type": "camBaseCS",
+     "name": "field_0",
+     "recovered_name": false,
+     "count": 0,
+     "width": null,
+     "evidence": "subobject",
+     "source_fn": "0x5229D0",
+     "sites": 1
+    },
+    {
+     "offset": 148,
+     "offset_hex": "0x94",
+     "type": "Vector3",
+     "name": "TrackTo",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "datParser",
+     "source_fn": "0x5229D0",
+     "sites": 1
+    },
+    {
+     "offset": 160,
+     "offset_hex": "0xA0",
+     "type": "i32",
+     "name": "ApproachOn",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x5229D0",
+     "sites": 1
+    },
+    {
+     "offset": 164,
+     "offset_hex": "0xA4",
+     "type": "i32",
+     "name": "AppAppOn",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x5229D0",
+     "sites": 1
+    },
+    {
+     "offset": 168,
+     "offset_hex": "0xA8",
+     "type": "f32",
+     "name": "AppRot",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x5229D0",
+     "sites": 1
+    },
+    {
+     "offset": 172,
+     "offset_hex": "0xAC",
+     "type": "f32",
+     "name": "AppXRot",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x5229D0",
+     "sites": 1
+    },
+    {
+     "offset": 176,
+     "offset_hex": "0xB0",
+     "type": "f32",
+     "name": "AppYPos",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x5229D0",
+     "sites": 1
+    },
+    {
+     "offset": 180,
+     "offset_hex": "0xB4",
+     "type": "f32",
+     "name": "AppXZPos",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x5229D0",
+     "sites": 1
+    },
+    {
+     "offset": 184,
+     "offset_hex": "0xB8",
+     "type": "f32",
+     "name": "AppApp",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x5229D0",
+     "sites": 1
+    },
+    {
+     "offset": 188,
+     "offset_hex": "0xBC",
+     "type": "f32",
+     "name": "AppRotMin",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x5229D0",
+     "sites": 1
+    },
+    {
+     "offset": 192,
+     "offset_hex": "0xC0",
+     "type": "f32",
+     "name": "AppPosMin",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x5229D0",
+     "sites": 1
+    },
+    {
+     "offset": 196,
+     "offset_hex": "0xC4",
+     "type": "f32",
+     "name": "LookAbove",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x5229D0",
+     "sites": 1
+    },
+    {
+     "offset": 204,
+     "offset_hex": "0xCC",
+     "type": "f32",
+     "name": "MaxDist",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x5229D0",
+     "sites": 1
+    },
+    {
+     "offset": 208,
+     "offset_hex": "0xD0",
+     "type": "f32",
+     "name": "MinDist",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x5229D0",
+     "sites": 1
+    },
+    {
+     "offset": 212,
+     "offset_hex": "0xD4",
+     "type": "f32",
+     "name": "LookAt",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x5229D0",
+     "sites": 1
+    }
+   ]
+  },
+  "camBaseCS": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 608,
+   "size": 144,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 144,
+   "size_lower_bound_hex": "0x90",
+   "base": "asNode",
+   "base_size": 24,
+   "bytes_accounted_for": 40,
+   "highest_byte_touched": 144,
+   "coverage_pct": 27.8,
+   "evidence": [
+    "datParser"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x90 (lower bound 0x90)",
+    "first own field 0x80 is at or past base end 0x18"
+   ],
+   "source_functions": [
+    "0x521EA0"
+   ],
+   "named_fields": 4,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 128,
+     "offset_hex": "0x80",
+     "type": "f32",
+     "name": "BlendTime",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x521EA0",
+     "sites": 1
+    },
+    {
+     "offset": 132,
+     "offset_hex": "0x84",
+     "type": "f32",
+     "name": "BlendGoal",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x521EA0",
+     "sites": 1
+    },
+    {
+     "offset": 136,
+     "offset_hex": "0x88",
+     "type": "f32",
+     "name": "CameraFOV",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x521EA0",
+     "sites": 1
+    },
+    {
+     "offset": 140,
+     "offset_hex": "0x8C",
+     "type": "f32",
+     "name": "CameraNear",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x521EA0",
+     "sites": 1
+    }
+   ]
+  },
+  "camCarCS": {
+   "kind": "struct",
+   "confidence": "WEAK",
+   "already_known": false,
+   "code_bytes": 176,
+   "size": 272,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 4,
+   "size_lower_bound_hex": "0x4",
+   "base": "camAppCS",
+   "base_size": null,
+   "bytes_accounted_for": 4,
+   "highest_byte_touched": 4,
+   "coverage_pct": 1.5,
+   "evidence": [
+    "subobject"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x110 (lower bound 0x4)"
+   ],
+   "source_functions": [
+    "0x5214E0"
+   ],
+   "named_fields": 0,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 0,
+     "offset_hex": "0x0",
+     "type": "camAppCS",
+     "name": "field_0",
+     "recovered_name": false,
+     "count": 0,
+     "width": null,
+     "evidence": "subobject",
+     "source_fn": "0x5214E0",
+     "sites": 1
+    }
+   ]
+  },
+  "camPolarCS": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 1232,
+   "size": null,
+   "size_confirmed_by": null,
+   "size_note": "MM2Hook's None for this class is a stub and was not used as a ceiling",
+   "size_lower_bound": 296,
+   "size_lower_bound_hex": "0x128",
+   "base": "camBaseCS",
+   "base_size": 144,
+   "bytes_accounted_for": 168,
+   "highest_byte_touched": 296,
+   "coverage_pct": null,
+   "evidence": [
+    "datParser",
+    "subobject"
+   ],
+   "corroboration": [
+    "first own field 0x110 is at or past base end 0x90"
+   ],
+   "source_functions": [
+    "0x521380"
+   ],
+   "named_fields": 6,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 0,
+     "offset_hex": "0x0",
+     "type": "camCarCS",
+     "name": "field_0",
+     "recovered_name": false,
+     "count": 0,
+     "width": null,
+     "evidence": "subobject",
+     "source_fn": "0x521380",
+     "sites": 1
+    },
+    {
+     "offset": 272,
+     "offset_hex": "0x110",
+     "type": "f32",
+     "name": "PolarHeight",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x521380",
+     "sites": 1
+    },
+    {
+     "offset": 276,
+     "offset_hex": "0x114",
+     "type": "f32",
+     "name": "PolarDistance",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x521380",
+     "sites": 1
+    },
+    {
+     "offset": 280,
+     "offset_hex": "0x118",
+     "type": "f32",
+     "name": "PolarAzimuth",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x521380",
+     "sites": 1
+    },
+    {
+     "offset": 284,
+     "offset_hex": "0x11C",
+     "type": "f32",
+     "name": "PolarIncline",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x521380",
+     "sites": 1
+    },
+    {
+     "offset": 288,
+     "offset_hex": "0x120",
+     "type": "f32",
+     "name": "PolarDelta",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x521380",
+     "sites": 1
+    },
+    {
+     "offset": 292,
+     "offset_hex": "0x124",
+     "type": "i32",
+     "name": "AzimuthLock",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x521380",
+     "sites": 1
+    }
+   ]
+  },
+  "camPostCS": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 800,
+   "size": null,
+   "size_confirmed_by": null,
+   "size_note": "MM2Hook's None for this class is a stub and was not used as a ceiling",
+   "size_lower_bound": 292,
+   "size_lower_bound_hex": "0x124",
+   "base": "camBaseCS",
+   "base_size": 144,
+   "bytes_accounted_for": 164,
+   "highest_byte_touched": 292,
+   "coverage_pct": null,
+   "evidence": [
+    "datParser",
+    "subobject"
+   ],
+   "corroboration": [
+    "first own field 0x110 is at or past base end 0x90"
+   ],
+   "source_functions": [
+    "0x520340"
+   ],
+   "named_fields": 5,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 0,
+     "offset_hex": "0x0",
+     "type": "camCarCS",
+     "name": "field_0",
+     "recovered_name": false,
+     "count": 0,
+     "width": null,
+     "evidence": "subobject",
+     "source_fn": "0x520340",
+     "sites": 1
+    },
+    {
+     "offset": 272,
+     "offset_hex": "0x110",
+     "type": "f32",
+     "name": "PolarHeight",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x520340",
+     "sites": 1
+    },
+    {
+     "offset": 276,
+     "offset_hex": "0x114",
+     "type": "f32",
+     "name": "PolarDistance",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x520340",
+     "sites": 1
+    },
+    {
+     "offset": 280,
+     "offset_hex": "0x118",
+     "type": "f32",
+     "name": "PolarAzimuth",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x520340",
+     "sites": 1
+    },
+    {
+     "offset": 284,
+     "offset_hex": "0x11C",
+     "type": "f32",
+     "name": "PolarIncline",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x520340",
+     "sites": 1
+    },
+    {
+     "offset": 288,
+     "offset_hex": "0x120",
+     "type": "f32",
+     "name": "PolarDelta",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x520340",
+     "sites": 1
+    }
+   ]
+  },
+  "camPovCS": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 848,
+   "size": 328,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 324,
+   "size_lower_bound_hex": "0x144",
+   "base": "camCarCS",
+   "base_size": 272,
+   "bytes_accounted_for": 304,
+   "highest_byte_touched": 324,
+   "coverage_pct": 92.7,
+   "evidence": [
+    "datParser",
+    "subobject"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x148 (lower bound 0x144)",
+    "first own field 0x114 is at or past base end 0x110"
+   ],
+   "source_functions": [
+    "0x51D690"
+   ],
+   "named_fields": 4,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 0,
+     "offset_hex": "0x0",
+     "type": "camCarCS",
+     "name": "field_0",
+     "recovered_name": false,
+     "count": 0,
+     "width": null,
+     "evidence": "subobject",
+     "source_fn": "0x51D690",
+     "sites": 1
+    },
+    {
+     "offset": 276,
+     "offset_hex": "0x114",
+     "type": "Vector3",
+     "name": "Offset",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "datParser",
+     "source_fn": "0x51D690",
+     "sites": 1
+    },
+    {
+     "offset": 288,
+     "offset_hex": "0x120",
+     "type": "Vector3",
+     "name": "ReverseOffset",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "datParser",
+     "source_fn": "0x51D690",
+     "sites": 1
+    },
+    {
+     "offset": 300,
+     "offset_hex": "0x12C",
+     "type": "f32",
+     "name": "POVJitterAmp",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x51D690",
+     "sites": 1
+    },
+    {
+     "offset": 320,
+     "offset_hex": "0x140",
+     "type": "f32",
+     "name": "Pitch",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x51D690",
+     "sites": 1
+    }
+   ]
+  },
+  "camPreCS": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 496,
+   "size": null,
+   "size_confirmed_by": null,
+   "size_note": "MM2Hook's None for this class is a stub and was not used as a ceiling",
+   "size_lower_bound": 296,
+   "size_lower_bound_hex": "0x128",
+   "base": "camBaseCS",
+   "base_size": 144,
+   "bytes_accounted_for": 160,
+   "highest_byte_touched": 296,
+   "coverage_pct": null,
+   "evidence": [
+    "datParser",
+    "subobject"
+   ],
+   "corroboration": [
+    "first own field 0x110 is at or past base end 0x90"
+   ],
+   "source_functions": [
+    "0x520550"
+   ],
+   "named_fields": 4,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 0,
+     "offset_hex": "0x0",
+     "type": "camCarCS",
+     "name": "field_0",
+     "recovered_name": false,
+     "count": 0,
+     "width": null,
+     "evidence": "subobject",
+     "source_fn": "0x520550",
+     "sites": 1
+    },
+    {
+     "offset": 272,
+     "offset_hex": "0x110",
+     "type": "f32",
+     "name": "PolarHeight",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x520550",
+     "sites": 1
+    },
+    {
+     "offset": 276,
+     "offset_hex": "0x114",
+     "type": "f32",
+     "name": "PolarDistance",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x520550",
+     "sites": 1
+    },
+    {
+     "offset": 284,
+     "offset_hex": "0x11C",
+     "type": "f32",
+     "name": "PolarIncline",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x520550",
+     "sites": 1
+    },
+    {
+     "offset": 292,
+     "offset_hex": "0x124",
+     "type": "f32",
+     "name": "AzimuthOffset",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x520550",
+     "sites": 1
+    }
+   ]
+  },
+  "camTrackCS": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 9773,
+   "size": null,
+   "size_confirmed_by": null,
+   "size_note": "MM2Hook's 272 for this class is a base placeholder and was not used as a ceiling",
+   "size_lower_bound": 384,
+   "size_lower_bound_hex": "0x180",
+   "base": "camCarCS",
+   "base_size": 272,
+   "bytes_accounted_for": 380,
+   "highest_byte_touched": 384,
+   "coverage_pct": null,
+   "evidence": [
+    "datParser",
+    "subobject"
+   ],
+   "corroboration": [
+    "first own field 0x10C is INSIDE the base (ends 0x110)"
+   ],
+   "source_functions": [
+    "0x51FA80"
+   ],
+   "named_fields": 26,
+   "conflicts": [
+    "first own field 0x10C is INSIDE the base (ends 0x110)"
+   ],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 0,
+     "offset_hex": "0x0",
+     "type": "camCarCS",
+     "name": "field_0",
+     "recovered_name": false,
+     "count": 0,
+     "width": null,
+     "evidence": "subobject",
+     "source_fn": "0x51FA80",
+     "sites": 1
+    },
+    {
+     "offset": 268,
+     "offset_hex": "0x10C",
+     "type": "i32",
+     "name": "ReverseOn",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x51FA80",
+     "sites": 1
+    },
+    {
+     "offset": 276,
+     "offset_hex": "0x114",
+     "type": "Vector3",
+     "name": "Offset",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "datParser",
+     "source_fn": "0x51FA80",
+     "sites": 1
+    },
+    {
+     "offset": 288,
+     "offset_hex": "0x120",
+     "type": "i32",
+     "name": "CollideType",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x51FA80",
+     "sites": 1
+    },
+    {
+     "offset": 292,
+     "offset_hex": "0x124",
+     "type": "i32",
+     "name": "MinMaxOn",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x51FA80",
+     "sites": 1
+    },
+    {
+     "offset": 296,
+     "offset_hex": "0x128",
+     "type": "i32",
+     "name": "TrackBreak",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x51FA80",
+     "sites": 1
+    },
+    {
+     "offset": 300,
+     "offset_hex": "0x12C",
+     "type": "f32",
+     "name": "MinAppXZPos",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x51FA80",
+     "sites": 1
+    },
+    {
+     "offset": 304,
+     "offset_hex": "0x130",
+     "type": "f32",
+     "name": "MaxAppXZPos",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x51FA80",
+     "sites": 1
+    },
+    {
+     "offset": 308,
+     "offset_hex": "0x134",
+     "type": "f32",
+     "name": "MinSpeed",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x51FA80",
+     "sites": 1
+    },
+    {
+     "offset": 312,
+     "offset_hex": "0x138",
+     "type": "f32",
+     "name": "MaxSpeed",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x51FA80",
+     "sites": 1
+    },
+    {
+     "offset": 316,
+     "offset_hex": "0x13C",
+     "type": "f32",
+     "name": "AppInc",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x51FA80",
+     "sites": 1
+    },
+    {
+     "offset": 320,
+     "offset_hex": "0x140",
+     "type": "f32",
+     "name": "AppDec",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x51FA80",
+     "sites": 1
+    },
+    {
+     "offset": 324,
+     "offset_hex": "0x144",
+     "type": "f32",
+     "name": "MinHardSteer",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x51FA80",
+     "sites": 1
+    },
+    {
+     "offset": 328,
+     "offset_hex": "0x148",
+     "type": "f32",
+     "name": "DriftDelay",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x51FA80",
+     "sites": 1
+    },
+    {
+     "offset": 332,
+     "offset_hex": "0x14C",
+     "type": "f32",
+     "name": "VertOffset",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x51FA80",
+     "sites": 1
+    },
+    {
+     "offset": 336,
+     "offset_hex": "0x150",
+     "type": "f32",
+     "name": "FrontRate",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x51FA80",
+     "sites": 1
+    },
+    {
+     "offset": 340,
+     "offset_hex": "0x154",
+     "type": "f32",
+     "name": "RearRate",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x51FA80",
+     "sites": 1
+    },
+    {
+     "offset": 344,
+     "offset_hex": "0x158",
+     "type": "f32",
+     "name": "FlipDelay",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x51FA80",
+     "sites": 1
+    },
+    {
+     "offset": 348,
+     "offset_hex": "0x15C",
+     "type": "i32",
+     "name": "SteerOn",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x51FA80",
+     "sites": 1
+    },
+    {
+     "offset": 352,
+     "offset_hex": "0x160",
+     "type": "f32",
+     "name": "SteerMin",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x51FA80",
+     "sites": 1
+    },
+    {
+     "offset": 356,
+     "offset_hex": "0x164",
+     "type": "f32",
+     "name": "SteerAmt",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x51FA80",
+     "sites": 1
+    },
+    {
+     "offset": 360,
+     "offset_hex": "0x168",
+     "type": "f32",
+     "name": "HillMin",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x51FA80",
+     "sites": 1
+    },
+    {
+     "offset": 364,
+     "offset_hex": "0x16C",
+     "type": "f32",
+     "name": "HillMax",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x51FA80",
+     "sites": 1
+    },
+    {
+     "offset": 368,
+     "offset_hex": "0x170",
+     "type": "f32",
+     "name": "HillLerp",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x51FA80",
+     "sites": 1
+    },
+    {
+     "offset": 372,
+     "offset_hex": "0x174",
+     "type": "f32",
+     "name": "RevDelay",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x51FA80",
+     "sites": 1
+    },
+    {
+     "offset": 376,
+     "offset_hex": "0x178",
+     "type": "f32",
+     "name": "RevOnApp",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x51FA80",
+     "sites": 1
+    },
+    {
+     "offset": 380,
+     "offset_hex": "0x17C",
+     "type": "f32",
+     "name": "RevOffApp",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x51FA80",
+     "sites": 1
+    }
+   ]
+  },
+  "cityTimeWeatherLighting": {
+   "kind": "struct",
+   "confidence": "PROBABLE",
+   "already_known": true,
+   "code_bytes": 672,
+   "size": 76,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 4,
+   "size_lower_bound_hex": "0x4",
+   "base": null,
+   "base_size": null,
+   "bytes_accounted_for": 4,
+   "highest_byte_touched": 4,
+   "coverage_pct": 5.3,
+   "evidence": [
+    "datParser"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x4C (lower bound 0x4)"
+   ],
+   "source_functions": [
+    "0x443440"
+   ],
+   "named_fields": 1,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 0,
+     "offset_hex": "0x0",
+     "type": "f32",
+     "name": "KeyHeading",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x443440",
+     "sites": 1
+    }
+   ]
+  },
+  "datReplay": {
+   "kind": "struct",
+   "confidence": "WEAK",
+   "already_known": false,
+   "code_bytes": 576,
+   "size": null,
+   "size_confirmed_by": null,
+   "size_note": "MM2Hook's None for this class is a stub and was not used as a ceiling",
+   "size_lower_bound": 4,
+   "size_lower_bound_hex": "0x4",
+   "base": null,
+   "base_size": null,
+   "bytes_accounted_for": 4,
+   "highest_byte_touched": 4,
+   "coverage_pct": null,
+   "evidence": [
+    "stream"
+   ],
+   "corroboration": [],
+   "source_functions": [
+    "0x4C90E0"
+   ],
+   "named_fields": 0,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 0,
+     "offset_hex": "0x0",
+     "type": null,
+     "name": "field_0",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x4C90E0",
+     "sites": 1
+    }
+   ]
+  },
+  "dgPath": {
+   "kind": "struct",
+   "confidence": "WEAK",
+   "already_known": true,
+   "code_bytes": 1570,
+   "size": 56,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 4,
+   "size_lower_bound_hex": "0x4",
+   "base": null,
+   "base_size": null,
+   "bytes_accounted_for": 4,
+   "highest_byte_touched": 4,
+   "coverage_pct": 7.1,
+   "evidence": [
+    "memset",
+    "stream"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x38 (lower bound 0x4)"
+   ],
+   "source_functions": [
+    "0x466B80",
+    "0x466BD0"
+   ],
+   "named_fields": 0,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 0,
+     "offset_hex": "0x0",
+     "type": null,
+     "name": "field_0",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x466BD0",
+     "sites": 2
+    }
+   ]
+  },
+  "dgPathSet": {
+   "kind": "struct",
+   "confidence": "WEAK",
+   "already_known": false,
+   "code_bytes": 473,
+   "size": 784,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 780,
+   "size_lower_bound_hex": "0x30C",
+   "base": null,
+   "base_size": null,
+   "bytes_accounted_for": 8,
+   "highest_byte_touched": 780,
+   "coverage_pct": 1.0,
+   "evidence": [
+    "stream"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x310 (lower bound 0x30C)"
+   ],
+   "source_functions": [
+    "0x467210"
+   ],
+   "named_fields": 0,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 772,
+     "offset_hex": "0x304",
+     "type": null,
+     "name": "field_304",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x467210",
+     "sites": 1
+    },
+    {
+     "offset": 776,
+     "offset_hex": "0x308",
+     "type": null,
+     "name": "field_308",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x467210",
+     "sites": 1
+    }
+   ]
+  },
+  "dgPhysManager": {
+   "kind": "struct",
+   "confidence": "WEAK",
+   "already_known": false,
+   "code_bytes": 7712,
+   "size": 4784,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 4776,
+   "size_lower_bound_hex": "0x12A8",
+   "base": "phPhysicsManager",
+   "base_size": null,
+   "bytes_accounted_for": 4,
+   "highest_byte_touched": 4776,
+   "coverage_pct": 0.1,
+   "evidence": [
+    "format-weak"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x12B0 (lower bound 0x12A8)"
+   ],
+   "source_functions": [
+    "0x468670",
+    "0x468720"
+   ],
+   "named_fields": 1,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 4772,
+     "offset_hex": "0x12A4",
+     "type": "i32",
+     "name": "RaiseMAXMOVERSPast",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format-weak",
+     "source_fn": "0x468670",
+     "sites": 2
+    }
+   ]
+  },
+  "dgTrailerJoint": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 11904,
+   "size": 284,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 220,
+   "size_lower_bound_hex": "0xDC",
+   "base": "phJoint",
+   "base_size": 108,
+   "bytes_accounted_for": 204,
+   "highest_byte_touched": 220,
+   "coverage_pct": 71.8,
+   "evidence": [
+    "datParser",
+    "memcpy"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x11C (lower bound 0xDC)",
+    "first own field 0x8 is INSIDE the base (ends 0x6C)"
+   ],
+   "source_functions": [
+    "0x5931B0",
+    "0x595970"
+   ],
+   "named_fields": 14,
+   "conflicts": [
+    "first own field 0x8 is INSIDE the base (ends 0x6C)"
+   ],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 8,
+     "offset_hex": "0x8",
+     "type": "f32",
+     "name": "ForceLimit",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x595970",
+     "sites": 1
+    },
+    {
+     "offset": 12,
+     "offset_hex": "0xC",
+     "type": "i32",
+     "name": "JointStatus",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x595970",
+     "sites": 1
+    },
+    {
+     "offset": 112,
+     "offset_hex": "0x70",
+     "type": "f32",
+     "name": "RestoreForceLean",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x595970",
+     "sites": 1
+    },
+    {
+     "offset": 116,
+     "offset_hex": "0x74",
+     "type": "f32",
+     "name": "DampConstLean",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x595970",
+     "sites": 1
+    },
+    {
+     "offset": 120,
+     "offset_hex": "0x78",
+     "type": "f32",
+     "name": "DampLinearLean",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x595970",
+     "sites": 1
+    },
+    {
+     "offset": 124,
+     "offset_hex": "0x7C",
+     "type": "f32",
+     "name": "RestoreForceRoll",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x595970",
+     "sites": 3
+    },
+    {
+     "offset": 128,
+     "offset_hex": "0x80",
+     "type": "f32",
+     "name": "DampConstRoll",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x595970",
+     "sites": 1
+    },
+    {
+     "offset": 132,
+     "offset_hex": "0x84",
+     "type": "f32",
+     "name": "DampLinearRoll",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x595970",
+     "sites": 1
+    },
+    {
+     "offset": 136,
+     "offset_hex": "0x88",
+     "type": "f32",
+     "name": "LeanLimit",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x595970",
+     "sites": 1
+    },
+    {
+     "offset": 148,
+     "offset_hex": "0x94",
+     "type": "f32",
+     "name": "LimitElasticityLean",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x595970",
+     "sites": 1
+    },
+    {
+     "offset": 152,
+     "offset_hex": "0x98",
+     "type": "f32",
+     "name": "LimitElasticityRoll",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x595970",
+     "sites": 1
+    },
+    {
+     "offset": 156,
+     "offset_hex": "0x9C",
+     "type": "f32",
+     "name": "FreeRange",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x595970",
+     "sites": 1
+    },
+    {
+     "offset": 160,
+     "offset_hex": "0xA0",
+     "type": "f32",
+     "name": "FreeLean",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x595970",
+     "sites": 1
+    },
+    {
+     "offset": 168,
+     "offset_hex": "0xA8",
+     "type": "f32",
+     "name": "FreeRoll",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x595970",
+     "sites": 1
+    },
+    {
+     "offset": 172,
+     "offset_hex": "0xAC",
+     "type": null,
+     "name": "field_AC",
+     "recovered_name": false,
+     "count": 0,
+     "width": 48,
+     "evidence": "memcpy",
+     "source_fn": "0x5931B0",
+     "sites": 2
+    }
+   ]
+  },
+  "ltLight": {
+   "kind": "struct",
+   "confidence": "PROBABLE",
+   "already_known": true,
+   "code_bytes": 4672,
+   "size": 76,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 4,
+   "size_lower_bound_hex": "0x4",
+   "base": null,
+   "base_size": null,
+   "bytes_accounted_for": 4,
+   "highest_byte_touched": 4,
+   "coverage_pct": 5.3,
+   "evidence": [
+    "datParser"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x4C (lower bound 0x4)"
+   ],
+   "source_functions": [
+    "0x59BCA0"
+   ],
+   "named_fields": 1,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 0,
+     "offset_hex": "0x0",
+     "type": "i32",
+     "name": "Type",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x59BCA0",
+     "sites": 1
+    }
+   ]
+  },
+  "lvlAiRoad": {
+   "kind": "struct",
+   "confidence": "PROBABLE",
+   "already_known": false,
+   "code_bytes": 160,
+   "size": null,
+   "size_confirmed_by": null,
+   "size_note": "MM2Hook's 1 for this class is a stub and was not used as a ceiling",
+   "size_lower_bound": 29,
+   "size_lower_bound_hex": "0x1D",
+   "base": null,
+   "base_size": null,
+   "bytes_accounted_for": 25,
+   "highest_byte_touched": 29,
+   "coverage_pct": null,
+   "evidence": [
+    "stream"
+   ],
+   "corroboration": [],
+   "source_functions": [
+    "0x45D870"
+   ],
+   "named_fields": 0,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 0,
+     "offset_hex": "0x0",
+     "type": null,
+     "name": "field_0",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x45D870",
+     "sites": 1
+    },
+    {
+     "offset": 8,
+     "offset_hex": "0x8",
+     "type": null,
+     "name": "field_8",
+     "recovered_name": false,
+     "count": 0,
+     "width": 2,
+     "evidence": "stream",
+     "source_fn": "0x45D870",
+     "sites": 1
+    },
+    {
+     "offset": 10,
+     "offset_hex": "0xA",
+     "type": null,
+     "name": "field_A",
+     "recovered_name": false,
+     "count": 0,
+     "width": 2,
+     "evidence": "stream",
+     "source_fn": "0x45D870",
+     "sites": 1
+    },
+    {
+     "offset": 12,
+     "offset_hex": "0xC",
+     "type": null,
+     "name": "field_C",
+     "recovered_name": false,
+     "count": 0,
+     "width": 16,
+     "evidence": "stream",
+     "source_fn": "0x45D870",
+     "sites": 1
+    },
+    {
+     "offset": 28,
+     "offset_hex": "0x1C",
+     "type": null,
+     "name": "field_1C",
+     "recovered_name": false,
+     "count": 0,
+     "width": 1,
+     "evidence": "stream",
+     "source_fn": "0x45D870",
+     "sites": 1
+    }
+   ]
+  },
+  "mmDashView": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 4746,
+   "size": 1756,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 1700,
+   "size_lower_bound_hex": "0x6A4",
+   "base": "asNode",
+   "base_size": 24,
+   "bytes_accounted_for": 184,
+   "highest_byte_touched": 1700,
+   "coverage_pct": 10.5,
+   "evidence": [
+    "datParser"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x6DC (lower bound 0x6A4)",
+    "first own field 0x130 is at or past base end 0x18"
+   ],
+   "source_functions": [
+    "0x4315D0"
+   ],
+   "named_fields": 18,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 304,
+     "offset_hex": "0x130",
+     "type": "f32",
+     "name": "RPMRotMin",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4315D0",
+     "sites": 1
+    },
+    {
+     "offset": 308,
+     "offset_hex": "0x134",
+     "type": "f32",
+     "name": "RPMRotMax",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4315D0",
+     "sites": 1
+    },
+    {
+     "offset": 580,
+     "offset_hex": "0x244",
+     "type": "f32",
+     "name": "SpeedRotMin",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4315D0",
+     "sites": 1
+    },
+    {
+     "offset": 584,
+     "offset_hex": "0x248",
+     "type": "f32",
+     "name": "SpeedRotMax",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4315D0",
+     "sites": 1
+    },
+    {
+     "offset": 856,
+     "offset_hex": "0x358",
+     "type": "f32",
+     "name": "DamageRotMin",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4315D0",
+     "sites": 1
+    },
+    {
+     "offset": 860,
+     "offset_hex": "0x35C",
+     "type": "f32",
+     "name": "DamageRotMax",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4315D0",
+     "sites": 1
+    },
+    {
+     "offset": 1024,
+     "offset_hex": "0x400",
+     "type": "f32",
+     "name": "WheelFact",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4315D0",
+     "sites": 1
+    },
+    {
+     "offset": 1428,
+     "offset_hex": "0x594",
+     "type": "Vector3",
+     "name": "DashPos",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "datParser",
+     "source_fn": "0x4315D0",
+     "sites": 1
+    },
+    {
+     "offset": 1440,
+     "offset_hex": "0x5A0",
+     "type": "Vector3",
+     "name": "RoofPos",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "datParser",
+     "source_fn": "0x4315D0",
+     "sites": 1
+    },
+    {
+     "offset": 1592,
+     "offset_hex": "0x638",
+     "type": "Vector3",
+     "name": "DmgOffset",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "datParser",
+     "source_fn": "0x4315D0",
+     "sites": 1
+    },
+    {
+     "offset": 1604,
+     "offset_hex": "0x644",
+     "type": "Vector3",
+     "name": "SpeedOffset",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "datParser",
+     "source_fn": "0x4315D0",
+     "sites": 1
+    },
+    {
+     "offset": 1616,
+     "offset_hex": "0x650",
+     "type": "Vector3",
+     "name": "TachOffset",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "datParser",
+     "source_fn": "0x4315D0",
+     "sites": 1
+    },
+    {
+     "offset": 1628,
+     "offset_hex": "0x65C",
+     "type": "Vector3",
+     "name": "WheelPos",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "datParser",
+     "source_fn": "0x4315D0",
+     "sites": 1
+    },
+    {
+     "offset": 1640,
+     "offset_hex": "0x668",
+     "type": "Vector3",
+     "name": "DmgPivotOffset",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "datParser",
+     "source_fn": "0x4315D0",
+     "sites": 1
+    },
+    {
+     "offset": 1652,
+     "offset_hex": "0x674",
+     "type": "Vector3",
+     "name": "SpeedPivotOffset",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "datParser",
+     "source_fn": "0x4315D0",
+     "sites": 1
+    },
+    {
+     "offset": 1664,
+     "offset_hex": "0x680",
+     "type": "Vector3",
+     "name": "TachPivotOffset",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "datParser",
+     "source_fn": "0x4315D0",
+     "sites": 1
+    },
+    {
+     "offset": 1676,
+     "offset_hex": "0x68C",
+     "type": "Vector3",
+     "name": "WheelPivotOffset",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "datParser",
+     "source_fn": "0x4315D0",
+     "sites": 1
+    },
+    {
+     "offset": 1688,
+     "offset_hex": "0x698",
+     "type": "Vector3",
+     "name": "GearPivotOffset",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "datParser",
+     "source_fn": "0x4315D0",
+     "sites": 1
+    }
+   ]
+  },
+  "mmFrictionFF": {
+   "kind": "struct",
+   "confidence": "WEAK",
+   "already_known": false,
+   "code_bytes": 672,
+   "size": null,
+   "size_confirmed_by": null,
+   "size_note": "MM2Hook's None for this class is a stub and was not used as a ceiling",
+   "size_lower_bound": 160,
+   "size_lower_bound_hex": "0xA0",
+   "base": null,
+   "base_size": null,
+   "bytes_accounted_for": 80,
+   "highest_byte_touched": 160,
+   "coverage_pct": null,
+   "evidence": [
+    "memset"
+   ],
+   "corroboration": [],
+   "source_functions": [
+    "0x531C20",
+    "0x531D60"
+   ],
+   "named_fields": 0,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 16,
+     "offset_hex": "0x10",
+     "type": null,
+     "name": "field_10",
+     "recovered_name": false,
+     "count": 0,
+     "width": 56,
+     "evidence": "memset",
+     "source_fn": "0x531D60",
+     "sites": 1
+    },
+    {
+     "offset": 136,
+     "offset_hex": "0x88",
+     "type": null,
+     "name": "field_88",
+     "recovered_name": false,
+     "count": 0,
+     "width": 24,
+     "evidence": "memset",
+     "source_fn": "0x531C20",
+     "sites": 1
+    }
+   ]
+  },
+  "mmGearIndicator": {
+   "kind": "struct",
+   "confidence": "WEAK",
+   "already_known": false,
+   "code_bytes": 448,
+   "size": 64,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 48,
+   "size_lower_bound_hex": "0x30",
+   "base": null,
+   "base_size": null,
+   "bytes_accounted_for": 48,
+   "highest_byte_touched": 48,
+   "coverage_pct": 75.0,
+   "evidence": [
+    "memset"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x40 (lower bound 0x30)"
+   ],
+   "source_functions": [
+    "0x43F0A0"
+   ],
+   "named_fields": 0,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 0,
+     "offset_hex": "0x0",
+     "type": null,
+     "name": "field_0",
+     "recovered_name": false,
+     "count": 0,
+     "width": 48,
+     "evidence": "memset",
+     "source_fn": "0x43F0A0",
+     "sites": 1
+    }
+   ]
+  },
+  "mmHudMap": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 4391,
+   "size": 200,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 148,
+   "size_lower_bound_hex": "0x94",
+   "base": "asNode",
+   "base_size": 24,
+   "bytes_accounted_for": 88,
+   "highest_byte_touched": 148,
+   "coverage_pct": 44.0,
+   "evidence": [
+    "datParser"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0xC8 (lower bound 0x94)",
+    "first own field 0x4C is at or past base end 0x18"
+   ],
+   "source_functions": [
+    "0x42FA60"
+   ],
+   "named_fields": 12,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 76,
+     "offset_hex": "0x4C",
+     "type": "f32",
+     "name": "Approach Rate",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x42FA60",
+     "sites": 1
+    },
+    {
+     "offset": 84,
+     "offset_hex": "0x54",
+     "type": "f32",
+     "name": "ZoomInDist",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x42FA60",
+     "sites": 1
+    },
+    {
+     "offset": 88,
+     "offset_hex": "0x58",
+     "type": "f32",
+     "name": "ZoomOutDist",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x42FA60",
+     "sites": 1
+    },
+    {
+     "offset": 92,
+     "offset_hex": "0x5C",
+     "type": "f32",
+     "name": "ZoomInDistFS",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x42FA60",
+     "sites": 1
+    },
+    {
+     "offset": 96,
+     "offset_hex": "0x60",
+     "type": "f32",
+     "name": "ZoomOutDistFS",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x42FA60",
+     "sites": 1
+    },
+    {
+     "offset": 104,
+     "offset_hex": "0x68",
+     "type": "f32",
+     "name": "IconScaleMin",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x42FA60",
+     "sites": 1
+    },
+    {
+     "offset": 108,
+     "offset_hex": "0x6C",
+     "type": "f32",
+     "name": "IconScaleMax",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x42FA60",
+     "sites": 1
+    },
+    {
+     "offset": 112,
+     "offset_hex": "0x70",
+     "type": "f32",
+     "name": "IconScaleMinFS",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x42FA60",
+     "sites": 1
+    },
+    {
+     "offset": 116,
+     "offset_hex": "0x74",
+     "type": "f32",
+     "name": "IconScaleMaxFS",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x42FA60",
+     "sites": 1
+    },
+    {
+     "offset": 120,
+     "offset_hex": "0x78",
+     "type": "Vector3",
+     "name": "Ocean Color",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "datParser",
+     "source_fn": "0x42FA60",
+     "sites": 1
+    },
+    {
+     "offset": 132,
+     "offset_hex": "0x84",
+     "type": "Vector2",
+     "name": "Size",
+     "recovered_name": true,
+     "count": 0,
+     "width": 8,
+     "evidence": "datParser",
+     "source_fn": "0x42FA60",
+     "sites": 1
+    },
+    {
+     "offset": 140,
+     "offset_hex": "0x8C",
+     "type": "Vector2",
+     "name": "Pos",
+     "recovered_name": true,
+     "count": 0,
+     "width": 8,
+     "evidence": "datParser",
+     "source_fn": "0x42FA60",
+     "sites": 1
+    }
+   ]
+  },
+  "mmIODev": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": true,
+   "code_bytes": 2128,
+   "size": null,
+   "size_confirmed_by": null,
+   "size_note": "MM2Hook's None for this class is a stub and was not used as a ceiling",
+   "size_lower_bound": 160,
+   "size_lower_bound_hex": "0xA0",
+   "base": "mmInfoBase",
+   "base_size": 136,
+   "bytes_accounted_for": 144,
+   "highest_byte_touched": 160,
+   "coverage_pct": null,
+   "evidence": [
+    "format"
+   ],
+   "corroboration": [
+    "first own field 0x98 is at or past base end 0x88"
+   ],
+   "source_functions": [
+    "0x52F9D0"
+   ],
+   "named_fields": 2,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 152,
+     "offset_hex": "0x98",
+     "type": "i32",
+     "name": "TDevice",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x52F9D0",
+     "sites": 1
+    },
+    {
+     "offset": 156,
+     "offset_hex": "0x9C",
+     "type": "i32",
+     "name": "Component",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x52F9D0",
+     "sites": 1
+    }
+   ]
+  },
+  "mmJoystick": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 3697,
+   "size": null,
+   "size_confirmed_by": null,
+   "size_note": "MM2Hook's None for this class is a stub and was not used as a ceiling",
+   "size_lower_bound": 788,
+   "size_lower_bound_hex": "0x314",
+   "base": null,
+   "base_size": null,
+   "bytes_accounted_for": 24,
+   "highest_byte_touched": 788,
+   "coverage_pct": null,
+   "evidence": [
+    "format",
+    "format-weak"
+   ],
+   "corroboration": [],
+   "source_functions": [
+    "0x530B30",
+    "0x530F10"
+   ],
+   "named_fields": 6,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 100,
+     "offset_hex": "0x64",
+     "type": "i32",
+     "name": "Axes",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x530F10",
+     "sites": 1
+    },
+    {
+     "offset": 104,
+     "offset_hex": "0x68",
+     "type": "i32",
+     "name": "Butons",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x530F10",
+     "sites": 1
+    },
+    {
+     "offset": 108,
+     "offset_hex": "0x6C",
+     "type": "i32",
+     "name": "POVs",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x530F10",
+     "sites": 1
+    },
+    {
+     "offset": 728,
+     "offset_hex": "0x2D8",
+     "type": "f32",
+     "name": "XCapStart",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format-weak",
+     "source_fn": "0x530B30",
+     "sites": 1
+    },
+    {
+     "offset": 756,
+     "offset_hex": "0x2F4",
+     "type": "f32",
+     "name": "YCapStart",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format-weak",
+     "source_fn": "0x530B30",
+     "sites": 1
+    },
+    {
+     "offset": 784,
+     "offset_hex": "0x310",
+     "type": "f32",
+     "name": "ZCapStart",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format-weak",
+     "source_fn": "0x530B30",
+     "sites": 1
+    }
+   ]
+  },
+  "mmMirror": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 928,
+   "size": null,
+   "size_confirmed_by": null,
+   "size_note": "MM2Hook's None for this class is a stub and was not used as a ceiling",
+   "size_lower_bound": 100,
+   "size_lower_bound_hex": "0x64",
+   "base": "asNode",
+   "base_size": 24,
+   "bytes_accounted_for": 60,
+   "highest_byte_touched": 100,
+   "coverage_pct": null,
+   "evidence": [
+    "datParser"
+   ],
+   "corroboration": [
+    "first own field 0x3C is at or past base end 0x18"
+   ],
+   "source_functions": [
+    "0x42B9E0"
+   ],
+   "named_fields": 6,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 60,
+     "offset_hex": "0x3C",
+     "type": "Vector3",
+     "name": "Position",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "datParser",
+     "source_fn": "0x42B9E0",
+     "sites": 1
+    },
+    {
+     "offset": 72,
+     "offset_hex": "0x48",
+     "type": "Vector2",
+     "name": "Size",
+     "recovered_name": true,
+     "count": 0,
+     "width": 8,
+     "evidence": "datParser",
+     "source_fn": "0x42B9E0",
+     "sites": 1
+    },
+    {
+     "offset": 84,
+     "offset_hex": "0x54",
+     "type": "f32",
+     "name": "Fov",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x42B9E0",
+     "sites": 1
+    },
+    {
+     "offset": 88,
+     "offset_hex": "0x58",
+     "type": "f32",
+     "name": "Aspect",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x42B9E0",
+     "sites": 1
+    },
+    {
+     "offset": 92,
+     "offset_hex": "0x5C",
+     "type": "f32",
+     "name": "NearClip",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x42B9E0",
+     "sites": 1
+    },
+    {
+     "offset": 96,
+     "offset_hex": "0x60",
+     "type": "f32",
+     "name": "FarClip",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x42B9E0",
+     "sites": 1
+    }
+   ]
+  },
+  "mmPlayer": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 13616,
+   "size": 9164,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 9016,
+   "size_lower_bound_hex": "0x2338",
+   "base": "asNode",
+   "base_size": 24,
+   "bytes_accounted_for": 156,
+   "highest_byte_touched": 9016,
+   "coverage_pct": 1.7,
+   "evidence": [
+    "datParser"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x23CC (lower bound 0x2338)",
+    "first own field 0x2260 is at or past base end 0x18"
+   ],
+   "source_functions": [
+    "0x406320"
+   ],
+   "named_fields": 34,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 8800,
+     "offset_hex": "0x2260",
+     "type": "f32",
+     "name": "ScoreWeight",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8856,
+     "offset_hex": "0x2298",
+     "type": "i32",
+     "name": "SpeedSensitive",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8860,
+     "offset_hex": "0x229C",
+     "type": "f32",
+     "name": "SpeedBaseLow",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8864,
+     "offset_hex": "0x22A0",
+     "type": "f32",
+     "name": "SpeedBaseHi",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8868,
+     "offset_hex": "0x22A4",
+     "type": "f32",
+     "name": "DiscreteSteeringDeltaInHi",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8872,
+     "offset_hex": "0x22A8",
+     "type": "f32",
+     "name": "DiscreteSteeringDeltaOutHi",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8876,
+     "offset_hex": "0x22AC",
+     "type": "f32",
+     "name": "DiscreteSteeringFilterHi",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8880,
+     "offset_hex": "0x22B0",
+     "type": "f32",
+     "name": "DiscreteSteeringDeltaInLo",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8884,
+     "offset_hex": "0x22B4",
+     "type": "f32",
+     "name": "DiscreteSteeringDeltaOutLo",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8888,
+     "offset_hex": "0x22B8",
+     "type": "f32",
+     "name": "DiscreteSteeringFilterLo",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8892,
+     "offset_hex": "0x22BC",
+     "type": "f32",
+     "name": "MouseSensitivityLow",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8896,
+     "offset_hex": "0x22C0",
+     "type": "f32",
+     "name": "MouseSteerFilterLow",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8900,
+     "offset_hex": "0x22C4",
+     "type": "f32",
+     "name": "MouseSensitivityHi",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8904,
+     "offset_hex": "0x22C8",
+     "type": "f32",
+     "name": "MouseSteerFilterHi",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8912,
+     "offset_hex": "0x22D0",
+     "type": "i16",
+     "name": "JoyApp",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8916,
+     "offset_hex": "0x22D4",
+     "type": "f32",
+     "name": "JoySteerApproachOutHi",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8920,
+     "offset_hex": "0x22D8",
+     "type": "f32",
+     "name": "JoySteerApproachInHi",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8924,
+     "offset_hex": "0x22DC",
+     "type": "f32",
+     "name": "JoySteerAppApp",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8932,
+     "offset_hex": "0x22E4",
+     "type": "f32",
+     "name": "JoySteerApproachOutLo",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8936,
+     "offset_hex": "0x22E8",
+     "type": "f32",
+     "name": "JoySteerApproachInLo",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8944,
+     "offset_hex": "0x22F0",
+     "type": "f32",
+     "name": "JoySteerFilterLow",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8948,
+     "offset_hex": "0x22F4",
+     "type": "f32",
+     "name": "JoySensitivityLow",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8952,
+     "offset_hex": "0x22F8",
+     "type": "f32",
+     "name": "JoySteerFilterHi",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8956,
+     "offset_hex": "0x22FC",
+     "type": "f32",
+     "name": "JoySensitivityHi",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8968,
+     "offset_hex": "0x2308",
+     "type": "i16",
+     "name": "WheelApp",
+     "recovered_name": true,
+     "count": 0,
+     "width": 2,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8972,
+     "offset_hex": "0x230C",
+     "type": "f32",
+     "name": "WheelSteerApproachOutHi",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8976,
+     "offset_hex": "0x2310",
+     "type": "f32",
+     "name": "WheelSteerApproachInHi",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8980,
+     "offset_hex": "0x2314",
+     "type": "f32",
+     "name": "WheelSteerAppApp",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8988,
+     "offset_hex": "0x231C",
+     "type": "f32",
+     "name": "WheelSteerApproachOutLo",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 8992,
+     "offset_hex": "0x2320",
+     "type": "f32",
+     "name": "WheelSteerApproachInLo",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 9000,
+     "offset_hex": "0x2328",
+     "type": "f32",
+     "name": "WheelSteerFilterLow",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 9004,
+     "offset_hex": "0x232C",
+     "type": "f32",
+     "name": "WheelSensitivityLow",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 9008,
+     "offset_hex": "0x2330",
+     "type": "f32",
+     "name": "WheelSteerFilterHi",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    },
+    {
+     "offset": 9012,
+     "offset_hex": "0x2334",
+     "type": "f32",
+     "name": "WheelSensitivityHi",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x406320",
+     "sites": 1
+    }
+   ]
+  },
+  "mmPlayerCityRecord": {
+   "kind": "struct",
+   "confidence": "WEAK",
+   "already_known": false,
+   "code_bytes": 3424,
+   "size": null,
+   "size_confirmed_by": null,
+   "size_note": "MM2Hook's None for this class is a stub and was not used as a ceiling",
+   "size_lower_bound": 176,
+   "size_lower_bound_hex": "0xB0",
+   "base": "mmInfoBase",
+   "base_size": 136,
+   "bytes_accounted_for": 144,
+   "highest_byte_touched": 176,
+   "coverage_pct": null,
+   "evidence": [
+    "stream"
+   ],
+   "corroboration": [
+    "first own field 0x88 is at or past base end 0x88"
+   ],
+   "source_functions": [
+    "0x528B10"
+   ],
+   "named_fields": 0,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 136,
+     "offset_hex": "0x88",
+     "type": null,
+     "name": "field_88",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x528B10",
+     "sites": 1
+    },
+    {
+     "offset": 172,
+     "offset_hex": "0xAC",
+     "type": null,
+     "name": "field_AC",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x528B10",
+     "sites": 1
+    }
+   ]
+  },
+  "mmPlayerConfig": {
+   "kind": "struct",
+   "confidence": "WEAK",
+   "already_known": true,
+   "code_bytes": 3970,
+   "size": null,
+   "size_confirmed_by": null,
+   "size_note": "MM2Hook's None for this class is a stub and was not used as a ceiling",
+   "size_lower_bound": 416,
+   "size_lower_bound_hex": "0x1A0",
+   "base": "mmInfoBase",
+   "base_size": 136,
+   "bytes_accounted_for": 336,
+   "highest_byte_touched": 416,
+   "coverage_pct": null,
+   "evidence": [
+    "memset"
+   ],
+   "corroboration": [
+    "first own field 0xD8 is at or past base end 0x88"
+   ],
+   "source_functions": [
+    "0x526240"
+   ],
+   "named_fields": 0,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 216,
+     "offset_hex": "0xD8",
+     "type": null,
+     "name": "field_D8",
+     "recovered_name": false,
+     "count": 0,
+     "width": 200,
+     "evidence": "memset",
+     "source_fn": "0x526240",
+     "sites": 1
+    }
+   ]
+  },
+  "mmPlayerData": {
+   "kind": "struct",
+   "confidence": "WEAK",
+   "already_known": false,
+   "code_bytes": 5059,
+   "size": null,
+   "size_confirmed_by": null,
+   "size_note": "MM2Hook's 136 for this class is a base placeholder and was not used as a ceiling",
+   "size_lower_bound": 477,
+   "size_lower_bound_hex": "0x1DD",
+   "base": "mmInfoBase",
+   "base_size": 136,
+   "bytes_accounted_for": 416,
+   "highest_byte_touched": 477,
+   "coverage_pct": null,
+   "evidence": [
+    "memset"
+   ],
+   "corroboration": [
+    "first own field 0x88 is at or past base end 0x88"
+   ],
+   "source_functions": [
+    "0x526FE0"
+   ],
+   "named_fields": 0,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 136,
+     "offset_hex": "0x88",
+     "type": null,
+     "name": "field_88",
+     "recovered_name": false,
+     "count": 0,
+     "width": 40,
+     "evidence": "memset",
+     "source_fn": "0x526FE0",
+     "sites": 1
+    },
+    {
+     "offset": 216,
+     "offset_hex": "0xD8",
+     "type": null,
+     "name": "field_D8",
+     "recovered_name": false,
+     "count": 0,
+     "width": 40,
+     "evidence": "memset",
+     "source_fn": "0x526FE0",
+     "sites": 1
+    },
+    {
+     "offset": 256,
+     "offset_hex": "0x100",
+     "type": null,
+     "name": "field_100",
+     "recovered_name": false,
+     "count": 0,
+     "width": 40,
+     "evidence": "memset",
+     "source_fn": "0x526FE0",
+     "sites": 1
+    },
+    {
+     "offset": 304,
+     "offset_hex": "0x130",
+     "type": null,
+     "name": "field_130",
+     "recovered_name": false,
+     "count": 0,
+     "width": 80,
+     "evidence": "memset",
+     "source_fn": "0x526FE0",
+     "sites": 1
+    },
+    {
+     "offset": 397,
+     "offset_hex": "0x18D",
+     "type": null,
+     "name": "field_18D",
+     "recovered_name": false,
+     "count": 0,
+     "width": 80,
+     "evidence": "memset",
+     "source_fn": "0x526FE0",
+     "sites": 1
+    }
+   ]
+  },
+  "mmPlayerRecord": {
+   "kind": "struct",
+   "confidence": "PROBABLE",
+   "already_known": false,
+   "code_bytes": 880,
+   "size": null,
+   "size_confirmed_by": null,
+   "size_note": "MM2Hook's None for this class is a stub and was not used as a ceiling",
+   "size_lower_bound": 228,
+   "size_lower_bound_hex": "0xE4",
+   "base": "mmInfoBase",
+   "base_size": 136,
+   "bytes_accounted_for": 228,
+   "highest_byte_touched": 228,
+   "coverage_pct": null,
+   "evidence": [
+    "memset",
+    "stream"
+   ],
+   "corroboration": [
+    "first own field 0x88 is at or past base end 0x88"
+   ],
+   "source_functions": [
+    "0x528750",
+    "0x5287B0",
+    "0x528910"
+   ],
+   "named_fields": 0,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 136,
+     "offset_hex": "0x88",
+     "type": null,
+     "name": "field_88",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x528910",
+     "sites": 1
+    },
+    {
+     "offset": 140,
+     "offset_hex": "0x8C",
+     "type": null,
+     "name": "field_8C",
+     "recovered_name": false,
+     "count": 0,
+     "width": 80,
+     "evidence": "stream",
+     "source_fn": "0x528910",
+     "sites": 3
+    },
+    {
+     "offset": 220,
+     "offset_hex": "0xDC",
+     "type": null,
+     "name": "field_DC",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x528910",
+     "sites": 1
+    },
+    {
+     "offset": 224,
+     "offset_hex": "0xE0",
+     "type": null,
+     "name": "field_E0",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x528910",
+     "sites": 1
+    }
+   ]
+  },
+  "mmRecord": {
+   "kind": "struct",
+   "confidence": "PROBABLE",
+   "already_known": true,
+   "code_bytes": 928,
+   "size": null,
+   "size_confirmed_by": null,
+   "size_note": "MM2Hook's None for this class is a stub and was not used as a ceiling",
+   "size_lower_bound": 264,
+   "size_lower_bound_hex": "0x108",
+   "base": "mmInfoBase",
+   "base_size": 136,
+   "bytes_accounted_for": 264,
+   "highest_byte_touched": 264,
+   "coverage_pct": null,
+   "evidence": [
+    "memset",
+    "stream"
+   ],
+   "corroboration": [
+    "first own field 0x88 is at or past base end 0x88"
+   ],
+   "source_functions": [
+    "0x528440",
+    "0x528600",
+    "0x528680"
+   ],
+   "named_fields": 0,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 136,
+     "offset_hex": "0x88",
+     "type": null,
+     "name": "field_88",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x528600",
+     "sites": 2
+    },
+    {
+     "offset": 140,
+     "offset_hex": "0x8C",
+     "type": null,
+     "name": "field_8C",
+     "recovered_name": false,
+     "count": 0,
+     "width": 80,
+     "evidence": "stream",
+     "source_fn": "0x528600",
+     "sites": 3
+    },
+    {
+     "offset": 220,
+     "offset_hex": "0xDC",
+     "type": null,
+     "name": "field_DC",
+     "recovered_name": false,
+     "count": 0,
+     "width": 40,
+     "evidence": "stream",
+     "source_fn": "0x528600",
+     "sites": 3
+    },
+    {
+     "offset": 260,
+     "offset_hex": "0x104",
+     "type": null,
+     "name": "field_104",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x528600",
+     "sites": 2
+    }
+   ]
+  },
+  "mmRoadFF": {
+   "kind": "struct",
+   "confidence": "WEAK",
+   "already_known": false,
+   "code_bytes": 736,
+   "size": null,
+   "size_confirmed_by": null,
+   "size_note": "MM2Hook's None for this class is a stub and was not used as a ceiling",
+   "size_lower_bound": 72,
+   "size_lower_bound_hex": "0x48",
+   "base": null,
+   "base_size": null,
+   "bytes_accounted_for": 56,
+   "highest_byte_touched": 72,
+   "coverage_pct": null,
+   "evidence": [
+    "memset"
+   ],
+   "corroboration": [],
+   "source_functions": [
+    "0x531A70"
+   ],
+   "named_fields": 0,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 16,
+     "offset_hex": "0x10",
+     "type": null,
+     "name": "field_10",
+     "recovered_name": false,
+     "count": 0,
+     "width": 56,
+     "evidence": "memset",
+     "source_fn": "0x531A70",
+     "sites": 1
+    }
+   ]
+  },
+  "mmSpeedIndicator": {
+   "kind": "struct",
+   "confidence": "WEAK",
+   "already_known": false,
+   "code_bytes": 496,
+   "size": 56,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 40,
+   "size_lower_bound_hex": "0x28",
+   "base": null,
+   "base_size": null,
+   "bytes_accounted_for": 40,
+   "highest_byte_touched": 40,
+   "coverage_pct": 71.4,
+   "evidence": [
+    "memset"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x38 (lower bound 0x28)"
+   ],
+   "source_functions": [
+    "0x43F260"
+   ],
+   "named_fields": 0,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 0,
+     "offset_hex": "0x0",
+     "type": null,
+     "name": "field_0",
+     "recovered_name": false,
+     "count": 0,
+     "width": 40,
+     "evidence": "memset",
+     "source_fn": "0x43F260",
+     "sites": 1
+    }
+   ]
+  },
+  "mmSpringFF": {
+   "kind": "struct",
+   "confidence": "WEAK",
+   "already_known": false,
+   "code_bytes": 720,
+   "size": null,
+   "size_confirmed_by": null,
+   "size_note": "MM2Hook's None for this class is a stub and was not used as a ceiling",
+   "size_lower_bound": 72,
+   "size_lower_bound_hex": "0x48",
+   "base": null,
+   "base_size": null,
+   "bytes_accounted_for": 56,
+   "highest_byte_touched": 72,
+   "coverage_pct": null,
+   "evidence": [
+    "memset"
+   ],
+   "corroboration": [],
+   "source_functions": [
+    "0x531FF0"
+   ],
+   "named_fields": 0,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 16,
+     "offset_hex": "0x10",
+     "type": null,
+     "name": "field_10",
+     "recovered_name": false,
+     "count": 0,
+     "width": 56,
+     "evidence": "memset",
+     "source_fn": "0x531FF0",
+     "sites": 1
+    }
+   ]
+  },
+  "mmVehInfo": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 1088,
+   "size": 292,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 244,
+   "size_lower_bound_hex": "0xF4",
+   "base": null,
+   "base_size": null,
+   "bytes_accounted_for": 16,
+   "highest_byte_touched": 244,
+   "coverage_pct": 5.5,
+   "evidence": [
+    "format"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x124 (lower bound 0xF4)"
+   ],
+   "source_functions": [
+    "0x529A20"
+   ],
+   "named_fields": 4,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 224,
+     "offset_hex": "0xE0",
+     "type": "i32",
+     "name": "TFlags",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x529A20",
+     "sites": 1
+    },
+    {
+     "offset": 228,
+     "offset_hex": "0xE4",
+     "type": "i32",
+     "name": "TOrder",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x529A20",
+     "sites": 1
+    },
+    {
+     "offset": 236,
+     "offset_hex": "0xEC",
+     "type": "i32",
+     "name": "TUnlockScore",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x529A20",
+     "sites": 1
+    },
+    {
+     "offset": 240,
+     "offset_hex": "0xF0",
+     "type": "i32",
+     "name": "TUnlockFlags",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "format",
+     "source_fn": "0x529A20",
+     "sites": 1
+    }
+   ]
+  },
+  "modShader": {
+   "kind": "struct",
+   "confidence": "WEAK",
+   "already_known": true,
+   "code_bytes": 3136,
+   "size": 8,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 72,
+   "size_lower_bound_hex": "0x48",
+   "base": null,
+   "base_size": null,
+   "bytes_accounted_for": 72,
+   "highest_byte_touched": 72,
+   "coverage_pct": 900.0,
+   "evidence": [
+    "memcpy"
+   ],
+   "corroboration": [
+    "EXCEEDS MM2Hook sizeof 0x8 (lower bound 0x48)"
+   ],
+   "source_functions": [
+    "0x4A3930"
+   ],
+   "named_fields": 0,
+   "conflicts": [
+    "EXCEEDS MM2Hook sizeof 0x8 (lower bound 0x48)"
+   ],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 0,
+     "offset_hex": "0x0",
+     "type": null,
+     "name": "field_0",
+     "recovered_name": false,
+     "count": 0,
+     "width": 72,
+     "evidence": "memcpy",
+     "source_fn": "0x4A3930",
+     "sites": 2
+    }
+   ]
+  },
+  "phBoundGeometry": {
+   "kind": "struct",
+   "confidence": "PROBABLE",
+   "already_known": true,
+   "code_bytes": 7261,
+   "size": 124,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 84,
+   "size_lower_bound_hex": "0x54",
+   "base": "phBoundPolygonal",
+   "base_size": 100,
+   "bytes_accounted_for": 100,
+   "highest_byte_touched": 84,
+   "coverage_pct": 80.6,
+   "evidence": [
+    "stream"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x7C (lower bound 0x54)",
+    "first own field 0x4 is INSIDE the base (ends 0x64)"
+   ],
+   "source_functions": [
+    "0x4860B9"
+   ],
+   "named_fields": 0,
+   "conflicts": [
+    "first own field 0x4 is INSIDE the base (ends 0x64)"
+   ],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 4,
+     "offset_hex": "0x4",
+     "type": null,
+     "name": "field_4",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x4860B9",
+     "sites": 1
+    },
+    {
+     "offset": 76,
+     "offset_hex": "0x4C",
+     "type": null,
+     "name": "field_4C",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x4860B9",
+     "sites": 1
+    },
+    {
+     "offset": 80,
+     "offset_hex": "0x50",
+     "type": null,
+     "name": "field_50",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x4860B9",
+     "sites": 1
+    }
+   ]
+  },
+  "phBoundTerrain": {
+   "kind": "struct",
+   "confidence": "PROBABLE",
+   "already_known": false,
+   "code_bytes": 16835,
+   "size": 204,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 192,
+   "size_lower_bound_hex": "0xC0",
+   "base": "phBoundGeometry",
+   "base_size": 124,
+   "bytes_accounted_for": 169,
+   "highest_byte_touched": 192,
+   "coverage_pct": 82.8,
+   "evidence": [
+    "stream"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0xCC (lower bound 0xC0)",
+    "first own field 0xC is INSIDE the base (ends 0x7C)"
+   ],
+   "source_functions": [
+    "0x48C2E0",
+    "0x48C690"
+   ],
+   "named_fields": 0,
+   "conflicts": [
+    "first own field 0xC is INSIDE the base (ends 0x7C)"
+   ],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 12,
+     "offset_hex": "0xC",
+     "type": null,
+     "name": "field_C",
+     "recovered_name": false,
+     "count": 0,
+     "width": 12,
+     "evidence": "stream",
+     "source_fn": "0x48C2E0",
+     "sites": 2
+    },
+    {
+     "offset": 24,
+     "offset_hex": "0x18",
+     "type": null,
+     "name": "field_18",
+     "recovered_name": false,
+     "count": 0,
+     "width": 12,
+     "evidence": "stream",
+     "source_fn": "0x48C2E0",
+     "sites": 2
+    },
+    {
+     "offset": 80,
+     "offset_hex": "0x50",
+     "type": null,
+     "name": "field_50",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x48C690",
+     "sites": 1
+    },
+    {
+     "offset": 84,
+     "offset_hex": "0x54",
+     "type": null,
+     "name": "field_54",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x48C2E0",
+     "sites": 2
+    },
+    {
+     "offset": 124,
+     "offset_hex": "0x7C",
+     "type": null,
+     "name": "field_7C",
+     "recovered_name": false,
+     "count": 0,
+     "width": 1,
+     "evidence": "stream",
+     "source_fn": "0x48C690",
+     "sites": 1
+    },
+    {
+     "offset": 128,
+     "offset_hex": "0x80",
+     "type": null,
+     "name": "field_80",
+     "recovered_name": false,
+     "count": 0,
+     "width": 12,
+     "evidence": "stream",
+     "source_fn": "0x48C2E0",
+     "sites": 2
+    },
+    {
+     "offset": 140,
+     "offset_hex": "0x8C",
+     "type": null,
+     "name": "field_8C",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x48C2E0",
+     "sites": 2
+    },
+    {
+     "offset": 144,
+     "offset_hex": "0x90",
+     "type": null,
+     "name": "field_90",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x48C2E0",
+     "sites": 2
+    },
+    {
+     "offset": 148,
+     "offset_hex": "0x94",
+     "type": null,
+     "name": "field_94",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x48C2E0",
+     "sites": 2
+    },
+    {
+     "offset": 152,
+     "offset_hex": "0x98",
+     "type": null,
+     "name": "field_98",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x48C2E0",
+     "sites": 2
+    },
+    {
+     "offset": 156,
+     "offset_hex": "0x9C",
+     "type": null,
+     "name": "field_9C",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x48C2E0",
+     "sites": 2
+    },
+    {
+     "offset": 180,
+     "offset_hex": "0xB4",
+     "type": null,
+     "name": "field_B4",
+     "recovered_name": false,
+     "count": 0,
+     "width": 12,
+     "evidence": "stream",
+     "source_fn": "0x48C2E0",
+     "sites": 2
+    }
+   ]
+  },
+  "phCollider": {
+   "kind": "struct",
+   "confidence": "WEAK",
+   "already_known": false,
+   "code_bytes": 880,
+   "size": 52,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 92,
+   "size_lower_bound_hex": "0x5C",
+   "base": "phColliderBase",
+   "base_size": null,
+   "bytes_accounted_for": 48,
+   "highest_byte_touched": 92,
+   "coverage_pct": 92.3,
+   "evidence": [
+    "memcpy"
+   ],
+   "corroboration": [
+    "EXCEEDS MM2Hook sizeof 0x34 (lower bound 0x5C)"
+   ],
+   "source_functions": [
+    "0x46D6E0",
+    "0x46D8D0"
+   ],
+   "named_fields": 0,
+   "conflicts": [
+    "EXCEEDS MM2Hook sizeof 0x34 (lower bound 0x5C)"
+   ],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 44,
+     "offset_hex": "0x2C",
+     "type": null,
+     "name": "field_2C",
+     "recovered_name": false,
+     "count": 0,
+     "width": 48,
+     "evidence": "memcpy",
+     "source_fn": "0x46D6E0",
+     "sites": 4
+    }
+   ]
+  },
+  "phColliderBase": {
+   "kind": "struct",
+   "confidence": "WEAK",
+   "already_known": true,
+   "code_bytes": 5248,
+   "size": null,
+   "size_confirmed_by": null,
+   "size_note": "MM2Hook's 1 for this class is a stub and was not used as a ceiling",
+   "size_lower_bound": 92,
+   "size_lower_bound_hex": "0x5C",
+   "base": null,
+   "base_size": null,
+   "bytes_accounted_for": 48,
+   "highest_byte_touched": 92,
+   "coverage_pct": null,
+   "evidence": [
+    "memcpy"
+   ],
+   "corroboration": [],
+   "source_functions": [
+    "0x475C50"
+   ],
+   "named_fields": 0,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 44,
+     "offset_hex": "0x2C",
+     "type": null,
+     "name": "field_2C",
+     "recovered_name": false,
+     "count": 0,
+     "width": 48,
+     "evidence": "memcpy",
+     "source_fn": "0x475C50",
+     "sites": 2
+    }
+   ]
+  },
+  "phMaterial": {
+   "kind": "struct",
+   "confidence": "PROBABLE",
+   "already_known": true,
+   "code_bytes": 1072,
+   "size": 48,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 48,
+   "size_lower_bound_hex": "0x30",
+   "base": null,
+   "base_size": null,
+   "bytes_accounted_for": 40,
+   "highest_byte_touched": 48,
+   "coverage_pct": 83.3,
+   "evidence": [
+    "stream"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x30 (lower bound 0x30)"
+   ],
+   "source_functions": [
+    "0x493340"
+   ],
+   "named_fields": 0,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 4,
+     "offset_hex": "0x4",
+     "type": null,
+     "name": "field_4",
+     "recovered_name": false,
+     "count": 0,
+     "width": 32,
+     "evidence": "stream",
+     "source_fn": "0x493340",
+     "sites": 1
+    },
+    {
+     "offset": 40,
+     "offset_hex": "0x28",
+     "type": null,
+     "name": "field_28",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x493340",
+     "sites": 1
+    },
+    {
+     "offset": 44,
+     "offset_hex": "0x2C",
+     "type": null,
+     "name": "field_2C",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x493340",
+     "sites": 1
+    }
+   ]
+  },
+  "ptxGlassBirthRules": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 240,
+   "size": null,
+   "size_confirmed_by": null,
+   "size_note": "MM2Hook's None for this class is a stub and was not used as a ceiling",
+   "size_lower_bound": 52,
+   "size_lower_bound_hex": "0x34",
+   "base": "asNode",
+   "base_size": 24,
+   "bytes_accounted_for": 48,
+   "highest_byte_touched": 52,
+   "coverage_pct": null,
+   "evidence": [
+    "datParser"
+   ],
+   "corroboration": [
+    "first own field 0x18 is at or past base end 0x18"
+   ],
+   "source_functions": [
+    "0x462D90"
+   ],
+   "named_fields": 6,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 24,
+     "offset_hex": "0x18",
+     "type": "f32",
+     "name": "bounce_damping",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x462D90",
+     "sites": 1
+    },
+    {
+     "offset": 32,
+     "offset_hex": "0x20",
+     "type": "f32",
+     "name": "angular_damping",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x462D90",
+     "sites": 1
+    },
+    {
+     "offset": 36,
+     "offset_hex": "0x24",
+     "type": "f32",
+     "name": "gravity",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x462D90",
+     "sites": 1
+    },
+    {
+     "offset": 40,
+     "offset_hex": "0x28",
+     "type": "f32",
+     "name": "explodex",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x462D90",
+     "sites": 1
+    },
+    {
+     "offset": 44,
+     "offset_hex": "0x2C",
+     "type": "f32",
+     "name": "explodey",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x462D90",
+     "sites": 1
+    },
+    {
+     "offset": 48,
+     "offset_hex": "0x30",
+     "type": "f32",
+     "name": "explodez",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x462D90",
+     "sites": 1
+    }
+   ]
+  },
+  "sdlPage16": {
+   "kind": "struct",
+   "confidence": "WEAK",
+   "already_known": true,
+   "code_bytes": 43410,
+   "size": 32,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 4,
+   "size_lower_bound_hex": "0x4",
+   "base": null,
+   "base_size": null,
+   "bytes_accounted_for": 4,
+   "highest_byte_touched": 4,
+   "coverage_pct": 12.5,
+   "evidence": [
+    "stream"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x20 (lower bound 0x4)"
+   ],
+   "source_functions": [
+    "0x45BF90"
+   ],
+   "named_fields": 0,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 0,
+     "offset_hex": "0x0",
+     "type": null,
+     "name": "field_0",
+     "recovered_name": false,
+     "count": 0,
+     "width": 4,
+     "evidence": "stream",
+     "source_fn": "0x45BF90",
+     "sites": 1
+    }
+   ]
+  },
+  "vehAero": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 1168,
+   "size": 76,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 76,
+   "size_lower_bound_hex": "0x4C",
+   "base": "asNode",
+   "base_size": 24,
+   "bytes_accounted_for": 68,
+   "highest_byte_touched": 76,
+   "coverage_pct": 89.5,
+   "evidence": [
+    "datParser"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x4C (lower bound 0x4C)",
+    "first own field 0x20 is at or past base end 0x18"
+   ],
+   "source_functions": [
+    "0x4D96E0"
+   ],
+   "named_fields": 5,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 32,
+     "offset_hex": "0x20",
+     "type": "Vector3",
+     "name": "AngCDamp",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "datParser",
+     "source_fn": "0x4D96E0",
+     "sites": 1
+    },
+    {
+     "offset": 44,
+     "offset_hex": "0x2C",
+     "type": "Vector3",
+     "name": "AngVelDamp",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "datParser",
+     "source_fn": "0x4D96E0",
+     "sites": 1
+    },
+    {
+     "offset": 56,
+     "offset_hex": "0x38",
+     "type": "Vector3",
+     "name": "AngVel2Damp",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "datParser",
+     "source_fn": "0x4D96E0",
+     "sites": 1
+    },
+    {
+     "offset": 68,
+     "offset_hex": "0x44",
+     "type": "f32",
+     "name": "Drag",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4D96E0",
+     "sites": 1
+    },
+    {
+     "offset": 72,
+     "offset_hex": "0x48",
+     "type": "f32",
+     "name": "Down",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4D96E0",
+     "sites": 1
+    }
+   ]
+  },
+  "vehAxle": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 1024,
+   "size": 156,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 156,
+   "size_lower_bound_hex": "0x9C",
+   "base": "asNode",
+   "base_size": 24,
+   "bytes_accounted_for": 32,
+   "highest_byte_touched": 156,
+   "coverage_pct": 20.5,
+   "evidence": [
+    "datParser"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x9C (lower bound 0x9C)",
+    "first own field 0x94 is at or past base end 0x18"
+   ],
+   "source_functions": [
+    "0x4D9CA0"
+   ],
+   "named_fields": 2,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 148,
+     "offset_hex": "0x94",
+     "type": "f32",
+     "name": "TorqueCoef",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4D9CA0",
+     "sites": 1
+    },
+    {
+     "offset": 152,
+     "offset_hex": "0x98",
+     "type": "f32",
+     "name": "DampCoef",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4D9CA0",
+     "sites": 1
+    }
+   ]
+  },
+  "vehDrivetrain": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 2283,
+   "size": 76,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 76,
+   "size_lower_bound_hex": "0x4C",
+   "base": "asNode",
+   "base_size": 24,
+   "bytes_accounted_for": 36,
+   "highest_byte_touched": 76,
+   "coverage_pct": 47.4,
+   "evidence": [
+    "datParser"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x4C (lower bound 0x4C)",
+    "first own field 0x40 is at or past base end 0x18"
+   ],
+   "source_functions": [
+    "0x4DA570"
+   ],
+   "named_fields": 3,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 64,
+     "offset_hex": "0x40",
+     "type": "f32",
+     "name": "AngInertia",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4DA570",
+     "sites": 1
+    },
+    {
+     "offset": 68,
+     "offset_hex": "0x44",
+     "type": "f32",
+     "name": "BrakeDynamicCoef",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4DA570",
+     "sites": 1
+    },
+    {
+     "offset": 72,
+     "offset_hex": "0x48",
+     "type": "f32",
+     "name": "BrakeStaticCoef",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4DA570",
+     "sites": 1
+    }
+   ]
+  },
+  "vehEngine": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 1840,
+   "size": 132,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 56,
+   "size_lower_bound_hex": "0x38",
+   "base": "asNode",
+   "base_size": 24,
+   "bytes_accounted_for": 48,
+   "highest_byte_touched": 56,
+   "coverage_pct": 36.4,
+   "evidence": [
+    "datParser"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x84 (lower bound 0x38)",
+    "first own field 0x18 is at or past base end 0x18"
+   ],
+   "source_functions": [
+    "0x4D9240"
+   ],
+   "named_fields": 6,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 24,
+     "offset_hex": "0x18",
+     "type": "f32",
+     "name": "MaxHorsePower",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4D9240",
+     "sites": 1
+    },
+    {
+     "offset": 28,
+     "offset_hex": "0x1C",
+     "type": "f32",
+     "name": "IdleRPM",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4D9240",
+     "sites": 1
+    },
+    {
+     "offset": 32,
+     "offset_hex": "0x20",
+     "type": "f32",
+     "name": "OptRPM",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4D9240",
+     "sites": 1
+    },
+    {
+     "offset": 36,
+     "offset_hex": "0x24",
+     "type": "f32",
+     "name": "MaxRPM",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4D9240",
+     "sites": 1
+    },
+    {
+     "offset": 40,
+     "offset_hex": "0x28",
+     "type": "f32",
+     "name": "GCL",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4D9240",
+     "sites": 1
+    },
+    {
+     "offset": 52,
+     "offset_hex": "0x34",
+     "type": "f32",
+     "name": "AngInertia",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4D9240",
+     "sites": 1
+    }
+   ]
+  },
+  "vehGyro": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 1072,
+   "size": 48,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 48,
+   "size_lower_bound_hex": "0x30",
+   "base": "asNode",
+   "base_size": 24,
+   "bytes_accounted_for": 44,
+   "highest_byte_touched": 48,
+   "coverage_pct": 91.7,
+   "evidence": [
+    "datParser"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x30 (lower bound 0x30)",
+    "first own field 0x1C is at or past base end 0x18"
+   ],
+   "source_functions": [
+    "0x4D5EE0"
+   ],
+   "named_fields": 5,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 28,
+     "offset_hex": "0x1C",
+     "type": "f32",
+     "name": "Drift",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4D5EE0",
+     "sites": 1
+    },
+    {
+     "offset": 32,
+     "offset_hex": "0x20",
+     "type": "f32",
+     "name": "Spin180",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4D5EE0",
+     "sites": 1
+    },
+    {
+     "offset": 36,
+     "offset_hex": "0x24",
+     "type": "f32",
+     "name": "Reverse180",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4D5EE0",
+     "sites": 1
+    },
+    {
+     "offset": 40,
+     "offset_hex": "0x28",
+     "type": "f32",
+     "name": "Pitch",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4D5EE0",
+     "sites": 1
+    },
+    {
+     "offset": 44,
+     "offset_hex": "0x2C",
+     "type": "f32",
+     "name": "Roll",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4D5EE0",
+     "sites": 1
+    }
+   ]
+  },
+  "vehStuck": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 1662,
+   "size": 84,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 76,
+   "size_lower_bound_hex": "0x4C",
+   "base": "asNode",
+   "base_size": 24,
+   "bytes_accounted_for": 48,
+   "highest_byte_touched": 76,
+   "coverage_pct": 57.1,
+   "evidence": [
+    "datParser"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x54 (lower bound 0x4C)",
+    "first own field 0x2C is at or past base end 0x18"
+   ],
+   "source_functions": [
+    "0x4D6510"
+   ],
+   "named_fields": 6,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 44,
+     "offset_hex": "0x2C",
+     "type": "f32",
+     "name": "TimeThresh",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4D6510",
+     "sites": 1
+    },
+    {
+     "offset": 48,
+     "offset_hex": "0x30",
+     "type": "f32",
+     "name": "PosThresh",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4D6510",
+     "sites": 1
+    },
+    {
+     "offset": 52,
+     "offset_hex": "0x34",
+     "type": "f32",
+     "name": "MoveThresh",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4D6510",
+     "sites": 1
+    },
+    {
+     "offset": 64,
+     "offset_hex": "0x40",
+     "type": "f32",
+     "name": "Turn",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4D6510",
+     "sites": 1
+    },
+    {
+     "offset": 68,
+     "offset_hex": "0x44",
+     "type": "f32",
+     "name": "Rotation",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4D6510",
+     "sites": 1
+    },
+    {
+     "offset": 72,
+     "offset_hex": "0x48",
+     "type": "f32",
+     "name": "Translation",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4D6510",
+     "sites": 1
+    }
+   ]
+  },
+  "vehSuspension": {
+   "kind": "struct",
+   "confidence": "PROBABLE",
+   "already_known": false,
+   "code_bytes": 544,
+   "size": 136,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 136,
+   "size_lower_bound_hex": "0x88",
+   "base": "asNode",
+   "base_size": 24,
+   "bytes_accounted_for": 28,
+   "highest_byte_touched": 136,
+   "coverage_pct": 20.6,
+   "evidence": [
+    "datParser"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x88 (lower bound 0x88)",
+    "first own field 0x84 is at or past base end 0x18"
+   ],
+   "source_functions": [
+    "0x4D9920"
+   ],
+   "named_fields": 1,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 132,
+     "offset_hex": "0x84",
+     "type": "i32",
+     "name": "Mode",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4D9920",
+     "sites": 1
+    }
+   ]
+  },
+  "vehTrailer": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_known": false,
+   "code_bytes": 3993,
+   "size": 4152,
+   "size_confirmed_by": "MM2Hook sizeof",
+   "size_note": null,
+   "size_lower_bound": 836,
+   "size_lower_bound_hex": "0x344",
+   "base": "dgPhysEntity",
+   "base_size": 180,
+   "bytes_accounted_for": 268,
+   "highest_byte_touched": 836,
+   "coverage_pct": 6.5,
+   "evidence": [
+    "datParser",
+    "memcpy"
+   ],
+   "corroboration": [
+    "fits MM2Hook sizeof 0x1038 (lower bound 0x344)",
+    "first own field 0x1B0 is at or past base end 0xB4"
+   ],
+   "source_functions": [
+    "0x4D79C0",
+    "0x4D7CB0"
+   ],
+   "named_fields": 4,
+   "conflicts": [],
+   "dropped_unverified_findings": 0,
+   "members": [
+    {
+     "offset": 432,
+     "offset_hex": "0x1B0",
+     "type": null,
+     "name": "field_1B0",
+     "recovered_name": false,
+     "count": 0,
+     "width": 48,
+     "evidence": "memcpy",
+     "source_fn": "0x4D79C0",
+     "sites": 2
+    },
+    {
+     "offset": 784,
+     "offset_hex": "0x310",
+     "type": "f32",
+     "name": "Mass",
+     "recovered_name": true,
+     "count": 0,
+     "width": 4,
+     "evidence": "datParser",
+     "source_fn": "0x4D7CB0",
+     "sites": 1
+    },
+    {
+     "offset": 788,
+     "offset_hex": "0x314",
+     "type": "Vector3",
+     "name": "InertiaBox",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "datParser",
+     "source_fn": "0x4D7CB0",
+     "sites": 1
+    },
+    {
+     "offset": 812,
+     "offset_hex": "0x32C",
+     "type": "Vector3",
+     "name": "CarHitchOffset",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "datParser",
+     "source_fn": "0x4D7CB0",
+     "sites": 1
+    },
+    {
+     "offset": 824,
+     "offset_hex": "0x338",
+     "type": "Vector3",
+     "name": "TrailerHitchOffset",
+     "recovered_name": true,
+     "count": 0,
+     "width": 12,
+     "evidence": "datParser",
+     "source_fn": "0x4D7CB0",
+     "sites": 1
+    }
+   ]
+  }
+ }
+}

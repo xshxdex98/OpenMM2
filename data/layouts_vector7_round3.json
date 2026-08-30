@@ -1,0 +1,124 @@
+{
+ "_meta": {
+  "generated_by": "hand recovery, vector7 round 3 - the two matrix classes the IDB type library has no entry for at all. Both were read off raw instruction bytes with capstone 5.0.7 through tools/pe.py; neither offset nor size came from Hex-Rays.",
+  "why_this_file": "data/layouts.json is regenerated wholesale by tools/layouts.py from MM2_RE_KIT/.../_ALL_TYPES.h, which does not contain these classes, and tools/build.py re-runs tools/genheaders.py on every build. Without a layout here, a regeneration silently strips the members out of matrix33.h and matrix66.h and matrix33.cpp stops compiling. This file is how the derived layout survives that cycle: re-merge with tools/merge_layouts.py --write.",
+  "binary": "midtown2.exe, md5 e8e0da2bc2695968ecb0a8ef65ac3c67 (identical at 'PC Games/MM2/midtown2.exe' and 'C:/mm2ghidra/bin/midtown2.exe')",
+  "sources": [
+   "midtown2.exe, disassembled directly with capstone 5.0.7 through tools/pe.py",
+   "data/symbols.json - the linker map, for symbol-to-address binding; all 28 Matrix33 and Matrix66 symbols are functions, there is no static and no vftable in either class"
+  ]
+ },
+ "layouts": {
+  "Matrix33": {
+   "kind": "struct",
+   "size": 36,
+   "confidence": "CONFIRMED",
+   "note": "Three independent witnesses for the size, and no member is inferred - every one of the nine is written by ?Set@Matrix33@@QAEXABV1@@Z. SIZE: (1) ?Set@Matrix33@@QAEXABV1@@Z at 0x496230 copies exactly nine dwords through edx, +0x00 through +0x20, then `pop ebp; ret 4` - it stops at 0x24. (2) ?Inverse@Matrix33@@QAEXABV1@@Z at 0x4969D0 makes room for one local with `sub esp, 0x24`. (3) ?Inverse@Matrix33@@QAEXXZ at 0x4968B0 copies its result home with `mov ecx, 9; lea esi, [ebp-0x2c]; rep movsd`. ALL NINE SLOTS ARE FLOATS: ?Add@Matrix33@@QAEXABV1@@Z (0x496270) is nine fld/fadd/fstp dword triples over the same nine offsets, and ?Negate@Matrix33@@QAEXXZ (0x4967F0) is nine fld/fchs/fstp dword triples. NAMES ARE ROW-MAJOR, matching Matrix34: ?Dot@Matrix33@@QAEXABV1@@Z (0x496490) is instruction-for-instruction ?Dot3x3@Matrix34@@QAEXABV1@@Z, whose member names come from the IDB, over the identical nine offsets; and ?CrossProduct@Matrix33@@QAEXABVVector3@@@Z (0x496750) writes -z,y,z,-x,-y,x into +0x04,+0x08,+0x0C,+0x14,+0x18,+0x1C, which is the skew matrix of `arg1 % v` under this reading and its negation under the transposed one.",
+   "members": [
+    {
+     "offset": 0,
+     "type": "f32",
+     "name": "m00",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 4,
+     "type": "f32",
+     "name": "m01",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 8,
+     "type": "f32",
+     "name": "m02",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 12,
+     "type": "f32",
+     "name": "m10",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 16,
+     "type": "f32",
+     "name": "m11",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 20,
+     "type": "f32",
+     "name": "m12",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 24,
+     "type": "f32",
+     "name": "m20",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 28,
+     "type": "f32",
+     "name": "m21",
+     "count": 0,
+     "width": 4
+    },
+    {
+     "offset": 32,
+     "type": "f32",
+     "name": "m22",
+     "count": 0,
+     "width": 4
+    }
+   ]
+  },
+  "Matrix66": {
+   "kind": "struct",
+   "size": 144,
+   "confidence": "CONFIRMED",
+   "note": "Four Matrix33 blocks and nothing else. Every one of the eleven Matrix66 bodies (0x496A00-0x496ECF) is a fixed sequence of `lea ecx, [reg + block]` followed by a call into Matrix33, and the only four block values that ever appear are 0x00, 0x24, 0x48 and 0x6C - no body touches a float or any other offset. SIZE: ?Inverse@Matrix66@@QAEXXZ at 0x496D00 allocates a whole one with `sub esp, 0x90`, and ?Set@Matrix66@@QAEXABV1@@Z (0x496A00) passes arg+0x00/+0x24/+0x48/+0x6C as the four arguments of ?Set@Matrix66@@QAEXABVMatrix33@@000@Z, which stores them to this+0x00/+0x24/+0x48/+0x6C - the four blocks tile 0x90 exactly with no gap. See the per-member evidence for which block is which.",
+   "members": [
+    {
+     "offset": 0,
+     "type": "Matrix33",
+     "name": "m00",
+     "count": 0,
+     "width": 36,
+     "evidence": "?Dot@Matrix66@@QAEXABV1@@Z (0x496B80) builds the first result block as (this+0x00 * arg1+0x00) + (this+0x24 * arg1+0x48) - the 2x2 block product C00 = A00*B00 + A01*B10."
+    },
+    {
+     "offset": 36,
+     "type": "Matrix33",
+     "name": "m01",
+     "count": 0,
+     "width": 36,
+     "evidence": "the second operand of that same product, so +0x24 is the (0,1) block; ?Transpose@Matrix66@@QAEXABV1@@Z (0x496CC0) independently fills +0x24 from arg1+0x48."
+    },
+    {
+     "offset": 72,
+     "type": "Matrix33",
+     "name": "m10",
+     "count": 0,
+     "width": 36,
+     "evidence": "?Transpose@Matrix66@@QAEXABV1@@Z fills +0x48 from arg1+0x24, the mirror of the line above; ?Dot@Matrix66 uses it as the (1,0) block."
+    },
+    {
+     "offset": 108,
+     "type": "Matrix33",
+     "name": "m11",
+     "count": 0,
+     "width": 36,
+     "evidence": "?Transpose@Matrix66@@QAEXXZ (0x496C70) transposes +0x00 and +0x6C in place and swaps +0x24 with +0x48, so +0x00 and +0x6C are the diagonal blocks."
+    }
+   ]
+  }
+ }
+}

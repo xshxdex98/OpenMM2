@@ -1,0 +1,13 @@
+{
+ "_comment": [
+  "The UI/HUD resolution scaling work from docs/ui_scaling.md. tools/build.py merges every",
+  "data/ported_*.json into data/ported.json before it compiles, so this file is the record of",
+  "what ui/uiscale.h has been applied to. Progress and open gaps: docs/ui_scaling_progress.md."
+ ],
+ "ported": [
+  "?CreateLocFont@mmText@@SAPAXPBULocString@@H@Z",
+  "?Init@mmTextNode@@QAEXHHHHHH@Z",
+  "?Read@MArray@@QAEXPAD@Z",
+  "?Read@WArray@@QAEXPAD@Z"
+ ]
+}

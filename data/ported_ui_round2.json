@@ -1,0 +1,32 @@
+{
+ "_comment": [
+  "Round two of the UI/HUD resolution scaling work from docs/ui_scaling.md - fix 3, the one the",
+  "first pass deliberately left alone. tools/build.py merges every data/ported_*.json into",
+  "data/ported.json before it compiles, so this file and the sources below are one unit: if a",
+  "build rejects either, both belong in wip/ together.",
+  "",
+  "?Create@gfxBitmap@@SAPAV1@PAVgfxImage@@_N@Z  -> code/midtown2/gfx/gfxbitmap.cpp",
+  "  Resamples a decoded UI image to the screen scale before the surface is built, so",
+  "  gfxBitmap::Width and Height report the scaled size and the ~40 still-assembly callers that",
+  "  lay out from them follow along untouched.",
+  "",
+  "?CopyBitmap@gfxPipeline@@SAXHHPAVgfxBitmap@@HHHH_N@Z -> code/midtown2/gfx/gfxpipeline.cpp",
+  "  Unchanged BltFast for every caller whose source rectangle fits its bitmap. A rectangle that",
+  "  does NOT fit is rejected outright by BltFast today and draws nothing - that is asUnderlay::Cull",
+  "  and the missing menu background at 1440p - so it is read as a destination extent and stretched.",
+  "",
+  "BOTH ARE ALREADY PRESENT IN data/ported.json, so merge_ported will report them as duplicates.",
+  "That message is about a second REGISTRATION, not a second definition, and nothing is lost:",
+  "merge_ported starts from data/ported.json and skips what it has already seen. This file was",
+  "written, merged by a concurrent build, and then went missing from data/ while that build ran;",
+  "it is restored here because the registration and the sources are supposed to travel together,",
+  "and because data/ported.json is the shared file this work is not supposed to own. If the",
+  "duplicate warning is unwanted, deleting THIS file is safe today and only costs the record.",
+  "",
+  "Progress and open gaps: docs/ui_scaling_progress.md."
+ ],
+ "ported": [
+  "?CopyBitmap@gfxPipeline@@SAXHHPAVgfxBitmap@@HHHH_N@Z",
+  "?Create@gfxBitmap@@SAPAV1@PAVgfxImage@@_N@Z"
+ ]
+}

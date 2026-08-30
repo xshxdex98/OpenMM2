@@ -1,0 +1,16 @@
+{
+    "_comment": [
+        "gfxTexture accessors, with both the decompilation in MM2_RE_KIT and the machine code at the",
+        "recorded addresses checked against each other.",
+        "",
+        "GetColor (?GetColor@gfxTexture@@QBEIXZ, 0x0045D180) is DELIBERATELY NOT HERE. Its body really is",
+        "the four bytes `mov eax, [ecx+0x10] / ret`, but the extent in data/symbols.json runs to 128",
+        "bytes and something in .data points at 0x0045D190, inside that range. Build gate 6 rejects it,",
+        "and correctly: stripping the recorded extent would delete code that is still referenced. It",
+        "becomes portable once the extent is narrowed to the real four bytes, not before."
+    ],
+    "ported": [
+        "?SetTexEnv@gfxTexture@@QAEXI@Z",
+        "?MarkFirstUse@gfxTexture@@AAEXXZ"
+    ]
+}

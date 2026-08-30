@@ -1,0 +1,3552 @@
+{
+ "mmGameManager": {
+  "vftable_rva": 5964648,
+  "slots": 13,
+  "own_slots": 4,
+  "inherited": {
+   "asNode": 9
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "mmPlayer": {
+  "vftable_rva": 5964724,
+  "slots": 13,
+  "own_slots": 6,
+  "inherited": {
+   "asNode": 6,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "mmReplayManager": {
+  "vftable_rva": 5964868,
+  "slots": 13,
+  "own_slots": 4,
+  "inherited": {
+   "asNode": 9
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "mmInterface": {
+  "vftable_rva": 5964976,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "mmGame": {
+  "vftable_rva": 5965056,
+  "slots": 29,
+  "own_slots": 11,
+  "inherited": {
+   "asNode": 8,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "mmSingleStunt": {
+  "vftable_rva": 5965212,
+  "slots": 29,
+  "own_slots": 14,
+  "inherited": {
+   "asNode": 8,
+   "mmGame": 5,
+   "asCullable": 1,
+   "mmGameSingle": 1
+  },
+  "first_base": "asCullable",
+  "base": "mmGameSingle"
+ },
+ "mmSingleRaceMusicData": {
+  "vftable_rva": 5965328,
+  "slots": 1,
+  "own_slots": 1,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "mmGameMusicData": {
+  "vftable_rva": 5965332,
+  "slots": 1,
+  "own_slots": 1,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "mmPlayerRecord": {
+  "vftable_rva": 5965356,
+  "slots": 2,
+  "own_slots": 1,
+  "inherited": {
+   "mmInfoBase": 1
+  },
+  "first_base": "mmInfoBase",
+  "base": "mmInfoBase"
+ },
+ "mmInfoBase": {
+  "vftable_rva": 5965364,
+  "slots": 2,
+  "own_slots": 2,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "Base": {
+  "vftable_rva": 5965372,
+  "slots": 1,
+  "own_slots": 1,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "mmSingleBlitz": {
+  "vftable_rva": 5965388,
+  "slots": 29,
+  "own_slots": 15,
+  "inherited": {
+   "asNode": 8,
+   "mmGame": 5,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "mmGame"
+ },
+ "mmSingleCircuit": {
+  "vftable_rva": 5965516,
+  "slots": 29,
+  "own_slots": 15,
+  "inherited": {
+   "asNode": 8,
+   "mmGame": 5,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "mmGame"
+ },
+ "mmSingleRace": {
+  "vftable_rva": 5965644,
+  "slots": 29,
+  "own_slots": 15,
+  "inherited": {
+   "asNode": 8,
+   "mmGame": 5,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "mmGame"
+ },
+ "mmSingleRoam": {
+  "vftable_rva": 5965772,
+  "slots": 29,
+  "own_slots": 14,
+  "inherited": {
+   "asNode": 8,
+   "mmGame": 5,
+   "asCullable": 1,
+   "mmGameSingle": 1
+  },
+  "first_base": "asCullable",
+  "base": "mmGameSingle"
+ },
+ "mmSingleRoamMusicData": {
+  "vftable_rva": 5965888,
+  "slots": 1,
+  "own_slots": 1,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "mmMultiBlitz": {
+  "vftable_rva": 5965904,
+  "slots": 33,
+  "own_slots": 13,
+  "inherited": {
+   "mmGameMulti": 10,
+   "asNode": 8,
+   "asCullable": 1,
+   "mmGame": 1
+  },
+  "first_base": "asCullable",
+  "base": "mmGameMulti"
+ },
+ "mmMultiCircuit": {
+  "vftable_rva": 5966060,
+  "slots": 33,
+  "own_slots": 13,
+  "inherited": {
+   "mmGameMulti": 9,
+   "asNode": 8,
+   "asCullable": 1,
+   "mmGame": 1
+  },
+  "first_base": "asCullable",
+  "base": "mmGameMulti"
+ },
+ "mmMultiCR": {
+  "vftable_rva": 5966208,
+  "slots": 33,
+  "own_slots": 16,
+  "inherited": {
+   "asNode": 8,
+   "mmGameMulti": 7,
+   "asCullable": 1,
+   "mmGame": 1
+  },
+  "first_base": "asCullable",
+  "base": "mmGameMulti"
+ },
+ "mmMultiRoam": {
+  "vftable_rva": 5966368,
+  "slots": 33,
+  "own_slots": 13,
+  "inherited": {
+   "mmGameMulti": 10,
+   "asNode": 8,
+   "asCullable": 1,
+   "mmGame": 1
+  },
+  "first_base": "asCullable",
+  "base": "mmGameMulti"
+ },
+ "mmMultiRace": {
+  "vftable_rva": 5966512,
+  "slots": 33,
+  "own_slots": 13,
+  "inherited": {
+   "mmGameMulti": 10,
+   "asNode": 8,
+   "asCullable": 1,
+   "mmGame": 1
+  },
+  "first_base": "asCullable",
+  "base": "mmGameMulti"
+ },
+ "mmPopup": {
+  "vftable_rva": 5966660,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "mmMirror": {
+  "vftable_rva": 5966716,
+  "slots": 13,
+  "own_slots": 6,
+  "inherited": {
+   "asNode": 7
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "vehCar": {
+  "vftable_rva": 5966768,
+  "slots": 10,
+  "own_slots": 7,
+  "inherited": {
+   "dgPhysEntity": 3
+  },
+  "first_base": "dgPhysEntity",
+  "base": "dgPhysEntity"
+ },
+ "dgPhysEntity": {
+  "vftable_rva": 5966808,
+  "slots": 10,
+  "own_slots": 7,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "mmHUD": {
+  "vftable_rva": 5966880,
+  "slots": 13,
+  "own_slots": 6,
+  "inherited": {
+   "asNode": 7
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "mmTimer": {
+  "vftable_rva": 5966968,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "mmArrow": {
+  "vftable_rva": 5967020,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "mmHudMap": {
+  "vftable_rva": 5967104,
+  "slots": 13,
+  "own_slots": 6,
+  "inherited": {
+   "asNode": 7
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "mmCarRoadFF": {
+  "vftable_rva": 5967160,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "mmDashView": {
+  "vftable_rva": 5967224,
+  "slots": 14,
+  "own_slots": 8,
+  "inherited": {
+   "asNode": 6
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "mmExternalView": {
+  "vftable_rva": 5967280,
+  "slots": 14,
+  "own_slots": 6,
+  "inherited": {
+   "asNode": 8
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "mmViewMgr": {
+  "vftable_rva": 5967336,
+  "slots": 13,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "mmIcons": {
+  "vftable_rva": 5967388,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 10
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "mmCDPlayer": {
+  "vftable_rva": 5967468,
+  "slots": 13,
+  "own_slots": 4,
+  "inherited": {
+   "asNode": 9
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "mmGameSingle": {
+  "vftable_rva": 5967536,
+  "slots": 29,
+  "own_slots": 10,
+  "inherited": {
+   "asNode": 8,
+   "mmGame": 5,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "mmGame"
+ },
+ "mmWaypoints": {
+  "vftable_rva": 5967668,
+  "slots": 13,
+  "own_slots": 4,
+  "inherited": {
+   "asNode": 9
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "mmWPHUD": {
+  "vftable_rva": 5967732,
+  "slots": 14,
+  "own_slots": 5,
+  "inherited": {
+   "asNode": 9
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "mmGameHUD": {
+  "vftable_rva": 5967788,
+  "slots": 14,
+  "own_slots": 1,
+  "inherited": {
+   "asNode": 11,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "mmCircuitHUD": {
+  "vftable_rva": 5967844,
+  "slots": 14,
+  "own_slots": 4,
+  "inherited": {
+   "asNode": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "mmCRHUD": {
+  "vftable_rva": 5967904,
+  "slots": 14,
+  "own_slots": 4,
+  "inherited": {
+   "asNode": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "mmCollideHUD": {
+  "vftable_rva": 5967972,
+  "slots": 14,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 9,
+   "mmWPHUD": 2
+  },
+  "first_base": "mmWPHUD",
+  "base": "mmWPHUD"
+ },
+ "mmGameMulti": {
+  "vftable_rva": 5968040,
+  "slots": 33,
+  "own_slots": 14,
+  "inherited": {
+   "asNode": 8,
+   "asCullable": 1,
+   "mmGame": 1
+  },
+  "first_base": "asCullable",
+  "base": "mmGame"
+ },
+ "mmNetObject": {
+  "vftable_rva": 5968184,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 10
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "mmWaypointObject": {
+  "vftable_rva": 5968256,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "RadialGauge": {
+  "vftable_rva": 5968308,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 10
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "mmWaypointInstance": {
+  "vftable_rva": 5968360,
+  "slots": 27,
+  "own_slots": 4,
+  "inherited": {
+   "lvlInstance": 20
+  },
+  "first_base": "lvlInstance",
+  "base": "lvlInstance"
+ },
+ "mmCheckpointInstance": {
+  "vftable_rva": 5968468,
+  "slots": 27,
+  "own_slots": 3,
+  "inherited": {
+   "lvlInstance": 20,
+   "mmWaypointInstance": 4
+  },
+  "first_base": "lvlInstance",
+  "base": "mmWaypointInstance"
+ },
+ "mmBillInstance": {
+  "vftable_rva": 5968576,
+  "slots": 27,
+  "own_slots": 3,
+  "inherited": {
+   "lvlInstance": 20,
+   "mmWaypointInstance": 4
+  },
+  "first_base": "lvlInstance",
+  "base": "mmWaypointInstance"
+ },
+ "mmPowerupInstance": {
+  "vftable_rva": 5968684,
+  "slots": 27,
+  "own_slots": 3,
+  "inherited": {
+   "lvlInstance": 20,
+   "mmWaypointInstance": 4
+  },
+  "first_base": "lvlInstance",
+  "base": "mmWaypointInstance"
+ },
+ "dgBangerActive": {
+  "vftable_rva": 5968792,
+  "slots": 10,
+  "own_slots": 6,
+  "inherited": {
+   "dgPhysEntity": 4
+  },
+  "first_base": "dgPhysEntity",
+  "base": "dgPhysEntity"
+ },
+ "dgBangerActiveManager": {
+  "vftable_rva": 5968836,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "dgBangerDataManager": {
+  "vftable_rva": 5968888,
+  "slots": 13,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "ptxGlassBirthRules": {
+  "vftable_rva": 5968940,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "dgBangerData": {
+  "vftable_rva": 5968992,
+  "slots": 13,
+  "own_slots": 5,
+  "inherited": {
+   "asNode": 7,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "dgUnhitMtxBangerInstance": {
+  "vftable_rva": 5969044,
+  "slots": 30,
+  "own_slots": 4,
+  "inherited": {
+   "dgBangerInstance": 12,
+   "lvlInstance": 10,
+   "dgUnhitBangerInstance": 4
+  },
+  "first_base": "dgUnhitBangerInstance",
+  "base": "dgUnhitBangerInstance"
+ },
+ "dgUnhitYBangerInstance": {
+  "vftable_rva": 5969164,
+  "slots": 30,
+  "own_slots": 4,
+  "inherited": {
+   "dgBangerInstance": 12,
+   "lvlInstance": 10,
+   "dgUnhitBangerInstance": 4
+  },
+  "first_base": "dgUnhitBangerInstance",
+  "base": "dgUnhitBangerInstance"
+ },
+ "dgBangerManager": {
+  "vftable_rva": 5969284,
+  "slots": 13,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "dgHitBangerInstance": {
+  "vftable_rva": 5969336,
+  "slots": 28,
+  "own_slots": 5,
+  "inherited": {
+   "dgBangerInstance": 12,
+   "lvlInstance": 11
+  },
+  "first_base": "lvlInstance",
+  "base": "dgBangerInstance"
+ },
+ "dgGlassInstance": {
+  "vftable_rva": 5969448,
+  "slots": 30,
+  "own_slots": 5,
+  "inherited": {
+   "lvlInstance": 10,
+   "dgBangerInstance": 10,
+   "dgUnhitMtxBangerInstance": 3,
+   "dgUnhitBangerInstance": 2
+  },
+  "first_base": "dgUnhitMtxBangerInstance",
+  "base": "dgUnhitMtxBangerInstance"
+ },
+ "cityLevel": {
+  "vftable_rva": 5969568,
+  "slots": 23,
+  "own_slots": 20,
+  "inherited": {
+   "lvlLevel": 2,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "lvlLevel"
+ },
+ "dgRoadDecalInstance": {
+  "vftable_rva": 5969660,
+  "slots": 26,
+  "own_slots": 6,
+  "inherited": {
+   "lvlInstance": 20
+  },
+  "first_base": "lvlInstance",
+  "base": "lvlInstance"
+ },
+ "datAsciiTokenizer": {
+  "vftable_rva": 5969784,
+  "slots": 19,
+  "own_slots": 18,
+  "inherited": {
+   "datBaseTokenizer": 1
+  },
+  "first_base": "datBaseTokenizer",
+  "base": "datBaseTokenizer"
+ },
+ "sdlCommon": {
+  "vftable_rva": 5969868,
+  "slots": 32,
+  "own_slots": 4,
+  "inherited": {
+   "lvlLevelBound": 14,
+   "phBound": 11
+  },
+  "first_base": "phBound",
+  "base": "lvlLevelBound"
+ },
+ "lvlSDL": {
+  "vftable_rva": 5970024,
+  "slots": 32,
+  "own_slots": 5,
+  "inherited": {
+   "lvlLevelBound": 13,
+   "phBound": 10,
+   "sdlCommon": 4
+  },
+  "first_base": "phBound",
+  "base": "sdlCommon"
+ },
+ "asBirthRule": {
+  "vftable_rva": 5970168,
+  "slots": 13,
+  "own_slots": 4,
+  "inherited": {
+   "asNode": 8,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "fxShardManager": {
+  "vftable_rva": 5970224,
+  "slots": 13,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "asLineSparks": {
+  "vftable_rva": 5970280,
+  "slots": 2,
+  "own_slots": 1,
+  "inherited": {
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asCullable"
+ },
+ "asParticles": {
+  "vftable_rva": 5970292,
+  "slots": 2,
+  "own_slots": 2,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "lvlInstance": {
+  "vftable_rva": 5970312,
+  "slots": 26,
+  "own_slots": 21,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "lvlSky": {
+  "vftable_rva": 5970420,
+  "slots": 7,
+  "own_slots": 6,
+  "inherited": {
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asCullable"
+ },
+ "lvlLevel": {
+  "vftable_rva": 5970460,
+  "slots": 23,
+  "own_slots": 9,
+  "inherited": {
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asCullable"
+ },
+ "lvlLandmark": {
+  "vftable_rva": 5970568,
+  "slots": 26,
+  "own_slots": 5,
+  "inherited": {
+   "lvlInstance": 13,
+   "lvlFixedAny": 5,
+   "lvlFixedRotY": 3
+  },
+  "first_base": "lvlInstance",
+  "base": "lvlFixedRotY"
+ },
+ "lvlMaterial": {
+  "vftable_rva": 5970680,
+  "slots": 3,
+  "own_slots": 1,
+  "inherited": {
+   "phMaterial": 2
+  },
+  "first_base": "phMaterial",
+  "base": "phMaterial"
+ },
+ "lvlMaterialMgr": {
+  "vftable_rva": 5970692,
+  "slots": 2,
+  "own_slots": 1,
+  "inherited": {
+   "phMaterialMgr": 1
+  },
+  "first_base": "phMaterialMgr",
+  "base": "phMaterialMgr"
+ },
+ "dgPathSet": {
+  "vftable_rva": 5970700,
+  "slots": 1,
+  "own_slots": 1,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "lvlFixedAny": {
+  "vftable_rva": 5970704,
+  "slots": 26,
+  "own_slots": 6,
+  "inherited": {
+   "lvlInstance": 16
+  },
+  "first_base": "lvlInstance",
+  "base": "lvlInstance"
+ },
+ "lvlFixedRotY": {
+  "vftable_rva": 5970808,
+  "slots": 26,
+  "own_slots": 5,
+  "inherited": {
+   "lvlInstance": 15,
+   "lvlFixedAny": 6
+  },
+  "first_base": "lvlInstance",
+  "base": "lvlFixedAny"
+ },
+ "lvlFixedMatrix": {
+  "vftable_rva": 5970912,
+  "slots": 26,
+  "own_slots": 5,
+  "inherited": {
+   "lvlInstance": 15,
+   "lvlFixedAny": 6
+  },
+  "first_base": "lvlInstance",
+  "base": "lvlFixedAny"
+ },
+ "lvlMultiRoomInstance": {
+  "vftable_rva": 5971016,
+  "slots": 26,
+  "own_slots": 12,
+  "inherited": {
+   "lvlInstance": 14
+  },
+  "first_base": "lvlInstance",
+  "base": "lvlInstance"
+ },
+ "phCollider": {
+  "vftable_rva": 5971120,
+  "slots": 7,
+  "own_slots": 0,
+  "inherited": {
+   "phColliderBase": 7
+  },
+  "first_base": "phColliderBase",
+  "base": "phColliderBase"
+ },
+ "phColliderBase": {
+  "vftable_rva": 5971148,
+  "slots": 7,
+  "own_slots": 7,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "dgPhysManager": {
+  "vftable_rva": 5971212,
+  "slots": 2,
+  "own_slots": 1,
+  "inherited": {
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asCullable"
+ },
+ "phPhysicsManager": {
+  "vftable_rva": 5971220,
+  "slots": 9,
+  "own_slots": 0,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "dgBoundGeometry": {
+  "vftable_rva": 5971260,
+  "slots": 23,
+  "own_slots": 4,
+  "inherited": {
+   "phBoundPolygonal": 10,
+   "phBound": 6,
+   "phBoundGeometry": 3
+  },
+  "first_base": "phBoundPolygonal",
+  "base": "phBoundGeometry"
+ },
+ "dgBoundBox": {
+  "vftable_rva": 5971352,
+  "slots": 22,
+  "own_slots": 4,
+  "inherited": {
+   "phBoundPolygonal": 6,
+   "phBound": 6,
+   "phBoundBox": 6
+  },
+  "first_base": "phBoundPolygonal",
+  "base": "phBoundBox"
+ },
+ "dgBoundHotdog": {
+  "vftable_rva": 5971444,
+  "slots": 17,
+  "own_slots": 4,
+  "inherited": {
+   "phBound": 8,
+   "phBoundHotdog": 5
+  },
+  "first_base": "phBound",
+  "base": "phBoundHotdog"
+ },
+ "dgBoundSphere": {
+  "vftable_rva": 5971512,
+  "slots": 17,
+  "own_slots": 4,
+  "inherited": {
+   "phBound": 7,
+   "phBoundSphere": 6
+  },
+  "first_base": "phBound",
+  "base": "phBoundSphere"
+ },
+ "phColliderJointed": {
+  "vftable_rva": 5971596,
+  "slots": 7,
+  "own_slots": 7,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "phBoundBox": {
+  "vftable_rva": 5972224,
+  "slots": 22,
+  "own_slots": 7,
+  "inherited": {
+   "phBound": 9,
+   "phBoundPolygonal": 6
+  },
+  "first_base": "phBoundPolygonal",
+  "base": "phBoundPolygonal"
+ },
+ "phBoundPolygonal": {
+  "vftable_rva": 5972312,
+  "slots": 22,
+  "own_slots": 10,
+  "inherited": {
+   "phBound": 9
+  },
+  "first_base": "phBound",
+  "base": "phBound"
+ },
+ "phBoundHotdog": {
+  "vftable_rva": 5972408,
+  "slots": 17,
+  "own_slots": 6,
+  "inherited": {
+   "phBound": 11
+  },
+  "first_base": "phBound",
+  "base": "phBound"
+ },
+ "phBoundSphere": {
+  "vftable_rva": 5972484,
+  "slots": 17,
+  "own_slots": 7,
+  "inherited": {
+   "phBound": 10
+  },
+  "first_base": "phBound",
+  "base": "phBound"
+ },
+ "phBoundGeometry": {
+  "vftable_rva": 5972552,
+  "slots": 23,
+  "own_slots": 4,
+  "inherited": {
+   "phBoundPolygonal": 10,
+   "phBound": 9
+  },
+  "first_base": "phBoundPolygonal",
+  "base": "phBoundPolygonal"
+ },
+ "datBaseTokenizer": {
+  "vftable_rva": 5972644,
+  "slots": 19,
+  "own_slots": 1,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "phBound": {
+  "vftable_rva": 5972720,
+  "slots": 17,
+  "own_slots": 12,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "phBoundTerrain": {
+  "vftable_rva": 5972804,
+  "slots": 23,
+  "own_slots": 6,
+  "inherited": {
+   "phBound": 9,
+   "phBoundPolygonal": 5,
+   "phBoundGeometry": 3
+  },
+  "first_base": "phBoundPolygonal",
+  "base": "phBoundGeometry"
+ },
+ "phBoundTerrainLocal": {
+  "vftable_rva": 5972900,
+  "slots": 23,
+  "own_slots": 0,
+  "inherited": {
+   "phBound": 9,
+   "phBoundTerrain": 6,
+   "phBoundPolygonal": 5,
+   "phBoundGeometry": 3
+  },
+  "first_base": "phBoundPolygonal",
+  "base": "phBoundTerrain"
+ },
+ "phMaterial": {
+  "vftable_rva": 5972996,
+  "slots": 3,
+  "own_slots": 3,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "phMaterialMgr": {
+  "vftable_rva": 5973008,
+  "slots": 2,
+  "own_slots": 2,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "asRoot": {
+  "vftable_rva": 5974196,
+  "slots": 13,
+  "own_slots": 4,
+  "inherited": {
+   "asNode": 8,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "asNode": {
+  "vftable_rva": 5974248,
+  "slots": 13,
+  "own_slots": 12,
+  "inherited": {
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asCullable"
+ },
+ "asCullManager": {
+  "vftable_rva": 5974300,
+  "slots": 17,
+  "own_slots": 7,
+  "inherited": {
+   "asNode": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "eqEventHandler": {
+  "vftable_rva": 5974368,
+  "slots": 1,
+  "own_slots": 1,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "eqEventMonitor": {
+  "vftable_rva": 5974372,
+  "slots": 3,
+  "own_slots": 3,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "asUnderlay": {
+  "vftable_rva": 5974384,
+  "slots": 2,
+  "own_slots": 2,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "asCamera": {
+  "vftable_rva": 5974392,
+  "slots": 13,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "asLinearCS": {
+  "vftable_rva": 5974444,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 10
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "eqEventQ": {
+  "vftable_rva": 5974496,
+  "slots": 3,
+  "own_slots": 3,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "AgeDevice": {
+  "vftable_rva": 5974580,
+  "slots": 50,
+  "own_slots": 50,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "winDispatchable": {
+  "vftable_rva": 5974780,
+  "slots": 2,
+  "own_slots": 1,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "datBinTokenizer": {
+  "vftable_rva": 5974900,
+  "slots": 19,
+  "own_slots": 18,
+  "inherited": {
+   "datBaseTokenizer": 1
+  },
+  "first_base": "datBaseTokenizer",
+  "base": "datBaseTokenizer"
+ },
+ "datTokenizer": {
+  "vftable_rva": 5974976,
+  "slots": 19,
+  "own_slots": 0,
+  "inherited": {
+   "datAsciiTokenizer": 18,
+   "datBaseTokenizer": 1
+  },
+  "first_base": "datAsciiTokenizer",
+  "base": "datAsciiTokenizer"
+ },
+ "vehCarDamage": {
+  "vftable_rva": 5975080,
+  "slots": 14,
+  "own_slots": 7,
+  "inherited": {
+   "asNode": 6,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "vehCarSim": {
+  "vftable_rva": 5975156,
+  "slots": 13,
+  "own_slots": 6,
+  "inherited": {
+   "asNode": 6,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "vehCarModel": {
+  "vftable_rva": 5975216,
+  "slots": 26,
+  "own_slots": 13,
+  "inherited": {
+   "lvlInstance": 13
+  },
+  "first_base": "lvlInstance",
+  "base": "lvlInstance"
+ },
+ "vehTransmission": {
+  "vftable_rva": 5975340,
+  "slots": 13,
+  "own_slots": 5,
+  "inherited": {
+   "asNode": 7,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "aiAmbientVehicleAudio": {
+  "vftable_rva": 5975412,
+  "slots": 6,
+  "own_slots": 3,
+  "inherited": {
+   "Aud3DObject": 3
+  },
+  "first_base": "Aud3DObject",
+  "base": "Aud3DObject"
+ },
+ "vehWheelPtx": {
+  "vftable_rva": 5975448,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "vehWheel": {
+  "vftable_rva": 5975500,
+  "slots": 13,
+  "own_slots": 5,
+  "inherited": {
+   "asNode": 7,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "vehPoliceCarAudio": {
+  "vftable_rva": 5975576,
+  "slots": 6,
+  "own_slots": 6,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "vehFeedback": {
+  "vftable_rva": 5975644,
+  "slots": 10,
+  "own_slots": 10,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "vehGyro": {
+  "vftable_rva": 5975684,
+  "slots": 13,
+  "own_slots": 5,
+  "inherited": {
+   "asNode": 7,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "vehStuck": {
+  "vftable_rva": 5975736,
+  "slots": 13,
+  "own_slots": 6,
+  "inherited": {
+   "asNode": 6,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "vehSplash": {
+  "vftable_rva": 5975788,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "vehTrailer": {
+  "vftable_rva": 5975900,
+  "slots": 10,
+  "own_slots": 6,
+  "inherited": {
+   "dgPhysEntity": 4
+  },
+  "first_base": "dgPhysEntity",
+  "base": "dgPhysEntity"
+ },
+ "vehTrailerInstance": {
+  "vftable_rva": 5975940,
+  "slots": 26,
+  "own_slots": 10,
+  "inherited": {
+   "lvlInstance": 16
+  },
+  "first_base": "lvlInstance",
+  "base": "lvlInstance"
+ },
+ "vehEngine": {
+  "vftable_rva": 5976044,
+  "slots": 13,
+  "own_slots": 5,
+  "inherited": {
+   "asNode": 7,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "vehAero": {
+  "vftable_rva": 5976116,
+  "slots": 13,
+  "own_slots": 4,
+  "inherited": {
+   "asNode": 8,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "vehSuspension": {
+  "vftable_rva": 5976168,
+  "slots": 13,
+  "own_slots": 4,
+  "inherited": {
+   "asNode": 8,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "vehAxle": {
+  "vftable_rva": 5976220,
+  "slots": 13,
+  "own_slots": 4,
+  "inherited": {
+   "asNode": 8,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "vehDrivetrain": {
+  "vftable_rva": 5976272,
+  "slots": 13,
+  "own_slots": 5,
+  "inherited": {
+   "asNode": 7,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "vehBound": {
+  "vftable_rva": 5976336,
+  "slots": 23,
+  "own_slots": 2,
+  "inherited": {
+   "phBoundPolygonal": 10,
+   "phBound": 7,
+   "phBoundGeometry": 4
+  },
+  "first_base": "phBoundPolygonal",
+  "base": "phBoundGeometry"
+ },
+ "vehCarAudio": {
+  "vftable_rva": 5976464,
+  "slots": 6,
+  "own_slots": 6,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "vehSemiCarAudio": {
+  "vftable_rva": 5976500,
+  "slots": 6,
+  "own_slots": 6,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "vehNitroCarAudio": {
+  "vftable_rva": 5976536,
+  "slots": 6,
+  "own_slots": 6,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "UIMenu": {
+  "vftable_rva": 5976628,
+  "slots": 18,
+  "own_slots": 7,
+  "inherited": {
+   "asNode": 10,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "MenuManager": {
+  "vftable_rva": 5976712,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "uiNavBar": {
+  "vftable_rva": 5976776,
+  "slots": 18,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 4,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "UIMenu"
+ },
+ "UITextField": {
+  "vftable_rva": 5976848,
+  "slots": 25,
+  "own_slots": 5,
+  "inherited": {
+   "asNode": 10,
+   "uiWidget": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "uiWidget"
+ },
+ "uiWidget": {
+  "vftable_rva": 5976948,
+  "slots": 25,
+  "own_slots": 13,
+  "inherited": {
+   "asNode": 11,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "UITextDropdown": {
+  "vftable_rva": 5977056,
+  "slots": 25,
+  "own_slots": 7,
+  "inherited": {
+   "asNode": 10,
+   "uiWidget": 8
+  },
+  "first_base": "asNode",
+  "base": "uiWidget"
+ },
+ "UITextRoller": {
+  "vftable_rva": 5977164,
+  "slots": 25,
+  "own_slots": 5,
+  "inherited": {
+   "asNode": 10,
+   "uiWidget": 10
+  },
+  "first_base": "asNode",
+  "base": "uiWidget"
+ },
+ "UITextRoller2": {
+  "vftable_rva": 5977268,
+  "slots": 25,
+  "own_slots": 5,
+  "inherited": {
+   "asNode": 10,
+   "uiWidget": 10
+  },
+  "first_base": "asNode",
+  "base": "uiWidget"
+ },
+ "UITextScroll": {
+  "vftable_rva": 5977368,
+  "slots": 25,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 11,
+   "uiWidget": 10,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "uiWidget"
+ },
+ "UICompositeScroll": {
+  "vftable_rva": 5977468,
+  "slots": 25,
+  "own_slots": 6,
+  "inherited": {
+   "asNode": 9,
+   "uiWidget": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "uiWidget"
+ },
+ "UIControlWidget": {
+  "vftable_rva": 5977576,
+  "slots": 25,
+  "own_slots": 6,
+  "inherited": {
+   "asNode": 10,
+   "uiWidget": 8,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "uiWidget"
+ },
+ "UISlider": {
+  "vftable_rva": 5977676,
+  "slots": 25,
+  "own_slots": 6,
+  "inherited": {
+   "asNode": 10,
+   "uiWidget": 8,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "uiWidget"
+ },
+ "UIButton": {
+  "vftable_rva": 5977776,
+  "slots": 25,
+  "own_slots": 7,
+  "inherited": {
+   "asNode": 10,
+   "uiWidget": 7,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "uiWidget"
+ },
+ "UILabel": {
+  "vftable_rva": 5977876,
+  "slots": 25,
+  "own_slots": 4,
+  "inherited": {
+   "asNode": 10,
+   "uiWidget": 10,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "uiWidget"
+ },
+ "BMLabel": {
+  "vftable_rva": 5977976,
+  "slots": 25,
+  "own_slots": 0,
+  "inherited": {
+   "uiWidget": 12,
+   "asNode": 10,
+   "UIBMLabel": 3
+  },
+  "first_base": "UIBMLabel",
+  "base": "uiWidget"
+ },
+ "UIIcon": {
+  "vftable_rva": 5978076,
+  "slots": 25,
+  "own_slots": 4,
+  "inherited": {
+   "uiWidget": 11,
+   "asNode": 10
+  },
+  "first_base": "asNode",
+  "base": "uiWidget"
+ },
+ "UIIconW": {
+  "vftable_rva": 5978176,
+  "slots": 25,
+  "own_slots": 4,
+  "inherited": {
+   "asNode": 10,
+   "uiWidget": 10,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "uiWidget"
+ },
+ "UIToggleButton": {
+  "vftable_rva": 5978276,
+  "slots": 28,
+  "own_slots": 6,
+  "inherited": {
+   "asNode": 10,
+   "uiWidget": 7,
+   "UIButton": 4,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "UIButton"
+ },
+ "UIToggleButton2": {
+  "vftable_rva": 5978388,
+  "slots": 28,
+  "own_slots": 9,
+  "inherited": {
+   "asNode": 10,
+   "uiWidget": 7,
+   "asCullable": 1,
+   "UIButton": 1
+  },
+  "first_base": "asCullable",
+  "base": "UIButton"
+ },
+ "UIMexButton": {
+  "vftable_rva": 5978504,
+  "slots": 28,
+  "own_slots": 6,
+  "inherited": {
+   "asNode": 10,
+   "uiWidget": 7,
+   "UIToggleButton2": 3,
+   "asCullable": 1,
+   "UIButton": 1
+  },
+  "first_base": "asCullable",
+  "base": "UIToggleButton2"
+ },
+ "UIBMButton": {
+  "vftable_rva": 5978620,
+  "slots": 25,
+  "own_slots": 10,
+  "inherited": {
+   "asNode": 10,
+   "uiWidget": 5
+  },
+  "first_base": "asNode",
+  "base": "uiWidget"
+ },
+ "UICWArray": {
+  "vftable_rva": 5978720,
+  "slots": 25,
+  "own_slots": 6,
+  "inherited": {
+   "asNode": 9,
+   "uiWidget": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "uiWidget"
+ },
+ "UIVScrollBar": {
+  "vftable_rva": 5978828,
+  "slots": 25,
+  "own_slots": 8,
+  "inherited": {
+   "asNode": 10,
+   "uiWidget": 7
+  },
+  "first_base": "asNode",
+  "base": "uiWidget"
+ },
+ "sfPointer": {
+  "vftable_rva": 5978928,
+  "slots": 13,
+  "own_slots": 4,
+  "inherited": {
+   "asNode": 9
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "mmToolTip": {
+  "vftable_rva": 5978980,
+  "slots": 13,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "TextDropWidget": {
+  "vftable_rva": 5979032,
+  "slots": 13,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "mmDropDown": {
+  "vftable_rva": 5979088,
+  "slots": 13,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "VSWidget": {
+  "vftable_rva": 5979140,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 10
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "mmSlider": {
+  "vftable_rva": 5979192,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 10
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "mmToggle": {
+  "vftable_rva": 5979244,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 10
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "mmToggle2": {
+  "vftable_rva": 5979296,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 10
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "GraphicsOptions": {
+  "vftable_rva": 5979348,
+  "slots": 22,
+  "own_slots": 5,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 4,
+   "OptionsBase": 2,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "OptionsBase"
+ },
+ "VehicleSelectBase": {
+  "vftable_rva": 5979448,
+  "slots": 18,
+  "own_slots": 5,
+  "inherited": {
+   "asNode": 9,
+   "UIMenu": 3,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "UIMenu"
+ },
+ "AudioOptions": {
+  "vftable_rva": 5979548,
+  "slots": 22,
+  "own_slots": 6,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 4,
+   "asCullable": 1,
+   "OptionsBase": 1
+  },
+  "first_base": "asCullable",
+  "base": "OptionsBase"
+ },
+ "Dialog_Eject": {
+  "vftable_rva": 5979640,
+  "slots": 18,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 3,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "Dialog_City2": {
+  "vftable_rva": 5979712,
+  "slots": 18,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 3,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "Dialog_ReplayEdit": {
+  "vftable_rva": 5979784,
+  "slots": 18,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 4,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "Dialog_Replay": {
+  "vftable_rva": 5979868,
+  "slots": 18,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 3,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "Dialog_Host": {
+  "vftable_rva": 5979940,
+  "slots": 18,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 4,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "Dialog_Password": {
+  "vftable_rva": 5980012,
+  "slots": 18,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 4,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "Dialog_RaceEnvironment": {
+  "vftable_rva": 5980088,
+  "slots": 18,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 4,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "Dialog_HallOfFame": {
+  "vftable_rva": 5980160,
+  "slots": 18,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 4,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "Dialog_DriverRec": {
+  "vftable_rva": 5980236,
+  "slots": 18,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 4,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "Dialog_Message": {
+  "vftable_rva": 5980308,
+  "slots": 18,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 4,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "Dialog_NewPlayer": {
+  "vftable_rva": 5980380,
+  "slots": 18,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 4,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "Dialog_Serial": {
+  "vftable_rva": 5980452,
+  "slots": 18,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 4,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "Dialog_ControlAssign": {
+  "vftable_rva": 5980524,
+  "slots": 18,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 4,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "Dialog_TCPIP": {
+  "vftable_rva": 5980596,
+  "slots": 18,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 4,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "NetArena": {
+  "vftable_rva": 5980672,
+  "slots": 18,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 5,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "UIMenu"
+ },
+ "HostRaceMenu": {
+  "vftable_rva": 5980748,
+  "slots": 20,
+  "own_slots": 4,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 5,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "UIMenu"
+ },
+ "ControlSetup": {
+  "vftable_rva": 5980828,
+  "slots": 22,
+  "own_slots": 7,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 3,
+   "asCullable": 1,
+   "OptionsBase": 1
+  },
+  "first_base": "asCullable",
+  "base": "OptionsBase"
+ },
+ "ControlCustom": {
+  "vftable_rva": 5980916,
+  "slots": 22,
+  "own_slots": 4,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 5,
+   "OptionsBase": 2,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "OptionsBase"
+ },
+ "OptionsMenu": {
+  "vftable_rva": 5981004,
+  "slots": 18,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 4,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "UIMenu"
+ },
+ "CrashCourseIntro": {
+  "vftable_rva": 5981076,
+  "slots": 18,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 4,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "UIMenu"
+ },
+ "ccStatus": {
+  "vftable_rva": 5981148,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 10
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "CrashCourse": {
+  "vftable_rva": 5981200,
+  "slots": 18,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 5,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "UIMenu"
+ },
+ "NetSelectMenu": {
+  "vftable_rva": 5981276,
+  "slots": 18,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 4,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "UIMenu"
+ },
+ "RaceMenu": {
+  "vftable_rva": 5981348,
+  "slots": 20,
+  "own_slots": 1,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 5,
+   "RaceMenuBase": 3,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "RaceMenuBase"
+ },
+ "VehShowcase": {
+  "vftable_rva": 5981428,
+  "slots": 18,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 4,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "UIMenu"
+ },
+ "Vehicle": {
+  "vftable_rva": 5981500,
+  "slots": 18,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 9,
+   "UIMenu": 3,
+   "VehicleSelectBase": 2,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "VehicleSelectBase"
+ },
+ "AboutMenu": {
+  "vftable_rva": 5981572,
+  "slots": 18,
+  "own_slots": 4,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 4
+  },
+  "first_base": "asNode",
+  "base": "UIMenu"
+ },
+ "MainMenu": {
+  "vftable_rva": 5981664,
+  "slots": 18,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 5,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "UIMenu"
+ },
+ "RaceMenuBase": {
+  "vftable_rva": 5981744,
+  "slots": 20,
+  "own_slots": 4,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 5,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "UIMenu"
+ },
+ "PUResults": {
+  "vftable_rva": 5981824,
+  "slots": 18,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 9,
+   "UIMenu": 5,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "PUGraphics": {
+  "vftable_rva": 5981912,
+  "slots": 18,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 4,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "PUMain": {
+  "vftable_rva": 5981984,
+  "slots": 18,
+  "own_slots": 1,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 5,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "PURoster": {
+  "vftable_rva": 5982056,
+  "slots": 18,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 9,
+   "UIMenu": 5,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "PUQuit": {
+  "vftable_rva": 5982128,
+  "slots": 18,
+  "own_slots": 1,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 5,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "PUReplay": {
+  "vftable_rva": 5982200,
+  "slots": 18,
+  "own_slots": 1,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 5,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "PUKey": {
+  "vftable_rva": 5982272,
+  "slots": 18,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 3,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "PUReplaySave": {
+  "vftable_rva": 5982344,
+  "slots": 18,
+  "own_slots": 1,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 5,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "PUChat": {
+  "vftable_rva": 5982416,
+  "slots": 18,
+  "own_slots": 1,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 5,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "PUControl": {
+  "vftable_rva": 5982488,
+  "slots": 18,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 4,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "PUDebug": {
+  "vftable_rva": 5982560,
+  "slots": 18,
+  "own_slots": 1,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 5,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "PUOptions": {
+  "vftable_rva": 5982632,
+  "slots": 18,
+  "own_slots": 1,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 5,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "PUAudioOptions": {
+  "vftable_rva": 5982716,
+  "slots": 18,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 4,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "PUExit": {
+  "vftable_rva": 5982788,
+  "slots": 18,
+  "own_slots": 1,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 5,
+   "PUMenuBase": 2
+  },
+  "first_base": "PUMenuBase",
+  "base": "PUMenuBase"
+ },
+ "PUMenuBase": {
+  "vftable_rva": 5982860,
+  "slots": 18,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 5
+  },
+  "first_base": "asNode",
+  "base": "UIMenu"
+ },
+ "OptionsBase": {
+  "vftable_rva": 5982936,
+  "slots": 22,
+  "own_slots": 4,
+  "inherited": {
+   "asNode": 10,
+   "UIMenu": 5,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "UIMenu"
+ },
+ "AudSoundBase": {
+  "vftable_rva": 5983048,
+  "slots": 13,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "AudStream": {
+  "vftable_rva": 5983100,
+  "slots": 13,
+  "own_slots": 1,
+  "inherited": {
+   "asNode": 10,
+   "asCullable": 1,
+   "AudSoundBase": 1
+  },
+  "first_base": "asCullable",
+  "base": "AudSoundBase"
+ },
+ "AudMidi": {
+  "vftable_rva": 5983152,
+  "slots": 13,
+  "own_slots": 1,
+  "inherited": {
+   "asNode": 11,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "AudStreamingMusic": {
+  "vftable_rva": 5983204,
+  "slots": 13,
+  "own_slots": 1,
+  "inherited": {
+   "asNode": 11,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "AudManagerBase": {
+  "vftable_rva": 5983256,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "Aud3DObjectManager": {
+  "vftable_rva": 5983320,
+  "slots": 13,
+  "own_slots": 1,
+  "inherited": {
+   "asNode": 11,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "AudCreatureContainer": {
+  "vftable_rva": 5983388,
+  "slots": 6,
+  "own_slots": 4,
+  "inherited": {
+   "Aud3DObject": 2
+  },
+  "first_base": "Aud3DObject",
+  "base": "Aud3DObject"
+ },
+ "Aud3DObject": {
+  "vftable_rva": 5983436,
+  "slots": 6,
+  "own_slots": 6,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "Aud3DAmbientObject": {
+  "vftable_rva": 5983512,
+  "slots": 6,
+  "own_slots": 3,
+  "inherited": {
+   "Aud3DObject": 3
+  },
+  "first_base": "Aud3DObject",
+  "base": "Aud3DObject"
+ },
+ "CLoader": {
+  "vftable_rva": 5983536,
+  "slots": 12,
+  "own_slots": 12,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "CFileStream": {
+  "vftable_rva": 5983612,
+  "slots": 14,
+  "own_slots": 14,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "IDirectMusicGetLoader": {
+  "vftable_rva": 5983668,
+  "slots": 4,
+  "own_slots": 0,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "CMemStream": {
+  "vftable_rva": 5983700,
+  "slots": 14,
+  "own_slots": 14,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "AudManager": {
+  "vftable_rva": 5983768,
+  "slots": 13,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 9,
+   "asCullable": 1,
+   "AudManagerBase": 1
+  },
+  "first_base": "asCullable",
+  "base": "AudManagerBase"
+ },
+ "MixerCTL": {
+  "vftable_rva": 5983856,
+  "slots": 1,
+  "own_slots": 1,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "mmDirSnd": {
+  "vftable_rva": 5983860,
+  "slots": 1,
+  "own_slots": 1,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "CDMan": {
+  "vftable_rva": 5983864,
+  "slots": 2,
+  "own_slots": 2,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "camPovCS": {
+  "vftable_rva": 5983872,
+  "slots": 17,
+  "own_slots": 8,
+  "inherited": {
+   "asNode": 5,
+   "camBaseCS": 3,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "camBaseCS"
+ },
+ "camTrackCS": {
+  "vftable_rva": 5983940,
+  "slots": 17,
+  "own_slots": 8,
+  "inherited": {
+   "asNode": 5,
+   "camBaseCS": 3,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "camBaseCS"
+ },
+ "camViewCS": {
+  "vftable_rva": 5984024,
+  "slots": 13,
+  "own_slots": 4,
+  "inherited": {
+   "asNode": 8,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "camPostCS": {
+  "vftable_rva": 5984076,
+  "slots": 17,
+  "own_slots": 6,
+  "inherited": {
+   "asNode": 5,
+   "camBaseCS": 5,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "camBaseCS"
+ },
+ "camPreCS": {
+  "vftable_rva": 5984148,
+  "slots": 17,
+  "own_slots": 6,
+  "inherited": {
+   "asNode": 5,
+   "camBaseCS": 5,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "camBaseCS"
+ },
+ "camPointCS": {
+  "vftable_rva": 5984216,
+  "slots": 17,
+  "own_slots": 5,
+  "inherited": {
+   "asNode": 5,
+   "camBaseCS": 5,
+   "asCullable": 1,
+   "camCarCS": 1
+  },
+  "first_base": "asCullable",
+  "base": "camCarCS"
+ },
+ "camAICS": {
+  "vftable_rva": 5984284,
+  "slots": 17,
+  "own_slots": 4,
+  "inherited": {
+   "asNode": 6,
+   "camBaseCS": 5,
+   "asCullable": 1,
+   "camCarCS": 1
+  },
+  "first_base": "asCullable",
+  "base": "camCarCS"
+ },
+ "camPolarCS": {
+  "vftable_rva": 5984352,
+  "slots": 17,
+  "own_slots": 6,
+  "inherited": {
+   "asNode": 5,
+   "camBaseCS": 5,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "camBaseCS"
+ },
+ "camCarCS": {
+  "vftable_rva": 5984424,
+  "slots": 17,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 8,
+   "camBaseCS": 6,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "camBaseCS"
+ },
+ "camTransitionCS": {
+  "vftable_rva": 5984492,
+  "slots": 17,
+  "own_slots": 4,
+  "inherited": {
+   "asNode": 6,
+   "camBaseCS": 5,
+   "asCullable": 1,
+   "camCarCS": 1
+  },
+  "first_base": "asCullable",
+  "base": "camCarCS"
+ },
+ "camBaseCS": {
+  "vftable_rva": 5984560,
+  "slots": 17,
+  "own_slots": 8,
+  "inherited": {
+   "asNode": 8,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "camAppCS": {
+  "vftable_rva": 5984628,
+  "slots": 17,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 8,
+   "camBaseCS": 6,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "camBaseCS"
+ },
+ "Spline": {
+  "vftable_rva": 5984696,
+  "slots": 13,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "mmPlayerData": {
+  "vftable_rva": 5984760,
+  "slots": 2,
+  "own_slots": 1,
+  "inherited": {
+   "mmInfoBase": 1
+  },
+  "first_base": "mmInfoBase",
+  "base": "mmInfoBase"
+ },
+ "mmCityList": {
+  "vftable_rva": 5984768,
+  "slots": 1,
+  "own_slots": 1,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "mmVehList": {
+  "vftable_rva": 5984772,
+  "slots": 1,
+  "own_slots": 1,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "mmMiscData": {
+  "vftable_rva": 5984776,
+  "slots": 2,
+  "own_slots": 1,
+  "inherited": {
+   "mmInfoBase": 1
+  },
+  "first_base": "mmInfoBase",
+  "base": "mmInfoBase"
+ },
+ "mmRecord": {
+  "vftable_rva": 5984784,
+  "slots": 2,
+  "own_slots": 1,
+  "inherited": {
+   "mmInfoBase": 1
+  },
+  "first_base": "mmInfoBase",
+  "base": "mmInfoBase"
+ },
+ "mmPlayerConfig": {
+  "vftable_rva": 5984804,
+  "slots": 2,
+  "own_slots": 1,
+  "inherited": {
+   "mmInfoBase": 1
+  },
+  "first_base": "mmInfoBase",
+  "base": "mmInfoBase"
+ },
+ "mmPlayerDirectory": {
+  "vftable_rva": 5984812,
+  "slots": 2,
+  "own_slots": 1,
+  "inherited": {
+   "mmInfoBase": 1
+  },
+  "first_base": "mmInfoBase",
+  "base": "mmInfoBase"
+ },
+ "mmPlayerCityRecord": {
+  "vftable_rva": 5984820,
+  "slots": 2,
+  "own_slots": 1,
+  "inherited": {
+   "mmInfoBase": 1
+  },
+  "first_base": "mmInfoBase",
+  "base": "mmInfoBase"
+ },
+ "mmVehInfo": {
+  "vftable_rva": 5984840,
+  "slots": 1,
+  "own_slots": 1,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "mmCityInfo": {
+  "vftable_rva": 5984844,
+  "slots": 1,
+  "own_slots": 1,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "mmInput": {
+  "vftable_rva": 5984848,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "mmIODev": {
+  "vftable_rva": 5984916,
+  "slots": 2,
+  "own_slots": 1,
+  "inherited": {
+   "mmInfoBase": 1
+  },
+  "first_base": "mmInfoBase",
+  "base": "mmInfoBase"
+ },
+ "mmFrictionFF": {
+  "vftable_rva": 5984924,
+  "slots": 4,
+  "own_slots": 4,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "mmCollideFF": {
+  "vftable_rva": 5984940,
+  "slots": 4,
+  "own_slots": 4,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "mmSpringFF": {
+  "vftable_rva": 5984956,
+  "slots": 4,
+  "own_slots": 4,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "mmRoadFF": {
+  "vftable_rva": 5984972,
+  "slots": 4,
+  "own_slots": 4,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "mmEffectFF": {
+  "vftable_rva": 5984988,
+  "slots": 4,
+  "own_slots": 3,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "mmTextNode": {
+  "vftable_rva": 5985008,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 10
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "mmNumber": {
+  "vftable_rva": 5985060,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 10
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "asMeshSetForm": {
+  "vftable_rva": 5985112,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 10
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "mmVehicleForm": {
+  "vftable_rva": 5985164,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 10
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "mmMouseSteerBar": {
+  "vftable_rva": 5985216,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 10
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "aiMap": {
+  "vftable_rva": 5985376,
+  "slots": 13,
+  "own_slots": 5,
+  "inherited": {
+   "asNode": 8
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "aiTrafficLightInstance": {
+  "vftable_rva": 5985452,
+  "slots": 31,
+  "own_slots": 4,
+  "inherited": {
+   "lvlInstance": 10,
+   "dgBangerInstance": 10,
+   "dgUnhitBangerInstance": 4,
+   "dgUnhitYBangerInstance": 3
+  },
+  "first_base": "dgUnhitBangerInstance",
+  "base": "dgUnhitYBangerInstance"
+ },
+ "aiTrafficLightSet": {
+  "vftable_rva": 5985576,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "aiPedAudio": {
+  "vftable_rva": 5985640,
+  "slots": 6,
+  "own_slots": 0,
+  "inherited": {
+   "AudCreatureContainer": 4,
+   "Aud3DObject": 2
+  },
+  "first_base": "AudCreatureContainer",
+  "base": "AudCreatureContainer"
+ },
+ "aiVehiclePlayer": {
+  "vftable_rva": 5985708,
+  "slots": 21,
+  "own_slots": 15,
+  "inherited": {
+   "aiObstacle": 3,
+   "aiVehicle": 3
+  },
+  "first_base": "aiObstacle",
+  "base": "aiVehicle"
+ },
+ "aiCableCar": {
+  "vftable_rva": 5985796,
+  "slots": 21,
+  "own_slots": 15,
+  "inherited": {
+   "aiObstacle": 3,
+   "aiVehicle": 3
+  },
+  "first_base": "aiObstacle",
+  "base": "aiVehicle"
+ },
+ "aiCableCarInstance": {
+  "vftable_rva": 5985880,
+  "slots": 30,
+  "own_slots": 7,
+  "inherited": {
+   "lvlInstance": 10,
+   "dgBangerInstance": 10,
+   "dgUnhitBangerInstance": 3
+  },
+  "first_base": "dgUnhitBangerInstance",
+  "base": "dgUnhitBangerInstance"
+ },
+ "dgUnhitBangerInstance": {
+  "vftable_rva": 5986004,
+  "slots": 28,
+  "own_slots": 0,
+  "inherited": {
+   "lvlInstance": 12,
+   "dgBangerInstance": 12
+  },
+  "first_base": "lvlInstance",
+  "base": "lvlInstance"
+ },
+ "aiSubway": {
+  "vftable_rva": 5986116,
+  "slots": 21,
+  "own_slots": 15,
+  "inherited": {
+   "aiObstacle": 3,
+   "aiVehicle": 3
+  },
+  "first_base": "aiObstacle",
+  "base": "aiVehicle"
+ },
+ "aiSubwayInstance": {
+  "vftable_rva": 5986200,
+  "slots": 30,
+  "own_slots": 7,
+  "inherited": {
+   "lvlInstance": 10,
+   "dgBangerInstance": 10,
+   "dgUnhitBangerInstance": 3
+  },
+  "first_base": "dgUnhitBangerInstance",
+  "base": "dgUnhitBangerInstance"
+ },
+ "aiVehicleAmbient": {
+  "vftable_rva": 5986460,
+  "slots": 25,
+  "own_slots": 6,
+  "inherited": {
+   "aiVehicleSpline": 15,
+   "aiObstacle": 2,
+   "aiVehicle": 2
+  },
+  "first_base": "aiVehicleSpline",
+  "base": "aiVehicleSpline"
+ },
+ "aiVehicleInstance": {
+  "vftable_rva": 5986572,
+  "slots": 26,
+  "own_slots": 14,
+  "inherited": {
+   "lvlInstance": 12
+  },
+  "first_base": "lvlInstance",
+  "base": "lvlInstance"
+ },
+ "aiVehicleActive": {
+  "vftable_rva": 5986676,
+  "slots": 10,
+  "own_slots": 7,
+  "inherited": {
+   "dgPhysEntity": 3
+  },
+  "first_base": "dgPhysEntity",
+  "base": "dgPhysEntity"
+ },
+ "aiVehicleManager": {
+  "vftable_rva": 5986716,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "aiCityData": {
+  "vftable_rva": 5986788,
+  "slots": 1,
+  "own_slots": 1,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "aiVehicle": {
+  "vftable_rva": 5986792,
+  "slots": 21,
+  "own_slots": 5,
+  "inherited": {
+   "aiObstacle": 3
+  },
+  "first_base": "aiObstacle",
+  "base": "aiObstacle"
+ },
+ "aiObstacle": {
+  "vftable_rva": 5986876,
+  "slots": 9,
+  "own_slots": 3,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "aiVehiclePhysics": {
+  "vftable_rva": 5986940,
+  "slots": 21,
+  "own_slots": 15,
+  "inherited": {
+   "aiObstacle": 3,
+   "aiVehicle": 3
+  },
+  "first_base": "aiObstacle",
+  "base": "aiVehicle"
+ },
+ "aiVehicleSpline": {
+  "vftable_rva": 5987100,
+  "slots": 25,
+  "own_slots": 21,
+  "inherited": {
+   "aiObstacle": 2,
+   "aiVehicle": 2
+  },
+  "first_base": "aiObstacle",
+  "base": "aiVehicle"
+ },
+ "aiBanger": {
+  "vftable_rva": 5987204,
+  "slots": 9,
+  "own_slots": 8,
+  "inherited": {
+   "aiObstacle": 1
+  },
+  "first_base": "aiObstacle",
+  "base": "aiObstacle"
+ },
+ "aiGoalAvoidPlayer": {
+  "vftable_rva": 5987256,
+  "slots": 3,
+  "own_slots": 3,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "aiGoal": {
+  "vftable_rva": 5987268,
+  "slots": 3,
+  "own_slots": 1,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "aiGoalRegainRail": {
+  "vftable_rva": 5987292,
+  "slots": 3,
+  "own_slots": 3,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "aiGoalRandomDrive": {
+  "vftable_rva": 5987316,
+  "slots": 3,
+  "own_slots": 3,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "aiGoalCollision": {
+  "vftable_rva": 5987348,
+  "slots": 3,
+  "own_slots": 3,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "aiVehicleData": {
+  "vftable_rva": 5987360,
+  "slots": 13,
+  "own_slots": 4,
+  "inherited": {
+   "asNode": 8,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "aiStuck": {
+  "vftable_rva": 5987412,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "asNetObject": {
+  "vftable_rva": 5987608,
+  "slots": 13,
+  "own_slots": 2,
+  "inherited": {
+   "asNode": 10,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "gizBridge": {
+  "vftable_rva": 5988236,
+  "slots": 30,
+  "own_slots": 3,
+  "inherited": {
+   "dgBangerInstance": 11,
+   "lvlInstance": 10,
+   "dgUnhitMtxBangerInstance": 3,
+   "dgUnhitBangerInstance": 3
+  },
+  "first_base": "dgUnhitMtxBangerInstance",
+  "base": "dgUnhitMtxBangerInstance"
+ },
+ "gizBridgeMgr": {
+  "vftable_rva": 5988356,
+  "slots": 13,
+  "own_slots": 4,
+  "inherited": {
+   "asNode": 9
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "gizSailboat": {
+  "vftable_rva": 5988408,
+  "slots": 26,
+  "own_slots": 2,
+  "inherited": {
+   "lvlInstance": 20,
+   "gizInstance": 4
+  },
+  "first_base": "gizInstance",
+  "base": "gizInstance"
+ },
+ "gizSailboatMgr": {
+  "vftable_rva": 5988512,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "gizTrainCar": {
+  "vftable_rva": 5988564,
+  "slots": 30,
+  "own_slots": 1,
+  "inherited": {
+   "dgBangerInstance": 12,
+   "lvlInstance": 10,
+   "dgUnhitBangerInstance": 4,
+   "dgUnhitMtxBangerInstance": 3
+  },
+  "first_base": "dgUnhitBangerInstance",
+  "base": "dgUnhitMtxBangerInstance"
+ },
+ "gizTrainMgr": {
+  "vftable_rva": 5988684,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "gizFerry": {
+  "vftable_rva": 5988736,
+  "slots": 30,
+  "own_slots": 3,
+  "inherited": {
+   "dgBangerInstance": 11,
+   "lvlInstance": 10,
+   "dgUnhitYBangerInstance": 3,
+   "dgUnhitBangerInstance": 3
+  },
+  "first_base": "dgUnhitYBangerInstance",
+  "base": "dgUnhitYBangerInstance"
+ },
+ "gizFerryMgr": {
+  "vftable_rva": 5988856,
+  "slots": 13,
+  "own_slots": 4,
+  "inherited": {
+   "asNode": 9
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "gizParkedCarMgr": {
+  "vftable_rva": 5988908,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "mmBridgeAudio": {
+  "vftable_rva": 5988960,
+  "slots": 6,
+  "own_slots": 0,
+  "inherited": {
+   "Aud3DAmbientObject": 3,
+   "Aud3DObject": 3
+  },
+  "first_base": "Aud3DAmbientObject",
+  "base": "Aud3DAmbientObject"
+ },
+ "gizInstance": {
+  "vftable_rva": 5988984,
+  "slots": 26,
+  "own_slots": 4,
+  "inherited": {
+   "lvlInstance": 21
+  },
+  "first_base": "lvlInstance",
+  "base": "lvlInstance"
+ },
+ "aiPedestrianInstance": {
+  "vftable_rva": 5989104,
+  "slots": 27,
+  "own_slots": 14,
+  "inherited": {
+   "lvlInstance": 13
+  },
+  "first_base": "lvlInstance",
+  "base": "lvlInstance"
+ },
+ "pedRagdollMgr": {
+  "vftable_rva": 5989212,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "pedActive": {
+  "vftable_rva": 5989276,
+  "slots": 13,
+  "own_slots": 9,
+  "inherited": {
+   "dgPhysEntity": 4
+  },
+  "first_base": "dgPhysEntity",
+  "base": "dgPhysEntity"
+ },
+ "crAnimation": {
+  "vftable_rva": 5989328,
+  "slots": 1,
+  "own_slots": 1,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "crKinematicsBase": {
+  "vftable_rva": 5989332,
+  "slots": 7,
+  "own_slots": 7,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "crKinematics": {
+  "vftable_rva": 5989360,
+  "slots": 7,
+  "own_slots": 6,
+  "inherited": {
+   "crKinematicsBase": 1
+  },
+  "first_base": "crKinematicsBase",
+  "base": "crKinematicsBase"
+ },
+ "crBodyDataBase": {
+  "vftable_rva": 5989388,
+  "slots": 1,
+  "own_slots": 1,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "crBodyData": {
+  "vftable_rva": 5989392,
+  "slots": 1,
+  "own_slots": 1,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "crLegData": {
+  "vftable_rva": 5989396,
+  "slots": 4,
+  "own_slots": 4,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "crArmData": {
+  "vftable_rva": 5989416,
+  "slots": 3,
+  "own_slots": 3,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "crHeadData": {
+  "vftable_rva": 5989428,
+  "slots": 3,
+  "own_slots": 3,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "crSpineData": {
+  "vftable_rva": 5989440,
+  "slots": 3,
+  "own_slots": 3,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "Card2D": {
+  "vftable_rva": 5998080,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 10
+  },
+  "first_base": "asNode",
+  "base": "asNode"
+ },
+ "dgTrailerJoint": {
+  "vftable_rva": 5998160,
+  "slots": 8,
+  "own_slots": 6,
+  "inherited": {
+   "asFileIO": 2
+  },
+  "first_base": "asFileIO",
+  "base": "asFileIO"
+ },
+ "phJoint": {
+  "vftable_rva": 5998224,
+  "slots": 6,
+  "own_slots": 6,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "asViewCS": {
+  "vftable_rva": 5998248,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 9,
+   "asLinearCS": 1
+  },
+  "first_base": "asLinearCS",
+  "base": "asLinearCS"
+ },
+ "asDofCS": {
+  "vftable_rva": 5998312,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 9,
+   "asLinearCS": 1
+  },
+  "first_base": "asLinearCS",
+  "base": "asLinearCS"
+ },
+ "asFileIO": {
+  "vftable_rva": 5998364,
+  "slots": 8,
+  "own_slots": 8,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "datRefCount": {
+  "vftable_rva": 5998400,
+  "slots": 1,
+  "own_slots": 1,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ },
+ "aiCableCarAudio": {
+  "vftable_rva": 5998420,
+  "slots": 6,
+  "own_slots": 3,
+  "inherited": {
+   "Aud3DObject": 3
+  },
+  "first_base": "Aud3DObject",
+  "base": "Aud3DObject"
+ },
+ "aiSubwayAudio": {
+  "vftable_rva": 5998444,
+  "slots": 6,
+  "own_slots": 0,
+  "inherited": {
+   "Aud3DAmbientObject": 3,
+   "Aud3DObject": 3
+  },
+  "first_base": "Aud3DAmbientObject",
+  "base": "Aud3DAmbientObject"
+ },
+ "vehWheelCheap": {
+  "vftable_rva": 5998480,
+  "slots": 13,
+  "own_slots": 3,
+  "inherited": {
+   "asNode": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "mmCompCity": {
+  "vftable_rva": 5998548,
+  "slots": 24,
+  "own_slots": 8,
+  "inherited": {
+   "asNode": 9,
+   "mmCompBase": 7
+  },
+  "first_base": "asNode",
+  "base": "mmCompBase"
+ },
+ "mmCompBase": {
+  "vftable_rva": 5998644,
+  "slots": 24,
+  "own_slots": 13,
+  "inherited": {
+   "asNode": 9,
+   "asCullable": 1
+  },
+  "first_base": "asCullable",
+  "base": "asNode"
+ },
+ "mmCompReplay": {
+  "vftable_rva": 5998740,
+  "slots": 24,
+  "own_slots": 8,
+  "inherited": {
+   "asNode": 9,
+   "mmCompBase": 7
+  },
+  "first_base": "asNode",
+  "base": "mmCompBase"
+ },
+ "mmCompRaceRecord": {
+  "vftable_rva": 5998836,
+  "slots": 24,
+  "own_slots": 6,
+  "inherited": {
+   "asNode": 9,
+   "mmCompBase": 9
+  },
+  "first_base": "asNode",
+  "base": "mmCompBase"
+ },
+ "mmCompDRecord": {
+  "vftable_rva": 5998940,
+  "slots": 24,
+  "own_slots": 8,
+  "inherited": {
+   "asNode": 9,
+   "mmCompBase": 7
+  },
+  "first_base": "asNode",
+  "base": "mmCompBase"
+ },
+ "mmCompRoster": {
+  "vftable_rva": 5999036,
+  "slots": 24,
+  "own_slots": 7,
+  "inherited": {
+   "asNode": 9,
+   "mmCompBase": 8
+  },
+  "first_base": "asNode",
+  "base": "mmCompBase"
+ },
+ "DirSnd": {
+  "vftable_rva": 5999132,
+  "slots": 1,
+  "own_slots": 1,
+  "inherited": {},
+  "first_base": null,
+  "base": null
+ }
+}

@@ -1,0 +1,142 @@
+{
+ "_meta": {
+  "generated_by": "hand recovery for the OpenGL device layer; method and evidence are written up in docs/gfx_layouts.md",
+  "sources": [
+   "MM2_RE_KIT/MM2_PSEUDOCODE/<Class>/<Class>.c and _FREE_FUNCTIONS.c - Hex-Rays bodies",
+   "MM2_RE_KIT/MM2_PSEUDOCODE/_ALL_TYPES.h - the IDA type library, BOTH the unqualified 1999 structs and the MM2:: (MM2Hook) structs, which disagree",
+   "MM2_RE_KIT/inventory/symbols.json - 22,334 kit addresses",
+   "data/symbols.json - the linker map; every address cross-checked against it",
+   "data/layouts_from_ctors.json - independent constructor-extent recovery"
+  ],
+  "schema": "data/layouts.json, plus per-class evidence/corroboration/conflicts",
+  "WARNING": "Only entries under 'layouts' are read by tools/merge_layouts.py. Everything else here is documentation.",
+  "expected_merge_outcome": "gfxResData merges. gfxMaterial is REFUSED by rule 1 (already in the IDA type library, at a size this recovery shows is wrong by 4 bytes) and needs a deliberate human edit to data/layouts.json - see docs/gfx_layouts.md."
+ },
+
+ "layouts": {
+  "gfxResData": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_in_layouts_json": false,
+   "size": 8,
+   "size_hex": "0x8",
+   "size_confirmed_by": "three independent sources agree",
+   "base": null,
+   "polymorphic": false,
+   "aliases": [
+    "mmGraphicsInterface::mmResolution - the kit's unqualified spelling; already in data/layouts.json",
+    "MM2::gfxResData - MM2Hook's spelling; already in data/layouts.json"
+   ],
+   "evidence": [
+    "gfxFindSafeAdapter (0x4AC820) walks the array through an `unsigned __int16 *` and advances it with `p_ScreenHeight += 4` - a 4 x u16 = 8 byte stride, decided by the compiler and not by an annotation",
+    "the same loop reads *(p-1) as width, *p as height and p[1] as depth, fixing the three fields at 0x0/0x2/0x4",
+    "gfxInterface is 0x270 with Resolutions at 0x70; (0x270-0x70)/64 entries = 8 bytes per entry",
+    "MM2Hook sizeof (data/mm2types.json) is 8"
+   ],
+   "conflicts": [
+    "0x6: the kit's 1999 struct calls this Is16BitColor, MM2Hook calls it Flags. ResCallback (0x4AC6F0) stores (dwBitDepth == 16) + 6, i.e. 7 for 16-bit and 6 otherwise - a small enum, not a boolean, so neither name is right. Kept as Flags."
+   ],
+   "members": [
+    {"offset": 0, "offset_hex": "0x0", "type": "u16", "name": "ScreenWidth", "count": 0, "width": 2,
+     "confidence": "confirmed",
+     "evidence": "ResCallback 0x4AC6F0 newRes->ScreenWidth = dwWidth; gfxFindSafeAdapter 0x4AC820 compares *(p_ScreenHeight - 1) == 640"},
+    {"offset": 2, "offset_hex": "0x2", "type": "u16", "name": "ScreenHeight", "count": 0, "width": 2,
+     "confidence": "confirmed",
+     "evidence": "ResCallback 0x4AC6F0 newRes->ScreenHeight = dwHeight2; gfxFindSafeAdapter compares *p_ScreenHeight == 480"},
+    {"offset": 4, "offset_hex": "0x4", "type": "u16", "name": "ColorDepth", "count": 0, "width": 2,
+     "confidence": "confirmed",
+     "evidence": "ResCallback 0x4AC6F0 newRes->ColorDepth = dwBitDepth; gfxFindSafeAdapter compares p_ScreenHeight[1] == 16"},
+    {"offset": 6, "offset_hex": "0x6", "type": "u16", "name": "Flags", "count": 0, "width": 2,
+     "confidence": "confirmed",
+     "evidence": "ResCallback 0x4AC6F0 stores (dwBitDepth == 16) + 6; offset and width are forced by the 8-byte stride"}
+   ]
+  },
+
+  "gfxMaterial": {
+   "kind": "struct",
+   "confidence": "CONFIRMED",
+   "already_in_layouts_json": true,
+   "expected_rejection": "rule 1 - never overwrite the IDA type library. The library entry (0x44) is nevertheless 4 bytes short; see docs/gfx_layouts.md.",
+   "size": 72,
+   "size_hex": "0x48",
+   "size_confirmed_by": "adjacent .data symbols pin it exactly, and a write past 0x44 proves it is not 0x44",
+   "base": null,
+   "polymorphic": false,
+   "evidence": [
+    "gfxMaterial::FlatWhite lives at 0x006856F0 (kit symbol ?FlatWhite@gfxMaterial@@2U1@A) and the next .data symbol is gfxRenderState::sm_Modelview at 0x00685738 - a 0x48 extent",
+    "gfxMaterial::Reset (0x4B1BB0) ends with this[1].diffuse.r = NAN - Hex-Rays rendering a store at this+0x44 against its own 0x44-wide struct. A field at 0x44 cannot exist in a 0x44 struct",
+    "gfxRenderState::Default (0x4B1DA0) writes dword_685734 = -1, i.e. FlatWhite + 0x44, an opaque-white ARGB",
+    "MM2::gfxMaterial in the same type library says 0x48 with ColorARGB Color at 0x44; MM2Hook sizeof says 72"
+   ],
+   "conflicts": [
+    "the unqualified gfxMaterial in the IDA library is 0x44 - it is D3DMATERIAL7 verbatim and misses the one field MM2 appended. That 0x44 is what data/layouts.json currently holds and what code/midtown2/gfx/gfxmaterial.h records in its commented-out check_size."
+   ],
+   "members": [
+    {"offset": 0, "offset_hex": "0x00", "type": "Vector4", "name": "Diffuse", "count": 0, "width": 16,
+     "confidence": "confirmed", "evidence": "D3DMATERIAL7.dcvDiffuse; gfxMaterial::Reset writes .r/.g/.b/.a at 0x00-0x0C"},
+    {"offset": 16, "offset_hex": "0x10", "type": "Vector4", "name": "Ambient", "count": 0, "width": 16,
+     "confidence": "confirmed", "evidence": "D3DMATERIAL7.dcvAmbient; gfxMaterial::Reset writes 0x10-0x1C"},
+    {"offset": 32, "offset_hex": "0x20", "type": "Vector4", "name": "Specular", "count": 0, "width": 16,
+     "confidence": "confirmed", "evidence": "D3DMATERIAL7.dcvSpecular; gfxMaterial::Reset zeroes 0x20-0x2C"},
+    {"offset": 48, "offset_hex": "0x30", "type": "Vector4", "name": "Emissive", "count": 0, "width": 16,
+     "confidence": "confirmed", "evidence": "D3DMATERIAL7.dcvEmissive; gfxMaterial::Reset zeroes 0x30-0x3C"},
+    {"offset": 64, "offset_hex": "0x40", "type": "f32", "name": "Shininess", "count": 0, "width": 4,
+     "confidence": "confirmed", "evidence": "D3DMATERIAL7.dvPower; gfxMaterial::Reset writes 0.0 at 0x40"},
+    {"offset": 68, "offset_hex": "0x44", "type": "u32", "name": "Color", "count": 0, "width": 4,
+     "confidence": "confirmed",
+     "evidence": "the MM2-only field. gfxMaterial::Reset stores at this+0x44; gfxRenderState::Default sets FlatWhite+0x44 to -1. MM2Hook types it ColorARGB - u32 is used here only because ColorARGB is not yet a type in code/midtown2."}
+   ]
+  }
+ },
+
+ "static_only_classes": {
+  "gfxPipeline": {
+   "verdict": "NOT an object. gfxPipeline is a namespace of statics and has no instance layout at all.",
+   "confidence": "CONFIRMED",
+   "instance_size": 1,
+   "instance_size_note": "1 because the class is empty, not because the layout is unknown. There is nothing to recover.",
+   "evidence": [
+    "all 55 gfxPipeline functions in data/symbols.json carry static=true; the mangled names are @@SA / @@CA / @@CG (public static __cdecl / private static __cdecl / private static __stdcall) and not one is @@QAE or @@AAE (__thiscall)",
+    "no constructor, no destructor, no vftable, and no `this` parameter anywhere in MM2_RE_KIT/MM2_PSEUDOCODE/gfxPipeline/gfxPipeline.c",
+    "every piece of pipeline state is a named class static in .data (listed below) or a file-scope global in the same object file",
+    "gfxPipeline is never allocated: no operator new site anywhere in the kit produces one"
+   ],
+   "consequence": "tools/merge_layouts.py must keep refusing it, and tools/genheaders.py must keep the check_size commented out. An empty class has sizeof 1 on both sides, so a live guard would pass while certifying nothing.",
+   "statics": [
+    {"rva": "0x006830E4", "name": "m_ZDepth", "type": "i32", "access": "private"},
+    {"rva": "0x006830EC", "name": "m_X", "type": "i32", "access": "private"},
+    {"rva": "0x006830F4", "name": "m_fWidth", "type": "f32", "access": "private"},
+    {"rva": "0x006830F8", "name": "m_ColorDepth", "type": "i32", "access": "private"},
+    {"rva": "0x006830FC", "name": "VP", "type": "gfxViewport*", "access": "public"},
+    {"rva": "0x00683100", "name": "m_iHeight", "type": "i32", "access": "private",
+     "note": "the kit mislabels this address as ??0?$function@$$A6AMXZ@std@@QAE@ABV01@@Z. The linker map has the real mangled name ?m_iHeight@gfxPipeline@@0HA here."},
+    {"rva": "0x0068310C", "name": "OrthoVP", "type": "gfxViewport*", "access": "public"},
+    {"rva": "0x00683110", "name": "m_Y", "type": "i32", "access": "private"},
+    {"rva": "0x00683114", "name": "m_EvtFlags", "type": "u32", "access": "private"},
+    {"rva": "0x00683120", "name": "m_fHeight", "type": "f32", "access": "private"},
+    {"rva": "0x00683124", "name": "m_Viewport", "type": "gfxViewport*", "access": "private"},
+    {"rva": "0x00683128", "name": "m_iWidth", "type": "i32", "access": "private"},
+    {"rva": "0x006844F4", "name": "m_RenderTarget", "type": "const gfxTexture*const", "access": "private"},
+    {"rva": "0x0068578C", "name": "FadeValue", "type": "f32", "access": "private"},
+    {"rva": "0x00685790", "name": "StartFadeColor", "type": "u32", "access": "private",
+     "note": "absent from the kit inventory; present in the linker map"},
+    {"rva": "0x00685794", "name": "EndFadeColor", "type": "u32", "access": "private"},
+    {"rva": "0x00685798", "name": "FadeSpeed", "type": "f32", "access": "private"},
+    {"rva": "0x0068579C", "name": "FadeColor", "type": "u32", "access": "private"}
+   ]
+  }
+ },
+
+ "verified_unchanged": {
+  "_note": "already correct in data/layouts.json. Re-derived here from independent evidence so that nobody corrects them later; no merge is needed or wanted.",
+  "gfxTexture": {"size_hex": "0x34", "evidence": "five (gfxTexture *)operator new(52) sites in gfxTexture.c at lines 376, 1024, 1112, 1128, 1218; constructor extent 0x32 in data/layouts_from_ctors.json; MM2Hook and the IDA library agree"},
+  "gfxImage": {"size_hex": "0x1C", "evidence": "(gfxImage *)operator new(0x1C) in _MISLABELED_FUNCTIONS.c:3809; MM2Hook and the IDA library agree"},
+  "gfxBitmap": {"size_hex": "0x14", "evidence": "(gfxBitmap *)operator new(20) in gfxBitmap.c:167; constructor 0x4AE370 writes 0x0/0x4/0x6/0x8/0xC/0x10 and stops"},
+  "gfxViewport": {"size_hex": "0x17C", "evidence": "gfxPipeline::CreateViewport (0x4A90B0, mislabelled ImIsPowerOfTwo in the kit) does operator new(0x17C) then calls gfxViewport::gfxViewport"},
+  "gfxInterface": {"size_hex": "0x270", "evidence": "gfxInterfaces at 0x00683130 runs to gfxMinScreenWidth at 0x006844B0 = 0x1380 = 8 x 0x270; members tile 0x270 exactly with Resolutions[64] of gfxResData"},
+  "gfxRenderState": {"size_hex": "0x50", "evidence": "RSTATE at 0x006856A0, gfxMaterial::FlatWhite at 0x006856F0 - the object cannot be wider than the 0x50 gap. MM2Hook's 0x98 is wrong; see docs/gfx_layouts.md"},
+  "gfxRenderStateData": {"size_hex": "0x50", "evidence": "LASTRSTATE at 0x006854A0 runs to gfxRenderState::sm_SupportsBlendWithOne at 0x006854F0"},
+  "gfxLight": {"size_hex": "0x68", "evidence": "gfxLight::Sun at 0x00685578 runs to gfxRenderState::sm_Billboard at 0x006855E0; KeyLight and Fill1Light are 104 bytes apart at 0x006287D8 and 0x00628840"},
+  "gfxVertexBuffer": {"size_hex": "0x10", "evidence": "IDA type library only; not independently re-derived here"}
+ }
+}

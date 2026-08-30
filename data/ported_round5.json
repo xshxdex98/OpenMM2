@@ -1,0 +1,30 @@
+{
+ "_comment": [
+  "Round 5. Five math methods whose mangled signature and machine code AGREE on stack size,",
+  "which is the gate that matters here: tools/verify_arity.py lists twelve symbols in the image",
+  "where they do not, four of them in Vector3, and those cannot be reimplemented as declared.",
+  "Vector3::Add, Vector3::Subtract, Vector3::operator*= and Vector3::AddScaled are all in that",
+  "set and were rejected for this round after reading their disassembly.",
+  "",
+  "Vector3::InvScale passes the arity check and still cannot be ported: it takes a pointer where",
+  "the name says float and returns a dot product in st0 where the name says void.",
+  "",
+  "Matrix34::Transform (?Transform@Matrix34@@QBEXABVVector3@@AAV2@@Z, 0x0046EDA0) is DELIBERATELY",
+  "NOT HERE, and the reason is worth stating because 'the extent swallows code' undersells it.",
+  "Its body really is 92 bytes ending at its own `ret 8`, and asm.py stops at the PROC ExportAsm",
+  "emitted, not at the map's 256-byte distance-to-next-symbol - so nothing would be over-stripped.",
+  "The blocker is that game.asm:797348 spells a data pointer to the unnamed code at 0x0046EE00 as",
+  "    dd offset ?Transform@Matrix34@@QBEXABVVector3@@AAV2@@Z + 96",
+  "i.e. RELATIVE TO THE SYMBOL. Porting makes that symbol resolve to the C++ function, so the",
+  "pointer would land 96 bytes into the reimplementation instead of at the code it means. Gate 6",
+  "sees this as data pointing inside the range and is right to refuse. It becomes portable only",
+  "once that neighbour is named and the reference is re-expressed against it - the same",
+  "symbolise-the-data-pointers work that docs/port_order.md lists as the real fix."
+ ],
+ "ported": [
+  "?Scale@Vector3@@QAEXABV1@M@Z",
+  "?SubtractScaled@Vector3@@QAEXABV1@M@Z",
+  "?Transpose3x4@Matrix34@@QAEXXZ",
+  "?Transpose@Matrix34@@QAEXXZ"
+ ]
+}

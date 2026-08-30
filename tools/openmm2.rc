@@ -1,0 +1,53 @@
+// Resources for the built executable: the icon, and a version block that says what this is.
+//
+// The linker builds its own .rsrc containing only the DPI manifest, so retail's ICON, GROUP_ICON
+// and VERSION resources are absent from every build and Windows draws the generic application
+// icon. This puts them back.
+//
+// The icon is MM2's own, lifted from midtown2.exe by tools/mkicon.py and given the larger sizes a
+// high-DPI desktop wants. The version block is deliberately NOT a copy of retail's: this binary is
+// not midtown2.exe and must not claim to be, so it identifies itself as OpenMM2 and names the
+// project rather than Microsoft or Angel Studios. Anyone reading the properties sheet should learn
+// what they are actually running.
+//
+// Built by tools/mkres.py into build/openmm2.res and passed to the linker.
+
+#include <windows.h>
+
+// 111 is the identifier retail uses for its icon group. The number is arbitrary as far as Windows
+// is concerned - the shell shows whichever icon resource sorts first - but matching it keeps one
+// fewer gratuitous difference from the original.
+111 ICON "openmm2.ico"
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION     0, 1, 0, 0
+PRODUCTVERSION  0, 1, 0, 0
+FILEFLAGSMASK   VS_FFI_FILEFLAGSMASK
+FILEFLAGS       0
+FILEOS          VOS_NT_WINDOWS32
+FILETYPE        VFT_APP
+FILESUBTYPE     VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        // 0409 is US English, 04B0 is Unicode. The pair has to agree with the Translation value
+        // below or the properties sheet shows nothing at all.
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName",      "The OpenMM2 project"
+            VALUE "FileDescription",  "OpenMM2 - an open reimplementation of Midtown Madness 2"
+            VALUE "FileVersion",      "0.1.0.0"
+            VALUE "InternalName",     "OpenMM2"
+            VALUE "OriginalFilename", "OpenMM2.exe"
+            VALUE "ProductName",      "OpenMM2"
+            VALUE "ProductVersion",   "0.1.0.0"
+            VALUE "Comments",         "Requires an installed copy of Midtown Madness 2. Not affiliated with Microsoft or Angel Studios."
+            VALUE "LegalCopyright",   "Licensed under the GNU General Public License v3 or later."
+        END
+    END
+
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END

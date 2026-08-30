@@ -1,0 +1,33 @@
+{
+ "_meta": {
+  "generated_by": "hand recovery, de-ossification round 4. Read off raw instruction bytes with capstone 5.0.7 through tools/pe.py against midtown2.exe; nothing here came from Hex-Rays.",
+  "why_this_file": "data/layouts.json is regenerated wholesale by tools/layouts.py, and mmJaxis's entry there came from tools/ctor_layouts.py, which can see the WIDTH of every store a constructor makes but not whether the dword it writes is an integer or a float. Every one of the seven mmJaxis functions reads or writes these same offsets with x87 instructions, which settles it. The offsets and the total size are UNCHANGED - 0x1C, six dwords and a pair the constructor never touches - so this is a retyping, not a new layout. Re-merge with tools/merge_layouts.py --write if layouts.json is ever regenerated.",
+  "binary": "midtown2.exe at C:/mm2ghidra/bin/midtown2.exe (identical to 'PC Games/MM2/midtown2.exe')",
+  "sources": [
+   "??0mmJaxis@@QAE@XZ      0x530230  writes dword 0 to 0x00, 0x04, 0x08, 0x0C and 0x18 and NOTHING to 0x10/0x14",
+   "?SetRange@mmJaxis@@QAEXMM@Z 0x530260  fld [max]; fsub [min]; mov [ecx+4],0; mov [ecx+0xC],min; fstp dword [ecx+8]  ->  0x08 and 0x0C are f32, 0x04 is the value and is cleared",
+   "?Normalize@mmJaxis@@QAEXM@Z 0x530280  fld v; fsub [ecx+0xC]; fadd st,st; fdiv [ecx+8]; fsub [1.0f @0x5B0364]; fstp [ecx+4]  ->  0x04 = 2*(v-[0xC])/[0x8] - 1, so 0x0C is the minimum and 0x08 the span",
+   "?NormalizePOV@mmJaxis@@QAEXK@Z 0x5302A0  writes 0xBF800000 (-1.0f) to 0x04, else fild qword; fsubr [ecx+8]; fdiv [ecx+8]; fstp [ecx+4]",
+   "?ResetCapture@mmJaxis@@QAEXXZ 0x530310  mov [ecx+0x10],0xBE000000 (-0.125f); mov [ecx],[ecx+4]; mov [ecx+0x14],0x3E000000 (+0.125f)  ->  0x10 and 0x14 are the f32 capture window, and 0x00 is a snapshot of 0x04",
+   "?Capture@mmJaxis@@QAEHXZ 0x5302E0  test dword [ecx+0x18]; fld [ecx+4]; fsub [ecx]; fcom [ecx+0x10]; fcomp [ecx+0x14]  ->  0x18 is an integer gate, 0x00/0x04/0x10/0x14 are all f32"
+  ],
+  "note_on_names": "0x10/0x14 were a single `u8 field_10[8]` blob because no constructor writes them. ResetCapture writes each half as its own dword and Capture compares each half with fcom, so they are two f32 and not an eight-byte anything. The pair is left uninitialised by the constructor on purpose - see Trap 12."
+ },
+ "layouts": {
+  "mmJaxis": {
+   "kind": "struct",
+   "size": 28,
+   "members": [
+    {"offset": 0,  "offset_hex": "0x0",  "type": "f32", "name": "CaptureOrigin",  "count": 0, "width": 4, "src": "round4", "confidence": "CONFIRMED"},
+    {"offset": 4,  "offset_hex": "0x4",  "type": "f32", "name": "Value",          "count": 0, "width": 4, "src": "round4", "confidence": "CONFIRMED"},
+    {"offset": 8,  "offset_hex": "0x8",  "type": "f32", "name": "Range",          "count": 0, "width": 4, "src": "round4", "confidence": "CONFIRMED"},
+    {"offset": 12, "offset_hex": "0xC",  "type": "f32", "name": "Min",            "count": 0, "width": 4, "src": "round4", "confidence": "CONFIRMED"},
+    {"offset": 16, "offset_hex": "0x10", "type": "f32", "name": "CaptureLo",      "count": 0, "width": 4, "src": "round4", "confidence": "CONFIRMED"},
+    {"offset": 20, "offset_hex": "0x14", "type": "f32", "name": "CaptureHi",      "count": 0, "width": 4, "src": "round4", "confidence": "CONFIRMED"},
+    {"offset": 24, "offset_hex": "0x18", "type": "i32", "name": "CaptureEnabled", "count": 0, "width": 4, "src": "round4", "confidence": "CONFIRMED"}
+   ],
+   "source": "layouts_round4.json",
+   "confidence": "CONFIRMED"
+  }
+ }
+}

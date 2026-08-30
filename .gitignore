@@ -1,0 +1,24 @@
+# Build output. build/OpenMM2.exe is the retail binary with our code linked into it,
+# so it can never be committed - see ARCHITECTURE.md, "What this repository may not contain".
+build/
+*.obj
+*.exe
+*.lib
+*.exp
+*.pdb
+*.res
+
+# Decompiled retail code. MM2_RE_KIT is Hex-Rays output from midtown2.exe: it is derived
+# from a copyrighted binary and is 36 MB besides. Every contributor generates their own.
+MM2_RE_KIT/
+
+# Hand-made snapshots that predate version control. Git supersedes them; they are kept on
+# disk for now because the GOLDGATE restore procedure is referenced from the docs.
+checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+
+# Scratch
+wip/scratch/

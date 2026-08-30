@@ -1,0 +1,2120 @@
+{
+ "0x00406F30": {
+  "wrong_name": "??$?0AAU?$_Wrap_alloc@V?$allocator@D@std@@@std@@@?$_Wrap_alloc@V?$allocator@U_Container_proxy@std@@@std@@@std@@QAE@AAU?$_Wrap_alloc@V?$allocator@D@std@@@1@@Z",
+  "recovered": "mmReplayManager::LoadReplayDesc",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?LoadReplayDesc@mmReplayManager@@QAEHPAD@Z' at exactly 0x00406F30, demangling to 'public: int __thiscall mmReplayManager::LoadReplayDesc(char *)'. IDA function size 197 matches the map-implied size 208. debug strings in body: \"REPLAY18\"; \"Version mismatch on '%s', cannot load.\"."
+ },
+ "0x004072D0": {
+  "wrong_name": "??$construct@U_Container_proxy@std@@U12@@?$allocator@U_Container_proxy@std@@@std@@QAEXPAU_Container_proxy@1@$$QAU21@@Z",
+  "recovered": "mmReplayManager::GetBrakes",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetBrakes@mmReplayManager@@QAEMXZ' at exactly 0x004072D0, demangling to 'public: float __thiscall mmReplayManager::GetBrakes(void)'. IDA function size 34 matches the map-implied size 48."
+ },
+ "0x00407360": {
+  "wrong_name": "??$destroy@PAD@?$allocator@D@std@@QAEXPAPAD@Z",
+  "recovered": "mmReplayManager::GetThrottle",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetThrottle@mmReplayManager@@QAEMXZ' at exactly 0x00407360, demangling to 'public: float __thiscall mmReplayManager::GetThrottle(void)'. IDA function size 34 matches the map-implied size 48."
+ },
+ "0x00407390": {
+  "wrong_name": "??$destroy@U_Container_proxy@std@@@?$_Wrap_alloc@V?$allocator@U_Container_proxy@std@@@std@@@std@@QAEXPAU_Container_proxy@1@@Z",
+  "recovered": "mmReplayManager::GetData",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetData@mmReplayManager@@QAEXPAHPA_N@Z' at exactly 0x00407390, demangling to 'public: void __thiscall mmReplayManager::GetData(int *,bool *)'. IDA function size 49 matches the map-implied size 64."
+ },
+ "0x00407410": {
+  "wrong_name": "??$forward@U?$_Wrap_alloc@V?$allocator@D@std@@@std@@@std@@YA$$QAU?$_Wrap_alloc@V?$allocator@D@std@@@0@AAU10@@Z",
+  "recovered": "mmReplayManager::GetReplayInfo",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetReplayInfo@mmReplayManager@@AAEXXZ' at exactly 0x00407410, demangling to 'private: void __thiscall mmReplayManager::GetReplayInfo(void)'. IDA function size 385 matches the map-implied size 400."
+ },
+ "0x004075A0": {
+  "wrong_name": "??0?$_Wrap_alloc@V?$allocator@D@std@@@std@@QAE@XZ",
+  "recovered": "mmReplayManager::SetReplayInfo",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SetReplayInfo@mmReplayManager@@AAEXXZ' at exactly 0x004075A0, demangling to 'private: void __thiscall mmReplayManager::SetReplayInfo(void)'. IDA function size 383 matches the map-implied size 384."
+ },
+ "0x00407B40": {
+  "wrong_name": "??1?$_String_val@U?$_Simple_types@D@std@@@std@@QAE@XZ",
+  "recovered": "asNode::GetClassName",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetClassName@asNode@@UAEPADXZ' at exactly 0x00407B40, demangling to 'public: virtual char * __thiscall asNode::GetClassName(void)'. IDA function size 6 matches the map-implied size 16. the address sits at vftable slot 11 of asNode in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x00407C80": {
+  "wrong_name": "??1_Bxty@?$_String_val@U?$_Simple_types@D@std@@@std@@QAE@XZ",
+  "recovered": "mmInterface::mmInterface",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??0mmInterface@@QAE@XZ' at exactly 0x00407C80, demangling to 'public: __thiscall mmInterface::mmInterface(void)'. IDA size 4997 vs map-implied 5040 (IDA split this function into chunks). debug strings in body: \"interface\"; \"bgframe\"."
+ },
+ "0x00409030": {
+  "wrong_name": "?max_size@?$allocator_traits@V?$allocator@D@std@@@std@@SAIABV?$allocator@D@2@@Z",
+  "recovered": "mmInterface::InitPlayerInfo",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?InitPlayerInfo@mmInterface@@QAEXXZ' at exactly 0x00409030, demangling to 'public: void __thiscall mmInterface::InitPlayerInfo(void)'. IDA function size 1157 matches the map-implied size 1168. debug strings in body: \"%s/players\"; \"players\"."
+ },
+ "0x0040FE80": {
+  "wrong_name": "?SetWindowPos@ImGui@@YAXPBDABUImVec2@@H@Z",
+  "recovered": "mmInterface::PlayerReadState",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?PlayerReadState@mmInterface@@AAEXXZ' at exactly 0x0040FE80, demangling to 'private: void __thiscall mmInterface::PlayerReadState(void)'. IDA function size 30 matches the map-implied size 32."
+ },
+ "0x0040FF80": {
+  "wrong_name": "?GetContentRegionMax@ImGui@@YA?AUImVec2@@XZ",
+  "recovered": "mmInterface::InitNetwork",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?InitNetwork@mmInterface@@AAEXXZ' at exactly 0x0040FF80, demangling to 'private: void __thiscall mmInterface::InitNetwork(void)'. IDA function size 264 matches the map-implied size 272. the body prints its own name: \"mmInterface::InitNetwork(), NETMGR.Initialize() failed\".",
+  "previously_known": true,
+  "previously_known_as": "mmInterface::InitNetwork"
+ },
+ "0x00410E90": {
+  "wrong_name": "?BeginGroup@ImGui@@YAXXZ",
+  "recovered": "mmInterface::ChangePlayerData",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?ChangePlayerData@mmInterface@@AAEXH@Z' at exactly 0x00410E90, demangling to 'private: void __thiscall mmInterface::ChangePlayerData(int)'. IDA size 526 vs map-implied 720 (IDA split this function into chunks)."
+ },
+ "0x00411F70": {
+  "wrong_name": "?IsPopupOpen@ImGui@@YA_NPBDH@Z",
+  "recovered": "mmInterface::SendReadyReq",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SendReadyReq@mmInterface@@AAEXXZ' at exactly 0x00411F70, demangling to 'private: void __thiscall mmInterface::SendReadyReq(void)'. IDA function size 24 matches the map-implied size 32."
+ },
+ "0x00413D30": {
+  "wrong_name": "?IsAnyItemActive@ImGui@@YA_NXZ",
+  "recovered": "mmGame::IsPopupEnabled",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?IsPopupEnabled@mmGame@@QAEHXZ' at exactly 0x00413D30, demangling to 'public: int __thiscall mmGame::IsPopupEnabled(void)'. IDA function size 11 matches the map-implied size 16."
+ },
+ "0x00414E50": {
+  "wrong_name": "?IsMouseHoveringRect@ImGui@@YA_NABUImVec2@@0_N@Z",
+  "recovered": "mmGame::SendChatMessage",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SendChatMessage@mmGame@@UAEXPAD@Z' at exactly 0x00414E50, demangling to 'public: virtual void __thiscall mmGame::SendChatMessage(char *)'. IDA function size 105 matches the map-implied size 112. the address appears in the vftables of 5 classes deriving from mmGame that do not override it; the mangled map symbol is marked virtual."
+ },
+ "0x004150B0": {
+  "wrong_name": "?IsMouseDragging@ImGui@@YA_NHM@Z",
+  "recovered": "_dynamic_initializer (CRT slot 15, mmGame TU) - writes stru_627378.Buffer[8]",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: *(float *)&stru_627378.Buffer[8] = 56.716663 * 0.5; }"
+ },
+ "0x00415110": {
+  "wrong_name": "?GetMouseDragDelta@ImGui@@YA?AUImVec2@@HM@Z",
+  "recovered": "_dynamic_initializer (CRT slot 16, mmGame TU) - writes stru_627378.Buffer[32]",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: *(float *)&stru_627378.Buffer[32] = 1.0 / 56.716663; }"
+ },
+ "0x0041AEC0": {
+  "wrong_name": "?IsWindowNavFocusable@ImGui@@YA_NPAUImGuiWindow@@@Z",
+  "recovered": "mmSingleBlitz::InitHUD",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?InitHUD@mmSingleBlitz@@UAEXXZ' at exactly 0x0041AEC0, demangling to 'public: virtual void __thiscall mmSingleBlitz::InitHUD(void)'. IDA function size 526 matches the map-implied size 528. the address sits at vftable slot 18 of mmSingleBlitz in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x0041B590": {
+  "wrong_name": "?FocusTopMostWindowUnderOne@ImGui@@YAXPAUImGuiWindow@@0@Z",
+  "recovered": "mmSingleBlitz::UpdateGameInput",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?UpdateGameInput@mmSingleBlitz@@UAEXH@Z' at exactly 0x0041B590, demangling to 'public: virtual void __thiscall mmSingleBlitz::UpdateGameInput(int)'. IDA function size 64 matches the map-implied size 64. the address sits at vftable slot 19 of mmSingleBlitz in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x0041C390": {
+  "wrong_name": "?StartMouseMovingWindowOrNode@ImGui@@YAXPAUImGuiWindow@@PAUImGuiDockNode@@_N@Z",
+  "recovered": "_dynamic_initializer (CRT slot 38, mmSingleBlitz TU)",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: JUMPOUT(0x41C3A0); }"
+ },
+ "0x0041C490": {
+  "wrong_name": "?UpdateMouseMovingWindowNewFrame@ImGui@@YAXXZ",
+  "recovered": "mmSingleBlitz::GetWaypoints",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetWaypoints@mmSingleBlitz@@UAEPAVmmWaypoints@@XZ' at exactly 0x0041C490, demangling to 'public: virtual class mmWaypoints * __thiscall mmSingleBlitz::GetWaypoints(void)'. IDA function size 7 matches the map-implied size 16. the address sits at vftable slot 28 of mmSingleBlitz in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x0041CA50": {
+  "wrong_name": "?ScaleWindowsInViewport@ImGui@@YAXPAUImGuiViewportP@@M@Z",
+  "recovered": "mmSingleCircuit::Reset",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Reset@mmSingleCircuit@@UAEXXZ' at exactly 0x0041CA50, demangling to 'public: virtual void __thiscall mmSingleCircuit::Reset(void)'. IDA function size 68 matches the map-implied size 80. the address sits at vftable slot 3 of mmSingleCircuit in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x0041D840": {
+  "wrong_name": "?KeepAliveID@ImGui@@YAXI@Z",
+  "recovered": "mmSingleCircuit::RegisterLap",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?RegisterLap@mmSingleCircuit@@AAEHXZ' at exactly 0x0041D840, demangling to 'private: int __thiscall mmSingleCircuit::RegisterLap(void)'. IDA function size 84 matches the map-implied size 96."
+ },
+ "0x0041DEC0": {
+  "wrong_name": "?SetLastItemData@ImGui@@YAXPAUImGuiWindow@@IHABUImRect@@@Z",
+  "recovered": "_dynamic_initializer (CRT slot 46, mmSingleCircuit TU) - writes stru_627378.Buffer[128]",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: *(float *)&stru_627378.Buffer[128] = 1.0 / 30000.0; }"
+ },
+ "0x0041F8E0": {
+  "wrong_name": "?NavMoveRequestButNoResultYet@ImGui@@YA_NXZ",
+  "recovered": "_dynamic_initializer (CRT slot 52, mmSingleRace TU) - writes stru_627378.Buffer[164]",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: *(float *)&stru_627378.Buffer[164] = 1.0 / 10000.0; }"
+ },
+ "0x0041FDA0": {
+  "wrong_name": "?CalcTypematicRepeatAmount@ImGui@@YAHMMMM@Z",
+  "recovered": "mmSingleRoam::NextRace",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?NextRace@mmSingleRoam@@UAEXXZ' at exactly 0x0041FDA0, demangling to 'public: virtual void __thiscall mmSingleRoam::NextRace(void)'. IDA size 21 vs map-implied 320 (IDA split this function into chunks). the address sits at vftable slot 22 of mmSingleRoam in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x0041FE80": {
+  "wrong_name": "?ActivateItem@ImGui@@YAXI@Z",
+  "recovered": "_dynamic_initializer (CRT slot 58, mmSingleRoam TU) - writes stru_627378.Buffer[196]",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: *(float *)&stru_627378.Buffer[196] = 1.0 / 10000.0; }"
+ },
+ "0x0041FF30": {
+  "wrong_name": "?SetNavIDWithRectRel@ImGui@@YAXIHIABUImRect@@@Z",
+  "recovered": "mmMultiBlitz::mmMultiBlitz",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??0mmMultiBlitz@@QAE@XZ' at exactly 0x0041FF30, demangling to 'public: __thiscall mmMultiBlitz::mmMultiBlitz(void)'. IDA function size 38 matches the map-implied size 48."
+ },
+ "0x00420000": {
+  "wrong_name": "?PopFocusScope@ImGui@@YAXXZ",
+  "recovered": "mmMultiBlitz::Init",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Init@mmMultiBlitz@@UAEHXZ' at exactly 0x00420000, demangling to 'public: virtual int __thiscall mmMultiBlitz::Init(void)'. IDA function size 297 matches the map-implied size 304. the address sits at vftable slot 13 of mmMultiBlitz in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x00420220": {
+  "wrong_name": "?DockContextClearNodes@ImGui@@YAXPAUImGuiContext@@I_N@Z",
+  "recovered": "mmMultiBlitz::InitGameObjects",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?InitGameObjects@mmMultiBlitz@@UAEXXZ' at exactly 0x00420220, demangling to 'public: virtual void __thiscall mmMultiBlitz::InitGameObjects(void)'. IDA function size 642 matches the map-implied size 656. the address sits at vftable slot 17 of mmMultiBlitz in the binary, and the mangled map symbol is marked virtual - two independent sources agree. debug strings in body: \"%s\\blitz%d\"; \"Startracelow\"."
+ },
+ "0x00421B70": {
+  "wrong_name": "?DockBuilderSplitNode@ImGui@@YAIIHMPAI0@Z",
+  "recovered": "mmGameMulti::NextRace",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?NextRace@mmGameMulti@@UAEXXZ' at exactly 0x00421B70, demangling to 'public: virtual void __thiscall mmGameMulti::NextRace(void)'. IDA function size 1 matches the map-implied size 16. the address appears in the vftables of 4 classes deriving from mmGameMulti that do not override it; the mangled map symbol is marked virtual."
+ },
+ "0x0042B6C0": {
+  "wrong_name": "ImGui::AddUpdateViewport",
+  "recovered": "_dynamic_initializer (CRT slot 95, mmPopup TU)",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: JUMPOUT(0x42B6D0); }"
+ },
+ "0x0042CC00": {
+  "wrong_name": "ImGui::FindPlatformMonitorForPos",
+  "recovered": "dgPhysEntity::DetachMe",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?DetachMe@dgPhysEntity@@UAEXXZ' at exactly 0x0042CC00, demangling to 'public: virtual void __thiscall dgPhysEntity::DetachMe(void)'. IDA function size 1 matches the map-implied size 16. the address appears in the vftables of 3 classes deriving from dgPhysEntity that do not override it; the mangled map symbol is marked virtual."
+ },
+ "0x0042EE90": {
+  "wrong_name": "ImGui::DockContextAddNode",
+  "recovered": "mmHudMap::Reset",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Reset@mmHudMap@@UAEXXZ' at exactly 0x0042EE90, demangling to 'public: virtual void __thiscall mmHudMap::Reset(void)'. IDA function size 14 matches the map-implied size 16. the address sits at vftable slot 3 of mmHudMap in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x0042FA40": {
+  "wrong_name": "ImGui::DockContextPruneUnusedSettingsNodes",
+  "recovered": "mmHudMap::SetOrient",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SetOrient@mmHudMap@@QAEX_N@Z' at exactly 0x0042FA40, demangling to 'public: void __thiscall mmHudMap::SetOrient(bool)'. IDA function size 15 matches the map-implied size 16."
+ },
+ "0x0042FE10": {
+  "wrong_name": "ImGui::DockContextFindNodeByID",
+  "recovered": "mmCarRoadFF::AssignProperties",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?AssignProperties@mmCarRoadFF@@QAEXMH@Z' at exactly 0x0042FE10, demangling to 'public: void __thiscall mmCarRoadFF::AssignProperties(float,int)'. IDA function size 15 matches the map-implied size 16."
+ },
+ "0x00432140": {
+  "wrong_name": "ImGui::DockNodeUpdateTabBar",
+  "recovered": "mmIcons::mmIcons",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??0mmIcons@@QAE@XZ' at exactly 0x00432140, demangling to 'public: __thiscall mmIcons::mmIcons(void)'. IDA function size 207 matches the map-implied size 208."
+ },
+ "0x00432D10": {
+  "wrong_name": "ImGui::DockNodeRemoveTabBar",
+  "recovered": "mmAmbientAudio::Update",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Update@mmAmbientAudio@@QAEXXZ' at exactly 0x00432D10, demangling to 'public: void __thiscall mmAmbientAudio::Update(void)'. IDA size 319 vs map-implied 608 (IDA split this function into chunks)."
+ },
+ "0x00432F40": {
+  "wrong_name": "ImGui::DockNodeUpdateVisibleFlag",
+  "recovered": "_dynamic_initializer (CRT slot 116, mmAmbientAudio TU)",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: JUMPOUT(0x432F50); }"
+ },
+ "0x00433100": {
+  "wrong_name": "ImGui::DockNodeIsDropAllowed",
+  "recovered": "mmCDPlayer::Update",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Update@mmCDPlayer@@UAEXXZ' at exactly 0x00433100, demangling to 'public: virtual void __thiscall mmCDPlayer::Update(void)'. IDA function size 101 matches the map-implied size 112. the address sits at vftable slot 2 of mmCDPlayer in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x00433FB0": {
+  "wrong_name": "ImGui::DockNodeCalcTabBarLayout",
+  "recovered": "mmGameMusicData::GetNumDMusicChoiceGroups",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetNumDMusicChoiceGroups@mmGameMusicData@@QAEFPAVStream@@@Z' at exactly 0x00433FB0, demangling to 'public: short __thiscall mmGameMusicData::GetNumDMusicChoiceGroups(class Stream *)'. IDA function size 78 matches the map-implied size 80."
+ },
+ "0x0043C080": {
+  "wrong_name": "?DockNodeGetRootNode@ImGui@@YAPAUImGuiDockNode@@PAU2@@Z",
+  "recovered": "mmNetObject::mmNetObject",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??0mmNetObject@@QAE@XZ' at exactly 0x0043C080, demangling to 'public: __thiscall mmNetObject::mmNetObject(void)'. IDA function size 440 matches the map-implied size 448."
+ },
+ "0x00442580": {
+  "wrong_name": "?ShowDemoWindow@ImGui@@YAXPA_N@Z",
+  "recovered": "dgBangerInstance::GetBound",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetBound@dgBangerInstance@@UAEPBVphBound@@H@Z' at exactly 0x00442580, demangling to 'public: virtual class phBound const * __thiscall dgBangerInstance::GetBound(int)'. IDA function size 245 matches the map-implied size 256. the address appears in the vftables of 10 classes deriving from dgBangerInstance that do not override it; the mangled map symbol is marked virtual."
+ },
+ "0x00463090": {
+  "wrong_name": "?ShadeVertsLinearColorGradientKeepAlpha@ImGui@@YAXPAUImDrawList@@HHUImVec2@@1II@Z",
+  "recovered": "_dynamic_atexit_destructor_for__lvlInstance::sm_XrefHash_",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated atexit destructor for a file-scope object: body is the MSVC guard-byte pattern 'if ((guard & 1) == 0) { guard |= 1; ~T(&global); }', and the address is reached from the CRT initializer table at .data:0x005C2004. Body: if ( ((int)lvlInstance::GeomTable[0].pShaders & 1) == 0 )     {         LOBYTE(lvlInstance::GeomTable[0].pShaders) |= 1u;         HashTable::~HashTable(&lvlInst"
+ },
+ "0x0046EE60": {
+  "wrong_name": "?Create@ImBitVector@@QAEXH@Z",
+  "recovered": "_dynamic_initializer (Matrix34/phContact TU) - flt_660F5C = sqrt(flt_660F58)",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: flt_660F5C = sqrt(flt_660F58); }"
+ },
+ "0x0046F110": {
+  "wrong_name": "?TestBit@ImBitVector@@QBE_NH@Z",
+  "recovered": "phContact::IsEqual",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?IsEqual@phContact@@QAE_NABVphImpact@@@Z' at exactly 0x0046F110, demangling to 'public: bool __thiscall phContact::IsEqual(class phImpact const &)'. IDA function size 189 matches the map-implied size 192."
+ },
+ "0x00478820": {
+  "wrong_name": "?TreeNodeV@ImGui@@YA_NPBXPBDPAD@Z",
+  "recovered": "phInertialCS::CalcNetTurn",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?CalcNetTurn@phInertialCS@@QAEXABVVector3@@@Z' at exactly 0x00478820, demangling to 'public: void __thiscall phInertialCS::CalcNetTurn(class Vector3 const &)'. IDA function size 274 matches the map-implied size 288."
+ },
+ "0x00479830": {
+  "wrong_name": "?ListBoxHeader@ImGui@@YA_NPBDHH@Z",
+  "recovered": "_dynamic_initializer_for__phBoundBox::EdgeNormals_ (chunk: entries 12-14)",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: phBoundBox::EdgeNormals[12].x = 1.0;     phBoundBox::EdgeNormals[12].y = 0.0;     phBoundBox::EdgeNormals[12].z = 0.0;     phBoundBox::EdgeNormals[13].x = -1.0;"
+ },
+ "0x00479950": {
+  "wrong_name": "?PlotLines@ImGui@@YAXPBDPBMHH0MMUImVec2@@H@Z",
+  "recovered": "_dynamic_initializer_for__phBoundBox::EdgeNormals_ (chunk)",
+  "confidence": "CONFIRMED",
+  "evidence": "Not a separate function: this address lies inside the extent of the shipped-map symbol 'Vector3::Dot3x3Transpose' (0x00479950 + 912). IDA split that function into chunks. Body is consistent with that function. Body: ; }"
+ },
+ "0x00479A50": {
+  "wrong_name": "?PlotHistogram@ImGui@@YAXPBDP6AMPAXH@Z1HH0MMUImVec2@@@Z",
+  "recovered": "_dynamic_initializer_for__phBoundBox::EdgeNormals_ (chunk: entries 4-5)",
+  "confidence": "CONFIRMED",
+  "evidence": "Not a separate function: this address lies inside the extent of the shipped-map symbol 'Vector3::Dot3x3Transpose' (0x00479A50 + 1168). IDA split that function into chunks. Body is consistent with that function. Body: float v6; // eax     float v7; // ecx     float v8; // edx      phBoundBox::EdgeNormals[4].x = a1;     phBoundBox::EdgeNormals[4].y = a3;     phBoundBox::EdgeNo"
+ },
+ "0x00479A90": {
+  "wrong_name": "?Value@ImGui@@YAXPBD_N@Z",
+  "recovered": "_dynamic_initializer_for__phBoundBox::EdgeNormals_ (chunk: entry 6)",
+  "confidence": "CONFIRMED",
+  "evidence": "Not a separate function: this address lies inside the extent of the shipped-map symbol 'Vector3::Dot3x3Transpose' (0x00479A90 + 1232). IDA split that function into chunks. Body is consistent with that function. Body: float v3; // eax     float v4; // ecx     float v5; // edx      *(_DWORD *)(a1 - 12) = 0;     v3 = *(float *)(a1 - 12);     *(_DWORD *)(a1 - 8) = -1087044365;  "
+ },
+ "0x00479AD0": {
+  "wrong_name": "?Value@ImGui@@YAXPBDH@Z",
+  "recovered": "_dynamic_initializer_for__phBoundBox::EdgeNormals_ (chunk: entry 7)",
+  "confidence": "CONFIRMED",
+  "evidence": "Not a separate function: this address lies inside the extent of the shipped-map symbol 'Vector3::Dot3x3Transpose' (0x00479AD0 + 1296). IDA split that function into chunks. Body is consistent with that function. Body: float v2; // ecx     float v3; // edx      v2 = *(float *)(a2 - 8);     *(_DWORD *)(a2 - 4) = -1087044365;     v3 = *(float *)(a2 - 4);     phBoundBox::EdgeNorm"
+ },
+ "0x00479D50": {
+  "wrong_name": "?EndMenuBar@ImGui@@YAXXZ",
+  "recovered": "_dynamic_initializer (CRT slot 173, phBoundBox TU) - fills the dword_661120 edge/vertex index table",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: int result; // eax     ImGuiWindow *window; // [esp+Ch] [ebp-4h]      LOWORD(window) = *(_WORD *)code_label;     HIWORD(window) = 1;     dword_661120 = (int)win"
+ },
+ "0x004805B0": {
+  "wrong_name": "?Scrollbar@ImGui@@YAXW4ImGuiAxis@@@Z",
+  "recovered": "phBoundBox::ProbeVsBox",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?ProbeVsBox@phBoundBox@@SA_NABVVector3@@AAVphSegment@@PAVphIntersectionPoint@@PAJM@Z' at exactly 0x004805B0, demangling to 'public: static bool __cdecl phBoundBox::ProbeVsBox(class Vector3 const &,class phSegment &,class phIntersectionPoint *,long *,float)'. IDA function size 1256 matches the map-implied size 1264."
+ },
+ "0x004813A0": {
+  "wrong_name": "?ButtonBehavior@ImGui@@YA_NABUImRect@@IPA_N1H@Z",
+  "recovered": "phBoundHotdog::TestProbe",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?TestProbe@phBoundHotdog@@UBE_NAAVphSegment@@PAVphIntersection@@M@Z' at exactly 0x004813A0, demangling to 'public: virtual bool __thiscall phBoundHotdog::TestProbe(class phSegment &,class phIntersection *,float)const '. IDA function size 454 matches the map-implied size 464. the address sits at vftable slot 10 of phBoundHotdog in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x0048B230": {
+  "wrong_name": "ImStb::stb_text_makeundo_insert",
+  "recovered": "phBoundPolygonal::ResetVertNeedsH",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?ResetVertNeedsH@phBoundPolygonal@@KAXPAVphIntersection@@0_N1@Z' at exactly 0x0048B230, demangling to 'protected: static void __cdecl phBoundPolygonal::ResetVertNeedsH(class phIntersection *,class phIntersection *,bool,bool)'. IDA function size 62 matches the map-implied size 64."
+ },
+ "0x004917F0": {
+  "wrong_name": "??$ScaleRatioFromValueT@NNN@ImGui@@YAMHNNN_NMM@Z",
+  "recovered": "phBoundCollision::testNoOverlap",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?testNoOverlap@phBoundCollision@@CAHQBM0@Z' at exactly 0x004917F0, demangling to 'private: static int __cdecl phBoundCollision::testNoOverlap(float const * const,float const * const)'. IDA function size 98 matches the map-implied size 112."
+ },
+ "0x00499470": {
+  "wrong_name": "ImGui_ImplAGE_SetupRenderState",
+  "recovered": "examine_app14",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?examine_app14@@YAXPAUjpeg_decompress_struct@@PAEIJ@Z' at exactly 0x00499470, demangling to 'void __cdecl examine_app14(struct jpeg_decompress_struct *,unsigned char *,unsigned int,long)'. IDA function size 222 matches the map-implied size 224."
+ },
+ "0x0049ACA0": {
+  "wrong_name": "ImGui_ImplWin32_CreateWindow",
+  "recovered": "alloc_sarray",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?alloc_sarray@@YAPAPAEPAUjpeg_common_struct@@HII@Z' at exactly 0x0049ACA0, demangling to 'unsigned char * * __cdecl alloc_sarray(struct jpeg_common_struct *,int,unsigned int,unsigned int)'. IDA function size 160 matches the map-implied size 160."
+ },
+ "0x0049B480": {
+  "wrong_name": "ImGui_ImplWin32_SetWindowAlpha",
+  "recovered": "free_pool",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?free_pool@@YAXPAUjpeg_common_struct@@H@Z' at exactly 0x0049B480, demangling to 'void __cdecl free_pool(struct jpeg_common_struct *,int)'. IDA function size 260 matches the map-implied size 272."
+ },
+ "0x0049B5D0": {
+  "wrong_name": "ImGui_ImplWin32_WndProcHandler_PlatformWindow",
+  "recovered": "jpeg_abort",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?jpeg_abort@@YAXPAUjpeg_common_struct@@@Z' at exactly 0x0049B5D0, demangling to 'void __cdecl jpeg_abort(struct jpeg_common_struct *)'. IDA function size 60 matches the map-implied size 64."
+ },
+ "0x0049BE50": {
+  "wrong_name": "?InputTextWithHint@ImGui@@YA_NPBD0PAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@HP6AHPAUImGuiInputTextCallbackData@@@ZPAX@Z",
+  "recovered": "start_pass_main",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?start_pass_main@@YAXPAUjpeg_decompress_struct@@W4J_BUF_MODE@@@Z' at exactly 0x0049BE50, demangling to 'void __cdecl start_pass_main(struct jpeg_decompress_struct *,enum J_BUF_MODE)'. IDA function size 107 matches the map-implied size 112."
+ },
+ "0x0049C6D0": {
+  "wrong_name": "?SetCurrentContext@ImPlot@@YAXPAUImPlotContext@@@Z",
+  "recovered": "dummy_consume_data",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?dummy_consume_data@@YAHPAUjpeg_decompress_struct@@@Z' at exactly 0x0049C6D0, demangling to 'int __cdecl dummy_consume_data(struct jpeg_decompress_struct *)'. IDA function size 3 matches the map-implied size 16."
+ },
+ "0x0049C6E0": {
+  "wrong_name": "?BeginPlot@ImPlot@@YA_NPBD00ABUImVec2@@HHHHH@Z",
+  "recovered": "jpeg_make_d_derived_tbl",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?jpeg_make_d_derived_tbl@@YAXPAUjpeg_decompress_struct@@EHPAPAUd_derived_tbl@@@Z' at exactly 0x0049C6E0, demangling to 'void __cdecl jpeg_make_d_derived_tbl(struct jpeg_decompress_struct *,unsigned char,int,struct d_derived_tbl * *)'. IDA function size 697 matches the map-implied size 704."
+ },
+ "0x004A32B0": {
+  "wrong_name": "?GetPlotQuery@ImPlot@@YA?AUImPlotLimits@@H@Z",
+  "recovered": "_dynamic_initializer_for__asLinearCS::RootFrame_",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: return (ImPlotLimits *)asLinearCS::asLinearCS((asLinearCS *)&asLinearCS::RootFrame); }"
+ },
+ "0x004A3440": {
+  "wrong_name": "?Annotate@ImPlot@@YAXNNABUImVec2@@PBDZZ",
+  "recovered": "asCullable::Cull",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Cull@asCullable@@UAEXXZ' at exactly 0x004A3440, demangling to 'public: virtual void __thiscall asCullable::Cull(void)'. IDA function size 1 matches the map-implied size 16. the address appears in the vftables of 121 classes deriving from asCullable that do not override it; the mangled map symbol is marked virtual."
+ },
+ "0x004A34D0": {
+  "wrong_name": "?AnnotateV@ImPlot@@YAXNNABUImVec2@@PBDPAD@Z",
+  "recovered": "eqEventQ::~eqEventQ",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??1eqEventQ@@UAE@XZ' at exactly 0x004A34D0, demangling to 'public: virtual __thiscall eqEventQ::~eqEventQ(void)'. IDA function size 104 matches the map-implied size 112."
+ },
+ "0x004A47B0": {
+  "wrong_name": "?BeginLegendPopup@ImPlot@@YA_NPBDH@Z",
+  "recovered": "modPackage::OpenFile",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?OpenFile@modPackage@@QAEPAVStream@@PBD@Z' at exactly 0x004A47B0, demangling to 'public: class Stream * __thiscall modPackage::OpenFile(char const *)'. IDA function size 66 matches the map-implied size 80. the body prints its own name: \"modPackage::OpenFile(%x) - %s [next = %s]\".",
+  "previously_known": true,
+  "previously_known_as": "modPackage::OpenFile"
+ },
+ "0x004A6A50": {
+  "wrong_name": "?GetStyleColorName@ImPlot@@YAPBDH@Z",
+  "recovered": "rglCameraMatrix",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?rglCameraMatrix@@YAXABVMatrix34@@@Z' at exactly 0x004A6A50, demangling to 'void __cdecl rglCameraMatrix(class Matrix34 const &)'. IDA function size 17 matches the map-implied size 32."
+ },
+ "0x004AD5D0": {
+  "wrong_name": "?LerpColormap@ImPlot@@YA?AUImVec4@@PBU2@HM@Z",
+  "recovered": "gfxTexture::Load (chunk, +1232) - RGB888 -> RGB555 conversion loop",
+  "confidence": "CONFIRMED",
+  "evidence": "Not a separate function: this address lies inside the extent of the shipped-map symbol 'gfxTexture::Load' (0x004AD5D0 + 1232). IDA split that function into chunks. Body is consistent with that function. Body: int v3; // edx     int v4; // edi     int v6; // esi     unsigned __int8 v8; // bl     int v9; // edx      if ( size )     {         v6 = size;         do      "
+ },
+ "0x004AD750": {
+  "wrong_name": "?AddTextVertical@ImPlot@@YAXPAUImDrawList@@UImVec2@@IPBD2@Z",
+  "recovered": "gfxTexture::SetMIPMapEnv",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SetMIPMapEnv@gfxTexture@@QAEXIM@Z' at exactly 0x004AD750, demangling to 'public: void __thiscall gfxTexture::SetMIPMapEnv(unsigned int,float)'. IDA function size 3 matches the map-implied size 16."
+ },
+ "0x004ADBB0": {
+  "wrong_name": "?GetGmtTime@ImPlot@@YAPAUtm@@ABUImPlotTime@@PAU2@@Z",
+  "recovered": "gfxTextureCachePool::~gfxTextureCachePool",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??1gfxTextureCachePool@@QAE@XZ' at exactly 0x004ADBB0, demangling to 'public: __thiscall gfxTextureCachePool::~gfxTextureCachePool(void)'. IDA function size 47 matches the map-implied size 48."
+ },
+ "0x004ADBE0": {
+  "wrong_name": "?MkLocTime@ImPlot@@YA?AUImPlotTime@@PAUtm@@@Z",
+  "recovered": "gfxTextureCachePool::IsCompatibleWith",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?IsCompatibleWith@gfxTextureCachePool@@QAE_NPAVgfxTexture@@@Z' at exactly 0x004ADBE0, demangling to 'public: bool __thiscall gfxTextureCachePool::IsCompatibleWith(class gfxTexture *)'. IDA function size 162 matches the map-implied size 176."
+ },
+ "0x004ADD30": {
+  "wrong_name": "?GetYear@ImPlot@@YAHABUImPlotTime@@@Z",
+  "recovered": "gfxTextureCachePool::AddSlot",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?AddSlot@gfxTextureCachePool@@QAE_NXZ' at exactly 0x004ADD30, demangling to 'public: bool __thiscall gfxTextureCachePool::AddSlot(void)'. IDA function size 254 matches the map-implied size 256."
+ },
+ "0x004AE920": {
+  "wrong_name": "?FormatDateTime@ImPlot@@YAHABUImPlotTime@@PADHUImPlotDateTimeFmt@@@Z",
+  "recovered": "gfxImage::Create",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Create@gfxImage@@SAPAV1@HHW4gfxImageFormat@1@0H@Z' at exactly 0x004AE920, demangling to 'public: static class gfxImage * __cdecl gfxImage::Create(int,int,enum gfxImage::gfxImageFormat,enum gfxImage::gfxImageFormat,int)'. IDA function size 269 matches the map-implied size 272."
+ },
+ "0x004B30A0": {
+  "wrong_name": "?IsColorAuto@ImPlot@@YA_NH@Z",
+  "recovered": "gfxAnnotateImage",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?gfxAnnotateImage@@YAXPAVgfxImage@@PBD@Z' at exactly 0x004B30A0, demangling to 'void __cdecl gfxAnnotateImage(class gfxImage *,char const *)'. IDA function size 78 matches the map-implied size 80. debug strings in body: \"Memory Usage (%s), %dk (%d total)\"."
+ },
+ "0x004B3310": {
+  "wrong_name": "?Precision@ImPlot@@YAHN@Z",
+  "recovered": "gfxPacket::ForceCPV",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?ForceCPV@gfxPacket@@SAXI@Z' at exactly 0x004B3310, demangling to 'public: static void __cdecl gfxPacket::ForceCPV(unsigned int)'. IDA function size 1 matches the map-implied size 16."
+ },
+ "0x004C0770": {
+  "wrong_name": "??0ScrollingBuffer@ImPlot@@QAE@XZ",
+  "recovered": "Matrix44::Zero",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Zero@Matrix44@@QAEXXZ' at exactly 0x004C0770, demangling to 'public: void __thiscall Matrix44::Zero(void)'. IDA function size 50 matches the map-implied size 64."
+ },
+ "0x004C0920": {
+  "wrong_name": "??1BenchRecord@ImPlot@@QAE@XZ",
+  "recovered": "Matrix44::Transpose",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Transpose@Matrix44@@QAEXXZ' at exactly 0x004C0920, demangling to 'public: void __thiscall Matrix44::Transpose(void)'. IDA function size 73 matches the map-implied size 80."
+ },
+ "0x004C0970": {
+  "wrong_name": "??1HugeTimeData@ImPlot@@QAE@XZ",
+  "recovered": "Matrix44::FromMatrix34",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?FromMatrix34@Matrix44@@QAEXABVMatrix34@@@Z' at exactly 0x004C0970, demangling to 'public: void __thiscall Matrix44::FromMatrix34(class Matrix34 const &)'. IDA function size 98 matches the map-implied size 112."
+ },
+ "0x004C0AD0": {
+  "wrong_name": "?AddPoint@RollingBuffer@ImPlot@@QAEXMM@Z",
+  "recovered": "Matrix44::Add",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Add@Matrix44@@QAEXABV1@0@Z' at exactly 0x004C0AD0, demangling to 'public: void __thiscall Matrix44::Add(class Matrix44 const &,class Matrix44 const &)'. IDA function size 154 matches the map-implied size 160."
+ },
+ "0x004C1170": {
+  "wrong_name": "?PlotShadedG@ImPlot@@YAXPBDP6A?AUImPlotPoint@@PAXH@Z121HH@Z",
+  "recovered": "Vector4::Dot",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Dot@Vector4@@QAEAAV1@ABV1@ABVMatrix44@@@Z' at exactly 0x004C1170, demangling to 'public: class Vector4 & __thiscall Vector4::Dot(class Vector4 const &,class Matrix44 const &)'. IDA function size 143 matches the map-implied size 144."
+ },
+ "0x004C1200": {
+  "wrong_name": "?PlotBarsHG@ImPlot@@YAXPBDP6A?AUImPlotPoint@@PAXH@Z1HNH@Z",
+  "recovered": "Vector4::Dot3x3",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Dot3x3@Vector4@@QAEAAV1@ABV1@ABVMatrix44@@@Z' at exactly 0x004C1200, demangling to 'public: class Vector4 & __thiscall Vector4::Dot3x3(class Vector4 const &,class Matrix44 const &)'. IDA function size 87 matches the map-implied size 96."
+ },
+ "0x004C23F0": {
+  "wrong_name": "?PlotRects@ImPlot@@YAXPBDP6A?AUImPlotPoint@@PAXH@Z1HH@Z",
+  "recovered": "FindImpactPolygonToSphere",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?FindImpactPolygonToSphere@@YAHABVVector3@@MPBV1@H0PAV1@PAH2PAM@Z' at exactly 0x004C23F0, demangling to 'int __cdecl FindImpactPolygonToSphere(class Vector3 const &,float,class Vector3 const *,int,class Vector3 const &,class Vector3 *,int *,class Vector3 *,float *)'. IDA function size 1220 matches the map-implied size 1232."
+ },
+ "0x004C5870": {
+  "wrong_name": "??$PlotBarsH@G@ImPlot@@YAXPBDPBGHNNHH@Z",
+  "recovered": "datAssetManager::Open",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Open@datAssetManager@@SAPAVStream@@PBD0_N1@Z' at exactly 0x004C5870, demangling to 'public: static class Stream * __cdecl datAssetManager::Open(char const *,char const *,bool,bool)'. IDA function size 72 matches the map-implied size 80. debug strings in body: \"Opening '%s'...\"."
+ },
+ "0x004C58C0": {
+  "wrong_name": "??$PlotBarsH@H@ImPlot@@YAXPBDPBH1HNHH@Z",
+  "recovered": "datAssetManager::Open",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Open@datAssetManager@@SAPAVStream@@PBD00_N1@Z' at exactly 0x004C58C0, demangling to 'public: static class Stream * __cdecl datAssetManager::Open(char const *,char const *,char const *,bool,bool)'. IDA function size 76 matches the map-implied size 80. debug strings in body: \"Opening '%s'...\"."
+ },
+ "0x004C59E0": {
+  "wrong_name": "??$PlotBarsH@M@ImPlot@@YAXPBDPBM1HNHH@Z",
+  "recovered": "datAssetManager::Exists",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Exists@datAssetManager@@SA_NPBD00@Z' at exactly 0x004C59E0, demangling to 'public: static bool __cdecl datAssetManager::Exists(char const *,char const *,char const *)'. IDA function size 46 matches the map-implied size 48."
+ },
+ "0x004C5B90": {
+  "wrong_name": "??$PlotBarsH@_K@ImPlot@@YAXPBDPB_K1HNHH@Z",
+  "recovered": "_dynamic_atexit_destructor_for__datArgParser::ArgHash_",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated atexit destructor for a file-scope object: body is the MSVC guard-byte pattern 'if ((guard & 1) == 0) { guard |= 1; ~T(&global); }', and the address is reached from the CRT initializer table at .data:0x005C2004. Body: if ( (byte_6A3C2C & 1) == 0 )     {         byte_6A3C2C |= 1u;         HashTable::~HashTable(&datArgParser::ArgHash);     } }"
+ },
+ "0x004C7A20": {
+  "wrong_name": "??$PlotBarsHEx@U?$GetterXsYs@I@ImPlot@@N@ImPlot@@YAXPBDABU?$GetterXsYs@I@0@N@Z",
+  "recovered": "_dynamic_initializer_for__NullCallback_ (datCallback)",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: datCallback::datCallback(&NullCallback); }"
+ },
+ "0x004C8860": {
+  "wrong_name": "??$PlotDigital@M@ImPlot@@YAXPBDPBM1HHH@Z",
+  "recovered": "datAsciiTokenizer::GetVector",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetVector@datAsciiTokenizer@@UAEXAAVVector3@@@Z' at exactly 0x004C8860, demangling to 'public: virtual void __thiscall datAsciiTokenizer::GetVector(class Vector3 &)'. IDA function size 43 matches the map-implied size 48. the address sits at vftable slot 3 of datAsciiTokenizer in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x004C8920": {
+  "wrong_name": "??$PlotDigital@_J@ImPlot@@YAXPBDPB_J1HHH@Z",
+  "recovered": "datAsciiTokenizer::MatchVector",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?MatchVector@datAsciiTokenizer@@UAEXPBDAAVVector2@@@Z' at exactly 0x004C8920, demangling to 'public: virtual void __thiscall datAsciiTokenizer::MatchVector(char const *,class Vector2 &)'. IDA function size 31 matches the map-implied size 32. the address sits at vftable slot 10 of datAsciiTokenizer in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x004C8980": {
+  "wrong_name": "??$PlotDigital@_K@ImPlot@@YAXPBDPB_K1HHH@Z",
+  "recovered": "datAsciiTokenizer::Put",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Put@datAsciiTokenizer@@UAE_NPBDI@Z' at exactly 0x004C8980, demangling to 'public: virtual bool __thiscall datAsciiTokenizer::Put(char const *,unsigned int)'. IDA function size 117 matches the map-implied size 128. the address sits at vftable slot 17 of datAsciiTokenizer in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x004C8DE0": {
+  "wrong_name": "??$PlotDigitalEx@U?$GetterXsYs@E@ImPlot@@@ImPlot@@YAXPBDU?$GetterXsYs@E@0@@Z",
+  "recovered": "datBinTokenizer::Put",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Put@datBinTokenizer@@UAE_NH@Z' at exactly 0x004C8DE0, demangling to 'public: virtual bool __thiscall datBinTokenizer::Put(int)'. IDA function size 31 matches the map-implied size 32. the address sits at vftable slot 15 of datBinTokenizer in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x004C91E0": {
+  "wrong_name": "??$PlotDigitalEx@U?$GetterXsYs@F@ImPlot@@@ImPlot@@YAXPBDU?$GetterXsYs@F@0@@Z",
+  "recovered": "datReplay::BeginFrame",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?BeginFrame@datReplay@@SAXXZ' at exactly 0x004C91E0, demangling to 'public: static void __cdecl datReplay::BeginFrame(void)'. IDA function size 8 matches the map-implied size 16."
+ },
+ "0x004CB5E0": {
+  "wrong_name": "??$PlotErrorBars@C@ImPlot@@YAXPBDPBC111HHH@Z",
+  "recovered": "_dynamic_initializer (CRT slot 212, vehCarDamage TU)",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: JUMPOUT(0x4CB5F0); }"
+ },
+ "0x004CB660": {
+  "wrong_name": "??$PlotErrorBars@E@ImPlot@@YAXPBDPBE111HHH@Z",
+  "recovered": "vehCarSim::vehCarSim",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??0vehCarSim@@QAE@XZ' at exactly 0x004CB660, demangling to 'public: __thiscall vehCarSim::vehCarSim(void)'. IDA function size 636 matches the map-implied size 640."
+ },
+ "0x004CB8E0": {
+  "wrong_name": "??$PlotErrorBars@M@ImPlot@@YAXPBDPBM111HHH@Z",
+  "recovered": "vehCarSim::~vehCarSim",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??1vehCarSim@@UAE@XZ' at exactly 0x004CB8E0, demangling to 'public: virtual __thiscall vehCarSim::~vehCarSim(void)'. IDA function size 399 matches the map-implied size 400."
+ },
+ "0x004CCFE0": {
+  "wrong_name": "??$PlotErrorBarsEx@U?$GetterError@_J@ImPlot@@@ImPlot@@YAXPBDABU?$GetterError@_J@0@@Z",
+  "recovered": "vehCarModel::Init",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Init@vehCarModel@@QAEXPAVvehCar@@PBDH@Z' at exactly 0x004CCFE0, demangling to 'public: void __thiscall vehCarModel::Init(class vehCar *,char const *,int)'. IDA function size 2623 matches the map-implied size 2624. debug strings in body: \"slight0\"."
+ },
+ "0x004CDA20": {
+  "wrong_name": "??$PlotErrorBarsHEx@U?$GetterError@C@ImPlot@@@ImPlot@@YAXPBDABU?$GetterError@C@0@@Z",
+  "recovered": "vehCarModel::InitBound",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?InitBound@vehCarModel@@QAEXPBD_N@Z' at exactly 0x004CDA20, demangling to 'public: void __thiscall vehCarModel::InitBound(char const *,bool)'. IDA function size 463 matches the map-implied size 464. debug strings in body: \"Object %s needs a bound called %s\"."
+ },
+ "0x004CDF60": {
+  "wrong_name": "??$PlotErrorBarsHEx@U?$GetterError@F@ImPlot@@@ImPlot@@YAXPBDABU?$GetterError@F@0@@Z",
+  "recovered": "vehCarModel::InitSirenLight",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?InitSirenLight@vehCarModel@@IAEXPBD0H@Z' at exactly 0x004CDF60, demangling to 'protected: void __thiscall vehCarModel::InitSirenLight(char const *,char const *,int)'. IDA function size 102 matches the map-implied size 112."
+ },
+ "0x004D00A0": {
+  "wrong_name": "??$PlotHeatmap@N@ImPlot@@YAXPBDPBNHHNN0ABUImPlotPoint@@2@Z",
+  "recovered": "aiAmbientVehicleAudio::PlayImpactReaction (chunk, +16)",
+  "confidence": "CONFIRMED",
+  "evidence": "Not a separate function: this address lies inside the extent of the shipped-map symbol 'aiAmbientVehicleAudio::PlayImpactReaction' (0x004D00A0 + 16). IDA split that function into chunks. Body is consistent with that function. Body: AudCreature::PlayImpact(a1, *(float *)(a2 + 8)); }"
+ },
+ "0x004D0A10": {
+  "wrong_name": "??$PlotLine@N@ImPlot@@YAXPBDPBNHNNHH@Z",
+  "recovered": "_dynamic_initializer (CRT slot 215, aiAmbientVehicleAudio TU)",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: JUMPOUT(0x4D0A20); }"
+ },
+ "0x004D0AA0": {
+  "wrong_name": "??$PlotLine@_J@ImPlot@@YAXPBDPB_JHNNHH@Z",
+  "recovered": "_dynamic_initializer (CRT slot 218, aiAmbientVehicleAudio TU)",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: JUMPOUT(0x4D0AB0); }"
+ },
+ "0x004D12E0": {
+  "wrong_name": "??$PlotLineEx@U?$GetterXsYs@F@ImPlot@@@ImPlot@@YAXPBDABU?$GetterXsYs@F@0@@Z",
+  "recovered": "vehCarAudioContainer::InitPolice",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?InitPolice@vehCarAudioContainer@@QAEXPBDPAVvehCarSim@@PAVvehCarDamage@@H@Z' at exactly 0x004D12E0, demangling to 'public: void __thiscall vehCarAudioContainer::InitPolice(char const *,class vehCarSim *,class vehCarDamage *,int)'. IDA function size 231 matches the map-implied size 240."
+ },
+ "0x004D4800": {
+  "wrong_name": "??$PlotLineEx@U?$GetterYs@N@ImPlot@@@ImPlot@@YAXPBDABU?$GetterYs@N@0@@Z",
+  "recovered": "vehPoliceCarAudio::ReadSirenData",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?ReadSirenData@vehPoliceCarAudio@@AAEXPAVStream@@@Z' at exactly 0x004D4800, demangling to 'private: void __thiscall vehPoliceCarAudio::ReadSirenData(class Stream *)'. IDA function size 466 matches the map-implied size 480. debug strings in body: \"Sample name\"; \"play time\"."
+ },
+ "0x004D5220": {
+  "wrong_name": "??$PlotLineEx@UGetterFuncPtr@ImPlot@@@ImPlot@@YAXPBDABUGetterFuncPtr@0@@Z",
+  "recovered": "vehPoliceCarAudio::UnAssignSounds",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?UnAssignSounds@vehPoliceCarAudio@@UAEXH@Z' at exactly 0x004D5220, demangling to 'public: virtual void __thiscall vehPoliceCarAudio::UnAssignSounds(int)'. IDA function size 110 matches the map-implied size 112. the address sits at vftable slot 1 of vehPoliceCarAudio in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x004D8580": {
+  "wrong_name": "??$PlotScatter@C@ImPlot@@YAXPBDPBC1HHH@Z",
+  "recovered": "vehBreakableMgr::vehBreakableMgr",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??0vehBreakableMgr@@QAE@XZ' at exactly 0x004D8580, demangling to 'public: __thiscall vehBreakableMgr::vehBreakableMgr(void)'. IDA function size 45 matches the map-implied size 48."
+ },
+ "0x004D86A0": {
+  "wrong_name": "??$PlotScatter@F@ImPlot@@YAXPBDPBF1HHH@Z",
+  "recovered": "vehBreakableMgr::Add",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Add@vehBreakableMgr@@QAEXPBD0PAPAVmodStatic@@HH@Z' at exactly 0x004D86A0, demangling to 'public: void __thiscall vehBreakableMgr::Add(char const *,char const *,class modStatic * *,int,int)'. IDA function size 72 matches the map-implied size 80."
+ },
+ "0x004D8770": {
+  "wrong_name": "??$PlotScatter@G@ImPlot@@YAXPBDPBGHNNHH@Z",
+  "recovered": "vehBreakableMgr::Update",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Update@vehBreakableMgr@@QAEXXZ' at exactly 0x004D8770, demangling to 'public: void __thiscall vehBreakableMgr::Update(void)'. IDA function size 1 matches the map-implied size 16."
+ },
+ "0x004D8890": {
+  "wrong_name": "??$PlotScatter@I@ImPlot@@YAXPBDPBIHNNHH@Z",
+  "recovered": "vehBreakableMgr::DrawCityLit",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?DrawCityLit@vehBreakableMgr@@QAEXABVMatrix34@@PAVmodShader@@H@Z' at exactly 0x004D8890, demangling to 'public: void __thiscall vehBreakableMgr::DrawCityLit(class Matrix34 const &,class modShader *,int)'. IDA function size 3 matches the map-implied size 16."
+ },
+ "0x004D9360": {
+  "wrong_name": "??$PlotScatterEx@U?$GetterXsYs@G@ImPlot@@@ImPlot@@YAXPBDABU?$GetterXsYs@G@0@@Z",
+  "recovered": "vehAero::Update",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Update@vehAero@@UAEXXZ' at exactly 0x004D9360, demangling to 'public: virtual void __thiscall vehAero::Update(void)'. IDA function size 892 matches the map-implied size 896. the address sits at vftable slot 2 of vehAero in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x004DB7B0": {
+  "wrong_name": "??$PlotScatterEx@U?$GetterYs@N@ImPlot@@@ImPlot@@YAXPBDABU?$GetterYs@N@0@@Z",
+  "recovered": "_dynamic_initializer (CRT slot 245, vehHornAudio TU)",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: JUMPOUT(0x4DB7C0); }"
+ },
+ "0x004DC210": {
+  "wrong_name": "??$PlotShaded@C@ImPlot@@YAXPBDPBC1HNHH@Z",
+  "recovered": "vehCarAudio::StopHorn",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?StopHorn@vehCarAudio@@QAEXXZ' at exactly 0x004DC210, demangling to 'public: void __thiscall vehCarAudio::StopHorn(void)'. IDA function size 35 matches the map-implied size 48."
+ },
+ "0x004DC340": {
+  "wrong_name": "??$PlotShaded@E@ImPlot@@YAXPBDPBE1HNHH@Z",
+  "recovered": "vehCarAudio::IsAirBorne",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?IsAirBorne@vehCarAudio@@QAE_NXZ' at exactly 0x004DC340, demangling to 'public: bool __thiscall vehCarAudio::IsAirBorne(void)'. IDA function size 7 matches the map-implied size 16."
+ },
+ "0x004DC730": {
+  "wrong_name": "??$PlotShaded@H@ImPlot@@YAXPBDPBHHNNNHH@Z",
+  "recovered": "vehCarAudio::GetAudImpactPtr",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetAudImpactPtr@vehCarAudio@@QAEPAVAudImpact@@XZ' at exactly 0x004DC730, demangling to 'public: class AudImpact * __thiscall vehCarAudio::GetAudImpactPtr(void)'. IDA function size 7 matches the map-implied size 16."
+ },
+ "0x004DC8D0": {
+  "wrong_name": "??$PlotShaded@M@ImPlot@@YAXPBDPBM11HHH@Z",
+  "recovered": "_dynamic_initializer (CRT slot 252, vehCarAudio TU) - flt_6B005C",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: flt_6B005C = 1.0 / 10000.0; }"
+ },
+ "0x004DC930": {
+  "wrong_name": "??$PlotShaded@M@ImPlot@@YAXPBDPBM1HNHH@Z",
+  "recovered": "vehSemiCarAudio::vehSemiCarAudio",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??0vehSemiCarAudio@@QAE@PAVvehCarSim@@PAVvehCarDamage@@PAD_N3@Z' at exactly 0x004DC930, demangling to 'public: __thiscall vehSemiCarAudio::vehSemiCarAudio(class vehCarSim *,class vehCarDamage *,char *,bool,bool)'. IDA function size 130 matches the map-implied size 144."
+ },
+ "0x004DD150": {
+  "wrong_name": "??$PlotShadedEx@U?$GetterXsYs@E@ImPlot@@U12@@ImPlot@@YAXPBDABU?$GetterXsYs@E@0@1@Z",
+  "recovered": "_dynamic_initializer (vehSemiCarAudio TU) - flt_6B007C",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: flt_6B007C = 1.0 / 10000.0; }"
+ },
+ "0x004DD8D0": {
+  "wrong_name": "??$PlotShadedEx@U?$GetterXsYs@G@ImPlot@@U12@@ImPlot@@YAXPBDABU?$GetterXsYs@G@0@1@Z",
+  "recovered": "vehEngineAudio::~vehEngineAudio (chunk, +16) - deletes the vehEngineSampleWrapper array",
+  "confidence": "CONFIRMED",
+  "evidence": "Not a separate function: this address lies inside the extent of the shipped-map symbol 'vehEngineAudio::~vehEngineAudio' (0x004DD8D0 + 16). IDA split that function into chunks. Body is consistent with that function. Body: int v2; // edi     int v3; // eax     void *v4; // ebx      v2 = 0;     if ( a1 > 0 )     {         do         {             v3 = *(_DWORD *)(a2 + 4);          "
+ },
+ "0x004DFC70": {
+  "wrong_name": "??$PlotShadedEx@U?$GetterYs@I@ImPlot@@UGetterYRef@2@@ImPlot@@YAXPBDABU?$GetterYs@I@0@ABUGetterYRef@0@@Z",
+  "recovered": "_dynamic_initializer (vehEngineSampleWrapper TU) - flt_6B00DC",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: flt_6B00DC = 1.0 / flt_6B00D8; }"
+ },
+ "0x004E0210": {
+  "wrong_name": "??$PlotShadedEx@U?$GetterYs@_J@ImPlot@@UGetterYRef@2@@ImPlot@@YAXPBDABU?$GetterYs@_J@0@ABUGetterYRef@0@@Z",
+  "recovered": "vehSurfaceAudioData::ParseCSVBuffer (chunk, +16) - the fgets/strtok CSV loop",
+  "confidence": "CONFIRMED",
+  "evidence": "Not a separate function: this address lies inside the extent of the shipped-map symbol 'vehSurfaceAudioData::ParseCSVBuffer' (0x004E0210 + 16). IDA split that function into chunks. Body is consistent with that function. Body: char *v5; // esi     char *v6; // eax     char *v7; // eax     char *v8; // eax     double v9; // st7     double v10; // st6     double v11; // st6     char *v1"
+ },
+ "0x004E0A80": {
+  "wrong_name": "??$PlotStairs@I@ImPlot@@YAXPBDPBI1HHH@Z",
+  "recovered": "UIMenu::Update",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Update@UIMenu@@UAEXXZ' at exactly 0x004E0A80, demangling to 'public: virtual void __thiscall UIMenu::Update(void)'. IDA function size 5 matches the map-implied size 16. the address sits at vftable slot 2 of UIMenu in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x004E0B10": {
+  "wrong_name": "??$PlotStairs@M@ImPlot@@YAXPBDPBM1HHH@Z",
+  "recovered": "UIMenu::BackUp",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?BackUp@UIMenu@@UAEXXZ' at exactly 0x004E0B10, demangling to 'public: virtual void __thiscall UIMenu::BackUp(void)'. IDA function size 8 matches the map-implied size 16. the address sits at vftable slot 15 of UIMenu in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x004E0B50": {
+  "wrong_name": "??$PlotStairs@M@ImPlot@@YAXPBDPBMHNNHH@Z",
+  "recovered": "UIMenu::SetFocusWidget",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SetFocusWidget@UIMenu@@QAEXH@Z' at exactly 0x004E0B50, demangling to 'public: void __thiscall UIMenu::SetFocusWidget(int)'. IDA function size 61 matches the map-implied size 64."
+ },
+ "0x004E0BA0": {
+  "wrong_name": "??$PlotStairs@N@ImPlot@@YAXPBDPBN1HHH@Z",
+  "recovered": "UIMenu::GetBstate",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetBstate@UIMenu@@QAEHXZ' at exactly 0x004E0BA0, demangling to 'public: int __thiscall UIMenu::GetBstate(void)'. IDA function size 6 matches the map-implied size 16."
+ },
+ "0x004E0BE0": {
+  "wrong_name": "??$PlotStairs@N@ImPlot@@YAXPBDPBNHNNHH@Z",
+  "recovered": "UIMenu::DisableIME",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?DisableIME@UIMenu@@QAEXXZ' at exactly 0x004E0BE0, demangling to 'public: void __thiscall UIMenu::DisableIME(void)'. IDA function size 23 matches the map-implied size 32."
+ },
+ "0x004E1860": {
+  "wrong_name": "??$PlotStairsEx@U?$GetterXsYs@G@ImPlot@@@ImPlot@@YAXPBDABU?$GetterXsYs@G@0@@Z",
+  "recovered": "UIMenu::AddUIControl",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?AddUIControl@UIMenu@@QAEPAVUIControlWidget@@HMMMMMPAVmmIO@@VdatCallback@@@Z' at exactly 0x004E1860, demangling to 'public: class UIControlWidget * __thiscall UIMenu::AddUIControl(int,float,float,float,float,float,class mmIO *,class datCallback)'. IDA function size 212 matches the map-implied size 224."
+ },
+ "0x004E5AD0": {
+  "wrong_name": "??$PlotStems@H@ImPlot@@YAXPBDPBH1HNHH@Z",
+  "recovered": "MenuManager::SetPreviousMenu",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SetPreviousMenu@MenuManager@@QAEXH@Z' at exactly 0x004E5AD0, demangling to 'public: void __thiscall MenuManager::SetPreviousMenu(int)'. IDA function size 47 matches the map-implied size 48."
+ },
+ "0x004EA2F0": {
+  "wrong_name": "??$PlotStemsEx@U?$GetterYs@_J@ImPlot@@UGetterYRef@2@@ImPlot@@YAXPBDABU?$GetterYs@_J@0@ABUGetterYRef@0@@Z",
+  "recovered": "UITextScroll::~UITextScroll",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??1UITextScroll@@UAE@XZ' at exactly 0x004EA2F0, demangling to 'public: virtual __thiscall UITextScroll::~UITextScroll(void)'. IDA function size 209 matches the map-implied size 224."
+ },
+ "0x004EADD0": {
+  "wrong_name": "??$RenderHeatmap@CUTransformerLinLog@ImPlot@@@ImPlot@@YAXUTransformerLinLog@0@AAUImDrawList@@PBCHHNNPBDABUImPlotPoint@@4@Z",
+  "recovered": "UITextScroll::InitTextScroll",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?InitTextScroll@UITextScroll@@AAEXVstring@@@Z' at exactly 0x004EADD0, demangling to 'private: void __thiscall UITextScroll::InitTextScroll(class string)'. IDA function size 302 matches the map-implied size 304."
+ },
+ "0x004ECB50": {
+  "wrong_name": "??$RenderHeatmap@FUTransformerLinLog@ImPlot@@@ImPlot@@YAXUTransformerLinLog@0@AAUImDrawList@@PBFHHNNPBDABUImPlotPoint@@4@Z",
+  "recovered": "UISlider::SetReadWrite",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SetReadWrite@UISlider@@QAEXH@Z' at exactly 0x004ECB50, demangling to 'public: void __thiscall UISlider::SetReadWrite(int)'. IDA function size 59 matches the map-implied size 64."
+ },
+ "0x004EDA10": {
+  "wrong_name": "??$RenderHeatmap@GUTransformerLinLog@ImPlot@@@ImPlot@@YAXUTransformerLinLog@0@AAUImDrawList@@PBGHHNNPBDABUImPlotPoint@@4@Z",
+  "recovered": "UIIcon::Cull",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Cull@UIIcon@@UAEXXZ' at exactly 0x004EDA10, demangling to 'public: virtual void __thiscall UIIcon::Cull(void)'. IDA function size 41 matches the map-implied size 48. the address sits at vftable slot 1 of UIIcon in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x004F0D40": {
+  "wrong_name": "??$RenderHeatmap@MUTransformerLogLog@ImPlot@@@ImPlot@@YAXUTransformerLogLog@0@AAUImDrawList@@PBMHHNNPBDABUImPlotPoint@@4@Z",
+  "recovered": "MArray::Init",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Init@MArray@@QAEXH@Z' at exactly 0x004F0D40, demangling to 'public: void __thiscall MArray::Init(int)'. IDA function size 54 matches the map-implied size 64."
+ },
+ "0x004F10E0": {
+  "wrong_name": "??$RenderHeatmap@NUTransformerLinLin@ImPlot@@@ImPlot@@YAXUTransformerLinLin@0@AAUImDrawList@@PBNHHNNPBDABUImPlotPoint@@4@Z",
+  "recovered": "MArray::AddMenuData",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?AddMenuData@MArray@@QAEXHAAVVector4@@PAD@Z' at exactly 0x004F10E0, demangling to 'public: void __thiscall MArray::AddMenuData(int,class Vector4 &,char *)'. IDA function size 67 matches the map-implied size 80."
+ },
+ "0x004F1BC0": {
+  "wrong_name": "??$RenderHeatmap@NUTransformerLogLog@ImPlot@@@ImPlot@@YAXUTransformerLogLog@0@AAUImDrawList@@PBNHHNNPBDABUImPlotPoint@@4@Z",
+  "recovered": "TextDropWidget::SetHighlight",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SetHighlight@TextDropWidget@@QAEHH@Z' at exactly 0x004F1BC0, demangling to 'public: int __thiscall TextDropWidget::SetHighlight(int)'. IDA function size 110 matches the map-implied size 112."
+ },
+ "0x004F2DE0": {
+  "wrong_name": "??$RenderHeatmap@_KUTransformerLinLin@ImPlot@@@ImPlot@@YAXUTransformerLinLin@0@AAUImDrawList@@PB_KHHNNPBDABUImPlotPoint@@4@Z",
+  "recovered": "VSWidget::Action",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Action@VSWidget@@QAEHTeqEvent@@MMH@Z' at exactly 0x004F2DE0, demangling to 'public: int __thiscall VSWidget::Action(union eqEvent,float,float,int)'. IDA function size 180 matches the map-implied size 192."
+ },
+ "0x004F4F30": {
+  "wrong_name": "??$RenderLineSegments@U?$GetterXsYs@G@ImPlot@@U?$GetterXsYRef@G@2@UTransformerLinLog@2@@ImPlot@@YAXABU?$GetterXsYs@G@0@ABU?$GetterXsYRef@G@0@ABUTransformerLinLog@0@AAUImDrawList@@MI@Z",
+  "recovered": "SetupRendererChoices",
+  "confidence": "GUESS",
+  "evidence": "File-local (static) function: no public-map symbol, but it IS a real call target. Lives in the GraphicsOptions translation unit (map gap between SetupResChoices and GraphicsOptions::~GraphicsOptions), has one call site, builds the renderer dropdown from gfxInterfaces[].DeviceCaps via AngelReadString, calls UITextDropdown::AssignString/SetValue, then calls SetupResChoices(). The PURPOSE is certain; the NAME is invented by analogy with SetupResChoices and is attested nowhere. Do not trust the name."
+ },
+ "0x004F5470": {
+  "wrong_name": "??$RenderLineSegments@U?$GetterXsYs@H@ImPlot@@U?$GetterXsYRef@H@2@UTransformerLinLog@2@@ImPlot@@YAXABU?$GetterXsYs@H@0@ABU?$GetterXsYRef@H@0@ABUTransformerLinLog@0@AAUImDrawList@@MI@Z",
+  "recovered": "VehicleSelectBase::VehicleSelectBase",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??0VehicleSelectBase@@QAE@H@Z' at exactly 0x004F5470, demangling to 'public: __thiscall VehicleSelectBase::VehicleSelectBase(int)'. IDA function size 372 matches the map-implied size 384. debug strings in body: \"%s_select\"."
+ },
+ "0x004F7930": {
+  "wrong_name": "??$RenderLineSegments@U?$GetterYs@E@ImPlot@@UGetterYRef@2@UTransformerLinLog@2@@ImPlot@@YAXABU?$GetterYs@E@0@ABUGetterYRef@0@ABUTransformerLinLog@0@AAUImDrawList@@MI@Z",
+  "recovered": "_dynamic_initializer (CRT slot 308, VehicleSelectBase TU)",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: JUMPOUT(0x4F7940); }"
+ },
+ "0x004F7A80": {
+  "wrong_name": "??$RenderLineSegments@U?$GetterYs@E@ImPlot@@UGetterYRef@2@UTransformerLogLin@2@@ImPlot@@YAXABU?$GetterYs@E@0@ABUGetterYRef@0@ABUTransformerLogLin@0@AAUImDrawList@@MI@Z",
+  "recovered": "VehicleSelectBase::SetShowcaseFlag",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SetShowcaseFlag@VehicleSelectBase@@QAEXXZ' at exactly 0x004F7A80, demangling to 'public: void __thiscall VehicleSelectBase::SetShowcaseFlag(void)'. IDA function size 11 matches the map-implied size 16."
+ },
+ "0x004F87A0": {
+  "wrong_name": "??$RenderLineSegments@U?$GetterYs@H@ImPlot@@UGetterYRef@2@UTransformerLinLin@2@@ImPlot@@YAXABU?$GetterYs@H@0@ABUGetterYRef@0@ABUTransformerLinLin@0@AAUImDrawList@@MI@Z",
+  "recovered": "AudioOptions::SetSFXVolume",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SetSFXVolume@AudioOptions@@QAEXXZ' at exactly 0x004F87A0, demangling to 'public: void __thiscall AudioOptions::SetSFXVolume(void)'. IDA function size 94 matches the map-implied size 96."
+ },
+ "0x004F90D0": {
+  "wrong_name": "??$RenderLineSegments@U?$GetterYs@I@ImPlot@@UGetterYRef@2@UTransformerLogLog@2@@ImPlot@@YAXABU?$GetterYs@I@0@ABUGetterYRef@0@ABUTransformerLogLog@0@AAUImDrawList@@MI@Z",
+  "recovered": "AudioOptions::LoadUIMusicCSV",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?LoadUIMusicCSV@AudioOptions@@QAEXPAD@Z' at exactly 0x004F90D0, demangling to 'public: void __thiscall AudioOptions::LoadUIMusicCSV(char *)'. IDA function size 236 matches the map-implied size 240. debug strings in body: \"aud\\dmusic\\csv_files\"."
+ },
+ "0x004F9220": {
+  "wrong_name": "??$RenderLineSegments@U?$GetterYs@M@ImPlot@@UGetterYRef@2@UTransformerLinLin@2@@ImPlot@@YAXABU?$GetterYs@M@0@ABUGetterYRef@0@ABUTransformerLinLin@0@AAUImDrawList@@MI@Z",
+  "recovered": "_dynamic_initializer (CRT slot 310, AudioOptions TU)",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: JUMPOUT(0x4F9230); }"
+ },
+ "0x004F9610": {
+  "wrong_name": "??$RenderLineSegments@U?$GetterYs@M@ImPlot@@UGetterYRef@2@UTransformerLogLog@2@@ImPlot@@YAXABU?$GetterYs@M@0@ABUGetterYRef@0@ABUTransformerLogLog@0@AAUImDrawList@@MI@Z",
+  "recovered": "Dialog_Eject::AddName",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?AddName@Dialog_Eject@@QAEXPBDKH@Z' at exactly 0x004F9610, demangling to 'public: void __thiscall Dialog_Eject::AddName(char const *,unsigned long,int)'. IDA function size 158 matches the map-implied size 160."
+ },
+ "0x004FA1E0": {
+  "wrong_name": "??$RenderLineSegments@U?$GetterYs@_K@ImPlot@@UGetterYRef@2@UTransformerLinLin@2@@ImPlot@@YAXABU?$GetterYs@_K@0@ABUGetterYRef@0@ABUTransformerLinLin@0@AAUImDrawList@@MI@Z",
+  "recovered": "Dialog_ReplayEdit::~Dialog_ReplayEdit",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??1Dialog_ReplayEdit@@UAE@XZ' at exactly 0x004FA1E0, demangling to 'public: virtual __thiscall Dialog_ReplayEdit::~Dialog_ReplayEdit(void)'. IDA function size 11 matches the map-implied size 16."
+ },
+ "0x004FA9A0": {
+  "wrong_name": "??$RenderLineStrip@U?$GetterXsYs@C@ImPlot@@UTransformerLogLin@2@@ImPlot@@YAXABU?$GetterXsYs@C@0@ABUTransformerLogLin@0@AAUImDrawList@@MI@Z",
+  "recovered": "Dialog_Replay::DeleteCB",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?DeleteCB@Dialog_Replay@@QAEXXZ' at exactly 0x004FA9A0, demangling to 'public: void __thiscall Dialog_Replay::DeleteCB(void)'. IDA function size 189 matches the map-implied size 192. debug strings in body: \"%s%s.rpl\"; \"Deleting %s\"."
+ },
+ "0x004FAFE0": {
+  "wrong_name": "??$RenderLineStrip@U?$GetterXsYs@E@ImPlot@@UTransformerLogLog@2@@ImPlot@@YAXABU?$GetterXsYs@E@0@ABUTransformerLogLog@0@AAUImDrawList@@MI@Z",
+  "recovered": "Dialog_Host::`scalar deleting destructor'",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??_GDialog_Host@@UAEPAXI@Z' at exactly 0x004FAFE0, demangling to 'public: virtual void * __thiscall Dialog_Host::`scalar deleting destructor'(unsigned int)'. IDA function size 33 matches the map-implied size 48. the address sits at vftable slot 0 of Dialog_Host in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x004FB9E0": {
+  "wrong_name": "??$RenderLineStrip@U?$GetterXsYs@G@ImPlot@@UTransformerLogLog@2@@ImPlot@@YAXABU?$GetterXsYs@G@0@ABUTransformerLogLog@0@AAUImDrawList@@MI@Z",
+  "recovered": "Dialog_RaceEnvironment::DoneCallback",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?DoneCallback@Dialog_RaceEnvironment@@QAEXXZ' at exactly 0x004FB9E0, demangling to 'public: void __thiscall Dialog_RaceEnvironment::DoneCallback(void)'. IDA function size 72 matches the map-implied size 80."
+ },
+ "0x004FD560": {
+  "wrong_name": "??$RenderLineStrip@U?$GetterXsYs@_K@ImPlot@@UTransformerLinLog@2@@ImPlot@@YAXABU?$GetterXsYs@_K@0@ABUTransformerLinLog@0@AAUImDrawList@@MI@Z",
+  "recovered": "Dialog_Message::~Dialog_Message",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??1Dialog_Message@@UAE@XZ' at exactly 0x004FD560, demangling to 'public: virtual __thiscall Dialog_Message::~Dialog_Message(void)'. IDA function size 11 matches the map-implied size 16."
+ },
+ "0x004FD920": {
+  "wrong_name": "??$RenderLineStrip@U?$GetterYs@C@ImPlot@@UTransformerLinLin@2@@ImPlot@@YAXABU?$GetterYs@C@0@ABUTransformerLinLin@0@AAUImDrawList@@MI@Z",
+  "recovered": "Dialog_NewPlayer::EnterNewPlayer",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?EnterNewPlayer@Dialog_NewPlayer@@QAEXXZ' at exactly 0x004FD920, demangling to 'public: void __thiscall Dialog_NewPlayer::EnterNewPlayer(void)'. IDA function size 14 matches the map-implied size 16."
+ },
+ "0x004FF9A0": {
+  "wrong_name": "??$RenderLineStrip@U?$GetterYs@M@ImPlot@@UTransformerLogLin@2@@ImPlot@@YAXABU?$GetterYs@M@0@ABUTransformerLogLin@0@AAUImDrawList@@MI@Z",
+  "recovered": "NetArena::RemoveRosterName",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?RemoveRosterName@NetArena@@QAEXPAD@Z' at exactly 0x004FF9A0, demangling to 'public: void __thiscall NetArena::RemoveRosterName(char *)'. IDA function size 50 matches the map-implied size 64."
+ },
+ "0x005003A0": {
+  "wrong_name": "??$RenderLineStrip@U?$GetterYs@_J@ImPlot@@UTransformerLogLin@2@@ImPlot@@YAXABU?$GetterYs@_J@0@ABUTransformerLogLin@0@AAUImDrawList@@MI@Z",
+  "recovered": "NetArena::SetHost",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SetHost@NetArena@@QAEXH@Z' at exactly 0x005003A0, demangling to 'public: void __thiscall NetArena::SetHost(int)'. IDA function size 136 matches the map-implied size 144. debug strings in body: \"lobb_srt\"; \"lobb_jn\"."
+ },
+ "0x005004E0": {
+  "wrong_name": "??$RenderLineStrip@U?$GetterYs@_J@ImPlot@@UTransformerLogLog@2@@ImPlot@@YAXABU?$GetterYs@_J@0@ABUTransformerLogLog@0@AAUImDrawList@@MI@Z",
+  "recovered": "NetArena::LoadRaceMap",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?LoadRaceMap@NetArena@@QAEXXZ' at exactly 0x005004E0, demangling to 'public: void __thiscall NetArena::LoadRaceMap(void)'. IDA function size 143 matches the map-implied size 144. debug strings in body: \"%s_map%s\"."
+ },
+ "0x00500620": {
+  "wrong_name": "??$RenderLineStrip@U?$GetterYs@_K@ImPlot@@UTransformerLinLin@2@@ImPlot@@YAXABU?$GetterYs@_K@0@ABUTransformerLinLin@0@AAUImDrawList@@MI@Z",
+  "recovered": "NetArena::SetMyStatus",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SetMyStatus@NetArena@@QAEXH@Z' at exactly 0x00500620, demangling to 'public: void __thiscall NetArena::SetMyStatus(int)'. IDA function size 76 matches the map-implied size 80. debug strings in body: \"lobb_rdy\"; \"lobb_nr\"."
+ },
+ "0x00501700": {
+  "wrong_name": "??$RenderMarkers@UTransformerLinLin@ImPlot@@U?$GetterYs@E@2@@ImPlot@@YAXU?$GetterYs@E@0@UTransformerLinLin@0@AAUImDrawList@@HM_NIM3I@Z",
+  "recovered": "HostRaceMenu::GetGoldMassVal",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetGoldMassVal@HostRaceMenu@@QAEHXZ' at exactly 0x00501700, demangling to 'public: int __thiscall HostRaceMenu::GetGoldMassVal(void)'. IDA function size 14 matches the map-implied size 16."
+ },
+ "0x00502380": {
+  "wrong_name": "??$RenderMarkers@UTransformerLinLog@ImPlot@@U?$GetterYs@C@2@@ImPlot@@YAXU?$GetterYs@C@0@UTransformerLinLog@0@AAUImDrawList@@HM_NIM3I@Z",
+  "recovered": "ControlSetup::POVCB",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?POVCB@ControlSetup@@QAEXXZ' at exactly 0x00502380, demangling to 'public: void __thiscall ControlSetup::POVCB(void)'. IDA function size 1 matches the map-implied size 16."
+ },
+ "0x00502880": {
+  "wrong_name": "??$RenderMarkers@UTransformerLinLog@ImPlot@@U?$GetterYs@_J@2@@ImPlot@@YAXU?$GetterYs@_J@0@UTransformerLinLog@0@AAUImDrawList@@HM_NIM3I@Z",
+  "recovered": "ControlCustom::ClearBadAssignment",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?ClearBadAssignment@ControlCustom@@QAEXXZ' at exactly 0x00502880, demangling to 'public: void __thiscall ControlCustom::ClearBadAssignment(void)'. IDA function size 11 matches the map-implied size 16."
+ },
+ "0x00502920": {
+  "wrong_name": "??$RenderMarkers@UTransformerLinLog@ImPlot@@U?$GetterYs@_K@2@@ImPlot@@YAXU?$GetterYs@_K@0@UTransformerLinLog@0@AAUImDrawList@@HM_NIM3I@Z",
+  "recovered": "ControlCustom::`scalar deleting destructor'",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??_GControlCustom@@UAEPAXI@Z' at exactly 0x00502920, demangling to 'public: virtual void * __thiscall ControlCustom::`scalar deleting destructor'(unsigned int)'. IDA function size 33 matches the map-implied size 48. the address sits at vftable slot 0 of ControlCustom in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x00502CE0": {
+  "wrong_name": "??$RenderMarkers@UTransformerLogLin@ImPlot@@U?$GetterXsYs@H@2@@ImPlot@@YAXU?$GetterXsYs@H@0@UTransformerLogLin@0@AAUImDrawList@@HM_NIM3I@Z",
+  "recovered": "OptionsMenu::FocusDescription",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?FocusDescription@OptionsMenu@@QAEXHH@Z' at exactly 0x00502CE0, demangling to 'public: void __thiscall OptionsMenu::FocusDescription(int,int)'. IDA function size 40 matches the map-implied size 48."
+ },
+ "0x00502EC0": {
+  "wrong_name": "??$RenderMarkers@UTransformerLogLin@ImPlot@@U?$GetterXsYs@N@2@@ImPlot@@YAXU?$GetterXsYs@N@0@UTransformerLogLin@0@AAUImDrawList@@HM_NIM3I@Z",
+  "recovered": "CrashCourseIntro::`scalar deleting destructor'",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??_GCrashCourseIntro@@UAEPAXI@Z' at exactly 0x00502EC0, demangling to 'public: virtual void * __thiscall CrashCourseIntro::`scalar deleting destructor'(unsigned int)'. IDA function size 33 matches the map-implied size 48. the address sits at vftable slot 0 of CrashCourseIntro in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x00503960": {
+  "wrong_name": "??$RenderMarkers@UTransformerLogLog@ImPlot@@U?$GetterXsYs@G@2@@ImPlot@@YAXU?$GetterXsYs@G@0@UTransformerLogLog@0@AAUImDrawList@@HM_NIM3I@Z",
+  "recovered": "CrashCourse::GameCallback",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GameCallback@CrashCourse@@QAEXXZ' at exactly 0x00503960, demangling to 'public: void __thiscall CrashCourse::GameCallback(void)'. IDA function size 27 matches the map-implied size 32."
+ },
+ "0x00503F00": {
+  "wrong_name": "??$RenderMarkers@UTransformerLogLog@ImPlot@@U?$GetterYs@F@2@@ImPlot@@YAXU?$GetterYs@F@0@UTransformerLogLog@0@AAUImDrawList@@HM_NIM3I@Z",
+  "recovered": "CrashCourse::FocusDescription",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?FocusDescription@CrashCourse@@QAEXHH@Z' at exactly 0x00503F00, demangling to 'public: void __thiscall CrashCourse::FocusDescription(int,int)'. IDA function size 16 matches the map-implied size 16."
+ },
+ "0x00504B80": {
+  "wrong_name": "??$RenderPrimitives@U?$LineSegmentsRenderer@U?$GetterXsYs@E@ImPlot@@U?$GetterXsYRef@E@2@UTransformerLinLog@2@@ImPlot@@@ImPlot@@YAXABU?$LineSegmentsRenderer@U?$GetterXsYs@E@ImPlot@@U?$GetterXsYRef@E@2@UTransformerLinLog@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "NetSelectMenu::GetSessions",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetSessions@NetSelectMenu@@QAEPAVUITextScroll@@XZ' at exactly 0x00504B80, demangling to 'public: class UITextScroll * __thiscall NetSelectMenu::GetSessions(void)'. IDA function size 7 matches the map-implied size 16."
+ },
+ "0x00504CE0": {
+  "wrong_name": "??$RenderPrimitives@U?$LineSegmentsRenderer@U?$GetterXsYs@E@ImPlot@@U?$GetterXsYRef@E@2@UTransformerLogLin@2@@ImPlot@@@ImPlot@@YAXABU?$LineSegmentsRenderer@U?$GetterXsYs@E@ImPlot@@U?$GetterXsYRef@E@2@UTransformerLogLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "NetSelectMenu::SetComs",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SetComs@NetSelectMenu@@QAEXXZ' at exactly 0x00504CE0, demangling to 'public: void __thiscall NetSelectMenu::SetComs(void)'. IDA function size 241 matches the map-implied size 256."
+ },
+ "0x00504FA0": {
+  "wrong_name": "??$RenderPrimitives@U?$LineSegmentsRenderer@U?$GetterXsYs@F@ImPlot@@U?$GetterXsYRef@F@2@UTransformerLinLin@2@@ImPlot@@@ImPlot@@YAXABU?$LineSegmentsRenderer@U?$GetterXsYs@F@ImPlot@@U?$GetterXsYRef@F@2@UTransformerLinLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "NetSelectMenu::SetModemButton",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SetModemButton@NetSelectMenu@@QAEXH@Z' at exactly 0x00504FA0, demangling to 'public: void __thiscall NetSelectMenu::SetModemButton(int)'. IDA function size 34 matches the map-implied size 48."
+ },
+ "0x005057E0": {
+  "wrong_name": "??$RenderPrimitives@U?$LineSegmentsRenderer@U?$GetterXsYs@G@ImPlot@@U?$GetterXsYRef@G@2@UTransformerLogLin@2@@ImPlot@@@ImPlot@@YAXABU?$LineSegmentsRenderer@U?$GetterXsYs@G@ImPlot@@U?$GetterXsYRef@G@2@UTransformerLogLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "Vehicle::SetSubMenuButtons",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SetSubMenuButtons@Vehicle@@QAEXXZ' at exactly 0x005057E0, demangling to 'public: void __thiscall Vehicle::SetSubMenuButtons(void)'. IDA function size 26 matches the map-implied size 32."
+ },
+ "0x00505C00": {
+  "wrong_name": "??$RenderPrimitives@U?$LineSegmentsRenderer@U?$GetterXsYs@H@ImPlot@@U?$GetterXsYRef@H@2@UTransformerLinLog@2@@ImPlot@@@ImPlot@@YAXABU?$LineSegmentsRenderer@U?$GetterXsYs@H@ImPlot@@U?$GetterXsYRef@H@2@UTransformerLinLog@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "AboutMenu::`scalar deleting destructor'",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??_GAboutMenu@@UAEPAXI@Z' at exactly 0x00505C00, demangling to 'public: virtual void * __thiscall AboutMenu::`scalar deleting destructor'(unsigned int)'. IDA function size 33 matches the map-implied size 48. the address sits at vftable slot 0 of AboutMenu in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x00506020": {
+  "wrong_name": "??$RenderPrimitives@U?$LineSegmentsRenderer@U?$GetterXsYs@I@ImPlot@@U?$GetterXsYRef@I@2@UTransformerLinLin@2@@ImPlot@@@ImPlot@@YAXABU?$LineSegmentsRenderer@U?$GetterXsYs@I@ImPlot@@U?$GetterXsYRef@I@2@UTransformerLinLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "MainMenu::~MainMenu",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??1MainMenu@@UAE@XZ' at exactly 0x00506020, demangling to 'public: virtual __thiscall MainMenu::~MainMenu(void)'. IDA function size 124 matches the map-implied size 128."
+ },
+ "0x00508540": {
+  "wrong_name": "??$RenderPrimitives@U?$LineSegmentsRenderer@U?$GetterYs@E@ImPlot@@UGetterYRef@2@UTransformerLogLog@2@@ImPlot@@@ImPlot@@YAXABU?$LineSegmentsRenderer@U?$GetterYs@E@ImPlot@@UGetterYRef@2@UTransformerLogLog@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "RaceMenuBase::GameCallback",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GameCallback@RaceMenuBase@@QAEXXZ' at exactly 0x00508540, demangling to 'public: void __thiscall RaceMenuBase::GameCallback(void)'. IDA size 99 vs map-implied 128 (IDA split this function into chunks)."
+ },
+ "0x00509CA0": {
+  "wrong_name": "??$RenderPrimitives@U?$LineSegmentsRenderer@U?$GetterYs@M@ImPlot@@UGetterYRef@2@UTransformerLinLin@2@@ImPlot@@@ImPlot@@YAXABU?$LineSegmentsRenderer@U?$GetterYs@M@ImPlot@@UGetterYRef@2@UTransformerLinLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "PUResults::AddName",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?AddName@PUResults@@QAEXHPBD0@Z' at exactly 0x00509CA0, demangling to 'public: void __thiscall PUResults::AddName(int,char const *,char const *)'. IDA function size 147 matches the map-implied size 160."
+ },
+ "0x0050AA60": {
+  "wrong_name": "??$RenderPrimitives@U?$LineSegmentsRenderer@U?$GetterYs@_J@ImPlot@@UGetterYRef@2@UTransformerLogLin@2@@ImPlot@@@ImPlot@@YAXABU?$LineSegmentsRenderer@U?$GetterYs@_J@ImPlot@@UGetterYRef@2@UTransformerLogLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "PURoster::~PURoster",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??1PURoster@@UAE@XZ' at exactly 0x0050AA60, demangling to 'public: virtual __thiscall PURoster::~PURoster(void)'. IDA function size 11 matches the map-implied size 16."
+ },
+ "0x0050AFE0": {
+  "wrong_name": "??$RenderPrimitives@U?$LineSegmentsRenderer@U?$GetterYs@_K@ImPlot@@UGetterYRef@2@UTransformerLogLin@2@@ImPlot@@@ImPlot@@YAXABU?$LineSegmentsRenderer@U?$GetterYs@_K@ImPlot@@UGetterYRef@2@UTransformerLogLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "PURoster::FindRosterName",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?FindRosterName@PURoster@@QAEHK@Z' at exactly 0x0050AFE0, demangling to 'public: int __thiscall PURoster::FindRosterName(unsigned long)'. IDA function size 45 matches the map-implied size 48."
+ },
+ "0x0050B560": {
+  "wrong_name": "??$RenderPrimitives@U?$LineStripRenderer@U?$GetterXsYs@C@ImPlot@@UTransformerLogLin@2@@ImPlot@@@ImPlot@@YAXABU?$LineStripRenderer@U?$GetterXsYs@C@ImPlot@@UTransformerLogLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "PUReplay::GetSaveRO",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetSaveRO@PUReplay@@QAEHXZ' at exactly 0x0050B560, demangling to 'public: int __thiscall PUReplay::GetSaveRO(void)'. IDA function size 10 matches the map-implied size 16."
+ },
+ "0x0050B980": {
+  "wrong_name": "??$RenderPrimitives@U?$LineStripRenderer@U?$GetterXsYs@E@ImPlot@@UTransformerLinLog@2@@ImPlot@@@ImPlot@@YAXABU?$LineStripRenderer@U?$GetterXsYs@E@ImPlot@@UTransformerLinLog@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "PUReplaySave::PUReplaySave",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??0PUReplaySave@@QAE@HMMMMPAD@Z' at exactly 0x0050B980, demangling to 'public: __thiscall PUReplaySave::PUReplaySave(int,float,float,float,float,char *)'. IDA function size 340 matches the map-implied size 352."
+ },
+ "0x0050BAE0": {
+  "wrong_name": "??$RenderPrimitives@U?$LineStripRenderer@U?$GetterXsYs@E@ImPlot@@UTransformerLogLin@2@@ImPlot@@@ImPlot@@YAXABU?$LineStripRenderer@U?$GetterXsYs@E@ImPlot@@UTransformerLogLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "PUReplaySave::~PUReplaySave",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??1PUReplaySave@@UAE@XZ' at exactly 0x0050BAE0, demangling to 'public: virtual __thiscall PUReplaySave::~PUReplaySave(void)'. IDA function size 11 matches the map-implied size 16."
+ },
+ "0x0050C1C0": {
+  "wrong_name": "??$RenderPrimitives@U?$LineStripRenderer@U?$GetterXsYs@F@ImPlot@@UTransformerLogLog@2@@ImPlot@@@ImPlot@@YAXABU?$LineStripRenderer@U?$GetterXsYs@F@ImPlot@@UTransformerLogLog@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "PUControl::ControlSelect",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?ControlSelect@PUControl@@QAEXXZ' at exactly 0x0050C1C0, demangling to 'public: void __thiscall PUControl::ControlSelect(void)'. IDA function size 40 matches the map-implied size 48."
+ },
+ "0x0050C5E0": {
+  "wrong_name": "??$RenderPrimitives@U?$LineStripRenderer@U?$GetterXsYs@G@ImPlot@@UTransformerLogLin@2@@ImPlot@@@ImPlot@@YAXABU?$LineStripRenderer@U?$GetterXsYs@G@ImPlot@@UTransformerLogLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "PUOptions::~PUOptions",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??1PUOptions@@UAE@XZ' at exactly 0x0050C5E0, demangling to 'public: virtual __thiscall PUOptions::~PUOptions(void)'. IDA function size 11 matches the map-implied size 16."
+ },
+ "0x0050CA00": {
+  "wrong_name": "??$RenderPrimitives@U?$LineStripRenderer@U?$GetterXsYs@H@ImPlot@@UTransformerLinLog@2@@ImPlot@@@ImPlot@@YAXABU?$LineStripRenderer@U?$GetterXsYs@H@ImPlot@@UTransformerLinLog@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "_dynamic_initializer (CRT slot 320, PUAudioOptions TU)",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: JUMPOUT(0x50CA10); }"
+ },
+ "0x0050DBE0": {
+  "wrong_name": "??$RenderPrimitives@U?$LineStripRenderer@U?$GetterXsYs@N@ImPlot@@UTransformerLogLin@2@@ImPlot@@@ImPlot@@YAXABU?$LineStripRenderer@U?$GetterXsYs@N@ImPlot@@UTransformerLogLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "AudSoundBase::Update",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Update@AudSoundBase@@UAEXXZ' at exactly 0x0050DBE0, demangling to 'public: virtual void __thiscall AudSoundBase::Update(void)'. IDA function size 12 matches the map-implied size 16. the address sits at vftable slot 2 of AudSoundBase in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x0050E2C0": {
+  "wrong_name": "??$RenderPrimitives@U?$LineStripRenderer@U?$GetterXsYs@_J@ImPlot@@UTransformerLogLog@2@@ImPlot@@@ImPlot@@YAXABU?$LineStripRenderer@U?$GetterXsYs@_J@ImPlot@@UTransformerLogLog@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "AudSoundBase::SetSoundHandleIndex",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SetSoundHandleIndex@AudSoundBase@@QAEXH@Z' at exactly 0x0050E2C0, demangling to 'public: void __thiscall AudSoundBase::SetSoundHandleIndex(int)'. IDA function size 13 matches the map-implied size 16."
+ },
+ "0x0050EC60": {
+  "wrong_name": "??$RenderPrimitives@U?$LineStripRenderer@U?$GetterYs@C@ImPlot@@UTransformerLogLin@2@@ImPlot@@@ImPlot@@YAXABU?$LineStripRenderer@U?$GetterYs@C@ImPlot@@UTransformerLogLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "AudStreamingMusic::StreamingMusicUpdate",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?StreamingMusicUpdate@AudStreamingMusic@@QAEXXZ' at exactly 0x0050EC60, demangling to 'public: void __thiscall AudStreamingMusic::StreamingMusicUpdate(void)'. IDA function size 1 matches the map-implied size 16."
+ },
+ "0x0050EDC0": {
+  "wrong_name": "??$RenderPrimitives@U?$LineStripRenderer@U?$GetterYs@C@ImPlot@@UTransformerLogLog@2@@ImPlot@@@ImPlot@@YAXABU?$LineStripRenderer@U?$GetterYs@C@ImPlot@@UTransformerLogLog@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "Aud_Stream_Size",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Aud_Stream_Size@@YAHPAVStream@@@Z' at exactly 0x0050EDC0, demangling to 'int __cdecl Aud_Stream_Size(class Stream *)'. IDA function size 42 matches the map-implied size 48."
+ },
+ "0x0050F1E0": {
+  "wrong_name": "??$RenderPrimitives@U?$LineStripRenderer@U?$GetterYs@E@ImPlot@@UTransformerLogLin@2@@ImPlot@@@ImPlot@@YAXABU?$LineStripRenderer@U?$GetterYs@E@ImPlot@@UTransformerLogLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "AudManagerBase::StopAllSounds",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?StopAllSounds@AudManagerBase@@QAEXXZ' at exactly 0x0050F1E0, demangling to 'public: void __thiscall AudManagerBase::StopAllSounds(void)'. IDA function size 70 matches the map-implied size 80."
+ },
+ "0x0050F600": {
+  "wrong_name": "??$RenderPrimitives@U?$LineStripRenderer@U?$GetterYs@F@ImPlot@@UTransformerLinLog@2@@ImPlot@@@ImPlot@@YAXABU?$LineStripRenderer@U?$GetterYs@F@ImPlot@@UTransformerLinLog@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "_dynamic_initializer (Aud3DObjectManager TU) - flt_6B1488",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: flt_6B1488 = 1.0 / 10000.0; }"
+ },
+ "0x0050F760": {
+  "wrong_name": "??$RenderPrimitives@U?$LineStripRenderer@U?$GetterYs@F@ImPlot@@UTransformerLogLin@2@@ImPlot@@@ImPlot@@YAXABU?$LineStripRenderer@U?$GetterYs@F@ImPlot@@UTransformerLogLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "Aud3DObjectManager::Remove",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Remove@Aud3DObjectManager@@QAEXPAVAud3DObject@@H@Z' at exactly 0x0050F760, demangling to 'public: void __thiscall Aud3DObjectManager::Remove(class Aud3DObject *,int)'. IDA function size 36 matches the map-implied size 48."
+ },
+ "0x0050FA20": {
+  "wrong_name": "??$RenderPrimitives@U?$LineStripRenderer@U?$GetterYs@G@ImPlot@@UTransformerLinLin@2@@ImPlot@@@ImPlot@@YAXABU?$LineStripRenderer@U?$GetterYs@G@ImPlot@@UTransformerLinLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "Aud3DObjectManager::SetNumScreenSplits",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SetNumScreenSplits@Aud3DObjectManager@@QAEXH@Z' at exactly 0x0050FA20, demangling to 'public: void __thiscall Aud3DObjectManager::SetNumScreenSplits(int)'. IDA function size 135 matches the map-implied size 144."
+ },
+ "0x00511020": {
+  "wrong_name": "??$RenderPrimitives@U?$LineStripRenderer@U?$GetterYs@N@ImPlot@@UTransformerLinLin@2@@ImPlot@@@ImPlot@@YAXABU?$LineStripRenderer@U?$GetterYs@N@ImPlot@@UTransformerLinLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "_dynamic_initializer (AudCreatureContainer TU) - flt_6B1498",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: flt_6B1498 = 56.716663 * 0.5; }"
+ },
+ "0x005112E0": {
+  "wrong_name": "??$RenderPrimitives@U?$LineStripRenderer@U?$GetterYs@N@ImPlot@@UTransformerLogLin@2@@ImPlot@@@ImPlot@@YAXABU?$LineStripRenderer@U?$GetterYs@N@ImPlot@@UTransformerLogLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "AudImpact::GetSecondsElapsed",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetSecondsElapsed@AudImpact@@SAMXZ' at exactly 0x005112E0, demangling to 'public: static float __cdecl AudImpact::GetSecondsElapsed(void)'. IDA function size 7 matches the map-implied size 16."
+ },
+ "0x00511860": {
+  "wrong_name": "??$RenderPrimitives@U?$LineStripRenderer@U?$GetterYs@_J@ImPlot@@UTransformerLogLin@2@@ImPlot@@@ImPlot@@YAXABU?$LineStripRenderer@U?$GetterYs@_J@ImPlot@@UTransformerLogLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "AudImpact::Play",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Play@AudImpact@@QAEXMH@Z' at exactly 0x00511860, demangling to 'public: void __thiscall AudImpact::Play(float,int)'. IDA function size 25 matches the map-implied size 32."
+ },
+ "0x005119C0": {
+  "wrong_name": "??$RenderPrimitives@U?$LineStripRenderer@U?$GetterYs@_J@ImPlot@@UTransformerLogLog@2@@ImPlot@@@ImPlot@@YAXABU?$LineStripRenderer@U?$GetterYs@_J@ImPlot@@UTransformerLogLog@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "_dynamic_initializer (CRT slot 337, AudImpact TU)",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: JUMPOUT(0x5119D0); }"
+ },
+ "0x00511B20": {
+  "wrong_name": "??$RenderPrimitives@U?$LineStripRenderer@U?$GetterYs@_K@ImPlot@@UTransformerLinLin@2@@ImPlot@@@ImPlot@@YAXABU?$LineStripRenderer@U?$GetterYs@_K@ImPlot@@UTransformerLinLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "Aud3DObject::~Aud3DObject",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??1Aud3DObject@@UAE@XZ' at exactly 0x00511B20, demangling to 'public: virtual __thiscall Aud3DObject::~Aud3DObject(void)'. IDA function size 92 matches the map-implied size 96."
+ },
+ "0x00511DE0": {
+  "wrong_name": "??$RenderPrimitives@U?$LineStripRenderer@U?$GetterYs@_K@ImPlot@@UTransformerLogLin@2@@ImPlot@@@ImPlot@@YAXABU?$LineStripRenderer@U?$GetterYs@_K@ImPlot@@UTransformerLogLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "_dynamic_initializer (CRT slot 348, Aud3DObject TU)",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: JUMPOUT(0x511DF0); }"
+ },
+ "0x00511F40": {
+  "wrong_name": "??$RenderPrimitives@U?$LineStripRenderer@U?$GetterYs@_K@ImPlot@@UTransformerLogLog@2@@ImPlot@@@ImPlot@@YAXABU?$LineStripRenderer@U?$GetterYs@_K@ImPlot@@UTransformerLogLog@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "Aud3DObject::CalcSinglePlayerPan",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?CalcSinglePlayerPan@Aud3DObject@@QAEXXZ' at exactly 0x00511F40, demangling to 'public: void __thiscall Aud3DObject::CalcSinglePlayerPan(void)'. IDA function size 181 matches the map-implied size 192."
+ },
+ "0x00512200": {
+  "wrong_name": "??$RenderPrimitives@U?$LineStripRenderer@UGetterFuncPtr@ImPlot@@UTransformerLinLog@2@@ImPlot@@@ImPlot@@YAXABU?$LineStripRenderer@UGetterFuncPtr@ImPlot@@UTransformerLinLog@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "Aud3DObject::GetDistToClosestHead2",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetDistToClosestHead2@Aud3DObject@@QAEMXZ' at exactly 0x00512200, demangling to 'public: float __thiscall Aud3DObject::GetDistToClosestHead2(void)'. IDA function size 37 matches the map-implied size 48."
+ },
+ "0x00512360": {
+  "wrong_name": "??$RenderPrimitives@U?$LineStripRenderer@UGetterFuncPtr@ImPlot@@UTransformerLogLin@2@@ImPlot@@@ImPlot@@YAXABU?$LineStripRenderer@UGetterFuncPtr@ImPlot@@UTransformerLogLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "Aud3DObject::SetNon3DParams",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SetNon3DParams@Aud3DObject@@UAEXXZ' at exactly 0x00512360, demangling to 'public: virtual void __thiscall Aud3DObject::SetNon3DParams(void)'. IDA function size 1 matches the map-implied size 16. the address sits at vftable slot 4 of Aud3DObject in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x00512620": {
+  "wrong_name": "??$RenderPrimitives@U?$RectRenderer@U?$GetterXsYs@M@ImPlot@@UTransformerLinLin@2@@ImPlot@@@ImPlot@@YAXABU?$RectRenderer@U?$GetterXsYs@M@ImPlot@@UTransformerLinLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "Aud3DObject::CalcPseudoDistToClosestHead",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?CalcPseudoDistToClosestHead@Aud3DObject@@AAEMPAPAVMatrix34@@PAVVector3@@H@Z' at exactly 0x00512620, demangling to 'private: float __thiscall Aud3DObject::CalcPseudoDistToClosestHead(class Matrix34 * *,class Vector3 *,int)'. IDA function size 117 matches the map-implied size 128."
+ },
+ "0x00512A40": {
+  "wrong_name": "??$RenderPrimitives@U?$RectRenderer@U?$GetterXsYs@M@ImPlot@@UTransformerLogLog@2@@ImPlot@@@ImPlot@@YAXABU?$RectRenderer@U?$GetterXsYs@M@ImPlot@@UTransformerLogLog@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "_dynamic_initializer (AudCreature TU) - registers exit_sub_512A50 with atexit",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: atexit(exit_sub_512A50); }"
+ },
+ "0x00513C20": {
+  "wrong_name": "??$RenderPrimitives@U?$ShadedRenderer@U?$GetterXsYs@C@ImPlot@@U?$GetterXsYRef@C@2@UTransformerLinLin@2@@ImPlot@@@ImPlot@@YAXABU?$ShadedRenderer@U?$GetterXsYs@C@ImPlot@@U?$GetterXsYRef@C@2@UTransformerLinLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "Aud3DSampleWrapper::SetSampleName",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SetSampleName@Aud3DSampleWrapper@@QAEXPAD@Z' at exactly 0x00513C20, demangling to 'public: void __thiscall Aud3DSampleWrapper::SetSampleName(char *)'. IDA function size 26 matches the map-implied size 32."
+ },
+ "0x005141A0": {
+  "wrong_name": "??$RenderPrimitives@U?$ShadedRenderer@U?$GetterXsYs@E@ImPlot@@U12@UTransformerLinLin@2@@ImPlot@@@ImPlot@@YAXABU?$ShadedRenderer@U?$GetterXsYs@E@ImPlot@@U12@UTransformerLinLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "AudImpactData::ReadCSV",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?ReadCSV@AudImpactData@@QAE_NPAVStream@@H@Z' at exactly 0x005141A0, demangling to 'public: bool __thiscall AudImpactData::ReadCSV(class Stream *,int)'. IDA function size 501 matches the map-implied size 512."
+ },
+ "0x00514720": {
+  "wrong_name": "??$RenderPrimitives@U?$ShadedRenderer@U?$GetterXsYs@E@ImPlot@@U?$GetterXsYRef@E@2@UTransformerLinLin@2@@ImPlot@@@ImPlot@@YAXABU?$ShadedRenderer@U?$GetterXsYs@E@ImPlot@@U?$GetterXsYRef@E@2@UTransformerLinLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "_dynamic_initializer (CRT slot 357, AudImpactData TU)",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: JUMPOUT(0x514730); }"
+ },
+ "0x00514CA0": {
+  "wrong_name": "??$RenderPrimitives@U?$ShadedRenderer@U?$GetterXsYs@F@ImPlot@@U12@UTransformerLinLin@2@@ImPlot@@@ImPlot@@YAXABU?$ShadedRenderer@U?$GetterXsYs@F@ImPlot@@U12@UTransformerLinLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "AudCreatureAvoid::SetAud3DObjectPtr",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SetAud3DObjectPtr@AudCreatureAvoid@@QAEXPAVAud3DObject@@@Z' at exactly 0x00514CA0, demangling to 'public: void __thiscall AudCreatureAvoid::SetAud3DObjectPtr(class Aud3DObject *)'. IDA function size 13 matches the map-implied size 16."
+ },
+ "0x00515A60": {
+  "wrong_name": "??$RenderPrimitives@U?$ShadedRenderer@U?$GetterXsYs@G@ImPlot@@U12@UTransformerLogLin@2@@ImPlot@@@ImPlot@@YAXABU?$ShadedRenderer@U?$GetterXsYs@G@ImPlot@@U12@UTransformerLogLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "Aud3DAmbientObject::SetSoundData",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SetSoundData@Aud3DAmbientObject@@AAEXPAUtagAud3DAmbientSoundData@@0PAD@Z' at exactly 0x00515A60, demangling to 'private: void __thiscall Aud3DAmbientObject::SetSoundData(struct tagAud3DAmbientSoundData *,struct tagAud3DAmbientSoundData *,char *)'. IDA function size 103 matches the map-implied size 112. debug strings in body: \"Amb3D\\%s\"."
+ },
+ "0x00515D20": {
+  "wrong_name": "??$RenderPrimitives@U?$ShadedRenderer@U?$GetterXsYs@G@ImPlot@@U?$GetterXsYRef@G@2@UTransformerLinLin@2@@ImPlot@@@ImPlot@@YAXABU?$ShadedRenderer@U?$GetterXsYs@G@ImPlot@@U?$GetterXsYRef@G@2@UTransformerLinLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "_dynamic_initializer (Aud3DAmbientObject TU) - flt_6B1584",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: flt_6B1584 = 1.0 / 30000.0; }"
+ },
+ "0x00517060": {
+  "wrong_name": "??$RenderPrimitives@U?$ShadedRenderer@U?$GetterXsYs@I@ImPlot@@U12@UTransformerLogLin@2@@ImPlot@@@ImPlot@@YAXABU?$ShadedRenderer@U?$GetterXsYs@I@ImPlot@@U12@UTransformerLogLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "ThreadProc",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?ThreadProc@@YGKPAX@Z' at exactly 0x00517060, demangling to 'unsigned long __stdcall ThreadProc(void *)'. IDA function size 59 matches the map-implied size 64. debug strings in body: \"WaitForSingleObject failed in dmusplayer.c\"."
+ },
+ "0x00517A00": {
+  "wrong_name": "??$RenderPrimitives@U?$ShadedRenderer@U?$GetterXsYs@M@ImPlot@@U12@UTransformerLinLog@2@@ImPlot@@@ImPlot@@YAXABU?$ShadedRenderer@U?$GetterXsYs@M@ImPlot@@U12@UTransformerLinLog@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "SegmentWrapper::IsPlaying",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?IsPlaying@SegmentWrapper@@QAE_NXZ' at exactly 0x00517A00, demangling to 'public: bool __thiscall SegmentWrapper::IsPlaying(void)'. IDA function size 55 matches the map-implied size 64. the body prints its own name: \"SegmentWrapper::IsPlaying\".",
+  "previously_known": true,
+  "previously_known_as": "IDirectMusicPerformance::IsPlaying",
+  "note": "Supersedes the earlier string-based recovery 'IDirectMusicPerformance::IsPlaying', which is not a symbol anywhere in the shipped map."
+ },
+ "0x00517CC0": {
+  "wrong_name": "??$RenderPrimitives@U?$ShadedRenderer@U?$GetterXsYs@M@ImPlot@@U12@UTransformerLogLog@2@@ImPlot@@@ImPlot@@YAXABU?$ShadedRenderer@U?$GetterXsYs@M@ImPlot@@U12@UTransformerLogLog@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "CLoader::Init",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Init@CLoader@@QAEJXZ' at exactly 0x00517CC0, demangling to 'public: long __thiscall CLoader::Init(void)'. IDA function size 326 matches the map-implied size 336."
+ },
+ "0x00518660": {
+  "wrong_name": "??$RenderPrimitives@U?$ShadedRenderer@U?$GetterXsYs@N@ImPlot@@U12@UTransformerLogLin@2@@ImPlot@@@ImPlot@@YAXABU?$ShadedRenderer@U?$GetterXsYs@N@ImPlot@@U12@UTransformerLogLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "_dynamic_initializer (CLoader/DMusic TU) - flt_6B15A4",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: flt_6B15A4 = 1.0 / flt_6B15A0; }"
+ },
+ "0x00518A80": {
+  "wrong_name": "??$RenderPrimitives@U?$ShadedRenderer@U?$GetterXsYs@N@ImPlot@@U?$GetterXsYRef@N@2@UTransformerLinLog@2@@ImPlot@@@ImPlot@@YAXABU?$ShadedRenderer@U?$GetterXsYs@N@ImPlot@@U?$GetterXsYRef@N@2@UTransformerLinLog@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "CFileStream::~CFileStream",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??1CFileStream@@QAE@XZ' at exactly 0x00518A80, demangling to 'public: __thiscall CFileStream::~CFileStream(void)'. IDA function size 37 matches the map-implied size 48."
+ },
+ "0x00518EA0": {
+  "wrong_name": "??$RenderPrimitives@U?$ShadedRenderer@U?$GetterXsYs@_J@ImPlot@@U12@UTransformerLinLin@2@@ImPlot@@@ImPlot@@YAXABU?$ShadedRenderer@U?$GetterXsYs@_J@ImPlot@@U12@UTransformerLinLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "CMemStream::CMemStream",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??0CMemStream@@QAE@PAVCLoader@@@Z' at exactly 0x00518EA0, demangling to 'public: __thiscall CMemStream::CMemStream(class CLoader *)'. IDA function size 72 matches the map-implied size 80."
+ },
+ "0x00519160": {
+  "wrong_name": "??$RenderPrimitives@U?$ShadedRenderer@U?$GetterXsYs@_J@ImPlot@@U12@UTransformerLogLin@2@@ImPlot@@@ImPlot@@YAXABU?$ShadedRenderer@U?$GetterXsYs@_J@ImPlot@@U12@UTransformerLogLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "CMemStream::Seek",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Seek@CMemStream@@UAGJT_LARGE_INTEGER@@KPAT_ULARGE_INTEGER@@@Z' at exactly 0x00519160, demangling to 'public: virtual long __stdcall CMemStream::Seek(union _LARGE_INTEGER,unsigned long,union _ULARGE_INTEGER *)'. IDA function size 113 matches the map-implied size 128. the address sits at vftable slot 5 of CMemStream in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x00519580": {
+  "wrong_name": "??$RenderPrimitives@U?$ShadedRenderer@U?$GetterXsYs@_J@ImPlot@@U?$GetterXsYRef@_J@2@UTransformerLinLog@2@@ImPlot@@@ImPlot@@YAXABU?$ShadedRenderer@U?$GetterXsYs@_J@ImPlot@@U?$GetterXsYRef@_J@2@UTransformerLinLog@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "AudManager::GetRaceSpeechPtr",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetRaceSpeechPtr@AudManager@@QAEPAVmmRaceSpeech@@XZ' at exactly 0x00519580, demangling to 'public: class mmRaceSpeech * __thiscall AudManager::GetRaceSpeechPtr(void)'. IDA function size 23 matches the map-implied size 32."
+ },
+ "0x00519C60": {
+  "wrong_name": "??$RenderPrimitives@U?$ShadedRenderer@U?$GetterXsYs@_K@ImPlot@@U12@UTransformerLogLin@2@@ImPlot@@@ImPlot@@YAXABU?$ShadedRenderer@U?$GetterXsYs@_K@ImPlot@@U12@UTransformerLogLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "AudManager::SetEAXReverbVolume",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SetEAXReverbVolume@AudManager@@QAEHM@Z' at exactly 0x00519C60, demangling to 'public: int __thiscall AudManager::SetEAXReverbVolume(float)'. IDA function size 5 matches the map-implied size 16."
+ },
+ "0x00519DC0": {
+  "wrong_name": "??$RenderPrimitives@U?$ShadedRenderer@U?$GetterXsYs@_K@ImPlot@@U12@UTransformerLogLog@2@@ImPlot@@@ImPlot@@YAXABU?$ShadedRenderer@U?$GetterXsYs@_K@ImPlot@@U12@UTransformerLogLog@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "_dynamic_initializer (CRT slot 382, AudManager TU)",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: JUMPOUT(0x519DD0); }"
+ },
+ "0x0051AB80": {
+  "wrong_name": "??$RenderPrimitives@U?$ShadedRenderer@U?$GetterYs@E@ImPlot@@UGetterYRef@2@UTransformerLinLog@2@@ImPlot@@@ImPlot@@YAXABU?$ShadedRenderer@U?$GetterYs@E@ImPlot@@UGetterYRef@2@UTransformerLinLog@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "mmRaceSpeech::LoadVehicleUnlock",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?LoadVehicleUnlock@mmRaceSpeech@@QAE_NPAD@Z' at exactly 0x0051AB80, demangling to 'public: bool __thiscall mmRaceSpeech::LoadVehicleUnlock(char *)'. IDA function size 50 matches the map-implied size 64. debug strings in body: \"%s_unlock\"."
+ },
+ "0x0051B3C0": {
+  "wrong_name": "??$RenderPrimitives@U?$ShadedRenderer@U?$GetterYs@F@ImPlot@@UGetterYRef@2@UTransformerLogLog@2@@ImPlot@@@ImPlot@@YAXABU?$ShadedRenderer@U?$GetterYs@F@ImPlot@@UGetterYRef@2@UTransformerLogLog@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "_dynamic_initializer (CRT slot 395, mmRaceSpeech TU)",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: JUMPOUT(0x51B3D0); }"
+ },
+ "0x0051B7E0": {
+  "wrong_name": "??$RenderPrimitives@U?$ShadedRenderer@U?$GetterYs@G@ImPlot@@UGetterYRef@2@UTransformerLogLin@2@@ImPlot@@@ImPlot@@YAXABU?$ShadedRenderer@U?$GetterYs@G@ImPlot@@UGetterYRef@2@UTransformerLogLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "mmSpeechContainer::GetRaceSpeechPtr",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetRaceSpeechPtr@mmSpeechContainer@@QAEPAVmmRaceSpeech@@XZ' at exactly 0x0051B7E0, demangling to 'public: class mmRaceSpeech * __thiscall mmSpeechContainer::GetRaceSpeechPtr(void)'. IDA function size 3 matches the map-implied size 16."
+ },
+ "0x0051C2E0": {
+  "wrong_name": "??$RenderPrimitives@U?$ShadedRenderer@U?$GetterYs@I@ImPlot@@UGetterYRef@2@UTransformerLogLin@2@@ImPlot@@@ImPlot@@YAXABU?$ShadedRenderer@U?$GetterYs@I@ImPlot@@UGetterYRef@2@UTransformerLogLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "MixerCTL::RefreshAll",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?RefreshAll@MixerCTL@@QAEXK@Z' at exactly 0x0051C2E0, demangling to 'public: void __thiscall MixerCTL::RefreshAll(unsigned long)'. IDA function size 3 matches the map-implied size 16."
+ },
+ "0x005200C0": {
+  "wrong_name": "??$RenderPrimitives@U?$StairsRenderer@U?$GetterXsYs@I@ImPlot@@UTransformerLogLog@2@@ImPlot@@@ImPlot@@YAXABU?$StairsRenderer@U?$GetterXsYs@I@ImPlot@@UTransformerLogLog@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "camViewCS::OneShot",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?OneShot@camViewCS@@QAEXXZ' at exactly 0x005200C0, demangling to 'public: void __thiscall camViewCS::OneShot(void)'. IDA function size 14 matches the map-implied size 16."
+ },
+ "0x00522060": {
+  "wrong_name": "??$RenderPrimitives@U?$StairsRenderer@U?$GetterYs@E@ImPlot@@UTransformerLogLin@2@@ImPlot@@@ImPlot@@YAXABU?$StairsRenderer@U?$GetterYs@E@ImPlot@@UTransformerLogLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "camAppCS::ApproachIt",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?ApproachIt@camAppCS@@IAEXXZ' at exactly 0x00522060, demangling to 'protected: void __thiscall camAppCS::ApproachIt(void)'. IDA function size 46 matches the map-implied size 48."
+ },
+ "0x005230E0": {
+  "wrong_name": "??$RenderPrimitives@U?$StairsRenderer@U?$GetterYs@H@ImPlot@@UTransformerLogLin@2@@ImPlot@@@ImPlot@@YAXABU?$StairsRenderer@U?$GetterYs@H@ImPlot@@UTransformerLogLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "Spline::Print",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Print@Spline@@QAEXH@Z' at exactly 0x005230E0, demangling to 'public: void __thiscall Spline::Print(int)'. IDA function size 245 matches the map-implied size 256. debug strings in body: \"Spline[%d]: v=% 3.2f a,b,c,d=% 3.2f % 3.2f % 3.2f % 3.2f t=% 3.2f % 3.\"."
+ },
+ "0x00524160": {
+  "wrong_name": "??$RenderPrimitives@U?$StairsRenderer@U?$GetterYs@N@ImPlot@@UTransformerLogLin@2@@ImPlot@@@ImPlot@@YAXABU?$StairsRenderer@U?$GetterYs@N@ImPlot@@UTransformerLogLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "mmCityList::mmCityList",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??0mmCityList@@QAE@XZ' at exactly 0x00524160, demangling to 'public: __thiscall mmCityList::mmCityList(void)'. IDA function size 25 matches the map-implied size 32."
+ },
+ "0x005242C0": {
+  "wrong_name": "??$RenderPrimitives@U?$StairsRenderer@U?$GetterYs@N@ImPlot@@UTransformerLogLog@2@@ImPlot@@@ImPlot@@YAXABU?$StairsRenderer@U?$GetterYs@N@ImPlot@@UTransformerLogLog@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "mmCityList::SetCurrentCity",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SetCurrentCity@mmCityList@@QAEXPAD@Z' at exactly 0x005242C0, demangling to 'public: void __thiscall mmCityList::SetCurrentCity(char *)'. IDA function size 48 matches the map-implied size 48."
+ },
+ "0x00524420": {
+  "wrong_name": "??$RenderPrimitives@U?$StairsRenderer@U?$GetterYs@_J@ImPlot@@UTransformerLinLin@2@@ImPlot@@@ImPlot@@YAXABU?$StairsRenderer@U?$GetterYs@_J@ImPlot@@UTransformerLinLin@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "mmCityList::Print",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Print@mmCityList@@QAEXXZ' at exactly 0x00524420, demangling to 'public: void __thiscall mmCityList::Print(void)'. IDA function size 52 matches the map-implied size 64. debug strings in body: \"******City # %d\"."
+ },
+ "0x00524B00": {
+  "wrong_name": "??$RenderPrimitives@U?$StairsRenderer@U?$GetterYs@_K@ImPlot@@UTransformerLinLog@2@@ImPlot@@@ImPlot@@YAXABU?$StairsRenderer@U?$GetterYs@_K@ImPlot@@UTransformerLinLog@2@@0@AAUImDrawList@@ABUImRect@@@Z",
+  "recovered": "mmMiscData::Reset",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Reset@mmMiscData@@QAEXXZ' at exactly 0x00524B00, demangling to 'public: void __thiscall mmMiscData::Reset(void)'. IDA function size 21 matches the map-implied size 32."
+ },
+ "0x00526020": {
+  "wrong_name": "??$RenderStairs@U?$GetterXsYs@F@ImPlot@@UTransformerLinLin@2@@ImPlot@@YAXABU?$GetterXsYs@F@0@ABUTransformerLinLin@0@AAUImDrawList@@MI@Z",
+  "recovered": "mmGfxCFG::Set",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Set@mmGfxCFG@@QAEXXZ' at exactly 0x00526020, demangling to 'public: void __thiscall mmGfxCFG::Set(void)'. IDA function size 102 matches the map-implied size 112."
+ },
+ "0x00526470": {
+  "wrong_name": "??$RenderStairs@U?$GetterXsYs@F@ImPlot@@UTransformerLogLog@2@@ImPlot@@YAXABU?$GetterXsYs@F@0@ABUTransformerLogLog@0@AAUImDrawList@@MI@Z",
+  "recovered": "_dynamic_initializer (CRT slot 410, mmPlayerConfig TU)",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: JUMPOUT(0x526480); }"
+ },
+ "0x00526A30": {
+  "wrong_name": "??$RenderStairs@U?$GetterXsYs@G@ImPlot@@UTransformerLogLog@2@@ImPlot@@YAXABU?$GetterXsYs@G@0@ABUTransformerLogLog@0@AAUImDrawList@@MI@Z",
+  "recovered": "mmPlayerDirectory::GetPlayerName",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetPlayerName@mmPlayerDirectory@@QAEPADPAD@Z' at exactly 0x00526A30, demangling to 'public: char * __thiscall mmPlayerDirectory::GetPlayerName(char *)'. IDA function size 133 matches the map-implied size 144."
+ },
+ "0x00527440": {
+  "wrong_name": "??$RenderStairs@U?$GetterXsYs@I@ImPlot@@UTransformerLogLin@2@@ImPlot@@YAXABU?$GetterXsYs@I@0@ABUTransformerLogLin@0@AAUImDrawList@@MI@Z",
+  "recovered": "mmPlayerData::GetTotalPassed",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetTotalPassed@mmPlayerData@@QAEHPAD@Z' at exactly 0x00527440, demangling to 'public: int __thiscall mmPlayerData::GetTotalPassed(char *)'. IDA function size 234 matches the map-implied size 240."
+ },
+ "0x00527890": {
+  "wrong_name": "??$RenderStairs@U?$GetterXsYs@M@ImPlot@@UTransformerLinLog@2@@ImPlot@@YAXABU?$GetterXsYs@M@0@ABUTransformerLinLog@0@AAUImDrawList@@MI@Z",
+  "recovered": "mmPlayerData::ResolveCheckpointProgress",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?ResolveCheckpointProgress@mmPlayerData@@QAEHPAD@Z' at exactly 0x00527890, demangling to 'public: int __thiscall mmPlayerData::ResolveCheckpointProgress(char *)'. IDA function size 319 matches the map-implied size 320. debug strings in body: \"Can't open city record.\"."
+ },
+ "0x00529F60": {
+  "wrong_name": "??$RenderStairs@U?$GetterYs@G@ImPlot@@UTransformerLinLin@2@@ImPlot@@YAXABU?$GetterYs@G@0@ABUTransformerLinLin@0@AAUImDrawList@@MI@Z",
+  "recovered": "mmRaceData::GetNumOpponents",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetNumOpponents@mmRaceData@@QAEHHW4dgSkillLevel@@@Z' at exactly 0x00529F60, demangling to 'public: int __thiscall mmRaceData::GetNumOpponents(int,enum dgSkillLevel)'. IDA function size 35 matches the map-implied size 48."
+ },
+ "0x0052C7A0": {
+  "wrong_name": "??$RenderStairs@UGetterFuncPtr@ImPlot@@UTransformerLinLin@2@@ImPlot@@YAXABUGetterFuncPtr@0@ABUTransformerLinLin@0@AAUImDrawList@@MI@Z",
+  "recovered": "mmInput::ForceAssignment",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?ForceAssignment@mmInput@@QAEXPAVmmIO@@@Z' at exactly 0x0052C7A0, demangling to 'public: void __thiscall mmInput::ForceAssignment(class mmIO *)'. IDA function size 30 matches the map-implied size 32."
+ },
+ "0x0052CA80": {
+  "wrong_name": "??$RenderStairs@UGetterFuncPtr@ImPlot@@UTransformerLogLin@2@@ImPlot@@YAXABUGetterFuncPtr@0@ABUTransformerLogLin@0@AAUImDrawList@@MI@Z",
+  "recovered": "mmInput::PollStates",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?PollStates@mmInput@@QAEHXZ' at exactly 0x0052CA80, demangling to 'public: int __thiscall mmInput::PollStates(void)'. IDA function size 178 matches the map-implied size 192. debug strings in body: \"Poll button: %x\"."
+ },
+ "0x0052CBF0": {
+  "wrong_name": "??$RenderStairs@UGetterFuncPtr@ImPlot@@UTransformerLogLog@2@@ImPlot@@YAXABUGetterFuncPtr@0@ABUTransformerLogLog@0@AAUImDrawList@@MI@Z",
+  "recovered": "mmInput::ClearEventHitFlags",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?ClearEventHitFlags@mmInput@@QAEXXZ' at exactly 0x0052CBF0, demangling to 'public: void __thiscall mmInput::ClearEventHitFlags(void)'. IDA function size 24 matches the map-implied size 32."
+ },
+ "0x0052CFE0": {
+  "wrong_name": "??0?$GetterBarV@C@ImPlot@@QAE@PBCNHHH@Z",
+  "recovered": "mmInput::EventToButton",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?EventToButton@mmInput@@AAEHH@Z' at exactly 0x0052CFE0, demangling to 'private: int __thiscall mmInput::EventToButton(int)'. IDA function size 36 matches the map-implied size 48."
+ },
+ "0x0052D5E0": {
+  "wrong_name": "??0?$GetterError@N@ImPlot@@QAE@PBN000HHH@Z",
+  "recovered": "mmInput::PutEventInQueue",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?PutEventInQueue@mmInput@@AAEX_J@Z' at exactly 0x0052D5E0, demangling to 'private: void __thiscall mmInput::PutEventInQueue(__int64)'. IDA function size 45 matches the map-implied size 48."
+ },
+ "0x0052DA00": {
+  "wrong_name": "??0?$GetterXsYRef@N@ImPlot@@QAE@PBNNHHH@Z",
+  "recovered": "mmInput::GetBrakesVal",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetBrakesVal@mmInput@@QAEMXZ' at exactly 0x0052DA00, demangling to 'public: float __thiscall mmInput::GetBrakesVal(void)'. IDA function size 110 matches the map-implied size 112."
+ },
+ "0x0052E0A0": {
+  "wrong_name": "??0?$GetterYs@H@ImPlot@@QAE@PBHHNNHH@Z",
+  "recovered": "mmInput::DeviceConnected",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?DeviceConnected@mmInput@@QAEHXZ' at exactly 0x0052E0A0, demangling to 'public: int __thiscall mmInput::DeviceConnected(void)'. IDA function size 23 matches the map-implied size 32."
+ },
+ "0x0052E340": {
+  "wrong_name": "??0?$LineSegmentsRenderer@U?$GetterXsYs@C@ImPlot@@U?$GetterXsYRef@C@2@UTransformerLinLin@2@@ImPlot@@QAE@ABU?$GetterXsYs@C@1@ABU?$GetterXsYRef@C@1@ABUTransformerLinLin@1@IM@Z",
+  "recovered": "mmInput::FFSetValues",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?FFSetValues@mmInput@@QAEHHMM@Z' at exactly 0x0052E340, demangling to 'public: int __thiscall mmInput::FFSetValues(int,float,float)'. IDA function size 56 matches the map-implied size 64."
+ },
+ "0x0052E580": {
+  "wrong_name": "??0?$LineSegmentsRenderer@U?$GetterXsYs@E@ImPlot@@U?$GetterXsYRef@E@2@UTransformerLogLin@2@@ImPlot@@QAE@ABU?$GetterXsYs@E@1@ABU?$GetterXsYRef@E@1@ABUTransformerLogLin@1@IM@Z",
+  "recovered": "mmInput::BinarySaveConfig",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?BinarySaveConfig@mmInput@@QAEHPAVStream@@@Z' at exactly 0x0052E580, demangling to 'public: int __thiscall mmInput::BinarySaveConfig(class Stream *)'. IDA function size 144 matches the map-implied size 144."
+ },
+ "0x0052EDC0": {
+  "wrong_name": "??0?$LineSegmentsRenderer@U?$GetterXsYs@N@ImPlot@@U?$GetterXsYRef@N@2@UTransformerLinLin@2@@ImPlot@@QAE@ABU?$GetterXsYs@N@1@ABU?$GetterXsYRef@N@1@ABUTransformerLinLin@1@IM@Z",
+  "recovered": "mmInput::`scalar deleting destructor'",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??_GmmInput@@UAEPAXI@Z' at exactly 0x0052EDC0, demangling to 'public: virtual void * __thiscall mmInput::`scalar deleting destructor'(unsigned int)'. IDA function size 33 matches the map-implied size 48. the address sits at vftable slot 0 of mmInput in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x0052EEE0": {
+  "wrong_name": "??0?$LineSegmentsRenderer@U?$GetterXsYs@N@ImPlot@@U?$GetterXsYRef@N@2@UTransformerLogLog@2@@ImPlot@@QAE@ABU?$GetterXsYs@N@1@ABU?$GetterXsYRef@N@1@ABUTransformerLogLog@1@IM@Z",
+  "recovered": "mmIO::Clear",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Clear@mmIO@@QAEXXZ' at exactly 0x0052EEE0, demangling to 'public: void __thiscall mmIO::Clear(void)'. IDA function size 20 matches the map-implied size 32."
+ },
+ "0x0052F0C0": {
+  "wrong_name": "??0?$LineSegmentsRenderer@U?$GetterXsYs@_K@ImPlot@@U?$GetterXsYRef@_K@2@UTransformerLinLin@2@@ImPlot@@QAE@ABU?$GetterXsYs@_K@1@ABU?$GetterXsYRef@_K@1@ABUTransformerLinLin@1@IM@Z",
+  "recovered": "mmIO::GetDescription",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetDescription@mmIO@@QAEXPAD@Z' at exactly 0x0052F0C0, demangling to 'public: void __thiscall mmIO::GetDescription(char *)'. IDA function size 75 matches the map-implied size 80."
+ },
+ "0x0052F3C0": {
+  "wrong_name": "??0?$LineSegmentsRenderer@U?$GetterYs@E@ImPlot@@UGetterYRef@2@UTransformerLinLin@2@@ImPlot@@QAE@ABU?$GetterYs@E@1@ABUGetterYRef@1@ABUTransformerLinLin@1@IM@Z",
+  "recovered": "mmIODev::mmIODev",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??0mmIODev@@QAE@XZ' at exactly 0x0052F3C0, demangling to 'public: __thiscall mmIODev::mmIODev(void)'. IDA function size 50 matches the map-implied size 64."
+ },
+ "0x0052FB40": {
+  "wrong_name": "??0?$LineSegmentsRenderer@U?$GetterYs@M@ImPlot@@UGetterYRef@2@UTransformerLinLin@2@@ImPlot@@QAE@ABU?$GetterYs@M@1@ABUGetterYRef@1@ABUTransformerLinLin@1@IM@Z",
+  "recovered": "mmIODev::Read",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Read@mmIODev@@QAEHPAVStream@@@Z' at exactly 0x0052FB40, demangling to 'public: int __thiscall mmIODev::Read(class Stream *)'. IDA function size 78 matches the map-implied size 80. debug strings in body: \"ioType %d\\n\"; \"Device %d\\n\"."
+ },
+ "0x0052FEA0": {
+  "wrong_name": "??0?$LineSegmentsRenderer@U?$GetterYs@_J@ImPlot@@UGetterYRef@2@UTransformerLinLog@2@@ImPlot@@QAE@ABU?$GetterYs@_J@1@ABUGetterYRef@1@ABUTransformerLinLog@1@IM@Z",
+  "recovered": "mmJoyMan::GetJoyButton",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetJoyButton@mmJoyMan@@QAEHHH@Z' at exactly 0x0052FEA0, demangling to 'public: int __thiscall mmJoyMan::GetJoyButton(int,int)'. IDA function size 66 matches the map-implied size 80."
+ },
+ "0x005305C0": {
+  "wrong_name": "??0?$LineStripRenderer@U?$GetterXsYs@F@ImPlot@@UTransformerLinLog@2@@ImPlot@@QAE@ABU?$GetterXsYs@F@1@ABUTransformerLinLog@1@IM@Z",
+  "recovered": "mmJoystick::inputPrepareDevice",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?inputPrepareDevice@mmJoystick@@QAEHXZ' at exactly 0x005305C0, demangling to 'public: int __thiscall mmJoystick::inputPrepareDevice(void)'. IDA function size 422 matches the map-implied size 432. debug strings in body: \"SetProperty(RANGE, X-Axis) failed.\\n\"; \"SetProperty(RANGE, Y-Axis) failed.\\n\"."
+ },
+ "0x00531540": {
+  "wrong_name": "??0?$LineStripRenderer@U?$GetterYs@C@ImPlot@@UTransformerLinLin@2@@ImPlot@@QAE@ABU?$GetterYs@C@1@ABUTransformerLinLin@1@IM@Z",
+  "recovered": "mmEffectFF::mmEffectFF",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??0mmEffectFF@@QAE@XZ' at exactly 0x00531540, demangling to 'public: __thiscall mmEffectFF::mmEffectFF(void)'. IDA function size 104 matches the map-implied size 112."
+ },
+ "0x00531940": {
+  "wrong_name": "??0?$LineStripRenderer@U?$GetterYs@F@ImPlot@@UTransformerLinLin@2@@ImPlot@@QAE@ABU?$GetterYs@F@1@ABUTransformerLinLin@1@IM@Z",
+  "recovered": "mmRoadFF::Init",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Init@mmRoadFF@@UAEHPAUIDirectInputDevice2A@@@Z' at exactly 0x00531940, demangling to 'public: virtual int __thiscall mmRoadFF::Init(struct IDirectInputDevice2A *)'. IDA function size 255 matches the map-implied size 256. the address sits at vftable slot 0 of mmRoadFF in the binary, and the mangled map symbol is marked virtual - two independent sources agree. debug strings in body: \"EnumEffects(Periodic Force) failed\\n\"; \"mmRoadFF::CreateEffect failed - %08Xh\\n\".",
+  "previously_known": true,
+  "previously_known_as": "mmRoadFF::CreateEffect",
+  "note": "Supersedes the earlier string-based recovery 'mmRoadFF::CreateEffect', which is not a symbol anywhere in the shipped map."
+ },
+ "0x00531A40": {
+  "wrong_name": "??0?$LineStripRenderer@U?$GetterYs@F@ImPlot@@UTransformerLogLin@2@@ImPlot@@QAE@ABU?$GetterYs@F@1@ABUTransformerLogLin@1@IM@Z",
+  "recovered": "mmRoadFF::SetValues",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SetValues@mmRoadFF@@UAEHMM@Z' at exactly 0x00531A40, demangling to 'public: virtual int __thiscall mmRoadFF::SetValues(float,float)'. IDA function size 48 matches the map-implied size 48. the address sits at vftable slot 3 of mmRoadFF in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x00531EC0": {
+  "wrong_name": "??0?$LineStripRenderer@U?$GetterYs@H@ImPlot@@UTransformerLogLog@2@@ImPlot@@QAE@ABU?$GetterYs@H@1@ABUTransformerLogLog@1@IM@Z",
+  "recovered": "mmSpringFF::Init",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Init@mmSpringFF@@UAEHPAUIDirectInputDevice2A@@@Z' at exactly 0x00531EC0, demangling to 'public: virtual int __thiscall mmSpringFF::Init(struct IDirectInputDevice2A *)'. IDA function size 254 matches the map-implied size 256. the address sits at vftable slot 0 of mmSpringFF in the binary, and the mangled map symbol is marked virtual - two independent sources agree. debug strings in body: \"EnumEffects(Constant Force) failed\\n\"; \"mmSpringFF::CreateEffect failed - %08Xh\\n\".",
+  "previously_known": true,
+  "previously_known_as": "mmSpringFF::CreateEffect",
+  "note": "Supersedes the earlier string-based recovery 'mmSpringFF::CreateEffect', which is not a symbol anywhere in the shipped map."
+ },
+ "0x00531FC0": {
+  "wrong_name": "??0?$LineStripRenderer@U?$GetterYs@I@ImPlot@@UTransformerLinLog@2@@ImPlot@@QAE@ABU?$GetterYs@I@1@ABUTransformerLinLog@1@IM@Z",
+  "recovered": "mmSpringFF::SetValues",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SetValues@mmSpringFF@@UAEHMM@Z' at exactly 0x00531FC0, demangling to 'public: virtual int __thiscall mmSpringFF::SetValues(float,float)'. IDA function size 33 matches the map-implied size 48. the address sits at vftable slot 3 of mmSpringFF in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x005321C0": {
+  "wrong_name": "??0?$LineStripRenderer@U?$GetterYs@M@ImPlot@@UTransformerLinLog@2@@ImPlot@@QAE@ABU?$GetterYs@M@1@ABUTransformerLinLog@1@IM@Z",
+  "recovered": "mmText::CreateLocFont",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?CreateLocFont@mmText@@SAPAXPBULocString@@H@Z' at exactly 0x005321C0, demangling to 'public: static void * __cdecl mmText::CreateLocFont(struct LocString const *,int)'. IDA function size 181 matches the map-implied size 192."
+ },
+ "0x005322C0": {
+  "wrong_name": "??0?$LineStripRenderer@U?$GetterYs@M@ImPlot@@UTransformerLogLog@2@@ImPlot@@QAE@ABU?$GetterYs@M@1@ABUTransformerLogLog@1@IM@Z",
+  "recovered": "mmText::GetDC",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetDC@mmText@@SAPAXPAVgfxBitmap@@@Z' at exactly 0x005322C0, demangling to 'public: static void * __cdecl mmText::GetDC(class gfxBitmap *)'. IDA function size 41 matches the map-implied size 48."
+ },
+ "0x005326C0": {
+  "wrong_name": "??0?$LineStripRenderer@U?$GetterYs@_J@ImPlot@@UTransformerLogLog@2@@ImPlot@@QAE@ABU?$GetterYs@_J@1@ABUTransformerLogLog@1@IM@Z",
+  "recovered": "mmTextNode::~mmTextNode",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??1mmTextNode@@UAE@XZ' at exactly 0x005326C0, demangling to 'public: virtual __thiscall mmTextNode::~mmTextNode(void)'. IDA function size 131 matches the map-implied size 144."
+ },
+ "0x00532840": {
+  "wrong_name": "??0?$LineStripRenderer@U?$GetterYs@_K@ImPlot@@UTransformerLogLin@2@@ImPlot@@QAE@ABU?$GetterYs@_K@1@ABUTransformerLogLin@1@IM@Z",
+  "recovered": "mmTextNode::Init",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Init@mmTextNode@@QAEXMMMMHH@Z' at exactly 0x00532840, demangling to 'public: void __thiscall mmTextNode::Init(float,float,float,float,int,int)'. IDA function size 289 matches the map-implied size 304."
+ },
+ "0x00532A40": {
+  "wrong_name": "??0?$LineStripRenderer@UGetterFuncPtr@ImPlot@@UTransformerLogLin@2@@ImPlot@@QAE@ABUGetterFuncPtr@1@ABUTransformerLogLin@1@IM@Z",
+  "recovered": "mmTextNode::SetHlColor",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SetHlColor@mmTextNode@@QAEXAAVVector4@@@Z' at exactly 0x00532A40, demangling to 'public: void __thiscall mmTextNode::SetHlColor(class Vector4 &)'. IDA function size 81 matches the map-implied size 96."
+ },
+ "0x005334C0": {
+  "wrong_name": "??0?$ShadedRenderer@U?$GetterXsYs@E@ImPlot@@U12@UTransformerLinLin@2@@ImPlot@@QAE@ABU?$GetterXsYs@E@1@0ABUTransformerLinLin@1@I@Z",
+  "recovered": "mmNumber::Update",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Update@mmNumber@@UAEXXZ' at exactly 0x005334C0, demangling to 'public: virtual void __thiscall mmNumber::Update(void)'. IDA function size 22 matches the map-implied size 32. the address sits at vftable slot 2 of mmNumber in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x00533660": {
+  "wrong_name": "??0?$ShadedRenderer@U?$GetterXsYs@E@ImPlot@@U12@UTransformerLogLin@2@@ImPlot@@QAE@ABU?$GetterXsYs@E@1@0ABUTransformerLogLin@1@I@Z",
+  "recovered": "asMeshSetForm::SetShape",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SetShape@asMeshSetForm@@QAEXPAD0_NPAVVector3@@@Z' at exactly 0x00533660, demangling to 'public: void __thiscall asMeshSetForm::SetShape(char *,char *,bool,class Vector3 *)'. IDA function size 260 matches the map-implied size 272. the body prints its own name: \"asMeshSetForm::SetShape -- No such package [%s].\".",
+  "previously_known": true,
+  "previously_known_as": "asMeshSetForm::SetShape"
+ },
+ "0x005339A0": {
+  "wrong_name": "??0?$ShadedRenderer@U?$GetterXsYs@E@ImPlot@@U?$GetterXsYRef@E@2@UTransformerLogLin@2@@ImPlot@@QAE@ABU?$GetterXsYs@E@1@ABU?$GetterXsYRef@E@1@ABUTransformerLogLin@1@I@Z",
+  "recovered": "asMeshSetForm::`vector deleting destructor'",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??_EasMeshSetForm@@UAEPAXI@Z' at exactly 0x005339A0, demangling to 'public: virtual void * __thiscall asMeshSetForm::`vector deleting destructor'(unsigned int)'. IDA function size 33 matches the map-implied size 48. the address sits at vftable slot 0 of asMeshSetForm in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x00534500": {
+  "wrong_name": "??0?$ShadedRenderer@U?$GetterXsYs@G@ImPlot@@U?$GetterXsYRef@G@2@UTransformerLinLin@2@@ImPlot@@QAE@ABU?$GetterXsYs@G@1@ABU?$GetterXsYRef@G@1@ABUTransformerLinLin@1@I@Z",
+  "recovered": "mmMouseSteerBar::Cull",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Cull@mmMouseSteerBar@@UAEXXZ' at exactly 0x00534500, demangling to 'public: virtual void __thiscall mmMouseSteerBar::Cull(void)'. IDA function size 124 matches the map-implied size 128. the address sits at vftable slot 1 of mmMouseSteerBar in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x005345D0": {
+  "wrong_name": "??0?$ShadedRenderer@U?$GetterXsYs@G@ImPlot@@U?$GetterXsYRef@G@2@UTransformerLinLog@2@@ImPlot@@QAE@ABU?$GetterXsYs@G@1@ABU?$GetterXsYRef@G@1@ABUTransformerLinLog@1@I@Z",
+  "recovered": "mmDamage::Init",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Init@mmDamage@@QAEXPAVmodStatic@@@Z' at exactly 0x005345D0, demangling to 'public: void __thiscall mmDamage::Init(class modStatic *)'. IDA function size 12 matches the map-implied size 16."
+ },
+ "0x00534840": {
+  "wrong_name": "??0?$ShadedRenderer@U?$GetterXsYs@H@ImPlot@@U12@UTransformerLinLin@2@@ImPlot@@QAE@ABU?$GetterXsYs@H@1@0ABUTransformerLinLin@1@I@Z",
+  "recovered": "_dynamic_atexit_destructor_for__AIMAP_ (aiMap)",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated atexit destructor for a file-scope object: body is the MSVC guard-byte pattern 'if ((guard & 1) == 0) { guard |= 1; ~T(&global); }', and the address is reached from the CRT initializer table at .data:0x005C2004. Body: aiMap::~aiMap((MM2::asNode *)&AIMAP); }"
+ },
+ "0x005349E0": {
+  "wrong_name": "??0?$ShadedRenderer@U?$GetterXsYs@H@ImPlot@@U12@UTransformerLogLin@2@@ImPlot@@QAE@ABU?$GetterXsYs@H@1@0ABUTransformerLogLin@1@I@Z",
+  "recovered": "aiMap::Hookman",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Hookman@aiMap@@QAEPAVmcHookman@@H@Z' at exactly 0x005349E0, demangling to 'public: class mcHookman * __thiscall aiMap::Hookman(int)'. IDA function size 65 matches the map-implied size 80. debug strings in body: \"Returning a NULL Hookman. Idx: %d\"."
+ },
+ "0x00534AB0": {
+  "wrong_name": "??0?$ShadedRenderer@U?$GetterXsYs@H@ImPlot@@U12@UTransformerLogLog@2@@ImPlot@@QAE@ABU?$GetterXsYs@H@1@0ABUTransformerLogLog@1@I@Z",
+  "recovered": "aiMap::Pedestrian",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Pedestrian@aiMap@@QAEPAVaiPedestrian@@H@Z' at exactly 0x00534AB0, demangling to 'public: class aiPedestrian * __thiscall aiMap::Pedestrian(int)'. IDA function size 63 matches the map-implied size 64. debug strings in body: \"Returning a NULL Pedestrian. Idx: %d\"."
+ },
+ "0x005374F0": {
+  "wrong_name": "??0?$ShadedRenderer@U?$GetterYs@E@ImPlot@@UGetterYRef@2@UTransformerLogLog@2@@ImPlot@@QAE@ABU?$GetterYs@E@1@ABUGetterYRef@1@ABUTransformerLogLog@1@I@Z",
+  "recovered": "aiMap::Cull",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Cull@aiMap@@UAEXXZ' at exactly 0x005374F0, demangling to 'public: virtual void __thiscall aiMap::Cull(void)'. IDA function size 1 matches the map-implied size 16. the address sits at vftable slot 1 of aiMap in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x005375C0": {
+  "wrong_name": "??0?$ShadedRenderer@U?$GetterYs@F@ImPlot@@UGetterYRef@2@UTransformerLinLin@2@@ImPlot@@QAE@ABU?$GetterYs@F@1@ABUGetterYRef@1@ABUTransformerLinLin@1@I@Z",
+  "recovered": "aiMap::DrawMap",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?DrawMap@aiMap@@QAEXXZ' at exactly 0x005375C0, demangling to 'public: void __thiscall aiMap::DrawMap(void)'. IDA function size 27 matches the map-implied size 32."
+ },
+ "0x00537AA0": {
+  "wrong_name": "??0?$ShadedRenderer@U?$GetterYs@G@ImPlot@@UGetterYRef@2@UTransformerLogLin@2@@ImPlot@@QAE@ABU?$GetterYs@G@1@ABUGetterYRef@1@ABUTransformerLogLin@1@I@Z",
+  "recovered": "aiMap::MapComponent",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?MapComponent@aiMap@@QAEHABVVector3@@PAF1FF@Z' at exactly 0x00537AA0, demangling to 'public: int __thiscall aiMap::MapComponent(class Vector3 const &,short *,short *,short,short)'. IDA function size 454 matches the map-implied size 464."
+ },
+ "0x005382C0": {
+  "wrong_name": "??0?$ShadedRenderer@U?$GetterYs@M@ImPlot@@UGetterYRef@2@UTransformerLinLin@2@@ImPlot@@QAE@ABU?$GetterYs@M@1@ABUGetterYRef@1@ABUTransformerLinLin@1@I@Z",
+  "recovered": "aiMap::PredictAmbIntersectionPath",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?PredictAmbIntersectionPath@aiMap@@QAEPAVaiPath@@HABVMatrix34@@@Z' at exactly 0x005382C0, demangling to 'public: class aiPath * __thiscall aiMap::PredictAmbIntersectionPath(int,class Matrix34 const &)'. IDA function size 621 matches the map-implied size 624."
+ },
+ "0x00538530": {
+  "wrong_name": "??0?$ShadedRenderer@U?$GetterYs@M@ImPlot@@UGetterYRef@2@UTransformerLogLog@2@@ImPlot@@QAE@ABU?$GetterYs@M@1@ABUGetterYRef@1@ABUTransformerLogLog@1@I@Z",
+  "recovered": "aiMap::PredictAmbFreewayIntersectionPath",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?PredictAmbFreewayIntersectionPath@aiMap@@QAEPAVaiPath@@HABVMatrix34@@@Z' at exactly 0x00538530, demangling to 'public: class aiPath * __thiscall aiMap::PredictAmbFreewayIntersectionPath(int,class Matrix34 const &)'. IDA function size 775 matches the map-implied size 784."
+ },
+ "0x00538A10": {
+  "wrong_name": "??0?$ShadedRenderer@U?$GetterYs@_J@ImPlot@@UGetterYRef@2@UTransformerLinLog@2@@ImPlot@@QAE@ABU?$GetterYs@_J@1@ABUGetterYRef@1@ABUTransformerLinLog@1@I@Z",
+  "recovered": "aiMap::ChooseNextRandomLink",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?ChooseNextRandomLink@aiMap@@QAEHPAVaiRailSet@@@Z' at exactly 0x00538A10, demangling to 'public: int __thiscall aiMap::ChooseNextRandomLink(class aiRailSet *)'. IDA function size 440 matches the map-implied size 448. debug strings in body: \"No eligible roads identified to turn onto from road: %d.\"."
+ },
+ "0x0053B700": {
+  "wrong_name": "??0?$StairsRenderer@U?$GetterYs@M@ImPlot@@UTransformerLinLin@2@@ImPlot@@QAE@ABU?$GetterYs@M@1@ABUTransformerLinLin@1@IM@Z",
+  "recovered": "aiMap::RemovePlayer",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?RemovePlayer@aiMap@@QAEHPAVvehCar@@@Z' at exactly 0x0053B700, demangling to 'public: int __thiscall aiMap::RemovePlayer(class vehCar *)'. IDA function size 167 matches the map-implied size 176."
+ },
+ "0x0053BB80": {
+  "wrong_name": "??0?$StairsRenderer@U?$GetterYs@_J@ImPlot@@UTransformerLinLin@2@@ImPlot@@QAE@ABU?$GetterYs@_J@1@ABUTransformerLinLin@1@IM@Z",
+  "recovered": "_dynamic_initializer (CRT slot 414, aiMap TU)",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: JUMPOUT(0x53BB90); }"
+ },
+ "0x0053BC10": {
+  "wrong_name": "??0?$StairsRenderer@U?$GetterYs@_J@ImPlot@@UTransformerLinLog@2@@ImPlot@@QAE@ABU?$GetterYs@_J@1@ABUTransformerLinLog@1@IM@Z",
+  "recovered": "_dynamic_initializer (CRT slot 417, aiMap TU)",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: JUMPOUT(0x53BC20); }"
+ },
+ "0x0053BCA0": {
+  "wrong_name": "??0?$StairsRenderer@U?$GetterYs@_J@ImPlot@@UTransformerLogLin@2@@ImPlot@@QAE@ABU?$GetterYs@_J@1@ABUTransformerLogLin@1@IM@Z",
+  "recovered": "aiVehicleAmbient::`vector deleting destructor'",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??_EaiVehicleAmbient@@QAEPAXI@Z' at exactly 0x0053BCA0, demangling to 'public: void * __thiscall aiVehicleAmbient::`vector deleting destructor'(unsigned int)'. IDA function size 91 matches the map-implied size 96."
+ },
+ "0x0053BDC0": {
+  "wrong_name": "??0?$StairsRenderer@U?$GetterYs@_K@ImPlot@@UTransformerLinLin@2@@ImPlot@@QAE@ABU?$GetterYs@_K@1@ABUTransformerLinLin@1@IM@Z",
+  "recovered": "aiPedestrian::`vector deleting destructor'",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??_EaiPedestrian@@QAEPAXI@Z' at exactly 0x0053BDC0, demangling to 'public: void * __thiscall aiPedestrian::`vector deleting destructor'(unsigned int)'. IDA function size 91 matches the map-implied size 96."
+ },
+ "0x0053BEE0": {
+  "wrong_name": "??0?$StairsRenderer@U?$GetterYs@_K@ImPlot@@UTransformerLogLin@2@@ImPlot@@QAE@ABU?$GetterYs@_K@1@ABUTransformerLogLin@1@IM@Z",
+  "recovered": "aiSubway::`vector deleting destructor'",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??_EaiSubway@@QAEPAXI@Z' at exactly 0x0053BEE0, demangling to 'public: void * __thiscall aiSubway::`vector deleting destructor'(unsigned int)'. IDA function size 91 matches the map-implied size 96."
+ },
+ "0x0053C000": {
+  "wrong_name": "??0?$StairsRenderer@UGetterFuncPtr@ImPlot@@UTransformerLinLin@2@@ImPlot@@QAE@ABUGetterFuncPtr@1@ABUTransformerLinLin@1@IM@Z",
+  "recovered": "aiIntersection::Road",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Road@aiIntersection@@QAEPAVaiPath@@H@Z' at exactly 0x0053C000, demangling to 'public: class aiPath * __thiscall aiIntersection::Road(int)'. IDA function size 33 matches the map-implied size 48."
+ },
+ "0x0053D010": {
+  "wrong_name": "??R?$GetterError@H@ImPlot@@QBE?AUImPlotPointError@@H@Z",
+  "recovered": "_dynamic_initializer (CRT slot 425, aiPedAudio TU)",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: JUMPOUT(0x53D020); }"
+ },
+ "0x0053D3B0": {
+  "wrong_name": "??R?$GetterError@_J@ImPlot@@QBE?AUImPlotPointError@@H@Z",
+  "recovered": "aiRouteRacer::Update",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Update@aiRouteRacer@@QAEXXZ' at exactly 0x0053D3B0, demangling to 'public: void __thiscall aiRouteRacer::Update(void)'. IDA function size 249 matches the map-implied size 256."
+ },
+ "0x0053D4B0": {
+  "wrong_name": "??R?$GetterError@_K@ImPlot@@QBE?AUImPlotPointError@@H@Z",
+  "recovered": "aiRouteRacer::DriveRoute",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?DriveRoute@aiRouteRacer@@AAEXXZ' at exactly 0x0053D4B0, demangling to 'private: void __thiscall aiRouteRacer::DriveRoute(void)'. IDA function size 504 matches the map-implied size 512. debug strings in body: \"Opponent #%d, Has fallen through the geometry.\"."
+ },
+ "0x0053D910": {
+  "wrong_name": "??R?$GetterXsYRef@_J@ImPlot@@QBE?AUImPlotPoint@@H@Z",
+  "recovered": "aiPoliceOfficer::aiPoliceOfficer",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??0aiPoliceOfficer@@QAE@XZ' at exactly 0x0053D910, demangling to 'public: __thiscall aiPoliceOfficer::aiPoliceOfficer(void)'. IDA function size 15 matches the map-implied size 16."
+ },
+ "0x0053E360": {
+  "wrong_name": "??R?$GetterYs@_K@ImPlot@@QBE?AUImPlotPoint@@H@Z",
+  "recovered": "aiPoliceOfficer::Speeding",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Speeding@aiPoliceOfficer@@AAEHPAVvehCar@@@Z' at exactly 0x0053E360, demangling to 'private: int __thiscall aiPoliceOfficer::Speeding(class vehCar *)'. IDA function size 5 matches the map-implied size 16."
+ },
+ "0x0053E3F0": {
+  "wrong_name": "??R?$LineSegmentsRenderer@U?$GetterXsYs@C@ImPlot@@U?$GetterXsYRef@C@2@UTransformerLinLin@2@@ImPlot@@QBE_NAAUImDrawList@@ABUImRect@@ABUImVec2@@H@Z",
+  "recovered": "aiPoliceOfficer::OffRoad",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?OffRoad@aiPoliceOfficer@@AAEHPAVvehCar@@@Z' at exactly 0x0053E3F0, demangling to 'private: int __thiscall aiPoliceOfficer::OffRoad(class vehCar *)'. IDA function size 5 matches the map-implied size 16."
+ },
+ "0x0053F290": {
+  "wrong_name": "??R?$LineSegmentsRenderer@U?$GetterXsYs@H@ImPlot@@U?$GetterXsYRef@H@2@UTransformerLogLin@2@@ImPlot@@QBE_NAAUImDrawList@@ABUImRect@@ABUImVec2@@H@Z",
+  "recovered": "_dynamic_initializer (CRT slot 429, aiPoliceOfficer TU)",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: JUMPOUT(0x53F2A0); }"
+ },
+ "0x0053F360": {
+  "wrong_name": "??R?$LineSegmentsRenderer@U?$GetterXsYs@H@ImPlot@@U?$GetterXsYRef@H@2@UTransformerLogLog@2@@ImPlot@@QBE_NAAUImDrawList@@ABUImRect@@ABUImVec2@@H@Z",
+  "recovered": "aiVehiclePlayer::Reset",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Reset@aiVehiclePlayer@@UAEXXZ' at exactly 0x0053F360, demangling to 'public: virtual void __thiscall aiVehiclePlayer::Reset(void)'. IDA function size 180 matches the map-implied size 192. the address sits at vftable slot 10 of aiVehiclePlayer in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x0053F5D0": {
+  "wrong_name": "??R?$LineSegmentsRenderer@U?$GetterXsYs@I@ImPlot@@U?$GetterXsYRef@I@2@UTransformerLogLin@2@@ImPlot@@QBE_NAAUImDrawList@@ABUImRect@@ABUImVec2@@H@Z",
+  "recovered": "aiObstacle::InAccident",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?InAccident@aiObstacle@@UAEHXZ' at exactly 0x0053F5D0, demangling to 'public: virtual int __thiscall aiObstacle::InAccident(void)'. IDA function size 3 matches the map-implied size 16. the address sits at vftable slot 0 of aiObstacle in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x0053F6A0": {
+  "wrong_name": "??R?$LineSegmentsRenderer@U?$GetterXsYs@I@ImPlot@@U?$GetterXsYRef@I@2@UTransformerLogLog@2@@ImPlot@@QBE_NAAUImDrawList@@ABUImRect@@ABUImVec2@@H@Z",
+  "recovered": "aiVehiclePlayer::LSideDistance",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?LSideDistance@aiVehiclePlayer@@UAEMXZ' at exactly 0x0053F6A0, demangling to 'public: virtual float __thiscall aiVehiclePlayer::LSideDistance(void)'. IDA function size 22 matches the map-implied size 32. the address sits at vftable slot 15 of aiVehiclePlayer in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x005407B0": {
+  "wrong_name": "??R?$LineSegmentsRenderer@U?$GetterYs@E@ImPlot@@UGetterYRef@2@UTransformerLinLin@2@@ImPlot@@QBE_NAAUImDrawList@@ABUImRect@@ABUImVec2@@H@Z",
+  "recovered": "aiCableCar::CheckForObstacles",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?CheckForObstacles@aiCableCar@@AAE_NPAM@Z' at exactly 0x005407B0, demangling to 'private: bool __thiscall aiCableCar::CheckForObstacles(float *)'. IDA function size 612 matches the map-implied size 624."
+ },
+ "0x00540A20": {
+  "wrong_name": "??R?$LineSegmentsRenderer@U?$GetterYs@E@ImPlot@@UGetterYRef@2@UTransformerLogLog@2@@ImPlot@@QBE_NAAUImDrawList@@ABUImRect@@ABUImVec2@@H@Z",
+  "recovered": "aiCableCar::OkayToEnterIntersection",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?OkayToEnterIntersection@aiCableCar@@AAE_NM@Z' at exactly 0x00540A20, demangling to 'private: bool __thiscall aiCableCar::OkayToEnterIntersection(float)'. IDA size 337 vs map-implied 368 (IDA split this function into chunks). debug strings in body: \"ERROR: Yield - Unsuported intersection control type\"; \"ERROR: Unknown intersection control type.\"."
+ },
+ "0x00541650": {
+  "wrong_name": "??R?$LineSegmentsRenderer@U?$GetterYs@I@ImPlot@@UGetterYRef@2@UTransformerLogLin@2@@ImPlot@@QBE_NAAUImDrawList@@ABUImRect@@ABUImVec2@@H@Z",
+  "recovered": "aiCableCarInstance::GetPosition",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetPosition@aiCableCarInstance@@UAEABVVector3@@XZ' at exactly 0x00541650, demangling to 'public: virtual class Vector3 const & __thiscall aiCableCarInstance::GetPosition(void)'. IDA function size 10 matches the map-implied size 16. the address sits at vftable slot 1 of aiCableCarInstance in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x005417F0": {
+  "wrong_name": "??R?$LineSegmentsRenderer@U?$GetterYs@M@ImPlot@@UGetterYRef@2@UTransformerLinLin@2@@ImPlot@@QBE_NAAUImDrawList@@ABUImRect@@ABUImVec2@@H@Z",
+  "recovered": "aiCableCar::CurrentLane",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?CurrentLane@aiCableCar@@UAEHXZ' at exactly 0x005417F0, demangling to 'public: virtual int __thiscall aiCableCar::CurrentLane(void)'. IDA function size 5 matches the map-implied size 16. the address sits at vftable slot 17 of aiCableCar in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x005418C0": {
+  "wrong_name": "??R?$LineSegmentsRenderer@U?$GetterYs@M@ImPlot@@UGetterYRef@2@UTransformerLinLog@2@@ImPlot@@QBE_NAAUImDrawList@@ABUImRect@@ABUImVec2@@H@Z",
+  "recovered": "(unnamed empty stub)",
+  "confidence": "UNIDENTIFIED",
+  "evidence": "the map's entry at this address is the placeholder 'nullsub_245', not a real linker symbol - a handful of such placeholders were patched into this copy of the map. The body is empty ({ ; }), so it is an inlined-away or deliberately null stub, but its real name is NOT recovered."
+ },
+ "0x00543AD0": {
+  "wrong_name": "??R?$LineStripRenderer@U?$GetterXsYs@M@ImPlot@@UTransformerLinLog@2@@ImPlot@@QBE_NAAUImDrawList@@ABUImRect@@ABUImVec2@@H@Z",
+  "recovered": "aiSubway::DrawId",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?DrawId@aiSubway@@UAEXXZ' at exactly 0x00543AD0, demangling to 'public: virtual void __thiscall aiSubway::DrawId(void)'. IDA function size 1 matches the map-implied size 16. the address sits at vftable slot 19 of aiSubway in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x00543C90": {
+  "wrong_name": "??R?$LineStripRenderer@U?$GetterXsYs@M@ImPlot@@UTransformerLogLog@2@@ImPlot@@QBE_NAAUImDrawList@@ABUImRect@@ABUImVec2@@H@Z",
+  "recovered": "aiSubway::Type",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Type@aiSubway@@UAEHXZ' at exactly 0x00543C90, demangling to 'public: virtual int __thiscall aiSubway::Type(void)'. IDA function size 6 matches the map-implied size 16. the address sits at vftable slot 11 of aiSubway in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x005482F0": {
+  "wrong_name": "??R?$RectRenderer@UGetterFuncPtr@ImPlot@@UTransformerLinLin@2@@ImPlot@@QBE_NAAUImDrawList@@ABUImRect@@ABUImVec2@@H@Z",
+  "recovered": "aiPath::SharpTurnEndDir",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SharpTurnEndDir@aiPath@@QAEAAVVector3@@H_N@Z' at exactly 0x005482F0, demangling to 'public: class Vector3 & __thiscall aiPath::SharpTurnEndDir(int,bool)'. IDA function size 47 matches the map-implied size 48."
+ },
+ "0x0054A170": {
+  "wrong_name": "??R?$ShadedRenderer@U?$GetterXsYs@C@ImPlot@@U?$GetterXsYRef@C@2@UTransformerLogLin@2@@ImPlot@@QBE_NAAUImDrawList@@ABUImRect@@ABUImVec2@@H@Z",
+  "recovered": "aiIntersection::AddBangersToObsMap",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?AddBangersToObsMap@aiIntersection@@QAEXXZ' at exactly 0x0054A170, demangling to 'public: void __thiscall aiIntersection::AddBangersToObsMap(void)'. IDA function size 162 matches the map-implied size 176."
+ },
+ "0x00550350": {
+  "wrong_name": "??R?$ShadedRenderer@U?$GetterXsYs@H@ImPlot@@U12@UTransformerLogLog@2@@ImPlot@@QBE_NAAUImDrawList@@ABUImRect@@ABUImVec2@@H@Z",
+  "recovered": "_dynamic_initializer (aiPedestrian TU) - flt_6B316C",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: flt_6B316C = 1.0 / 56.716663; }"
+ },
+ "0x00551AF0": {
+  "wrong_name": "??R?$ShadedRenderer@U?$GetterXsYs@I@ImPlot@@U12@UTransformerLogLin@2@@ImPlot@@QBE_NAAUImDrawList@@ABUImRect@@ABUImVec2@@H@Z",
+  "recovered": "_dynamic_initializer (CRT slot 453, aiVehicleAmbient TU)",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: JUMPOUT(0x551B00); }"
+ },
+ "0x00552870": {
+  "wrong_name": "??R?$ShadedRenderer@U?$GetterXsYs@I@ImPlot@@U?$GetterXsYRef@I@2@UTransformerLogLin@2@@ImPlot@@QBE_NAAUImDrawList@@ABUImRect@@ABUImVec2@@H@Z",
+  "recovered": "aiVehicleInstance::DrawPart",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?DrawPart@aiVehicleInstance@@QAEXAAVmodStatic@@ABVMatrix34@@PAVmodShader@@H@Z' at exactly 0x00552870, demangling to 'public: void __thiscall aiVehicleInstance::DrawPart(class modStatic &,class Matrix34 const &,class modShader *,int)'. IDA function size 184 matches the map-implied size 192."
+ },
+ "0x00552F30": {
+  "wrong_name": "??R?$ShadedRenderer@U?$GetterXsYs@M@ImPlot@@U12@UTransformerLinLin@2@@ImPlot@@QBE_NAAUImDrawList@@ABUImRect@@ABUImVec2@@H@Z",
+  "recovered": "aiVehicleInstance::DrawShadowMap",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?DrawShadowMap@aiVehicleInstance@@UAEXXZ' at exactly 0x00552F30, demangling to 'public: virtual void __thiscall aiVehicleInstance::DrawShadowMap(void)'. IDA function size 1 matches the map-implied size 16. the address sits at vftable slot 13 of aiVehicleInstance in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x00553290": {
+  "wrong_name": "??R?$ShadedRenderer@U?$GetterXsYs@M@ImPlot@@U12@UTransformerLinLog@2@@ImPlot@@QBE_NAAUImDrawList@@ABUImRect@@ABUImVec2@@H@Z",
+  "recovered": "aiVehicleActive::Reset",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Reset@aiVehicleActive@@QAEXXZ' at exactly 0x00553290, demangling to 'public: void __thiscall aiVehicleActive::Reset(void)'. IDA function size 11 matches the map-implied size 16."
+ },
+ "0x00554370": {
+  "wrong_name": "??R?$ShadedRenderer@U?$GetterXsYs@M@ImPlot@@U?$GetterXsYRef@M@2@UTransformerLogLin@2@@ImPlot@@QBE_NAAUImDrawList@@ABUImRect@@ABUImVec2@@H@Z",
+  "recovered": "aiVehicleManager::`scalar deleting destructor'",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??_GaiVehicleManager@@UAEPAXI@Z' at exactly 0x00554370, demangling to 'public: virtual void * __thiscall aiVehicleManager::`scalar deleting destructor'(unsigned int)'. IDA function size 33 matches the map-implied size 48. the address sits at vftable slot 0 of aiVehicleManager in the binary, and the mangled map symbol is marked virtual - two independent sources agree."
+ },
+ "0x0055F9B0": {
+  "wrong_name": "??R?$ShadedRenderer@U?$GetterYs@N@ImPlot@@UGetterYRef@2@UTransformerLinLin@2@@ImPlot@@QBE_NAAUImDrawList@@ABUImRect@@ABUImVec2@@H@Z",
+  "recovered": "aiVehiclePhysics::InitRoadTurns",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?InitRoadTurns@aiVehiclePhysics@@AAEXXZ' at exactly 0x0055F9B0, demangling to 'private: void __thiscall aiVehiclePhysics::InitRoadTurns(void)'. IDA function size 427 matches the map-implied size 432."
+ },
+ "0x005671B0": {
+  "wrong_name": "??R?$StairsRenderer@U?$GetterYs@F@ImPlot@@UTransformerLinLin@2@@ImPlot@@QBE_NAAUImDrawList@@ABUImRect@@ABUImVec2@@H@Z",
+  "recovered": "_dynamic_initializer (aiVehiclePhysics TU) - flt_6B3274",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: flt_6B3274 = 1.0 / (56.716663 + 56.716663); }"
+ },
+ "0x0056A680": {
+  "wrong_name": "??RTransformerLogLog@ImPlot@@QBE?AUImVec2@@ABUImPlotPoint@@@Z",
+  "recovered": "_dynamic_initializer (aiVehicleSpline TU) - flt_6B3290",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: flt_6B3290 = 1.0 / (56.716663 + 56.716663); }"
+ },
+ "0x0056B6B0": {
+  "wrong_name": "?RenderMarkerRight@ImPlot@@YAXAAUImDrawList@@ABUImVec2@@M_NI2IM@Z",
+  "recovered": "_dynamic_initializer (aiGoalAvoidPlayer TU) - flt_6B32A0",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: flt_6B32A0 = 1.0 / 30000.0; }"
+ },
+ "0x005715F0": {
+  "wrong_name": "??$?0AAU?$_Wrap_alloc@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@PAX@std@@@std@@@std@@@?$_Wrap_alloc@V?$allocator@U_Container_proxy@std@@@std@@@std@@QAE@AAU?$_Wrap_alloc@V?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@PAX@std@@@std@@@1@@Z",
+  "recovered": "asNetwork::GetNumSessions",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetNumSessions@asNetwork@@QAEHXZ' at exactly 0x005715F0, demangling to 'public: int __thiscall asNetwork::GetNumSessions(void)'. IDA function size 6 matches the map-implied size 16."
+ },
+ "0x00571700": {
+  "wrong_name": "??$?0ABU?$_Wrap_alloc@V?$allocator@D@std@@@std@@$$V@?$_Compressed_pair@U?$_Wrap_alloc@V?$allocator@D@std@@@std@@V?$_String_val@U?$_Simple_types@D@std@@@2@$00@std@@QAE@U_One_then_variadic_args_t@1@ABU?$_Wrap_alloc@V?$allocator@D@std@@@1@@Z",
+  "recovered": "asNetwork::UnSealSession",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?UnSealSession@asNetwork@@QAEXXZ' at exactly 0x00571700, demangling to 'public: void __thiscall asNetwork::UnSealSession(void)'. IDA function size 244 matches the map-implied size 256. debug strings in body: \"DPLAY: SetSessionDesc DPERR_INVALIDPARAMS\"; \"DPLAY: SetSessionDesc DPERR_INVALIDOBJECT\".",
+  "previously_known": true,
+  "previously_known_as": "asNetwork::UnSealing",
+  "note": "Supersedes the earlier string-based recovery 'asNetwork::UnSealing', which is not a symbol anywhere in the shipped map."
+ },
+ "0x00571AB0": {
+  "wrong_name": "??$?MDU?$char_traits@D@std@@V?$allocator@D@1@@std@@YA_NABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@0@Z",
+  "recovered": "asNetwork::GetSessionsAsynch",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetSessionsAsynch@asNetwork@@QAEXXZ' at exactly 0x00571AB0, demangling to 'public: void __thiscall asNetwork::GetSessionsAsynch(void)'. IDA function size 96 matches the map-implied size 96."
+ },
+ "0x00571B90": {
+  "wrong_name": "??$_Buynode@U?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@@?$_Tree_comp_alloc@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@@2@$0A@@std@@@std@@QAEPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@PAX@1@$$QAU?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@1@@Z",
+  "recovered": "asNetwork::PollLobby",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?PollLobby@asNetwork@@QAEHXZ' at exactly 0x00571B90, demangling to 'public: int __thiscall asNetwork::PollLobby(void)'. debug strings in body: \"DPLAY: ReceiveLobbyMessage DPERR_APPNOTSTARTED\"."
+ },
+ "0x00571D50": {
+  "wrong_name": "??$_Insert_at@AAU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@PAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@PAX@2@@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@@2@$0A@@std@@@std@@IAE?AV?$_Tree_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@@std@@@std@@@1@_NPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@PAX@1@AAU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@1@1@Z",
+  "recovered": "asNetwork::HandleAppMessage",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?HandleAppMessage@asNetwork@@QAEXPAUNET_TXHEAD@@KK@Z' at exactly 0x00571D50, demangling to 'public: void __thiscall asNetwork::HandleAppMessage(struct NET_TXHEAD *,unsigned long,unsigned long)'."
+ },
+ "0x00572640": {
+  "wrong_name": "??$_Pocma@U?$_Wrap_alloc@V?$allocator@D@std@@@std@@@std@@YAXAAU?$_Wrap_alloc@V?$allocator@D@std@@@0@0@Z",
+  "recovered": "EnumConnectionsCallback",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?EnumConnectionsCallback@@YGHPBU_GUID@@PAXKPBUDPNAME@@K1@Z' at exactly 0x00572640, demangling to 'int __stdcall EnumConnectionsCallback(struct _GUID const *,void *,unsigned long,struct DPNAME const *,unsigned long,void *)'. IDA function size 140 matches the map-implied size 144."
+ },
+ "0x005726D0": {
+  "wrong_name": "??$addressof@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@@std@@YAPAU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@0@AAU10@@Z",
+  "recovered": "EnumPlayersCallback",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?EnumPlayersCallback@@YGHKKPBUDPNAME@@KPAX@Z' at exactly 0x005726D0, demangling to 'int __stdcall EnumPlayersCallback(unsigned long,unsigned long,struct DPNAME const *,unsigned long,void *)'. IDA function size 89 matches the map-implied size 96. debug strings in body: \"Player found: %s %d\"."
+ },
+ "0x005729C0": {
+  "wrong_name": "??$destroy@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@@?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@PAX@std@@@std@@QAEXPAU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@1@@Z",
+  "recovered": "netZoneScore::~netZoneScore",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??1netZoneScore@@QAE@XZ' at exactly 0x005729C0, demangling to 'public: __thiscall netZoneScore::~netZoneScore(void)'. IDA function size 5 matches the map-implied size 16."
+ },
+ "0x00572AA0": {
+  "wrong_name": "??$forward@AAU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@@std@@YAAAU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@0@AAU10@@Z",
+  "recovered": "netZoneScore::SendGameStart",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SendGameStart@netZoneScore@@QAEXXZ' at exactly 0x00572AA0, demangling to 'public: void __thiscall netZoneScore::SendGameStart(void)'. IDA function size 34 matches the map-implied size 48. debug strings in body: \"SendGameStart failed.\"."
+ },
+ "0x00572AD0": {
+  "wrong_name": "??$forward@ABU?$_Wrap_alloc@V?$allocator@D@std@@@std@@@std@@YAABU?$_Wrap_alloc@V?$allocator@D@std@@@0@ABU10@@Z",
+  "recovered": "netZoneScore::SendGameStartStaging",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SendGameStartStaging@netZoneScore@@QAEXXZ' at exactly 0x00572AD0, demangling to 'public: void __thiscall netZoneScore::SendGameStartStaging(void)'. IDA function size 34 matches the map-implied size 48. debug strings in body: \"SendGameStart failed.\"."
+ },
+ "0x00572B00": {
+  "wrong_name": "??$forward@U?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@@std@@YA$$QAU?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@0@AAU10@@Z",
+  "recovered": "netZoneScore::SendGameEnd",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?SendGameEnd@netZoneScore@@QAEXXZ' at exactly 0x00572B00, demangling to 'public: void __thiscall netZoneScore::SendGameEnd(void)'. IDA function size 71 matches the map-implied size 80. debug strings in body: \"IZoneScore::SendFinalScore failed\"; \"IZoneScore::SendGameEnd failed.\".",
+  "previously_known": true,
+  "previously_known_as": "IZoneScore::SendFinalScore",
+  "note": "Supersedes the earlier string-based recovery 'IZoneScore::SendFinalScore', which is not a symbol anywhere in the shipped map."
+ },
+ "0x00572B50": {
+  "wrong_name": "??$insert@U?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@X@?$map@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@@2@@std@@QAE?AU?$pair@V?$_Tree_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@@std@@@std@@@std@@_N@1@$$QAU?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@1@@Z",
+  "recovered": "netZoneScore::InitResults",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?InitResults@netZoneScore@@QAEXH_N@Z' at exactly 0x00572B50, demangling to 'public: void __thiscall netZoneScore::InitResults(int,bool)'. debug strings in body: \"SendGameResults Init failed\"."
+ },
+ "0x00572BC0": {
+  "wrong_name": "??$make_pair@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAV12@@std@@YA?AU?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@0@AAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@0@Z",
+  "recovered": "netZoneScore::InitResults (chunk, +112) - releases pZoneScore",
+  "confidence": "CONFIRMED",
+  "evidence": "Not a separate function: this address lies inside the extent of the shipped-map symbol 'netZoneScore::InitResults' (0x00572BC0 + 112). IDA split that function into chunks. Body is consistent with that function. Body: IZoneScore *pZoneScore; // eax      pZoneScore = this->pZoneScore;     if ( pZoneScore )     {         pZoneScore->lpVtbl->Release(pZoneScore);     }     this->"
+ },
+ "0x00572D20": {
+  "wrong_name": "??0?$_Iterator012@Ubidirectional_iterator_tag@std@@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@2@HPBU32@ABU32@U_Iterator_base12@2@@std@@QAE@XZ",
+  "recovered": "zipMultiAutoInit",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?zipMultiAutoInit@@YAXPBD@Z' at exactly 0x00572D20, demangling to 'void __cdecl zipMultiAutoInit(char const *)'. IDA size 528 vs map-implied 608 (IDA split this function into chunks). debug strings in body: \"logopen\"."
+ },
+ "0x00572F80": {
+  "wrong_name": "??0?$_String_iterator@V?$_String_val@U?$_Simple_types@D@std@@@std@@@std@@QAE@ABV01@@Z",
+  "recovered": "zipHandle::Read",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Read@zipHandle@@QAEHPAXH@Z' at exactly 0x00572F80, demangling to 'public: int __thiscall zipHandle::Read(void *,int)'. IDA function size 256 matches the map-implied size 256."
+ },
+ "0x00573210": {
+  "wrong_name": "??0?$_Tree_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@@std@@@std@@@std@@QAE@ABV01@@Z",
+  "recovered": "zipFile::zipRead",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?zipRead@zipFile@@SAHHPAXH@Z' at exactly 0x00573210, demangling to 'public: static int __cdecl zipFile::zipRead(int,void *,int)'. IDA function size 31 matches the map-implied size 32."
+ },
+ "0x00573480": {
+  "wrong_name": "??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@$$QAV01@@Z",
+  "recovered": "zipFile::Init",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Init@zipFile@@QAE_NPBD@Z' at exactly 0x00573480, demangling to 'public: bool __thiscall zipFile::Init(char const *)'. IDA size 1439 vs map-implied 1536 (IDA split this function into chunks). debug strings in body: \"'%s' is optimized archive.\"; \"Error parsing checksum file, re-reading...\"."
+ },
+ "0x00573B60": {
+  "wrong_name": "??1?$pair@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@QAE@XZ",
+  "recovered": "zipFile::EnumFiles",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?EnumFiles@zipFile@@QAEHPBDP6AX0_NPAX@Z2@Z' at exactly 0x00573B60, demangling to 'public: int __thiscall zipFile::EnumFiles(char const *,void (__cdecl*)(char const *,bool,void *),void *)'. IDA function size 243 matches the map-implied size 256."
+ },
+ "0x005745A0": {
+  "wrong_name": "??G?$_String_iterator@V?$_String_val@U?$_Simple_types@D@std@@@std@@@std@@QBE?AV01@H@Z",
+  "recovered": "zcfree",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?zcfree@@YAXPAX0@Z' at exactly 0x005745A0, demangling to 'void __cdecl zcfree(void *,void *)'. IDA function size 17 matches the map-implied size 32."
+ },
+ "0x005753D0": {
+  "wrong_name": "?_Kfn@?$_Tree@V?$_Tmap_traits@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@U?$less@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@V?$allocator@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@@2@$0A@@std@@@std@@IBEABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@ABU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@2@@Z",
+  "recovered": "inflate_codes_new",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?inflate_codes_new@@YAPAUinflate_codes_state@@IIPAUinflate_huft_s@@0PAUz_stream_s@@@Z' at exactly 0x005753D0, demangling to 'struct inflate_codes_state * __cdecl inflate_codes_new(unsigned int,unsigned int,struct inflate_huft_s *,struct inflate_huft_s *,struct z_stream_s *)'. IDA function size 56 matches the map-implied size 64."
+ },
+ "0x00575410": {
+  "wrong_name": "?_Left@?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@@std@@@std@@SAAAPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@PAX@2@PAU32@@Z",
+  "recovered": "inflate_codes",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?inflate_codes@@YAHPAUinflate_blocks_state@@PAUz_stream_s@@H@Z' at exactly 0x00575410, demangling to 'int __cdecl inflate_codes(struct inflate_blocks_state *,struct z_stream_s *,int)'. IDA size 1772 vs map-implied 1824 (IDA split this function into chunks). debug strings in body: \"invalid literal/length code\"; \"invalid distance code\"."
+ },
+ "0x00575B50": {
+  "wrong_name": "?_Traits_compare@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@SAHQBDI0I@Z",
+  "recovered": "inflate_trees_bits",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?inflate_trees_bits@@YAHPAI0PAPAUinflate_huft_s@@PAU1@PAUz_stream_s@@@Z' at exactly 0x00575B50, demangling to 'int __cdecl inflate_trees_bits(unsigned int *,unsigned int *,struct inflate_huft_s * *,struct inflate_huft_s *,struct z_stream_s *)'. IDA size 164 vs map-implied 1232 (IDA split this function into chunks). debug strings in body: \"oversubscribed dynamic bit lengths tree\"; \"incomplete dynamic bit lengths tree\"."
+ },
+ "0x00575C00": {
+  "wrong_name": "?allocate@?$allocator@U?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@PAX@std@@@std@@QAEPAU?$_Tree_node@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V12@@std@@PAX@2@I@Z",
+  "recovered": "huft_build",
+  "confidence": "PROBABLE",
+  "evidence": "File-local (static) function: no public-map symbol, but it IS a real call target. Called from exactly 3 sites and sits immediately after inflate_trees_bits. zlib's huft_build is the static helper called by exactly three functions - inflate_trees_bits, inflate_trees_dynamic and inflate_trees_fixed. Its local arrays int[15], int[15], int[14] match huft_build's u[BMAX], x[BMAX+1], c[BMAX+1] with BMAX=15. The name comes from upstream zlib, not from this binary."
+ },
+ "0x00577410": {
+  "wrong_name": "?replace@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@IIPBDI@Z",
+  "recovered": "gizBridge::gizBridge",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??0gizBridge@@QAE@XZ' at exactly 0x00577410, demangling to 'public: __thiscall gizBridge::gizBridge(void)'. IDA function size 122 matches the map-implied size 128."
+ },
+ "0x005776D0": {
+  "wrong_name": "?substr@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AV12@II@Z",
+  "recovered": "gizBridge::Update",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Update@gizBridge@@QAEXXZ' at exactly 0x005776D0, demangling to 'public: void __thiscall gizBridge::Update(void)'. IDA function size 564 matches the map-implied size 576."
+ },
+ "0x0057C4A0": {
+  "wrong_name": "??0?$initializer_list@E@std@@QAE@PBE0@Z",
+  "recovered": "_dynamic_initializer (CRT slot 525, pedActive TU)",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: JUMPOUT(0x57C4B0); }"
+ },
+ "0x0059A1E0": {
+  "wrong_name": "??$?0U?$_Wrap_alloc@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@@std@@X@?$_Vector_alloc@U?$_Vec_base_types@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@@std@@QAE@$$QAU?$_Wrap_alloc@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@@1@@Z",
+  "recovered": "UnderscoreSpaces",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?UnderscoreSpaces@@YAXPADH@Z' at exactly 0x0059A1E0, demangling to 'void __cdecl UnderscoreSpaces(char *,int)'. IDA function size 40 matches the map-implied size 48."
+ },
+ "0x0059BF80": {
+  "wrong_name": "??$_Unchecked@PAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@YAPAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@PAV10@@Z",
+  "recovered": "ltLensFlare::~ltLensFlare",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '??1ltLensFlare@@QAE@XZ' at exactly 0x0059BF80, demangling to 'public: __thiscall ltLensFlare::~ltLensFlare(void)'. IDA function size 28 matches the map-implied size 32."
+ },
+ "0x0059BFA0": {
+  "wrong_name": "??$_Unfancy@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@YAPAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@PAV10@@Z",
+  "recovered": "ltLensFlare::DrawBegin",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?DrawBegin@ltLensFlare@@QAEXXZ' at exactly 0x0059BFA0, demangling to 'public: void __thiscall ltLensFlare::DrawBegin(void)'. IDA function size 278 matches the map-implied size 288. debug strings in body: \"int __thiscall std::_Unfancy<std::string>(int this)\"."
+ },
+ "0x0059C5B0": {
+  "wrong_name": "??$destroy@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@?$allocator_traits@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@@std@@SAXAAV?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@1@PAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@@Z",
+  "recovered": "ltProjection::MakeOrthoMatrix",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?MakeOrthoMatrix@ltProjection@@QAEXABVVector3@@00M@Z' at exactly 0x0059C5B0, demangling to 'public: void __thiscall ltProjection::MakeOrthoMatrix(class Vector3 const &,class Vector3 const &,class Vector3 const &,float)'. IDA function size 448 matches the map-implied size 448."
+ },
+ "0x0059D230": {
+  "wrong_name": "??0?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@QAE@ABV01@@Z",
+  "recovered": "ltProjection::DrawDebug",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?DrawDebug@ltProjection@@QAEXXZ' at exactly 0x0059D230, demangling to 'public: void __thiscall ltProjection::DrawDebug(void)'. IDA function size 286 matches the map-implied size 288. debug strings in body: \"void __thiscall std::allocator<std::string>::allocator<std::string>(lt\"."
+ },
+ "0x0059D6D0": {
+  "wrong_name": "??1?$_Compressed_pair@U?$_Wrap_alloc@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@@std@@V?$_Vector_val@U?$_Simple_types@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@@2@$00@std@@QAE@XZ",
+  "recovered": "aiSubwayAudio::Deactivate",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Deactivate@aiSubwayAudio@@QAEXH@Z' at exactly 0x0059D6D0, demangling to 'public: void __thiscall aiSubwayAudio::Deactivate(int)'. IDA function size 50 matches the map-implied size 64."
+ },
+ "0x0059E1D0": {
+  "wrong_name": "??_G?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEPAXI@Z",
+  "recovered": "_dynamic_initializer (vehWheelCheap TU) - flt_6B4C04",
+  "confidence": "CONFIRMED",
+  "evidence": "Compiler-generated C++ dynamic initializer: its address is reached from the CRT initializer table at .data:0x005C2004 (548 entries, walked by __initterm at startup). Not a member function, which is why the shipped linker map - which lists publics only - has no symbol for it. Body: flt_6B4C04 = 1.0 / 56.716663; }"
+ },
+ "0x005A7060": {
+  "wrong_name": "?_Alloc_proxy@?$_Vector_alloc@U?$_Vec_base_types@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@@std@@QAEXXZ",
+  "recovered": "audCDObject::GetTrackTime",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetTrackTime@audCDObject@@QAEHXZ' at exactly 0x005A7060, demangling to 'public: int __thiscall audCDObject::GetTrackTime(void)'. IDA function size 58 matches the map-implied size 64."
+ },
+ "0x005A74D0": {
+  "wrong_name": "?_Grow_to@?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@IBEII@Z",
+  "recovered": "audSoundBankHdr::GetSoundIndex",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?GetSoundIndex@audSoundBankHdr@@QAEHPAD@Z' at exactly 0x005A74D0, demangling to 'public: int __thiscall audSoundBankHdr::GetSoundIndex(char *)'. IDA function size 6 matches the map-implied size 16."
+ },
+ "0x005A7590": {
+  "wrong_name": "?_Inside@?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@IBE_NPBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@@Z",
+  "recovered": "EffectBase::OriginalBufferPlaying",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?OriginalBufferPlaying@EffectBase@@QAEFF@Z' at exactly 0x005A7590, demangling to 'public: short __thiscall EffectBase::OriginalBufferPlaying(short)'. IDA function size 97 matches the map-implied size 112. debug strings in body: \"SoundObj::IsPlaying GetStatus() failed\"; \"SoundObj::IsPlaying buffer lost\".",
+  "previously_known": true,
+  "previously_known_as": "SoundObj::IsPlaying",
+  "note": "Supersedes the earlier string-based recovery 'SoundObj::IsPlaying', which is not a symbol anywhere in the shipped map."
+ },
+ "0x005A7F70": {
+  "wrong_name": "?_Xlen@?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@IBEXXZ",
+  "recovered": "dgRagdoll::Reset",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Reset@dgRagdoll@@QAEXXZ' at exactly 0x005A7F70, demangling to 'public: void __thiscall dgRagdoll::Reset(void)'. IDA function size 61 matches the map-implied size 64."
+ },
+ "0x005A7FB0": {
+  "wrong_name": "?allocate@?$_Wrap_alloc@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@@std@@QAEPAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@I@Z",
+  "recovered": "dgRagdoll::Update",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Update@dgRagdoll@@QAEXXZ' at exactly 0x005A7FB0, demangling to 'public: void __thiscall dgRagdoll::Update(void)'. IDA function size 121 matches the map-implied size 128."
+ },
+ "0x005A8220": {
+  "wrong_name": "?find@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBEIABV12@I@Z",
+  "recovered": "dgLink::Reset",
+  "confidence": "CONFIRMED",
+  "evidence": "shipped linker map midtown2.map (build MM3393) carries '?Reset@dgLink@@QAEXXZ' at exactly 0x005A8220, demangling to 'public: void __thiscall dgLink::Reset(void)'. IDA function size 46 matches the map-implied size 48."
+ },
+ "0x005A9B60": {
+  "wrong_name": "?max_size@?$_Wrap_alloc@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@@std@@QBEIU_Nil@2@@Z",
+  "recovered": "__unwindfunclet$?InitGameObjects@mmMultiBlitz@@UAEXXZ",
+  "confidence": "CONFIRMED",
+  "evidence": "C++ exception-handling funclet. The address lies in the _SEH funclet region at the end of .text, 21 bytes past the map symbol '?InitGameObjects@mmMultiBlitz@@UAEXXZ_SEH', and the body is a bare __CxxFrameHandler call / unwind action. MSVC emits these as internal symbols, so the public map has no entry for the funclet itself."
+ },
+ "0x005A9BB0": {
+  "wrong_name": "?max_size@?$allocator_traits@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@@std@@SAIABV?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@Z",
+  "recovered": "__ehhandler$?InitMyPlayer@mmMultiCircuit@@UAEXXZ",
+  "confidence": "CONFIRMED",
+  "evidence": "C++ exception-handling funclet. The address lies in the _SEH funclet region at the end of .text, 5 bytes past the map symbol '?InitMyPlayer@mmMultiCircuit@@UAEXXZ_SEH', and the body is a bare __CxxFrameHandler call / unwind action. MSVC emits these as internal symbols, so the public map has no entry for the funclet itself."
+ },
+ "0x005A9BF0": {
+  "wrong_name": "?max_size@?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@QBEIXZ",
+  "recovered": "__ehhandler$?InitNetworkPlayers@mmMultiCircuit@@UAEXXZ",
+  "confidence": "CONFIRMED",
+  "evidence": "C++ exception-handling funclet. The address lies in the _SEH funclet region at the end of .text, 5 bytes past the map symbol '?InitNetworkPlayers@mmMultiCircuit@@UAEXXZ_SEH', and the body is a bare __CxxFrameHandler call / unwind action. MSVC emits these as internal symbols, so the public map has no entry for the funclet itself."
+ },
+ "0x005A9DD0": {
+  "wrong_name": "?push_back@?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@QAEX$$QAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@@Z",
+  "recovered": "__ehhandler$?InitMyPlayer@mmMultiRace@@UAEXXZ",
+  "confidence": "CONFIRMED",
+  "evidence": "C++ exception-handling funclet. The address lies in the _SEH funclet region at the end of .text, 5 bytes past the map symbol '?InitMyPlayer@mmMultiRace@@UAEXXZ_SEH', and the body is a bare __CxxFrameHandler call / unwind action. MSVC emits these as internal symbols, so the public map has no entry for the funclet itself."
+ }
+}

@@ -1,0 +1,10517 @@
+{
+ "sizes": {
+  "aiCableCar": 388,
+  "aiCityData": 52,
+  "aiCTFRacer": 39032,
+  "aiGoal": 8,
+  "aiGoalAvoidPlayer": 32,
+  "aiGoalCollision": 16,
+  "aiGoalRandomDrive": 20,
+  "aiGoalRegainRail": 36,
+  "aiIntersection": 44,
+  "aiMap": 460,
+  "aiMapComponentList": 8,
+  "aiMapComponentListEntry": 8,
+  "aiMapStats": 40,
+  "aiObstacle": 4,
+  "aiPath": 356,
+  "aiPedAudio": 96,
+  "aiPedestrian": 2,
+  "aiPedestrianInstance": 44,
+  "aiPoliceForce": 60,
+  "aiPoliceOfficer": 39024,
+  "aiRaceData": 200,
+  "aiRailSet": 128,
+  "aiRouteNode": 36,
+  "aiRouteRacer": 38804,
+  "aiSubway": 332,
+  "aiTrafficLightSet": 52,
+  "aiVehicle": 4,
+  "aiVehicleActive": 2812,
+  "aiVehicleAmbient": 416,
+  "aiVehicleData": 188,
+  "aiVehicleInstance": 60,
+  "aiVehicleManager": 96164,
+  "aiVehiclePhysics": 38768,
+  "aiVehiclePlayer": 48,
+  "aiVehicleSpline": 396,
+  "asBirthRule": 180,
+  "asCamera": 368,
+  "asCullable": 4,
+  "asCullManager": 168,
+  "asFileIO": 8,
+  "asLinearCS": 128,
+  "asLineSparks": 96,
+  "asMeshCardInfo": 16,
+  "asMeshCardVertex": 16,
+  "asMeshSetForm": 96,
+  "asNetObject": 24,
+  "asNetwork": 112,
+  "asNode": 24,
+  "asParticles": 84,
+  "asRoot": 76,
+  "asSparkPos": 28,
+  "Aud3DObject": 96,
+  "AudCreatureContainer": 96,
+  "AudImpact": 1,
+  "AudManager": 24,
+  "AudManagerBase": 24,
+  "AudSoundBase": 88,
+  "Base": 4,
+  "camAICS": 272,
+  "camAppCS": 264,
+  "camBaseCS": 144,
+  "camCarCS": 272,
+  "camPointCS": 316,
+  "camPovCS": 328,
+  "camTrackCS": 272,
+  "camViewCS": 76,
+  "Card2D": 44,
+  "CArrayList": 8,
+  "cityLevel": 32,
+  "cityTimeWeatherLighting": 76,
+  "cltLight": 1,
+  "coreFileMethods": 36,
+  "crAnimation": 8,
+  "crSkeleton": 1,
+  "crSkeletonData": 1,
+  "datArgParser": 1,
+  "datAsciiTokenizer": 28,
+  "datAssetManager": 1,
+  "datBaseTokenizer": 28,
+  "datBinTokenizer": 28,
+  "datCallback": 12,
+  "datMultiTokenizer": 92,
+  "datOutput": 1,
+  "datParser": 84,
+  "datParserRecord": 84,
+  "datRefCount": 8,
+  "datStack": 1,
+  "datTimeManager": 1,
+  "dgBangerActive": 792,
+  "dgBangerActiveManager": 25500,
+  "dgBangerData": 340,
+  "dgBangerDataManager": 174276,
+  "dgBangerInstance": 24,
+  "dgBangerManager": 36,
+  "dgBoundBox": 792,
+  "dgBoundGeometry": 128,
+  "dgBoundHotdog": 136,
+  "dgBoundSphere": 132,
+  "dgHitBangerInstance": 88,
+  "dgPath": 56,
+  "dgPathPoint": 16,
+  "dgPathSet": 784,
+  "dgPhysEntity": 180,
+  "dgPhysManager": 4784,
+  "dgRagdoll": 1,
+  "dgStatePack": 108,
+  "dgTrailerJoint": 284,
+  "dgTreeRenderer": 1,
+  "dgUnhitBangerInstance": 24,
+  "dgUnhitMtxBangerInstance": 88,
+  "dgUnhitYBangerInstance": 60,
+  "DirSnd": 60,
+  "DMusicManager": 1,
+  "DMusicObject": 56,
+  "fxShard": 92,
+  "fxShardManager": 76,
+  "fxTexelDamage": 36,
+  "gfxBitmap": 20,
+  "gfxImage": 28,
+  "gfxInterface": 624,
+  "gfxLight": 104,
+  "gfxMaterial": 72,
+  "gfxPacket": 44,
+  "gfxPacketList": 44,
+  "gfxPipeline": 1,
+  "gfxRenderState": 152,
+  "gfxRenderStateData": 80,
+  "gfxResData": 8,
+  "gfxTexture": 52,
+  "gfxTextureCacheEntry": 16,
+  "gfxTextureCachePool": 52,
+  "gfxViewport": 380,
+  "HashTable": 1,
+  "ioEvent": 16,
+  "ioEventQueue": 1,
+  "ioKeyboard": 1,
+  "ioMouse": 1,
+  "LocString": 512,
+  "ltLensFlare": 32,
+  "ltLight": 76,
+  "luaNode": 72,
+  "LuaRaycastResult": 8,
+  "lvlAiMap": 1,
+  "lvlAiRoad": 1,
+  "lvlFixedAny": 20,
+  "lvlFixedMatrix": 68,
+  "lvlFixedRotY": 40,
+  "lvlInstance": 20,
+  "LvlInstanceLuaIterator": 12,
+  "lvlIntersection": 156,
+  "lvlIntersectionPoint": 36,
+  "lvlLandmark": 40,
+  "lvlLevel": 28,
+  "lvlLevelBound": 76,
+  "lvlMaterial": 76,
+  "lvlRoomInfo": 40,
+  "lvlSDL": 76,
+  "lvlSegment": 40,
+  "lvlSegmentInfo": 12,
+  "lvlSky": 168,
+  "lvlTrackManager": 88,
+  "Matrix34": 48,
+  "Matrix44": 64,
+  "mcHookman": 39024,
+  "mmArrow": 104,
+  "mmCDPlayer": 340,
+  "mmCityInfo": 160,
+  "mmCityList": 16,
+  "mmCNRSpeech": 1,
+  "mmDashView": 1756,
+  "mmDirSnd": 68,
+  "MMDMusicManager": 88,
+  "mmExternalView": 260,
+  "mmGame": 632,
+  "mmGameManager": 440,
+  "mmGameMulti": 45564,
+  "mmGameMusicData": 1,
+  "mmGameSingle": 28,
+  "mmGearIndicator": 64,
+  "mmHUD": 3004,
+  "mmHudMap": 200,
+  "mmIcons": 188,
+  "mmInfoBase": 136,
+  "mmLinearGauge": 32,
+  "mmMultiBlitz": 45592,
+  "mmMultiCircuit": 45576,
+  "mmMultiCR": 45736,
+  "mmMultiRace": 45576,
+  "mmMultiRoam": 45576,
+  "mmNetObject": 1660,
+  "mmPlayer": 9164,
+  "mmPlayerData": 136,
+  "mmPopup": 124,
+  "mmRaceSpeech": 1,
+  "mmReplayManager": 2112,
+  "mmSingleBlitz": 30480,
+  "mmSingleCircuit": 30496,
+  "mmSingleRace": 30448,
+  "mmSingleRoam": 30448,
+  "mmSingleRoamMusicData": 1,
+  "mmSingleStunt": 31088,
+  "mmSlidingGauge": 36,
+  "mmSpeedIndicator": 56,
+  "mmStatePack": 992,
+  "mmText": 2,
+  "mmTextData": 272,
+  "mmTextNode": 84,
+  "mmTimer": 24,
+  "mmToolTip": 44,
+  "mmVehInfo": 292,
+  "mmVehList": 16,
+  "mmWaypointInstance": 92,
+  "mmWaypointObject": 92,
+  "mmWaypoints": 144,
+  "modModel": 12,
+  "modPackage": 48,
+  "modShader": 8,
+  "modStatic": 16,
+  "NETSESSION_DESC": 272,
+  "NetStartArray": 40,
+  "netZoneScore": 24,
+  "OppIconInfo": 40,
+  "pedActive": 184,
+  "pedAnimation": 108,
+  "pedAnimationInstance": 2,
+  "pedRagdollMgr": 128,
+  "phBound": 76,
+  "phBoundBox": 788,
+  "phBoundGeometry": 124,
+  "phBoundHotdog": 132,
+  "phBoundPolygonal": 100,
+  "phBoundSphere": 128,
+  "phBoundTerrain": 204,
+  "phBoundTerrainLocal": 204,
+  "phCollider": 52,
+  "phColliderBase": 1,
+  "phHotEdge": 4,
+  "phImpactBase": 1,
+  "phInertialCS": 436,
+  "phIntersection": 156,
+  "phIntersectionPoint": 36,
+  "phJoint": 108,
+  "phMaterial": 48,
+  "phPhysicsManager": 4,
+  "phPolygon": 96,
+  "phSegment": 28,
+  "phSleep": 80,
+  "PhysicsStats": 72,
+  "RadialGauge": 276,
+  "sdlCommon": 76,
+  "sdlPage16": 32,
+  "sdlPoly": 96,
+  "sdlPolyCached": 144,
+  "Stream": 28,
+  "string": 8,
+  "TexelDamageTri": 8,
+  "Timer": 4,
+  "UIButton": 164,
+  "UILabel": 128,
+  "UIMenu": 140,
+  "uiWidget": 108,
+  "Vector2": 8,
+  "Vector3": 12,
+  "Vector4": 16,
+  "vehAero": 76,
+  "vehAxle": 156,
+  "vehBreakable": 76,
+  "vehBreakableMgr": 32,
+  "vehCar": 600,
+  "vehCarAudio": 304,
+  "vehCarAudioContainer": 24,
+  "vehCarDamage": 932,
+  "vehCarModel": 340,
+  "vehCarSim": 5520,
+  "vehDrivetrain": 76,
+  "vehEngine": 132,
+  "vehEngineAudio": 8,
+  "vehGyro": 48,
+  "vehNitroCarAudio": 316,
+  "vehPoliceCarAudio": 584,
+  "vehSemiCarAudio": 328,
+  "vehSiren": 356,
+  "vehSplash": 24,
+  "vehStuck": 84,
+  "vehSurfaceAudio": 132,
+  "vehSurfaceAudioData": 56,
+  "vehSurfaceAudioSubData": 16,
+  "vehSuspension": 136,
+  "vehTrailer": 4152,
+  "vehTrailerInstance": 40,
+  "vehTransmission": 244,
+  "vehWeelCheap": 392,
+  "vehWheel": 620,
+  "vehWheelPtx": 120,
+  "vglVCT1_t": 32,
+  "vglVNT1_t": 32
+ },
+ "fields": {
+  "aiCableCar": [],
+  "aiCityData": [],
+  "aiCTFRacer": [
+   {
+    "offset": 4,
+    "type": "MM2::Vector3",
+    "name": "_flagPosition"
+   },
+   {
+    "offset": 28,
+    "type": "MM2::Vector3",
+    "name": "_deliverPosition"
+   },
+   {
+    "offset": 40,
+    "type": "MM2::aiVehiclePhysics",
+    "name": "_physics"
+   },
+   {
+    "offset": 38810,
+    "type": "unsigned short",
+    "name": "_id"
+   }
+  ],
+  "aiGoal": [],
+  "aiGoalAvoidPlayer": [],
+  "aiGoalCollision": [],
+  "aiGoalRandomDrive": [],
+  "aiGoalRegainRail": [],
+  "aiIntersection": [],
+  "aiMap": [],
+  "aiMapComponentList": [],
+  "aiMapComponentListEntry": [],
+  "aiMapStats": [],
+  "aiObstacle": [],
+  "aiPath": [],
+  "aiPedAudio": [],
+  "aiPedestrian": [
+   {
+    "offset": 192,
+    "type": "MM2::aiPedAudio",
+    "name": "_audio"
+   },
+   {
+    "offset": 156,
+    "type": "MM2::aiPedestrianInstance *",
+    "name": "_instance"
+   }
+  ],
+  "aiPedestrianInstance": [
+   {
+    "offset": 24,
+    "type": "MM2::pedAnimationInstance",
+    "name": "_animationInstance"
+   }
+  ],
+  "aiPoliceForce": [],
+  "aiPoliceOfficer": [
+   {
+    "offset": 4,
+    "type": "MM2::aiVehiclePhysics",
+    "name": "_physics"
+   },
+   {
+    "offset": 38772,
+    "type": "MM2::vehCar *",
+    "name": "_followedCar"
+   },
+   {
+    "offset": 38776,
+    "type": "short",
+    "name": "_id"
+   },
+   {
+    "offset": 38778,
+    "type": "short",
+    "name": "_policeState"
+   },
+   {
+    "offset": 38780,
+    "type": "short",
+    "name": "_lastPoliceState"
+   },
+   {
+    "offset": 38782,
+    "type": "short",
+    "name": "_apprehendState"
+   },
+   {
+    "offset": 38804,
+    "type": "float",
+    "name": "_followCarDistance"
+   },
+   {
+    "offset": 38808,
+    "type": "short",
+    "name": "_flagCount"
+   },
+   {
+    "offset": 38802,
+    "type": "short",
+    "name": "_componentType"
+   },
+   {
+    "offset": 38820,
+    "type": "short",
+    "name": "_componentId"
+   }
+  ],
+  "aiRaceData": [
+   {
+    "offset": 152,
+    "type": "float",
+    "name": "_copChaseDistance"
+   }
+  ],
+  "aiRailSet": [],
+  "aiRouteNode": [],
+  "aiRouteRacer": [],
+  "aiSubway": [],
+  "aiTrafficLightSet": [],
+  "aiVehicle": [],
+  "aiVehicleActive": [],
+  "aiVehicleAmbient": [],
+  "aiVehicleData": [],
+  "aiVehicleInstance": [],
+  "aiVehicleManager": [],
+  "aiVehiclePhysics": [
+   {
+    "offset": 16,
+    "type": "MM2::vehCar",
+    "name": "_vehCar"
+   },
+   {
+    "offset": 636,
+    "type": "short",
+    "name": "_state"
+   },
+   {
+    "offset": 38544,
+    "type": "float",
+    "name": "_brake"
+   },
+   {
+    "offset": 38548,
+    "type": "float",
+    "name": "_throttle"
+   },
+   {
+    "offset": 38552,
+    "type": "float",
+    "name": "_steering"
+   }
+  ],
+  "aiVehiclePlayer": [],
+  "aiVehicleSpline": [
+   {
+    "offset": 16,
+    "type": "MM2::aiRailSet",
+    "name": "_railSet"
+   },
+   {
+    "offset": 212,
+    "type": "MM2::aiVehicleInstance *",
+    "name": "_vehInstance"
+   },
+   {
+    "offset": 230,
+    "type": "short",
+    "name": "_playerId"
+   },
+   {
+    "offset": 244,
+    "type": "float",
+    "name": "_curSpeed"
+   },
+   {
+    "offset": 252,
+    "type": "float",
+    "name": "_wheelRotation"
+   }
+  ],
+  "asBirthRule": [],
+  "asCamera": [
+   {
+    "offset": 212,
+    "type": "MM2::Matrix34",
+    "name": "_matrix"
+   }
+  ],
+  "asCullable": [],
+  "asCullManager": [],
+  "asFileIO": [],
+  "asLinearCS": [],
+  "asLineSparks": [],
+  "asMeshCardInfo": [],
+  "asMeshCardVertex": [],
+  "asMeshSetForm": [],
+  "asNetObject": [],
+  "asNetwork": [],
+  "asNode": [],
+  "asParticles": [],
+  "asRoot": [],
+  "asSparkPos": [],
+  "Aud3DObject": [],
+  "AudCreatureContainer": [],
+  "AudImpact": [],
+  "AudManager": [],
+  "AudManagerBase": [],
+  "AudSoundBase": [],
+  "Base": [],
+  "camAICS": [],
+  "camAppCS": [],
+  "camBaseCS": [],
+  "camCarCS": [],
+  "camPointCS": [],
+  "camPovCS": [],
+  "camTrackCS": [],
+  "camViewCS": [],
+  "Card2D": [],
+  "CArrayList": [],
+  "cityLevel": [],
+  "cityTimeWeatherLighting": [],
+  "cltLight": [],
+  "coreFileMethods": [],
+  "crAnimation": [],
+  "crSkeleton": [],
+  "crSkeletonData": [],
+  "datArgParser": [],
+  "datAsciiTokenizer": [],
+  "datAssetManager": [],
+  "datBaseTokenizer": [],
+  "datBinTokenizer": [],
+  "datCallback": [],
+  "datMultiTokenizer": [],
+  "datOutput": [],
+  "datParser": [],
+  "datParserRecord": [],
+  "datRefCount": [],
+  "datStack": [],
+  "datTimeManager": [],
+  "dgBangerActive": [],
+  "dgBangerActiveManager": [],
+  "dgBangerData": [],
+  "dgBangerDataManager": [],
+  "dgBangerInstance": [],
+  "dgBangerManager": [],
+  "dgBoundBox": [],
+  "dgBoundGeometry": [],
+  "dgBoundHotdog": [],
+  "dgBoundSphere": [],
+  "dgHitBangerInstance": [],
+  "dgPath": [],
+  "dgPathPoint": [],
+  "dgPathSet": [],
+  "dgPhysEntity": [],
+  "dgPhysManager": [],
+  "dgRagdoll": [],
+  "dgStatePack": [],
+  "dgTrailerJoint": [],
+  "dgTreeRenderer": [],
+  "dgUnhitBangerInstance": [],
+  "dgUnhitMtxBangerInstance": [],
+  "dgUnhitYBangerInstance": [],
+  "DirSnd": [],
+  "DMusicManager": [],
+  "DMusicObject": [],
+  "fxShard": [],
+  "fxShardManager": [],
+  "fxTexelDamage": [],
+  "gfxBitmap": [],
+  "gfxImage": [],
+  "gfxInterface": [],
+  "gfxLight": [],
+  "gfxMaterial": [],
+  "gfxPacket": [],
+  "gfxPacketList": [],
+  "gfxPipeline": [],
+  "gfxRenderState": [],
+  "gfxRenderStateData": [],
+  "gfxResData": [],
+  "gfxTexture": [],
+  "gfxTextureCacheEntry": [],
+  "gfxTextureCachePool": [],
+  "gfxViewport": [],
+  "HashTable": [],
+  "ioEvent": [],
+  "ioEventQueue": [],
+  "ioKeyboard": [],
+  "ioMouse": [],
+  "LocString": [],
+  "ltLensFlare": [],
+  "ltLight": [],
+  "luaNode": [],
+  "LuaRaycastResult": [],
+  "lvlAiMap": [],
+  "lvlAiRoad": [],
+  "lvlFixedAny": [],
+  "lvlFixedMatrix": [],
+  "lvlFixedRotY": [],
+  "lvlInstance": [],
+  "LvlInstanceLuaIterator": [],
+  "lvlIntersection": [],
+  "lvlIntersectionPoint": [],
+  "lvlLandmark": [],
+  "lvlLevel": [],
+  "lvlLevelBound": [],
+  "lvlMaterial": [],
+  "lvlRoomInfo": [],
+  "lvlSDL": [],
+  "lvlSegment": [],
+  "lvlSegmentInfo": [],
+  "lvlSky": [],
+  "lvlTrackManager": [],
+  "Matrix34": [],
+  "Matrix44": [],
+  "mcHookman": [],
+  "mmArrow": [],
+  "mmCDPlayer": [
+   {
+    "offset": 28,
+    "type": "int",
+    "name": "_currentTrack"
+   },
+   {
+    "offset": 36,
+    "type": "int",
+    "name": "_isPlaying"
+   }
+  ],
+  "mmCityInfo": [],
+  "mmCityList": [],
+  "mmCNRSpeech": [],
+  "mmDashView": [],
+  "mmDirSnd": [],
+  "MMDMusicManager": [],
+  "mmExternalView": [],
+  "mmGame": [],
+  "mmGameManager": [],
+  "mmGameMulti": [],
+  "mmGameMusicData": [],
+  "mmGameSingle": [],
+  "mmGearIndicator": [],
+  "mmHUD": [
+   {
+    "offset": 2964,
+    "type": "MM2::mmCDPlayer *",
+    "name": "_cdplayer"
+   },
+   {
+    "offset": 2492,
+    "type": "MM2::mmArrow",
+    "name": "_arrow"
+   },
+   {
+    "offset": 2596,
+    "type": "MM2::mmTimer",
+    "name": "_timer"
+   },
+   {
+    "offset": 2644,
+    "type": "MM2::mmTimer",
+    "name": "_timer2"
+   },
+   {
+    "offset": 2692,
+    "type": "MM2::mmTimer",
+    "name": "_timer3"
+   },
+   {
+    "offset": 28,
+    "type": "MM2::mmDashView",
+    "name": "_dashView"
+   },
+   {
+    "offset": 1784,
+    "type": "MM2::mmExternalView",
+    "name": "_externalView"
+   }
+  ],
+  "mmHudMap": [],
+  "mmIcons": [],
+  "mmInfoBase": [],
+  "mmLinearGauge": [],
+  "mmMultiBlitz": [],
+  "mmMultiCircuit": [],
+  "mmMultiCR": [],
+  "mmMultiRace": [],
+  "mmMultiRoam": [],
+  "mmNetObject": [],
+  "mmPlayer": [
+   {
+    "offset": 44,
+    "type": "MM2::vehCar",
+    "name": "_car"
+   },
+   {
+    "offset": 648,
+    "type": "MM2::mmHUD",
+    "name": "_hud"
+   },
+   {
+    "offset": 3624,
+    "type": "MM2::mmHudMap *",
+    "name": "_hudmap"
+   },
+   {
+    "offset": 3628,
+    "type": "MM2::camViewCS *",
+    "name": "_camView"
+   },
+   {
+    "offset": 3680,
+    "type": "MM2::camTrackCS",
+    "name": "_nearCam"
+   },
+   {
+    "offset": 4344,
+    "type": "MM2::camTrackCS",
+    "name": "_farCam"
+   },
+   {
+    "offset": 5008,
+    "type": "MM2::camTrackCS",
+    "name": "_indCam"
+   },
+   {
+    "offset": 5672,
+    "type": "MM2::camPovCS",
+    "name": "_povCam"
+   },
+   {
+    "offset": 6000,
+    "type": "MM2::camPovCS",
+    "name": "_dashCam"
+   },
+   {
+    "offset": 6328,
+    "type": "MM2::camCarCS",
+    "name": "_polarCam1"
+   },
+   {
+    "offset": 6624,
+    "type": "MM2::camCarCS",
+    "name": "_polarCam2"
+   },
+   {
+    "offset": 6920,
+    "type": "MM2::camAICS",
+    "name": "_freeCam"
+   },
+   {
+    "offset": 7212,
+    "type": "MM2::camPointCS",
+    "name": "_pointCam"
+   },
+   {
+    "offset": 7536,
+    "type": "MM2::camCarCS",
+    "name": "_preCam"
+   },
+   {
+    "offset": 7832,
+    "type": "MM2::camCarCS",
+    "name": "_postCam"
+   },
+   {
+    "offset": 8124,
+    "type": "MM2::camCarCS",
+    "name": "_polarCam3"
+   }
+  ],
+  "mmPlayerData": [],
+  "mmPopup": [
+   {
+    "offset": 24,
+    "type": "MM2::mmGame *",
+    "name": "_game"
+   }
+  ],
+  "mmRaceSpeech": [],
+  "mmReplayManager": [],
+  "mmSingleBlitz": [],
+  "mmSingleCircuit": [],
+  "mmSingleRace": [],
+  "mmSingleRoam": [],
+  "mmSingleRoamMusicData": [],
+  "mmSingleStunt": [],
+  "mmSlidingGauge": [],
+  "mmSpeedIndicator": [],
+  "mmStatePack": [],
+  "mmText": [],
+  "mmTextData": [],
+  "mmTextNode": [],
+  "mmTimer": [],
+  "mmToolTip": [],
+  "mmVehInfo": [],
+  "mmVehList": [],
+  "mmWaypointInstance": [],
+  "mmWaypointObject": [],
+  "mmWaypoints": [],
+  "modModel": [],
+  "modPackage": [],
+  "modShader": [],
+  "modStatic": [],
+  "NETSESSION_DESC": [],
+  "NetStartArray": [],
+  "netZoneScore": [],
+  "OppIconInfo": [],
+  "pedActive": [
+   {
+    "offset": 260,
+    "type": "MM2::crSkeleton *",
+    "name": "_skeleton"
+   },
+   {
+    "offset": 264,
+    "type": "MM2::dgRagdoll *",
+    "name": "_ragdoll"
+   }
+  ],
+  "pedAnimation": [],
+  "pedAnimationInstance": [
+   {
+    "offset": 4,
+    "type": "MM2::pedAnimation *",
+    "name": "_animation"
+   },
+   {
+    "offset": 8,
+    "type": "int",
+    "name": "_variant"
+   }
+  ],
+  "pedRagdollMgr": [
+   {
+    "offset": 48,
+    "type": "MM2::phBoundBox *",
+    "name": "_boundBox"
+   }
+  ],
+  "phBound": [],
+  "phBoundBox": [],
+  "phBoundGeometry": [],
+  "phBoundHotdog": [],
+  "phBoundPolygonal": [],
+  "phBoundSphere": [],
+  "phBoundTerrain": [],
+  "phBoundTerrainLocal": [],
+  "phCollider": [],
+  "phColliderBase": [],
+  "phHotEdge": [],
+  "phImpactBase": [],
+  "phInertialCS": [],
+  "phIntersection": [],
+  "phIntersectionPoint": [],
+  "phJoint": [],
+  "phMaterial": [],
+  "phPhysicsManager": [],
+  "phPolygon": [],
+  "phSegment": [],
+  "phSleep": [],
+  "PhysicsStats": [],
+  "RadialGauge": [],
+  "sdlCommon": [],
+  "sdlPage16": [],
+  "sdlPoly": [],
+  "sdlPolyCached": [],
+  "Stream": [],
+  "string": [],
+  "TexelDamageTri": [],
+  "Timer": [],
+  "UIButton": [],
+  "UILabel": [],
+  "UIMenu": [],
+  "uiWidget": [],
+  "Vector2": [],
+  "Vector3": [],
+  "Vector4": [],
+  "vehAero": [],
+  "vehAxle": [],
+  "vehBreakable": [],
+  "vehBreakableMgr": [],
+  "vehCar": [],
+  "vehCarAudio": [],
+  "vehCarAudioContainer": [],
+  "vehCarDamage": [],
+  "vehCarModel": [],
+  "vehCarSim": [],
+  "vehDrivetrain": [],
+  "vehEngine": [],
+  "vehEngineAudio": [],
+  "vehGyro": [],
+  "vehNitroCarAudio": [],
+  "vehPoliceCarAudio": [],
+  "vehSemiCarAudio": [],
+  "vehSiren": [],
+  "vehSplash": [],
+  "vehStuck": [],
+  "vehSurfaceAudio": [],
+  "vehSurfaceAudioData": [],
+  "vehSurfaceAudioSubData": [],
+  "vehSuspension": [],
+  "vehTrailer": [],
+  "vehTrailerInstance": [],
+  "vehTransmission": [],
+  "vehWeelCheap": [],
+  "vehWheel": [],
+  "vehWheelPtx": [],
+  "vglVCT1_t": [],
+  "vglVNT1_t": []
+ },
+ "bases": {
+  "aiCableCar": "aiVehicle",
+  "aiCTFRacer": "Base",
+  "aiGoalAvoidPlayer": "aiGoal",
+  "aiGoalCollision": "aiGoal",
+  "aiGoalRandomDrive": "aiGoal",
+  "aiGoalRegainRail": "aiGoal",
+  "aiMap": "asNode",
+  "aiPedAudio": "AudCreatureContainer",
+  "aiPedestrianInstance": "lvlInstance",
+  "aiRouteRacer": "aiVehiclePhysics",
+  "aiSubway": "aiVehicle",
+  "aiVehicle": "aiObstacle",
+  "aiVehicleActive": "dgPhysEntity",
+  "aiVehicleAmbient": "aiVehicleSpline",
+  "aiVehicleData": "asNode",
+  "aiVehicleInstance": "lvlInstance",
+  "aiVehicleManager": "asNode",
+  "aiVehiclePhysics": "aiVehicle",
+  "aiVehiclePlayer": "aiVehicle",
+  "aiVehicleSpline": "aiVehicle",
+  "asBirthRule": "asNode",
+  "asCamera": "asNode",
+  "asCullable": "Base",
+  "asCullManager": "asNode",
+  "asFileIO": "Base",
+  "asLinearCS": "asNode",
+  "asMeshSetForm": "asNode",
+  "asNetObject": "asNode",
+  "asNode": "asCullable",
+  "asRoot": "asNode",
+  "AudCreatureContainer": "Aud3DObject",
+  "AudManager": "AudManagerBase",
+  "AudManagerBase": "asNode",
+  "AudSoundBase": "asNode",
+  "camAICS": "camCarCS",
+  "camAppCS": "camBaseCS",
+  "camBaseCS": "asNode",
+  "camCarCS": "camAppCS",
+  "camPointCS": "camCarCS",
+  "camPovCS": "camCarCS",
+  "camTrackCS": "camCarCS",
+  "camViewCS": "asNode",
+  "Card2D": "asNode",
+  "cityLevel": "lvlLevel",
+  "crAnimation": "datRefCount",
+  "datAsciiTokenizer": "datBaseTokenizer",
+  "datBinTokenizer": "datBaseTokenizer",
+  "datMultiTokenizer": "datAsciiTokenizer",
+  "dgBangerActive": "dgPhysEntity",
+  "dgBangerActiveManager": "asNode",
+  "dgBangerData": "asNode",
+  "dgBangerDataManager": "asNode",
+  "dgBangerInstance": "lvlInstance",
+  "dgBangerManager": "asNode",
+  "dgBoundBox": "phBoundBox",
+  "dgBoundGeometry": "phBoundGeometry",
+  "dgBoundHotdog": "phBoundHotdog",
+  "dgBoundSphere": "phBoundSphere",
+  "dgHitBangerInstance": "dgBangerInstance",
+  "dgPhysEntity": "Base",
+  "dgPhysManager": "phPhysicsManager",
+  "dgTrailerJoint": "phJoint",
+  "dgUnhitBangerInstance": "dgBangerInstance",
+  "dgUnhitMtxBangerInstance": "dgUnhitBangerInstance",
+  "dgUnhitYBangerInstance": "dgUnhitBangerInstance",
+  "fxShardManager": "asNode",
+  "gfxPacketList": "gfxPacket",
+  "luaNode": "asNode",
+  "lvlFixedAny": "lvlInstance",
+  "lvlFixedMatrix": "lvlFixedAny",
+  "lvlFixedRotY": "lvlFixedAny",
+  "lvlIntersection": "phIntersection",
+  "lvlIntersectionPoint": "phIntersectionPoint",
+  "lvlLandmark": "lvlFixedRotY",
+  "lvlLevel": "asCullable",
+  "lvlLevelBound": "phBound",
+  "lvlMaterial": "phMaterial",
+  "lvlSDL": "sdlCommon",
+  "lvlSegment": "phSegment",
+  "lvlSky": "asCullable",
+  "mcHookman": "aiVehiclePhysics",
+  "mmArrow": "asNode",
+  "mmCDPlayer": "asNode",
+  "mmDashView": "asNode",
+  "mmDirSnd": "DirSnd",
+  "MMDMusicManager": "DMusicManager",
+  "mmExternalView": "asNode",
+  "mmGame": "asNode",
+  "mmGameManager": "asNode",
+  "mmGameMulti": "mmGame",
+  "mmHUD": "asNode",
+  "mmHudMap": "asNode",
+  "mmIcons": "asNode",
+  "mmNetObject": "asNetObject",
+  "mmPlayer": "asNode",
+  "mmPlayerData": "mmInfoBase",
+  "mmPopup": "asNode",
+  "mmReplayManager": "asNode",
+  "mmSingleBlitz": "mmGameSingle",
+  "mmSingleCircuit": "mmGameSingle",
+  "mmSingleRace": "mmGameSingle",
+  "mmSingleRoam": "mmGameSingle",
+  "mmSingleRoamMusicData": "mmGameMusicData",
+  "mmSingleStunt": "mmGameSingle",
+  "mmSlidingGauge": "mmLinearGauge",
+  "mmStatePack": "dgStatePack",
+  "mmTextNode": "asNode",
+  "mmTimer": "asNode",
+  "mmToolTip": "asNode",
+  "mmWaypointInstance": "lvlInstance",
+  "mmWaypointObject": "asNode",
+  "mmWaypoints": "asNode",
+  "pedActive": "dgPhysEntity",
+  "pedRagdollMgr": "asNode",
+  "phBoundBox": "phBoundPolygonal",
+  "phBoundGeometry": "phBoundPolygonal",
+  "phBoundHotdog": "phBound",
+  "phBoundPolygonal": "phBound",
+  "phBoundSphere": "phBound",
+  "phBoundTerrain": "phBoundGeometry",
+  "phBoundTerrainLocal": "phBoundTerrain",
+  "RadialGauge": "asNode",
+  "sdlCommon": "lvlLevelBound",
+  "sdlPoly": "phPolygon",
+  "sdlPolyCached": "sdlPoly",
+  "UIButton": "uiWidget",
+  "UILabel": "uiWidget",
+  "UIMenu": "asNode",
+  "uiWidget": "asNode",
+  "vehAero": "asNode",
+  "vehAxle": "asNode",
+  "vehCar": "dgPhysEntity",
+  "vehCarAudio": "Aud3DObject",
+  "vehCarDamage": "asNode",
+  "vehCarModel": "lvlInstance",
+  "vehCarSim": "asNode",
+  "vehDrivetrain": "asNode",
+  "vehEngine": "asNode",
+  "vehGyro": "asNode",
+  "vehNitroCarAudio": "vehCarAudio",
+  "vehPoliceCarAudio": "vehCarAudio",
+  "vehSemiCarAudio": "vehCarAudio",
+  "vehSplash": "asNode",
+  "vehStuck": "asNode",
+  "vehSuspension": "asNode",
+  "vehTrailer": "dgPhysEntity",
+  "vehTrailerInstance": "lvlInstance",
+  "vehTransmission": "asNode",
+  "vehWeelCheap": "asNode",
+  "vehWheel": "asNode",
+  "vehWheelPtx": "asNode"
+ },
+ "vtables": {
+  "aiCableCar": [
+   {
+    "slot": 0,
+    "name": "InAccident"
+   },
+   {
+    "slot": 1,
+    "name": "Position"
+   },
+   {
+    "slot": 2,
+    "name": "Speed"
+   },
+   {
+    "slot": 3,
+    "name": "BreakThreshold"
+   },
+   {
+    "slot": 4,
+    "name": "Drivable"
+   },
+   {
+    "slot": 5,
+    "name": "CurrentRoadIdx"
+   },
+   {
+    "slot": 6,
+    "name": "CurrentRdVert"
+   },
+   {
+    "slot": 7,
+    "name": "PreAvoid"
+   },
+   {
+    "slot": 8,
+    "name": "IsBlockingTarget"
+   },
+   {
+    "slot": 9,
+    "name": "Update"
+   },
+   {
+    "slot": 10,
+    "name": "Reset"
+   },
+   {
+    "slot": 11,
+    "name": "Type"
+   },
+   {
+    "slot": 12,
+    "name": "GetMatrix"
+   },
+   {
+    "slot": 13,
+    "name": "FrontBumperDistance"
+   },
+   {
+    "slot": 14,
+    "name": "BackBumperDistance"
+   },
+   {
+    "slot": 15,
+    "name": "LSideDistance"
+   },
+   {
+    "slot": 16,
+    "name": "RSideDistance"
+   },
+   {
+    "slot": 17,
+    "name": "CurrentLane"
+   },
+   {
+    "slot": 18,
+    "name": "CurrentRoadId"
+   },
+   {
+    "slot": 19,
+    "name": "DrawId"
+   },
+   {
+    "slot": 20,
+    "name": "ReplayDebug"
+   }
+  ],
+  "aiCityData": [],
+  "aiCTFRacer": [],
+  "aiMap": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "aiObstacle": [
+   {
+    "slot": 0,
+    "name": "InAccident"
+   },
+   {
+    "slot": 1,
+    "name": "Position"
+   },
+   {
+    "slot": 2,
+    "name": "Speed"
+   },
+   {
+    "slot": 3,
+    "name": "BreakThreshold"
+   },
+   {
+    "slot": 4,
+    "name": "Drivable"
+   },
+   {
+    "slot": 5,
+    "name": "CurrentRoadIdx"
+   },
+   {
+    "slot": 6,
+    "name": "CurrentRdVert"
+   },
+   {
+    "slot": 7,
+    "name": "PreAvoid"
+   },
+   {
+    "slot": 8,
+    "name": "IsBlockingTarget"
+   }
+  ],
+  "aiPedestrianInstance": [
+   {
+    "slot": 0,
+    "name": "Reset"
+   },
+   {
+    "slot": 1,
+    "name": "GetPosition"
+   },
+   {
+    "slot": 2,
+    "name": "IsVisible"
+   },
+   {
+    "slot": 3,
+    "name": "GetMatrix"
+   },
+   {
+    "slot": 4,
+    "name": "SetMatrix"
+   },
+   {
+    "slot": 5,
+    "name": "SetVariant"
+   },
+   {
+    "slot": 6,
+    "name": "GetRadius"
+   },
+   {
+    "slot": 7,
+    "name": "GetEntity"
+   },
+   {
+    "slot": 8,
+    "name": "AttachEntity"
+   },
+   {
+    "slot": 9,
+    "name": "GetVelocity"
+   },
+   {
+    "slot": 10,
+    "name": "Detach"
+   },
+   {
+    "slot": 11,
+    "name": "Draw"
+   },
+   {
+    "slot": 12,
+    "name": "DrawShadow"
+   },
+   {
+    "slot": 13,
+    "name": "DrawShadowMap"
+   },
+   {
+    "slot": 14,
+    "name": "DrawGlow"
+   },
+   {
+    "slot": 15,
+    "name": "DrawReflected"
+   },
+   {
+    "slot": 16,
+    "name": "DrawReflectedParts"
+   },
+   {
+    "slot": 17,
+    "name": "Init"
+   },
+   {
+    "slot": 18,
+    "name": "SizeOf"
+   },
+   {
+    "slot": 19,
+    "name": "IsLandmark"
+   },
+   {
+    "slot": 20,
+    "name": "IsCollidable"
+   },
+   {
+    "slot": 21,
+    "name": "IsTerrainCollidable"
+   },
+   {
+    "slot": 22,
+    "name": "GetNumLightSources"
+   },
+   {
+    "slot": 23,
+    "name": "GetLightInfo"
+   },
+   {
+    "slot": 24,
+    "name": "SetupGfxLights"
+   },
+   {
+    "slot": 25,
+    "name": "GetBound"
+   }
+  ],
+  "aiRaceData": [],
+  "aiRouteRacer": [
+   {
+    "slot": 0,
+    "name": "InAccident"
+   },
+   {
+    "slot": 1,
+    "name": "Position"
+   },
+   {
+    "slot": 2,
+    "name": "Speed"
+   },
+   {
+    "slot": 3,
+    "name": "BreakThreshold"
+   },
+   {
+    "slot": 4,
+    "name": "Drivable"
+   },
+   {
+    "slot": 5,
+    "name": "CurrentRoadIdx"
+   },
+   {
+    "slot": 6,
+    "name": "CurrentRdVert"
+   },
+   {
+    "slot": 7,
+    "name": "PreAvoid"
+   },
+   {
+    "slot": 8,
+    "name": "IsBlockingTarget"
+   },
+   {
+    "slot": 9,
+    "name": "Update"
+   },
+   {
+    "slot": 10,
+    "name": "Reset"
+   },
+   {
+    "slot": 11,
+    "name": "Type"
+   },
+   {
+    "slot": 12,
+    "name": "GetMatrix"
+   },
+   {
+    "slot": 13,
+    "name": "FrontBumperDistance"
+   },
+   {
+    "slot": 14,
+    "name": "BackBumperDistance"
+   },
+   {
+    "slot": 15,
+    "name": "LSideDistance"
+   },
+   {
+    "slot": 16,
+    "name": "RSideDistance"
+   },
+   {
+    "slot": 17,
+    "name": "CurrentLane"
+   },
+   {
+    "slot": 18,
+    "name": "CurrentRoadId"
+   },
+   {
+    "slot": 19,
+    "name": "DrawId"
+   },
+   {
+    "slot": 20,
+    "name": "ReplayDebug"
+   }
+  ],
+  "aiSubway": [
+   {
+    "slot": 0,
+    "name": "InAccident"
+   },
+   {
+    "slot": 1,
+    "name": "Position"
+   },
+   {
+    "slot": 2,
+    "name": "Speed"
+   },
+   {
+    "slot": 3,
+    "name": "BreakThreshold"
+   },
+   {
+    "slot": 4,
+    "name": "Drivable"
+   },
+   {
+    "slot": 5,
+    "name": "CurrentRoadIdx"
+   },
+   {
+    "slot": 6,
+    "name": "CurrentRdVert"
+   },
+   {
+    "slot": 7,
+    "name": "PreAvoid"
+   },
+   {
+    "slot": 8,
+    "name": "IsBlockingTarget"
+   },
+   {
+    "slot": 9,
+    "name": "Update"
+   },
+   {
+    "slot": 10,
+    "name": "Reset"
+   },
+   {
+    "slot": 11,
+    "name": "Type"
+   },
+   {
+    "slot": 12,
+    "name": "GetMatrix"
+   },
+   {
+    "slot": 13,
+    "name": "FrontBumperDistance"
+   },
+   {
+    "slot": 14,
+    "name": "BackBumperDistance"
+   },
+   {
+    "slot": 15,
+    "name": "LSideDistance"
+   },
+   {
+    "slot": 16,
+    "name": "RSideDistance"
+   },
+   {
+    "slot": 17,
+    "name": "CurrentLane"
+   },
+   {
+    "slot": 18,
+    "name": "CurrentRoadId"
+   },
+   {
+    "slot": 19,
+    "name": "DrawId"
+   },
+   {
+    "slot": 20,
+    "name": "ReplayDebug"
+   }
+  ],
+  "aiVehicle": [
+   {
+    "slot": 0,
+    "name": "InAccident"
+   },
+   {
+    "slot": 1,
+    "name": "Position"
+   },
+   {
+    "slot": 2,
+    "name": "Speed"
+   },
+   {
+    "slot": 3,
+    "name": "BreakThreshold"
+   },
+   {
+    "slot": 4,
+    "name": "Drivable"
+   },
+   {
+    "slot": 5,
+    "name": "CurrentRoadIdx"
+   },
+   {
+    "slot": 6,
+    "name": "CurrentRdVert"
+   },
+   {
+    "slot": 7,
+    "name": "PreAvoid"
+   },
+   {
+    "slot": 8,
+    "name": "IsBlockingTarget"
+   },
+   {
+    "slot": 9,
+    "name": "Update"
+   },
+   {
+    "slot": 10,
+    "name": "Reset"
+   },
+   {
+    "slot": 11,
+    "name": "Type"
+   },
+   {
+    "slot": 12,
+    "name": "GetMatrix"
+   },
+   {
+    "slot": 13,
+    "name": "FrontBumperDistance"
+   },
+   {
+    "slot": 14,
+    "name": "BackBumperDistance"
+   },
+   {
+    "slot": 15,
+    "name": "LSideDistance"
+   },
+   {
+    "slot": 16,
+    "name": "RSideDistance"
+   },
+   {
+    "slot": 17,
+    "name": "CurrentLane"
+   },
+   {
+    "slot": 18,
+    "name": "CurrentRoadId"
+   },
+   {
+    "slot": 19,
+    "name": "DrawId"
+   },
+   {
+    "slot": 20,
+    "name": "ReplayDebug"
+   }
+  ],
+  "aiVehicleActive": [
+   {
+    "slot": 1,
+    "name": "PreUpdate"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "PostUpdate"
+   },
+   {
+    "slot": 4,
+    "name": "GetICS"
+   },
+   {
+    "slot": 5,
+    "name": "GetCollider"
+   },
+   {
+    "slot": 6,
+    "name": "GetInst"
+   },
+   {
+    "slot": 7,
+    "name": "DetachMe"
+   },
+   {
+    "slot": 8,
+    "name": "RequiresTerrainCollision"
+   },
+   {
+    "slot": 9,
+    "name": "FirstImpactCallback"
+   }
+  ],
+  "aiVehicleAmbient": [
+   {
+    "slot": 0,
+    "name": "InAccident"
+   },
+   {
+    "slot": 1,
+    "name": "Position"
+   },
+   {
+    "slot": 2,
+    "name": "Speed"
+   },
+   {
+    "slot": 3,
+    "name": "BreakThreshold"
+   },
+   {
+    "slot": 4,
+    "name": "Drivable"
+   },
+   {
+    "slot": 5,
+    "name": "CurrentRoadIdx"
+   },
+   {
+    "slot": 6,
+    "name": "CurrentRdVert"
+   },
+   {
+    "slot": 7,
+    "name": "PreAvoid"
+   },
+   {
+    "slot": 8,
+    "name": "IsBlockingTarget"
+   },
+   {
+    "slot": 9,
+    "name": "Update"
+   },
+   {
+    "slot": 10,
+    "name": "Reset"
+   },
+   {
+    "slot": 11,
+    "name": "Type"
+   },
+   {
+    "slot": 12,
+    "name": "GetMatrix"
+   },
+   {
+    "slot": 13,
+    "name": "FrontBumperDistance"
+   },
+   {
+    "slot": 14,
+    "name": "BackBumperDistance"
+   },
+   {
+    "slot": 15,
+    "name": "LSideDistance"
+   },
+   {
+    "slot": 16,
+    "name": "RSideDistance"
+   },
+   {
+    "slot": 17,
+    "name": "CurrentLane"
+   },
+   {
+    "slot": 18,
+    "name": "CurrentRoadId"
+   },
+   {
+    "slot": 19,
+    "name": "DrawId"
+   },
+   {
+    "slot": 20,
+    "name": "ReplayDebug"
+   },
+   {
+    "slot": 21,
+    "name": "Impact"
+   },
+   {
+    "slot": 22,
+    "name": "GetAudImpactPtr"
+   },
+   {
+    "slot": 23,
+    "name": "PlayHorn"
+   },
+   {
+    "slot": 24,
+    "name": "StopVoice"
+   }
+  ],
+  "aiVehicleData": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "aiVehicleInstance": [
+   {
+    "slot": 0,
+    "name": "Reset"
+   },
+   {
+    "slot": 1,
+    "name": "GetPosition"
+   },
+   {
+    "slot": 2,
+    "name": "IsVisible"
+   },
+   {
+    "slot": 3,
+    "name": "GetMatrix"
+   },
+   {
+    "slot": 4,
+    "name": "SetMatrix"
+   },
+   {
+    "slot": 5,
+    "name": "SetVariant"
+   },
+   {
+    "slot": 6,
+    "name": "GetRadius"
+   },
+   {
+    "slot": 7,
+    "name": "GetEntity"
+   },
+   {
+    "slot": 8,
+    "name": "AttachEntity"
+   },
+   {
+    "slot": 9,
+    "name": "GetVelocity"
+   },
+   {
+    "slot": 10,
+    "name": "Detach"
+   },
+   {
+    "slot": 11,
+    "name": "Draw"
+   },
+   {
+    "slot": 12,
+    "name": "DrawShadow"
+   },
+   {
+    "slot": 13,
+    "name": "DrawShadowMap"
+   },
+   {
+    "slot": 14,
+    "name": "DrawGlow"
+   },
+   {
+    "slot": 15,
+    "name": "DrawReflected"
+   },
+   {
+    "slot": 16,
+    "name": "DrawReflectedParts"
+   },
+   {
+    "slot": 17,
+    "name": "Init"
+   },
+   {
+    "slot": 18,
+    "name": "SizeOf"
+   },
+   {
+    "slot": 19,
+    "name": "IsLandmark"
+   },
+   {
+    "slot": 20,
+    "name": "IsCollidable"
+   },
+   {
+    "slot": 21,
+    "name": "IsTerrainCollidable"
+   },
+   {
+    "slot": 22,
+    "name": "GetNumLightSources"
+   },
+   {
+    "slot": 23,
+    "name": "GetLightInfo"
+   },
+   {
+    "slot": 24,
+    "name": "SetupGfxLights"
+   },
+   {
+    "slot": 25,
+    "name": "GetBound"
+   }
+  ],
+  "aiVehicleManager": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "aiVehiclePhysics": [
+   {
+    "slot": 0,
+    "name": "InAccident"
+   },
+   {
+    "slot": 1,
+    "name": "Position"
+   },
+   {
+    "slot": 2,
+    "name": "Speed"
+   },
+   {
+    "slot": 3,
+    "name": "BreakThreshold"
+   },
+   {
+    "slot": 4,
+    "name": "Drivable"
+   },
+   {
+    "slot": 5,
+    "name": "CurrentRoadIdx"
+   },
+   {
+    "slot": 6,
+    "name": "CurrentRdVert"
+   },
+   {
+    "slot": 7,
+    "name": "PreAvoid"
+   },
+   {
+    "slot": 8,
+    "name": "IsBlockingTarget"
+   },
+   {
+    "slot": 9,
+    "name": "Update"
+   },
+   {
+    "slot": 10,
+    "name": "Reset"
+   },
+   {
+    "slot": 11,
+    "name": "Type"
+   },
+   {
+    "slot": 12,
+    "name": "GetMatrix"
+   },
+   {
+    "slot": 13,
+    "name": "FrontBumperDistance"
+   },
+   {
+    "slot": 14,
+    "name": "BackBumperDistance"
+   },
+   {
+    "slot": 15,
+    "name": "LSideDistance"
+   },
+   {
+    "slot": 16,
+    "name": "RSideDistance"
+   },
+   {
+    "slot": 17,
+    "name": "CurrentLane"
+   },
+   {
+    "slot": 18,
+    "name": "CurrentRoadId"
+   },
+   {
+    "slot": 19,
+    "name": "DrawId"
+   },
+   {
+    "slot": 20,
+    "name": "ReplayDebug"
+   }
+  ],
+  "aiVehiclePlayer": [
+   {
+    "slot": 0,
+    "name": "InAccident"
+   },
+   {
+    "slot": 1,
+    "name": "Position"
+   },
+   {
+    "slot": 2,
+    "name": "Speed"
+   },
+   {
+    "slot": 3,
+    "name": "BreakThreshold"
+   },
+   {
+    "slot": 4,
+    "name": "Drivable"
+   },
+   {
+    "slot": 5,
+    "name": "CurrentRoadIdx"
+   },
+   {
+    "slot": 6,
+    "name": "CurrentRdVert"
+   },
+   {
+    "slot": 7,
+    "name": "PreAvoid"
+   },
+   {
+    "slot": 8,
+    "name": "IsBlockingTarget"
+   },
+   {
+    "slot": 9,
+    "name": "Update"
+   },
+   {
+    "slot": 10,
+    "name": "Reset"
+   },
+   {
+    "slot": 11,
+    "name": "Type"
+   },
+   {
+    "slot": 12,
+    "name": "GetMatrix"
+   },
+   {
+    "slot": 13,
+    "name": "FrontBumperDistance"
+   },
+   {
+    "slot": 14,
+    "name": "BackBumperDistance"
+   },
+   {
+    "slot": 15,
+    "name": "LSideDistance"
+   },
+   {
+    "slot": 16,
+    "name": "RSideDistance"
+   },
+   {
+    "slot": 17,
+    "name": "CurrentLane"
+   },
+   {
+    "slot": 18,
+    "name": "CurrentRoadId"
+   },
+   {
+    "slot": 19,
+    "name": "DrawId"
+   },
+   {
+    "slot": 20,
+    "name": "ReplayDebug"
+   }
+  ],
+  "aiVehicleSpline": [
+   {
+    "slot": 0,
+    "name": "InAccident"
+   },
+   {
+    "slot": 1,
+    "name": "Position"
+   },
+   {
+    "slot": 2,
+    "name": "Speed"
+   },
+   {
+    "slot": 3,
+    "name": "BreakThreshold"
+   },
+   {
+    "slot": 4,
+    "name": "Drivable"
+   },
+   {
+    "slot": 5,
+    "name": "CurrentRoadIdx"
+   },
+   {
+    "slot": 6,
+    "name": "CurrentRdVert"
+   },
+   {
+    "slot": 7,
+    "name": "PreAvoid"
+   },
+   {
+    "slot": 8,
+    "name": "IsBlockingTarget"
+   },
+   {
+    "slot": 9,
+    "name": "Update"
+   },
+   {
+    "slot": 10,
+    "name": "Reset"
+   },
+   {
+    "slot": 11,
+    "name": "Type"
+   },
+   {
+    "slot": 12,
+    "name": "GetMatrix"
+   },
+   {
+    "slot": 13,
+    "name": "FrontBumperDistance"
+   },
+   {
+    "slot": 14,
+    "name": "BackBumperDistance"
+   },
+   {
+    "slot": 15,
+    "name": "LSideDistance"
+   },
+   {
+    "slot": 16,
+    "name": "RSideDistance"
+   },
+   {
+    "slot": 17,
+    "name": "CurrentLane"
+   },
+   {
+    "slot": 18,
+    "name": "CurrentRoadId"
+   },
+   {
+    "slot": 19,
+    "name": "DrawId"
+   },
+   {
+    "slot": 20,
+    "name": "ReplayDebug"
+   },
+   {
+    "slot": 21,
+    "name": "Impact"
+   },
+   {
+    "slot": 22,
+    "name": "GetAudImpactPtr"
+   },
+   {
+    "slot": 23,
+    "name": "PlayHorn"
+   },
+   {
+    "slot": 24,
+    "name": "StopVoice"
+   }
+  ],
+  "asBirthRule": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "asCamera": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "asCullable": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   }
+  ],
+  "asCullManager": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   },
+   {
+    "slot": 13,
+    "name": "DeclareCamera"
+   },
+   {
+    "slot": 14,
+    "name": "DeclareCullable"
+   },
+   {
+    "slot": 15,
+    "name": "DeclareCullable2D"
+   },
+   {
+    "slot": 16,
+    "name": "DeclareCullable2DFG"
+   }
+  ],
+  "asFileIO": [
+   {
+    "slot": 1,
+    "name": "FileIO"
+   },
+   {
+    "slot": 2,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 3,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 4,
+    "name": "Save"
+   },
+   {
+    "slot": 5,
+    "name": "Load"
+   },
+   {
+    "slot": 6,
+    "name": "GetDirName"
+   },
+   {
+    "slot": 7,
+    "name": "GetClassName"
+   }
+  ],
+  "asLinearCS": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "asMeshSetForm": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "asNetObject": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "asNode": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "asParticles": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   }
+  ],
+  "asRoot": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "AudManager": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "AudManagerBase": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "AudSoundBase": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "Base": [],
+  "camAICS": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   },
+   {
+    "slot": 13,
+    "name": "MakeActive"
+   },
+   {
+    "slot": 14,
+    "name": "UpdateInput"
+   },
+   {
+    "slot": 15,
+    "name": "ForceMatrixDelta"
+   },
+   {
+    "slot": 16,
+    "name": "SetST"
+   }
+  ],
+  "camAppCS": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   },
+   {
+    "slot": 13,
+    "name": "MakeActive"
+   },
+   {
+    "slot": 14,
+    "name": "UpdateInput"
+   },
+   {
+    "slot": 15,
+    "name": "ForceMatrixDelta"
+   },
+   {
+    "slot": 16,
+    "name": "SetST"
+   }
+  ],
+  "camBaseCS": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   },
+   {
+    "slot": 13,
+    "name": "MakeActive"
+   },
+   {
+    "slot": 14,
+    "name": "UpdateInput"
+   },
+   {
+    "slot": 15,
+    "name": "ForceMatrixDelta"
+   },
+   {
+    "slot": 16,
+    "name": "SetST"
+   }
+  ],
+  "camCarCS": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   },
+   {
+    "slot": 13,
+    "name": "MakeActive"
+   },
+   {
+    "slot": 14,
+    "name": "UpdateInput"
+   },
+   {
+    "slot": 15,
+    "name": "ForceMatrixDelta"
+   },
+   {
+    "slot": 16,
+    "name": "SetST"
+   }
+  ],
+  "camPointCS": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   },
+   {
+    "slot": 13,
+    "name": "MakeActive"
+   },
+   {
+    "slot": 14,
+    "name": "UpdateInput"
+   },
+   {
+    "slot": 15,
+    "name": "ForceMatrixDelta"
+   },
+   {
+    "slot": 16,
+    "name": "SetST"
+   }
+  ],
+  "camPovCS": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   },
+   {
+    "slot": 13,
+    "name": "MakeActive"
+   },
+   {
+    "slot": 14,
+    "name": "UpdateInput"
+   },
+   {
+    "slot": 15,
+    "name": "ForceMatrixDelta"
+   },
+   {
+    "slot": 16,
+    "name": "SetST"
+   }
+  ],
+  "camTrackCS": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   },
+   {
+    "slot": 13,
+    "name": "MakeActive"
+   },
+   {
+    "slot": 14,
+    "name": "UpdateInput"
+   },
+   {
+    "slot": 15,
+    "name": "ForceMatrixDelta"
+   },
+   {
+    "slot": 16,
+    "name": "SetST"
+   }
+  ],
+  "camViewCS": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "Card2D": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "cityLevel": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Load"
+   },
+   {
+    "slot": 3,
+    "name": "Update"
+   },
+   {
+    "slot": 4,
+    "name": "PreDraw"
+   },
+   {
+    "slot": 5,
+    "name": "PostDraw"
+   },
+   {
+    "slot": 6,
+    "name": "Draw"
+   },
+   {
+    "slot": 7,
+    "name": "FindRoomId"
+   },
+   {
+    "slot": 8,
+    "name": "GetNeighborCount"
+   },
+   {
+    "slot": 9,
+    "name": "GetNeighbors"
+   },
+   {
+    "slot": 10,
+    "name": "GetTouchedNeighbors"
+   },
+   {
+    "slot": 11,
+    "name": "GetRoomPerimeter"
+   },
+   {
+    "slot": 12,
+    "name": "GetVisitList"
+   },
+   {
+    "slot": 13,
+    "name": "Collide"
+   },
+   {
+    "slot": 14,
+    "name": "GetBoundSphere"
+   },
+   {
+    "slot": 15,
+    "name": "GetBound"
+   },
+   {
+    "slot": 16,
+    "name": "SetObjectDetail"
+   },
+   {
+    "slot": 17,
+    "name": "GetWaterLevel"
+   },
+   {
+    "slot": 18,
+    "name": "GetLightingIntensity"
+   },
+   {
+    "slot": 19,
+    "name": "SetPtxHeight"
+   },
+   {
+    "slot": 20,
+    "name": "ClampToWorld"
+   },
+   {
+    "slot": 21,
+    "name": "LoadInstances"
+   },
+   {
+    "slot": 22,
+    "name": "GetEnvMap"
+   }
+  ],
+  "crAnimation": [],
+  "datAsciiTokenizer": [
+   {
+    "slot": 0,
+    "name": "Put"
+   }
+  ],
+  "datBaseTokenizer": [
+   {
+    "slot": 0,
+    "name": "Put"
+   }
+  ],
+  "datBinTokenizer": [
+   {
+    "slot": 0,
+    "name": "Put"
+   }
+  ],
+  "datMultiTokenizer": [
+   {
+    "slot": 0,
+    "name": "Put"
+   }
+  ],
+  "datRefCount": [],
+  "dgBangerActive": [
+   {
+    "slot": 1,
+    "name": "PreUpdate"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "PostUpdate"
+   },
+   {
+    "slot": 4,
+    "name": "GetICS"
+   },
+   {
+    "slot": 5,
+    "name": "GetCollider"
+   },
+   {
+    "slot": 6,
+    "name": "GetInst"
+   },
+   {
+    "slot": 7,
+    "name": "DetachMe"
+   },
+   {
+    "slot": 8,
+    "name": "RequiresTerrainCollision"
+   },
+   {
+    "slot": 9,
+    "name": "FirstImpactCallback"
+   }
+  ],
+  "dgBangerActiveManager": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "dgBangerData": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "dgBangerDataManager": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "dgBangerInstance": [
+   {
+    "slot": 0,
+    "name": "Reset"
+   },
+   {
+    "slot": 1,
+    "name": "GetPosition"
+   },
+   {
+    "slot": 2,
+    "name": "IsVisible"
+   },
+   {
+    "slot": 3,
+    "name": "GetMatrix"
+   },
+   {
+    "slot": 4,
+    "name": "SetMatrix"
+   },
+   {
+    "slot": 5,
+    "name": "SetVariant"
+   },
+   {
+    "slot": 6,
+    "name": "GetRadius"
+   },
+   {
+    "slot": 7,
+    "name": "GetEntity"
+   },
+   {
+    "slot": 8,
+    "name": "AttachEntity"
+   },
+   {
+    "slot": 9,
+    "name": "GetVelocity"
+   },
+   {
+    "slot": 10,
+    "name": "Detach"
+   },
+   {
+    "slot": 11,
+    "name": "Draw"
+   },
+   {
+    "slot": 12,
+    "name": "DrawShadow"
+   },
+   {
+    "slot": 13,
+    "name": "DrawShadowMap"
+   },
+   {
+    "slot": 14,
+    "name": "DrawGlow"
+   },
+   {
+    "slot": 15,
+    "name": "DrawReflected"
+   },
+   {
+    "slot": 16,
+    "name": "DrawReflectedParts"
+   },
+   {
+    "slot": 17,
+    "name": "Init"
+   },
+   {
+    "slot": 18,
+    "name": "SizeOf"
+   },
+   {
+    "slot": 19,
+    "name": "IsLandmark"
+   },
+   {
+    "slot": 20,
+    "name": "IsCollidable"
+   },
+   {
+    "slot": 21,
+    "name": "IsTerrainCollidable"
+   },
+   {
+    "slot": 22,
+    "name": "GetNumLightSources"
+   },
+   {
+    "slot": 23,
+    "name": "GetLightInfo"
+   },
+   {
+    "slot": 24,
+    "name": "SetupGfxLights"
+   },
+   {
+    "slot": 25,
+    "name": "GetBound"
+   },
+   {
+    "slot": 26,
+    "name": "Impact"
+   },
+   {
+    "slot": 27,
+    "name": "ImpactCB"
+   }
+  ],
+  "dgBangerManager": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "dgBoundBox": [
+   {
+    "slot": 0,
+    "name": "CenterBound"
+   },
+   {
+    "slot": 1,
+    "name": "GetMaterial"
+   },
+   {
+    "slot": 2,
+    "name": "GetNumMaterials"
+   },
+   {
+    "slot": 3,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 4,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 5,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 6,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 7,
+    "name": "TestProbePoint"
+   },
+   {
+    "slot": 8,
+    "name": "TestAIPoint"
+   },
+   {
+    "slot": 9,
+    "name": "TestEdge"
+   },
+   {
+    "slot": 10,
+    "name": "TestProbe"
+   },
+   {
+    "slot": 11,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 12,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 13,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 14,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 15,
+    "name": "EffectiveMass"
+   },
+   {
+    "slot": 16,
+    "name": "GetVertex"
+   }
+  ],
+  "dgBoundGeometry": [
+   {
+    "slot": 0,
+    "name": "CenterBound"
+   },
+   {
+    "slot": 1,
+    "name": "GetMaterial"
+   },
+   {
+    "slot": 2,
+    "name": "GetNumMaterials"
+   },
+   {
+    "slot": 3,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 4,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 5,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 6,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 7,
+    "name": "TestProbePoint"
+   },
+   {
+    "slot": 8,
+    "name": "TestAIPoint"
+   },
+   {
+    "slot": 9,
+    "name": "TestEdge"
+   },
+   {
+    "slot": 10,
+    "name": "TestProbe"
+   },
+   {
+    "slot": 11,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 12,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 13,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 14,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 15,
+    "name": "EffectiveMass"
+   },
+   {
+    "slot": 16,
+    "name": "GetVertex"
+   }
+  ],
+  "dgBoundHotdog": [
+   {
+    "slot": 0,
+    "name": "CenterBound"
+   },
+   {
+    "slot": 1,
+    "name": "GetMaterial"
+   },
+   {
+    "slot": 2,
+    "name": "GetNumMaterials"
+   },
+   {
+    "slot": 3,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 4,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 5,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 6,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 7,
+    "name": "TestProbePoint"
+   },
+   {
+    "slot": 8,
+    "name": "TestAIPoint"
+   },
+   {
+    "slot": 9,
+    "name": "TestEdge"
+   },
+   {
+    "slot": 10,
+    "name": "TestProbe"
+   },
+   {
+    "slot": 11,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 12,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 13,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 14,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 15,
+    "name": "EffectiveMass"
+   },
+   {
+    "slot": 16,
+    "name": "GetVertex"
+   }
+  ],
+  "dgBoundSphere": [
+   {
+    "slot": 0,
+    "name": "CenterBound"
+   },
+   {
+    "slot": 1,
+    "name": "GetMaterial"
+   },
+   {
+    "slot": 2,
+    "name": "GetNumMaterials"
+   },
+   {
+    "slot": 3,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 4,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 5,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 6,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 7,
+    "name": "TestProbePoint"
+   },
+   {
+    "slot": 8,
+    "name": "TestAIPoint"
+   },
+   {
+    "slot": 9,
+    "name": "TestEdge"
+   },
+   {
+    "slot": 10,
+    "name": "TestProbe"
+   },
+   {
+    "slot": 11,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 12,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 13,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 14,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 15,
+    "name": "EffectiveMass"
+   },
+   {
+    "slot": 16,
+    "name": "GetVertex"
+   }
+  ],
+  "dgPathSet": [],
+  "dgPhysEntity": [
+   {
+    "slot": 1,
+    "name": "PreUpdate"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "PostUpdate"
+   },
+   {
+    "slot": 4,
+    "name": "GetICS"
+   },
+   {
+    "slot": 5,
+    "name": "GetCollider"
+   },
+   {
+    "slot": 6,
+    "name": "GetInst"
+   },
+   {
+    "slot": 7,
+    "name": "DetachMe"
+   },
+   {
+    "slot": 8,
+    "name": "RequiresTerrainCollision"
+   },
+   {
+    "slot": 9,
+    "name": "FirstImpactCallback"
+   }
+  ],
+  "dgPhysManager": [
+   {
+    "slot": 0,
+    "name": "TestProbe"
+   },
+   {
+    "slot": 1,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 2,
+    "name": "PromoteInstance"
+   },
+   {
+    "slot": 3,
+    "name": "DemoteInstance"
+   },
+   {
+    "slot": 4,
+    "name": "KillInstance"
+   },
+   {
+    "slot": 5,
+    "name": "DisableInstance"
+   },
+   {
+    "slot": 6,
+    "name": "EnableInstance"
+   },
+   {
+    "slot": 7,
+    "name": "GetCollider"
+   },
+   {
+    "slot": 8,
+    "name": "CreateInstance"
+   }
+  ],
+  "dgTrailerJoint": [
+   {
+    "slot": 0,
+    "name": "IsBroken"
+   },
+   {
+    "slot": 1,
+    "name": "ComputeInvMassMatrix"
+   },
+   {
+    "slot": 2,
+    "name": "ComputeInvMassMatrix"
+   },
+   {
+    "slot": 3,
+    "name": "ComputeJointForce"
+   },
+   {
+    "slot": 4,
+    "name": "ComputeJointPush"
+   },
+   {
+    "slot": 5,
+    "name": "GetInvMassMatrix"
+   }
+  ],
+  "dgUnhitBangerInstance": [
+   {
+    "slot": 0,
+    "name": "Reset"
+   },
+   {
+    "slot": 1,
+    "name": "GetPosition"
+   },
+   {
+    "slot": 2,
+    "name": "IsVisible"
+   },
+   {
+    "slot": 3,
+    "name": "GetMatrix"
+   },
+   {
+    "slot": 4,
+    "name": "SetMatrix"
+   },
+   {
+    "slot": 5,
+    "name": "SetVariant"
+   },
+   {
+    "slot": 6,
+    "name": "GetRadius"
+   },
+   {
+    "slot": 7,
+    "name": "GetEntity"
+   },
+   {
+    "slot": 8,
+    "name": "AttachEntity"
+   },
+   {
+    "slot": 9,
+    "name": "GetVelocity"
+   },
+   {
+    "slot": 10,
+    "name": "Detach"
+   },
+   {
+    "slot": 11,
+    "name": "Draw"
+   },
+   {
+    "slot": 12,
+    "name": "DrawShadow"
+   },
+   {
+    "slot": 13,
+    "name": "DrawShadowMap"
+   },
+   {
+    "slot": 14,
+    "name": "DrawGlow"
+   },
+   {
+    "slot": 15,
+    "name": "DrawReflected"
+   },
+   {
+    "slot": 16,
+    "name": "DrawReflectedParts"
+   },
+   {
+    "slot": 17,
+    "name": "Init"
+   },
+   {
+    "slot": 18,
+    "name": "SizeOf"
+   },
+   {
+    "slot": 19,
+    "name": "IsLandmark"
+   },
+   {
+    "slot": 20,
+    "name": "IsCollidable"
+   },
+   {
+    "slot": 21,
+    "name": "IsTerrainCollidable"
+   },
+   {
+    "slot": 22,
+    "name": "GetNumLightSources"
+   },
+   {
+    "slot": 23,
+    "name": "GetLightInfo"
+   },
+   {
+    "slot": 24,
+    "name": "SetupGfxLights"
+   },
+   {
+    "slot": 25,
+    "name": "GetBound"
+   },
+   {
+    "slot": 26,
+    "name": "Impact"
+   },
+   {
+    "slot": 27,
+    "name": "ImpactCB"
+   }
+  ],
+  "dgUnhitMtxBangerInstance": [
+   {
+    "slot": 0,
+    "name": "Reset"
+   },
+   {
+    "slot": 1,
+    "name": "GetPosition"
+   },
+   {
+    "slot": 2,
+    "name": "IsVisible"
+   },
+   {
+    "slot": 3,
+    "name": "GetMatrix"
+   },
+   {
+    "slot": 4,
+    "name": "SetMatrix"
+   },
+   {
+    "slot": 5,
+    "name": "SetVariant"
+   },
+   {
+    "slot": 6,
+    "name": "GetRadius"
+   },
+   {
+    "slot": 7,
+    "name": "GetEntity"
+   },
+   {
+    "slot": 8,
+    "name": "AttachEntity"
+   },
+   {
+    "slot": 9,
+    "name": "GetVelocity"
+   },
+   {
+    "slot": 10,
+    "name": "Detach"
+   },
+   {
+    "slot": 11,
+    "name": "Draw"
+   },
+   {
+    "slot": 12,
+    "name": "DrawShadow"
+   },
+   {
+    "slot": 13,
+    "name": "DrawShadowMap"
+   },
+   {
+    "slot": 14,
+    "name": "DrawGlow"
+   },
+   {
+    "slot": 15,
+    "name": "DrawReflected"
+   },
+   {
+    "slot": 16,
+    "name": "DrawReflectedParts"
+   },
+   {
+    "slot": 17,
+    "name": "Init"
+   },
+   {
+    "slot": 18,
+    "name": "SizeOf"
+   },
+   {
+    "slot": 19,
+    "name": "IsLandmark"
+   },
+   {
+    "slot": 20,
+    "name": "IsCollidable"
+   },
+   {
+    "slot": 21,
+    "name": "IsTerrainCollidable"
+   },
+   {
+    "slot": 22,
+    "name": "GetNumLightSources"
+   },
+   {
+    "slot": 23,
+    "name": "GetLightInfo"
+   },
+   {
+    "slot": 24,
+    "name": "SetupGfxLights"
+   },
+   {
+    "slot": 25,
+    "name": "GetBound"
+   },
+   {
+    "slot": 26,
+    "name": "Impact"
+   },
+   {
+    "slot": 27,
+    "name": "ImpactCB"
+   }
+  ],
+  "dgUnhitYBangerInstance": [
+   {
+    "slot": 0,
+    "name": "Reset"
+   },
+   {
+    "slot": 1,
+    "name": "GetPosition"
+   },
+   {
+    "slot": 2,
+    "name": "IsVisible"
+   },
+   {
+    "slot": 3,
+    "name": "GetMatrix"
+   },
+   {
+    "slot": 4,
+    "name": "SetMatrix"
+   },
+   {
+    "slot": 5,
+    "name": "SetVariant"
+   },
+   {
+    "slot": 6,
+    "name": "GetRadius"
+   },
+   {
+    "slot": 7,
+    "name": "GetEntity"
+   },
+   {
+    "slot": 8,
+    "name": "AttachEntity"
+   },
+   {
+    "slot": 9,
+    "name": "GetVelocity"
+   },
+   {
+    "slot": 10,
+    "name": "Detach"
+   },
+   {
+    "slot": 11,
+    "name": "Draw"
+   },
+   {
+    "slot": 12,
+    "name": "DrawShadow"
+   },
+   {
+    "slot": 13,
+    "name": "DrawShadowMap"
+   },
+   {
+    "slot": 14,
+    "name": "DrawGlow"
+   },
+   {
+    "slot": 15,
+    "name": "DrawReflected"
+   },
+   {
+    "slot": 16,
+    "name": "DrawReflectedParts"
+   },
+   {
+    "slot": 17,
+    "name": "Init"
+   },
+   {
+    "slot": 18,
+    "name": "SizeOf"
+   },
+   {
+    "slot": 19,
+    "name": "IsLandmark"
+   },
+   {
+    "slot": 20,
+    "name": "IsCollidable"
+   },
+   {
+    "slot": 21,
+    "name": "IsTerrainCollidable"
+   },
+   {
+    "slot": 22,
+    "name": "GetNumLightSources"
+   },
+   {
+    "slot": 23,
+    "name": "GetLightInfo"
+   },
+   {
+    "slot": 24,
+    "name": "SetupGfxLights"
+   },
+   {
+    "slot": 25,
+    "name": "GetBound"
+   },
+   {
+    "slot": 26,
+    "name": "Impact"
+   },
+   {
+    "slot": 27,
+    "name": "ImpactCB"
+   }
+  ],
+  "DirSnd": [
+   {
+    "slot": 0,
+    "name": "InitPrimarySoundBuffer"
+   }
+  ],
+  "fxShardManager": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "luaNode": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "lvlFixedAny": [
+   {
+    "slot": 0,
+    "name": "Reset"
+   },
+   {
+    "slot": 1,
+    "name": "GetPosition"
+   },
+   {
+    "slot": 2,
+    "name": "IsVisible"
+   },
+   {
+    "slot": 3,
+    "name": "GetMatrix"
+   },
+   {
+    "slot": 4,
+    "name": "SetMatrix"
+   },
+   {
+    "slot": 5,
+    "name": "SetVariant"
+   },
+   {
+    "slot": 6,
+    "name": "GetRadius"
+   },
+   {
+    "slot": 7,
+    "name": "GetEntity"
+   },
+   {
+    "slot": 8,
+    "name": "AttachEntity"
+   },
+   {
+    "slot": 9,
+    "name": "GetVelocity"
+   },
+   {
+    "slot": 10,
+    "name": "Detach"
+   },
+   {
+    "slot": 11,
+    "name": "Draw"
+   },
+   {
+    "slot": 12,
+    "name": "DrawShadow"
+   },
+   {
+    "slot": 13,
+    "name": "DrawShadowMap"
+   },
+   {
+    "slot": 14,
+    "name": "DrawGlow"
+   },
+   {
+    "slot": 15,
+    "name": "DrawReflected"
+   },
+   {
+    "slot": 16,
+    "name": "DrawReflectedParts"
+   },
+   {
+    "slot": 17,
+    "name": "Init"
+   },
+   {
+    "slot": 18,
+    "name": "SizeOf"
+   },
+   {
+    "slot": 19,
+    "name": "IsLandmark"
+   },
+   {
+    "slot": 20,
+    "name": "IsCollidable"
+   },
+   {
+    "slot": 21,
+    "name": "IsTerrainCollidable"
+   },
+   {
+    "slot": 22,
+    "name": "GetNumLightSources"
+   },
+   {
+    "slot": 23,
+    "name": "GetLightInfo"
+   },
+   {
+    "slot": 24,
+    "name": "SetupGfxLights"
+   },
+   {
+    "slot": 25,
+    "name": "GetBound"
+   }
+  ],
+  "lvlFixedMatrix": [
+   {
+    "slot": 0,
+    "name": "Reset"
+   },
+   {
+    "slot": 1,
+    "name": "GetPosition"
+   },
+   {
+    "slot": 2,
+    "name": "IsVisible"
+   },
+   {
+    "slot": 3,
+    "name": "GetMatrix"
+   },
+   {
+    "slot": 4,
+    "name": "SetMatrix"
+   },
+   {
+    "slot": 5,
+    "name": "SetVariant"
+   },
+   {
+    "slot": 6,
+    "name": "GetRadius"
+   },
+   {
+    "slot": 7,
+    "name": "GetEntity"
+   },
+   {
+    "slot": 8,
+    "name": "AttachEntity"
+   },
+   {
+    "slot": 9,
+    "name": "GetVelocity"
+   },
+   {
+    "slot": 10,
+    "name": "Detach"
+   },
+   {
+    "slot": 11,
+    "name": "Draw"
+   },
+   {
+    "slot": 12,
+    "name": "DrawShadow"
+   },
+   {
+    "slot": 13,
+    "name": "DrawShadowMap"
+   },
+   {
+    "slot": 14,
+    "name": "DrawGlow"
+   },
+   {
+    "slot": 15,
+    "name": "DrawReflected"
+   },
+   {
+    "slot": 16,
+    "name": "DrawReflectedParts"
+   },
+   {
+    "slot": 17,
+    "name": "Init"
+   },
+   {
+    "slot": 18,
+    "name": "SizeOf"
+   },
+   {
+    "slot": 19,
+    "name": "IsLandmark"
+   },
+   {
+    "slot": 20,
+    "name": "IsCollidable"
+   },
+   {
+    "slot": 21,
+    "name": "IsTerrainCollidable"
+   },
+   {
+    "slot": 22,
+    "name": "GetNumLightSources"
+   },
+   {
+    "slot": 23,
+    "name": "GetLightInfo"
+   },
+   {
+    "slot": 24,
+    "name": "SetupGfxLights"
+   },
+   {
+    "slot": 25,
+    "name": "GetBound"
+   }
+  ],
+  "lvlFixedRotY": [
+   {
+    "slot": 0,
+    "name": "Reset"
+   },
+   {
+    "slot": 1,
+    "name": "GetPosition"
+   },
+   {
+    "slot": 2,
+    "name": "IsVisible"
+   },
+   {
+    "slot": 3,
+    "name": "GetMatrix"
+   },
+   {
+    "slot": 4,
+    "name": "SetMatrix"
+   },
+   {
+    "slot": 5,
+    "name": "SetVariant"
+   },
+   {
+    "slot": 6,
+    "name": "GetRadius"
+   },
+   {
+    "slot": 7,
+    "name": "GetEntity"
+   },
+   {
+    "slot": 8,
+    "name": "AttachEntity"
+   },
+   {
+    "slot": 9,
+    "name": "GetVelocity"
+   },
+   {
+    "slot": 10,
+    "name": "Detach"
+   },
+   {
+    "slot": 11,
+    "name": "Draw"
+   },
+   {
+    "slot": 12,
+    "name": "DrawShadow"
+   },
+   {
+    "slot": 13,
+    "name": "DrawShadowMap"
+   },
+   {
+    "slot": 14,
+    "name": "DrawGlow"
+   },
+   {
+    "slot": 15,
+    "name": "DrawReflected"
+   },
+   {
+    "slot": 16,
+    "name": "DrawReflectedParts"
+   },
+   {
+    "slot": 17,
+    "name": "Init"
+   },
+   {
+    "slot": 18,
+    "name": "SizeOf"
+   },
+   {
+    "slot": 19,
+    "name": "IsLandmark"
+   },
+   {
+    "slot": 20,
+    "name": "IsCollidable"
+   },
+   {
+    "slot": 21,
+    "name": "IsTerrainCollidable"
+   },
+   {
+    "slot": 22,
+    "name": "GetNumLightSources"
+   },
+   {
+    "slot": 23,
+    "name": "GetLightInfo"
+   },
+   {
+    "slot": 24,
+    "name": "SetupGfxLights"
+   },
+   {
+    "slot": 25,
+    "name": "GetBound"
+   },
+   {
+    "slot": 26,
+    "name": "IsVisible"
+   }
+  ],
+  "lvlInstance": [
+   {
+    "slot": 0,
+    "name": "Reset"
+   },
+   {
+    "slot": 1,
+    "name": "GetPosition"
+   },
+   {
+    "slot": 2,
+    "name": "IsVisible"
+   },
+   {
+    "slot": 3,
+    "name": "GetMatrix"
+   },
+   {
+    "slot": 4,
+    "name": "SetMatrix"
+   },
+   {
+    "slot": 5,
+    "name": "SetVariant"
+   },
+   {
+    "slot": 6,
+    "name": "GetRadius"
+   },
+   {
+    "slot": 7,
+    "name": "GetEntity"
+   },
+   {
+    "slot": 8,
+    "name": "AttachEntity"
+   },
+   {
+    "slot": 9,
+    "name": "GetVelocity"
+   },
+   {
+    "slot": 10,
+    "name": "Detach"
+   },
+   {
+    "slot": 11,
+    "name": "Draw"
+   },
+   {
+    "slot": 12,
+    "name": "DrawShadow"
+   },
+   {
+    "slot": 13,
+    "name": "DrawShadowMap"
+   },
+   {
+    "slot": 14,
+    "name": "DrawGlow"
+   },
+   {
+    "slot": 15,
+    "name": "DrawReflected"
+   },
+   {
+    "slot": 16,
+    "name": "DrawReflectedParts"
+   },
+   {
+    "slot": 17,
+    "name": "Init"
+   },
+   {
+    "slot": 18,
+    "name": "SizeOf"
+   },
+   {
+    "slot": 19,
+    "name": "IsLandmark"
+   },
+   {
+    "slot": 20,
+    "name": "IsCollidable"
+   },
+   {
+    "slot": 21,
+    "name": "IsTerrainCollidable"
+   },
+   {
+    "slot": 22,
+    "name": "GetNumLightSources"
+   },
+   {
+    "slot": 23,
+    "name": "GetLightInfo"
+   },
+   {
+    "slot": 24,
+    "name": "SetupGfxLights"
+   },
+   {
+    "slot": 25,
+    "name": "GetBound"
+   }
+  ],
+  "LvlInstanceLuaIterator": [
+   {
+    "slot": 1,
+    "name": "run"
+   }
+  ],
+  "lvlLandmark": [
+   {
+    "slot": 0,
+    "name": "Reset"
+   },
+   {
+    "slot": 1,
+    "name": "GetPosition"
+   },
+   {
+    "slot": 2,
+    "name": "IsVisible"
+   },
+   {
+    "slot": 3,
+    "name": "GetMatrix"
+   },
+   {
+    "slot": 4,
+    "name": "SetMatrix"
+   },
+   {
+    "slot": 5,
+    "name": "SetVariant"
+   },
+   {
+    "slot": 6,
+    "name": "GetRadius"
+   },
+   {
+    "slot": 7,
+    "name": "GetEntity"
+   },
+   {
+    "slot": 8,
+    "name": "AttachEntity"
+   },
+   {
+    "slot": 9,
+    "name": "GetVelocity"
+   },
+   {
+    "slot": 10,
+    "name": "Detach"
+   },
+   {
+    "slot": 11,
+    "name": "Draw"
+   },
+   {
+    "slot": 12,
+    "name": "DrawShadow"
+   },
+   {
+    "slot": 13,
+    "name": "DrawShadowMap"
+   },
+   {
+    "slot": 14,
+    "name": "DrawGlow"
+   },
+   {
+    "slot": 15,
+    "name": "DrawReflected"
+   },
+   {
+    "slot": 16,
+    "name": "DrawReflectedParts"
+   },
+   {
+    "slot": 17,
+    "name": "Init"
+   },
+   {
+    "slot": 18,
+    "name": "SizeOf"
+   },
+   {
+    "slot": 19,
+    "name": "IsLandmark"
+   },
+   {
+    "slot": 20,
+    "name": "IsCollidable"
+   },
+   {
+    "slot": 21,
+    "name": "IsTerrainCollidable"
+   },
+   {
+    "slot": 22,
+    "name": "GetNumLightSources"
+   },
+   {
+    "slot": 23,
+    "name": "GetLightInfo"
+   },
+   {
+    "slot": 24,
+    "name": "SetupGfxLights"
+   },
+   {
+    "slot": 25,
+    "name": "GetBound"
+   },
+   {
+    "slot": 26,
+    "name": "IsVisible"
+   }
+  ],
+  "lvlLevel": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Load"
+   },
+   {
+    "slot": 3,
+    "name": "Update"
+   },
+   {
+    "slot": 4,
+    "name": "PreDraw"
+   },
+   {
+    "slot": 5,
+    "name": "PostDraw"
+   },
+   {
+    "slot": 6,
+    "name": "Draw"
+   },
+   {
+    "slot": 7,
+    "name": "FindRoomId"
+   },
+   {
+    "slot": 8,
+    "name": "GetNeighborCount"
+   },
+   {
+    "slot": 9,
+    "name": "GetNeighbors"
+   },
+   {
+    "slot": 10,
+    "name": "GetTouchedNeighbors"
+   },
+   {
+    "slot": 11,
+    "name": "GetRoomPerimeter"
+   },
+   {
+    "slot": 12,
+    "name": "GetVisitList"
+   },
+   {
+    "slot": 13,
+    "name": "Collide"
+   },
+   {
+    "slot": 14,
+    "name": "GetBoundSphere"
+   },
+   {
+    "slot": 15,
+    "name": "GetBound"
+   },
+   {
+    "slot": 16,
+    "name": "SetObjectDetail"
+   },
+   {
+    "slot": 17,
+    "name": "GetWaterLevel"
+   },
+   {
+    "slot": 18,
+    "name": "GetLightingIntensity"
+   },
+   {
+    "slot": 19,
+    "name": "SetPtxHeight"
+   },
+   {
+    "slot": 20,
+    "name": "ClampToWorld"
+   },
+   {
+    "slot": 21,
+    "name": "LoadInstances"
+   },
+   {
+    "slot": 22,
+    "name": "GetEnvMap"
+   }
+  ],
+  "lvlLevelBound": [
+   {
+    "slot": 0,
+    "name": "CenterBound"
+   },
+   {
+    "slot": 1,
+    "name": "GetMaterial"
+   },
+   {
+    "slot": 2,
+    "name": "GetNumMaterials"
+   },
+   {
+    "slot": 3,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 4,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 5,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 6,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 7,
+    "name": "TestProbePoint"
+   },
+   {
+    "slot": 8,
+    "name": "TestAIPoint"
+   },
+   {
+    "slot": 9,
+    "name": "TestEdge"
+   },
+   {
+    "slot": 10,
+    "name": "TestProbe"
+   },
+   {
+    "slot": 11,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 12,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 13,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 14,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 15,
+    "name": "EffectiveMass"
+   },
+   {
+    "slot": 16,
+    "name": "GetVertex"
+   },
+   {
+    "slot": 17,
+    "name": "TestAI"
+   },
+   {
+    "slot": 18,
+    "name": "TestEdgePoint"
+   },
+   {
+    "slot": 19,
+    "name": "CollideEdge"
+   },
+   {
+    "slot": 20,
+    "name": "CollideProbe"
+   },
+   {
+    "slot": 21,
+    "name": "CollideAI"
+   },
+   {
+    "slot": 22,
+    "name": "CollideEdgePoint"
+   },
+   {
+    "slot": 23,
+    "name": "CollideProbePoint"
+   },
+   {
+    "slot": 24,
+    "name": "CollideAIPoint"
+   },
+   {
+    "slot": 25,
+    "name": "AllocateState"
+   },
+   {
+    "slot": 26,
+    "name": "GetEdgeCosine"
+   },
+   {
+    "slot": 27,
+    "name": "GetEdgeNormal"
+   },
+   {
+    "slot": 28,
+    "name": "TrivialCollideBoxToLevel"
+   },
+   {
+    "slot": 29,
+    "name": "CollidePolyToLevel"
+   },
+   {
+    "slot": 30,
+    "name": "FindImpactsSphereOneRoom"
+   },
+   {
+    "slot": 31,
+    "name": "FindImpactsHotdogOneRoom"
+   }
+  ],
+  "lvlMaterial": [
+   {
+    "slot": 0,
+    "name": "Copy"
+   },
+   {
+    "slot": 1,
+    "name": "Save"
+   },
+   {
+    "slot": 2,
+    "name": "SaveBinary"
+   }
+  ],
+  "lvlSDL": [
+   {
+    "slot": 0,
+    "name": "CenterBound"
+   },
+   {
+    "slot": 1,
+    "name": "GetMaterial"
+   },
+   {
+    "slot": 2,
+    "name": "GetNumMaterials"
+   },
+   {
+    "slot": 3,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 4,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 5,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 6,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 7,
+    "name": "TestProbePoint"
+   },
+   {
+    "slot": 8,
+    "name": "TestAIPoint"
+   },
+   {
+    "slot": 9,
+    "name": "TestEdge"
+   },
+   {
+    "slot": 10,
+    "name": "TestProbe"
+   },
+   {
+    "slot": 11,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 12,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 13,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 14,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 15,
+    "name": "EffectiveMass"
+   },
+   {
+    "slot": 16,
+    "name": "GetVertex"
+   },
+   {
+    "slot": 17,
+    "name": "TestAI"
+   },
+   {
+    "slot": 18,
+    "name": "TestEdgePoint"
+   },
+   {
+    "slot": 19,
+    "name": "CollideEdge"
+   },
+   {
+    "slot": 20,
+    "name": "CollideProbe"
+   },
+   {
+    "slot": 21,
+    "name": "CollideAI"
+   },
+   {
+    "slot": 22,
+    "name": "CollideEdgePoint"
+   },
+   {
+    "slot": 23,
+    "name": "CollideProbePoint"
+   },
+   {
+    "slot": 24,
+    "name": "CollideAIPoint"
+   },
+   {
+    "slot": 25,
+    "name": "AllocateState"
+   },
+   {
+    "slot": 26,
+    "name": "GetEdgeCosine"
+   },
+   {
+    "slot": 27,
+    "name": "GetEdgeNormal"
+   },
+   {
+    "slot": 28,
+    "name": "TrivialCollideBoxToLevel"
+   },
+   {
+    "slot": 29,
+    "name": "CollidePolyToLevel"
+   },
+   {
+    "slot": 30,
+    "name": "FindImpactsSphereOneRoom"
+   },
+   {
+    "slot": 31,
+    "name": "FindImpactsHotdogOneRoom"
+   }
+  ],
+  "lvlSky": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Reset"
+   },
+   {
+    "slot": 3,
+    "name": "Update"
+   },
+   {
+    "slot": 4,
+    "name": "Draw"
+   },
+   {
+    "slot": 5,
+    "name": "DrawWithNoZState"
+   },
+   {
+    "slot": 6,
+    "name": "DrawHat"
+   }
+  ],
+  "mcHookman": [
+   {
+    "slot": 0,
+    "name": "InAccident"
+   },
+   {
+    "slot": 1,
+    "name": "Position"
+   },
+   {
+    "slot": 2,
+    "name": "Speed"
+   },
+   {
+    "slot": 3,
+    "name": "BreakThreshold"
+   },
+   {
+    "slot": 4,
+    "name": "Drivable"
+   },
+   {
+    "slot": 5,
+    "name": "CurrentRoadIdx"
+   },
+   {
+    "slot": 6,
+    "name": "CurrentRdVert"
+   },
+   {
+    "slot": 7,
+    "name": "PreAvoid"
+   },
+   {
+    "slot": 8,
+    "name": "IsBlockingTarget"
+   },
+   {
+    "slot": 9,
+    "name": "Update"
+   },
+   {
+    "slot": 10,
+    "name": "Reset"
+   },
+   {
+    "slot": 11,
+    "name": "Type"
+   },
+   {
+    "slot": 12,
+    "name": "GetMatrix"
+   },
+   {
+    "slot": 13,
+    "name": "FrontBumperDistance"
+   },
+   {
+    "slot": 14,
+    "name": "BackBumperDistance"
+   },
+   {
+    "slot": 15,
+    "name": "LSideDistance"
+   },
+   {
+    "slot": 16,
+    "name": "RSideDistance"
+   },
+   {
+    "slot": 17,
+    "name": "CurrentLane"
+   },
+   {
+    "slot": 18,
+    "name": "CurrentRoadId"
+   },
+   {
+    "slot": 19,
+    "name": "DrawId"
+   },
+   {
+    "slot": 20,
+    "name": "ReplayDebug"
+   }
+  ],
+  "mmArrow": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "mmCDPlayer": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "mmCityInfo": [],
+  "mmCityList": [],
+  "mmDashView": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "mmDirSnd": [
+   {
+    "slot": 0,
+    "name": "InitPrimarySoundBuffer"
+   }
+  ],
+  "mmExternalView": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "mmGame": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   },
+   {
+    "slot": 13,
+    "name": "Init"
+   },
+   {
+    "slot": 14,
+    "name": "InitGameStrings"
+   },
+   {
+    "slot": 15,
+    "name": "InitMyPlayer"
+   },
+   {
+    "slot": 16,
+    "name": "InitOtherPlayers"
+   },
+   {
+    "slot": 17,
+    "name": "InitGameObjects"
+   },
+   {
+    "slot": 18,
+    "name": "InitHUD"
+   },
+   {
+    "slot": 19,
+    "name": "UpdateGameInput"
+   },
+   {
+    "slot": 20,
+    "name": "UpdateDebugKeyInput"
+   },
+   {
+    "slot": 21,
+    "name": "UpdateGame"
+   },
+   {
+    "slot": 22,
+    "name": "NextRace"
+   },
+   {
+    "slot": 23,
+    "name": "HitWaterHandler"
+   },
+   {
+    "slot": 24,
+    "name": "DropThruCityHandler"
+   },
+   {
+    "slot": 25,
+    "name": "SendChatMessage"
+   },
+   {
+    "slot": 26,
+    "name": "SwitchState"
+   },
+   {
+    "slot": 27,
+    "name": "BeDone"
+   },
+   {
+    "slot": 28,
+    "name": "GetWaypoints"
+   }
+  ],
+  "mmGameManager": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "mmGameMulti": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   },
+   {
+    "slot": 13,
+    "name": "Init"
+   },
+   {
+    "slot": 14,
+    "name": "InitGameStrings"
+   },
+   {
+    "slot": 15,
+    "name": "InitMyPlayer"
+   },
+   {
+    "slot": 16,
+    "name": "InitOtherPlayers"
+   },
+   {
+    "slot": 17,
+    "name": "InitGameObjects"
+   },
+   {
+    "slot": 18,
+    "name": "InitHUD"
+   },
+   {
+    "slot": 19,
+    "name": "UpdateGameInput"
+   },
+   {
+    "slot": 20,
+    "name": "UpdateDebugKeyInput"
+   },
+   {
+    "slot": 21,
+    "name": "UpdateGame"
+   },
+   {
+    "slot": 22,
+    "name": "NextRace"
+   },
+   {
+    "slot": 23,
+    "name": "HitWaterHandler"
+   },
+   {
+    "slot": 24,
+    "name": "DropThruCityHandler"
+   },
+   {
+    "slot": 25,
+    "name": "SendChatMessage"
+   },
+   {
+    "slot": 26,
+    "name": "SwitchState"
+   },
+   {
+    "slot": 27,
+    "name": "BeDone"
+   },
+   {
+    "slot": 28,
+    "name": "GetWaypoints"
+   },
+   {
+    "slot": 29,
+    "name": "InitNetworkPlayers"
+   },
+   {
+    "slot": 30,
+    "name": "InitRoster"
+   },
+   {
+    "slot": 31,
+    "name": "SystemMessage"
+   },
+   {
+    "slot": 32,
+    "name": "GameMessage"
+   }
+  ],
+  "mmGameSingle": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   },
+   {
+    "slot": 13,
+    "name": "Init"
+   },
+   {
+    "slot": 14,
+    "name": "InitGameStrings"
+   },
+   {
+    "slot": 15,
+    "name": "InitMyPlayer"
+   },
+   {
+    "slot": 16,
+    "name": "InitOtherPlayers"
+   },
+   {
+    "slot": 17,
+    "name": "InitGameObjects"
+   },
+   {
+    "slot": 18,
+    "name": "InitHUD"
+   },
+   {
+    "slot": 19,
+    "name": "UpdateGameInput"
+   },
+   {
+    "slot": 20,
+    "name": "UpdateDebugKeyInput"
+   },
+   {
+    "slot": 21,
+    "name": "UpdateGame"
+   },
+   {
+    "slot": 22,
+    "name": "NextRace"
+   },
+   {
+    "slot": 23,
+    "name": "HitWaterHandler"
+   },
+   {
+    "slot": 24,
+    "name": "DropThruCityHandler"
+   },
+   {
+    "slot": 25,
+    "name": "SendChatMessage"
+   },
+   {
+    "slot": 26,
+    "name": "SwitchState"
+   },
+   {
+    "slot": 27,
+    "name": "BeDone"
+   },
+   {
+    "slot": 28,
+    "name": "GetWaypoints"
+   }
+  ],
+  "mmHUD": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "mmHudMap": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "mmIcons": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "mmInfoBase": [
+   {
+    "slot": 1,
+    "name": "FileIO"
+   }
+  ],
+  "mmMultiBlitz": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   },
+   {
+    "slot": 13,
+    "name": "Init"
+   },
+   {
+    "slot": 14,
+    "name": "InitGameStrings"
+   },
+   {
+    "slot": 15,
+    "name": "InitMyPlayer"
+   },
+   {
+    "slot": 16,
+    "name": "InitOtherPlayers"
+   },
+   {
+    "slot": 17,
+    "name": "InitGameObjects"
+   },
+   {
+    "slot": 18,
+    "name": "InitHUD"
+   },
+   {
+    "slot": 19,
+    "name": "UpdateGameInput"
+   },
+   {
+    "slot": 20,
+    "name": "UpdateDebugKeyInput"
+   },
+   {
+    "slot": 21,
+    "name": "UpdateGame"
+   },
+   {
+    "slot": 22,
+    "name": "NextRace"
+   },
+   {
+    "slot": 23,
+    "name": "HitWaterHandler"
+   },
+   {
+    "slot": 24,
+    "name": "DropThruCityHandler"
+   },
+   {
+    "slot": 25,
+    "name": "SendChatMessage"
+   },
+   {
+    "slot": 26,
+    "name": "SwitchState"
+   },
+   {
+    "slot": 27,
+    "name": "BeDone"
+   },
+   {
+    "slot": 28,
+    "name": "GetWaypoints"
+   },
+   {
+    "slot": 29,
+    "name": "InitNetworkPlayers"
+   },
+   {
+    "slot": 30,
+    "name": "InitRoster"
+   },
+   {
+    "slot": 31,
+    "name": "SystemMessage"
+   },
+   {
+    "slot": 32,
+    "name": "GameMessage"
+   }
+  ],
+  "mmMultiCircuit": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   },
+   {
+    "slot": 13,
+    "name": "Init"
+   },
+   {
+    "slot": 14,
+    "name": "InitGameStrings"
+   },
+   {
+    "slot": 15,
+    "name": "InitMyPlayer"
+   },
+   {
+    "slot": 16,
+    "name": "InitOtherPlayers"
+   },
+   {
+    "slot": 17,
+    "name": "InitGameObjects"
+   },
+   {
+    "slot": 18,
+    "name": "InitHUD"
+   },
+   {
+    "slot": 19,
+    "name": "UpdateGameInput"
+   },
+   {
+    "slot": 20,
+    "name": "UpdateDebugKeyInput"
+   },
+   {
+    "slot": 21,
+    "name": "UpdateGame"
+   },
+   {
+    "slot": 22,
+    "name": "NextRace"
+   },
+   {
+    "slot": 23,
+    "name": "HitWaterHandler"
+   },
+   {
+    "slot": 24,
+    "name": "DropThruCityHandler"
+   },
+   {
+    "slot": 25,
+    "name": "SendChatMessage"
+   },
+   {
+    "slot": 26,
+    "name": "SwitchState"
+   },
+   {
+    "slot": 27,
+    "name": "BeDone"
+   },
+   {
+    "slot": 28,
+    "name": "GetWaypoints"
+   },
+   {
+    "slot": 29,
+    "name": "InitNetworkPlayers"
+   },
+   {
+    "slot": 30,
+    "name": "InitRoster"
+   },
+   {
+    "slot": 31,
+    "name": "SystemMessage"
+   },
+   {
+    "slot": 32,
+    "name": "GameMessage"
+   }
+  ],
+  "mmMultiCR": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   },
+   {
+    "slot": 13,
+    "name": "Init"
+   },
+   {
+    "slot": 14,
+    "name": "InitGameStrings"
+   },
+   {
+    "slot": 15,
+    "name": "InitMyPlayer"
+   },
+   {
+    "slot": 16,
+    "name": "InitOtherPlayers"
+   },
+   {
+    "slot": 17,
+    "name": "InitGameObjects"
+   },
+   {
+    "slot": 18,
+    "name": "InitHUD"
+   },
+   {
+    "slot": 19,
+    "name": "UpdateGameInput"
+   },
+   {
+    "slot": 20,
+    "name": "UpdateDebugKeyInput"
+   },
+   {
+    "slot": 21,
+    "name": "UpdateGame"
+   },
+   {
+    "slot": 22,
+    "name": "NextRace"
+   },
+   {
+    "slot": 23,
+    "name": "HitWaterHandler"
+   },
+   {
+    "slot": 24,
+    "name": "DropThruCityHandler"
+   },
+   {
+    "slot": 25,
+    "name": "SendChatMessage"
+   },
+   {
+    "slot": 26,
+    "name": "SwitchState"
+   },
+   {
+    "slot": 27,
+    "name": "BeDone"
+   },
+   {
+    "slot": 28,
+    "name": "GetWaypoints"
+   },
+   {
+    "slot": 29,
+    "name": "InitNetworkPlayers"
+   },
+   {
+    "slot": 30,
+    "name": "InitRoster"
+   },
+   {
+    "slot": 31,
+    "name": "SystemMessage"
+   },
+   {
+    "slot": 32,
+    "name": "GameMessage"
+   }
+  ],
+  "mmMultiRace": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   },
+   {
+    "slot": 13,
+    "name": "Init"
+   },
+   {
+    "slot": 14,
+    "name": "InitGameStrings"
+   },
+   {
+    "slot": 15,
+    "name": "InitMyPlayer"
+   },
+   {
+    "slot": 16,
+    "name": "InitOtherPlayers"
+   },
+   {
+    "slot": 17,
+    "name": "InitGameObjects"
+   },
+   {
+    "slot": 18,
+    "name": "InitHUD"
+   },
+   {
+    "slot": 19,
+    "name": "UpdateGameInput"
+   },
+   {
+    "slot": 20,
+    "name": "UpdateDebugKeyInput"
+   },
+   {
+    "slot": 21,
+    "name": "UpdateGame"
+   },
+   {
+    "slot": 22,
+    "name": "NextRace"
+   },
+   {
+    "slot": 23,
+    "name": "HitWaterHandler"
+   },
+   {
+    "slot": 24,
+    "name": "DropThruCityHandler"
+   },
+   {
+    "slot": 25,
+    "name": "SendChatMessage"
+   },
+   {
+    "slot": 26,
+    "name": "SwitchState"
+   },
+   {
+    "slot": 27,
+    "name": "BeDone"
+   },
+   {
+    "slot": 28,
+    "name": "GetWaypoints"
+   },
+   {
+    "slot": 29,
+    "name": "InitNetworkPlayers"
+   },
+   {
+    "slot": 30,
+    "name": "InitRoster"
+   },
+   {
+    "slot": 31,
+    "name": "SystemMessage"
+   },
+   {
+    "slot": 32,
+    "name": "GameMessage"
+   }
+  ],
+  "mmMultiRoam": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   },
+   {
+    "slot": 13,
+    "name": "Init"
+   },
+   {
+    "slot": 14,
+    "name": "InitGameStrings"
+   },
+   {
+    "slot": 15,
+    "name": "InitMyPlayer"
+   },
+   {
+    "slot": 16,
+    "name": "InitOtherPlayers"
+   },
+   {
+    "slot": 17,
+    "name": "InitGameObjects"
+   },
+   {
+    "slot": 18,
+    "name": "InitHUD"
+   },
+   {
+    "slot": 19,
+    "name": "UpdateGameInput"
+   },
+   {
+    "slot": 20,
+    "name": "UpdateDebugKeyInput"
+   },
+   {
+    "slot": 21,
+    "name": "UpdateGame"
+   },
+   {
+    "slot": 22,
+    "name": "NextRace"
+   },
+   {
+    "slot": 23,
+    "name": "HitWaterHandler"
+   },
+   {
+    "slot": 24,
+    "name": "DropThruCityHandler"
+   },
+   {
+    "slot": 25,
+    "name": "SendChatMessage"
+   },
+   {
+    "slot": 26,
+    "name": "SwitchState"
+   },
+   {
+    "slot": 27,
+    "name": "BeDone"
+   },
+   {
+    "slot": 28,
+    "name": "GetWaypoints"
+   },
+   {
+    "slot": 29,
+    "name": "InitNetworkPlayers"
+   },
+   {
+    "slot": 30,
+    "name": "InitRoster"
+   },
+   {
+    "slot": 31,
+    "name": "SystemMessage"
+   },
+   {
+    "slot": 32,
+    "name": "GameMessage"
+   }
+  ],
+  "mmNetObject": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "mmPlayer": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "mmPlayerData": [
+   {
+    "slot": 1,
+    "name": "FileIO"
+   }
+  ],
+  "mmPopup": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "mmReplayManager": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "mmSingleBlitz": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   },
+   {
+    "slot": 13,
+    "name": "Init"
+   },
+   {
+    "slot": 14,
+    "name": "InitGameStrings"
+   },
+   {
+    "slot": 15,
+    "name": "InitMyPlayer"
+   },
+   {
+    "slot": 16,
+    "name": "InitOtherPlayers"
+   },
+   {
+    "slot": 17,
+    "name": "InitGameObjects"
+   },
+   {
+    "slot": 18,
+    "name": "InitHUD"
+   },
+   {
+    "slot": 19,
+    "name": "UpdateGameInput"
+   },
+   {
+    "slot": 20,
+    "name": "UpdateDebugKeyInput"
+   },
+   {
+    "slot": 21,
+    "name": "UpdateGame"
+   },
+   {
+    "slot": 22,
+    "name": "NextRace"
+   },
+   {
+    "slot": 23,
+    "name": "HitWaterHandler"
+   },
+   {
+    "slot": 24,
+    "name": "DropThruCityHandler"
+   },
+   {
+    "slot": 25,
+    "name": "SendChatMessage"
+   },
+   {
+    "slot": 26,
+    "name": "SwitchState"
+   },
+   {
+    "slot": 27,
+    "name": "BeDone"
+   },
+   {
+    "slot": 28,
+    "name": "GetWaypoints"
+   }
+  ],
+  "mmSingleCircuit": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   },
+   {
+    "slot": 13,
+    "name": "Init"
+   },
+   {
+    "slot": 14,
+    "name": "InitGameStrings"
+   },
+   {
+    "slot": 15,
+    "name": "InitMyPlayer"
+   },
+   {
+    "slot": 16,
+    "name": "InitOtherPlayers"
+   },
+   {
+    "slot": 17,
+    "name": "InitGameObjects"
+   },
+   {
+    "slot": 18,
+    "name": "InitHUD"
+   },
+   {
+    "slot": 19,
+    "name": "UpdateGameInput"
+   },
+   {
+    "slot": 20,
+    "name": "UpdateDebugKeyInput"
+   },
+   {
+    "slot": 21,
+    "name": "UpdateGame"
+   },
+   {
+    "slot": 22,
+    "name": "NextRace"
+   },
+   {
+    "slot": 23,
+    "name": "HitWaterHandler"
+   },
+   {
+    "slot": 24,
+    "name": "DropThruCityHandler"
+   },
+   {
+    "slot": 25,
+    "name": "SendChatMessage"
+   },
+   {
+    "slot": 26,
+    "name": "SwitchState"
+   },
+   {
+    "slot": 27,
+    "name": "BeDone"
+   },
+   {
+    "slot": 28,
+    "name": "GetWaypoints"
+   }
+  ],
+  "mmSingleRace": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   },
+   {
+    "slot": 13,
+    "name": "Init"
+   },
+   {
+    "slot": 14,
+    "name": "InitGameStrings"
+   },
+   {
+    "slot": 15,
+    "name": "InitMyPlayer"
+   },
+   {
+    "slot": 16,
+    "name": "InitOtherPlayers"
+   },
+   {
+    "slot": 17,
+    "name": "InitGameObjects"
+   },
+   {
+    "slot": 18,
+    "name": "InitHUD"
+   },
+   {
+    "slot": 19,
+    "name": "UpdateGameInput"
+   },
+   {
+    "slot": 20,
+    "name": "UpdateDebugKeyInput"
+   },
+   {
+    "slot": 21,
+    "name": "UpdateGame"
+   },
+   {
+    "slot": 22,
+    "name": "NextRace"
+   },
+   {
+    "slot": 23,
+    "name": "HitWaterHandler"
+   },
+   {
+    "slot": 24,
+    "name": "DropThruCityHandler"
+   },
+   {
+    "slot": 25,
+    "name": "SendChatMessage"
+   },
+   {
+    "slot": 26,
+    "name": "SwitchState"
+   },
+   {
+    "slot": 27,
+    "name": "BeDone"
+   },
+   {
+    "slot": 28,
+    "name": "GetWaypoints"
+   }
+  ],
+  "mmSingleRoam": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   },
+   {
+    "slot": 13,
+    "name": "Init"
+   },
+   {
+    "slot": 14,
+    "name": "InitGameStrings"
+   },
+   {
+    "slot": 15,
+    "name": "InitMyPlayer"
+   },
+   {
+    "slot": 16,
+    "name": "InitOtherPlayers"
+   },
+   {
+    "slot": 17,
+    "name": "InitGameObjects"
+   },
+   {
+    "slot": 18,
+    "name": "InitHUD"
+   },
+   {
+    "slot": 19,
+    "name": "UpdateGameInput"
+   },
+   {
+    "slot": 20,
+    "name": "UpdateDebugKeyInput"
+   },
+   {
+    "slot": 21,
+    "name": "UpdateGame"
+   },
+   {
+    "slot": 22,
+    "name": "NextRace"
+   },
+   {
+    "slot": 23,
+    "name": "HitWaterHandler"
+   },
+   {
+    "slot": 24,
+    "name": "DropThruCityHandler"
+   },
+   {
+    "slot": 25,
+    "name": "SendChatMessage"
+   },
+   {
+    "slot": 26,
+    "name": "SwitchState"
+   },
+   {
+    "slot": 27,
+    "name": "BeDone"
+   },
+   {
+    "slot": 28,
+    "name": "GetWaypoints"
+   }
+  ],
+  "mmSingleStunt": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   },
+   {
+    "slot": 13,
+    "name": "Init"
+   },
+   {
+    "slot": 14,
+    "name": "InitGameStrings"
+   },
+   {
+    "slot": 15,
+    "name": "InitMyPlayer"
+   },
+   {
+    "slot": 16,
+    "name": "InitOtherPlayers"
+   },
+   {
+    "slot": 17,
+    "name": "InitGameObjects"
+   },
+   {
+    "slot": 18,
+    "name": "InitHUD"
+   },
+   {
+    "slot": 19,
+    "name": "UpdateGameInput"
+   },
+   {
+    "slot": 20,
+    "name": "UpdateDebugKeyInput"
+   },
+   {
+    "slot": 21,
+    "name": "UpdateGame"
+   },
+   {
+    "slot": 22,
+    "name": "NextRace"
+   },
+   {
+    "slot": 23,
+    "name": "HitWaterHandler"
+   },
+   {
+    "slot": 24,
+    "name": "DropThruCityHandler"
+   },
+   {
+    "slot": 25,
+    "name": "SendChatMessage"
+   },
+   {
+    "slot": 26,
+    "name": "SwitchState"
+   },
+   {
+    "slot": 27,
+    "name": "BeDone"
+   },
+   {
+    "slot": 28,
+    "name": "GetWaypoints"
+   }
+  ],
+  "mmTextNode": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "mmTimer": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "mmToolTip": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "mmVehInfo": [],
+  "mmVehList": [],
+  "mmWaypointInstance": [
+   {
+    "slot": 0,
+    "name": "Reset"
+   },
+   {
+    "slot": 1,
+    "name": "GetPosition"
+   },
+   {
+    "slot": 2,
+    "name": "IsVisible"
+   },
+   {
+    "slot": 3,
+    "name": "GetMatrix"
+   },
+   {
+    "slot": 4,
+    "name": "SetMatrix"
+   },
+   {
+    "slot": 5,
+    "name": "SetVariant"
+   },
+   {
+    "slot": 6,
+    "name": "GetRadius"
+   },
+   {
+    "slot": 7,
+    "name": "GetEntity"
+   },
+   {
+    "slot": 8,
+    "name": "AttachEntity"
+   },
+   {
+    "slot": 9,
+    "name": "GetVelocity"
+   },
+   {
+    "slot": 10,
+    "name": "Detach"
+   },
+   {
+    "slot": 11,
+    "name": "Draw"
+   },
+   {
+    "slot": 12,
+    "name": "DrawShadow"
+   },
+   {
+    "slot": 13,
+    "name": "DrawShadowMap"
+   },
+   {
+    "slot": 14,
+    "name": "DrawGlow"
+   },
+   {
+    "slot": 15,
+    "name": "DrawReflected"
+   },
+   {
+    "slot": 16,
+    "name": "DrawReflectedParts"
+   },
+   {
+    "slot": 17,
+    "name": "Init"
+   },
+   {
+    "slot": 18,
+    "name": "SizeOf"
+   },
+   {
+    "slot": 19,
+    "name": "IsLandmark"
+   },
+   {
+    "slot": 20,
+    "name": "IsCollidable"
+   },
+   {
+    "slot": 21,
+    "name": "IsTerrainCollidable"
+   },
+   {
+    "slot": 22,
+    "name": "GetNumLightSources"
+   },
+   {
+    "slot": 23,
+    "name": "GetLightInfo"
+   },
+   {
+    "slot": 24,
+    "name": "SetupGfxLights"
+   },
+   {
+    "slot": 25,
+    "name": "GetBound"
+   }
+  ],
+  "mmWaypointObject": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "mmWaypoints": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "pedActive": [
+   {
+    "slot": 1,
+    "name": "PreUpdate"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "PostUpdate"
+   },
+   {
+    "slot": 4,
+    "name": "GetICS"
+   },
+   {
+    "slot": 5,
+    "name": "GetCollider"
+   },
+   {
+    "slot": 6,
+    "name": "GetInst"
+   },
+   {
+    "slot": 7,
+    "name": "DetachMe"
+   },
+   {
+    "slot": 8,
+    "name": "RequiresTerrainCollision"
+   },
+   {
+    "slot": 9,
+    "name": "FirstImpactCallback"
+   }
+  ],
+  "pedRagdollMgr": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "phBound": [
+   {
+    "slot": 0,
+    "name": "CenterBound"
+   },
+   {
+    "slot": 1,
+    "name": "GetMaterial"
+   },
+   {
+    "slot": 2,
+    "name": "GetNumMaterials"
+   },
+   {
+    "slot": 3,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 4,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 5,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 6,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 7,
+    "name": "TestProbePoint"
+   },
+   {
+    "slot": 8,
+    "name": "TestAIPoint"
+   },
+   {
+    "slot": 9,
+    "name": "TestEdge"
+   },
+   {
+    "slot": 10,
+    "name": "TestProbe"
+   },
+   {
+    "slot": 11,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 12,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 13,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 14,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 15,
+    "name": "EffectiveMass"
+   },
+   {
+    "slot": 16,
+    "name": "GetVertex"
+   }
+  ],
+  "phBoundBox": [
+   {
+    "slot": 0,
+    "name": "CenterBound"
+   },
+   {
+    "slot": 1,
+    "name": "GetMaterial"
+   },
+   {
+    "slot": 2,
+    "name": "GetNumMaterials"
+   },
+   {
+    "slot": 3,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 4,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 5,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 6,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 7,
+    "name": "TestProbePoint"
+   },
+   {
+    "slot": 8,
+    "name": "TestAIPoint"
+   },
+   {
+    "slot": 9,
+    "name": "TestEdge"
+   },
+   {
+    "slot": 10,
+    "name": "TestProbe"
+   },
+   {
+    "slot": 11,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 12,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 13,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 14,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 15,
+    "name": "EffectiveMass"
+   },
+   {
+    "slot": 16,
+    "name": "GetVertex"
+   }
+  ],
+  "phBoundGeometry": [
+   {
+    "slot": 0,
+    "name": "CenterBound"
+   },
+   {
+    "slot": 1,
+    "name": "GetMaterial"
+   },
+   {
+    "slot": 2,
+    "name": "GetNumMaterials"
+   },
+   {
+    "slot": 3,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 4,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 5,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 6,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 7,
+    "name": "TestProbePoint"
+   },
+   {
+    "slot": 8,
+    "name": "TestAIPoint"
+   },
+   {
+    "slot": 9,
+    "name": "TestEdge"
+   },
+   {
+    "slot": 10,
+    "name": "TestProbe"
+   },
+   {
+    "slot": 11,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 12,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 13,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 14,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 15,
+    "name": "EffectiveMass"
+   },
+   {
+    "slot": 16,
+    "name": "GetVertex"
+   }
+  ],
+  "phBoundHotdog": [
+   {
+    "slot": 0,
+    "name": "CenterBound"
+   },
+   {
+    "slot": 1,
+    "name": "GetMaterial"
+   },
+   {
+    "slot": 2,
+    "name": "GetNumMaterials"
+   },
+   {
+    "slot": 3,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 4,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 5,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 6,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 7,
+    "name": "TestProbePoint"
+   },
+   {
+    "slot": 8,
+    "name": "TestAIPoint"
+   },
+   {
+    "slot": 9,
+    "name": "TestEdge"
+   },
+   {
+    "slot": 10,
+    "name": "TestProbe"
+   },
+   {
+    "slot": 11,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 12,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 13,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 14,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 15,
+    "name": "EffectiveMass"
+   },
+   {
+    "slot": 16,
+    "name": "GetVertex"
+   }
+  ],
+  "phBoundPolygonal": [
+   {
+    "slot": 0,
+    "name": "CenterBound"
+   },
+   {
+    "slot": 1,
+    "name": "GetMaterial"
+   },
+   {
+    "slot": 2,
+    "name": "GetNumMaterials"
+   },
+   {
+    "slot": 3,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 4,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 5,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 6,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 7,
+    "name": "TestProbePoint"
+   },
+   {
+    "slot": 8,
+    "name": "TestAIPoint"
+   },
+   {
+    "slot": 9,
+    "name": "TestEdge"
+   },
+   {
+    "slot": 10,
+    "name": "TestProbe"
+   },
+   {
+    "slot": 11,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 12,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 13,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 14,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 15,
+    "name": "EffectiveMass"
+   },
+   {
+    "slot": 16,
+    "name": "GetVertex"
+   }
+  ],
+  "phBoundSphere": [
+   {
+    "slot": 0,
+    "name": "CenterBound"
+   },
+   {
+    "slot": 1,
+    "name": "GetMaterial"
+   },
+   {
+    "slot": 2,
+    "name": "GetNumMaterials"
+   },
+   {
+    "slot": 3,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 4,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 5,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 6,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 7,
+    "name": "TestProbePoint"
+   },
+   {
+    "slot": 8,
+    "name": "TestAIPoint"
+   },
+   {
+    "slot": 9,
+    "name": "TestEdge"
+   },
+   {
+    "slot": 10,
+    "name": "TestProbe"
+   },
+   {
+    "slot": 11,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 12,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 13,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 14,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 15,
+    "name": "EffectiveMass"
+   },
+   {
+    "slot": 16,
+    "name": "GetVertex"
+   }
+  ],
+  "phBoundTerrain": [
+   {
+    "slot": 0,
+    "name": "CenterBound"
+   },
+   {
+    "slot": 1,
+    "name": "GetMaterial"
+   },
+   {
+    "slot": 2,
+    "name": "GetNumMaterials"
+   },
+   {
+    "slot": 3,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 4,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 5,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 6,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 7,
+    "name": "TestProbePoint"
+   },
+   {
+    "slot": 8,
+    "name": "TestAIPoint"
+   },
+   {
+    "slot": 9,
+    "name": "TestEdge"
+   },
+   {
+    "slot": 10,
+    "name": "TestProbe"
+   },
+   {
+    "slot": 11,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 12,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 13,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 14,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 15,
+    "name": "EffectiveMass"
+   },
+   {
+    "slot": 16,
+    "name": "GetVertex"
+   }
+  ],
+  "phBoundTerrainLocal": [
+   {
+    "slot": 0,
+    "name": "CenterBound"
+   },
+   {
+    "slot": 1,
+    "name": "GetMaterial"
+   },
+   {
+    "slot": 2,
+    "name": "GetNumMaterials"
+   },
+   {
+    "slot": 3,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 4,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 5,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 6,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 7,
+    "name": "TestProbePoint"
+   },
+   {
+    "slot": 8,
+    "name": "TestAIPoint"
+   },
+   {
+    "slot": 9,
+    "name": "TestEdge"
+   },
+   {
+    "slot": 10,
+    "name": "TestProbe"
+   },
+   {
+    "slot": 11,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 12,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 13,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 14,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 15,
+    "name": "EffectiveMass"
+   },
+   {
+    "slot": 16,
+    "name": "GetVertex"
+   }
+  ],
+  "phJoint": [
+   {
+    "slot": 0,
+    "name": "IsBroken"
+   },
+   {
+    "slot": 1,
+    "name": "ComputeInvMassMatrix"
+   },
+   {
+    "slot": 2,
+    "name": "ComputeInvMassMatrix"
+   },
+   {
+    "slot": 3,
+    "name": "ComputeJointForce"
+   },
+   {
+    "slot": 4,
+    "name": "ComputeJointPush"
+   },
+   {
+    "slot": 5,
+    "name": "GetInvMassMatrix"
+   }
+  ],
+  "phMaterial": [
+   {
+    "slot": 0,
+    "name": "Copy"
+   },
+   {
+    "slot": 1,
+    "name": "Save"
+   },
+   {
+    "slot": 2,
+    "name": "SaveBinary"
+   }
+  ],
+  "phPhysicsManager": [
+   {
+    "slot": 0,
+    "name": "TestProbe"
+   },
+   {
+    "slot": 1,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 2,
+    "name": "PromoteInstance"
+   },
+   {
+    "slot": 3,
+    "name": "DemoteInstance"
+   },
+   {
+    "slot": 4,
+    "name": "KillInstance"
+   },
+   {
+    "slot": 5,
+    "name": "DisableInstance"
+   },
+   {
+    "slot": 6,
+    "name": "EnableInstance"
+   },
+   {
+    "slot": 7,
+    "name": "GetCollider"
+   },
+   {
+    "slot": 8,
+    "name": "CreateInstance"
+   }
+  ],
+  "RadialGauge": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "sdlCommon": [
+   {
+    "slot": 0,
+    "name": "CenterBound"
+   },
+   {
+    "slot": 1,
+    "name": "GetMaterial"
+   },
+   {
+    "slot": 2,
+    "name": "GetNumMaterials"
+   },
+   {
+    "slot": 3,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 4,
+    "name": "SetFriction"
+   },
+   {
+    "slot": 5,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 6,
+    "name": "SetElasticity"
+   },
+   {
+    "slot": 7,
+    "name": "TestProbePoint"
+   },
+   {
+    "slot": 8,
+    "name": "TestAIPoint"
+   },
+   {
+    "slot": 9,
+    "name": "TestEdge"
+   },
+   {
+    "slot": 10,
+    "name": "TestProbe"
+   },
+   {
+    "slot": 11,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 12,
+    "name": "TestSphere"
+   },
+   {
+    "slot": 13,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 14,
+    "name": "ModifyInvMassMatrix"
+   },
+   {
+    "slot": 15,
+    "name": "EffectiveMass"
+   },
+   {
+    "slot": 16,
+    "name": "GetVertex"
+   },
+   {
+    "slot": 17,
+    "name": "TestAI"
+   },
+   {
+    "slot": 18,
+    "name": "TestEdgePoint"
+   },
+   {
+    "slot": 19,
+    "name": "CollideEdge"
+   },
+   {
+    "slot": 20,
+    "name": "CollideProbe"
+   },
+   {
+    "slot": 21,
+    "name": "CollideAI"
+   },
+   {
+    "slot": 22,
+    "name": "CollideEdgePoint"
+   },
+   {
+    "slot": 23,
+    "name": "CollideProbePoint"
+   },
+   {
+    "slot": 24,
+    "name": "CollideAIPoint"
+   },
+   {
+    "slot": 25,
+    "name": "AllocateState"
+   },
+   {
+    "slot": 26,
+    "name": "GetEdgeCosine"
+   },
+   {
+    "slot": 27,
+    "name": "GetEdgeNormal"
+   },
+   {
+    "slot": 28,
+    "name": "TrivialCollideBoxToLevel"
+   },
+   {
+    "slot": 29,
+    "name": "CollidePolyToLevel"
+   },
+   {
+    "slot": 30,
+    "name": "FindImpactsSphereOneRoom"
+   },
+   {
+    "slot": 31,
+    "name": "FindImpactsHotdogOneRoom"
+   }
+  ],
+  "UIButton": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   },
+   {
+    "slot": 13,
+    "name": "Disable"
+   },
+   {
+    "slot": 14,
+    "name": "Enable"
+   },
+   {
+    "slot": 15,
+    "name": "TurnOn"
+   },
+   {
+    "slot": 16,
+    "name": "TurnOff"
+   },
+   {
+    "slot": 17,
+    "name": "SetReadOnly"
+   },
+   {
+    "slot": 18,
+    "name": "Action"
+   },
+   {
+    "slot": 19,
+    "name": "CaptureAction"
+   },
+   {
+    "slot": 20,
+    "name": "Switch"
+   },
+   {
+    "slot": 21,
+    "name": "EvalMouseX"
+   },
+   {
+    "slot": 22,
+    "name": "ReturnDescription"
+   },
+   {
+    "slot": 23,
+    "name": "SetPosition"
+   },
+   {
+    "slot": 24,
+    "name": "GetScreenHeight"
+   }
+  ],
+  "UILabel": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   },
+   {
+    "slot": 13,
+    "name": "Disable"
+   },
+   {
+    "slot": 14,
+    "name": "Enable"
+   },
+   {
+    "slot": 15,
+    "name": "TurnOn"
+   },
+   {
+    "slot": 16,
+    "name": "TurnOff"
+   },
+   {
+    "slot": 17,
+    "name": "SetReadOnly"
+   },
+   {
+    "slot": 18,
+    "name": "Action"
+   },
+   {
+    "slot": 19,
+    "name": "CaptureAction"
+   },
+   {
+    "slot": 20,
+    "name": "Switch"
+   },
+   {
+    "slot": 21,
+    "name": "EvalMouseX"
+   },
+   {
+    "slot": 22,
+    "name": "ReturnDescription"
+   },
+   {
+    "slot": 23,
+    "name": "SetPosition"
+   },
+   {
+    "slot": 24,
+    "name": "GetScreenHeight"
+   }
+  ],
+  "UIMenu": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "uiWidget": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   },
+   {
+    "slot": 13,
+    "name": "Disable"
+   },
+   {
+    "slot": 14,
+    "name": "Enable"
+   },
+   {
+    "slot": 15,
+    "name": "TurnOn"
+   },
+   {
+    "slot": 16,
+    "name": "TurnOff"
+   },
+   {
+    "slot": 17,
+    "name": "SetReadOnly"
+   },
+   {
+    "slot": 18,
+    "name": "Action"
+   },
+   {
+    "slot": 19,
+    "name": "CaptureAction"
+   },
+   {
+    "slot": 20,
+    "name": "Switch"
+   },
+   {
+    "slot": 21,
+    "name": "EvalMouseX"
+   },
+   {
+    "slot": 22,
+    "name": "ReturnDescription"
+   },
+   {
+    "slot": 23,
+    "name": "SetPosition"
+   },
+   {
+    "slot": 24,
+    "name": "GetScreenHeight"
+   }
+  ],
+  "vehAero": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "vehAxle": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "vehCar": [
+   {
+    "slot": 1,
+    "name": "PreUpdate"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "PostUpdate"
+   },
+   {
+    "slot": 4,
+    "name": "GetICS"
+   },
+   {
+    "slot": 5,
+    "name": "GetCollider"
+   },
+   {
+    "slot": 6,
+    "name": "GetInst"
+   },
+   {
+    "slot": 7,
+    "name": "DetachMe"
+   },
+   {
+    "slot": 8,
+    "name": "RequiresTerrainCollision"
+   },
+   {
+    "slot": 9,
+    "name": "FirstImpactCallback"
+   }
+  ],
+  "vehCarDamage": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   },
+   {
+    "slot": 13,
+    "name": "GetDamageModifier"
+   }
+  ],
+  "vehCarModel": [
+   {
+    "slot": 0,
+    "name": "Reset"
+   },
+   {
+    "slot": 1,
+    "name": "GetPosition"
+   },
+   {
+    "slot": 2,
+    "name": "IsVisible"
+   },
+   {
+    "slot": 3,
+    "name": "GetMatrix"
+   },
+   {
+    "slot": 4,
+    "name": "SetMatrix"
+   },
+   {
+    "slot": 5,
+    "name": "SetVariant"
+   },
+   {
+    "slot": 6,
+    "name": "GetRadius"
+   },
+   {
+    "slot": 7,
+    "name": "GetEntity"
+   },
+   {
+    "slot": 8,
+    "name": "AttachEntity"
+   },
+   {
+    "slot": 9,
+    "name": "GetVelocity"
+   },
+   {
+    "slot": 10,
+    "name": "Detach"
+   },
+   {
+    "slot": 11,
+    "name": "Draw"
+   },
+   {
+    "slot": 12,
+    "name": "DrawShadow"
+   },
+   {
+    "slot": 13,
+    "name": "DrawShadowMap"
+   },
+   {
+    "slot": 14,
+    "name": "DrawGlow"
+   },
+   {
+    "slot": 15,
+    "name": "DrawReflected"
+   },
+   {
+    "slot": 16,
+    "name": "DrawReflectedParts"
+   },
+   {
+    "slot": 17,
+    "name": "Init"
+   },
+   {
+    "slot": 18,
+    "name": "SizeOf"
+   },
+   {
+    "slot": 19,
+    "name": "IsLandmark"
+   },
+   {
+    "slot": 20,
+    "name": "IsCollidable"
+   },
+   {
+    "slot": 21,
+    "name": "IsTerrainCollidable"
+   },
+   {
+    "slot": 22,
+    "name": "GetNumLightSources"
+   },
+   {
+    "slot": 23,
+    "name": "GetLightInfo"
+   },
+   {
+    "slot": 24,
+    "name": "SetupGfxLights"
+   },
+   {
+    "slot": 25,
+    "name": "GetBound"
+   }
+  ],
+  "vehCarSim": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "vehDrivetrain": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "vehEngine": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "vehGyro": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "vehSplash": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "vehStuck": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "vehSuspension": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "vehTrailer": [
+   {
+    "slot": 1,
+    "name": "PreUpdate"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "PostUpdate"
+   },
+   {
+    "slot": 4,
+    "name": "GetICS"
+   },
+   {
+    "slot": 5,
+    "name": "GetCollider"
+   },
+   {
+    "slot": 6,
+    "name": "GetInst"
+   },
+   {
+    "slot": 7,
+    "name": "DetachMe"
+   },
+   {
+    "slot": 8,
+    "name": "RequiresTerrainCollision"
+   },
+   {
+    "slot": 9,
+    "name": "FirstImpactCallback"
+   }
+  ],
+  "vehTrailerInstance": [
+   {
+    "slot": 0,
+    "name": "Reset"
+   },
+   {
+    "slot": 1,
+    "name": "GetPosition"
+   },
+   {
+    "slot": 2,
+    "name": "IsVisible"
+   },
+   {
+    "slot": 3,
+    "name": "GetMatrix"
+   },
+   {
+    "slot": 4,
+    "name": "SetMatrix"
+   },
+   {
+    "slot": 5,
+    "name": "SetVariant"
+   },
+   {
+    "slot": 6,
+    "name": "GetRadius"
+   },
+   {
+    "slot": 7,
+    "name": "GetEntity"
+   },
+   {
+    "slot": 8,
+    "name": "AttachEntity"
+   },
+   {
+    "slot": 9,
+    "name": "GetVelocity"
+   },
+   {
+    "slot": 10,
+    "name": "Detach"
+   },
+   {
+    "slot": 11,
+    "name": "Draw"
+   },
+   {
+    "slot": 12,
+    "name": "DrawShadow"
+   },
+   {
+    "slot": 13,
+    "name": "DrawShadowMap"
+   },
+   {
+    "slot": 14,
+    "name": "DrawGlow"
+   },
+   {
+    "slot": 15,
+    "name": "DrawReflected"
+   },
+   {
+    "slot": 16,
+    "name": "DrawReflectedParts"
+   },
+   {
+    "slot": 17,
+    "name": "Init"
+   },
+   {
+    "slot": 18,
+    "name": "SizeOf"
+   },
+   {
+    "slot": 19,
+    "name": "IsLandmark"
+   },
+   {
+    "slot": 20,
+    "name": "IsCollidable"
+   },
+   {
+    "slot": 21,
+    "name": "IsTerrainCollidable"
+   },
+   {
+    "slot": 22,
+    "name": "GetNumLightSources"
+   },
+   {
+    "slot": 23,
+    "name": "GetLightInfo"
+   },
+   {
+    "slot": 24,
+    "name": "SetupGfxLights"
+   },
+   {
+    "slot": 25,
+    "name": "GetBound"
+   }
+  ],
+  "vehTransmission": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "vehWeelCheap": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "vehWheel": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ],
+  "vehWheelPtx": [
+   {
+    "slot": 1,
+    "name": "Cull"
+   },
+   {
+    "slot": 2,
+    "name": "Update"
+   },
+   {
+    "slot": 3,
+    "name": "Reset"
+   },
+   {
+    "slot": 4,
+    "name": "ResChange"
+   },
+   {
+    "slot": 5,
+    "name": "UpdatePaused"
+   },
+   {
+    "slot": 6,
+    "name": "FileIO"
+   },
+   {
+    "slot": 7,
+    "name": "AfterLoad"
+   },
+   {
+    "slot": 8,
+    "name": "BeforeSave"
+   },
+   {
+    "slot": 9,
+    "name": "Save"
+   },
+   {
+    "slot": 10,
+    "name": "Load"
+   },
+   {
+    "slot": 11,
+    "name": "GetClassName"
+   },
+   {
+    "slot": 12,
+    "name": "GetDirName"
+   }
+  ]
+ }
+}
