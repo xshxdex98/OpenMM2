@@ -25,6 +25,9 @@
 
 #include "audio/aud3dambientobject.h"
 
+class Vector3;
+struct tagAud3DAmbientSoundData;
+
 class aiSubwayAudio : public Aud3DAmbientObject
 {
 public:
@@ -42,8 +45,13 @@ public:
 
     // ?Update@aiSubwayAudio@@QAEXM@Z
     ARTS_IMPORT void Update(f32 arg1);
+
+public:
+    // Members from 0x080; everything below that belongs to Aud3DAmbientObject.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    i32 field_80; // 0x080
 };
 
 // ??_7aiSubwayAudio@@6B@
 // vtable at 0x005B876C
-// check_size(aiSubwayAudio, 0x60); // size known, members are not - cannot verify
+check_size(aiSubwayAudio, 0x84);

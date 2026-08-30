@@ -63,6 +63,22 @@ public:
 
     // ?UpdateState@aiCableCarAudioData@@QAEXMM@Z
     ARTS_IMPORT void UpdateState(f32 arg1, f32 arg2);
+
+public:
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    AudSoundBase* GoPtr; // 0x000
+    AudSoundBase* StopPtr; // 0x004
+    AudSoundBase* LoopPtr; // 0x008
+    AudSoundBase* GetSpeedPtr; // 0x00C
+    AudSoundBase* CrossIntersectionPtr; // 0x010
+    AudSoundBase* field_14; // 0x014
+    i32 field_18; // 0x018
+    i32 field_1C; // 0x01C
+    i32 field_20; // 0x020
+    i32 field_24; // 0x024
+    i32 field_28; // 0x028
+    i32 field_2C; // 0x02C
+    i32 field_30; // 0x030
 };
 
-// check_size(aiCableCarAudioData, 0x0); // TODO: no layout in the IDB type library
+check_size(aiCableCarAudioData, 0x34);

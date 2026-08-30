@@ -25,6 +25,8 @@
 
 #include "audio/aud3dobject.h"
 
+#include "aicablecaraudiodata.h"
+
 class Vector3;
 
 class aiCableCarAudio : public Aud3DObject
@@ -53,8 +55,15 @@ public:
 
     // ?UpdateAudio@aiCableCarAudio@@QAEHM@Z
     ARTS_IMPORT i32 UpdateAudio(f32 arg1);
+
+public:
+    // Members from 0x060; everything below that belongs to Aud3DObject.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    f32* field_60; // 0x060
+    f32 field_64; // 0x064
+    aiCableCarAudioData field_68; // 0x068
 };
 
 // ??_7aiCableCarAudio@@6B@
 // vtable at 0x005B8754
-// check_size(aiCableCarAudio, 0x60); // size known, members are not - cannot verify
+check_size(aiCableCarAudio, 0x9C);

@@ -58,6 +58,12 @@ public:
 
     // ?Register@mmPositions@@QAEHAAVVector4@@HHHHPAD@Z
     ARTS_IMPORT i32 Register(Vector4& arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5, char* arg6);
+
+public:
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    void** Entries; // 0x000
+    i32 Count; // 0x004
+    i32 Capacity; // 0x008
 };
 
-// check_size(mmPositions, 0x0); // TODO: no layout in the IDB type library
+check_size(mmPositions, 0xC);

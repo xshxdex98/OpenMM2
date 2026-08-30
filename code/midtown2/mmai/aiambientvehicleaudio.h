@@ -158,8 +158,25 @@ private:
 
     // ?s_iVoiceFileNum@aiAmbientVehicleAudio@@0HA
     ARTS_IMPORT static i32 s_iVoiceFileNum;
+
+public:
+    // Members from 0x060; everything below that belongs to Aud3DObject.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    i32 field_60; // 0x060
+    i32 field_64; // 0x064
+    i32 field_68; // 0x068
+    i32 field_6C; // 0x06C
+    AudImpact* field_70; // 0x070
+    vehHornAudio* field_74; // 0x074
+    AudCreature* field_78; // 0x078
+    aiEngineAudio* field_7C; // 0x07C
+    f32 field_80; // 0x080
+    f32 field_84; // 0x084
+    u8 field_88; // 0x088
+    u8 field_89; // 0x089
+    u8 pad_8A[2]; // 0x08A
 };
 
 // ??_7aiAmbientVehicleAudio@@6B@
 // vtable at 0x005B2D74
-// check_size(aiAmbientVehicleAudio, 0x60); // size known, members are not - cannot verify
+check_size(aiAmbientVehicleAudio, 0x8C);

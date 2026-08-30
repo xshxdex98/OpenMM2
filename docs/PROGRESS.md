@@ -19,7 +19,7 @@ Two numbers matter and they are different:
 | | | |
 |---|--:|---|
 | Ported | 2.11% | `#...........................` |
-| Ready to port | 69.1% | `###################.........` |
+| Ready to port | 69.8% | `####################........` |
 | Size known, members not | 14.7% | `####........................` |
 
 | Metric | Value |
@@ -29,7 +29,7 @@ Two numbers matter and they are different:
 | Machine code | 1.7 MB |
 | Code ported | 36.2 KB |
 | Classes | 535 |
-| Classes with a member layout | 273 (51%) |
+| Classes with a member layout | 279 (52%) |
 | Classes with only a size | 70 |
 | Virtual methods | 1938 |
 | Vftables | 340 |
@@ -45,9 +45,9 @@ layout is known.
 
 | Subsystem | Classes | Functions | Code | Share | Ported | Ready |
 |---|--:|--:|--:|--:|--:|--:|
-| `misc` | 128 | 3559 | 512.7 KB | 29.8% | 5.1% | 78% |
+| `misc` | 128 | 3559 | 512.7 KB | 29.8% | 5.1% | 79% |
 | `mm` | 106 | 1732 | 329.8 KB | 19.2% | 0.4% | 64% |
-| `ai` | 42 | 773 | 245.2 KB | 14.3% | 0.5% | 56% |
+| `ai` | 42 | 773 | 245.2 KB | 14.3% | 0.5% | 59% |
 | `ph` | 27 | 437 | 164.2 KB | 9.5% | 0.0% | 75% |
 | `veh` | 34 | 585 | 91.5 KB | 5.3% | 1.0% | 84% |
 | `gfx` | 13 | 189 | 46.6 KB | 2.7% | 13.3% | 55% |
@@ -88,7 +88,7 @@ layout is known.
 - **1938 virtual methods across 340 vftables.** Constructors must be ported together
   with every virtual of their class, or the vtable the compiler emits will not link.
 - Largest class not yet ported: **`aiVehiclePhysics`** at 58.7 KB.
-- **262 classes (531.9 KB, 31% of code) have no known layout** and are blocked: their
+- **256 classes (520.4 KB, 30% of code) have no known layout** and are blocked: their
   member offsets would have to be guessed, which is how you get silent corruption.
 
 ### Biggest blocked classes
@@ -133,12 +133,12 @@ Layout known, so these can be started today.
 
 | Date | Ported | Code ported | game.asm |
 |---|--:|--:|--:|
-| 2026-08-30 | 2.03% | 35.0 KB | 23.2 MB |
 | 2026-08-30 | 2.04% | 35.1 KB | 23.2 MB |
 | 2026-08-30 | 2.05% | 35.3 KB | 23.2 MB |
 | 2026-08-30 | 2.07% | 35.5 KB | 23.2 MB |
 | 2026-08-30 | 2.07% | 35.6 KB | 23.2 MB |
 | 2026-08-30 | 2.09% | 36.0 KB | 23.2 MB |
+| 2026-08-30 | 2.11% | 36.2 KB | 23.2 MB |
 | 2026-08-30 | 2.11% | 36.2 KB | 23.2 MB |
 | 2026-08-30 | 2.11% | 36.2 KB | 23.2 MB |
 | 2026-08-30 | 2.11% | 36.2 KB | 23.2 MB |

@@ -125,8 +125,22 @@ private:
 
     // ?UpdateSoundData@Aud3DAmbientObject@@AAEXXZ
     ARTS_IMPORT void UpdateSoundData();
+
+public:
+    // Members from 0x060; everything below that belongs to Aud3DObject.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    i32 field_60; // 0x060
+    i32 field_64; // 0x064
+    u8 field_68; // 0x068
+    u8 field_69; // 0x069
+    u8 pad_6A[2]; // 0x06A
+    f32 field_6C; // 0x06C
+    f32 field_70; // 0x070
+    f32 field_74; // 0x074
+    f32 field_78; // 0x078
+    tagAud3DAmbientSoundData** field_7C; // 0x07C
 };
 
 // ??_7Aud3DAmbientObject@@6B@
 // vtable at 0x005B4D18
-// check_size(Aud3DAmbientObject, 0x60); // size known, members are not - cannot verify
+check_size(Aud3DAmbientObject, 0x80);
