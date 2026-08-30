@@ -13,6 +13,7 @@ Members are NOT emitted. A linker map lists statics and functions, never instanc
 offsets have to come from the binary. Emitting a guessed layout would be worse than none, because
 the whole point of member order is that it matches memory.
 """
+import functools
 import json
 import os
 import re
@@ -219,6 +220,26 @@ def base_of(cls):
     return inferred if inferred and inferred != cls else None
 
 
+@functools.lru_cache(maxsize=1)
+def base_classes():
+    """Every class that something, anywhere, inherits from.
+
+    A raw-only member naming one of these is a flattened base stub rather than a real member, even
+    when the ancestor walk cannot prove it: the recovery records HostRaceMenu and RaceMenuBase as
+    BOTH deriving from UIMenu, so they look like siblings and no walk from HostRaceMenu ever
+    reaches RaceMenuBase - yet its `RaceMenuBase` entry at 0x8C is exactly that base's flattened
+    bytes. Something being used as a base somewhere is the only evidence available in that case.
+    """
+    out = set()
+    for table in ((MM2T.get("bases") or {}), ):
+        out |= {v for v in table.values() if v}
+    for cls, info in HIER.items():
+        base = (info or {}).get("base")
+        if base:
+            out.add(base)
+    return out
+
+
 def usable_members(cls, info):
     """The members of `cls` that can actually be declared, in recorded order.
 
@@ -234,8 +255,15 @@ def usable_members(cls, info):
     raw-only members naming a known type, 30 spell the class's own base and one more spells a
     grandparent (mmCompRoster's `asNode`, reached through mmCompBase). Those are flattened base
     stubs; inheritance already lays those bytes down, so reviving one would emit the base twice.
-    Only a type appearing nowhere in the ancestor chain can be a genuine member - today that is
-    mmNetPath's Matrix44 and nothing else.
+    Only a type appearing nowhere in the ancestor chain can be a genuine member.
+
+    THE ANCESTOR WALK ALONE IS NOT ENOUGH, because the recorded hierarchy is not always deep enough
+    to expose the relationship. HostRaceMenu and RaceMenuBase are both recorded as deriving from
+    UIMenu - siblings, as far as any walk can tell - so HostRaceMenu's `RaceMenuBase` entry at 0x8C
+    survived the ancestor test and was emitted on top of the 152 bytes inheritance had already laid
+    down, declaring pad_8C[152] and field_8C[152] at the same offset. So a raw type that is used as
+    a base ANYWHERE is refused as well. That costs nothing real: a type never used as a base cannot
+    be a flattened base stub, and refusing one that is only returns the previous behaviour.
 
     Both the member emitter and the include scanner read this, because a revived member needs its
     defining header included just as much as it needs declaring.
@@ -248,7 +276,8 @@ def usable_members(cls, info):
 
         raw = (m.get("raw") or "").strip()
         raw_size = size_of(raw) if raw else None
-        if raw_size and raw != cls and raw not in ancestors_of(cls):
+        if (raw_size and raw != cls and raw not in ancestors_of(cls)
+                and raw not in base_classes()):
             out.append(dict(m, name="field_%X" % m["offset"], type=raw,
                             width=raw_size, count=0))
     return out
@@ -260,13 +289,20 @@ def ancestors_of(cls):
     Used to tell a flattened base stub from a real member: the recovery writes both as an entry at
     offset 0 naming a class, and only the ancestor test separates them.
     """
+    # Both sources are followed at every level, not just the one base_of() prefers. They disagree
+    # on ten classes, and for this purpose a relationship recorded by EITHER is enough to prove a
+    # member is really a base.
     out = []
     seen = {cls}
-    base = base_of(cls)
-    while base and base not in seen:
-        seen.add(base)
-        out.append(base)
-        base = base_of(base)
+    queue = [cls]
+    while queue:
+        cur = queue.pop()
+        for base in ((MM2T.get("bases") or {}).get(cur),
+                     (HIER.get(cur) or {}).get("base")):
+            if base and base not in seen:
+                seen.add(base)
+                out.append(base)
+                queue.append(base)
     return out
 
 
