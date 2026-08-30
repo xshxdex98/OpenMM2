@@ -95,6 +95,7 @@ public:
 public:
     // Members from 0x258; everything below that belongs to dgPhysEntity.
     // Offset order is mandatory - the original code reads these at fixed offsets.
+    u8 pad_258[364]; // 0x258
     f32 field_3C4; // 0x3C4
     f32 field_3C8; // 0x3C8
     f32 field_3CC; // 0x3CC

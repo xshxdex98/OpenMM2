@@ -60,7 +60,7 @@ public:
     i16 NumPerps; // 0x004
     i16 NumChasers[3]; // 0x006
     vehCar* PlayerCars[3]; // 0x00C
-    vehCar [3]* CopCars[3]; // 0x018
+    vehCar* CopCars[3]; // 0x018
     u8 pad_24[24]; // 0x024
 };
 

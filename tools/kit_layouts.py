@@ -189,9 +189,18 @@ def convert(cls, members, size, sizes, known):
         name = f["name"]
 
         raw = (f["type"] or "").strip()
-        m_arr = ARRAY.match(raw)
-        count = int(m_arr.group(2)) if m_arr else 0
-        ctype = map_type(m_arr.group(1) if m_arr else raw)
+
+        # Strip EVERY trailing extent, not just the outermost. IDA spells some pointer arrays with
+        # a doubled one - `MM2::vehCar *[3][3]` for what is really `vehCar* CopCars[3]` - and
+        # leaving the inner one in the element type produced `vehCar [3]*`, which is not a type.
+        count = 0
+        while True:
+            m_arr = ARRAY.match(raw)
+            if not m_arr:
+                break
+            count = max(count, int(m_arr.group(2)))
+            raw = m_arr.group(1).strip()
+        ctype = map_type(raw)
 
         # The vtable pointer is spelled the way the rest of data/layouts.json spells it, so a
         # reader does not meet two conventions for the same thing.

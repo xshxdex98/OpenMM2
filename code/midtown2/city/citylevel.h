@@ -188,11 +188,6 @@ private:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i8 field_4[4]; // 0x004
-    pvsSphere** pSpheres; // 0x008
-    u32 PvsIndex; // 0x00C
-    u8 field_10[8]; // 0x010
-    i8* field_18; // 0x018
     u8 field_1C; // 0x01C
 };
 

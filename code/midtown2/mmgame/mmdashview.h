@@ -85,6 +85,7 @@ private:
 public:
     // Members from 0x018; everything below that belongs to asNode.
     // Offset order is mandatory - the original code reads these at fixed offsets.
+    u8 pad_18[104]; // 0x018
     u8 field_80[16]; // 0x080
     RadialGauge field_90; // 0x090
     RadialGauge field_1A4; // 0x1A4

@@ -65,23 +65,6 @@ private:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    dgBangerInstance Instance; // 0x000
-    i32 field_18; // 0x018
-    i32 field_1C; // 0x01C
-    i32 field_20; // 0x020
-    i32 field_24; // 0x024
-    i32 field_28; // 0x028
-    i32 field_2C; // 0x02C
-    i32 field_30; // 0x030
-    i32 field_34; // 0x034
-    i32 field_38; // 0x038
-    i32 field_3C; // 0x03C
-    i32 field_40; // 0x040
-    i32 field_44; // 0x044
-    i32 field_48; // 0x048
-    i32 field_4C; // 0x04C
-    i32 field_50; // 0x050
-    i32 field_54; // 0x054
     i32 field_58; // 0x058
     i32 field_5C; // 0x05C
     f32 field_60; // 0x060

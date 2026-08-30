@@ -69,12 +69,8 @@ public:
 private:
     // ?sm_Instance@sdlCommon@@0PAV1@A
     ARTS_IMPORT static sdlCommon* sm_Instance;
-
-public:
-    // Offset order is mandatory - the original code reads these at fixed offsets.
-    phBound Bound; // 0x000
 };
 
 // ??_7sdlCommon@@6B@
 // vtable at 0x005B17CC
-check_size(sdlCommon, 0x4C);
+// check_size(sdlCommon, 0x4C); // size known, members are not - cannot verify

@@ -268,14 +268,14 @@ public:
     u32 nMenuCount; // 0x10C
     u32 field_110; // 0x110
     u32 field_114; // 0x114
-    HFONT hfont118; // 0x118
-    HFONT hfont11C; // 0x11C
-    HFONT hfont120; // 0x120
-    HFONT hfont124; // 0x124
-    HFONT hfont128; // 0x128
-    HFONT hfont12C; // 0x12C
-    HFONT hfont130; // 0x130
-    HFONT hfont134; // 0x134
+    void* hfont118; // 0x118
+    void* hfont11C; // 0x11C
+    void* hfont120; // 0x120
+    void* hfont124; // 0x124
+    void* hfont128; // 0x128
+    void* hfont12C; // 0x12C
+    void* hfont130; // 0x130
+    void* hfont134; // 0x134
     u32 CurrentMenu; // 0x138
     AudSoundBase* MoveSound; // 0x13C
     AudSoundBase* SelectionSound; // 0x140

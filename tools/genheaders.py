@@ -69,6 +69,11 @@ PRIMITIVES = OrderedDict([
     # layouts are fixed by the D3D7 ABI: D3DVALUE is a float, D3DVECTOR is three of them (the
     # same twelve bytes as Vector3), D3DLIGHTTYPE is an enum and so four bytes, and
     # D3DCOLORVALUE is four floats - defined in core/arts.h beside GUID.
+    # Handles and void pointers. Both are pointer-width and neither has any structure this
+    # code needs, so void* is the honest spelling.
+    ("LPVOID", "void*"),
+    ("LPSTR", "char*"),
+    ("HFONT", "void*"),
     ("D3DCOLORVALUE", "D3DCOLORVALUE"),
     ("D3DLIGHTTYPE", "i32"),
     ("D3DVECTOR", "D3DVECTOR"),
@@ -268,9 +273,10 @@ def emit_members(cls, is_polymorphic):
     skip_to = 0
     base = base_of(cls)
     base_info = LAYOUT.get(base) if base else None
+    base_size = base_info["size"] if base_info else (size_of(base) if base else None)
 
-    if base_info:
-        skip_to = base_info["size"]
+    if base_size:
+        skip_to = base_size
     elif (is_polymorphic and members and members[0]["offset"] == 0
             and (members[0].get("width") or 0) == 4 and not members[0].get("count")):
         # THE FIRST FOUR BYTES OF A POLYMORPHIC CLASS ARE THE VPTR, whatever the recovery called
@@ -290,9 +296,31 @@ def emit_members(cls, is_polymorphic):
         skip_to = 4
 
     lines = []
+    used_names = set()
     for m in members:
-        if m["offset"] < skip_to:
-            continue
+        # A MEMBER OF UNKNOWN WIDTH KEEPS THE OLD, SIMPLER TEST. Plenty of entries record no
+        # width - an embedded struct, mostly - and treating that as zero makes a member sitting
+        # exactly ON the base boundary look like it ends there, so it was dropped. asRoot's
+        # `Matrix34 Matrix` is at 0x18 with no width and asNode is 0x18 bytes, so the matrix
+        # vanished and a class that had always passed started failing. Only a member whose extent
+        # is actually known can be reasoned about as straddling.
+        span = (m.get("width") or 0) * (m["count"] or 1) if m.get("width") else 0
+
+        if not span:
+            if m["offset"] < skip_to:
+                continue
+            m_end = m["offset"]
+        else:
+            m_end = m["offset"] + span
+            if m_end <= skip_to:
+                continue
+
+        if span and m["offset"] < skip_to:
+            # Straddles the base boundary. The part below it belongs to the base and is already
+            # laid down by inheritance; the part above belongs to this class and would otherwise
+            # be lost. Kept as padding because only its extent is known, not its meaning.
+            m = dict(m, name="pad_%X" % skip_to, offset=skip_to, type="u8",
+                     count=m_end - skip_to, width=1)
 
         # A data member cannot share a name with a member function. phBound declares both an
         # IsOffset() method and an IsOffset field; the method name comes from the linker map and
@@ -300,6 +328,13 @@ def emit_members(cls, is_polymorphic):
         # codebase's marker for a name we chose rather than one from 1999.
         if m["name"] in METHOD_NAMES.get(cls, ()):
             m = dict(m, name=m["name"] + "_")
+
+        # A repeated name is silently fatal: the compiler keeps the first declaration, drops the
+        # second, and the class is short by exactly that member's width. Suffixing with the offset
+        # keeps both fields and says where the survivor came from.
+        if m["name"] in used_names:
+            m = dict(m, name="%s_%X" % (m["name"], m["offset"]))
+        used_names.add(m["name"])
 
         # Member types go through the same mapping as signature types. They did not, so a member
         # declared BOOL stayed BOOL - a Windows typedef nothing here declares - and the class then
@@ -1025,6 +1060,15 @@ def main():
         classes.setdefault(cls, []).append(s)
     if nested_skipped:
         print("%d symbols belong to nested classes and are not emitted" % nested_skipped)
+
+    # A class that owns no functions still needs a header if something inherits from it. phSegment
+    # is pure data, owns no symbols, and so was never written - leaving lvlSegment with an
+    # undefined base even though phSegment's layout is complete and CONFIRMED.
+    for cls in list(classes):
+        base = base_of(cls)
+        while base and base not in classes and LAYOUT.get(base):
+            classes[base] = []
+            base = base_of(base)
 
     for cls, group in classes.items():
         METHOD_NAMES[cls] = {g.get("name") for g in group

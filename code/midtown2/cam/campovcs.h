@@ -63,31 +63,6 @@ private:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    u8 field_4[20]; // 0x004
-    u16 field_18; // 0x018
-    u8 field_1A[102]; // 0x01A
-    f32 field_80; // 0x080
-    f32 field_84; // 0x084
-    f32 field_88; // 0x088
-    f32 field_8C; // 0x08C
-    u8 field_90[16]; // 0x090
-    i32 field_A0; // 0x0A0
-    i32 field_A4; // 0x0A4
-    i32 field_A8; // 0x0A8
-    u8 field_AC[4]; // 0x0AC
-    i32 field_B0; // 0x0B0
-    i32 field_B4; // 0x0B4
-    i32 field_B8; // 0x0B8
-    i32 field_BC; // 0x0BC
-    i32 field_C0; // 0x0C0
-    u8 field_C4[4]; // 0x0C4
-    i32 field_C8; // 0x0C8
-    f32 field_CC; // 0x0CC
-    f32 field_D0; // 0x0D0
-    i32 field_D4; // 0x0D4
-    u8 field_D8[48]; // 0x0D8
-    i32 field_108; // 0x108
-    u8 field_10C[4]; // 0x10C
     i32 field_110; // 0x110
     i32 Offset; // 0x114
     f32 field_118; // 0x118

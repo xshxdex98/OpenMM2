@@ -63,7 +63,7 @@ public:
     // Members from 0x06C; everything below that belongs to uiWidget.
     // Offset order is mandatory - the original code reads these at fixed offsets.
     mmTextNode* pTextNode; // 0x06C
-    HFONT hFont; // 0x070
+    void* hFont; // 0x070
     u32 Flags; // 0x074
     u32 State; // 0x078
     f32 ElapsedTime; // 0x07C

@@ -71,7 +71,7 @@ public:
     u8 field_8C[4]; // 0x08C
     gfxBitmap* field_90; // 0x090
     u8 field_94[4]; // 0x094
-    u8 field_94[4]; // 0x098
+    u8 field_94_98[4]; // 0x098
     u8 field_98[4]; // 0x09C
     u8 field_A0[4]; // 0x0A0
     u8 field_A4[4]; // 0x0A4

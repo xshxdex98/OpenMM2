@@ -88,7 +88,7 @@ public:
     GUID GUID; // 0x034
     i32 field_44; // 0x044
     i32 field_48; // 0x048
-    f32 field_0; // 0x04C
+    f32 field_0_4C; // 0x04C
 };
 
 check_size(ioJoystick, 0x50);

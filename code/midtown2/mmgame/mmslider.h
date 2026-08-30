@@ -89,6 +89,7 @@ public:
 public:
     // Members from 0x018; everything below that belongs to asNode.
     // Offset order is mandatory - the original code reads these at fixed offsets.
+    u8 pad_18[8]; // 0x018
     gfxBitmap* BitmapInactive; // 0x020
     u8 field_24[4]; // 0x024
     gfxBitmap* BitmapLeft; // 0x028

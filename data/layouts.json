@@ -313650,7 +313650,7 @@
    {
     "name": "CopCars",
     "offset": 24,
-    "type": "vehCar [3]*",
+    "type": "vehCar*",
     "count": 3,
     "width": 4,
     "src": "kit"

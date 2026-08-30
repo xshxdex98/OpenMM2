@@ -53,7 +53,7 @@ protected:
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
     memMemoryAllocator* Allocator; // 0x000
-    LPVOID Heap; // 0x004
+    void* Heap; // 0x004
     void* CommitedData; // 0x008
     u32 SomeAlignmentThingy; // 0x00C
     u32 AllocSize; // 0x010

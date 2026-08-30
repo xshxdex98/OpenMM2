@@ -277,6 +277,7 @@ private:
 public:
     // Members from 0x018; everything below that belongs to asNode.
     // Offset order is mandatory - the original code reads these at fixed offsets.
+    u8 pad_18[12]; // 0x018
     u32* field_24; // 0x024
     u16 NumIntersections; // 0x028
     aiPath** pPaths; // 0x02C
