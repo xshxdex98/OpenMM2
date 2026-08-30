@@ -25,6 +25,7 @@
 
 #include "stream/string.h"
 
+#include "racemenubase.h"
 #include "uimenu.h"
 
 class UIBMButton;
@@ -92,6 +93,7 @@ public:
 public:
     // Members from 0x08C; everything below that belongs to UIMenu.
     // Offset order is mandatory - the original code reads these at fixed offsets.
+    u8 pad_8C[152]; // 0x08C
     u8 field_8C[152]; // 0x08C
     u8 field_124[36]; // 0x124
     u8 field_148[4]; // 0x148

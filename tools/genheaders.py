@@ -219,6 +219,57 @@ def base_of(cls):
     return inferred if inferred and inferred != cls else None
 
 
+def usable_members(cls, info):
+    """The members of `cls` that can actually be declared, in recorded order.
+
+    A MEMBER RECORDED WITH NEITHER NAME NOR TYPE IS NORMALLY UNUSABLE, and dropping it is right for
+    the ten thousand entries that are method signatures or anonymous-union spellings. A few do name
+    a real type in `raw` and were simply never typed, and dropping one of those costs the class
+    exactly that type's width. mmNetPath is 0x70 with `Matrix44` at offset 0 and named members only
+    from 0x40 up: the discarded entry was all 64 of its missing bytes, and that same 64 propagated
+    to mmNetObject, mmGameMulti, mmMultiCircuit, mmMultiRace and mmMultiCR, each of which embeds
+    one of the others by value.
+
+    THE ANCESTOR TEST IS WHAT MAKES THIS SAFE, and without it the rule would do net harm. Of the 32
+    raw-only members naming a known type, 30 spell the class's own base and one more spells a
+    grandparent (mmCompRoster's `asNode`, reached through mmCompBase). Those are flattened base
+    stubs; inheritance already lays those bytes down, so reviving one would emit the base twice.
+    Only a type appearing nowhere in the ancestor chain can be a genuine member - today that is
+    mmNetPath's Matrix44 and nothing else.
+
+    Both the member emitter and the include scanner read this, because a revived member needs its
+    defining header included just as much as it needs declaring.
+    """
+    out = []
+    for m in info.get("members") or []:
+        if m.get("name") and m.get("type"):
+            out.append(m)
+            continue
+
+        raw = (m.get("raw") or "").strip()
+        raw_size = size_of(raw) if raw else None
+        if raw_size and raw != cls and raw not in ancestors_of(cls):
+            out.append(dict(m, name="field_%X" % m["offset"], type=raw,
+                            width=raw_size, count=0))
+    return out
+
+
+def ancestors_of(cls):
+    """Every class `cls` inherits from, nearest first.
+
+    Used to tell a flattened base stub from a real member: the recovery writes both as an entry at
+    offset 0 naming a class, and only the ancestor test separates them.
+    """
+    out = []
+    seen = {cls}
+    base = base_of(cls)
+    while base and base not in seen:
+        seen.add(base)
+        out.append(base)
+        base = base_of(base)
+    return out
+
+
 def size_of(cls):
     """Instance size, for check_size. The IDB's own layouts first, MM2Hook's sizeof second."""
     info = LAYOUT.get(cls)
@@ -268,7 +319,7 @@ def emit_members(cls, is_polymorphic):
         return [], None, True
 
     size = info["size"]
-    members = [m for m in info["members"] if m.get("name") and m.get("type")]
+    members = usable_members(cls, info)
 
     skip_to = 0
     base = base_of(cls)
@@ -648,7 +699,7 @@ def emit_class(cls, syms, index, subsys):
     # then cascaded into the class's check_size failing for no real reason.
     info = LAYOUT.get(cls)
     if info:
-        for m in info.get("members") or []:
+        for m in usable_members(cls, info):
             if m.get("type"):
                 v, r = referenced_types([map_type(m["type"])])
                 val |= v

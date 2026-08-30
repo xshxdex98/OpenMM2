@@ -23,6 +23,8 @@
 
 #include "core/arts.h"
 
+class HashEntry;
+
 class FixedHashEntry
 {
 public:
@@ -35,6 +37,7 @@ private:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
+    HashEntry field_0; // 0x000
     u8 IsFixed; // 0x00C
 };
 

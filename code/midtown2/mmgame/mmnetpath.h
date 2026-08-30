@@ -23,6 +23,8 @@
 
 #include "core/arts.h"
 
+#include "vector7/matrix44.h"
+
 class Vector3;
 
 class mmNetPath
@@ -45,6 +47,7 @@ public:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
+    Matrix44 field_0; // 0x000
     i32 field_40; // 0x040
     i32 field_44; // 0x044
     i32 field_48; // 0x048
