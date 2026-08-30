@@ -110,20 +110,26 @@ matter most here:
 ## Class hierarchy
 
 `midtown2.exe` was built without RTTI (`/GR-`), so there are no type descriptors and the map says
-nothing about inheritance. The **vftables** do.
+nothing about inheritance. The **vftables** do: a derived class's vtable keeps its base's function
+pointers in every slot it did not override, and the map identifies the owner of every address.
+Reading the 340 vftables therefore recovers the ancestry directly. `tools/vtables.py` resolves a
+base for **272 of 335** classes, and `asCullable` turns out to be the root of 121 of them.
 
-A derived class's vftable begins with its base's layout: every slot the derived class did not
-override still holds the base's function pointer, and the map identifies the owner of every
-address. Reading the 340 vftables therefore recovers the ancestry directly — `tools/vtables.py`
-resolves a base for **272 of 335** classes, and `asCullable` turns out to be the root of 121 of
-them.
+Picking the *immediate* parent out of that took three attempts. "Owns the earliest slot" returns
+the deepest ancestor. "Longest vtable" fails when a class overrides without adding virtuals.
+"Contributes the most slots" fails when a near parent overrides very little. What holds is: the
+immediate parent is the **most derived of the contributing ancestors** - the one that has all the
+others among its own ancestors.
 
-This was checked against Midtown Madness 1: Open1560's hand-written header declares
-`class asNode : public asCullable`, and the same relation falls out of Midtown Madness 2's vtable
-bytes independently.
+Cross-checked against MM2Hook's independently maintained type set, that rule agrees on **110 of
+120** shared classes, up from 44 before the fix. The remaining 10 are classes whose real parent has
+no vftable of its own and so is invisible to a byte-level method; MM2Hook's explicit base wins
+there, and `base_of()` prefers it. The approach was also checked against Midtown Madness 1:
+Open1560's hand-written header declares `class asNode : public asCullable`, and the same relation
+falls out of Midtown Madness 2's vtable bytes independently.
 
 > **`midtown2.map` has a bug worth knowing about.** Its `Rva+Base` column is **0x308 too high for
-> `.rdata`** — exactly the `.rdata` start value printed in the map header. Addresses in `.text`
+> `.rdata`** - exactly the `.rdata` start value printed in the map header. Addresses in `.text`
 > are unaffected, so code resolves correctly and the error is invisible until you read a vftable,
 > at which point every lookup silently lands on a neighbouring table. The `section:offset` column
 > is correct; all tooling here recomputes addresses from it against the real PE section table.
@@ -149,29 +155,6 @@ Two documented caveats, both confirmed:
 The two sources complement each other rather than overlap. The map has 100% coverage and full
 parameter types (a mangled name encodes every argument); the IDB has struct layouts and readable
 pseudocode. Neither alone is enough.
-
-## Class hierarchy
-
-`midtown2.exe` was built without RTTI (`/GR-`), so there are no type descriptors. Inheritance is
-recovered from **vftable contents** instead: a derived class's vtable keeps its base's function
-pointers in every slot it did not override, and the map identifies the owner of every address.
-
-Picking the *immediate* parent out of that took three attempts. "Owns the earliest slot" returns
-the deepest ancestor. "Longest vtable" fails when a class overrides without adding virtuals.
-"Contributes the most slots" fails when a near parent overrides very little. What holds is: the
-immediate parent is the **most derived of the contributing ancestors** — the one that has all the
-others among its own ancestors.
-
-Cross-checked against MM2Hook's independently-maintained type set, that rule agrees on **110 of
-120** shared classes, up from 44 before the fix. The remaining 10 are classes whose real parent has
-no vftable of its own and so is invisible to a byte-level method; MM2Hook's explicit base wins
-there, and `base_of()` prefers it.
-
-> **`midtown2.map` has a bug worth knowing about.** Its `Rva+Base` column is **0x308 too high for
-> `.rdata`** — exactly the `.rdata` start value printed in the map header. Addresses in `.text`
-> are unaffected, so code resolves correctly and the error is invisible until you read a vftable,
-> at which point every lookup silently lands on a neighbouring table. The `section:offset` column
-> is correct; all tooling here recomputes addresses from it against the real PE section table.
 
 ## Classes with virtuals
 
@@ -199,10 +182,22 @@ function is verified individually. `tools/asm.py` strips a `PROC` when its decla
 
 ## State
 
-The harness builds. `game.asm` is ~900,000 lines, assembles with zero errors, and links into a
-2.72 MB `build/OpenMM2.exe` whose entry point, `.text` and `.rdata` sit at exactly the retail
-addresses, with functions byte-identical and in place. It has not been run yet, and `.data` is
-0x3000 high for a reason documented in `docs/harness.md`.
+The game **runs**. It reaches `GameLoop`, advertises **2560x1440**, and plays. Under `-gl` the
+OpenGL device layer drives the menus and gameplay on real hardware with dgVoodoo removed from the
+game folder - which was the point of the exercise.
 
-No game code is reimplemented yet, and that is deliberate: the harness comes first, so the first
-function written can be tested the day it is written.
+| | |
+|---|---|
+| Functions reimplemented in C++ | **272 of 9307** |
+| `.text` reimplemented, by bytes | **35,248 of 1,611,585 - 2.19%** |
+| Classes with a recovered member layout | **245 of 535** |
+| Build gates, all passing | 17 |
+
+The other 98% still executes as the original 1999 machine code, linked in from the assembled retail
+image. That is the design, not a shortfall: the harness came first so that the first function
+written could be tested the day it was written, and every function since has been verified against
+the retail bytes individually.
+
+`-gl` is **required** once dgVoodoo is removed - see `docs/running.md`. Open defects, including
+several confidently wrong answers that were later disproven, are in `docs/gameplay_defects.md`.
+For how any of this actually works, read `docs/ARCHITECTURE.md`.
