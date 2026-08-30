@@ -49,7 +49,7 @@ public:
     ARTS_EXPORT virtual i32 SetActuatorValue(i32 arg1, f32 arg2);
 
     // ?PlayFeedbackSample@vehFeedback@@UAEHHHPAMPAH@Z
-    ARTS_IMPORT virtual i32 PlayFeedbackSample(i32 arg1, i32 arg2, f32* arg3, i32* arg4);
+    ARTS_EXPORT virtual i32 PlayFeedbackSample(i32 arg1, i32 arg2, f32* arg3, i32* arg4);
 
     // ?PlayFeedbackSampleID@vehFeedback@@UAEHH@Z
     ARTS_IMPORT virtual i32 PlayFeedbackSampleID(i32 arg1);

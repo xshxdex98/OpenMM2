@@ -164,3 +164,55 @@ i32 vehFeedback::ClearAllSamples(bool arg1)
 
     return 1;
 }
+
+// ?PlayFeedbackSample@vehFeedback@@UAEHHHPAMPAH@Z - 0x004D5830
+//
+// Claims the first free slot in a channel and records a sample in it. The original:
+//
+//     v6 = &this[132 * a2];
+//     for ( i = v6 + 36; *i; ++i )        // scan SampleValues for a null entry
+//         if ( ++v5 >= 8 ) return 0;      // all eight taken
+//     v9 = a2 + 32 * a2 + v5;             // == 33 * a2 + v5
+//     this[4*v9 +  36] = a4;              // SampleValues[v5] = the f32* argument
+//     this[4*v9 +  68] = a5;              // SampleLabels[v5] = the i32* argument
+//     this[4*v9 + 100] = a3;              // SampleIds[v5]    = the i32 argument
+//     this[128*a2 + 132 + 4*v5 + 4*a2] = 0;   // SampleState[v5] = 0, i.e. in use
+//     ++*((_DWORD *)v6 + 41);             // ++SampleCount
+//
+// Every one of those offsets is 132*a2 plus a multiple of 32 from the block base, which is what
+// established the layout in data/layouts_corrections.json in the first place.
+//
+// THE ONE DIVERGENCE, AND WHY IT IS UNREACHABLE. The original applies no bounds check to the
+// channel: it computes 132 * a2 for any value, so a3 of 2 would write past the end of the object.
+// Selecting between the two channel array sets, as below, cannot do that. Reproducing the
+// unbounded arithmetic would need a reinterpret_cast off the class base, which would throw away
+// the typing that makes the rest of this function readable.
+//
+// It is unreachable regardless: the only callers in the binary are the two vtable dispatches in
+// PlayFeedbackSampleID, which pass 0 and 1. Anything else would have been corrupting memory in
+// 1999 as well.
+i32 vehFeedback::PlayFeedbackSample(i32 arg1, i32 arg2, f32* arg3, i32* arg4)
+{
+    f32** values = arg1 ? Ch1SampleValues : Ch0SampleValues;
+    i32** labels = arg1 ? Ch1SampleLabels : Ch0SampleLabels;
+    i32* ids = arg1 ? Ch1SampleIds : Ch0SampleIds;
+    i32* state = arg1 ? Ch1SampleState : Ch0SampleState;
+    i32& count = arg1 ? Ch1SampleCount : Ch0SampleCount;
+
+    // Stops before reading values[8]: the eighth failed test increments slot to 8 and returns.
+    i32 slot = 0;
+
+    while (values[slot])
+    {
+        if (++slot >= 8)
+            return 0;
+    }
+
+    values[slot] = arg3;
+    labels[slot] = arg4;
+    ids[slot] = arg2;
+    state[slot] = 0;
+    ++count;
+
+    return 1;
+}

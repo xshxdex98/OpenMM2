@@ -184,6 +184,7 @@
   "?Outcode@Vector4@@QBEHXZ",
   "?Path@aiIntersection@@QAEPAVaiPath@@H@Z",
   "?Perspective@gfxViewport@@QAEXMMMM@Z",
+  "?PlayFeedbackSample@vehFeedback@@UAEHHHPAMPAH@Z",
   "?PolarView@Matrix34@@QAEXMMMM@Z",
   "?Print@Matrix44@@QBEXPBD@Z",
   "?Print@Vector3@@QBEXPBD@Z",

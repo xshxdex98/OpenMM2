@@ -21,6 +21,7 @@
     "??1vehFeedback@@UAE@XZ",
     "?ClearAllSamples@vehFeedback@@UAEH_N@Z",
     "?GetNumActuators@vehFeedback@@UAEHXZ",
+    "?PlayFeedbackSample@vehFeedback@@UAEHHHPAMPAH@Z",
     "?SetActuatorValue@vehFeedback@@UAEHHM@Z",
     "?SetFeedback@vehFeedback@@UAEH_N@Z",
     "?SetTimingUnit@vehFeedback@@UAEHM@Z"

@@ -18,22 +18,22 @@ Two numbers matter and they are different:
 
 | | | |
 |---|--:|---|
-| Ported | 2.03% | `#...........................` |
+| Ported | 2.04% | `#...........................` |
 | Ready to port | 69.2% | `###################.........` |
 | Size known, members not | 14.6% | `####........................` |
 
 | Metric | Value |
 |---|--:|
 | Functions | 9307 |
-| Functions ported | 285 |
+| Functions ported | 286 |
 | Machine code | 1.7 MB |
-| Code ported | 35.0 KB |
+| Code ported | 35.1 KB |
 | Classes | 535 |
 | Classes with a member layout | 277 (52%) |
 | Classes with only a size | 66 |
 | Virtual methods | 1938 |
 | Vftables | 340 |
-| `game.asm` remaining | 23.2 MB, 10891 PROCs |
+| `game.asm` remaining | 23.2 MB, 10890 PROCs |
 
 The size of `game.asm` *is* the progress bar: it starts holding the whole game and
 shrinks with every function ported.
@@ -49,7 +49,7 @@ layout is known.
 | `mm` | 106 | 1732 | 329.8 KB | 19.2% | 0.2% | 64% |
 | `ai` | 42 | 773 | 245.2 KB | 14.3% | 0.5% | 56% |
 | `ph` | 27 | 437 | 164.2 KB | 9.5% | 0.0% | 75% |
-| `veh` | 34 | 585 | 91.5 KB | 5.3% | 0.3% | 84% |
+| `veh` | 34 | 585 | 91.5 KB | 5.3% | 0.4% | 84% |
 | `gfx` | 13 | 189 | 46.6 KB | 2.7% | 13.3% | 55% |
 | `sdl` | 4 | 37 | 46.5 KB | 2.7% | 0.0% | 99% |
 | `dg` | 28 | 263 | 44.3 KB | 2.6% | 0.0% | 56% |
@@ -134,7 +134,6 @@ Layout known, so these can be started today.
 | Date | Ported | Code ported | game.asm |
 |---|--:|--:|--:|
 | 2026-08-29 | 2.01% | 34.6 KB | 23.4 MB |
-| 2026-08-29 | 2.01% | 34.6 KB | 23.4 MB |
 | 2026-08-30 | 2.01% | 34.6 KB | 23.2 MB |
 | 2026-08-30 | 2.01% | 34.6 KB | 23.2 MB |
 | 2026-08-30 | 2.01% | 34.6 KB | 23.2 MB |
@@ -148,6 +147,7 @@ Layout known, so these can be started today.
 | 2026-08-30 | 2.02% | 34.7 KB | 23.2 MB |
 | 2026-08-30 | 2.02% | 34.7 KB | 23.2 MB |
 | 2026-08-30 | 2.02% | 34.8 KB | 23.2 MB |
+| 2026-08-30 | 2.03% | 35.0 KB | 23.2 MB |
 
 Each run of `tools/progress.py` appends a snapshot to
 `data/progress_history.jsonl`; pass `--no-record` to print without recording.
