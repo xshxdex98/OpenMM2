@@ -41,17 +41,17 @@ public:
     // ??1UIIconW@@UAE@XZ
     ARTS_IMPORT virtual ~UIIconW();
 
+    // ?Update@UIIconW@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?Action@UIIconW@@UAEXTeqEvent@@@Z
     ARTS_IMPORT virtual void Action(eqEvent arg1);
-
-    // ?Init@UIIconW@@QAEXPAULocString@@PADMMMMVdatCallback@@@Z
-    ARTS_IMPORT void Init(LocString* arg1, char* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, datCallback arg7);
 
     // ?Switch@UIIconW@@UAEXH@Z
     ARTS_IMPORT virtual void Switch(i32 arg1);
 
-    // ?Update@UIIconW@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
+    // ?Init@UIIconW@@QAEXPAULocString@@PADMMMMVdatCallback@@@Z
+    ARTS_IMPORT void Init(LocString* arg1, char* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, datCallback arg7);
 
 public:
     // Members from 0x06C; everything below that belongs to uiWidget.

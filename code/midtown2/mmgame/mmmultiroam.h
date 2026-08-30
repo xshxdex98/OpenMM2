@@ -38,14 +38,14 @@ public:
     // ??1mmMultiRoam@@UAE@XZ
     ARTS_IMPORT virtual ~mmMultiRoam();
 
-    // ?GameMessage@mmMultiRoam@@UAEXPAUNET_RCXHEAD@@@Z
-    ARTS_IMPORT virtual void GameMessage(NET_RCXHEAD* arg1);
-
-    // ?GetWaypoints@mmMultiRoam@@UAEPAVmmWaypoints@@XZ
-    ARTS_IMPORT virtual mmWaypoints* GetWaypoints();
+    // ?Reset@mmMultiRoam@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
 
     // ?Init@mmMultiRoam@@UAEHXZ
     ARTS_IMPORT virtual i32 Init();
+
+    // ?InitMyPlayer@mmMultiRoam@@UAEXXZ
+    ARTS_IMPORT virtual void InitMyPlayer();
 
     // ?InitGameObjects@mmMultiRoam@@UAEXXZ
     ARTS_IMPORT virtual void InitGameObjects();
@@ -53,26 +53,26 @@ public:
     // ?InitHUD@mmMultiRoam@@UAEXXZ
     ARTS_IMPORT virtual void InitHUD();
 
-    // ?InitMyPlayer@mmMultiRoam@@UAEXXZ
-    ARTS_IMPORT virtual void InitMyPlayer();
-
-    // ?InitNetworkPlayers@mmMultiRoam@@UAEXXZ
-    ARTS_IMPORT virtual void InitNetworkPlayers();
-
-    // ?Reset@mmMultiRoam@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?SwitchState@mmMultiRoam@@UAEXH@Z
-    ARTS_IMPORT virtual void SwitchState(i32 arg1);
-
-    // ?SystemMessage@mmMultiRoam@@UAEXPAUNETSYS_MSG@@@Z
-    ARTS_IMPORT virtual void SystemMessage(NETSYS_MSG* arg1);
+    // ?UpdateGameInput@mmMultiRoam@@UAEXH@Z
+    ARTS_IMPORT virtual void UpdateGameInput(i32 arg1);
 
     // ?UpdateGame@mmMultiRoam@@UAEXXZ
     ARTS_IMPORT virtual void UpdateGame();
 
-    // ?UpdateGameInput@mmMultiRoam@@UAEXH@Z
-    ARTS_IMPORT virtual void UpdateGameInput(i32 arg1);
+    // ?SwitchState@mmMultiRoam@@UAEXH@Z
+    ARTS_IMPORT virtual void SwitchState(i32 arg1);
+
+    // ?GetWaypoints@mmMultiRoam@@UAEPAVmmWaypoints@@XZ
+    ARTS_IMPORT virtual mmWaypoints* GetWaypoints();
+
+    // ?InitNetworkPlayers@mmMultiRoam@@UAEXXZ
+    ARTS_IMPORT virtual void InitNetworkPlayers();
+
+    // ?SystemMessage@mmMultiRoam@@UAEXPAUNETSYS_MSG@@@Z
+    ARTS_IMPORT virtual void SystemMessage(NETSYS_MSG* arg1);
+
+    // ?GameMessage@mmMultiRoam@@UAEXPAUNET_RCXHEAD@@@Z
+    ARTS_IMPORT virtual void GameMessage(NET_RCXHEAD* arg1);
 };
 
 // ??_7mmMultiRoam@@6B@

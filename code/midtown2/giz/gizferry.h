@@ -36,23 +36,23 @@ public:
     // ??1gizFerry@@QAE@XZ
     ARTS_IMPORT ~gizFerry();
 
-    // ?Cull@gizFerry@@QAEXH@Z
-    ARTS_IMPORT void Cull(i32 arg1);
+    // ?Reset@gizFerry@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
 
     // ?Draw@gizFerry@@UAEXH@Z
     ARTS_IMPORT virtual void Draw(i32 arg1);
 
+    // ?SizeOf@gizFerry@@UAEIXZ
+    ARTS_IMPORT virtual u32 SizeOf();
+
+    // ?Cull@gizFerry@@QAEXH@Z
+    ARTS_IMPORT void Cull(i32 arg1);
+
     // ?Init@gizFerry@@QAEXPADPAVdgPath@@@Z
     ARTS_IMPORT void Init(char* arg1, dgPath* arg2);
 
-    // ?Reset@gizFerry@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?SetSpeed@gizFerry@@QAEXM@Z
     ARTS_IMPORT void SetSpeed(f32 arg1);
-
-    // ?SizeOf@gizFerry@@UAEIXZ
-    ARTS_IMPORT virtual u32 SizeOf();
 
     // ?Update@gizFerry@@QAEXXZ
     ARTS_IMPORT void Update();

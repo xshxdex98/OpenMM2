@@ -39,6 +39,15 @@ public:
     // ??1RaceMenuBase@@UAE@XZ
     ARTS_IMPORT virtual ~RaceMenuBase();
 
+    // ?PreSetup@RaceMenuBase@@UAEXXZ
+    ARTS_IMPORT virtual void PreSetup();
+
+    // ?SetCRWidgets@RaceMenuBase@@UAEXH@Z
+    ARTS_IMPORT virtual void SetCRWidgets(i32 arg1);
+
+    // ?InitCRWidgets@RaceMenuBase@@UAEXXZ
+    ARTS_IMPORT virtual void InitCRWidgets();
+
     // ?AICallback@RaceMenuBase@@QAEXXZ
     ARTS_IMPORT void AICallback();
 
@@ -87,20 +96,11 @@ public:
     // ?Init@RaceMenuBase@@QAEXH@Z
     ARTS_IMPORT void Init(i32 arg1);
 
-    // ?InitCRWidgets@RaceMenuBase@@UAEXXZ
-    ARTS_IMPORT virtual void InitCRWidgets();
-
     // ?LapsCallback@RaceMenuBase@@QAEXXZ
     ARTS_IMPORT void LapsCallback();
 
     // ?LoadRaceMap@RaceMenuBase@@QAEXXZ
     ARTS_IMPORT void LoadRaceMap();
-
-    // ?PreSetup@RaceMenuBase@@UAEXXZ
-    ARTS_IMPORT virtual void PreSetup();
-
-    // ?SetCRWidgets@RaceMenuBase@@UAEXH@Z
-    ARTS_IMPORT virtual void SetCRWidgets(i32 arg1);
 
     // ?SetRW@RaceMenuBase@@QAEXXZ
     ARTS_IMPORT void SetRW();

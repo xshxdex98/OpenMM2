@@ -34,6 +34,9 @@ public:
     // ??1Spline@@UAE@XZ
     ARTS_IMPORT virtual ~Spline();
 
+    // ?Update@Spline@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?CalcCoeff@Spline@@QAEXXZ
     ARTS_IMPORT void CalcCoeff();
 
@@ -57,9 +60,6 @@ public:
 
     // ?Solve@Spline@@QAEXM@Z
     ARTS_IMPORT void Solve(f32 arg1);
-
-    // ?Update@Spline@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7Spline@@6B@

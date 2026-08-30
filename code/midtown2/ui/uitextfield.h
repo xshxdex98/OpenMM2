@@ -43,11 +43,17 @@ public:
     // ??1UITextField@@UAE@XZ
     ARTS_IMPORT virtual ~UITextField();
 
+    // ?Update@UITextField@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?Action@UITextField@@UAEXTeqEvent@@@Z
     ARTS_IMPORT virtual void Action(eqEvent arg1);
 
     // ?CaptureAction@UITextField@@UAEXTeqEvent@@@Z
     ARTS_IMPORT virtual void CaptureAction(eqEvent arg1);
+
+    // ?Switch@UITextField@@UAEXH@Z
+    ARTS_IMPORT virtual void Switch(i32 arg1);
 
     // ?ClearField@UITextField@@QAEXXZ
     ARTS_IMPORT void ClearField();
@@ -73,14 +79,8 @@ public:
     // ?SetTextField@UITextField@@QAEXXZ
     ARTS_IMPORT void SetTextField();
 
-    // ?Switch@UITextField@@UAEXH@Z
-    ARTS_IMPORT virtual void Switch(i32 arg1);
-
     // ?ToggleField@UITextField@@QAEXH@Z
     ARTS_IMPORT void ToggleField(i32 arg1);
-
-    // ?Update@UITextField@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
     // ?WmCharHandler@UITextField@@QAEXE@Z
     ARTS_IMPORT void WmCharHandler(u8 arg1);

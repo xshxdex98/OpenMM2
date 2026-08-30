@@ -37,20 +37,20 @@ public:
     // ??1gizInstance@@QAE@XZ
     ARTS_IMPORT ~gizInstance();
 
-    // ?Draw@gizInstance@@UAEXH@Z
-    ARTS_IMPORT virtual void Draw(i32 arg1);
+    // ?GetPosition@gizInstance@@UAEABVVector3@@XZ
+    ARTS_IMPORT virtual const Vector3& GetPosition();
 
     // ?GetMatrix@gizInstance@@UAEABVMatrix34@@AAV2@@Z
     ARTS_IMPORT virtual const Matrix34& GetMatrix(Matrix34& arg1);
 
-    // ?GetPosition@gizInstance@@UAEABVVector3@@XZ
-    ARTS_IMPORT virtual const Vector3& GetPosition();
+    // ?SetMatrix@gizInstance@@UAEXABVMatrix34@@@Z
+    ARTS_IMPORT virtual void SetMatrix(const Matrix34& arg1);
+
+    // ?Draw@gizInstance@@UAEXH@Z
+    ARTS_IMPORT virtual void Draw(i32 arg1);
 
     // ?Init@gizInstance@@QAEXPADH@Z
     ARTS_IMPORT void Init(char* arg1, i32 arg2);
-
-    // ?SetMatrix@gizInstance@@UAEXABVMatrix34@@@Z
-    ARTS_IMPORT virtual void SetMatrix(const Matrix34& arg1);
 
 public:
     // Members from 0x014; everything below that belongs to lvlInstance.

@@ -39,53 +39,53 @@ public:
     // ??1aiVehiclePlayer@@QAE@XZ
     ARTS_IMPORT ~aiVehiclePlayer();
 
-    // ?Attach@aiVehiclePlayer@@QAEXPAVvehCar@@@Z
-    ARTS_IMPORT void Attach(vehCar* arg1);
-
-    // ?BackBumperDistance@aiVehiclePlayer@@UAEMXZ
-    ARTS_IMPORT virtual f32 BackBumperDistance();
-
-    // ?CurrentLane@aiVehiclePlayer@@UAEHXZ
-    ARTS_IMPORT virtual i32 CurrentLane();
-
-    // ?CurrentRdVert@aiVehiclePlayer@@UAEHXZ
-    ARTS_IMPORT virtual i32 CurrentRdVert();
-
-    // ?CurrentRoadId@aiVehiclePlayer@@UAEHXZ
-    ARTS_IMPORT virtual i32 CurrentRoadId();
-
-    // ?CurrentRoadIdx@aiVehiclePlayer@@UAEHPAPAVaiPath@@QA_NPAH@Z
-    ARTS_IMPORT virtual i32 CurrentRoadIdx(aiPath** arg1, bool*const arg2, i32* arg3);
-
-    // ?DrawId@aiVehiclePlayer@@UAEXXZ
-    ARTS_IMPORT virtual void DrawId();
-
-    // ?FrontBumperDistance@aiVehiclePlayer@@UAEMXZ
-    ARTS_IMPORT virtual f32 FrontBumperDistance();
-
-    // ?GetMatrix@aiVehiclePlayer@@UAEAAVMatrix34@@XZ
-    ARTS_IMPORT virtual Matrix34& GetMatrix();
-
-    // ?LSideDistance@aiVehiclePlayer@@UAEMXZ
-    ARTS_IMPORT virtual f32 LSideDistance();
-
     // ?Position@aiVehiclePlayer@@UAEXAAVVector3@@@Z
     ARTS_IMPORT virtual void Position(Vector3& arg1);
-
-    // ?Reset@aiVehiclePlayer@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?RSideDistance@aiVehiclePlayer@@UAEMXZ
-    ARTS_IMPORT virtual f32 RSideDistance();
 
     // ?Speed@aiVehiclePlayer@@UAEMXZ
     ARTS_IMPORT virtual f32 Speed();
 
-    // ?Type@aiVehiclePlayer@@UAEHXZ
-    ARTS_IMPORT virtual i32 Type();
+    // ?CurrentRoadIdx@aiVehiclePlayer@@UAEHPAPAVaiPath@@QA_NPAH@Z
+    ARTS_IMPORT virtual i32 CurrentRoadIdx(aiPath** arg1, bool*const arg2, i32* arg3);
+
+    // ?CurrentRdVert@aiVehiclePlayer@@UAEHXZ
+    ARTS_IMPORT virtual i32 CurrentRdVert();
 
     // ?Update@aiVehiclePlayer@@UAEXXZ
     ARTS_IMPORT virtual void Update();
+
+    // ?Reset@aiVehiclePlayer@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
+    // ?Type@aiVehiclePlayer@@UAEHXZ
+    ARTS_IMPORT virtual i32 Type();
+
+    // ?GetMatrix@aiVehiclePlayer@@UAEAAVMatrix34@@XZ
+    ARTS_IMPORT virtual Matrix34& GetMatrix();
+
+    // ?FrontBumperDistance@aiVehiclePlayer@@UAEMXZ
+    ARTS_IMPORT virtual f32 FrontBumperDistance();
+
+    // ?BackBumperDistance@aiVehiclePlayer@@UAEMXZ
+    ARTS_IMPORT virtual f32 BackBumperDistance();
+
+    // ?LSideDistance@aiVehiclePlayer@@UAEMXZ
+    ARTS_IMPORT virtual f32 LSideDistance();
+
+    // ?RSideDistance@aiVehiclePlayer@@UAEMXZ
+    ARTS_IMPORT virtual f32 RSideDistance();
+
+    // ?CurrentLane@aiVehiclePlayer@@UAEHXZ
+    ARTS_IMPORT virtual i32 CurrentLane();
+
+    // ?CurrentRoadId@aiVehiclePlayer@@UAEHXZ
+    ARTS_IMPORT virtual i32 CurrentRoadId();
+
+    // ?DrawId@aiVehiclePlayer@@UAEXXZ
+    ARTS_IMPORT virtual void DrawId();
+
+    // ?Attach@aiVehiclePlayer@@QAEXPAVvehCar@@@Z
+    ARTS_IMPORT void Attach(vehCar* arg1);
 };
 
 // ??_7aiVehiclePlayer@@6B@

@@ -32,53 +32,53 @@ class Vector4;
 class datAsciiTokenizer : public datBaseTokenizer
 {
 public:
-    // ?GetDelimiter@datAsciiTokenizer@@UAEXPBD@Z
-    ARTS_IMPORT virtual void GetDelimiter(const char* arg1);
+    // ?GetInt@datAsciiTokenizer@@UAEHXZ
+    ARTS_IMPORT virtual i32 GetInt();
 
     // ?GetFloat@datAsciiTokenizer@@UAEMXZ
     ARTS_IMPORT virtual f32 GetFloat();
 
-    // ?GetInt@datAsciiTokenizer@@UAEHXZ
-    ARTS_IMPORT virtual i32 GetInt();
-
-    // ?GetVector@datAsciiTokenizer@@UAEXAAVVector2@@@Z
-    ARTS_IMPORT virtual void GetVector(Vector2& arg1);
+    // ?GetVector@datAsciiTokenizer@@UAEXAAVVector4@@@Z
+    ARTS_IMPORT virtual void GetVector(Vector4& arg1);
 
     // ?GetVector@datAsciiTokenizer@@UAEXAAVVector3@@@Z
     ARTS_IMPORT virtual void GetVector(Vector3& arg1);
 
-    // ?GetVector@datAsciiTokenizer@@UAEXAAVVector4@@@Z
-    ARTS_IMPORT virtual void GetVector(Vector4& arg1);
+    // ?GetVector@datAsciiTokenizer@@UAEXAAVVector2@@@Z
+    ARTS_IMPORT virtual void GetVector(Vector2& arg1);
 
-    // ?MatchFloat@datAsciiTokenizer@@UAEMPBD@Z
-    ARTS_IMPORT virtual f32 MatchFloat(const char* arg1);
+    // ?GetDelimiter@datAsciiTokenizer@@UAEXPBD@Z
+    ARTS_IMPORT virtual void GetDelimiter(const char* arg1);
 
     // ?MatchInt@datAsciiTokenizer@@UAEHPBD@Z
     ARTS_IMPORT virtual i32 MatchInt(const char* arg1);
 
-    // ?MatchVector@datAsciiTokenizer@@UAEXPBDAAVVector2@@@Z
-    ARTS_IMPORT virtual void MatchVector(const char* arg1, Vector2& arg2);
-
-    // ?MatchVector@datAsciiTokenizer@@UAEXPBDAAVVector3@@@Z
-    ARTS_IMPORT virtual void MatchVector(const char* arg1, Vector3& arg2);
+    // ?MatchFloat@datAsciiTokenizer@@UAEMPBD@Z
+    ARTS_IMPORT virtual f32 MatchFloat(const char* arg1);
 
     // ?MatchVector@datAsciiTokenizer@@UAEXPBDAAVVector4@@@Z
     ARTS_IMPORT virtual void MatchVector(const char* arg1, Vector4& arg2);
 
-    // ?Put@datAsciiTokenizer@@UAE_NABVVector2@@@Z
-    ARTS_IMPORT virtual bool Put(const Vector2& arg1);
+    // ?MatchVector@datAsciiTokenizer@@UAEXPBDAAVVector3@@@Z
+    ARTS_IMPORT virtual void MatchVector(const char* arg1, Vector3& arg2);
 
-    // ?Put@datAsciiTokenizer@@UAE_NABVVector3@@@Z
-    ARTS_IMPORT virtual bool Put(const Vector3& arg1);
+    // ?MatchVector@datAsciiTokenizer@@UAEXPBDAAVVector2@@@Z
+    ARTS_IMPORT virtual void MatchVector(const char* arg1, Vector2& arg2);
 
     // ?Put@datAsciiTokenizer@@UAE_NABVVector4@@@Z
     ARTS_IMPORT virtual bool Put(const Vector4& arg1);
 
-    // ?Put@datAsciiTokenizer@@UAE_NH@Z
-    ARTS_IMPORT virtual bool Put(i32 arg1);
+    // ?Put@datAsciiTokenizer@@UAE_NABVVector3@@@Z
+    ARTS_IMPORT virtual bool Put(const Vector3& arg1);
+
+    // ?Put@datAsciiTokenizer@@UAE_NABVVector2@@@Z
+    ARTS_IMPORT virtual bool Put(const Vector2& arg1);
 
     // ?Put@datAsciiTokenizer@@UAE_NM@Z
     ARTS_IMPORT virtual bool Put(f32 arg1);
+
+    // ?Put@datAsciiTokenizer@@UAE_NH@Z
+    ARTS_IMPORT virtual bool Put(i32 arg1);
 
     // ?Put@datAsciiTokenizer@@UAE_NPBDI@Z
     ARTS_IMPORT virtual bool Put(const char* arg1, u32 arg2);

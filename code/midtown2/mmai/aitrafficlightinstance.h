@@ -36,11 +36,11 @@ public:
     // ?DrawGlow@aiTrafficLightInstance@@UAEXXZ
     ARTS_IMPORT virtual void DrawGlow();
 
-    // ?Init@aiTrafficLightInstance@@UAEHPADAAVVector3@@1H0@Z
-    ARTS_IMPORT virtual i32 Init(char* arg1, Vector3& arg2, Vector3& arg3, i32 arg4, char* arg5);
-
     // ?SizeOf@aiTrafficLightInstance@@UAEIXZ
     ARTS_IMPORT virtual u32 SizeOf();
+
+    // ?Init@aiTrafficLightInstance@@UAEHPADAAVVector3@@1H0@Z
+    ARTS_IMPORT virtual i32 Init(char* arg1, Vector3& arg2, Vector3& arg3, i32 arg4, char* arg5);
 };
 
 // ??_7aiTrafficLightInstance@@6B@

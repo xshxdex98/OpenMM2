@@ -40,29 +40,41 @@ public:
     // ??1UIBMButton@@UAE@XZ
     ARTS_IMPORT virtual ~UIBMButton();
 
-    // ?Action@UIBMButton@@UAEXTeqEvent@@@Z
-    ARTS_IMPORT virtual void Action(eqEvent arg1);
-
     // ?Cull@UIBMButton@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
+
+    // ?Update@UIBMButton@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
 
     // ?Disable@UIBMButton@@UAEXXZ
     ARTS_IMPORT virtual void Disable();
 
-    // ?DoToggle@UIBMButton@@QAEXXZ
-    ARTS_IMPORT void DoToggle();
-
     // ?Enable@UIBMButton@@UAEXXZ
     ARTS_IMPORT virtual void Enable();
+
+    // ?Action@UIBMButton@@UAEXTeqEvent@@@Z
+    ARTS_IMPORT virtual void Action(eqEvent arg1);
+
+    // ?Switch@UIBMButton@@UAEXH@Z
+    ARTS_IMPORT virtual void Switch(i32 arg1);
+
+    // ?ReturnDescription@UIBMButton@@UAEPADXZ
+    ARTS_IMPORT virtual char* ReturnDescription();
+
+    // ?SetPosition@UIBMButton@@UAEXMM@Z
+    ARTS_IMPORT virtual void SetPosition(f32 arg1, f32 arg2);
+
+    // ?GetScreenHeight@UIBMButton@@UAEMXZ
+    ARTS_IMPORT virtual f32 GetScreenHeight();
+
+    // ?DoToggle@UIBMButton@@QAEXXZ
+    ARTS_IMPORT void DoToggle();
 
     // ?GetDiv@UIBMButton@@QAEHXZ
     ARTS_IMPORT i32 GetDiv();
 
     // ?GetHitArea@UIBMButton@@QAEXAAM0@Z
     ARTS_IMPORT void GetHitArea(f32& arg1, f32& arg2);
-
-    // ?GetScreenHeight@UIBMButton@@UAEMXZ
-    ARTS_IMPORT virtual f32 GetScreenHeight();
 
     // ?Init@UIBMButton@@QAEXPADMMHHPAHHHPAULocString@@VdatCallback@@3@Z
     ARTS_IMPORT void Init(char* arg1, f32 arg2, f32 arg3, i32 arg4, i32 arg5, i32* arg6, i32 arg7, i32 arg8, LocString* arg9, datCallback arg10, datCallback arg11);
@@ -82,20 +94,8 @@ public:
     // ?MexToggle@UIBMButton@@QAEXXZ
     ARTS_IMPORT void MexToggle();
 
-    // ?ReturnDescription@UIBMButton@@UAEPADXZ
-    ARTS_IMPORT virtual char* ReturnDescription();
-
-    // ?SetPosition@UIBMButton@@UAEXMM@Z
-    ARTS_IMPORT virtual void SetPosition(f32 arg1, f32 arg2);
-
-    // ?Switch@UIBMButton@@UAEXH@Z
-    ARTS_IMPORT virtual void Switch(i32 arg1);
-
     // ?Unkill@UIBMButton@@QAEXXZ
     ARTS_IMPORT void Unkill();
-
-    // ?Update@UIBMButton@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 private:
     // ?AllocateSounds@UIBMButton@@CAXXZ

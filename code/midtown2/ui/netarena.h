@@ -41,6 +41,9 @@ public:
     // ??1NetArena@@UAE@XZ
     ARTS_IMPORT virtual ~NetArena();
 
+    // ?PreSetup@NetArena@@UAEXXZ
+    ARTS_IMPORT virtual void PreSetup();
+
     // ?AddGameChatLine@NetArena@@QAEXPAD@Z
     ARTS_IMPORT void AddGameChatLine(char* arg1);
 
@@ -85,9 +88,6 @@ public:
 
     // ?PostPlayerInfo@NetArena@@QAEXPAULocString@@00@Z
     ARTS_IMPORT void PostPlayerInfo(LocString* arg1, LocString* arg2, LocString* arg3);
-
-    // ?PreSetup@NetArena@@UAEXXZ
-    ARTS_IMPORT virtual void PreSetup();
 
     // ?RemoveRosterEntry@NetArena@@QAEXH@Z
     ARTS_IMPORT void RemoveRosterEntry(i32 arg1);

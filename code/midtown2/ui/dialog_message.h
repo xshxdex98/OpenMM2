@@ -34,11 +34,11 @@ public:
     // ??1Dialog_Message@@UAE@XZ
     ARTS_IMPORT virtual ~Dialog_Message();
 
-    // ?Init@Dialog_Message@@QAEXHPAD0@Z
-    ARTS_IMPORT void Init(i32 arg1, char* arg2, char* arg3);
-
     // ?PreSetup@Dialog_Message@@UAEXXZ
     ARTS_IMPORT virtual void PreSetup();
+
+    // ?Init@Dialog_Message@@QAEXHPAD0@Z
+    ARTS_IMPORT void Init(i32 arg1, char* arg2, char* arg3);
 };
 
 // ??_7Dialog_Message@@6B@

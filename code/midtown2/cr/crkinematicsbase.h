@@ -38,20 +38,20 @@ public:
     // ?Init@crKinematicsBase@@UAEXAAVcrSkeleton@@ABVcrBodyDataBase@@@Z
     ARTS_IMPORT virtual void Init(crSkeleton& arg1, const crBodyDataBase& arg2);
 
-    // ?MatchPose@crKinematicsBase@@UAEXXZ
-    ARTS_IMPORT virtual void MatchPose();
-
     // ?Reset@crKinematicsBase@@UAEXXZ
     ARTS_IMPORT virtual void Reset();
+
+    // ?Update@crKinematicsBase@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?MatchPose@crKinematicsBase@@UAEXXZ
+    ARTS_IMPORT virtual void MatchPose();
 
     // ?SetIKBlend@crKinematicsBase@@UAEXM@Z
     ARTS_IMPORT virtual void SetIKBlend(f32 arg1);
 
     // ?SetLimp@crKinematicsBase@@UAEX_N@Z
     ARTS_IMPORT virtual void SetLimp(bool arg1);
-
-    // ?Update@crKinematicsBase@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7crKinematicsBase@@6B@

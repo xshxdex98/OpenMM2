@@ -36,11 +36,11 @@ public:
     // ??1eqEventQ@@UAE@XZ
     ARTS_IMPORT virtual ~eqEventQ();
 
-    // ?Keyboard@eqEventQ@@UAEXPAXHHHH@Z
-    ARTS_IMPORT virtual void Keyboard(void* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5);
-
     // ?Mouse@eqEventQ@@UAEXPAXHHHHHHH@Z
     ARTS_IMPORT virtual void Mouse(void* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5, i32 arg6, i32 arg7, i32 arg8);
+
+    // ?Keyboard@eqEventQ@@UAEXPAXHHHH@Z
+    ARTS_IMPORT virtual void Keyboard(void* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5);
 
     // ?Pop@eqEventQ@@QAEHPATeqEvent@@@Z
     ARTS_IMPORT i32 Pop(eqEvent* arg1);

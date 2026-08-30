@@ -38,23 +38,23 @@ public:
     // ??1camAICS@@UAE@XZ
     ARTS_IMPORT virtual ~camAICS();
 
-    // ?Init@camAICS@@QAEXPAVvehCar@@@Z
-    ARTS_IMPORT void Init(vehCar* arg1);
+    // ?Update@camAICS@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@camAICS@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
 
     // ?MakeActive@camAICS@@UAEXXZ
     ARTS_IMPORT virtual void MakeActive();
 
-    // ?Reset@camAICS@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
+    // ?Init@camAICS@@QAEXPAVvehCar@@@Z
+    ARTS_IMPORT void Init(vehCar* arg1);
 
     // ?SetMatrix@camAICS@@QAEXPAVMatrix34@@@Z
     ARTS_IMPORT void SetMatrix(Matrix34* arg1);
 
     // ?SetPosition@camAICS@@QAEXAAVVector3@@@Z
     ARTS_IMPORT void SetPosition(Vector3& arg1);
-
-    // ?Update@camAICS@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7camAICS@@6B@

@@ -32,26 +32,26 @@ class dgHitBangerInstance;
 class aiCableCarInstance : public dgUnhitBangerInstance
 {
 public:
-    // ?Draw@aiCableCarInstance@@UAEXH@Z
-    ARTS_IMPORT virtual void Draw(i32 arg1);
+    // ?GetPosition@aiCableCarInstance@@UAEABVVector3@@XZ
+    ARTS_IMPORT virtual const Vector3& GetPosition();
 
     // ?GetMatrix@aiCableCarInstance@@UAEABVMatrix34@@AAV2@@Z
     ARTS_IMPORT virtual const Matrix34& GetMatrix(Matrix34& arg1);
 
-    // ?GetPosition@aiCableCarInstance@@UAEABVVector3@@XZ
-    ARTS_IMPORT virtual const Vector3& GetPosition();
+    // ?SetMatrix@aiCableCarInstance@@UAEXABVMatrix34@@@Z
+    ARTS_IMPORT virtual void SetMatrix(const Matrix34& arg1);
 
     // ?GetVelocity@aiCableCarInstance@@UAEABVVector3@@XZ
     ARTS_IMPORT virtual const Vector3& GetVelocity();
 
-    // ?ImpactCB@aiCableCarInstance@@UAEXPAVdgHitBangerInstance@@@Z
-    ARTS_IMPORT virtual void ImpactCB(dgHitBangerInstance* arg1);
-
-    // ?SetMatrix@aiCableCarInstance@@UAEXABVMatrix34@@@Z
-    ARTS_IMPORT virtual void SetMatrix(const Matrix34& arg1);
+    // ?Draw@aiCableCarInstance@@UAEXH@Z
+    ARTS_IMPORT virtual void Draw(i32 arg1);
 
     // ?SizeOf@aiCableCarInstance@@UAEIXZ
     ARTS_IMPORT virtual u32 SizeOf();
+
+    // ?ImpactCB@aiCableCarInstance@@UAEXPAVdgHitBangerInstance@@@Z
+    ARTS_IMPORT virtual void ImpactCB(dgHitBangerInstance* arg1);
 };
 
 // ??_7aiCableCarInstance@@6B@

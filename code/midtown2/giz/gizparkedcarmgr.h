@@ -34,14 +34,14 @@ public:
     // ??1gizParkedCarMgr@@UAE@XZ
     ARTS_IMPORT virtual ~gizParkedCarMgr();
 
-    // ?Init@gizParkedCarMgr@@QAE_NPAD00@Z
-    ARTS_IMPORT bool Init(char* arg1, char* arg2, char* arg3);
+    // ?Update@gizParkedCarMgr@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
 
     // ?Reset@gizParkedCarMgr@@UAEXXZ
     ARTS_IMPORT virtual void Reset();
 
-    // ?Update@gizParkedCarMgr@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
+    // ?Init@gizParkedCarMgr@@QAE_NPAD00@Z
+    ARTS_IMPORT bool Init(char* arg1, char* arg2, char* arg3);
 
 private:
     // ?ApplyTuning@gizParkedCarMgr@@AAEXXZ

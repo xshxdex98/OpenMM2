@@ -38,17 +38,17 @@ public:
     // ??1dgHitBangerInstance@@QAE@XZ
     ARTS_IMPORT ~dgHitBangerInstance();
 
-    // ?Detach@dgHitBangerInstance@@UAEXXZ
-    ARTS_IMPORT virtual void Detach();
+    // ?GetPosition@dgHitBangerInstance@@UAEABVVector3@@XZ
+    ARTS_IMPORT virtual const Vector3& GetPosition();
 
     // ?GetMatrix@dgHitBangerInstance@@UAEABVMatrix34@@AAV2@@Z
     ARTS_IMPORT virtual const Matrix34& GetMatrix(Matrix34& arg1);
 
-    // ?GetPosition@dgHitBangerInstance@@UAEABVVector3@@XZ
-    ARTS_IMPORT virtual const Vector3& GetPosition();
-
     // ?SetMatrix@dgHitBangerInstance@@UAEXABVMatrix34@@@Z
     ARTS_IMPORT virtual void SetMatrix(const Matrix34& arg1);
+
+    // ?Detach@dgHitBangerInstance@@UAEXXZ
+    ARTS_IMPORT virtual void Detach();
 
     // ?SizeOf@dgHitBangerInstance@@UAEIXZ
     ARTS_IMPORT virtual u32 SizeOf();

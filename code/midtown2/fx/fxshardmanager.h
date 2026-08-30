@@ -38,6 +38,9 @@ public:
     // ??1fxShardManager@@UAE@XZ
     ARTS_IMPORT virtual ~fxShardManager();
 
+    // ?Update@fxShardManager@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?Draw@fxShardManager@@QAEXXZ
     ARTS_IMPORT void Draw();
 
@@ -58,9 +61,6 @@ public:
 
     // ?SetShader@fxShardManager@@QAEXPAVmodShader@@H@Z
     ARTS_IMPORT void SetShader(modShader* arg1, i32 arg2);
-
-    // ?Update@fxShardManager@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     static fxShardManager**& Access_Instances() { return Instances; }

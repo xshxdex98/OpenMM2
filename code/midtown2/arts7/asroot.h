@@ -36,6 +36,12 @@ public:
     // ??1asRoot@@UAE@XZ
     ARTS_IMPORT virtual ~asRoot();
 
+    // ?Update@asRoot@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@asRoot@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?GetClassName@asRoot@@UAEPADXZ
     ARTS_IMPORT virtual char* GetClassName();
 
@@ -48,17 +54,11 @@ public:
     // ?Quit@asRoot@@QAEXXZ
     ARTS_IMPORT void Quit();
 
-    // ?Reset@asRoot@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?SetPause@asRoot@@QAEX_N@Z
     ARTS_IMPORT void SetPause(bool arg1);
 
     // ?TogglePause@asRoot@@QAEXXZ
     ARTS_IMPORT void TogglePause();
-
-    // ?Update@asRoot@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     // Members from 0x018; everything below that belongs to asNode.

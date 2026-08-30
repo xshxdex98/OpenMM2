@@ -34,11 +34,11 @@ public:
     // ??1eqEventMonitor@@UAE@XZ
     ARTS_IMPORT virtual ~eqEventMonitor();
 
-    // ?Keyboard@eqEventMonitor@@UAEXPAXHHHH@Z
-    ARTS_IMPORT virtual void Keyboard(void* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5);
-
     // ?Mouse@eqEventMonitor@@UAEXPAXHHHHHHH@Z
     ARTS_IMPORT virtual void Mouse(void* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5, i32 arg6, i32 arg7, i32 arg8);
+
+    // ?Keyboard@eqEventMonitor@@UAEXPAXHHHH@Z
+    ARTS_IMPORT virtual void Keyboard(void* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5);
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

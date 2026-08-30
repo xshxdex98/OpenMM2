@@ -34,11 +34,14 @@ public:
     // ??1crKinematics@@UAE@XZ
     ARTS_IMPORT virtual ~crKinematics();
 
-    // ?MatchPose@crKinematics@@UAEXXZ
-    ARTS_IMPORT virtual void MatchPose();
-
     // ?Reset@crKinematics@@UAEXXZ
     ARTS_IMPORT virtual void Reset();
+
+    // ?Update@crKinematics@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?MatchPose@crKinematics@@UAEXXZ
+    ARTS_IMPORT virtual void MatchPose();
 
     // ?SetIKBlend@crKinematics@@UAEXM@Z
     ARTS_IMPORT virtual void SetIKBlend(f32 arg1);
@@ -48,9 +51,6 @@ public:
 
     // ?TestPose@crKinematics@@QAEXXZ
     ARTS_IMPORT void TestPose();
-
-    // ?Update@crKinematics@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7crKinematics@@6B@

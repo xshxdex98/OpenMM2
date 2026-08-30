@@ -41,23 +41,71 @@ public:
     // ??1aiVehicleSpline@@QAE@XZ
     ARTS_IMPORT ~aiVehicleSpline();
 
-    // ?AvoidPlayerCollision@aiVehicleSpline@@QAEXH@Z
-    ARTS_IMPORT void AvoidPlayerCollision(i32 arg1);
+    // ?InAccident@aiVehicleSpline@@UAEHXZ
+    ARTS_IMPORT virtual i32 InAccident();
 
-    // ?BackBumperDistance@aiVehicleSpline@@UAEMXZ
-    ARTS_IMPORT virtual f32 BackBumperDistance();
+    // ?Position@aiVehicleSpline@@UAEXAAVVector3@@@Z
+    ARTS_IMPORT virtual void Position(Vector3& arg1);
 
-    // ?CurrentLane@aiVehicleSpline@@UAEHXZ
-    ARTS_IMPORT virtual i32 CurrentLane();
+    // ?Speed@aiVehicleSpline@@UAEMXZ
+    ARTS_IMPORT virtual f32 Speed();
+
+    // ?CurrentRoadIdx@aiVehicleSpline@@UAEHPAPAVaiPath@@QA_NPAH@Z
+    ARTS_IMPORT virtual i32 CurrentRoadIdx(aiPath** arg1, bool*const arg2, i32* arg3);
 
     // ?CurrentRdVert@aiVehicleSpline@@UAEHXZ
     ARTS_IMPORT virtual i32 CurrentRdVert();
 
+    // ?Update@aiVehicleSpline@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@aiVehicleSpline@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
+    // ?Type@aiVehicleSpline@@UAEHXZ
+    ARTS_IMPORT virtual i32 Type();
+
+    // ?GetMatrix@aiVehicleSpline@@UAEAAVMatrix34@@XZ
+    ARTS_IMPORT virtual Matrix34& GetMatrix();
+
+    // ?FrontBumperDistance@aiVehicleSpline@@UAEMXZ
+    ARTS_IMPORT virtual f32 FrontBumperDistance();
+
+    // ?BackBumperDistance@aiVehicleSpline@@UAEMXZ
+    ARTS_IMPORT virtual f32 BackBumperDistance();
+
+    // ?LSideDistance@aiVehicleSpline@@UAEMXZ
+    ARTS_IMPORT virtual f32 LSideDistance();
+
+    // ?RSideDistance@aiVehicleSpline@@UAEMXZ
+    ARTS_IMPORT virtual f32 RSideDistance();
+
+    // ?CurrentLane@aiVehicleSpline@@UAEHXZ
+    ARTS_IMPORT virtual i32 CurrentLane();
+
     // ?CurrentRoadId@aiVehicleSpline@@UAEHXZ
     ARTS_IMPORT virtual i32 CurrentRoadId();
 
-    // ?CurrentRoadIdx@aiVehicleSpline@@UAEHPAPAVaiPath@@QA_NPAH@Z
-    ARTS_IMPORT virtual i32 CurrentRoadIdx(aiPath** arg1, bool*const arg2, i32* arg3);
+    // ?DrawId@aiVehicleSpline@@UAEXXZ
+    ARTS_IMPORT virtual void DrawId();
+
+    // ?ReplayDebug@aiVehicleSpline@@UAEXXZ
+    ARTS_IMPORT virtual void ReplayDebug();
+
+    // ?Impact@aiVehicleSpline@@UAEXH@Z
+    ARTS_IMPORT virtual void Impact(i32 arg1);
+
+    // ?GetAudImpactPtr@aiVehicleSpline@@UAEPAVAudImpact@@XZ
+    ARTS_IMPORT virtual AudImpact* GetAudImpactPtr();
+
+    // ?PlayHorn@aiVehicleSpline@@UAEXMM@Z
+    ARTS_IMPORT virtual void PlayHorn(f32 arg1, f32 arg2);
+
+    // ?StopVoice@aiVehicleSpline@@UAEXXZ
+    ARTS_IMPORT virtual void StopVoice();
+
+    // ?AvoidPlayerCollision@aiVehicleSpline@@QAEXH@Z
+    ARTS_IMPORT void AvoidPlayerCollision(i32 arg1);
 
     // ?DetectPlayerCollision@aiVehicleSpline@@QAEHH@Z
     ARTS_IMPORT i32 DetectPlayerCollision(i32 arg1);
@@ -77,26 +125,8 @@ public:
     // ?DistanceToVehicle@aiVehicleSpline@@QAEMPAV1@@Z
     ARTS_IMPORT f32 DistanceToVehicle(aiVehicleSpline* arg1);
 
-    // ?DrawId@aiVehicleSpline@@UAEXXZ
-    ARTS_IMPORT virtual void DrawId();
-
     // ?Dump@aiVehicleSpline@@QAEXXZ
     ARTS_IMPORT void Dump();
-
-    // ?FrontBumperDistance@aiVehicleSpline@@UAEMXZ
-    ARTS_IMPORT virtual f32 FrontBumperDistance();
-
-    // ?GetAudImpactPtr@aiVehicleSpline@@UAEPAVAudImpact@@XZ
-    ARTS_IMPORT virtual AudImpact* GetAudImpactPtr();
-
-    // ?GetMatrix@aiVehicleSpline@@UAEAAVMatrix34@@XZ
-    ARTS_IMPORT virtual Matrix34& GetMatrix();
-
-    // ?Impact@aiVehicleSpline@@UAEXH@Z
-    ARTS_IMPORT virtual void Impact(i32 arg1);
-
-    // ?InAccident@aiVehicleSpline@@UAEHXZ
-    ARTS_IMPORT virtual i32 InAccident();
 
     // ?Init@aiVehicleSpline@@QAEXPADH@Z
     ARTS_IMPORT void Init(char* arg1, i32 arg2);
@@ -107,41 +137,11 @@ public:
     // ?IsThePlayerInFrontOfMe@aiVehicleSpline@@QAEHH@Z
     ARTS_IMPORT i32 IsThePlayerInFrontOfMe(i32 arg1);
 
-    // ?LSideDistance@aiVehicleSpline@@UAEMXZ
-    ARTS_IMPORT virtual f32 LSideDistance();
-
-    // ?PlayHorn@aiVehicleSpline@@UAEXMM@Z
-    ARTS_IMPORT virtual void PlayHorn(f32 arg1, f32 arg2);
-
-    // ?Position@aiVehicleSpline@@UAEXAAVVector3@@@Z
-    ARTS_IMPORT virtual void Position(Vector3& arg1);
-
-    // ?ReplayDebug@aiVehicleSpline@@UAEXXZ
-    ARTS_IMPORT virtual void ReplayDebug();
-
-    // ?Reset@aiVehicleSpline@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?ResetReactTicks@aiVehicleSpline@@QAEXXZ
     ARTS_IMPORT void ResetReactTicks();
 
-    // ?RSideDistance@aiVehicleSpline@@UAEMXZ
-    ARTS_IMPORT virtual f32 RSideDistance();
-
-    // ?Speed@aiVehicleSpline@@UAEMXZ
-    ARTS_IMPORT virtual f32 Speed();
-
-    // ?StopVoice@aiVehicleSpline@@UAEXXZ
-    ARTS_IMPORT virtual void StopVoice();
-
     // ?TotLength@aiVehicleSpline@@QAEMXZ
     ARTS_IMPORT f32 TotLength();
-
-    // ?Type@aiVehicleSpline@@UAEHXZ
-    ARTS_IMPORT virtual i32 Type();
-
-    // ?Update@aiVehicleSpline@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
     // ?UpdateObstacleMap@aiVehicleSpline@@QAEXXZ
     ARTS_IMPORT void UpdateObstacleMap();

@@ -42,6 +42,33 @@ public:
     // ??1dgPhysManager@@UAE@XZ
     ARTS_IMPORT virtual ~dgPhysManager();
 
+    // ?TestProbe@dgPhysManager@@UBE_NABVphSegment@@PAVphIntersection@@IH@Z
+    ARTS_IMPORT virtual bool TestProbe(const phSegment& arg1, phIntersection* arg2, u32 arg3, i32 arg4) const;
+
+    // ?TestSphere@dgPhysManager@@UBE_NABVVector3@@MPAVphImpact@@IH@Z
+    ARTS_IMPORT virtual bool TestSphere(const Vector3& arg1, f32 arg2, phImpact* arg3, u32 arg4, i32 arg5) const;
+
+    // ?PromoteInstance@dgPhysManager@@UAEPAVphColliderBase@@PAVphInstance@@@Z
+    ARTS_IMPORT virtual phColliderBase* PromoteInstance(phInstance* arg1);
+
+    // ?DemoteInstance@dgPhysManager@@UAEXPAVphInstance@@@Z
+    ARTS_IMPORT virtual void DemoteInstance(phInstance* arg1);
+
+    // ?KillInstance@dgPhysManager@@UAEXPAVphInstance@@@Z
+    ARTS_IMPORT virtual void KillInstance(phInstance* arg1);
+
+    // ?DisableInstance@dgPhysManager@@UAEXPAVphInstance@@@Z
+    ARTS_IMPORT virtual void DisableInstance(phInstance* arg1);
+
+    // ?EnableInstance@dgPhysManager@@UAEXPAVphInstance@@H@Z
+    ARTS_IMPORT virtual void EnableInstance(phInstance* arg1, i32 arg2);
+
+    // ?GetCollider@dgPhysManager@@UBEPAVphColliderBase@@PBVphInstance@@@Z
+    ARTS_IMPORT virtual phColliderBase* GetCollider(const phInstance* arg1) const;
+
+    // ?CreateInstance@dgPhysManager@@UAEPAVphInstance@@XZ
+    ARTS_IMPORT virtual phInstance* CreateInstance();
+
     // ?Collide@dgPhysManager@@QAE_NAAVlvlSegment@@PAVlvlIntersection@@HPAVlvlInstance@@HH@Z
     ARTS_IMPORT bool Collide(lvlSegment& arg1, lvlIntersection* arg2, i32 arg3, lvlInstance* arg4, i32 arg5, i32 arg6);
 
@@ -54,35 +81,17 @@ public:
     // ?CollideTerrain@dgPhysManager@@QAE_NPAUCollisionTableEntry@1@@Z
     ARTS_IMPORT bool CollideTerrain(dgPhysManager::CollisionTableEntry* arg1);
 
-    // ?CreateInstance@dgPhysManager@@UAEPAVphInstance@@XZ
-    ARTS_IMPORT virtual phInstance* CreateInstance();
-
     // ?DeclareMover@dgPhysManager@@QAEXPAVlvlInstance@@HH@Z
     ARTS_IMPORT void DeclareMover(lvlInstance* arg1, i32 arg2, i32 arg3);
-
-    // ?DemoteInstance@dgPhysManager@@UAEXPAVphInstance@@@Z
-    ARTS_IMPORT virtual void DemoteInstance(phInstance* arg1);
-
-    // ?DisableInstance@dgPhysManager@@UAEXPAVphInstance@@@Z
-    ARTS_IMPORT virtual void DisableInstance(phInstance* arg1);
 
     // ?Draw@dgPhysManager@@QAEXXZ
     ARTS_IMPORT void Draw();
 
-    // ?EnableInstance@dgPhysManager@@UAEXPAVphInstance@@H@Z
-    ARTS_IMPORT virtual void EnableInstance(phInstance* arg1, i32 arg2);
-
     // ?GatherCollidables@dgPhysManager@@QAEXPAUCollisionTableEntry@1@@Z
     ARTS_IMPORT void GatherCollidables(dgPhysManager::CollisionTableEntry* arg1);
 
-    // ?GetCollider@dgPhysManager@@UBEPAVphColliderBase@@PBVphInstance@@@Z
-    ARTS_IMPORT virtual phColliderBase* GetCollider(const phInstance* arg1) const;
-
     // ?IgnoreMover@dgPhysManager@@QAEXPAVlvlInstance@@@Z
     ARTS_IMPORT void IgnoreMover(lvlInstance* arg1);
-
-    // ?KillInstance@dgPhysManager@@UAEXPAVphInstance@@@Z
-    ARTS_IMPORT virtual void KillInstance(phInstance* arg1);
 
     // ?NewMover@dgPhysManager@@QAEXPAVlvlInstance@@00@Z
     ARTS_IMPORT void NewMover(lvlInstance* arg1, lvlInstance* arg2, lvlInstance* arg3);
@@ -93,20 +102,11 @@ public:
     // ?NewMover@dgPhysManager@@QAEXPAVlvlInstance@@@Z
     ARTS_IMPORT void NewMover(lvlInstance* arg1);
 
-    // ?PromoteInstance@dgPhysManager@@UAEPAVphColliderBase@@PAVphInstance@@@Z
-    ARTS_IMPORT virtual phColliderBase* PromoteInstance(phInstance* arg1);
-
     // ?Reset@dgPhysManager@@QAEXXZ
     ARTS_IMPORT void Reset();
 
     // ?ResetTable@dgPhysManager@@QAEXXZ
     ARTS_IMPORT void ResetTable();
-
-    // ?TestProbe@dgPhysManager@@UBE_NABVphSegment@@PAVphIntersection@@IH@Z
-    ARTS_IMPORT virtual bool TestProbe(const phSegment& arg1, phIntersection* arg2, u32 arg3, i32 arg4) const;
-
-    // ?TestSphere@dgPhysManager@@UBE_NABVVector3@@MPAVphImpact@@IH@Z
-    ARTS_IMPORT virtual bool TestSphere(const Vector3& arg1, f32 arg2, phImpact* arg3, u32 arg4, i32 arg5) const;
 
     // ?TrivialCollideInstances@dgPhysManager@@QAE_NPAVlvlInstance@@0@Z
     ARTS_IMPORT bool TrivialCollideInstances(lvlInstance* arg1, lvlInstance* arg2);

@@ -38,14 +38,14 @@ public:
     // ??1dgBangerDataManager@@UAE@XZ
     ARTS_IMPORT virtual ~dgBangerDataManager();
 
+    // ?GetClassName@dgBangerDataManager@@UAEPADXZ
+    ARTS_IMPORT virtual char* GetClassName();
+
     // ?AddBangerDataEntry@dgBangerDataManager@@QAEHPBD0@Z
     ARTS_IMPORT i32 AddBangerDataEntry(const char* arg1, const char* arg2);
 
     // ?ChangeData@dgBangerDataManager@@QAEXXZ
     ARTS_IMPORT void ChangeData();
-
-    // ?GetClassName@dgBangerDataManager@@UAEPADXZ
-    ARTS_IMPORT virtual char* GetClassName();
 
 public:
     static dgBangerDataManager*& Access_Instance() { return Instance; }

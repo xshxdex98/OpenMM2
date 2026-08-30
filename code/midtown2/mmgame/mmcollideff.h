@@ -28,20 +28,20 @@ struct IDirectInputDevice2A;
 class mmCollideFF
 {
 public:
-    // ?Assign@mmCollideFF@@QAEHJJ@Z
-    ARTS_IMPORT i32 Assign(ilong arg1, ilong arg2);
-
     // ?Init@mmCollideFF@@UAEHPAUIDirectInputDevice2A@@@Z
     ARTS_IMPORT virtual i32 Init(IDirectInputDevice2A* arg1);
 
     // ?Play@mmCollideFF@@UAEHXZ
     ARTS_IMPORT virtual i32 Play();
 
+    // ?Stop@mmCollideFF@@UAEHXZ
+    ARTS_IMPORT virtual i32 Stop();
+
     // ?SetValues@mmCollideFF@@UAEHMM@Z
     ARTS_IMPORT virtual i32 SetValues(f32 arg1, f32 arg2);
 
-    // ?Stop@mmCollideFF@@UAEHXZ
-    ARTS_IMPORT virtual i32 Stop();
+    // ?Assign@mmCollideFF@@QAEHJJ@Z
+    ARTS_IMPORT i32 Assign(ilong arg1, ilong arg2);
 };
 
 // ??_7mmCollideFF@@6B@

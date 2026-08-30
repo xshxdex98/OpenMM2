@@ -35,17 +35,17 @@ public:
     // ?Copy@phMaterial@@UAEXABV1@@Z
     ARTS_IMPORT virtual void Copy(const phMaterial& arg1);
 
-    // ?Load@phMaterial@@QAEXAAVdatAsciiTokenizer@@@Z
-    ARTS_IMPORT void Load(datAsciiTokenizer& arg1);
-
-    // ?LoadBinary@phMaterial@@QAEXPAVStream@@@Z
-    ARTS_IMPORT void LoadBinary(Stream* arg1);
-
     // ?Save@phMaterial@@UAEXAAVdatAsciiTokenizer@@@Z
     ARTS_IMPORT virtual void Save(datAsciiTokenizer& arg1);
 
     // ?SaveBinary@phMaterial@@UAEXPAVStream@@@Z
     ARTS_IMPORT virtual void SaveBinary(Stream* arg1);
+
+    // ?Load@phMaterial@@QAEXAAVdatAsciiTokenizer@@@Z
+    ARTS_IMPORT void Load(datAsciiTokenizer& arg1);
+
+    // ?LoadBinary@phMaterial@@QAEXPAVStream@@@Z
+    ARTS_IMPORT void LoadBinary(Stream* arg1);
 
     // ?SetName@phMaterial@@QAEXPBD@Z
     ARTS_IMPORT void SetName(const char* arg1);

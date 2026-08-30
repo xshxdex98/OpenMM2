@@ -43,20 +43,20 @@ public:
     // ?Cull@mmExternalView@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
 
+    // ?Update@mmExternalView@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@mmExternalView@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
+    // ?ResChange@mmExternalView@@UAEXHH@Z
+    ARTS_IMPORT virtual void ResChange(i32 arg1, i32 arg2);
+
     // ?GetClassNameA@mmExternalView@@UAEPADXZ
     ARTS_IMPORT virtual char* GetClassNameA();
 
     // ?Init@mmExternalView@@QAEXPAVmmPlayer@@@Z
     ARTS_IMPORT void Init(mmPlayer* arg1);
-
-    // ?ResChange@mmExternalView@@UAEXHH@Z
-    ARTS_IMPORT virtual void ResChange(i32 arg1, i32 arg2);
-
-    // ?Reset@mmExternalView@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?Update@mmExternalView@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     // Members from 0x018; everything below that belongs to asNode.

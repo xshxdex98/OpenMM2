@@ -34,23 +34,8 @@ public:
     // ??1aiVehicleAmbient@@QAE@XZ
     ARTS_IMPORT ~aiVehicleAmbient();
 
-    // ?DrawBBox@aiVehicleAmbient@@QAEXF@Z
-    ARTS_IMPORT void DrawBBox(i16 arg1);
-
-    // ?DrawId@aiVehicleAmbient@@UAEXXZ
-    ARTS_IMPORT virtual void DrawId();
-
-    // ?Dump@aiVehicleAmbient@@QAEXXZ
-    ARTS_IMPORT void Dump();
-
-    // ?Impact@aiVehicleAmbient@@UAEXH@Z
-    ARTS_IMPORT virtual void Impact(i32 arg1);
-
-    // ?Init@aiVehicleAmbient@@QAEXPADH@Z
-    ARTS_IMPORT void Init(char* arg1, i32 arg2);
-
-    // ?ReplayDebug@aiVehicleAmbient@@UAEXXZ
-    ARTS_IMPORT virtual void ReplayDebug();
+    // ?Update@aiVehicleAmbient@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
 
     // ?Reset@aiVehicleAmbient@@UAEXXZ
     ARTS_IMPORT virtual void Reset();
@@ -58,8 +43,23 @@ public:
     // ?Type@aiVehicleAmbient@@UAEHXZ
     ARTS_IMPORT virtual i32 Type();
 
-    // ?Update@aiVehicleAmbient@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
+    // ?DrawId@aiVehicleAmbient@@UAEXXZ
+    ARTS_IMPORT virtual void DrawId();
+
+    // ?ReplayDebug@aiVehicleAmbient@@UAEXXZ
+    ARTS_IMPORT virtual void ReplayDebug();
+
+    // ?Impact@aiVehicleAmbient@@UAEXH@Z
+    ARTS_IMPORT virtual void Impact(i32 arg1);
+
+    // ?DrawBBox@aiVehicleAmbient@@QAEXF@Z
+    ARTS_IMPORT void DrawBBox(i16 arg1);
+
+    // ?Dump@aiVehicleAmbient@@QAEXXZ
+    ARTS_IMPORT void Dump();
+
+    // ?Init@aiVehicleAmbient@@QAEXPADH@Z
+    ARTS_IMPORT void Init(char* arg1, i32 arg2);
 
 public:
     // Members from 0x18C; everything below that belongs to aiVehicleSpline.

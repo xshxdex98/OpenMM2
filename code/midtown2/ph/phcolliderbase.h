@@ -39,6 +39,27 @@ class phSegment;
 class phColliderBase
 {
 public:
+    // ?GetInvMassMatrix@phColliderBase@@UBEXABVVector3@@0AAVMatrix34@@H@Z
+    ARTS_IMPORT virtual void GetInvMassMatrix(const Vector3& arg1, const Vector3& arg2, Matrix34& arg3, i32 arg4) const;
+
+    // ?GetInvMassMatrix@phColliderBase@@UBEXABVVector3@@AAVMatrix34@@H@Z
+    ARTS_IMPORT virtual void GetInvMassMatrix(const Vector3& arg1, Matrix34& arg2, i32 arg3) const;
+
+    // ?Impact@phColliderBase@@UAEXPBVphImpactBase@@ABVVector3@@@Z
+    ARTS_IMPORT virtual void Impact(const phImpactBase* arg1, const Vector3& arg2);
+
+    // ?Impact@phColliderBase@@UAEXPBVphImpactBase@@ABVVector3@@1@Z
+    ARTS_IMPORT virtual void Impact(const phImpactBase* arg1, const Vector3& arg2, const Vector3& arg3);
+
+    // ?Contact@phColliderBase@@UAEXABVVector3@@PBVphContact@@@Z
+    ARTS_IMPORT virtual void Contact(const Vector3& arg1, const phContact* arg2);
+
+    // ?Contact@phColliderBase@@UAEXABVVector3@@PBVphContact@@ABVMatrix34@@@Z
+    ARTS_IMPORT virtual void Contact(const Vector3& arg1, const phContact* arg2, const Matrix34& arg3);
+
+    // ?Contact@phColliderBase@@UAEXPBVphImpactBase@@ABVVector3@@11ABVMatrix34@@@Z
+    ARTS_IMPORT virtual void Contact(const phImpactBase* arg1, const Vector3& arg2, const Vector3& arg3, const Vector3& arg4, const Matrix34& arg5);
+
     // ?ApplyAirResistance@phColliderBase@@QAEXMABVVector3@@PBVphBound@@@Z
     ARTS_IMPORT void ApplyAirResistance(f32 arg1, const Vector3& arg2, const phBound* arg3);
 
@@ -53,15 +74,6 @@ public:
 
     // ?ColliderIsActive@phColliderBase@@QBE_NXZ
     ARTS_IMPORT bool ColliderIsActive() const;
-
-    // ?Contact@phColliderBase@@UAEXABVVector3@@PBVphContact@@@Z
-    ARTS_IMPORT virtual void Contact(const Vector3& arg1, const phContact* arg2);
-
-    // ?Contact@phColliderBase@@UAEXABVVector3@@PBVphContact@@ABVMatrix34@@@Z
-    ARTS_IMPORT virtual void Contact(const Vector3& arg1, const phContact* arg2, const Matrix34& arg3);
-
-    // ?Contact@phColliderBase@@UAEXPBVphImpactBase@@ABVVector3@@11ABVMatrix34@@@Z
-    ARTS_IMPORT virtual void Contact(const phImpactBase* arg1, const Vector3& arg2, const Vector3& arg3, const Vector3& arg4, const Matrix34& arg5);
 
     // ?CopyLastMatrix@phColliderBase@@QBEXPAVMatrix34@@J@Z
     ARTS_IMPORT void CopyLastMatrix(Matrix34* arg1, ilong arg2) const;
@@ -78,20 +90,8 @@ public:
     // ?GetDisp@phColliderBase@@QBEXABVVector3@@PAV2@J@Z
     ARTS_IMPORT void GetDisp(const Vector3& arg1, Vector3* arg2, ilong arg3) const;
 
-    // ?GetInvMassMatrix@phColliderBase@@UBEXABVVector3@@0AAVMatrix34@@H@Z
-    ARTS_IMPORT virtual void GetInvMassMatrix(const Vector3& arg1, const Vector3& arg2, Matrix34& arg3, i32 arg4) const;
-
-    // ?GetInvMassMatrix@phColliderBase@@UBEXABVVector3@@AAVMatrix34@@H@Z
-    ARTS_IMPORT virtual void GetInvMassMatrix(const Vector3& arg1, Matrix34& arg2, i32 arg3) const;
-
     // ?GetLocalVelocity@phColliderBase@@QBEXABVVector3@@HHHAAV2@@Z
     ARTS_IMPORT void GetLocalVelocity(const Vector3& arg1, i32 arg2, i32 arg3, i32 arg4, Vector3& arg5) const;
-
-    // ?Impact@phColliderBase@@UAEXPBVphImpactBase@@ABVVector3@@1@Z
-    ARTS_IMPORT virtual void Impact(const phImpactBase* arg1, const Vector3& arg2, const Vector3& arg3);
-
-    // ?Impact@phColliderBase@@UAEXPBVphImpactBase@@ABVVector3@@@Z
-    ARTS_IMPORT virtual void Impact(const phImpactBase* arg1, const Vector3& arg2);
 
     // ?Reset@phColliderBase@@QAEXXZ
     ARTS_IMPORT void Reset();

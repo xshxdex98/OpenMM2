@@ -34,11 +34,11 @@ public:
     // ??1PUAudioOptions@@UAE@XZ
     ARTS_IMPORT virtual ~PUAudioOptions();
 
-    // ?CancelAction@PUAudioOptions@@QAEXXZ
-    ARTS_IMPORT void CancelAction();
-
     // ?PreSetup@PUAudioOptions@@UAEXXZ
     ARTS_IMPORT virtual void PreSetup();
+
+    // ?CancelAction@PUAudioOptions@@QAEXXZ
+    ARTS_IMPORT void CancelAction();
 
     // ?SetBalance@PUAudioOptions@@QAEXXZ
     ARTS_IMPORT void SetBalance();

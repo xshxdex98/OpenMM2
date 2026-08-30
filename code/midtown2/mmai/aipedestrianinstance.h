@@ -37,11 +37,23 @@ public:
     // ??0aiPedestrianInstance@@QAE@PAVaiPedestrian@@@Z
     ARTS_IMPORT aiPedestrianInstance(aiPedestrian* arg1);
 
+    // ?GetPosition@aiPedestrianInstance@@UAEABVVector3@@XZ
+    ARTS_IMPORT virtual const Vector3& GetPosition();
+
+    // ?GetMatrix@aiPedestrianInstance@@UAEABVMatrix34@@AAV2@@Z
+    ARTS_IMPORT virtual const Matrix34& GetMatrix(Matrix34& arg1);
+
+    // ?SetMatrix@aiPedestrianInstance@@UAEXABVMatrix34@@@Z
+    ARTS_IMPORT virtual void SetMatrix(const Matrix34& arg1);
+
+    // ?GetEntity@aiPedestrianInstance@@UAEPAVdgPhysEntity@@XZ
+    ARTS_IMPORT virtual dgPhysEntity* GetEntity();
+
     // ?AttachEntity@aiPedestrianInstance@@UAEPAVdgPhysEntity@@XZ
     ARTS_IMPORT virtual dgPhysEntity* AttachEntity();
 
-    // ?ComputeLod@aiPedestrianInstance@@UAEHMM@Z
-    ARTS_IMPORT virtual i32 ComputeLod(f32 arg1, f32 arg2);
+    // ?GetVelocity@aiPedestrianInstance@@UAEABVVector3@@XZ
+    ARTS_IMPORT virtual const Vector3& GetVelocity();
 
     // ?Detach@aiPedestrianInstance@@UAEXXZ
     ARTS_IMPORT virtual void Detach();
@@ -55,29 +67,17 @@ public:
     // ?DrawShadowMap@aiPedestrianInstance@@UAEXXZ
     ARTS_IMPORT virtual void DrawShadowMap();
 
-    // ?GetBound@aiPedestrianInstance@@UAEPBVphBound@@H@Z
-    ARTS_IMPORT virtual const phBound* GetBound(i32 arg1);
-
-    // ?GetEntity@aiPedestrianInstance@@UAEPAVdgPhysEntity@@XZ
-    ARTS_IMPORT virtual dgPhysEntity* GetEntity();
-
-    // ?GetMatrix@aiPedestrianInstance@@UAEABVMatrix34@@AAV2@@Z
-    ARTS_IMPORT virtual const Matrix34& GetMatrix(Matrix34& arg1);
-
-    // ?GetPosition@aiPedestrianInstance@@UAEABVVector3@@XZ
-    ARTS_IMPORT virtual const Vector3& GetPosition();
-
-    // ?GetVelocity@aiPedestrianInstance@@UAEABVVector3@@XZ
-    ARTS_IMPORT virtual const Vector3& GetVelocity();
+    // ?SizeOf@aiPedestrianInstance@@UAEIXZ
+    ARTS_IMPORT virtual u32 SizeOf();
 
     // ?IsCollidable@aiPedestrianInstance@@UAE_NXZ
     ARTS_IMPORT virtual bool IsCollidable();
 
-    // ?SetMatrix@aiPedestrianInstance@@UAEXABVMatrix34@@@Z
-    ARTS_IMPORT virtual void SetMatrix(const Matrix34& arg1);
+    // ?GetBound@aiPedestrianInstance@@UAEPBVphBound@@H@Z
+    ARTS_IMPORT virtual const phBound* GetBound(i32 arg1);
 
-    // ?SizeOf@aiPedestrianInstance@@UAEIXZ
-    ARTS_IMPORT virtual u32 SizeOf();
+    // ?ComputeLod@aiPedestrianInstance@@UAEHMM@Z
+    ARTS_IMPORT virtual i32 ComputeLod(f32 arg1, f32 arg2);
 };
 
 // ??_7aiPedestrianInstance@@6B@

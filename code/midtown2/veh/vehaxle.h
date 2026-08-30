@@ -39,8 +39,8 @@ public:
     // ??1vehAxle@@UAE@XZ
     ARTS_IMPORT virtual ~vehAxle();
 
-    // ?ComputeConstants@vehAxle@@QAEXXZ
-    ARTS_IMPORT void ComputeConstants();
+    // ?Update@vehAxle@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
 
     // ?FileIO@vehAxle@@UAEXAAVdatParser@@@Z
     ARTS_IMPORT virtual void FileIO(datParser& arg1);
@@ -48,11 +48,11 @@ public:
     // ?GetClassName@vehAxle@@UAEPADXZ
     ARTS_IMPORT virtual char* GetClassName();
 
+    // ?ComputeConstants@vehAxle@@QAEXXZ
+    ARTS_IMPORT void ComputeConstants();
+
     // ?Init@vehAxle@@QAEXPAVvehCarSim@@PBD1PAVvehWheel@@2@Z
     ARTS_IMPORT void Init(vehCarSim* arg1, const char* arg2, const char* arg3, vehWheel* arg4, vehWheel* arg5);
-
-    // ?Update@vehAxle@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     // Members from 0x018; everything below that belongs to asNode.

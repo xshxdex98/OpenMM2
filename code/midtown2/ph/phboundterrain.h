@@ -46,6 +46,24 @@ public:
     // ??1phBoundTerrain@@QAE@XZ
     ARTS_IMPORT ~phBoundTerrain();
 
+    // ?TestProbePoint@phBoundTerrain@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@M@Z
+    ARTS_IMPORT virtual bool TestProbePoint(phSegment& arg1, phIntersectionPoint* arg2, f32 arg3) const;
+
+    // ?TestAIPoint@phBoundTerrain@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@@Z
+    ARTS_IMPORT virtual bool TestAIPoint(phSegment& arg1, phIntersectionPoint* arg2) const;
+
+    // ?TestEdge@phBoundTerrain@@UBEHAAVphSegment@@PAVphIntersection@@H@Z
+    ARTS_IMPORT virtual i32 TestEdge(phSegment& arg1, phIntersection* arg2, i32 arg3) const;
+
+    // ?TestProbe@phBoundTerrain@@UBE_NAAVphSegment@@PAVphIntersection@@M@Z
+    ARTS_IMPORT virtual bool TestProbe(phSegment& arg1, phIntersection* arg2, f32 arg3) const;
+
+    // ?TestSphere@phBoundTerrain@@UBE_NABVVector3@@MAAV2@1AAM@Z
+    ARTS_IMPORT virtual bool TestSphere(const Vector3& arg1, f32 arg2, Vector3& arg3, Vector3& arg4, f32& arg5) const;
+
+    // ?PostLoadCompute@phBoundTerrain@@UAEXXZ
+    ARTS_IMPORT virtual void PostLoadCompute();
+
     // ?ClearPolyTouched@phBoundTerrain@@QBEXXZ
     ARTS_IMPORT void ClearPolyTouched() const;
 
@@ -67,17 +85,11 @@ public:
     // ?PackNormal@phBoundTerrain@@SAXAAIABVVector4@@@Z
     ARTS_IMPORT static void PackNormal(u32& arg1, const Vector4& arg2);
 
-    // ?PostLoadCompute@phBoundTerrain@@UAEXXZ
-    ARTS_IMPORT virtual void PostLoadCompute();
-
     // ?Save@phBoundTerrain@@QAE_NPBD@Z
     ARTS_IMPORT bool Save(const char* arg1);
 
     // ?SetHotEdges@phBoundTerrain@@QAEX_N@Z
     ARTS_IMPORT void SetHotEdges(bool arg1);
-
-    // ?TestAIPoint@phBoundTerrain@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@@Z
-    ARTS_IMPORT virtual bool TestAIPoint(phSegment& arg1, phIntersectionPoint* arg2) const;
 
     // ?TestBoundPolyTerrain@phBoundTerrain@@QBEHPBVphBoundPolygonal@@PAVphColliderBase@@PBVMatrix34@@2PAVphIntersection@@HPAHPBVVector3@@_N@Z
     ARTS_IMPORT i32 TestBoundPolyTerrain(const phBoundPolygonal* arg1, phColliderBase* arg2, const Matrix34* arg3, const Matrix34* arg4, phIntersection* arg5, i32 arg6, i32* arg7, const Vector3* arg8, bool arg9) const;
@@ -87,18 +99,6 @@ public:
 
     // ?TestBoundTerrainPoly@phBoundTerrain@@QBEHPBVphBoundPolygonal@@PBVMatrix34@@1PAVphColliderBase@@2PAVphIntersection@@3HPAH4ABVVector3@@_N@Z
     ARTS_IMPORT i32 TestBoundTerrainPoly(const phBoundPolygonal* arg1, const Matrix34* arg2, const Matrix34* arg3, phColliderBase* arg4, phColliderBase* arg5, phIntersection* arg6, phIntersection* arg7, i32 arg8, i32* arg9, i32* arg10, const Vector3& arg11, bool arg12) const;
-
-    // ?TestEdge@phBoundTerrain@@UBEHAAVphSegment@@PAVphIntersection@@H@Z
-    ARTS_IMPORT virtual i32 TestEdge(phSegment& arg1, phIntersection* arg2, i32 arg3) const;
-
-    // ?TestProbe@phBoundTerrain@@UBE_NAAVphSegment@@PAVphIntersection@@M@Z
-    ARTS_IMPORT virtual bool TestProbe(phSegment& arg1, phIntersection* arg2, f32 arg3) const;
-
-    // ?TestProbePoint@phBoundTerrain@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@M@Z
-    ARTS_IMPORT virtual bool TestProbePoint(phSegment& arg1, phIntersectionPoint* arg2, f32 arg3) const;
-
-    // ?TestSphere@phBoundTerrain@@UBE_NABVVector3@@MAAV2@1AAM@Z
-    ARTS_IMPORT virtual bool TestSphere(const Vector3& arg1, f32 arg2, Vector3& arg3, Vector3& arg4, f32& arg5) const;
 
     // ?UnpackNormal@phBoundTerrain@@SAXAAVVector4@@I@Z
     ARTS_IMPORT static void UnpackNormal(Vector4& arg1, u32 arg2);

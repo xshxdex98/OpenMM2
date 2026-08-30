@@ -41,17 +41,17 @@ public:
     // ?Cull@sfPointer@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
 
+    // ?Update@sfPointer@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?ResChange@sfPointer@@UAEXHH@Z
+    ARTS_IMPORT virtual void ResChange(i32 arg1, i32 arg2);
+
     // ?GetPointerHeight@sfPointer@@QAEMXZ
     ARTS_IMPORT f32 GetPointerHeight();
 
     // ?Init@sfPointer@@QAEXXZ
     ARTS_IMPORT void Init();
-
-    // ?ResChange@sfPointer@@UAEXHH@Z
-    ARTS_IMPORT virtual void ResChange(i32 arg1, i32 arg2);
-
-    // ?Update@sfPointer@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
     // ?WaitForRelease@sfPointer@@QAEXXZ
     ARTS_IMPORT void WaitForRelease();

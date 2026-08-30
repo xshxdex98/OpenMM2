@@ -41,8 +41,11 @@ public:
     // ??1asCullManager@@UAE@XZ
     ARTS_IMPORT virtual ~asCullManager();
 
-    // ?DeclareBitmap@asCullManager@@QAEXPAVasCullable@@PAVgfxBitmap@@@Z
-    ARTS_IMPORT void DeclareBitmap(asCullable* arg1, gfxBitmap* arg2);
+    // ?Update@asCullManager@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@asCullManager@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
 
     // ?DeclareCamera@asCullManager@@UAEXPAVasCamera@@@Z
     ARTS_IMPORT virtual void DeclareCamera(asCamera* arg1);
@@ -56,11 +59,8 @@ public:
     // ?DeclareCullable2DFG@asCullManager@@UAEXPAVasCullable@@@Z
     ARTS_IMPORT virtual void DeclareCullable2DFG(asCullable* arg1);
 
-    // ?Reset@asCullManager@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?Update@asCullManager@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
+    // ?DeclareBitmap@asCullManager@@QAEXPAVasCullable@@PAVgfxBitmap@@@Z
+    ARTS_IMPORT void DeclareBitmap(asCullable* arg1, gfxBitmap* arg2);
 
 public:
     static asCullManager*& Access_Instance() { return Instance; }

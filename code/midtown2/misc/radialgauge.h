@@ -39,17 +39,17 @@ public:
     // ??1RadialGauge@@UAE@XZ
     ARTS_IMPORT virtual ~RadialGauge();
 
-    // ?Cull@RadialGauge@@QAEXPBVMatrix34@@@Z
-    ARTS_IMPORT void Cull(const Matrix34* arg1);
-
     // ?Cull@RadialGauge@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
 
-    // ?Init@RadialGauge@@QAEXPAVmodStatic@@PAPAVmodShader@@VVector3@@PBM3M@Z
-    ARTS_IMPORT void Init(modStatic* arg1, modShader** arg2, Vector3 arg3, const f32* arg4, const f32* arg5, f32 arg6);
-
     // ?Update@RadialGauge@@UAEXXZ
     ARTS_IMPORT virtual void Update();
+
+    // ?Cull@RadialGauge@@QAEXPBVMatrix34@@@Z
+    ARTS_IMPORT void Cull(const Matrix34* arg1);
+
+    // ?Init@RadialGauge@@QAEXPAVmodStatic@@PAPAVmodShader@@VVector3@@PBM3M@Z
+    ARTS_IMPORT void Init(modStatic* arg1, modShader** arg2, Vector3 arg3, const f32* arg4, const f32* arg5, f32 arg6);
 
 public:
     static bool& Access_bDebugPivot() { return bDebugPivot; }

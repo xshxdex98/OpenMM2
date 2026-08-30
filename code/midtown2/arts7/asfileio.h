@@ -40,26 +40,26 @@ public:
     ARTS_IMPORT void SetName(const char* arg1);
 
 protected:
+    // ?FileIO@asFileIO@@MAEXAAVdatParser@@@Z
+    ARTS_IMPORT virtual void FileIO(datParser& arg1);
+
     // ?AfterLoad@asFileIO@@MAEXXZ
     ARTS_IMPORT virtual void AfterLoad();
 
     // ?BeforeSave@asFileIO@@MAEXXZ
     ARTS_IMPORT virtual void BeforeSave();
 
-    // ?FileIO@asFileIO@@MAEXAAVdatParser@@@Z
-    ARTS_IMPORT virtual void FileIO(datParser& arg1);
-
-    // ?GetClassName@asFileIO@@MAEPBDXZ
-    ARTS_IMPORT virtual const char* GetClassName();
-
-    // ?GetDirName@asFileIO@@MAEPBDXZ
-    ARTS_IMPORT virtual const char* GetDirName();
+    // ?Save@asFileIO@@MAE_NXZ
+    ARTS_IMPORT virtual bool Save();
 
     // ?Load@asFileIO@@MAE_NXZ
     ARTS_IMPORT virtual bool Load();
 
-    // ?Save@asFileIO@@MAE_NXZ
-    ARTS_IMPORT virtual bool Save();
+    // ?GetDirName@asFileIO@@MAEPBDXZ
+    ARTS_IMPORT virtual const char* GetDirName();
+
+    // ?GetClassName@asFileIO@@MAEPBDXZ
+    ARTS_IMPORT virtual const char* GetClassName();
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

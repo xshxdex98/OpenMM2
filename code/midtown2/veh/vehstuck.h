@@ -37,6 +37,12 @@ public:
     // ??1vehStuck@@UAE@XZ
     ARTS_IMPORT virtual ~vehStuck();
 
+    // ?Update@vehStuck@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@vehStuck@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?FileIO@vehStuck@@UAEXAAVdatParser@@@Z
     ARTS_IMPORT virtual void FileIO(datParser& arg1);
 
@@ -54,12 +60,6 @@ public:
 
     // ?Pegged@vehStuck@@QAEHXZ
     ARTS_IMPORT i32 Pegged();
-
-    // ?Reset@vehStuck@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?Update@vehStuck@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7vehStuck@@6B@

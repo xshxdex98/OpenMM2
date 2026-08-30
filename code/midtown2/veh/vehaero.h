@@ -36,14 +36,14 @@ public:
     // ??1vehAero@@UAE@XZ
     ARTS_IMPORT virtual ~vehAero();
 
+    // ?Update@vehAero@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?FileIO@vehAero@@UAEXAAVdatParser@@@Z
     ARTS_IMPORT virtual void FileIO(datParser& arg1);
 
     // ?GetClassName@vehAero@@UAEPADXZ
     ARTS_IMPORT virtual char* GetClassName();
-
-    // ?Update@vehAero@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     // Members from 0x018; everything below that belongs to asNode.

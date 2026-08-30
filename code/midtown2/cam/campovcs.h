@@ -36,23 +36,23 @@ public:
     // ??1camPovCS@@UAE@XZ
     ARTS_IMPORT virtual ~camPovCS();
 
-    // ?AfterLoad@camPovCS@@UAEXXZ
-    ARTS_IMPORT virtual void AfterLoad();
+    // ?Update@camPovCS@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@camPovCS@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
 
     // ?FileIO@camPovCS@@UAEXAAVdatParser@@@Z
     ARTS_IMPORT virtual void FileIO(datParser& arg1);
+
+    // ?AfterLoad@camPovCS@@UAEXXZ
+    ARTS_IMPORT virtual void AfterLoad();
 
     // ?GetClassName@camPovCS@@UAEPADXZ
     ARTS_IMPORT virtual char* GetClassName();
 
     // ?MakeActive@camPovCS@@UAEXXZ
     ARTS_IMPORT virtual void MakeActive();
-
-    // ?Reset@camPovCS@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?Update@camPovCS@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
     // ?UpdateInput@camPovCS@@UAEXXZ
     ARTS_IMPORT virtual void UpdateInput();

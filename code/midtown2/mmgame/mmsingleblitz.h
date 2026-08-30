@@ -36,20 +36,14 @@ public:
     // ??1mmSingleBlitz@@UAE@XZ
     ARTS_IMPORT virtual ~mmSingleBlitz();
 
-    // ?GetWaypoints@mmSingleBlitz@@UAEPAVmmWaypoints@@XZ
-    ARTS_IMPORT virtual mmWaypoints* GetWaypoints();
+    // ?Update@mmSingleBlitz@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
 
-    // ?HitWaterHandler@mmSingleBlitz@@UAEXXZ
-    ARTS_IMPORT virtual void HitWaterHandler();
+    // ?Reset@mmSingleBlitz@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
 
     // ?Init@mmSingleBlitz@@UAEHXZ
     ARTS_IMPORT virtual i32 Init();
-
-    // ?InitGameObjects@mmSingleBlitz@@UAEXXZ
-    ARTS_IMPORT virtual void InitGameObjects();
-
-    // ?InitHUD@mmSingleBlitz@@UAEXXZ
-    ARTS_IMPORT virtual void InitHUD();
 
     // ?InitMyPlayer@mmSingleBlitz@@UAEXXZ
     ARTS_IMPORT virtual void InitMyPlayer();
@@ -57,20 +51,14 @@ public:
     // ?InitOtherPlayers@mmSingleBlitz@@UAEXXZ
     ARTS_IMPORT virtual void InitOtherPlayers();
 
-    // ?NextRace@mmSingleBlitz@@UAEXXZ
-    ARTS_IMPORT virtual void NextRace();
+    // ?InitGameObjects@mmSingleBlitz@@UAEXXZ
+    ARTS_IMPORT virtual void InitGameObjects();
 
-    // ?PlayTimerWarning@mmSingleBlitz@@QAEXM@Z
-    ARTS_IMPORT void PlayTimerWarning(f32 arg1);
+    // ?InitHUD@mmSingleBlitz@@UAEXXZ
+    ARTS_IMPORT virtual void InitHUD();
 
-    // ?Reset@mmSingleBlitz@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?SwitchState@mmSingleBlitz@@UAEXH@Z
-    ARTS_IMPORT virtual void SwitchState(i32 arg1);
-
-    // ?Update@mmSingleBlitz@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
+    // ?UpdateGameInput@mmSingleBlitz@@UAEXH@Z
+    ARTS_IMPORT virtual void UpdateGameInput(i32 arg1);
 
     // ?UpdateDebugKeyInput@mmSingleBlitz@@UAEXH@Z
     ARTS_IMPORT virtual void UpdateDebugKeyInput(i32 arg1);
@@ -78,8 +66,20 @@ public:
     // ?UpdateGame@mmSingleBlitz@@UAEXXZ
     ARTS_IMPORT virtual void UpdateGame();
 
-    // ?UpdateGameInput@mmSingleBlitz@@UAEXH@Z
-    ARTS_IMPORT virtual void UpdateGameInput(i32 arg1);
+    // ?NextRace@mmSingleBlitz@@UAEXXZ
+    ARTS_IMPORT virtual void NextRace();
+
+    // ?HitWaterHandler@mmSingleBlitz@@UAEXXZ
+    ARTS_IMPORT virtual void HitWaterHandler();
+
+    // ?SwitchState@mmSingleBlitz@@UAEXH@Z
+    ARTS_IMPORT virtual void SwitchState(i32 arg1);
+
+    // ?GetWaypoints@mmSingleBlitz@@UAEPAVmmWaypoints@@XZ
+    ARTS_IMPORT virtual mmWaypoints* GetWaypoints();
+
+    // ?PlayTimerWarning@mmSingleBlitz@@QAEXM@Z
+    ARTS_IMPORT void PlayTimerWarning(f32 arg1);
 
 private:
     // ?FinishMessage@mmSingleBlitz@@AAEXH@Z

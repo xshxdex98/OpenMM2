@@ -37,6 +37,12 @@ public:
     // ??1aiVehicleManager@@UAE@XZ
     ARTS_IMPORT virtual ~aiVehicleManager();
 
+    // ?Update@aiVehicleManager@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@aiVehicleManager@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?AddVehicleDataEntry@aiVehicleManager@@QAEHPAD@Z
     ARTS_IMPORT i32 AddVehicleDataEntry(char* arg1);
 
@@ -49,14 +55,8 @@ public:
     // ?Init@aiVehicleManager@@QAEXPAD@Z
     ARTS_IMPORT void Init(char* arg1);
 
-    // ?Reset@aiVehicleManager@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?SaveEntry@aiVehicleManager@@QAEXXZ
     ARTS_IMPORT void SaveEntry();
-
-    // ?Update@aiVehicleManager@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
     // ?Instance@aiVehicleManager@@2PAV1@A
     ARTS_IMPORT static aiVehicleManager* Instance;

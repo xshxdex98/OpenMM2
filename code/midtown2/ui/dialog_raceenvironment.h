@@ -34,6 +34,9 @@ public:
     // ??1Dialog_RaceEnvironment@@UAE@XZ
     ARTS_IMPORT virtual ~Dialog_RaceEnvironment();
 
+    // ?PreSetup@Dialog_RaceEnvironment@@UAEXXZ
+    ARTS_IMPORT virtual void PreSetup();
+
     // ?CancelCallback@Dialog_RaceEnvironment@@QAEXXZ
     ARTS_IMPORT void CancelCallback();
 
@@ -42,9 +45,6 @@ public:
 
     // ?DoneCallback@Dialog_RaceEnvironment@@QAEXXZ
     ARTS_IMPORT void DoneCallback();
-
-    // ?PreSetup@Dialog_RaceEnvironment@@UAEXXZ
-    ARTS_IMPORT virtual void PreSetup();
 
     // ?SetMultiRaceOptions@Dialog_RaceEnvironment@@QAEXH@Z
     ARTS_IMPORT void SetMultiRaceOptions(i32 arg1);

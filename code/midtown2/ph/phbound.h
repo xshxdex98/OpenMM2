@@ -37,14 +37,44 @@ public:
     // ??0phBound@@QAE@H@Z
     ARTS_IMPORT phBound(i32 arg1);
 
-    // ?CalculateSphereFromBoundingBox@phBound@@QAEXXZ
-    ARTS_IMPORT void CalculateSphereFromBoundingBox();
-
     // ?CenterBound@phBound@@UAEXXZ
     ARTS_IMPORT virtual void CenterBound();
 
+    // ?GetNumMaterials@phBound@@UBEHXZ
+    ARTS_IMPORT virtual i32 GetNumMaterials() const;
+
+    // ?SetFriction@phBound@@UAEMXZ
+    ARTS_IMPORT virtual f32 SetFriction();
+
+    // ?SetFriction@phBound@@UAEXM@Z
+    ARTS_IMPORT virtual void SetFriction(f32 arg1);
+
+    // ?SetElasticity@phBound@@UAEMXZ
+    ARTS_IMPORT virtual f32 SetElasticity();
+
+    // ?SetElasticity@phBound@@UAEXM@Z
+    ARTS_IMPORT virtual void SetElasticity(f32 arg1);
+
+    // ?TestSphere@phBound@@UBE_NABVVector3@@MAAVphImpactBase@@@Z
+    ARTS_IMPORT virtual bool TestSphere(const Vector3& arg1, f32 arg2, phImpactBase& arg3) const;
+
+    // ?TestSphere@phBound@@UBE_NABVVector3@@MAAV2@1AAM@Z
+    ARTS_IMPORT virtual bool TestSphere(const Vector3& arg1, f32 arg2, Vector3& arg3, Vector3& arg4, f32& arg5) const;
+
+    // ?ModifyInvMassMatrix@phBound@@UBEXPAVMatrix34@@HABVVector3@@1@Z
+    ARTS_IMPORT virtual void ModifyInvMassMatrix(Matrix34* arg1, i32 arg2, const Vector3& arg3, const Vector3& arg4) const;
+
+    // ?ModifyInvMassMatrix@phBound@@UBEXPAVMatrix34@@HABVVector3@@@Z
+    ARTS_IMPORT virtual void ModifyInvMassMatrix(Matrix34* arg1, i32 arg2, const Vector3& arg3) const;
+
     // ?EffectiveMass@phBound@@UBEMABVVector3@@0HM@Z
     ARTS_IMPORT virtual f32 EffectiveMass(const Vector3& arg1, const Vector3& arg2, i32 arg3, f32 arg4) const;
+
+    // ?GetVertex@phBound@@UBEABVVector3@@H@Z
+    ARTS_IMPORT virtual const Vector3& GetVertex(i32 arg1) const;
+
+    // ?CalculateSphereFromBoundingBox@phBound@@QAEXXZ
+    ARTS_IMPORT void CalculateSphereFromBoundingBox();
 
     // ?GetCenter@phBound@@QBE?AVVector3@@PBVMatrix34@@@Z
     ARTS_IMPORT Vector3 GetCenter(const Matrix34* arg1) const;
@@ -58,35 +88,11 @@ public:
     // ?GetFricElas@phBound@@SAXPBV1@PBVphIntersection@@01PAM2@Z
     ARTS_IMPORT static void GetFricElas(const phBound* arg1, const phIntersection* arg2, const phBound* arg3, const phIntersection* arg4, f32* arg5, f32* arg6);
 
-    // ?GetNumMaterials@phBound@@UBEHXZ
-    ARTS_IMPORT virtual i32 GetNumMaterials() const;
-
-    // ?GetVertex@phBound@@UBEABVVector3@@H@Z
-    ARTS_IMPORT virtual const Vector3& GetVertex(i32 arg1) const;
-
     // ?IsOffset@phBound@@QBE?B_NXZ
     ARTS_IMPORT const bool IsOffset() const;
 
-    // ?ModifyInvMassMatrix@phBound@@UBEXPAVMatrix34@@HABVVector3@@1@Z
-    ARTS_IMPORT virtual void ModifyInvMassMatrix(Matrix34* arg1, i32 arg2, const Vector3& arg3, const Vector3& arg4) const;
-
-    // ?ModifyInvMassMatrix@phBound@@UBEXPAVMatrix34@@HABVVector3@@@Z
-    ARTS_IMPORT virtual void ModifyInvMassMatrix(Matrix34* arg1, i32 arg2, const Vector3& arg3) const;
-
-    // ?SetElasticity@phBound@@UAEMXZ
-    ARTS_IMPORT virtual f32 SetElasticity();
-
-    // ?SetElasticity@phBound@@UAEXM@Z
-    ARTS_IMPORT virtual void SetElasticity(f32 arg1);
-
     // ?SetFlexibility@phBound@@QAEXM@Z
     ARTS_IMPORT void SetFlexibility(f32 arg1);
-
-    // ?SetFriction@phBound@@UAEMXZ
-    ARTS_IMPORT virtual f32 SetFriction();
-
-    // ?SetFriction@phBound@@UAEXM@Z
-    ARTS_IMPORT virtual void SetFriction(f32 arg1);
 
     // ?SetOffset@phBound@@QAEXABVVector3@@@Z
     ARTS_IMPORT void SetOffset(const Vector3& arg1);
@@ -99,12 +105,6 @@ public:
 
     // ?TestSegmentPoint@phBound@@QBEHAAVphSegment@@PAVphIntersectionPoint@@H@Z
     ARTS_IMPORT i32 TestSegmentPoint(phSegment& arg1, phIntersectionPoint* arg2, i32 arg3) const;
-
-    // ?TestSphere@phBound@@UBE_NABVVector3@@MAAV2@1AAM@Z
-    ARTS_IMPORT virtual bool TestSphere(const Vector3& arg1, f32 arg2, Vector3& arg3, Vector3& arg4, f32& arg5) const;
-
-    // ?TestSphere@phBound@@UBE_NABVVector3@@MAAVphImpactBase@@@Z
-    ARTS_IMPORT virtual bool TestSphere(const Vector3& arg1, f32 arg2, phImpactBase& arg3) const;
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

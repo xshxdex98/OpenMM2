@@ -37,6 +37,12 @@ public:
     // ??1camTransitionCS@@UAE@XZ
     ARTS_IMPORT virtual ~camTransitionCS();
 
+    // ?Update@camTransitionCS@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@camTransitionCS@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?ForceMatrixDelta@camTransitionCS@@UAEXABVVector3@@@Z
     ARTS_IMPORT virtual void ForceMatrixDelta(const Vector3& arg1);
 
@@ -49,9 +55,6 @@ public:
     // ?NextTransition@camTransitionCS@@QAEXPAVcamCarCS@@@Z
     ARTS_IMPORT void NextTransition(camCarCS* arg1);
 
-    // ?Reset@camTransitionCS@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?ReverseTransition@camTransitionCS@@QAEXXZ
     ARTS_IMPORT void ReverseTransition();
 
@@ -60,9 +63,6 @@ public:
 
     // ?StartTransition@camTransitionCS@@QAEXXZ
     ARTS_IMPORT void StartTransition();
-
-    // ?Update@camTransitionCS@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7camTransitionCS@@6B@

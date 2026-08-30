@@ -36,9 +36,6 @@ public:
     // ??1OptionsBase@@UAE@XZ
     ARTS_IMPORT virtual ~OptionsBase();
 
-    // ?CreateTitle@OptionsBase@@QAEXPAULocString@@@Z
-    ARTS_IMPORT void CreateTitle(LocString* arg1);
-
     // ?IsAnOptionMenu@OptionsBase@@UAEHXZ
     ARTS_IMPORT virtual i32 IsAnOptionMenu();
 
@@ -47,6 +44,9 @@ public:
 
     // ?StoreCurrentSetup@OptionsBase@@UAEXXZ
     ARTS_IMPORT virtual void StoreCurrentSetup();
+
+    // ?CreateTitle@OptionsBase@@QAEXPAULocString@@@Z
+    ARTS_IMPORT void CreateTitle(LocString* arg1);
 };
 
 // ??_7OptionsBase@@6B@

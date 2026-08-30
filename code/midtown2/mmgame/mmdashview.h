@@ -39,11 +39,14 @@ public:
     // ??1mmDashView@@UAE@XZ
     ARTS_IMPORT virtual ~mmDashView();
 
-    // ?Activate@mmDashView@@QAEXXZ
-    ARTS_IMPORT void Activate();
+    // ?Cull@mmDashView@@UAEXXZ
+    ARTS_IMPORT virtual void Cull();
 
-    // ?ActivateUntilTransitionIsOver@mmDashView@@QAEXXZ
-    ARTS_IMPORT void ActivateUntilTransitionIsOver();
+    // ?Update@mmDashView@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@mmDashView@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
 
     // ?AfterLoad@mmDashView@@UAEXXZ
     ARTS_IMPORT virtual void AfterLoad();
@@ -51,26 +54,23 @@ public:
     // ?BeforeSave@mmDashView@@UAEXXZ
     ARTS_IMPORT virtual void BeforeSave();
 
-    // ?Cull@mmDashView@@UAEXXZ
-    ARTS_IMPORT virtual void Cull();
+    // ?GetClassNameA@mmDashView@@UAEPADXZ
+    ARTS_IMPORT virtual char* GetClassNameA();
+
+    // ?Activate@mmDashView@@QAEXXZ
+    ARTS_IMPORT void Activate();
+
+    // ?ActivateUntilTransitionIsOver@mmDashView@@QAEXXZ
+    ARTS_IMPORT void ActivateUntilTransitionIsOver();
 
     // ?Deactivate@mmDashView@@QAEXXZ
     ARTS_IMPORT void Deactivate();
 
-    // ?GetClassNameA@mmDashView@@UAEPADXZ
-    ARTS_IMPORT virtual char* GetClassNameA();
-
     // ?Init@mmDashView@@QAEXPADPAVmmPlayer@@@Z
     ARTS_IMPORT void Init(char* arg1, mmPlayer* arg2);
 
-    // ?Reset@mmDashView@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?TempDeactivate@mmDashView@@QAEXXZ
     ARTS_IMPORT void TempDeactivate();
-
-    // ?Update@mmDashView@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 private:
     // ?FileIO@mmDashView@@EAEXAAVdatParser@@@Z

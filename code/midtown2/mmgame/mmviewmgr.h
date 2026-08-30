@@ -38,14 +38,14 @@ public:
     // ??1mmViewMgr@@UAE@XZ
     ARTS_IMPORT virtual ~mmViewMgr();
 
+    // ?Update@mmViewMgr@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?Init@mmViewMgr@@QAEXPAVmmHUD@@PAVmmHudMap@@PAVmmPlayer@@@Z
     ARTS_IMPORT void Init(mmHUD* arg1, mmHudMap* arg2, mmPlayer* arg3);
 
     // ?SetViewSetting@mmViewMgr@@QAEXH@Z
     ARTS_IMPORT void SetViewSetting(i32 arg1);
-
-    // ?Update@mmViewMgr@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7mmViewMgr@@6B@

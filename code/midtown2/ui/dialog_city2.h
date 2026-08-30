@@ -34,17 +34,17 @@ public:
     // ??1Dialog_City2@@UAE@XZ
     ARTS_IMPORT virtual ~Dialog_City2();
 
+    // ?PreSetup@Dialog_City2@@UAEXXZ
+    ARTS_IMPORT virtual void PreSetup();
+
+    // ?PostSetup@Dialog_City2@@UAEXXZ
+    ARTS_IMPORT virtual void PostSetup();
+
     // ?CancelCB@Dialog_City2@@QAEXXZ
     ARTS_IMPORT void CancelCB();
 
     // ?DoneCB@Dialog_City2@@QAEXXZ
     ARTS_IMPORT void DoneCB();
-
-    // ?PostSetup@Dialog_City2@@UAEXXZ
-    ARTS_IMPORT virtual void PostSetup();
-
-    // ?PreSetup@Dialog_City2@@UAEXXZ
-    ARTS_IMPORT virtual void PreSetup();
 
     // ?ScrollCB@Dialog_City2@@QAEXXZ
     ARTS_IMPORT void ScrollCB();

@@ -37,23 +37,23 @@ public:
     // ??1gizBridgeMgr@@UAE@XZ
     ARTS_IMPORT virtual ~gizBridgeMgr();
 
-    // ?AddProximityTrigger@gizBridgeMgr@@QAEXPAVVector3@@@Z
-    ARTS_IMPORT void AddProximityTrigger(Vector3* arg1);
-
     // ?Cull@gizBridgeMgr@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
+
+    // ?Update@gizBridgeMgr@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@gizBridgeMgr@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
+    // ?AddProximityTrigger@gizBridgeMgr@@QAEXPAVVector3@@@Z
+    ARTS_IMPORT void AddProximityTrigger(Vector3* arg1);
 
     // ?GetBridges@gizBridgeMgr@@QAEPAVgizBridge@@H@Z
     ARTS_IMPORT gizBridge* GetBridges(i32 arg1);
 
     // ?Init@gizBridgeMgr@@QAE_NPAD00@Z
     ARTS_IMPORT bool Init(char* arg1, char* arg2, char* arg3);
-
-    // ?Reset@gizBridgeMgr@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?Update@gizBridgeMgr@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 private:
     // ?CheckProximity@gizBridgeMgr@@AAE_NPAVgizBridge@@@Z

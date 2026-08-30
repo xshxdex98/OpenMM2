@@ -31,20 +31,20 @@ class gfxViewport;
 class lvlLandmark : public lvlFixedRotY
 {
 public:
+    // ?IsVisible@lvlLandmark@@UAEHABVgfxViewport@@@Z
+    ARTS_IMPORT virtual i32 IsVisible(const gfxViewport& arg1);
+
     // ?Init@lvlLandmark@@UAEHPBDABVMatrix34@@H@Z
     ARTS_IMPORT virtual i32 Init(const char* arg1, const Matrix34& arg2, i32 arg3);
 
-    // ?IsCollidable@lvlLandmark@@UAE_NXZ
-    ARTS_IMPORT virtual bool IsCollidable();
+    // ?SizeOf@lvlLandmark@@UAEIXZ
+    ARTS_IMPORT virtual u32 SizeOf();
 
     // ?IsLandmark@lvlLandmark@@UAE_NXZ
     ARTS_IMPORT virtual bool IsLandmark();
 
-    // ?IsVisible@lvlLandmark@@UAEHABVgfxViewport@@@Z
-    ARTS_IMPORT virtual i32 IsVisible(const gfxViewport& arg1);
-
-    // ?SizeOf@lvlLandmark@@UAEIXZ
-    ARTS_IMPORT virtual u32 SizeOf();
+    // ?IsCollidable@lvlLandmark@@UAE_NXZ
+    ARTS_IMPORT virtual bool IsCollidable();
 };
 
 // ??_7lvlLandmark@@6B@

@@ -41,6 +41,15 @@ public:
     // ??1mmPlayer@@UAE@XZ
     ARTS_IMPORT virtual ~mmPlayer();
 
+    // ?Update@mmPlayer@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@mmPlayer@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
+    // ?FileIO@mmPlayer@@UAEXAAVdatParser@@@Z
+    ARTS_IMPORT virtual void FileIO(datParser& arg1);
+
     // ?AfterLoad@mmPlayer@@UAEXXZ
     ARTS_IMPORT virtual void AfterLoad();
 
@@ -52,9 +61,6 @@ public:
 
     // ?FFImpactCallback@mmPlayer@@QAEXM@Z
     ARTS_IMPORT void FFImpactCallback(f32 arg1);
-
-    // ?FileIO@mmPlayer@@UAEXAAVdatParser@@@Z
-    ARTS_IMPORT virtual void FileIO(datParser& arg1);
 
     // ?FilterSteering@mmPlayer@@QAEMM@Z
     ARTS_IMPORT f32 FilterSteering(f32 arg1);
@@ -73,9 +79,6 @@ public:
 
     // ?ReInit@mmPlayer@@QAEXPAD@Z
     ARTS_IMPORT void ReInit(char* arg1);
-
-    // ?Reset@mmPlayer@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
 
     // ?ResetDamage@mmPlayer@@QAEXXZ
     ARTS_IMPORT void ResetDamage();
@@ -103,9 +106,6 @@ public:
 
     // ?SetWideFOV@mmPlayer@@QAEXH@Z
     ARTS_IMPORT void SetWideFOV(i32 arg1);
-
-    // ?Update@mmPlayer@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
     // ?UpdateFF@mmPlayer@@QAEXXZ
     ARTS_IMPORT void UpdateFF();

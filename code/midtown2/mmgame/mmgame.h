@@ -37,26 +37,14 @@ public:
     // ??1mmGame@@UAE@XZ
     ARTS_IMPORT virtual ~mmGame();
 
-    // ?BeDone@mmGame@@UAEXH@Z
-    ARTS_IMPORT virtual void BeDone(i32 arg1);
+    // ?Update@mmGame@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
 
-    // ?CollideAIOpponents@mmGame@@QAEXXZ
-    ARTS_IMPORT void CollideAIOpponents();
+    // ?Reset@mmGame@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
 
-    // ?CycleCam@mmGame@@QAEXXZ
-    ARTS_IMPORT void CycleCam();
-
-    // ?DropThruCityHandler@mmGame@@UAEXXZ
-    ARTS_IMPORT virtual void DropThruCityHandler();
-
-    // ?FarClipCB@mmGame@@QAEXXZ
-    ARTS_IMPORT void FarClipCB();
-
-    // ?FindGroundPos@mmGame@@QAEXAAVVector3@@0@Z
-    ARTS_IMPORT void FindGroundPos(Vector3& arg1, Vector3& arg2);
-
-    // ?HitWaterHandler@mmGame@@UAEXXZ
-    ARTS_IMPORT virtual void HitWaterHandler();
+    // ?UpdatePaused@mmGame@@UAEXXZ
+    ARTS_IMPORT virtual void UpdatePaused();
 
     // ?Init@mmGame@@UAEHXZ
     ARTS_IMPORT virtual i32 Init();
@@ -67,6 +55,30 @@ public:
     // ?InitOtherPlayers@mmGame@@UAEXXZ
     ARTS_IMPORT virtual void InitOtherPlayers();
 
+    // ?HitWaterHandler@mmGame@@UAEXXZ
+    ARTS_IMPORT virtual void HitWaterHandler();
+
+    // ?DropThruCityHandler@mmGame@@UAEXXZ
+    ARTS_IMPORT virtual void DropThruCityHandler();
+
+    // ?SendChatMessage@mmGame@@UAEXPAD@Z
+    ARTS_IMPORT virtual void SendChatMessage(char* arg1);
+
+    // ?BeDone@mmGame@@UAEXH@Z
+    ARTS_IMPORT virtual void BeDone(i32 arg1);
+
+    // ?CollideAIOpponents@mmGame@@QAEXXZ
+    ARTS_IMPORT void CollideAIOpponents();
+
+    // ?CycleCam@mmGame@@QAEXXZ
+    ARTS_IMPORT void CycleCam();
+
+    // ?FarClipCB@mmGame@@QAEXXZ
+    ARTS_IMPORT void FarClipCB();
+
+    // ?FindGroundPos@mmGame@@QAEXAAVVector3@@0@Z
+    ARTS_IMPORT void FindGroundPos(Vector3& arg1, Vector3& arg2);
+
     // ?IsPopupEnabled@mmGame@@QAEHXZ
     ARTS_IMPORT i32 IsPopupEnabled();
 
@@ -76,12 +88,6 @@ public:
     // ?PlayerSetState@mmGame@@QAEXXZ
     ARTS_IMPORT void PlayerSetState();
 
-    // ?Reset@mmGame@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?SendChatMessage@mmGame@@UAEXPAD@Z
-    ARTS_IMPORT virtual void SendChatMessage(char* arg1);
-
     // ?SetIconsState@mmGame@@QAEXXZ
     ARTS_IMPORT void SetIconsState();
 
@@ -90,9 +96,6 @@ public:
 
     // ?StartMusic@mmGame@@QAEXXZ
     ARTS_IMPORT void StartMusic();
-
-    // ?Update@mmGame@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
     // ?UpdateDebugInput@mmGame@@QAE_NXZ
     ARTS_IMPORT bool UpdateDebugInput();
@@ -105,9 +108,6 @@ public:
 
     // ?UpdateHorn@mmGame@@QAEX_N@Z
     ARTS_IMPORT void UpdateHorn(bool arg1);
-
-    // ?UpdatePaused@mmGame@@UAEXXZ
-    ARTS_IMPORT virtual void UpdatePaused();
 
     // ?UpdateSteeringBrakes@mmGame@@QAEXXZ
     ARTS_IMPORT void UpdateSteeringBrakes();

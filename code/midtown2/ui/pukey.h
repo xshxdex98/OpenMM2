@@ -35,11 +35,11 @@ public:
     ARTS_IMPORT virtual ~PUKey();
 
 private:
-    // ?PostSetup@PUKey@@EAEXXZ
-    ARTS_IMPORT virtual void PostSetup();
-
     // ?PreSetup@PUKey@@EAEXXZ
     ARTS_IMPORT virtual void PreSetup();
+
+    // ?PostSetup@PUKey@@EAEXXZ
+    ARTS_IMPORT virtual void PostSetup();
 };
 
 // ??_7PUKey@@6B@

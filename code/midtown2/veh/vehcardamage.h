@@ -46,11 +46,11 @@ public:
     // ??1vehCarDamage@@UAE@XZ
     ARTS_IMPORT virtual ~vehCarDamage();
 
-    // ?AddDamage@vehCarDamage@@QAEXM@Z
-    ARTS_IMPORT void AddDamage(f32 arg1);
+    // ?Update@vehCarDamage@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
 
-    // ?ClearDamage@vehCarDamage@@QAEXXZ
-    ARTS_IMPORT void ClearDamage();
+    // ?Reset@vehCarDamage@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
 
     // ?FileIO@vehCarDamage@@UAEXAAVdatParser@@@Z
     ARTS_IMPORT virtual void FileIO(datParser& arg1);
@@ -58,11 +58,17 @@ public:
     // ?GetClassName@vehCarDamage@@UAEPADXZ
     ARTS_IMPORT virtual char* GetClassName();
 
+    // ?GetDirName@vehCarDamage@@UAEPBDXZ
+    ARTS_IMPORT virtual const char* GetDirName();
+
     // ?GetDamageModifier@vehCarDamage@@UAEMPAVphCollider@@@Z
     ARTS_IMPORT virtual f32 GetDamageModifier(phCollider* arg1);
 
-    // ?GetDirName@vehCarDamage@@UAEPBDXZ
-    ARTS_IMPORT virtual const char* GetDirName();
+    // ?AddDamage@vehCarDamage@@QAEXM@Z
+    ARTS_IMPORT void AddDamage(f32 arg1);
+
+    // ?ClearDamage@vehCarDamage@@QAEXXZ
+    ARTS_IMPORT void ClearDamage();
 
     // ?Impact@vehCarDamage@@SAXPAV1@PAUImpactCBData@@@Z
     ARTS_IMPORT static void Impact(vehCarDamage* arg1, ImpactCBData* arg2);
@@ -70,14 +76,8 @@ public:
     // ?Init@vehCarDamage@@QAEXPAVvehCar@@PBD@Z
     ARTS_IMPORT void Init(vehCar* arg1, const char* arg2);
 
-    // ?Reset@vehCarDamage@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?SetGameCallback@vehCarDamage@@QAEXVdatCallback@@@Z
     ARTS_IMPORT void SetGameCallback(datCallback arg1);
-
-    // ?Update@vehCarDamage@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     static f32& Access_RelaxTime() { return RelaxTime; }

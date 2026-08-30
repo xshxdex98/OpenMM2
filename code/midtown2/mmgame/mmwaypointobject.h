@@ -39,6 +39,12 @@ public:
     // ??1mmWaypointObject@@UAE@XZ
     ARTS_IMPORT virtual ~mmWaypointObject();
 
+    // ?Update@mmWaypointObject@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@mmWaypointObject@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?Activate@mmWaypointObject@@QAEXXZ
     ARTS_IMPORT void Activate();
 
@@ -66,9 +72,6 @@ public:
     // ?RadiusHit@mmWaypointObject@@QAEHVVector3@@@Z
     ARTS_IMPORT i32 RadiusHit(Vector3 arg1);
 
-    // ?Reset@mmWaypointObject@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?SetHeading@mmWaypointObject@@QAEXM@Z
     ARTS_IMPORT void SetHeading(f32 arg1);
 
@@ -83,9 +86,6 @@ public:
 
     // ?SetRadius@mmWaypointObject@@QAEXM@Z
     ARTS_IMPORT void SetRadius(f32 arg1);
-
-    // ?Update@mmWaypointObject@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     // Members from 0x018; everything below that belongs to asNode.

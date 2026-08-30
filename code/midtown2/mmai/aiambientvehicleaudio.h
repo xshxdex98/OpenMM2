@@ -44,6 +44,12 @@ public:
     // ?AssignSounds@aiAmbientVehicleAudio@@UAEXXZ
     ARTS_IMPORT virtual void AssignSounds();
 
+    // ?UnAssignSounds@aiAmbientVehicleAudio@@UAEXH@Z
+    ARTS_IMPORT virtual void UnAssignSounds(i32 arg1);
+
+    // ?UpdateAudio@aiAmbientVehicleAudio@@UAEXXZ
+    ARTS_IMPORT virtual void UpdateAudio();
+
     // ?DeallocateStatics@aiAmbientVehicleAudio@@SAXXZ
     ARTS_IMPORT static void DeallocateStatics();
 
@@ -95,14 +101,8 @@ public:
     // ?SetCSVCatString@aiAmbientVehicleAudio@@SAXPAD@Z
     ARTS_IMPORT static void SetCSVCatString(char* arg1);
 
-    // ?UnAssignSounds@aiAmbientVehicleAudio@@UAEXH@Z
-    ARTS_IMPORT virtual void UnAssignSounds(i32 arg1);
-
     // ?UpdateAudio@aiAmbientVehicleAudio@@QAEHM@Z
     ARTS_IMPORT i32 UpdateAudio(f32 arg1);
-
-    // ?UpdateAudio@aiAmbientVehicleAudio@@UAEXXZ
-    ARTS_IMPORT virtual void UpdateAudio();
 
     // ?UpdateHorn@aiAmbientVehicleAudio@@QAEXXZ
     ARTS_IMPORT void UpdateHorn();

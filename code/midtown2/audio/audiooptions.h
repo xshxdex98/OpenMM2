@@ -34,11 +34,20 @@ public:
     // ??1AudioOptions@@UAE@XZ
     ARTS_IMPORT virtual ~AudioOptions();
 
+    // ?PreSetup@AudioOptions@@UAEXXZ
+    ARTS_IMPORT virtual void PreSetup();
+
     // ?CancelAction@AudioOptions@@UAEXXZ
     ARTS_IMPORT virtual void CancelAction();
 
     // ?DoneAction@AudioOptions@@UAEXXZ
     ARTS_IMPORT virtual void DoneAction();
+
+    // ?ResetDefaultAction@AudioOptions@@UAEXXZ
+    ARTS_IMPORT virtual void ResetDefaultAction();
+
+    // ?StoreCurrentSetup@AudioOptions@@UAEXXZ
+    ARTS_IMPORT virtual void StoreCurrentSetup();
 
     // ?FindDevice@AudioOptions@@QAEHPAD@Z
     ARTS_IMPORT i32 FindDevice(char* arg1);
@@ -52,17 +61,11 @@ public:
     // ?LoadUIMusicCSV@AudioOptions@@QAEXPAD@Z
     ARTS_IMPORT void LoadUIMusicCSV(char* arg1);
 
-    // ?PreSetup@AudioOptions@@UAEXXZ
-    ARTS_IMPORT virtual void PreSetup();
-
     // ?ResetAmbient@AudioOptions@@QAEXXZ
     ARTS_IMPORT void ResetAmbient();
 
     // ?ResetCommentary@AudioOptions@@QAEXXZ
     ARTS_IMPORT void ResetCommentary();
-
-    // ?ResetDefaultAction@AudioOptions@@UAEXXZ
-    ARTS_IMPORT virtual void ResetDefaultAction();
 
     // ?ResetMusic@AudioOptions@@QAEXXZ
     ARTS_IMPORT void ResetMusic();
@@ -108,9 +111,6 @@ public:
 
     // ?SetStereoFX@AudioOptions@@QAEXXZ
     ARTS_IMPORT void SetStereoFX();
-
-    // ?StoreCurrentSetup@AudioOptions@@UAEXXZ
-    ARTS_IMPORT virtual void StoreCurrentSetup();
 
     // ?ToggleAmbient@AudioOptions@@QAEXXZ
     ARTS_IMPORT void ToggleAmbient();

@@ -34,23 +34,23 @@ public:
     // ??1mmGameManager@@UAE@XZ
     ARTS_IMPORT virtual ~mmGameManager();
 
-    // ?BeDone@mmGameManager@@QAEXXZ
-    ARTS_IMPORT void BeDone();
-
     // ?Cull@mmGameManager@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
+
+    // ?Update@mmGameManager@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@mmGameManager@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
+    // ?BeDone@mmGameManager@@QAEXXZ
+    ARTS_IMPORT void BeDone();
 
     // ?ForcePopupUI@mmGameManager@@QAEXXZ
     ARTS_IMPORT void ForcePopupUI();
 
     // ?ForceReplayUI@mmGameManager@@QAEXXZ
     ARTS_IMPORT void ForceReplayUI();
-
-    // ?Reset@mmGameManager@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?Update@mmGameManager@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     static mmGameManager*& Access_Instance() { return Instance; }

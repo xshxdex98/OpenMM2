@@ -38,11 +38,38 @@ class phSegment;
 class phBoundPolygonal : public phBound
 {
 public:
-    // ?BackupAbyPenetration@phBoundPolygonal@@SAXAAVphSegment@@@Z
-    ARTS_IMPORT static void BackupAbyPenetration(phSegment& arg1);
-
     // ?CenterBound@phBoundPolygonal@@UAEXXZ
     ARTS_IMPORT virtual void CenterBound();
+
+    // ?TestProbePoint@phBoundPolygonal@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@M@Z
+    ARTS_IMPORT virtual bool TestProbePoint(phSegment& arg1, phIntersectionPoint* arg2, f32 arg3) const;
+
+    // ?TestAIPoint@phBoundPolygonal@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@@Z
+    ARTS_IMPORT virtual bool TestAIPoint(phSegment& arg1, phIntersectionPoint* arg2) const;
+
+    // ?TestEdge@phBoundPolygonal@@UBEHAAVphSegment@@PAVphIntersection@@H@Z
+    ARTS_IMPORT virtual i32 TestEdge(phSegment& arg1, phIntersection* arg2, i32 arg3) const;
+
+    // ?TestProbe@phBoundPolygonal@@UBE_NAAVphSegment@@PAVphIntersection@@M@Z
+    ARTS_IMPORT virtual bool TestProbe(phSegment& arg1, phIntersection* arg2, f32 arg3) const;
+
+    // ?TestSphere@phBoundPolygonal@@UBE_NABVVector3@@MAAV2@1AAM@Z
+    ARTS_IMPORT virtual bool TestSphere(const Vector3& arg1, f32 arg2, Vector3& arg3, Vector3& arg4, f32& arg5) const;
+
+    // ?GetVertex@phBoundPolygonal@@UBEABVVector3@@H@Z
+    ARTS_IMPORT virtual const Vector3& GetVertex(i32 arg1) const;
+
+    // ?TestBoundPolyPoly@phBoundPolygonal@@UBEHPBV1@PBVMatrix34@@111PAVphColliderBase@@2PAVphIntersection@@3HPAH4ABVVector3@@_N@Z
+    ARTS_IMPORT virtual i32 TestBoundPolyPoly(const phBoundPolygonal* arg1, const Matrix34* arg2, const Matrix34* arg3, const Matrix34* arg4, const Matrix34* arg5, phColliderBase* arg6, phColliderBase* arg7, phIntersection* arg8, phIntersection* arg9, i32 arg10, i32* arg11, i32* arg12, const Vector3& arg13, bool arg14) const;
+
+    // ?TestBoundPolyPolyUseDot@phBoundPolygonal@@UBEHPBV1@PAVphColliderBase@@PBVMatrix34@@222PAVphIntersection@@HPAHMPBVVector3@@_N@Z
+    ARTS_IMPORT virtual i32 TestBoundPolyPolyUseDot(const phBoundPolygonal* arg1, phColliderBase* arg2, const Matrix34* arg3, const Matrix34* arg4, const Matrix34* arg5, const Matrix34* arg6, phIntersection* arg7, i32 arg8, i32* arg9, f32 arg10, const Vector3* arg11, bool arg12) const;
+
+    // ?TestBoundPolyPolyUseDotSmall@phBoundPolygonal@@UBEHPBV1@PAVphColliderBase@@PBVMatrix34@@222PAVphIntersection@@PAHMABVVector3@@_N@Z
+    ARTS_IMPORT virtual i32 TestBoundPolyPolyUseDotSmall(const phBoundPolygonal* arg1, phColliderBase* arg2, const Matrix34* arg3, const Matrix34* arg4, const Matrix34* arg5, const Matrix34* arg6, phIntersection* arg7, i32* arg8, f32 arg9, const Vector3& arg10, bool arg11) const;
+
+    // ?BackupAbyPenetration@phBoundPolygonal@@SAXAAVphSegment@@@Z
+    ARTS_IMPORT static void BackupAbyPenetration(phSegment& arg1);
 
     // ?FindImpactsPolyToPoly@phBoundPolygonal@@QBEHPBV1@PBVMatrix34@@111PAVphColliderBase@@2PAVphIntersection@@3PAVphImpactBase@@HHPAH5@Z
     ARTS_IMPORT i32 FindImpactsPolyToPoly(const phBoundPolygonal* arg1, const Matrix34* arg2, const Matrix34* arg3, const Matrix34* arg4, const Matrix34* arg5, phColliderBase* arg6, phColliderBase* arg7, phIntersection* arg8, phIntersection* arg9, phImpactBase* arg10, i32 arg11, i32 arg12, i32* arg13, i32* arg14) const;
@@ -59,9 +86,6 @@ public:
     // ?GetNextSegment@phBoundPolygonal@@QBEHAAVphSegment@@PAJPBVMatrix34@@2MPBVVector3@@PAEPAV4@AAH6@Z
     ARTS_IMPORT i32 GetNextSegment(phSegment& arg1, ilong* arg2, const Matrix34* arg3, const Matrix34* arg4, f32 arg5, const Vector3* arg6, u8* arg7, Vector3* arg8, i32& arg9, i32& arg10) const;
 
-    // ?GetVertex@phBoundPolygonal@@UBEABVVector3@@H@Z
-    ARTS_IMPORT virtual const Vector3& GetVertex(i32 arg1) const;
-
     // ?MaxDot@phBoundPolygonal@@QBEMABVVector3@@ABVMatrix34@@AAV2@@Z
     ARTS_IMPORT f32 MaxDot(const Vector3& arg1, const Matrix34& arg2, Vector3& arg3) const;
 
@@ -73,30 +97,6 @@ public:
 
     // ?RewindSegments@phBoundPolygonal@@QBEX_NPBVMatrix34@@1PAV2@2AAH3@Z
     ARTS_IMPORT void RewindSegments(bool arg1, const Matrix34* arg2, const Matrix34* arg3, Matrix34* arg4, Matrix34* arg5, i32& arg6, i32& arg7) const;
-
-    // ?TestAIPoint@phBoundPolygonal@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@@Z
-    ARTS_IMPORT virtual bool TestAIPoint(phSegment& arg1, phIntersectionPoint* arg2) const;
-
-    // ?TestBoundPolyPoly@phBoundPolygonal@@UBEHPBV1@PBVMatrix34@@111PAVphColliderBase@@2PAVphIntersection@@3HPAH4ABVVector3@@_N@Z
-    ARTS_IMPORT virtual i32 TestBoundPolyPoly(const phBoundPolygonal* arg1, const Matrix34* arg2, const Matrix34* arg3, const Matrix34* arg4, const Matrix34* arg5, phColliderBase* arg6, phColliderBase* arg7, phIntersection* arg8, phIntersection* arg9, i32 arg10, i32* arg11, i32* arg12, const Vector3& arg13, bool arg14) const;
-
-    // ?TestBoundPolyPolyUseDot@phBoundPolygonal@@UBEHPBV1@PAVphColliderBase@@PBVMatrix34@@222PAVphIntersection@@HPAHMPBVVector3@@_N@Z
-    ARTS_IMPORT virtual i32 TestBoundPolyPolyUseDot(const phBoundPolygonal* arg1, phColliderBase* arg2, const Matrix34* arg3, const Matrix34* arg4, const Matrix34* arg5, const Matrix34* arg6, phIntersection* arg7, i32 arg8, i32* arg9, f32 arg10, const Vector3* arg11, bool arg12) const;
-
-    // ?TestBoundPolyPolyUseDotSmall@phBoundPolygonal@@UBEHPBV1@PAVphColliderBase@@PBVMatrix34@@222PAVphIntersection@@PAHMABVVector3@@_N@Z
-    ARTS_IMPORT virtual i32 TestBoundPolyPolyUseDotSmall(const phBoundPolygonal* arg1, phColliderBase* arg2, const Matrix34* arg3, const Matrix34* arg4, const Matrix34* arg5, const Matrix34* arg6, phIntersection* arg7, i32* arg8, f32 arg9, const Vector3& arg10, bool arg11) const;
-
-    // ?TestEdge@phBoundPolygonal@@UBEHAAVphSegment@@PAVphIntersection@@H@Z
-    ARTS_IMPORT virtual i32 TestEdge(phSegment& arg1, phIntersection* arg2, i32 arg3) const;
-
-    // ?TestProbe@phBoundPolygonal@@UBE_NAAVphSegment@@PAVphIntersection@@M@Z
-    ARTS_IMPORT virtual bool TestProbe(phSegment& arg1, phIntersection* arg2, f32 arg3) const;
-
-    // ?TestProbePoint@phBoundPolygonal@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@M@Z
-    ARTS_IMPORT virtual bool TestProbePoint(phSegment& arg1, phIntersectionPoint* arg2, f32 arg3) const;
-
-    // ?TestSphere@phBoundPolygonal@@UBE_NABVVector3@@MAAV2@1AAM@Z
-    ARTS_IMPORT virtual bool TestSphere(const Vector3& arg1, f32 arg2, Vector3& arg3, Vector3& arg4, f32& arg5) const;
 
 protected:
     // ?AddInteriorEdges@phBoundPolygonal@@IBEHPAVphIntersection@@H0HH@Z

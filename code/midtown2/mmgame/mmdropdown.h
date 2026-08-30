@@ -35,6 +35,9 @@ public:
     // ??1mmDropDown@@UAE@XZ
     ARTS_IMPORT virtual ~mmDropDown();
 
+    // ?Update@mmDropDown@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?FindFirstEnabled@mmDropDown@@QAEHXZ
     ARTS_IMPORT i32 FindFirstEnabled();
 
@@ -67,9 +70,6 @@ public:
 
     // ?SetHighlight@mmDropDown@@QAEXH@Z
     ARTS_IMPORT void SetHighlight(i32 arg1);
-
-    // ?Update@mmDropDown@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 private:
     // ?SetString@mmDropDown@@AAEXVstring@@@Z

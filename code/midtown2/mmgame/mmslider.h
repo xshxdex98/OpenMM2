@@ -41,6 +41,9 @@ public:
     // ?Cull@mmSlider@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
 
+    // ?Update@mmSlider@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?Dec@mmSlider@@QAEMXZ
     ARTS_IMPORT f32 Dec();
 
@@ -79,9 +82,6 @@ public:
 
     // ?SetValue@mmSlider@@QAEMM@Z
     ARTS_IMPORT f32 SetValue(f32 arg1);
-
-    // ?Update@mmSlider@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
     // ?UpdatePosition@mmSlider@@QAEXXZ
     ARTS_IMPORT void UpdatePosition();

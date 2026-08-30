@@ -38,14 +38,20 @@ public:
     // ??1aiGoalRandomDrive@@QAE@XZ
     ARTS_IMPORT ~aiGoalRandomDrive();
 
+    // ?Init@aiGoalRandomDrive@@UAEXXZ
+    ARTS_IMPORT virtual void Init();
+
+    // ?Reset@aiGoalRandomDrive@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
+    // ?Update@aiGoalRandomDrive@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?Context@aiGoalRandomDrive@@QAEHXZ
     ARTS_IMPORT i32 Context();
 
     // ?Dump@aiGoalRandomDrive@@QAEXXZ
     ARTS_IMPORT void Dump();
-
-    // ?Init@aiGoalRandomDrive@@UAEXXZ
-    ARTS_IMPORT virtual void Init();
 
     // ?Priority@aiGoalRandomDrive@@QAEHXZ
     ARTS_IMPORT i32 Priority();
@@ -53,14 +59,8 @@ public:
     // ?ReplayDebug@aiGoalRandomDrive@@QAEXXZ
     ARTS_IMPORT void ReplayDebug();
 
-    // ?Reset@aiGoalRandomDrive@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?SolvePosition@aiGoalRandomDrive@@QAEXAAVVector3@@M@Z
     ARTS_IMPORT void SolvePosition(Vector3& arg1, f32 arg2);
-
-    // ?Update@aiGoalRandomDrive@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 private:
     // ?AnyVehiclesComingThisWay@aiGoalRandomDrive@@AAEHXZ

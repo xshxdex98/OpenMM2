@@ -42,6 +42,9 @@ public:
     // ??1asCamera@@UAE@XZ
     ARTS_IMPORT virtual ~asCamera();
 
+    // ?Update@asCamera@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?DrawBegin@asCamera@@QAEXXZ
     ARTS_IMPORT void DrawBegin();
 
@@ -95,9 +98,6 @@ public:
 
     // ?SphereVisible@asCamera@@QAEMABVVector3@@MPAM@Z
     ARTS_IMPORT f32 SphereVisible(const Vector3& arg1, f32 arg2, f32* arg3);
-
-    // ?Update@asCamera@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 private:
     // ?Regen@asCamera@@AAEXXZ

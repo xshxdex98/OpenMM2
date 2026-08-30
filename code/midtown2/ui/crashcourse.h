@@ -34,6 +34,9 @@ public:
     // ??1CrashCourse@@UAE@XZ
     ARTS_IMPORT virtual ~CrashCourse();
 
+    // ?PreSetup@CrashCourse@@UAEXXZ
+    ARTS_IMPORT virtual void PreSetup();
+
     // ?ChangeLocalVals@CrashCourse@@QAEXXZ
     ARTS_IMPORT void ChangeLocalVals();
 
@@ -48,9 +51,6 @@ public:
 
     // ?IncRaceName@CrashCourse@@QAEXXZ
     ARTS_IMPORT void IncRaceName();
-
-    // ?PreSetup@CrashCourse@@UAEXXZ
-    ARTS_IMPORT virtual void PreSetup();
 
     // ?SetBlitzMask@CrashCourse@@QAEXH@Z
     ARTS_IMPORT void SetBlitzMask(i32 arg1);

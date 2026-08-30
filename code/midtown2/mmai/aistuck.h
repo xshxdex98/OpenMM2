@@ -36,6 +36,12 @@ public:
     // ??1aiStuck@@UAE@XZ
     ARTS_IMPORT virtual ~aiStuck();
 
+    // ?Update@aiStuck@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@aiStuck@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?Impact@aiStuck@@QAEXXZ
     ARTS_IMPORT void Impact();
 
@@ -44,12 +50,6 @@ public:
 
     // ?Pegged@aiStuck@@QAEHXZ
     ARTS_IMPORT i32 Pegged();
-
-    // ?Reset@aiStuck@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?Update@aiStuck@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7aiStuck@@6B@

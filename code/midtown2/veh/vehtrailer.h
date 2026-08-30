@@ -47,6 +47,21 @@ public:
     // ??1vehTrailer@@UAE@XZ
     ARTS_IMPORT virtual ~vehTrailer();
 
+    // ?Update@vehTrailer@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?PostUpdate@vehTrailer@@UAEXXZ
+    ARTS_IMPORT virtual void PostUpdate();
+
+    // ?GetICS@vehTrailer@@UAEPAVphInertialCS@@XZ
+    ARTS_IMPORT virtual phInertialCS* GetICS();
+
+    // ?GetInst@vehTrailer@@UAEPAVlvlInstance@@XZ
+    ARTS_IMPORT virtual lvlInstance* GetInst();
+
+    // ?RequiresTerrainCollision@vehTrailer@@UAE_NXZ
+    ARTS_IMPORT virtual bool RequiresTerrainCollision();
+
     // ?BottomedOut@vehTrailer@@QAEHXZ
     ARTS_IMPORT i32 BottomedOut();
 
@@ -59,23 +74,11 @@ public:
     // ?GetDirName@vehTrailer@@UAEPBDXZ
     ARTS_IMPORT virtual const char* GetDirName();
 
-    // ?GetICS@vehTrailer@@UAEPAVphInertialCS@@XZ
-    ARTS_IMPORT virtual phInertialCS* GetICS();
-
-    // ?GetInst@vehTrailer@@UAEPAVlvlInstance@@XZ
-    ARTS_IMPORT virtual lvlInstance* GetInst();
-
     // ?Init@vehTrailer@@QAEXPBDABVVector3@@PAVvehCarSim@@H@Z
     ARTS_IMPORT void Init(const char* arg1, const Vector3& arg2, vehCarSim* arg3, i32 arg4);
 
     // ?Load@vehTrailer@@UAE_NXZ
     ARTS_IMPORT virtual bool Load();
-
-    // ?PostUpdate@vehTrailer@@UAEXXZ
-    ARTS_IMPORT virtual void PostUpdate();
-
-    // ?RequiresTerrainCollision@vehTrailer@@UAE_NXZ
-    ARTS_IMPORT virtual bool RequiresTerrainCollision();
 
     // ?Reset@vehTrailer@@UAEXXZ
     ARTS_IMPORT virtual void Reset();
@@ -88,9 +91,6 @@ public:
 
     // ?SetTrailerHitchOffset@vehTrailer@@QAEXXZ
     ARTS_IMPORT void SetTrailerHitchOffset();
-
-    // ?Update@vehTrailer@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     // Members from 0x258; everything below that belongs to dgPhysEntity.

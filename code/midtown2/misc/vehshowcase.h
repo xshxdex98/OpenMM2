@@ -34,11 +34,11 @@ public:
     // ??1VehShowcase@@UAE@XZ
     ARTS_IMPORT virtual ~VehShowcase();
 
-    // ?PostSetup@VehShowcase@@UAEXXZ
-    ARTS_IMPORT virtual void PostSetup();
-
     // ?PreSetup@VehShowcase@@UAEXXZ
     ARTS_IMPORT virtual void PreSetup();
+
+    // ?PostSetup@VehShowcase@@UAEXXZ
+    ARTS_IMPORT virtual void PostSetup();
 };
 
 // ??_7VehShowcase@@6B@

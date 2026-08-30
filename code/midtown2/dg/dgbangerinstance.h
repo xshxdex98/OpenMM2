@@ -34,20 +34,20 @@ class phBound;
 class dgBangerInstance : public lvlInstance
 {
 public:
+    // ?SetVariant@dgBangerInstance@@UAEXH@Z
+    ARTS_IMPORT virtual void SetVariant(i32 arg1);
+
+    // ?GetEntity@dgBangerInstance@@UAEPAVdgPhysEntity@@XZ
+    ARTS_IMPORT virtual dgPhysEntity* GetEntity();
+
     // ?AttachEntity@dgBangerInstance@@UAEPAVdgPhysEntity@@XZ
     ARTS_IMPORT virtual dgPhysEntity* AttachEntity();
 
-    // ?ComputeLod@dgBangerInstance@@UAEHMM@Z
-    ARTS_IMPORT virtual i32 ComputeLod(f32 arg1, f32 arg2);
+    // ?GetVelocity@dgBangerInstance@@UAEABVVector3@@XZ
+    ARTS_IMPORT virtual const Vector3& GetVelocity();
 
     // ?Draw@dgBangerInstance@@UAEXH@Z
     ARTS_IMPORT virtual void Draw(i32 arg1);
-
-    // ?DrawGlow@dgBangerInstance@@UAEXXZ
-    ARTS_IMPORT virtual void DrawGlow();
-
-    // ?DrawReflected@dgBangerInstance@@UAEXM@Z
-    ARTS_IMPORT virtual void DrawReflected(f32 arg1);
 
     // ?DrawShadow@dgBangerInstance@@UAEXXZ
     ARTS_IMPORT virtual void DrawShadow();
@@ -55,26 +55,26 @@ public:
     // ?DrawShadowMap@dgBangerInstance@@UAEXXZ
     ARTS_IMPORT virtual void DrawShadowMap();
 
-    // ?DrawTree@dgBangerInstance@@QAEXH@Z
-    ARTS_IMPORT void DrawTree(i32 arg1);
+    // ?DrawGlow@dgBangerInstance@@UAEXXZ
+    ARTS_IMPORT virtual void DrawGlow();
+
+    // ?DrawReflected@dgBangerInstance@@UAEXM@Z
+    ARTS_IMPORT virtual void DrawReflected(f32 arg1);
 
     // ?GetBound@dgBangerInstance@@UAEPBVphBound@@H@Z
     ARTS_IMPORT virtual const phBound* GetBound(i32 arg1);
 
-    // ?GetData@dgBangerInstance@@QAEPAVdgBangerData@@XZ
-    ARTS_IMPORT dgBangerData* GetData();
-
-    // ?GetEntity@dgBangerInstance@@UAEPAVdgPhysEntity@@XZ
-    ARTS_IMPORT virtual dgPhysEntity* GetEntity();
-
-    // ?GetVelocity@dgBangerInstance@@UAEABVVector3@@XZ
-    ARTS_IMPORT virtual const Vector3& GetVelocity();
+    // ?ComputeLod@dgBangerInstance@@UAEHMM@Z
+    ARTS_IMPORT virtual i32 ComputeLod(f32 arg1, f32 arg2);
 
     // ?SetupGfxLights@dgBangerInstance@@UBEHABVMatrix34@@@Z
     ARTS_IMPORT virtual i32 SetupGfxLights(const Matrix34& arg1) const;
 
-    // ?SetVariant@dgBangerInstance@@UAEXH@Z
-    ARTS_IMPORT virtual void SetVariant(i32 arg1);
+    // ?DrawTree@dgBangerInstance@@QAEXH@Z
+    ARTS_IMPORT void DrawTree(i32 arg1);
+
+    // ?GetData@dgBangerInstance@@QAEPAVdgBangerData@@XZ
+    ARTS_IMPORT dgBangerData* GetData();
 
 public:
     // Members from 0x014; everything below that belongs to lvlInstance.

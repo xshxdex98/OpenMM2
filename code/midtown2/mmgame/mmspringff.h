@@ -28,20 +28,20 @@ struct IDirectInputDevice2A;
 class mmSpringFF
 {
 public:
-    // ?Assign@mmSpringFF@@QAEHJ@Z
-    ARTS_IMPORT i32 Assign(ilong arg1);
-
     // ?Init@mmSpringFF@@UAEHPAUIDirectInputDevice2A@@@Z
     ARTS_IMPORT virtual i32 Init(IDirectInputDevice2A* arg1);
 
     // ?Play@mmSpringFF@@UAEHXZ
     ARTS_IMPORT virtual i32 Play();
 
+    // ?Stop@mmSpringFF@@UAEHXZ
+    ARTS_IMPORT virtual i32 Stop();
+
     // ?SetValues@mmSpringFF@@UAEHMM@Z
     ARTS_IMPORT virtual i32 SetValues(f32 arg1, f32 arg2);
 
-    // ?Stop@mmSpringFF@@UAEHXZ
-    ARTS_IMPORT virtual i32 Stop();
+    // ?Assign@mmSpringFF@@QAEHJ@Z
+    ARTS_IMPORT i32 Assign(ilong arg1);
 };
 
 // ??_7mmSpringFF@@6B@

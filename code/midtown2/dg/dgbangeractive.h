@@ -38,14 +38,11 @@ public:
     // ??1dgBangerActive@@UAE@XZ
     ARTS_IMPORT virtual ~dgBangerActive();
 
-    // ?Attach@dgBangerActive@@QAEXPAVdgBangerInstance@@@Z
-    ARTS_IMPORT void Attach(dgBangerInstance* arg1);
+    // ?Update@dgBangerActive@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
 
-    // ?Detach@dgBangerActive@@QAEXXZ
-    ARTS_IMPORT void Detach();
-
-    // ?DetachMe@dgBangerActive@@UAEXXZ
-    ARTS_IMPORT virtual void DetachMe();
+    // ?PostUpdate@dgBangerActive@@UAEXXZ
+    ARTS_IMPORT virtual void PostUpdate();
 
     // ?GetICS@dgBangerActive@@UAEPAVphInertialCS@@XZ
     ARTS_IMPORT virtual phInertialCS* GetICS();
@@ -53,11 +50,14 @@ public:
     // ?GetInst@dgBangerActive@@UAEPAVlvlInstance@@XZ
     ARTS_IMPORT virtual lvlInstance* GetInst();
 
-    // ?PostUpdate@dgBangerActive@@UAEXXZ
-    ARTS_IMPORT virtual void PostUpdate();
+    // ?DetachMe@dgBangerActive@@UAEXXZ
+    ARTS_IMPORT virtual void DetachMe();
 
-    // ?Update@dgBangerActive@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
+    // ?Attach@dgBangerActive@@QAEXPAVdgBangerInstance@@@Z
+    ARTS_IMPORT void Attach(dgBangerInstance* arg1);
+
+    // ?Detach@dgBangerActive@@QAEXXZ
+    ARTS_IMPORT void Detach();
 };
 
 // ??_7dgBangerActive@@6B@

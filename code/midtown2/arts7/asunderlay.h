@@ -34,11 +34,11 @@ public:
     // ??1asUnderlay@@UAE@XZ
     ARTS_IMPORT virtual ~asUnderlay();
 
-    // ?AddRef@asUnderlay@@QAEXXZ
-    ARTS_IMPORT void AddRef();
-
     // ?Cull@asUnderlay@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
+
+    // ?AddRef@asUnderlay@@QAEXXZ
+    ARTS_IMPORT void AddRef();
 
     // ?SetBitmap@asUnderlay@@QAEXPAVgfxBitmap@@@Z
     ARTS_IMPORT void SetBitmap(gfxBitmap* arg1);

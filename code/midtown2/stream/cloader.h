@@ -37,23 +37,35 @@ public:
     // ??1CLoader@@QAE@XZ
     ARTS_IMPORT ~CLoader();
 
-    // ?AddCFileStreamToList@CLoader@@QAEXPAVCFileStream@@@Z
-    ARTS_IMPORT void AddCFileStreamToList(CFileStream* arg1);
+    // ?QueryInterface@CLoader@@UAGJABU_GUID@@PAPAX@Z
+    ARTS_IMPORT virtual ilong QueryInterface(const _GUID& arg1, void** arg2);
 
     // ?AddRef@CLoader@@UAGKXZ
     ARTS_IMPORT virtual ulong AddRef();
 
-    // ?AddRefP@CLoader@@QAEKXZ
-    ARTS_IMPORT ulong AddRefP();
+    // ?Release@CLoader@@UAGKXZ
+    ARTS_IMPORT virtual ulong Release();
+
+    // ?GetObjectA@CLoader@@UAGJPAU_DMUS_OBJECTDESC@@ABU_GUID@@PAPAX@Z
+    ARTS_IMPORT virtual ilong GetObjectA(_DMUS_OBJECTDESC* arg1, const _GUID& arg2, void** arg3);
+
+    // ?SetObject@CLoader@@UAGJPAU_DMUS_OBJECTDESC@@@Z
+    ARTS_IMPORT virtual ilong SetObject(_DMUS_OBJECTDESC* arg1);
+
+    // ?SetSearchDirectory@CLoader@@UAGJABU_GUID@@PAGH@Z
+    ARTS_IMPORT virtual ilong SetSearchDirectory(const _GUID& arg1, u16* arg2, i32 arg3);
+
+    // ?ScanDirectory@CLoader@@UAGJABU_GUID@@PAG1@Z
+    ARTS_IMPORT virtual ilong ScanDirectory(const _GUID& arg1, u16* arg2, u16* arg3);
 
     // ?CacheObject@CLoader@@UAGJPAUIDirectMusicObject@@@Z
     ARTS_IMPORT virtual ilong CacheObject(IDirectMusicObject* arg1);
 
+    // ?ReleaseObject@CLoader@@UAGJPAUIDirectMusicObject@@@Z
+    ARTS_IMPORT virtual ilong ReleaseObject(IDirectMusicObject* arg1);
+
     // ?ClearCache@CLoader@@UAGJABU_GUID@@@Z
     ARTS_IMPORT virtual ilong ClearCache(const _GUID& arg1);
-
-    // ?DestroyCFileStreamList@CLoader@@QAEXXZ
-    ARTS_IMPORT void DestroyCFileStreamList();
 
     // ?EnableCache@CLoader@@UAGJABU_GUID@@H@Z
     ARTS_IMPORT virtual ilong EnableCache(const _GUID& arg1, i32 arg2);
@@ -61,32 +73,20 @@ public:
     // ?EnumObject@CLoader@@UAGJABU_GUID@@KPAU_DMUS_OBJECTDESC@@@Z
     ARTS_IMPORT virtual ilong EnumObject(const _GUID& arg1, ulong arg2, _DMUS_OBJECTDESC* arg3);
 
-    // ?GetObjectA@CLoader@@UAGJPAU_DMUS_OBJECTDESC@@ABU_GUID@@PAPAX@Z
-    ARTS_IMPORT virtual ilong GetObjectA(_DMUS_OBJECTDESC* arg1, const _GUID& arg2, void** arg3);
+    // ?AddCFileStreamToList@CLoader@@QAEXPAVCFileStream@@@Z
+    ARTS_IMPORT void AddCFileStreamToList(CFileStream* arg1);
+
+    // ?AddRefP@CLoader@@QAEKXZ
+    ARTS_IMPORT ulong AddRefP();
+
+    // ?DestroyCFileStreamList@CLoader@@QAEXXZ
+    ARTS_IMPORT void DestroyCFileStreamList();
 
     // ?Init@CLoader@@QAEJXZ
     ARTS_IMPORT ilong Init();
 
-    // ?QueryInterface@CLoader@@UAGJABU_GUID@@PAPAX@Z
-    ARTS_IMPORT virtual ilong QueryInterface(const _GUID& arg1, void** arg2);
-
-    // ?Release@CLoader@@UAGKXZ
-    ARTS_IMPORT virtual ulong Release();
-
-    // ?ReleaseObject@CLoader@@UAGJPAUIDirectMusicObject@@@Z
-    ARTS_IMPORT virtual ilong ReleaseObject(IDirectMusicObject* arg1);
-
     // ?ReleaseP@CLoader@@QAEKXZ
     ARTS_IMPORT ulong ReleaseP();
-
-    // ?ScanDirectory@CLoader@@UAGJABU_GUID@@PAG1@Z
-    ARTS_IMPORT virtual ilong ScanDirectory(const _GUID& arg1, u16* arg2, u16* arg3);
-
-    // ?SetObject@CLoader@@UAGJPAU_DMUS_OBJECTDESC@@@Z
-    ARTS_IMPORT virtual ilong SetObject(_DMUS_OBJECTDESC* arg1);
-
-    // ?SetSearchDirectory@CLoader@@UAGJABU_GUID@@PAGH@Z
-    ARTS_IMPORT virtual ilong SetSearchDirectory(const _GUID& arg1, u16* arg2, i32 arg3);
 
 private:
     // ?LoadFromFile@CLoader@@AAEJPAU_DMUS_OBJECTDESC@@PAPAUIDirectMusicObject@@@Z

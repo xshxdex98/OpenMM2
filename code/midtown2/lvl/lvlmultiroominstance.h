@@ -34,44 +34,44 @@ class phBound;
 class lvlMultiRoomInstance : public lvlInstance
 {
 public:
-    // ?AttachEntity@lvlMultiRoomInstance@@UAEPAVdgPhysEntity@@XZ
-    ARTS_IMPORT virtual dgPhysEntity* AttachEntity();
-
-    // ?Create@lvlMultiRoomInstance@@SAXPAVlvlInstance@@H@Z
-    ARTS_IMPORT static void Create(lvlInstance* arg1, i32 arg2);
-
-    // ?Draw@lvlMultiRoomInstance@@UAEXH@Z
-    ARTS_IMPORT virtual void Draw(i32 arg1);
-
-    // ?GetBound@lvlMultiRoomInstance@@UAEPBVphBound@@H@Z
-    ARTS_IMPORT virtual const phBound* GetBound(i32 arg1);
-
-    // ?GetEntity@lvlMultiRoomInstance@@UAEPAVdgPhysEntity@@XZ
-    ARTS_IMPORT virtual dgPhysEntity* GetEntity();
+    // ?GetPosition@lvlMultiRoomInstance@@UAEABVVector3@@XZ
+    ARTS_IMPORT virtual const Vector3& GetPosition();
 
     // ?GetMatrix@lvlMultiRoomInstance@@UAEABVMatrix34@@AAV2@@Z
     ARTS_IMPORT virtual const Matrix34& GetMatrix(Matrix34& arg1);
 
-    // ?GetPosition@lvlMultiRoomInstance@@UAEABVVector3@@XZ
-    ARTS_IMPORT virtual const Vector3& GetPosition();
+    // ?SetMatrix@lvlMultiRoomInstance@@UAEXABVMatrix34@@@Z
+    ARTS_IMPORT virtual void SetMatrix(const Matrix34& arg1);
+
+    // ?GetEntity@lvlMultiRoomInstance@@UAEPAVdgPhysEntity@@XZ
+    ARTS_IMPORT virtual dgPhysEntity* GetEntity();
+
+    // ?AttachEntity@lvlMultiRoomInstance@@UAEPAVdgPhysEntity@@XZ
+    ARTS_IMPORT virtual dgPhysEntity* AttachEntity();
 
     // ?GetVelocity@lvlMultiRoomInstance@@UAEABVVector3@@XZ
     ARTS_IMPORT virtual const Vector3& GetVelocity();
 
-    // ?IsCollidable@lvlMultiRoomInstance@@UAE_NXZ
-    ARTS_IMPORT virtual bool IsCollidable();
+    // ?Draw@lvlMultiRoomInstance@@UAEXH@Z
+    ARTS_IMPORT virtual void Draw(i32 arg1);
+
+    // ?SizeOf@lvlMultiRoomInstance@@UAEIXZ
+    ARTS_IMPORT virtual u32 SizeOf();
 
     // ?IsLandmark@lvlMultiRoomInstance@@UAE_NXZ
     ARTS_IMPORT virtual bool IsLandmark();
 
+    // ?IsCollidable@lvlMultiRoomInstance@@UAE_NXZ
+    ARTS_IMPORT virtual bool IsCollidable();
+
     // ?IsTerrainCollidable@lvlMultiRoomInstance@@UAE_NXZ
     ARTS_IMPORT virtual bool IsTerrainCollidable();
 
-    // ?SetMatrix@lvlMultiRoomInstance@@UAEXABVMatrix34@@@Z
-    ARTS_IMPORT virtual void SetMatrix(const Matrix34& arg1);
+    // ?GetBound@lvlMultiRoomInstance@@UAEPBVphBound@@H@Z
+    ARTS_IMPORT virtual const phBound* GetBound(i32 arg1);
 
-    // ?SizeOf@lvlMultiRoomInstance@@UAEIXZ
-    ARTS_IMPORT virtual u32 SizeOf();
+    // ?Create@lvlMultiRoomInstance@@SAXPAVlvlInstance@@H@Z
+    ARTS_IMPORT static void Create(lvlInstance* arg1, i32 arg2);
 
 private:
     // ??0lvlMultiRoomInstance@@AAE@PAVlvlInstance@@PAUlvlMultiRoomState@@H@Z

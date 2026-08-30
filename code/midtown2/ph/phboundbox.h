@@ -49,6 +49,27 @@ public:
     // ??1phBoundBox@@QAE@XZ
     ARTS_IMPORT ~phBoundBox();
 
+    // ?GetMaterial@phBoundBox@@UBEPBVphMaterial@@H@Z
+    ARTS_IMPORT virtual const phMaterial* GetMaterial(i32 arg1) const;
+
+    // ?TestProbePoint@phBoundBox@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@M@Z
+    ARTS_IMPORT virtual bool TestProbePoint(phSegment& arg1, phIntersectionPoint* arg2, f32 arg3) const;
+
+    // ?TestAIPoint@phBoundBox@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@@Z
+    ARTS_IMPORT virtual bool TestAIPoint(phSegment& arg1, phIntersectionPoint* arg2) const;
+
+    // ?TestEdge@phBoundBox@@UBEHAAVphSegment@@PAVphIntersection@@H@Z
+    ARTS_IMPORT virtual i32 TestEdge(phSegment& arg1, phIntersection* arg2, i32 arg3) const;
+
+    // ?TestProbe@phBoundBox@@UBE_NAAVphSegment@@PAVphIntersection@@M@Z
+    ARTS_IMPORT virtual bool TestProbe(phSegment& arg1, phIntersection* arg2, f32 arg3) const;
+
+    // ?GetEdgeCosine@phBoundBox@@UBEMH@Z
+    ARTS_IMPORT virtual f32 GetEdgeCosine(i32 arg1) const;
+
+    // ?GetEdgeNormal@phBoundBox@@UBEABVVector3@@HAAV2@@Z
+    ARTS_IMPORT virtual const Vector3& GetEdgeNormal(i32 arg1, Vector3& arg2) const;
+
     // ?CreateOffset@phBoundBox@@QAEXABVVector3@@@Z
     ARTS_IMPORT void CreateOffset(const Vector3& arg1);
 
@@ -60,15 +81,6 @@ public:
 
     // ?FindImpactSphereToBox@phBoundBox@@QBEHPBVphBoundSphere@@ABVMatrix34@@1PAVphColliderBase@@2PAVphImpactBase@@ABVVector3@@4@Z
     ARTS_IMPORT i32 FindImpactSphereToBox(const phBoundSphere* arg1, const Matrix34& arg2, const Matrix34& arg3, phColliderBase* arg4, phColliderBase* arg5, phImpactBase* arg6, const Vector3& arg7, const Vector3& arg8) const;
-
-    // ?GetEdgeCosine@phBoundBox@@UBEMH@Z
-    ARTS_IMPORT virtual f32 GetEdgeCosine(i32 arg1) const;
-
-    // ?GetEdgeNormal@phBoundBox@@UBEABVVector3@@HAAV2@@Z
-    ARTS_IMPORT virtual const Vector3& GetEdgeNormal(i32 arg1, Vector3& arg2) const;
-
-    // ?GetMaterial@phBoundBox@@UBEPBVphMaterial@@H@Z
-    ARTS_IMPORT virtual const phMaterial* GetMaterial(i32 arg1) const;
 
     // ?Load@phBoundBox@@QAE_NPBD@Z
     ARTS_IMPORT bool Load(const char* arg1);
@@ -87,18 +99,6 @@ public:
 
     // ?ShiftCentroid@phBoundBox@@QAEXABVVector3@@@Z
     ARTS_IMPORT void ShiftCentroid(const Vector3& arg1);
-
-    // ?TestAIPoint@phBoundBox@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@@Z
-    ARTS_IMPORT virtual bool TestAIPoint(phSegment& arg1, phIntersectionPoint* arg2) const;
-
-    // ?TestEdge@phBoundBox@@UBEHAAVphSegment@@PAVphIntersection@@H@Z
-    ARTS_IMPORT virtual i32 TestEdge(phSegment& arg1, phIntersection* arg2, i32 arg3) const;
-
-    // ?TestProbe@phBoundBox@@UBE_NAAVphSegment@@PAVphIntersection@@M@Z
-    ARTS_IMPORT virtual bool TestProbe(phSegment& arg1, phIntersection* arg2, f32 arg3) const;
-
-    // ?TestProbePoint@phBoundBox@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@M@Z
-    ARTS_IMPORT virtual bool TestProbePoint(phSegment& arg1, phIntersectionPoint* arg2, f32 arg3) const;
 
 protected:
     // ?BoxToBoxFaceImpacts@phBoundBox@@IBEXABVVector3@@PAVphImpactBase@@H_NPBVMatrix34@@333PAVphColliderBase@@4@Z

@@ -36,14 +36,14 @@ public:
     // ??1Dialog_Host@@UAE@XZ
     ARTS_IMPORT virtual ~Dialog_Host();
 
+    // ?PreSetup@Dialog_Host@@UAEXXZ
+    ARTS_IMPORT virtual void PreSetup();
+
     // ?Clear@Dialog_Host@@QAEXXZ
     ARTS_IMPORT void Clear();
 
     // ?PasswordCallback@Dialog_Host@@QAEXXZ
     ARTS_IMPORT void PasswordCallback();
-
-    // ?PreSetup@Dialog_Host@@UAEXXZ
-    ARTS_IMPORT virtual void PreSetup();
 
 public:
     // Members from 0x0BC; everything below that belongs to PUMenuBase.

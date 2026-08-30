@@ -40,14 +40,23 @@ public:
     // ??1UICWArray@@UAE@XZ
     ARTS_IMPORT virtual ~UICWArray();
 
-    // ?AcceptCapture@UICWArray@@QAEXXZ
-    ARTS_IMPORT void AcceptCapture();
+    // ?Update@UICWArray@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@UICWArray@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
 
     // ?Action@UICWArray@@UAEXTeqEvent@@@Z
     ARTS_IMPORT virtual void Action(eqEvent arg1);
 
     // ?CaptureAction@UICWArray@@UAEXTeqEvent@@@Z
     ARTS_IMPORT virtual void CaptureAction(eqEvent arg1);
+
+    // ?Switch@UICWArray@@UAEXH@Z
+    ARTS_IMPORT virtual void Switch(i32 arg1);
+
+    // ?AcceptCapture@UICWArray@@QAEXXZ
+    ARTS_IMPORT void AcceptCapture();
 
     // ?CheckCapture@UICWArray@@QAEXXZ
     ARTS_IMPORT void CheckCapture();
@@ -73,9 +82,6 @@ public:
     // ?Redraw@UICWArray@@QAEXXZ
     ARTS_IMPORT void Redraw();
 
-    // ?Reset@UICWArray@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?ResetCapture@UICWArray@@QAEXXZ
     ARTS_IMPORT void ResetCapture();
 
@@ -90,12 +96,6 @@ public:
 
     // ?SetVScrollVals@UICWArray@@QAEXXZ
     ARTS_IMPORT void SetVScrollVals();
-
-    // ?Switch@UICWArray@@UAEXH@Z
-    ARTS_IMPORT virtual void Switch(i32 arg1);
-
-    // ?Update@UICWArray@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
     // ?VScrollCB@UICWArray@@QAEXXZ
     ARTS_IMPORT void VScrollCB();

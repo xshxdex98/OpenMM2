@@ -34,17 +34,20 @@ public:
     // ??1mmSingleStunt@@UAE@XZ
     ARTS_IMPORT virtual ~mmSingleStunt();
 
-    // ?EnableRacers@mmSingleStunt@@QAEXXZ
-    ARTS_IMPORT void EnableRacers();
+    // ?Update@mmSingleStunt@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
 
-    // ?EventSoundCtrl@mmSingleStunt@@QAEX_NH@Z
-    ARTS_IMPORT void EventSoundCtrl(bool arg1, i32 arg2);
-
-    // ?HitWaterHandler@mmSingleStunt@@UAEXXZ
-    ARTS_IMPORT virtual void HitWaterHandler();
+    // ?Reset@mmSingleStunt@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
 
     // ?Init@mmSingleStunt@@UAEHXZ
     ARTS_IMPORT virtual i32 Init();
+
+    // ?InitMyPlayer@mmSingleStunt@@UAEXXZ
+    ARTS_IMPORT virtual void InitMyPlayer();
+
+    // ?InitOtherPlayers@mmSingleStunt@@UAEXXZ
+    ARTS_IMPORT virtual void InitOtherPlayers();
 
     // ?InitGameObjects@mmSingleStunt@@UAEXXZ
     ARTS_IMPORT virtual void InitGameObjects();
@@ -52,29 +55,8 @@ public:
     // ?InitHUD@mmSingleStunt@@UAEXXZ
     ARTS_IMPORT virtual void InitHUD();
 
-    // ?InitMyPlayer@mmSingleStunt@@UAEXXZ
-    ARTS_IMPORT virtual void InitMyPlayer();
-
-    // ?InitNewEvent@mmSingleStunt@@QAEXXZ
-    ARTS_IMPORT void InitNewEvent();
-
-    // ?InitOtherPlayers@mmSingleStunt@@UAEXXZ
-    ARTS_IMPORT virtual void InitOtherPlayers();
-
-    // ?NextRace@mmSingleStunt@@UAEXXZ
-    ARTS_IMPORT virtual void NextRace();
-
-    // ?RegisterFinish@mmSingleStunt@@QAEHH@Z
-    ARTS_IMPORT i32 RegisterFinish(i32 arg1);
-
-    // ?Reset@mmSingleStunt@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?SwitchState@mmSingleStunt@@UAEXH@Z
-    ARTS_IMPORT virtual void SwitchState(i32 arg1);
-
-    // ?Update@mmSingleStunt@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
+    // ?UpdateGameInput@mmSingleStunt@@UAEXH@Z
+    ARTS_IMPORT virtual void UpdateGameInput(i32 arg1);
 
     // ?UpdateDebugKeyInput@mmSingleStunt@@UAEXH@Z
     ARTS_IMPORT virtual void UpdateDebugKeyInput(i32 arg1);
@@ -82,8 +64,26 @@ public:
     // ?UpdateGame@mmSingleStunt@@UAEXXZ
     ARTS_IMPORT virtual void UpdateGame();
 
-    // ?UpdateGameInput@mmSingleStunt@@UAEXH@Z
-    ARTS_IMPORT virtual void UpdateGameInput(i32 arg1);
+    // ?NextRace@mmSingleStunt@@UAEXXZ
+    ARTS_IMPORT virtual void NextRace();
+
+    // ?HitWaterHandler@mmSingleStunt@@UAEXXZ
+    ARTS_IMPORT virtual void HitWaterHandler();
+
+    // ?SwitchState@mmSingleStunt@@UAEXH@Z
+    ARTS_IMPORT virtual void SwitchState(i32 arg1);
+
+    // ?EnableRacers@mmSingleStunt@@QAEXXZ
+    ARTS_IMPORT void EnableRacers();
+
+    // ?EventSoundCtrl@mmSingleStunt@@QAEX_NH@Z
+    ARTS_IMPORT void EventSoundCtrl(bool arg1, i32 arg2);
+
+    // ?InitNewEvent@mmSingleStunt@@QAEXXZ
+    ARTS_IMPORT void InitNewEvent();
+
+    // ?RegisterFinish@mmSingleStunt@@QAEHH@Z
+    ARTS_IMPORT i32 RegisterFinish(i32 arg1);
 
 private:
     // ?CheckCopPursuit@mmSingleStunt@@AAE_NXZ

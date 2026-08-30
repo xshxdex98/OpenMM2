@@ -43,26 +43,14 @@ public:
     // ??1mmMultiCR@@UAE@XZ
     ARTS_IMPORT virtual ~mmMultiCR();
 
-    // ?DropThruCityHandler@mmMultiCR@@UAEXXZ
-    ARTS_IMPORT virtual void DropThruCityHandler();
-
-    // ?FondleCarMass@mmMultiCR@@QAEXPAVvehCar@@M@Z
-    ARTS_IMPORT void FondleCarMass(vehCar* arg1, f32 arg2);
-
-    // ?GameMessage@mmMultiCR@@UAEXPAUNET_RCXHEAD@@@Z
-    ARTS_IMPORT virtual void GameMessage(NET_RCXHEAD* arg1);
-
-    // ?GetWaypoints@mmMultiCR@@UAEPAVmmWaypoints@@XZ
-    ARTS_IMPORT virtual mmWaypoints* GetWaypoints();
-
-    // ?HitWaterHandler@mmMultiCR@@UAEXXZ
-    ARTS_IMPORT virtual void HitWaterHandler();
-
-    // ?ImpactCallback@mmMultiCR@@QAEXPAX0@Z
-    ARTS_IMPORT void ImpactCallback(void* arg1, void* arg2);
+    // ?Reset@mmMultiCR@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
 
     // ?Init@mmMultiCR@@UAEHXZ
     ARTS_IMPORT virtual i32 Init();
+
+    // ?InitMyPlayer@mmMultiCR@@UAEXXZ
+    ARTS_IMPORT virtual void InitMyPlayer();
 
     // ?InitGameObjects@mmMultiCR@@UAEXXZ
     ARTS_IMPORT virtual void InitGameObjects();
@@ -70,32 +58,8 @@ public:
     // ?InitHUD@mmMultiCR@@UAEXXZ
     ARTS_IMPORT virtual void InitHUD();
 
-    // ?InitMyPlayer@mmMultiCR@@UAEXXZ
-    ARTS_IMPORT virtual void InitMyPlayer();
-
-    // ?InitNetworkPlayers@mmMultiCR@@UAEXXZ
-    ARTS_IMPORT virtual void InitNetworkPlayers();
-
-    // ?LoadCSV@mmMultiCR@@QAEHPAD@Z
-    ARTS_IMPORT i32 LoadCSV(char* arg1);
-
-    // ?LoadSets@mmMultiCR@@QAEHPAD@Z
-    ARTS_IMPORT i32 LoadSets(char* arg1);
-
-    // ?Reset@mmMultiCR@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?ResetPositions@mmMultiCR@@QAEXH@Z
-    ARTS_IMPORT void ResetPositions(i32 arg1);
-
-    // ?SendLobbyResults@mmMultiCR@@QAEXKHH@Z
-    ARTS_IMPORT void SendLobbyResults(ulong arg1, i32 arg2, i32 arg3);
-
-    // ?SwitchState@mmMultiCR@@UAEXH@Z
-    ARTS_IMPORT virtual void SwitchState(i32 arg1);
-
-    // ?SystemMessage@mmMultiCR@@UAEXPAUNETSYS_MSG@@@Z
-    ARTS_IMPORT virtual void SystemMessage(NETSYS_MSG* arg1);
+    // ?UpdateGameInput@mmMultiCR@@UAEXH@Z
+    ARTS_IMPORT virtual void UpdateGameInput(i32 arg1);
 
     // ?UpdateDebugKeyInput@mmMultiCR@@UAEXH@Z
     ARTS_IMPORT virtual void UpdateDebugKeyInput(i32 arg1);
@@ -103,8 +67,44 @@ public:
     // ?UpdateGame@mmMultiCR@@UAEXXZ
     ARTS_IMPORT virtual void UpdateGame();
 
-    // ?UpdateGameInput@mmMultiCR@@UAEXH@Z
-    ARTS_IMPORT virtual void UpdateGameInput(i32 arg1);
+    // ?HitWaterHandler@mmMultiCR@@UAEXXZ
+    ARTS_IMPORT virtual void HitWaterHandler();
+
+    // ?DropThruCityHandler@mmMultiCR@@UAEXXZ
+    ARTS_IMPORT virtual void DropThruCityHandler();
+
+    // ?SwitchState@mmMultiCR@@UAEXH@Z
+    ARTS_IMPORT virtual void SwitchState(i32 arg1);
+
+    // ?GetWaypoints@mmMultiCR@@UAEPAVmmWaypoints@@XZ
+    ARTS_IMPORT virtual mmWaypoints* GetWaypoints();
+
+    // ?InitNetworkPlayers@mmMultiCR@@UAEXXZ
+    ARTS_IMPORT virtual void InitNetworkPlayers();
+
+    // ?SystemMessage@mmMultiCR@@UAEXPAUNETSYS_MSG@@@Z
+    ARTS_IMPORT virtual void SystemMessage(NETSYS_MSG* arg1);
+
+    // ?GameMessage@mmMultiCR@@UAEXPAUNET_RCXHEAD@@@Z
+    ARTS_IMPORT virtual void GameMessage(NET_RCXHEAD* arg1);
+
+    // ?FondleCarMass@mmMultiCR@@QAEXPAVvehCar@@M@Z
+    ARTS_IMPORT void FondleCarMass(vehCar* arg1, f32 arg2);
+
+    // ?ImpactCallback@mmMultiCR@@QAEXPAX0@Z
+    ARTS_IMPORT void ImpactCallback(void* arg1, void* arg2);
+
+    // ?LoadCSV@mmMultiCR@@QAEHPAD@Z
+    ARTS_IMPORT i32 LoadCSV(char* arg1);
+
+    // ?LoadSets@mmMultiCR@@QAEHPAD@Z
+    ARTS_IMPORT i32 LoadSets(char* arg1);
+
+    // ?ResetPositions@mmMultiCR@@QAEXH@Z
+    ARTS_IMPORT void ResetPositions(i32 arg1);
+
+    // ?SendLobbyResults@mmMultiCR@@QAEXKHH@Z
+    ARTS_IMPORT void SendLobbyResults(ulong arg1, i32 arg2, i32 arg3);
 
 private:
     // ?CycleInterest@mmMultiCR@@AAEXH@Z

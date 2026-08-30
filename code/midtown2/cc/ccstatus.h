@@ -37,14 +37,14 @@ public:
     // ?Cull@ccStatus@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
 
+    // ?Update@ccStatus@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?LoadBitmap@ccStatus@@QAEXPADHHH@Z
     ARTS_IMPORT void LoadBitmap(char* arg1, i32 arg2, i32 arg3, i32 arg4);
 
     // ?SetStatus@ccStatus@@QAEXF@Z
     ARTS_IMPORT void SetStatus(i16 arg1);
-
-    // ?Update@ccStatus@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7ccStatus@@6B@

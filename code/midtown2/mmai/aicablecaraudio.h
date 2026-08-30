@@ -39,20 +39,20 @@ public:
     // ?AssignSounds@aiCableCarAudio@@UAEXXZ
     ARTS_IMPORT virtual void AssignSounds();
 
+    // ?UnAssignSounds@aiCableCarAudio@@UAEXH@Z
+    ARTS_IMPORT virtual void UnAssignSounds(i32 arg1);
+
+    // ?UpdateAudio@aiCableCarAudio@@UAEXXZ
+    ARTS_IMPORT virtual void UpdateAudio();
+
     // ?Init@aiCableCarAudio@@QAEXPAVVector3@@PAM@Z
     ARTS_IMPORT void Init(Vector3* arg1, f32* arg2);
 
     // ?Reset@aiCableCarAudio@@QAEXXZ
     ARTS_IMPORT void Reset();
 
-    // ?UnAssignSounds@aiCableCarAudio@@UAEXH@Z
-    ARTS_IMPORT virtual void UnAssignSounds(i32 arg1);
-
     // ?UpdateAudio@aiCableCarAudio@@QAEHM@Z
     ARTS_IMPORT i32 UpdateAudio(f32 arg1);
-
-    // ?UpdateAudio@aiCableCarAudio@@UAEXXZ
-    ARTS_IMPORT virtual void UpdateAudio();
 };
 
 // ??_7aiCableCarAudio@@6B@

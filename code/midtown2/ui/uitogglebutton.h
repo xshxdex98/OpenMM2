@@ -39,6 +39,9 @@ public:
     // ??1UIToggleButton@@UAE@XZ
     ARTS_IMPORT virtual ~UIToggleButton();
 
+    // ?Update@UIToggleButton@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?Action@UIToggleButton@@UAEXTeqEvent@@@Z
     ARTS_IMPORT virtual void Action(eqEvent arg1);
 
@@ -47,9 +50,6 @@ public:
 
     // ?Init@UIToggleButton@@QAEXPAULocString@@PAHMMMMHHVdatCallback@@@Z
     ARTS_IMPORT void Init(LocString* arg1, i32* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, i32 arg7, i32 arg8, datCallback arg9);
-
-    // ?Update@UIToggleButton@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 protected:
     // ?DrawOff@UIToggleButton@@MAEXXZ

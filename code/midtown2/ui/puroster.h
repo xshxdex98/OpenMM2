@@ -36,6 +36,9 @@ public:
     // ??1PURoster@@UAE@XZ
     ARTS_IMPORT virtual ~PURoster();
 
+    // ?Reset@PURoster@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?AddName@PURoster@@QAEXPBDKH@Z
     ARTS_IMPORT void AddName(const char* arg1, ulong arg2, i32 arg3);
 
@@ -59,9 +62,6 @@ public:
 
     // ?RemoveName@PURoster@@QAEXPBDK@Z
     ARTS_IMPORT void RemoveName(const char* arg1, ulong arg2);
-
-    // ?Reset@PURoster@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
 
     // ?SetBootCB@PURoster@@QAEXVdatCallback@@@Z
     ARTS_IMPORT void SetBootCB(datCallback arg1);

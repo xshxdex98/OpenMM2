@@ -39,11 +39,11 @@ public:
     // ??1asParticles@@UAE@XZ
     ARTS_IMPORT virtual ~asParticles();
 
-    // ?Blast@asParticles@@QAEXHPAVasBirthRule@@@Z
-    ARTS_IMPORT void Blast(i32 arg1, asBirthRule* arg2);
-
     // ?Cull@asParticles@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
+
+    // ?Blast@asParticles@@QAEXHPAVasBirthRule@@@Z
+    ARTS_IMPORT void Blast(i32 arg1, asBirthRule* arg2);
 
     // ?Init@asParticles@@QAEXHHHHPAUasMeshCardVertex@@@Z
     ARTS_IMPORT void Init(i32 arg1, i32 arg2, i32 arg3, i32 arg4, asMeshCardVertex* arg5);

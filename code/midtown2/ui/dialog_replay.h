@@ -40,6 +40,12 @@ public:
     // ??1Dialog_Replay@@UAE@XZ
     ARTS_IMPORT virtual ~Dialog_Replay();
 
+    // ?PreSetup@Dialog_Replay@@UAEXXZ
+    ARTS_IMPORT virtual void PreSetup();
+
+    // ?PostSetup@Dialog_Replay@@UAEXXZ
+    ARTS_IMPORT virtual void PostSetup();
+
     // ?CancelCB@Dialog_Replay@@QAEXXZ
     ARTS_IMPORT void CancelCB();
 
@@ -60,12 +66,6 @@ public:
 
     // ?LoadAll@Dialog_Replay@@QAEXXZ
     ARTS_IMPORT void LoadAll();
-
-    // ?PostSetup@Dialog_Replay@@UAEXXZ
-    ARTS_IMPORT virtual void PostSetup();
-
-    // ?PreSetup@Dialog_Replay@@UAEXXZ
-    ARTS_IMPORT virtual void PreSetup();
 
     // ?ScrollCB@Dialog_Replay@@QAEXXZ
     ARTS_IMPORT void ScrollCB();

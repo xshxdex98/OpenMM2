@@ -38,6 +38,15 @@ public:
     // ??1HostRaceMenu@@UAE@XZ
     ARTS_IMPORT virtual ~HostRaceMenu();
 
+    // ?PreSetup@HostRaceMenu@@UAEXXZ
+    ARTS_IMPORT virtual void PreSetup();
+
+    // ?SetCRWidgets@HostRaceMenu@@UAEXH@Z
+    ARTS_IMPORT virtual void SetCRWidgets(i32 arg1);
+
+    // ?InitCRWidgets@HostRaceMenu@@UAEXXZ
+    ARTS_IMPORT virtual void InitCRWidgets();
+
     // ?DecodeCRData@HostRaceMenu@@QAEXH@Z
     ARTS_IMPORT void DecodeCRData(i32 arg1);
 
@@ -56,9 +65,6 @@ public:
     // ?GetLimitVal@HostRaceMenu@@QAEHAAH@Z
     ARTS_IMPORT i32 GetLimitVal(i32& arg1);
 
-    // ?InitCRWidgets@HostRaceMenu@@UAEXXZ
-    ARTS_IMPORT virtual void InitCRWidgets();
-
     // ?LimitDec@HostRaceMenu@@QAEXXZ
     ARTS_IMPORT void LimitDec();
 
@@ -70,12 +76,6 @@ public:
 
     // ?MassInc@HostRaceMenu@@QAEXXZ
     ARTS_IMPORT void MassInc();
-
-    // ?PreSetup@HostRaceMenu@@UAEXXZ
-    ARTS_IMPORT virtual void PreSetup();
-
-    // ?SetCRWidgets@HostRaceMenu@@UAEXH@Z
-    ARTS_IMPORT virtual void SetCRWidgets(i32 arg1);
 
     // ?SetGameClassCallback@HostRaceMenu@@QAEXXZ
     ARTS_IMPORT void SetGameClassCallback();

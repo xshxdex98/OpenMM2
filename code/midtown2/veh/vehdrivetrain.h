@@ -38,6 +38,18 @@ public:
     // ??1vehDrivetrain@@UAE@XZ
     ARTS_IMPORT virtual ~vehDrivetrain();
 
+    // ?Update@vehDrivetrain@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@vehDrivetrain@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
+    // ?FileIO@vehDrivetrain@@UAEXAAVdatParser@@@Z
+    ARTS_IMPORT virtual void FileIO(datParser& arg1);
+
+    // ?GetClassName@vehDrivetrain@@UAEPADXZ
+    ARTS_IMPORT virtual char* GetClassName();
+
     // ?AddWheel@vehDrivetrain@@QAEHPAVvehWheel@@@Z
     ARTS_IMPORT i32 AddWheel(vehWheel* arg1);
 
@@ -50,20 +62,8 @@ public:
     // ?Detach@vehDrivetrain@@QAEXXZ
     ARTS_IMPORT void Detach();
 
-    // ?FileIO@vehDrivetrain@@UAEXAAVdatParser@@@Z
-    ARTS_IMPORT virtual void FileIO(datParser& arg1);
-
-    // ?GetClassName@vehDrivetrain@@UAEPADXZ
-    ARTS_IMPORT virtual char* GetClassName();
-
     // ?Init@vehDrivetrain@@QAEXPAVvehCarSim@@@Z
     ARTS_IMPORT void Init(vehCarSim* arg1);
-
-    // ?Reset@vehDrivetrain@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?Update@vehDrivetrain@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
     // ?diffRatioMax@vehDrivetrain@@2MA
     ARTS_IMPORT static f32 diffRatioMax;

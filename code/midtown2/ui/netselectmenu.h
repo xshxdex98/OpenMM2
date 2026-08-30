@@ -42,6 +42,12 @@ public:
     // ??1NetSelectMenu@@UAE@XZ
     ARTS_IMPORT virtual ~NetSelectMenu();
 
+    // ?PreSetup@NetSelectMenu@@UAEXXZ
+    ARTS_IMPORT virtual void PreSetup();
+
+    // ?PostSetup@NetSelectMenu@@UAEXXZ
+    ARTS_IMPORT virtual void PostSetup();
+
     // ?AddModem@NetSelectMenu@@QAEXPADH@Z
     ARTS_IMPORT void AddModem(char* arg1, i32 arg2);
 
@@ -89,12 +95,6 @@ public:
 
     // ?NetNameCB@NetSelectMenu@@QAEXXZ
     ARTS_IMPORT void NetNameCB();
-
-    // ?PostSetup@NetSelectMenu@@UAEXXZ
-    ARTS_IMPORT virtual void PostSetup();
-
-    // ?PreSetup@NetSelectMenu@@UAEXXZ
-    ARTS_IMPORT virtual void PreSetup();
 
     // ?ProtocolBack@NetSelectMenu@@QAEXXZ
     ARTS_IMPORT void ProtocolBack();

@@ -39,17 +39,26 @@ public:
     // ??1UICompositeScroll@@UAE@XZ
     ARTS_IMPORT virtual ~UICompositeScroll();
 
+    // ?Update@UICompositeScroll@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@UICompositeScroll@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?Action@UICompositeScroll@@UAEXTeqEvent@@@Z
     ARTS_IMPORT virtual void Action(eqEvent arg1);
+
+    // ?CaptureAction@UICompositeScroll@@UAEXTeqEvent@@@Z
+    ARTS_IMPORT virtual void CaptureAction(eqEvent arg1);
+
+    // ?Switch@UICompositeScroll@@UAEXH@Z
+    ARTS_IMPORT virtual void Switch(i32 arg1);
 
     // ?AddComponent@UICompositeScroll@@QAEXPAVmmCompBase@@@Z
     ARTS_IMPORT void AddComponent(mmCompBase* arg1);
 
     // ?AddTitle@UICompositeScroll@@QAEXPAVmmCompBase@@@Z
     ARTS_IMPORT void AddTitle(mmCompBase* arg1);
-
-    // ?CaptureAction@UICompositeScroll@@UAEXTeqEvent@@@Z
-    ARTS_IMPORT virtual void CaptureAction(eqEvent arg1);
 
     // ?Clear@UICompositeScroll@@QAEXXZ
     ARTS_IMPORT void Clear();
@@ -75,9 +84,6 @@ public:
     // ?RemoveAllComponentChildren@UICompositeScroll@@QAEXXZ
     ARTS_IMPORT void RemoveAllComponentChildren();
 
-    // ?Reset@UICompositeScroll@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?SetHighlight@UICompositeScroll@@QAEXH@Z
     ARTS_IMPORT void SetHighlight(i32 arg1);
 
@@ -92,12 +98,6 @@ public:
 
     // ?SetVScrollVals@UICompositeScroll@@QAEXXZ
     ARTS_IMPORT void SetVScrollVals();
-
-    // ?Switch@UICompositeScroll@@UAEXH@Z
-    ARTS_IMPORT virtual void Switch(i32 arg1);
-
-    // ?Update@UICompositeScroll@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
     // ?VScrollCB@UICompositeScroll@@QAEXXZ
     ARTS_IMPORT void VScrollCB();

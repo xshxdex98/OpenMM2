@@ -34,11 +34,11 @@ public:
     // ??1Dialog_Password@@UAE@XZ
     ARTS_IMPORT virtual ~Dialog_Password();
 
-    // ?PasswordCallback@Dialog_Password@@QAEXXZ
-    ARTS_IMPORT void PasswordCallback();
-
     // ?PreSetup@Dialog_Password@@UAEXXZ
     ARTS_IMPORT virtual void PreSetup();
+
+    // ?PasswordCallback@Dialog_Password@@QAEXXZ
+    ARTS_IMPORT void PasswordCallback();
 };
 
 // ??_7Dialog_Password@@6B@

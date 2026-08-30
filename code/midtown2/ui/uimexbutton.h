@@ -39,6 +39,9 @@ public:
     // ??1UIMexButton@@UAE@XZ
     ARTS_IMPORT virtual ~UIMexButton();
 
+    // ?Update@UIMexButton@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?Action@UIMexButton@@UAEXTeqEvent@@@Z
     ARTS_IMPORT virtual void Action(eqEvent arg1);
 
@@ -47,9 +50,6 @@ public:
 
     // ?Init@UIMexButton@@QAEXPAULocString@@PAHHMMMMHHVdatCallback@@@Z
     ARTS_IMPORT void Init(LocString* arg1, i32* arg2, i32 arg3, f32 arg4, f32 arg5, f32 arg6, f32 arg7, i32 arg8, i32 arg9, datCallback arg10);
-
-    // ?Update@UIMexButton@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 private:
     // ?DrawOff@UIMexButton@@EAEXXZ

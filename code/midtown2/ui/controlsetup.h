@@ -36,11 +36,26 @@ public:
     // ??1ControlSetup@@UAE@XZ
     ARTS_IMPORT virtual ~ControlSetup();
 
-    // ?ActivateDeviceOptions@ControlSetup@@QAEXXZ
-    ARTS_IMPORT void ActivateDeviceOptions();
+    // ?Update@ControlSetup@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?PreSetup@ControlSetup@@UAEXXZ
+    ARTS_IMPORT virtual void PreSetup();
 
     // ?CancelAction@ControlSetup@@UAEXXZ
     ARTS_IMPORT virtual void CancelAction();
+
+    // ?DoneAction@ControlSetup@@UAEXXZ
+    ARTS_IMPORT virtual void DoneAction();
+
+    // ?ResetDefaultAction@ControlSetup@@UAEXXZ
+    ARTS_IMPORT virtual void ResetDefaultAction();
+
+    // ?StoreCurrentSetup@ControlSetup@@UAEXXZ
+    ARTS_IMPORT virtual void StoreCurrentSetup();
+
+    // ?ActivateDeviceOptions@ControlSetup@@QAEXXZ
+    ARTS_IMPORT void ActivateDeviceOptions();
 
     // ?ControlSelect@ControlSetup@@QAEXXZ
     ARTS_IMPORT void ControlSelect();
@@ -50,9 +65,6 @@ public:
 
     // ?DeactivateAllDeviceOptions@ControlSetup@@QAEXXZ
     ARTS_IMPORT void DeactivateAllDeviceOptions();
-
-    // ?DoneAction@ControlSetup@@UAEXXZ
-    ARTS_IMPORT virtual void DoneAction();
 
     // ?FocusDescription@ControlSetup@@QAEXPAX0@Z
     ARTS_IMPORT void FocusDescription(void* arg1, void* arg2);
@@ -66,12 +78,6 @@ public:
     // ?POVCB@ControlSetup@@QAEXXZ
     ARTS_IMPORT void POVCB();
 
-    // ?PreSetup@ControlSetup@@UAEXXZ
-    ARTS_IMPORT virtual void PreSetup();
-
-    // ?ResetDefaultAction@ControlSetup@@UAEXXZ
-    ARTS_IMPORT virtual void ResetDefaultAction();
-
     // ?SetControlPosition@ControlSetup@@QAEMPAVuiWidget@@MM@Z
     ARTS_IMPORT f32 SetControlPosition(uiWidget* arg1, f32 arg2, f32 arg3);
 
@@ -80,12 +86,6 @@ public:
 
     // ?SetSensitivityCB@ControlSetup@@QAEXXZ
     ARTS_IMPORT void SetSensitivityCB();
-
-    // ?StoreCurrentSetup@ControlSetup@@UAEXXZ
-    ARTS_IMPORT virtual void StoreCurrentSetup();
-
-    // ?Update@ControlSetup@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7ControlSetup@@6B@

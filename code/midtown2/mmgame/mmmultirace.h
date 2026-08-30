@@ -38,14 +38,14 @@ public:
     // ??1mmMultiRace@@UAE@XZ
     ARTS_IMPORT virtual ~mmMultiRace();
 
-    // ?GameMessage@mmMultiRace@@UAEXPAUNET_RCXHEAD@@@Z
-    ARTS_IMPORT virtual void GameMessage(NET_RCXHEAD* arg1);
-
-    // ?GetWaypoints@mmMultiRace@@UAEPAVmmWaypoints@@XZ
-    ARTS_IMPORT virtual mmWaypoints* GetWaypoints();
+    // ?Reset@mmMultiRace@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
 
     // ?Init@mmMultiRace@@UAEHXZ
     ARTS_IMPORT virtual i32 Init();
+
+    // ?InitMyPlayer@mmMultiRace@@UAEXXZ
+    ARTS_IMPORT virtual void InitMyPlayer();
 
     // ?InitGameObjects@mmMultiRace@@UAEXXZ
     ARTS_IMPORT virtual void InitGameObjects();
@@ -53,32 +53,32 @@ public:
     // ?InitHUD@mmMultiRace@@UAEXXZ
     ARTS_IMPORT virtual void InitHUD();
 
-    // ?InitMyPlayer@mmMultiRace@@UAEXXZ
-    ARTS_IMPORT virtual void InitMyPlayer();
+    // ?UpdateGameInput@mmMultiRace@@UAEXH@Z
+    ARTS_IMPORT virtual void UpdateGameInput(i32 arg1);
+
+    // ?UpdateGame@mmMultiRace@@UAEXXZ
+    ARTS_IMPORT virtual void UpdateGame();
+
+    // ?SwitchState@mmMultiRace@@UAEXH@Z
+    ARTS_IMPORT virtual void SwitchState(i32 arg1);
+
+    // ?GetWaypoints@mmMultiRace@@UAEPAVmmWaypoints@@XZ
+    ARTS_IMPORT virtual mmWaypoints* GetWaypoints();
 
     // ?InitNetworkPlayers@mmMultiRace@@UAEXXZ
     ARTS_IMPORT virtual void InitNetworkPlayers();
 
-    // ?Reset@mmMultiRace@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
+    // ?SystemMessage@mmMultiRace@@UAEXPAUNETSYS_MSG@@@Z
+    ARTS_IMPORT virtual void SystemMessage(NETSYS_MSG* arg1);
+
+    // ?GameMessage@mmMultiRace@@UAEXPAUNET_RCXHEAD@@@Z
+    ARTS_IMPORT virtual void GameMessage(NET_RCXHEAD* arg1);
 
     // ?SetTimeoutOff@mmMultiRace@@QAEXXZ
     ARTS_IMPORT void SetTimeoutOff();
 
     // ?SetTimeoutOn@mmMultiRace@@QAEXXZ
     ARTS_IMPORT void SetTimeoutOn();
-
-    // ?SwitchState@mmMultiRace@@UAEXH@Z
-    ARTS_IMPORT virtual void SwitchState(i32 arg1);
-
-    // ?SystemMessage@mmMultiRace@@UAEXPAUNETSYS_MSG@@@Z
-    ARTS_IMPORT virtual void SystemMessage(NETSYS_MSG* arg1);
-
-    // ?UpdateGame@mmMultiRace@@UAEXXZ
-    ARTS_IMPORT virtual void UpdateGame();
-
-    // ?UpdateGameInput@mmMultiRace@@UAEXH@Z
-    ARTS_IMPORT virtual void UpdateGameInput(i32 arg1);
 
 public:
     // Members from 0xB1FC; everything below that belongs to mmGameMulti.

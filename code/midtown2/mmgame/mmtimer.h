@@ -35,14 +35,17 @@ public:
     // ??1mmTimer@@UAE@XZ
     ARTS_IMPORT virtual ~mmTimer();
 
+    // ?Update@mmTimer@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@mmTimer@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?GetTime@mmTimer@@QAEMXZ
     ARTS_IMPORT f32 GetTime();
 
     // ?Init@mmTimer@@QAEXHMH@Z
     ARTS_IMPORT void Init(i32 arg1, f32 arg2, i32 arg3);
-
-    // ?Reset@mmTimer@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
 
     // ?Start@mmTimer@@QAEXXZ
     ARTS_IMPORT void Start();
@@ -52,9 +55,6 @@ public:
 
     // ?Stop@mmTimer@@QAEXXZ
     ARTS_IMPORT void Stop();
-
-    // ?Update@mmTimer@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     // Members from 0x018; everything below that belongs to asNode.

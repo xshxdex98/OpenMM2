@@ -39,11 +39,11 @@ public:
     // ?Cull@mmVehicleForm@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
 
-    // ?SetShape@mmVehicleForm@@QAEXPAD00PAVVector3@@@Z
-    ARTS_IMPORT void SetShape(char* arg1, char* arg2, char* arg3, Vector3* arg4);
-
     // ?Update@mmVehicleForm@@UAEXXZ
     ARTS_IMPORT virtual void Update();
+
+    // ?SetShape@mmVehicleForm@@QAEXPAD00PAVVector3@@@Z
+    ARTS_IMPORT void SetShape(char* arg1, char* arg2, char* arg3, Vector3* arg4);
 
 private:
     // ?LoadAllModLOD@mmVehicleForm@@AAEXPAD@Z

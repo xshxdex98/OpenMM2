@@ -34,11 +34,11 @@ public:
     // ??1Vehicle@@UAE@XZ
     ARTS_IMPORT virtual ~Vehicle();
 
-    // ?PostSetup@Vehicle@@UAEXXZ
-    ARTS_IMPORT virtual void PostSetup();
-
     // ?PreSetup@Vehicle@@UAEXXZ
     ARTS_IMPORT virtual void PreSetup();
+
+    // ?PostSetup@Vehicle@@UAEXXZ
+    ARTS_IMPORT virtual void PostSetup();
 
     // ?SetSubMenu@Vehicle@@QAEXH@Z
     ARTS_IMPORT void SetSubMenu(i32 arg1);

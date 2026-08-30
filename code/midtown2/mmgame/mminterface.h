@@ -61,6 +61,12 @@ public:
     // ??1mmInterface@@UAE@XZ
     ARTS_IMPORT virtual ~mmInterface();
 
+    // ?Update@mmInterface@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@mmInterface@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?BeDone@mmInterface@@QAEXXZ
     ARTS_IMPORT void BeDone();
 
@@ -79,9 +85,6 @@ public:
     // ?MessageCallback2@mmInterface@@QAEXPAX0@Z
     ARTS_IMPORT void MessageCallback2(void* arg1, void* arg2);
 
-    // ?Reset@mmInterface@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?SetupArchiveTest@mmInterface@@QAEXAAH@Z
     ARTS_IMPORT void SetupArchiveTest(i32& arg1);
 
@@ -93,9 +96,6 @@ public:
 
     // ?Switch@mmInterface@@QAEXHH@Z
     ARTS_IMPORT void Switch(i32 arg1, i32 arg2);
-
-    // ?Update@mmInterface@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
     // ?UpdateLobby@mmInterface@@QAEXXZ
     ARTS_IMPORT void UpdateLobby();

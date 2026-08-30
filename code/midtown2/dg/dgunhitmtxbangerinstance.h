@@ -31,11 +31,11 @@ class Vector3;
 class dgUnhitMtxBangerInstance : public dgUnhitBangerInstance
 {
 public:
-    // ?GetMatrix@dgUnhitMtxBangerInstance@@UAEABVMatrix34@@AAV2@@Z
-    ARTS_IMPORT virtual const Matrix34& GetMatrix(Matrix34& arg1);
-
     // ?GetPosition@dgUnhitMtxBangerInstance@@UAEABVVector3@@XZ
     ARTS_IMPORT virtual const Vector3& GetPosition();
+
+    // ?GetMatrix@dgUnhitMtxBangerInstance@@UAEABVMatrix34@@AAV2@@Z
+    ARTS_IMPORT virtual const Matrix34& GetMatrix(Matrix34& arg1);
 
     // ?SetMatrix@dgUnhitMtxBangerInstance@@UAEXABVMatrix34@@@Z
     ARTS_IMPORT virtual void SetMatrix(const Matrix34& arg1);

@@ -38,11 +38,17 @@ public:
     // ??1Aud3DAmbientObject@@UAE@XZ
     ARTS_IMPORT virtual ~Aud3DAmbientObject();
 
-    // ?ActivateSound@Aud3DAmbientObject@@QAEXH@Z
-    ARTS_IMPORT void ActivateSound(i32 arg1);
-
     // ?AssignSounds@Aud3DAmbientObject@@UAEXXZ
     ARTS_IMPORT virtual void AssignSounds();
+
+    // ?UnAssignSounds@Aud3DAmbientObject@@UAEXH@Z
+    ARTS_IMPORT virtual void UnAssignSounds(i32 arg1);
+
+    // ?UpdateAudio@Aud3DAmbientObject@@UAEXXZ
+    ARTS_IMPORT virtual void UpdateAudio();
+
+    // ?ActivateSound@Aud3DAmbientObject@@QAEXH@Z
+    ARTS_IMPORT void ActivateSound(i32 arg1);
 
     // ?DeactivateSound@Aud3DAmbientObject@@QAEXH@Z
     ARTS_IMPORT void DeactivateSound(i32 arg1);
@@ -65,17 +71,11 @@ public:
     // ?Reset@Aud3DAmbientObject@@QAEXXZ
     ARTS_IMPORT void Reset();
 
-    // ?UnAssignSounds@Aud3DAmbientObject@@UAEXH@Z
-    ARTS_IMPORT virtual void UnAssignSounds(i32 arg1);
-
     // ?Update@Aud3DAmbientObject@@QAEXM@Z
     ARTS_IMPORT void Update(f32 arg1);
 
     // ?UpdateAudio@Aud3DAmbientObject@@QAEHM@Z
     ARTS_IMPORT i32 UpdateAudio(f32 arg1);
-
-    // ?UpdateAudio@Aud3DAmbientObject@@UAEXXZ
-    ARTS_IMPORT virtual void UpdateAudio();
 
     // ?UpdateDoppler@Aud3DAmbientObject@@QAEXPAUtagAud3DAmbientSoundData@@@Z
     ARTS_IMPORT void UpdateDoppler(tagAud3DAmbientSoundData* arg1);

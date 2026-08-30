@@ -41,8 +41,8 @@ public:
     // ??1UIButton@@UAE@XZ
     ARTS_IMPORT virtual ~UIButton();
 
-    // ?Action@UIButton@@UAEXTeqEvent@@@Z
-    ARTS_IMPORT virtual void Action(eqEvent arg1);
+    // ?Update@UIButton@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
 
     // ?Disable@UIButton@@UAEXXZ
     ARTS_IMPORT virtual void Disable();
@@ -50,11 +50,17 @@ public:
     // ?Enable@UIButton@@UAEXXZ
     ARTS_IMPORT virtual void Enable();
 
-    // ?Init@UIButton@@QAEXPAULocString@@HMMMMHVdatCallback@@@Z
-    ARTS_IMPORT void Init(LocString* arg1, i32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, i32 arg7, datCallback arg8);
-
     // ?SetReadOnly@UIButton@@UAEXH@Z
     ARTS_IMPORT virtual void SetReadOnly(i32 arg1);
+
+    // ?Action@UIButton@@UAEXTeqEvent@@@Z
+    ARTS_IMPORT virtual void Action(eqEvent arg1);
+
+    // ?Switch@UIButton@@UAEXH@Z
+    ARTS_IMPORT virtual void Switch(i32 arg1);
+
+    // ?Init@UIButton@@QAEXPAULocString@@HMMMMHVdatCallback@@@Z
+    ARTS_IMPORT void Init(LocString* arg1, i32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, i32 arg7, datCallback arg8);
 
     // ?SetString@UIButton@@QAEXPAULocString@@@Z
     ARTS_IMPORT void SetString(LocString* arg1);
@@ -62,14 +68,8 @@ public:
     // ?SetType@UIButton@@QAEXH@Z
     ARTS_IMPORT void SetType(i32 arg1);
 
-    // ?Switch@UIButton@@UAEXH@Z
-    ARTS_IMPORT virtual void Switch(i32 arg1);
-
     // ?TestHit@UIButton@@QAEHMM@Z
     ARTS_IMPORT i32 TestHit(f32 arg1, f32 arg2);
-
-    // ?Update@UIButton@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 private:
     // ?DrawOff@UIButton@@AAEXXZ

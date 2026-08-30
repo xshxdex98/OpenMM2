@@ -40,6 +40,18 @@ public:
     // ?Cull@mmCompRaceRecord@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
 
+    // ?Update@mmCompRaceRecord@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@mmCompRaceRecord@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
+    // ?SetGeometry@mmCompRaceRecord@@UAEXMMMM@Z
+    ARTS_IMPORT virtual void SetGeometry(f32 arg1, f32 arg2, f32 arg3, f32 arg4);
+
+    // ?SetPosition@mmCompRaceRecord@@UAEXPAVmmTextNode@@HM@Z
+    ARTS_IMPORT virtual void SetPosition(mmTextNode* arg1, i32 arg2, f32 arg3);
+
     // ?Init@mmCompRaceRecord@@QAEXHPAD0000HH@Z
     ARTS_IMPORT void Init(i32 arg1, char* arg2, char* arg3, char* arg4, char* arg5, char* arg6, i32 arg7, i32 arg8);
 
@@ -49,23 +61,11 @@ public:
     // ?LoadBitmap@mmCompRaceRecord@@QAEXPAD@Z
     ARTS_IMPORT void LoadBitmap(char* arg1);
 
-    // ?Reset@mmCompRaceRecord@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?SelectIfRaceType@mmCompRaceRecord@@QAEXHH@Z
     ARTS_IMPORT void SelectIfRaceType(i32 arg1, i32 arg2);
 
-    // ?SetGeometry@mmCompRaceRecord@@UAEXMMMM@Z
-    ARTS_IMPORT virtual void SetGeometry(f32 arg1, f32 arg2, f32 arg3, f32 arg4);
-
-    // ?SetPosition@mmCompRaceRecord@@UAEXPAVmmTextNode@@HM@Z
-    ARTS_IMPORT virtual void SetPosition(mmTextNode* arg1, i32 arg2, f32 arg3);
-
     // ?SetSubwidgetGeometry@mmCompRaceRecord@@QAEXXZ
     ARTS_IMPORT void SetSubwidgetGeometry();
-
-    // ?Update@mmCompRaceRecord@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7mmCompRaceRecord@@6B@

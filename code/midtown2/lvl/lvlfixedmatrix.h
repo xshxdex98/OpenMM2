@@ -35,14 +35,14 @@ public:
     // ??0lvlFixedMatrix@@QAE@XZ
     ARTS_IMPORT lvlFixedMatrix();
 
-    // ?GetMatrix@lvlFixedMatrix@@UAEABVMatrix34@@AAV2@@Z
-    ARTS_IMPORT virtual const Matrix34& GetMatrix(Matrix34& arg1);
-
     // ?GetPosition@lvlFixedMatrix@@UAEABVVector3@@XZ
     ARTS_IMPORT virtual const Vector3& GetPosition();
 
     // ?IsVisible@lvlFixedMatrix@@UAEHABVgfxViewport@@@Z
     ARTS_IMPORT virtual i32 IsVisible(const gfxViewport& arg1);
+
+    // ?GetMatrix@lvlFixedMatrix@@UAEABVMatrix34@@AAV2@@Z
+    ARTS_IMPORT virtual const Matrix34& GetMatrix(Matrix34& arg1);
 
     // ?SetMatrix@lvlFixedMatrix@@UAEXABVMatrix34@@@Z
     ARTS_IMPORT virtual void SetMatrix(const Matrix34& arg1);

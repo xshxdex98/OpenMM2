@@ -37,6 +37,9 @@ public:
     // ??1Card2D@@UAE@XZ
     ARTS_IMPORT virtual ~Card2D();
 
+    // ?Update@Card2D@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?Init@Card2D@@QAEXPAVasCamera@@MMMMM@Z
     ARTS_IMPORT void Init(asCamera* arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6);
 
@@ -48,9 +51,6 @@ public:
 
     // ?SetPosition@Card2D@@QAEXMM@Z
     ARTS_IMPORT void SetPosition(f32 arg1, f32 arg2);
-
-    // ?Update@Card2D@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 private:
     // ?Cull@Card2D@@EAEXXZ

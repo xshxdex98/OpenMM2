@@ -40,6 +40,21 @@ public:
     // ??0aiVehicleInstance@@QAE@PAVaiVehicleSpline@@PAD@Z
     ARTS_IMPORT aiVehicleInstance(aiVehicleSpline* arg1, char* arg2);
 
+    // ?Reset@aiVehicleInstance@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
+    // ?GetPosition@aiVehicleInstance@@UAEABVVector3@@XZ
+    ARTS_IMPORT virtual const Vector3& GetPosition();
+
+    // ?GetMatrix@aiVehicleInstance@@UAEABVMatrix34@@AAV2@@Z
+    ARTS_IMPORT virtual const Matrix34& GetMatrix(Matrix34& arg1);
+
+    // ?SetMatrix@aiVehicleInstance@@UAEXABVMatrix34@@@Z
+    ARTS_IMPORT virtual void SetMatrix(const Matrix34& arg1);
+
+    // ?GetEntity@aiVehicleInstance@@UAEPAVdgPhysEntity@@XZ
+    ARTS_IMPORT virtual dgPhysEntity* GetEntity();
+
     // ?AttachEntity@aiVehicleInstance@@UAEPAVdgPhysEntity@@XZ
     ARTS_IMPORT virtual dgPhysEntity* AttachEntity();
 
@@ -49,47 +64,32 @@ public:
     // ?Draw@aiVehicleInstance@@UAEXH@Z
     ARTS_IMPORT virtual void Draw(i32 arg1);
 
-    // ?DrawGlow@aiVehicleInstance@@UAEXXZ
-    ARTS_IMPORT virtual void DrawGlow();
-
-    // ?DrawPart@aiVehicleInstance@@QAEXAAVmodStatic@@ABVMatrix34@@PAVmodShader@@H@Z
-    ARTS_IMPORT void DrawPart(modStatic& arg1, const Matrix34& arg2, modShader* arg3, i32 arg4);
-
-    // ?DrawReflected@aiVehicleInstance@@UAEXM@Z
-    ARTS_IMPORT virtual void DrawReflected(f32 arg1);
-
     // ?DrawShadow@aiVehicleInstance@@UAEXXZ
     ARTS_IMPORT virtual void DrawShadow();
 
     // ?DrawShadowMap@aiVehicleInstance@@UAEXXZ
     ARTS_IMPORT virtual void DrawShadowMap();
 
+    // ?DrawGlow@aiVehicleInstance@@UAEXXZ
+    ARTS_IMPORT virtual void DrawGlow();
+
+    // ?DrawReflected@aiVehicleInstance@@UAEXM@Z
+    ARTS_IMPORT virtual void DrawReflected(f32 arg1);
+
+    // ?SizeOf@aiVehicleInstance@@UAEIXZ
+    ARTS_IMPORT virtual u32 SizeOf();
+
     // ?GetBound@aiVehicleInstance@@UAEPBVphBound@@H@Z
     ARTS_IMPORT virtual const phBound* GetBound(i32 arg1);
+
+    // ?DrawPart@aiVehicleInstance@@QAEXAAVmodStatic@@ABVMatrix34@@PAVmodShader@@H@Z
+    ARTS_IMPORT void DrawPart(modStatic& arg1, const Matrix34& arg2, modShader* arg3, i32 arg4);
 
     // ?GetData@aiVehicleInstance@@QAEPAVaiVehicleData@@XZ
     ARTS_IMPORT aiVehicleData* GetData();
 
-    // ?GetEntity@aiVehicleInstance@@UAEPAVdgPhysEntity@@XZ
-    ARTS_IMPORT virtual dgPhysEntity* GetEntity();
-
-    // ?GetMatrix@aiVehicleInstance@@UAEABVMatrix34@@AAV2@@Z
-    ARTS_IMPORT virtual const Matrix34& GetMatrix(Matrix34& arg1);
-
-    // ?GetPosition@aiVehicleInstance@@UAEABVVector3@@XZ
-    ARTS_IMPORT virtual const Vector3& GetPosition();
-
-    // ?Reset@aiVehicleInstance@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?SetColor@aiVehicleInstance@@QAEXXZ
     ARTS_IMPORT void SetColor();
-
-    // ?SetMatrix@aiVehicleInstance@@UAEXABVMatrix34@@@Z
-    ARTS_IMPORT virtual void SetMatrix(const Matrix34& arg1);
-
-    // ?SizeOf@aiVehicleInstance@@UAEIXZ
-    ARTS_IMPORT virtual u32 SizeOf();
 
 private:
     // ?InitBreakable@aiVehicleInstance@@AAE_NPBD0H@Z

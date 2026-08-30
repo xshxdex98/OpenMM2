@@ -37,14 +37,14 @@ public:
     // ?Cull@mmToggle2@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
 
+    // ?Update@mmToggle2@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?Init@mmToggle2@@QAEXPADMMPAH@Z
     ARTS_IMPORT void Init(char* arg1, f32 arg2, f32 arg3, i32* arg4);
 
     // ?SetPosition@mmToggle2@@QAEXMM@Z
     ARTS_IMPORT void SetPosition(f32 arg1, f32 arg2);
-
-    // ?Update@mmToggle2@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 private:
     // ?LoadBitmap@mmToggle2@@AAEXPAD@Z

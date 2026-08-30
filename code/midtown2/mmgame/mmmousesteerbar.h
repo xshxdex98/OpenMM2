@@ -31,11 +31,11 @@ public:
     // ?Cull@mmMouseSteerBar@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
 
-    // ?Init@mmMouseSteerBar@@QAEXMMPAM@Z
-    ARTS_IMPORT void Init(f32 arg1, f32 arg2, f32* arg3);
-
     // ?Update@mmMouseSteerBar@@UAEXXZ
     ARTS_IMPORT virtual void Update();
+
+    // ?Init@mmMouseSteerBar@@QAEXMMPAM@Z
+    ARTS_IMPORT void Init(f32 arg1, f32 arg2, f32* arg3);
 };
 
 // ??_7mmMouseSteerBar@@6B@

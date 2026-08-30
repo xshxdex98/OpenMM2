@@ -34,20 +34,20 @@ public:
     // ??1GraphicsOptions@@UAE@XZ
     ARTS_IMPORT virtual ~GraphicsOptions();
 
+    // ?PreSetup@GraphicsOptions@@UAEXXZ
+    ARTS_IMPORT virtual void PreSetup();
+
     // ?CancelAction@GraphicsOptions@@UAEXXZ
     ARTS_IMPORT virtual void CancelAction();
 
     // ?DoneAction@GraphicsOptions@@UAEXXZ
     ARTS_IMPORT virtual void DoneAction();
 
-    // ?FocusDescription@GraphicsOptions@@QAEXPAX0@Z
-    ARTS_IMPORT void FocusDescription(void* arg1, void* arg2);
-
-    // ?PreSetup@GraphicsOptions@@UAEXXZ
-    ARTS_IMPORT virtual void PreSetup();
-
     // ?ResetDefaultAction@GraphicsOptions@@UAEXXZ
     ARTS_IMPORT virtual void ResetDefaultAction();
+
+    // ?FocusDescription@GraphicsOptions@@QAEXPAX0@Z
+    ARTS_IMPORT void FocusDescription(void* arg1, void* arg2);
 
     // ?SetLightQuality@GraphicsOptions@@QAEXXZ
     ARTS_IMPORT void SetLightQuality();

@@ -42,20 +42,32 @@ public:
     // ??1vehCar@@UAE@XZ
     ARTS_IMPORT virtual ~vehCar();
 
+    // ?PreUpdate@vehCar@@UAEXXZ
+    ARTS_IMPORT virtual void PreUpdate();
+
+    // ?Update@vehCar@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?PostUpdate@vehCar@@UAEXXZ
+    ARTS_IMPORT virtual void PostUpdate();
+
+    // ?GetICS@vehCar@@UAEPAVphInertialCS@@XZ
+    ARTS_IMPORT virtual phInertialCS* GetICS();
+
+    // ?GetInst@vehCar@@UAEPAVlvlInstance@@XZ
+    ARTS_IMPORT virtual lvlInstance* GetInst();
+
+    // ?RequiresTerrainCollision@vehCar@@UAE_NXZ
+    ARTS_IMPORT virtual bool RequiresTerrainCollision();
+
     // ?ClearDamage@vehCar@@QAEXXZ
     ARTS_IMPORT void ClearDamage();
 
     // ?DrawTracks@vehCar@@QAEXXZ
     ARTS_IMPORT void DrawTracks();
 
-    // ?GetICS@vehCar@@UAEPAVphInertialCS@@XZ
-    ARTS_IMPORT virtual phInertialCS* GetICS();
-
     // ?GetInput@vehCar@@QAEPAVvehInput@@XZ
     ARTS_IMPORT vehInput* GetInput();
-
-    // ?GetInst@vehCar@@UAEPAVlvlInstance@@XZ
-    ARTS_IMPORT virtual lvlInstance* GetInst();
 
     // ?Init@vehCar@@QAEXPBDHH_N@Z
     ARTS_IMPORT void Init(const char* arg1, i32 arg2, i32 arg3, bool arg4);
@@ -65,15 +77,6 @@ public:
 
     // ?IsPlayer@vehCar@@QAEHXZ
     ARTS_IMPORT i32 IsPlayer();
-
-    // ?PostUpdate@vehCar@@UAEXXZ
-    ARTS_IMPORT virtual void PostUpdate();
-
-    // ?PreUpdate@vehCar@@UAEXXZ
-    ARTS_IMPORT virtual void PreUpdate();
-
-    // ?RequiresTerrainCollision@vehCar@@UAE_NXZ
-    ARTS_IMPORT virtual bool RequiresTerrainCollision();
 
     // ?Reset@vehCar@@QAEXXZ
     ARTS_IMPORT void Reset();
@@ -92,9 +95,6 @@ public:
 
     // ?SetInput@vehCar@@QAEXPAVvehInput@@@Z
     ARTS_IMPORT void SetInput(vehInput* arg1);
-
-    // ?Update@vehCar@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 private:
     // ?UpdateTrack@vehCar@@AAEXAAVlvlTrackManager@@ABVvehWheel@@@Z

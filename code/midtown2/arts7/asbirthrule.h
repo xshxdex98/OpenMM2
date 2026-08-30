@@ -42,9 +42,6 @@ public:
     // ??1asBirthRule@@UAE@XZ
     ARTS_IMPORT virtual ~asBirthRule();
 
-    // ?Copy@asBirthRule@@QAEXPAV1@@Z
-    ARTS_IMPORT void Copy(asBirthRule* arg1);
-
     // ?FileIO@asBirthRule@@UAEXAAVdatParser@@@Z
     ARTS_IMPORT virtual void FileIO(datParser& arg1);
 
@@ -53,6 +50,9 @@ public:
 
     // ?GetDirName@asBirthRule@@UAEPBDXZ
     ARTS_IMPORT virtual const char* GetDirName();
+
+    // ?Copy@asBirthRule@@QAEXPAV1@@Z
+    ARTS_IMPORT void Copy(asBirthRule* arg1);
 
     // ?Indent@asBirthRule@@QAEXPAVdatBaseTokenizer@@H@Z
     ARTS_IMPORT void Indent(datBaseTokenizer* arg1, i32 arg2);

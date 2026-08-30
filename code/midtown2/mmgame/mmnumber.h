@@ -39,6 +39,9 @@ public:
     // ?Cull@mmNumber@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
 
+    // ?Update@mmNumber@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?Init@mmNumber@@QAEXPAVmmNumberFont@@MM@Z
     ARTS_IMPORT void Init(mmNumberFont* arg1, f32 arg2, f32 arg3);
 
@@ -47,9 +50,6 @@ public:
 
     // ?SetString@mmNumber@@QAEXPAD@Z
     ARTS_IMPORT void SetString(char* arg1);
-
-    // ?Update@mmNumber@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7mmNumber@@6B@

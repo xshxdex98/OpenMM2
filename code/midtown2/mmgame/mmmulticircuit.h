@@ -38,14 +38,14 @@ public:
     // ??1mmMultiCircuit@@UAE@XZ
     ARTS_IMPORT virtual ~mmMultiCircuit();
 
-    // ?GameMessage@mmMultiCircuit@@UAEXPAUNET_RCXHEAD@@@Z
-    ARTS_IMPORT virtual void GameMessage(NET_RCXHEAD* arg1);
-
-    // ?GetWaypoints@mmMultiCircuit@@UAEPAVmmWaypoints@@XZ
-    ARTS_IMPORT virtual mmWaypoints* GetWaypoints();
+    // ?Reset@mmMultiCircuit@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
 
     // ?Init@mmMultiCircuit@@UAEHXZ
     ARTS_IMPORT virtual i32 Init();
+
+    // ?InitMyPlayer@mmMultiCircuit@@UAEXXZ
+    ARTS_IMPORT virtual void InitMyPlayer();
 
     // ?InitGameObjects@mmMultiCircuit@@UAEXXZ
     ARTS_IMPORT virtual void InitGameObjects();
@@ -53,20 +53,8 @@ public:
     // ?InitHUD@mmMultiCircuit@@UAEXXZ
     ARTS_IMPORT virtual void InitHUD();
 
-    // ?InitMyPlayer@mmMultiCircuit@@UAEXXZ
-    ARTS_IMPORT virtual void InitMyPlayer();
-
-    // ?InitNetworkPlayers@mmMultiCircuit@@UAEXXZ
-    ARTS_IMPORT virtual void InitNetworkPlayers();
-
-    // ?Reset@mmMultiCircuit@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?SwitchState@mmMultiCircuit@@UAEXH@Z
-    ARTS_IMPORT virtual void SwitchState(i32 arg1);
-
-    // ?SystemMessage@mmMultiCircuit@@UAEXPAUNETSYS_MSG@@@Z
-    ARTS_IMPORT virtual void SystemMessage(NETSYS_MSG* arg1);
+    // ?UpdateGameInput@mmMultiCircuit@@UAEXH@Z
+    ARTS_IMPORT virtual void UpdateGameInput(i32 arg1);
 
     // ?UpdateDebugKeyInput@mmMultiCircuit@@UAEXH@Z
     ARTS_IMPORT virtual void UpdateDebugKeyInput(i32 arg1);
@@ -74,8 +62,20 @@ public:
     // ?UpdateGame@mmMultiCircuit@@UAEXXZ
     ARTS_IMPORT virtual void UpdateGame();
 
-    // ?UpdateGameInput@mmMultiCircuit@@UAEXH@Z
-    ARTS_IMPORT virtual void UpdateGameInput(i32 arg1);
+    // ?SwitchState@mmMultiCircuit@@UAEXH@Z
+    ARTS_IMPORT virtual void SwitchState(i32 arg1);
+
+    // ?GetWaypoints@mmMultiCircuit@@UAEPAVmmWaypoints@@XZ
+    ARTS_IMPORT virtual mmWaypoints* GetWaypoints();
+
+    // ?InitNetworkPlayers@mmMultiCircuit@@UAEXXZ
+    ARTS_IMPORT virtual void InitNetworkPlayers();
+
+    // ?SystemMessage@mmMultiCircuit@@UAEXPAUNETSYS_MSG@@@Z
+    ARTS_IMPORT virtual void SystemMessage(NETSYS_MSG* arg1);
+
+    // ?GameMessage@mmMultiCircuit@@UAEXPAUNET_RCXHEAD@@@Z
+    ARTS_IMPORT virtual void GameMessage(NET_RCXHEAD* arg1);
 
 public:
     // Members from 0xB1FC; everything below that belongs to mmGameMulti.

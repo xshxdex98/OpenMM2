@@ -32,26 +32,26 @@ class dgHitBangerInstance;
 class aiSubwayInstance : public dgUnhitBangerInstance
 {
 public:
-    // ?Draw@aiSubwayInstance@@UAEXH@Z
-    ARTS_IMPORT virtual void Draw(i32 arg1);
+    // ?GetPosition@aiSubwayInstance@@UAEABVVector3@@XZ
+    ARTS_IMPORT virtual const Vector3& GetPosition();
 
     // ?GetMatrix@aiSubwayInstance@@UAEABVMatrix34@@AAV2@@Z
     ARTS_IMPORT virtual const Matrix34& GetMatrix(Matrix34& arg1);
 
-    // ?GetPosition@aiSubwayInstance@@UAEABVVector3@@XZ
-    ARTS_IMPORT virtual const Vector3& GetPosition();
+    // ?SetMatrix@aiSubwayInstance@@UAEXABVMatrix34@@@Z
+    ARTS_IMPORT virtual void SetMatrix(const Matrix34& arg1);
 
     // ?GetVelocity@aiSubwayInstance@@UAEABVVector3@@XZ
     ARTS_IMPORT virtual const Vector3& GetVelocity();
 
-    // ?ImpactCB@aiSubwayInstance@@UAEXPAVdgHitBangerInstance@@@Z
-    ARTS_IMPORT virtual void ImpactCB(dgHitBangerInstance* arg1);
-
-    // ?SetMatrix@aiSubwayInstance@@UAEXABVMatrix34@@@Z
-    ARTS_IMPORT virtual void SetMatrix(const Matrix34& arg1);
+    // ?Draw@aiSubwayInstance@@UAEXH@Z
+    ARTS_IMPORT virtual void Draw(i32 arg1);
 
     // ?SizeOf@aiSubwayInstance@@UAEIXZ
     ARTS_IMPORT virtual u32 SizeOf();
+
+    // ?ImpactCB@aiSubwayInstance@@UAEXPAVdgHitBangerInstance@@@Z
+    ARTS_IMPORT virtual void ImpactCB(dgHitBangerInstance* arg1);
 };
 
 // ??_7aiSubwayInstance@@6B@

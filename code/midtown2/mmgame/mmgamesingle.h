@@ -36,11 +36,11 @@ public:
     // ??1mmGameSingle@@UAE@XZ
     ARTS_IMPORT virtual ~mmGameSingle();
 
-    // ?GetWaypoints@mmGameSingle@@UAEPAVmmWaypoints@@XZ
-    ARTS_IMPORT virtual mmWaypoints* GetWaypoints();
+    // ?Update@mmGameSingle@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
 
-    // ?HitWaterHandler@mmGameSingle@@UAEXXZ
-    ARTS_IMPORT virtual void HitWaterHandler();
+    // ?Reset@mmGameSingle@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
 
     // ?Init@mmGameSingle@@UAEHXZ
     ARTS_IMPORT virtual i32 Init();
@@ -48,11 +48,8 @@ public:
     // ?InitOtherPlayers@mmGameSingle@@UAEXXZ
     ARTS_IMPORT virtual void InitOtherPlayers();
 
-    // ?Reset@mmGameSingle@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?Update@mmGameSingle@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
+    // ?UpdateGameInput@mmGameSingle@@UAEXH@Z
+    ARTS_IMPORT virtual void UpdateGameInput(i32 arg1);
 
     // ?UpdateDebugKeyInput@mmGameSingle@@UAEXH@Z
     ARTS_IMPORT virtual void UpdateDebugKeyInput(i32 arg1);
@@ -60,8 +57,11 @@ public:
     // ?UpdateGame@mmGameSingle@@UAEXXZ
     ARTS_IMPORT virtual void UpdateGame();
 
-    // ?UpdateGameInput@mmGameSingle@@UAEXH@Z
-    ARTS_IMPORT virtual void UpdateGameInput(i32 arg1);
+    // ?HitWaterHandler@mmGameSingle@@UAEXXZ
+    ARTS_IMPORT virtual void HitWaterHandler();
+
+    // ?GetWaypoints@mmGameSingle@@UAEPAVmmWaypoints@@XZ
+    ARTS_IMPORT virtual mmWaypoints* GetWaypoints();
 
 protected:
     // ?DisableRacers@mmGameSingle@@IAEXXZ

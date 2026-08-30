@@ -36,6 +36,18 @@ public:
     // ??1VehicleSelectBase@@UAE@XZ
     ARTS_IMPORT virtual ~VehicleSelectBase();
 
+    // ?Update@VehicleSelectBase@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@VehicleSelectBase@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
+    // ?PreSetup@VehicleSelectBase@@UAEXXZ
+    ARTS_IMPORT virtual void PreSetup();
+
+    // ?PostSetup@VehicleSelectBase@@UAEXXZ
+    ARTS_IMPORT virtual void PostSetup();
+
     // ?AllSetCar@VehicleSelectBase@@QAEXPADH@Z
     ARTS_IMPORT void AllSetCar(char* arg1, i32 arg2);
 
@@ -87,15 +99,6 @@ public:
     // ?LockColor@VehicleSelectBase@@QAEXXZ
     ARTS_IMPORT void LockColor();
 
-    // ?PostSetup@VehicleSelectBase@@UAEXXZ
-    ARTS_IMPORT virtual void PostSetup();
-
-    // ?PreSetup@VehicleSelectBase@@UAEXXZ
-    ARTS_IMPORT virtual void PreSetup();
-
-    // ?Reset@VehicleSelectBase@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?SetLastUnlockedVehicle@VehicleSelectBase@@QAEXXZ
     ARTS_IMPORT void SetLastUnlockedVehicle();
 
@@ -113,9 +116,6 @@ public:
 
     // ?TDPickCB@VehicleSelectBase@@QAEXXZ
     ARTS_IMPORT void TDPickCB();
-
-    // ?Update@VehicleSelectBase@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7VehicleSelectBase@@6B@

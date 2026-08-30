@@ -36,6 +36,12 @@ public:
     // ??1camPolarCS@@UAE@XZ
     ARTS_IMPORT virtual ~camPolarCS();
 
+    // ?Update@camPolarCS@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@camPolarCS@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?FileIO@camPolarCS@@UAEXAAVdatParser@@@Z
     ARTS_IMPORT virtual void FileIO(datParser& arg1);
 
@@ -44,12 +50,6 @@ public:
 
     // ?MakeActive@camPolarCS@@UAEXXZ
     ARTS_IMPORT virtual void MakeActive();
-
-    // ?Reset@camPolarCS@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?Update@camPolarCS@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7camPolarCS@@6B@

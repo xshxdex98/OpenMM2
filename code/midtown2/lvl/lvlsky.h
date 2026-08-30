@@ -37,29 +37,29 @@ public:
     // ??1lvlSky@@UAE@XZ
     ARTS_IMPORT virtual ~lvlSky();
 
-    // ?AutoInit@lvlSky@@QAEXPBD0H@Z
-    ARTS_IMPORT void AutoInit(const char* arg1, const char* arg2, i32 arg3);
+    // ?Reset@lvlSky@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
+    // ?Update@lvlSky@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
 
     // ?Draw@lvlSky@@UAEXXZ
     ARTS_IMPORT virtual void Draw();
 
+    // ?DrawWithNoZState@lvlSky@@UAEXXZ
+    ARTS_IMPORT virtual void DrawWithNoZState();
+
     // ?DrawHat@lvlSky@@UAEXXZ
     ARTS_IMPORT virtual void DrawHat();
 
-    // ?DrawWithNoZState@lvlSky@@UAEXXZ
-    ARTS_IMPORT virtual void DrawWithNoZState();
+    // ?AutoInit@lvlSky@@QAEXPBD0H@Z
+    ARTS_IMPORT void AutoInit(const char* arg1, const char* arg2, i32 arg3);
 
     // ?Init@lvlSky@@QAEXPBDMMMH@Z
     ARTS_IMPORT void Init(const char* arg1, f32 arg2, f32 arg3, f32 arg4, i32 arg5);
 
-    // ?Reset@lvlSky@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?SetupFog@lvlSky@@QAEXM@Z
     ARTS_IMPORT void SetupFog(f32 arg1);
-
-    // ?Update@lvlSky@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

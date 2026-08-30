@@ -26,14 +26,14 @@
 class aiObstacle
 {
 public:
+    // ?InAccident@aiObstacle@@UAEHXZ
+    ARTS_IMPORT virtual i32 InAccident();
+
     // ?BreakThreshold@aiObstacle@@UAEMXZ
     ARTS_IMPORT virtual f32 BreakThreshold();
 
     // ?Drivable@aiObstacle@@UAEHXZ
     ARTS_IMPORT virtual i32 Drivable();
-
-    // ?InAccident@aiObstacle@@UAEHXZ
-    ARTS_IMPORT virtual i32 InAccident();
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

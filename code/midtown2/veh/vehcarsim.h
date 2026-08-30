@@ -39,14 +39,11 @@ public:
     // ??1vehCarSim@@UAE@XZ
     ARTS_IMPORT virtual ~vehCarSim();
 
-    // ?BottomedOut@vehCarSim@@QAEHXZ
-    ARTS_IMPORT i32 BottomedOut();
+    // ?Update@vehCarSim@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
 
-    // ?ClearDamage@vehCarSim@@QAEXXZ
-    ARTS_IMPORT void ClearDamage();
-
-    // ?ConfigureDrivetrain@vehCarSim@@QAEXXZ
-    ARTS_IMPORT void ConfigureDrivetrain();
+    // ?Reset@vehCarSim@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
 
     // ?FileIO@vehCarSim@@UAEXAAVdatParser@@@Z
     ARTS_IMPORT virtual void FileIO(datParser& arg1);
@@ -56,6 +53,15 @@ public:
 
     // ?GetDirName@vehCarSim@@UAEPBDXZ
     ARTS_IMPORT virtual const char* GetDirName();
+
+    // ?BottomedOut@vehCarSim@@QAEHXZ
+    ARTS_IMPORT i32 BottomedOut();
+
+    // ?ClearDamage@vehCarSim@@QAEXXZ
+    ARTS_IMPORT void ClearDamage();
+
+    // ?ConfigureDrivetrain@vehCarSim@@QAEXXZ
+    ARTS_IMPORT void ConfigureDrivetrain();
 
     // ?GetSSSFactor@vehCarSim@@QAEMM@Z
     ARTS_IMPORT f32 GetSSSFactor(f32 arg1);
@@ -75,9 +81,6 @@ public:
     // ?RecordReplay@vehCarSim@@QAEXXZ
     ARTS_IMPORT void RecordReplay();
 
-    // ?Reset@vehCarSim@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?RestoreImpactParams@vehCarSim@@QAEXXZ
     ARTS_IMPORT void RestoreImpactParams();
 
@@ -92,9 +95,6 @@ public:
 
     // ?UnconfigureDrivetrain@vehCarSim@@QAEXXZ
     ARTS_IMPORT void UnconfigureDrivetrain();
-
-    // ?Update@vehCarSim@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     // Members from 0x018; everything below that belongs to asNode.

@@ -34,14 +34,14 @@ public:
     // ??1PUGraphics@@UAE@XZ
     ARTS_IMPORT virtual ~PUGraphics();
 
+    // ?PreSetup@PUGraphics@@UAEXXZ
+    ARTS_IMPORT virtual void PreSetup();
+
     // ?CancelAction@PUGraphics@@QAEXXZ
     ARTS_IMPORT void CancelAction();
 
     // ?FixClip@PUGraphics@@QAEXXZ
     ARTS_IMPORT void FixClip();
-
-    // ?PreSetup@PUGraphics@@UAEXXZ
-    ARTS_IMPORT virtual void PreSetup();
 
     // ?RenderQualityCB@PUGraphics@@QAEXXZ
     ARTS_IMPORT void RenderQualityCB();

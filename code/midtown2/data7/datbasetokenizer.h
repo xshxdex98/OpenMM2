@@ -29,6 +29,9 @@ class datBaseTokenizer_vTable;
 class datBaseTokenizer
 {
 public:
+    // ?Put@datBaseTokenizer@@UAE_ND@Z
+    ARTS_IMPORT virtual bool Put(char arg1);
+
     // ?CheckToken@datBaseTokenizer@@QAE_NPBD_N@Z
     ARTS_IMPORT bool CheckToken(const char* arg1, bool arg2);
 
@@ -52,9 +55,6 @@ public:
 
     // ?Pop@datBaseTokenizer@@QAEXXZ
     ARTS_IMPORT void Pop();
-
-    // ?Put@datBaseTokenizer@@UAE_ND@Z
-    ARTS_IMPORT virtual bool Put(char arg1);
 
     // ?PutStr@datBaseTokenizer@@QAA_NPBDZZ
     ARTS_IMPORT bool PutStr(const char* arg1, ...);

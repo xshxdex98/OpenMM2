@@ -34,14 +34,14 @@ public:
     // ??1asViewCS@@UAE@XZ
     ARTS_IMPORT virtual ~asViewCS();
 
+    // ?Update@asViewCS@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?Reset@asViewCS@@UAEXXZ
     ARTS_IMPORT virtual void Reset();
 
     // ?SetAzimuth@asViewCS@@QAEXXZ
     ARTS_IMPORT void SetAzimuth();
-
-    // ?Update@asViewCS@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
     // ?UpdateLookAt@asViewCS@@QAEXXZ
     ARTS_IMPORT void UpdateLookAt();

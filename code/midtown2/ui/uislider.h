@@ -40,17 +40,26 @@ public:
     // ??1UISlider@@UAE@XZ
     ARTS_IMPORT virtual ~UISlider();
 
+    // ?Update@UISlider@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?Action@UISlider@@UAEXTeqEvent@@@Z
     ARTS_IMPORT virtual void Action(eqEvent arg1);
+
+    // ?Switch@UISlider@@UAEXH@Z
+    ARTS_IMPORT virtual void Switch(i32 arg1);
+
+    // ?SetPosition@UISlider@@UAEXMM@Z
+    ARTS_IMPORT virtual void SetPosition(f32 arg1, f32 arg2);
+
+    // ?GetScreenHeight@UISlider@@UAEMXZ
+    ARTS_IMPORT virtual f32 GetScreenHeight();
 
     // ?EvalMouseXY@UISlider@@QAEXMM@Z
     ARTS_IMPORT void EvalMouseXY(f32 arg1, f32 arg2);
 
     // ?GetFudgeWidth@UISlider@@QAEMXZ
     ARTS_IMPORT f32 GetFudgeWidth();
-
-    // ?GetScreenHeight@UISlider@@UAEMXZ
-    ARTS_IMPORT virtual f32 GetScreenHeight();
 
     // ?GetValue@UISlider@@QAEMXZ
     ARTS_IMPORT f32 GetValue();
@@ -67,9 +76,6 @@ public:
     // ?SetMouseParams@UISlider@@QAEXM@Z
     ARTS_IMPORT void SetMouseParams(f32 arg1);
 
-    // ?SetPosition@UISlider@@UAEXMM@Z
-    ARTS_IMPORT virtual void SetPosition(f32 arg1, f32 arg2);
-
     // ?SetReadWrite@UISlider@@QAEXH@Z
     ARTS_IMPORT void SetReadWrite(i32 arg1);
 
@@ -79,14 +85,8 @@ public:
     // ?SetValue@UISlider@@QAEMM@Z
     ARTS_IMPORT f32 SetValue(f32 arg1);
 
-    // ?Switch@UISlider@@UAEXH@Z
-    ARTS_IMPORT virtual void Switch(i32 arg1);
-
     // ?TestHit@UISlider@@QAEHMM@Z
     ARTS_IMPORT i32 TestHit(f32 arg1, f32 arg2);
-
-    // ?Update@UISlider@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7UISlider@@6B@

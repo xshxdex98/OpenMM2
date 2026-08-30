@@ -40,6 +40,21 @@ public:
     // ?AssignSounds@vehNitroCarAudio@@UAEXXZ
     ARTS_IMPORT virtual void AssignSounds();
 
+    // ?UnAssignSounds@vehNitroCarAudio@@UAEXH@Z
+    ARTS_IMPORT virtual void UnAssignSounds(i32 arg1);
+
+    // ?UpdateAudio@vehNitroCarAudio@@UAEXXZ
+    ARTS_IMPORT virtual void UpdateAudio();
+
+    // ?Update@vehNitroCarAudio@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?SetNon3DParams@vehNitroCarAudio@@UAEXXZ
+    ARTS_IMPORT virtual void SetNon3DParams();
+
+    // ?Set3DParams@vehNitroCarAudio@@UAEXXZ
+    ARTS_IMPORT virtual void Set3DParams();
+
     // ?EchoOff@vehNitroCarAudio@@QAEXXZ
     ARTS_IMPORT void EchoOff();
 
@@ -64,23 +79,8 @@ public:
     // ?Set2DPan@vehNitroCarAudio@@QAEXM@Z
     ARTS_IMPORT void Set2DPan(f32 arg1);
 
-    // ?Set3DParams@vehNitroCarAudio@@UAEXXZ
-    ARTS_IMPORT virtual void Set3DParams();
-
-    // ?SetNon3DParams@vehNitroCarAudio@@UAEXXZ
-    ARTS_IMPORT virtual void SetNon3DParams();
-
     // ?StopNitro@vehNitroCarAudio@@QAEXXZ
     ARTS_IMPORT void StopNitro();
-
-    // ?UnAssignSounds@vehNitroCarAudio@@UAEXH@Z
-    ARTS_IMPORT virtual void UnAssignSounds(i32 arg1);
-
-    // ?Update@vehNitroCarAudio@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
-
-    // ?UpdateAudio@vehNitroCarAudio@@UAEXXZ
-    ARTS_IMPORT virtual void UpdateAudio();
 
     // ?UpdateAudio3D@vehNitroCarAudio@@QAEXXZ
     ARTS_IMPORT void UpdateAudio3D();

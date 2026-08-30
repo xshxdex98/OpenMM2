@@ -34,14 +34,17 @@ public:
     // ??1mmCarRoadFF@@UAE@XZ
     ARTS_IMPORT virtual ~mmCarRoadFF();
 
+    // ?Update@mmCarRoadFF@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@mmCarRoadFF@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?AssignProperties@mmCarRoadFF@@QAEXMH@Z
     ARTS_IMPORT void AssignProperties(f32 arg1, i32 arg2);
 
     // ?IsPlaying@mmCarRoadFF@@QAEHXZ
     ARTS_IMPORT i32 IsPlaying();
-
-    // ?Reset@mmCarRoadFF@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
 
     // ?SetFGVals@mmCarRoadFF@@QAEXMMM@Z
     ARTS_IMPORT void SetFGVals(f32 arg1, f32 arg2, f32 arg3);
@@ -51,9 +54,6 @@ public:
 
     // ?Stop@mmCarRoadFF@@QAEXXZ
     ARTS_IMPORT void Stop();
-
-    // ?Update@mmCarRoadFF@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
     // ?UpdateVals@mmCarRoadFF@@QAEXXZ
     ARTS_IMPORT void UpdateVals();

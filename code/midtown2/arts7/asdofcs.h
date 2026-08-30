@@ -36,20 +36,20 @@ public:
     // ??1asDofCS@@UAE@XZ
     ARTS_IMPORT virtual ~asDofCS();
 
+    // ?Update@asDofCS@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@asDofCS@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?AddWidgets@asDofCS@@QAEXPAVBank@@@Z
     ARTS_IMPORT void AddWidgets(Bank* arg1);
 
     // ??4asDofCS@@QAEXABV0@@Z
     ARTS_IMPORT void operator=(const asDofCS& arg1);
 
-    // ?Reset@asDofCS@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?SetTime@asDofCS@@QAEXMMH@Z
     ARTS_IMPORT void SetTime(f32 arg1, f32 arg2, i32 arg3);
-
-    // ?Update@asDofCS@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7asDofCS@@6B@

@@ -41,11 +41,47 @@ public:
     // ??1mmGameMulti@@UAE@XZ
     ARTS_IMPORT virtual ~mmGameMulti();
 
-    // ?ActivateMapNetObject@mmGameMulti@@QAEXH@Z
-    ARTS_IMPORT void ActivateMapNetObject(i32 arg1);
+    // ?Update@mmGameMulti@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@mmGameMulti@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
+    // ?Init@mmGameMulti@@UAEHXZ
+    ARTS_IMPORT virtual i32 Init();
+
+    // ?InitGameStrings@mmGameMulti@@UAEXXZ
+    ARTS_IMPORT virtual void InitGameStrings();
+
+    // ?InitOtherPlayers@mmGameMulti@@UAEXXZ
+    ARTS_IMPORT virtual void InitOtherPlayers();
+
+    // ?UpdateDebugKeyInput@mmGameMulti@@UAEXH@Z
+    ARTS_IMPORT virtual void UpdateDebugKeyInput(i32 arg1);
+
+    // ?UpdateGame@mmGameMulti@@UAEXXZ
+    ARTS_IMPORT virtual void UpdateGame();
+
+    // ?NextRace@mmGameMulti@@UAEXXZ
+    ARTS_IMPORT virtual void NextRace();
+
+    // ?HitWaterHandler@mmGameMulti@@UAEXXZ
+    ARTS_IMPORT virtual void HitWaterHandler();
+
+    // ?DropThruCityHandler@mmGameMulti@@UAEXXZ
+    ARTS_IMPORT virtual void DropThruCityHandler();
+
+    // ?SendChatMessage@mmGameMulti@@UAEXPAD@Z
+    ARTS_IMPORT virtual void SendChatMessage(char* arg1);
 
     // ?BeDone@mmGameMulti@@UAEXH@Z
     ARTS_IMPORT virtual void BeDone(i32 arg1);
+
+    // ?InitRoster@mmGameMulti@@UAEXXZ
+    ARTS_IMPORT virtual void InitRoster();
+
+    // ?ActivateMapNetObject@mmGameMulti@@QAEXH@Z
+    ARTS_IMPORT void ActivateMapNetObject(i32 arg1);
 
     // ?BootPlayerCB@mmGameMulti@@QAEXPAX0@Z
     ARTS_IMPORT void BootPlayerCB(void* arg1, void* arg2);
@@ -65,9 +101,6 @@ public:
     // ?DeactivateMapNetObject@mmGameMulti@@QAEXH@Z
     ARTS_IMPORT void DeactivateMapNetObject(i32 arg1);
 
-    // ?DropThruCityHandler@mmGameMulti@@UAEXXZ
-    ARTS_IMPORT virtual void DropThruCityHandler();
-
     // ?FinishMessage@mmGameMulti@@QAEXH@Z
     ARTS_IMPORT void FinishMessage(i32 arg1);
 
@@ -86,24 +119,6 @@ public:
     // ?GetNetObjectIndex@mmGameMulti@@QAEHKH@Z
     ARTS_IMPORT i32 GetNetObjectIndex(ulong arg1, i32 arg2);
 
-    // ?HitWaterHandler@mmGameMulti@@UAEXXZ
-    ARTS_IMPORT virtual void HitWaterHandler();
-
-    // ?Init@mmGameMulti@@UAEHXZ
-    ARTS_IMPORT virtual i32 Init();
-
-    // ?InitGameStrings@mmGameMulti@@UAEXXZ
-    ARTS_IMPORT virtual void InitGameStrings();
-
-    // ?InitOtherPlayers@mmGameMulti@@UAEXXZ
-    ARTS_IMPORT virtual void InitOtherPlayers();
-
-    // ?InitRoster@mmGameMulti@@UAEXXZ
-    ARTS_IMPORT virtual void InitRoster();
-
-    // ?NextRace@mmGameMulti@@UAEXXZ
-    ARTS_IMPORT virtual void NextRace();
-
     // ?ParseChatMessage@mmGameMulti@@QAEHPADH@Z
     ARTS_IMPORT i32 ParseChatMessage(char* arg1, i32 arg2);
 
@@ -119,17 +134,11 @@ public:
     // ?RegisterMapNetObjects@mmGameMulti@@QAEXH@Z
     ARTS_IMPORT void RegisterMapNetObjects(i32 arg1);
 
-    // ?Reset@mmGameMulti@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?SendBootMsg@mmGameMulti@@QAEXK@Z
     ARTS_IMPORT void SendBootMsg(ulong arg1);
 
     // ?SendCarTuning@mmGameMulti@@QAEXPBDK@Z
     ARTS_IMPORT void SendCarTuning(const char* arg1, ulong arg2);
-
-    // ?SendChatMessage@mmGameMulti@@UAEXPAD@Z
-    ARTS_IMPORT virtual void SendChatMessage(char* arg1);
 
     // ?SendHostCars@mmGameMulti@@QAEXK@Z
     ARTS_IMPORT void SendHostCars(ulong arg1);
@@ -154,15 +163,6 @@ public:
 
     // ?SystemMessageCB@mmGameMulti@@QAEXPAX0@Z
     ARTS_IMPORT void SystemMessageCB(void* arg1, void* arg2);
-
-    // ?Update@mmGameMulti@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
-
-    // ?UpdateDebugKeyInput@mmGameMulti@@UAEXH@Z
-    ARTS_IMPORT virtual void UpdateDebugKeyInput(i32 arg1);
-
-    // ?UpdateGame@mmGameMulti@@UAEXXZ
-    ARTS_IMPORT virtual void UpdateGame();
 
     // ?UpdateNetWorkAudio@mmGameMulti@@QAEXXZ
     ARTS_IMPORT void UpdateNetWorkAudio();

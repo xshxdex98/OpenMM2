@@ -44,6 +44,24 @@ public:
     // ??1aiVehicleActive@@UAE@XZ
     ARTS_IMPORT virtual ~aiVehicleActive();
 
+    // ?Update@aiVehicleActive@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?PostUpdate@aiVehicleActive@@UAEXXZ
+    ARTS_IMPORT virtual void PostUpdate();
+
+    // ?GetICS@aiVehicleActive@@UAEPAVphInertialCS@@XZ
+    ARTS_IMPORT virtual phInertialCS* GetICS();
+
+    // ?GetInst@aiVehicleActive@@UAEPAVlvlInstance@@XZ
+    ARTS_IMPORT virtual lvlInstance* GetInst();
+
+    // ?DetachMe@aiVehicleActive@@UAEXXZ
+    ARTS_IMPORT virtual void DetachMe();
+
+    // ?RequiresTerrainCollision@aiVehicleActive@@UAE_NXZ
+    ARTS_IMPORT virtual bool RequiresTerrainCollision();
+
     // ?Attach@aiVehicleActive@@QAEXPAVaiVehicleInstance@@@Z
     ARTS_IMPORT void Attach(aiVehicleInstance* arg1);
 
@@ -53,29 +71,11 @@ public:
     // ?Detach@aiVehicleActive@@QAEXXZ
     ARTS_IMPORT void Detach();
 
-    // ?DetachMe@aiVehicleActive@@UAEXXZ
-    ARTS_IMPORT virtual void DetachMe();
-
-    // ?GetICS@aiVehicleActive@@UAEPAVphInertialCS@@XZ
-    ARTS_IMPORT virtual phInertialCS* GetICS();
-
-    // ?GetInst@aiVehicleActive@@UAEPAVlvlInstance@@XZ
-    ARTS_IMPORT virtual lvlInstance* GetInst();
-
     // ?Impact@aiVehicleActive@@SAXPAV1@PAUImpactCBData@@@Z
     ARTS_IMPORT static void Impact(aiVehicleActive* arg1, ImpactCBData* arg2);
 
-    // ?PostUpdate@aiVehicleActive@@UAEXXZ
-    ARTS_IMPORT virtual void PostUpdate();
-
-    // ?RequiresTerrainCollision@aiVehicleActive@@UAE_NXZ
-    ARTS_IMPORT virtual bool RequiresTerrainCollision();
-
     // ?Reset@aiVehicleActive@@QAEXXZ
     ARTS_IMPORT void Reset();
-
-    // ?Update@aiVehicleActive@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
     // ?UpdateDamage@aiVehicleActive@@QAEXXZ
     ARTS_IMPORT void UpdateDamage();

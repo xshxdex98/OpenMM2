@@ -39,6 +39,9 @@ public:
     // ??1MainMenu@@UAE@XZ
     ARTS_IMPORT virtual ~MainMenu();
 
+    // ?PreSetup@MainMenu@@UAEXXZ
+    ARTS_IMPORT virtual void PreSetup();
+
     // ?AddPlayer@MainMenu@@QAEXPAD@Z
     ARTS_IMPORT void AddPlayer(char* arg1);
 
@@ -68,9 +71,6 @@ public:
 
     // ?IsReplayReadOnly@MainMenu@@QAEHXZ
     ARTS_IMPORT i32 IsReplayReadOnly();
-
-    // ?PreSetup@MainMenu@@UAEXXZ
-    ARTS_IMPORT virtual void PreSetup();
 
     // ?RemoveAllPlayers@MainMenu@@QAEXXZ
     ARTS_IMPORT void RemoveAllPlayers();

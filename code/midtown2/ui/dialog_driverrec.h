@@ -34,14 +34,14 @@ public:
     // ??1Dialog_DriverRec@@UAE@XZ
     ARTS_IMPORT virtual ~Dialog_DriverRec();
 
+    // ?PreSetup@Dialog_DriverRec@@UAEXXZ
+    ARTS_IMPORT virtual void PreSetup();
+
     // ?AddDriverRecord@Dialog_DriverRec@@QAEHHPADHM0H@Z
     ARTS_IMPORT i32 AddDriverRecord(i32 arg1, char* arg2, i32 arg3, f32 arg4, char* arg5, i32 arg6);
 
     // ?InitDriverRecord@Dialog_DriverRec@@QAEXH@Z
     ARTS_IMPORT void InitDriverRecord(i32 arg1);
-
-    // ?PreSetup@Dialog_DriverRec@@UAEXXZ
-    ARTS_IMPORT virtual void PreSetup();
 
     // ?ResetDriverRecord@Dialog_DriverRec@@QAEXXZ
     ARTS_IMPORT void ResetDriverRecord();

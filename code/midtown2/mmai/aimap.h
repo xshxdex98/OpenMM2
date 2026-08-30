@@ -57,6 +57,18 @@ public:
     // ??1aiMap@@UAE@XZ
     ARTS_IMPORT virtual ~aiMap();
 
+    // ?Cull@aiMap@@UAEXXZ
+    ARTS_IMPORT virtual void Cull();
+
+    // ?Update@aiMap@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@aiMap@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
+    // ?UpdatePaused@aiMap@@UAEXXZ
+    ARTS_IMPORT virtual void UpdatePaused();
+
     // ?AddAmbient@aiMap@@QAEXPAVaiVehicleSpline@@@Z
     ARTS_IMPORT void AddAmbient(aiVehicleSpline* arg1);
 
@@ -119,9 +131,6 @@ public:
 
     // ?CTFOpponent@aiMap@@QAEPAVaiCTFRacer@@H@Z
     ARTS_IMPORT aiCTFRacer* CTFOpponent(i32 arg1);
-
-    // ?Cull@aiMap@@UAEXXZ
-    ARTS_IMPORT virtual void Cull();
 
     // ?DetermineRoadPosInfo@aiMap@@QAEHABVMatrix34@@PAVaiRailSet@@PAFPAM23HH@Z
     ARTS_IMPORT i32 DetermineRoadPosInfo(const Matrix34& arg1, aiRailSet* arg2, i16* arg3, f32* arg4, i16* arg5, f32* arg6, i32 arg7, i32 arg8);
@@ -228,9 +237,6 @@ public:
     // ?RemoveRoutingNode@aiMap@@QAEXH@Z
     ARTS_IMPORT void RemoveRoutingNode(i32 arg1);
 
-    // ?Reset@aiMap@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?SaveBinary@aiMap@@QAEXPAD0@Z
     ARTS_IMPORT void SaveBinary(char* arg1, char* arg2);
 
@@ -242,12 +248,6 @@ public:
 
     // ?TestProbes@aiMap@@QAEXH@Z
     ARTS_IMPORT void TestProbes(i32 arg1);
-
-    // ?Update@aiMap@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
-
-    // ?UpdatePaused@aiMap@@UAEXXZ
-    ARTS_IMPORT virtual void UpdatePaused();
 
     // ?Vehicle@aiMap@@QAEPAVaiVehicleAmbient@@H@Z
     ARTS_IMPORT aiVehicleAmbient* Vehicle(i32 arg1);

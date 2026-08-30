@@ -40,56 +40,56 @@ public:
     // ??1aiCableCar@@QAE@XZ
     ARTS_IMPORT ~aiCableCar();
 
-    // ?BackBumperDistance@aiCableCar@@UAEMXZ
-    ARTS_IMPORT virtual f32 BackBumperDistance();
-
-    // ?CurrentLane@aiCableCar@@UAEHXZ
-    ARTS_IMPORT virtual i32 CurrentLane();
-
-    // ?CurrentRdVert@aiCableCar@@UAEHXZ
-    ARTS_IMPORT virtual i32 CurrentRdVert();
-
-    // ?CurrentRoadId@aiCableCar@@UAEHXZ
-    ARTS_IMPORT virtual i32 CurrentRoadId();
-
-    // ?CurrentRoadIdx@aiCableCar@@UAEHPAPAVaiPath@@QA_NPAH@Z
-    ARTS_IMPORT virtual i32 CurrentRoadIdx(aiPath** arg1, bool*const arg2, i32* arg3);
-
-    // ?DetermineSister@aiCableCar@@QAEXXZ
-    ARTS_IMPORT void DetermineSister();
-
-    // ?DrawId@aiCableCar@@UAEXXZ
-    ARTS_IMPORT virtual void DrawId();
-
-    // ?FrontBumperDistance@aiCableCar@@UAEMXZ
-    ARTS_IMPORT virtual f32 FrontBumperDistance();
-
-    // ?GetMatrix@aiCableCar@@UAEAAVMatrix34@@XZ
-    ARTS_IMPORT virtual Matrix34& GetMatrix();
-
-    // ?Init@aiCableCar@@QAEXPADHHF@Z
-    ARTS_IMPORT void Init(char* arg1, i32 arg2, i32 arg3, i16 arg4);
-
-    // ?LSideDistance@aiCableCar@@UAEMXZ
-    ARTS_IMPORT virtual f32 LSideDistance();
-
     // ?Position@aiCableCar@@UAEXAAVVector3@@@Z
     ARTS_IMPORT virtual void Position(Vector3& arg1);
-
-    // ?Reset@aiCableCar@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?RSideDistance@aiCableCar@@UAEMXZ
-    ARTS_IMPORT virtual f32 RSideDistance();
 
     // ?Speed@aiCableCar@@UAEMXZ
     ARTS_IMPORT virtual f32 Speed();
 
-    // ?Type@aiCableCar@@UAEHXZ
-    ARTS_IMPORT virtual i32 Type();
+    // ?CurrentRoadIdx@aiCableCar@@UAEHPAPAVaiPath@@QA_NPAH@Z
+    ARTS_IMPORT virtual i32 CurrentRoadIdx(aiPath** arg1, bool*const arg2, i32* arg3);
+
+    // ?CurrentRdVert@aiCableCar@@UAEHXZ
+    ARTS_IMPORT virtual i32 CurrentRdVert();
 
     // ?Update@aiCableCar@@UAEXXZ
     ARTS_IMPORT virtual void Update();
+
+    // ?Reset@aiCableCar@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
+    // ?Type@aiCableCar@@UAEHXZ
+    ARTS_IMPORT virtual i32 Type();
+
+    // ?GetMatrix@aiCableCar@@UAEAAVMatrix34@@XZ
+    ARTS_IMPORT virtual Matrix34& GetMatrix();
+
+    // ?FrontBumperDistance@aiCableCar@@UAEMXZ
+    ARTS_IMPORT virtual f32 FrontBumperDistance();
+
+    // ?BackBumperDistance@aiCableCar@@UAEMXZ
+    ARTS_IMPORT virtual f32 BackBumperDistance();
+
+    // ?LSideDistance@aiCableCar@@UAEMXZ
+    ARTS_IMPORT virtual f32 LSideDistance();
+
+    // ?RSideDistance@aiCableCar@@UAEMXZ
+    ARTS_IMPORT virtual f32 RSideDistance();
+
+    // ?CurrentLane@aiCableCar@@UAEHXZ
+    ARTS_IMPORT virtual i32 CurrentLane();
+
+    // ?CurrentRoadId@aiCableCar@@UAEHXZ
+    ARTS_IMPORT virtual i32 CurrentRoadId();
+
+    // ?DrawId@aiCableCar@@UAEXXZ
+    ARTS_IMPORT virtual void DrawId();
+
+    // ?DetermineSister@aiCableCar@@QAEXXZ
+    ARTS_IMPORT void DetermineSister();
+
+    // ?Init@aiCableCar@@QAEXPADHHF@Z
+    ARTS_IMPORT void Init(char* arg1, i32 arg2, i32 arg3, i16 arg4);
 
 private:
     // ?CheckForObstacles@aiCableCar@@AAE_NPAM@Z

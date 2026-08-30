@@ -43,11 +43,17 @@ public:
     // ??1UITextRoller2@@UAE@XZ
     ARTS_IMPORT virtual ~UITextRoller2();
 
+    // ?Cull@UITextRoller2@@UAEXXZ
+    ARTS_IMPORT virtual void Cull();
+
+    // ?Update@UITextRoller2@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?Action@UITextRoller2@@UAEXTeqEvent@@@Z
     ARTS_IMPORT virtual void Action(eqEvent arg1);
 
-    // ?Cull@UITextRoller2@@UAEXXZ
-    ARTS_IMPORT virtual void Cull();
+    // ?Switch@UITextRoller2@@UAEXH@Z
+    ARTS_IMPORT virtual void Switch(i32 arg1);
 
     // ?Dec@UITextRoller2@@QAEHXZ
     ARTS_IMPORT i32 Dec();
@@ -72,12 +78,6 @@ public:
 
     // ?SetValue@UITextRoller2@@QAEHH@Z
     ARTS_IMPORT i32 SetValue(i32 arg1);
-
-    // ?Switch@UITextRoller2@@UAEXH@Z
-    ARTS_IMPORT virtual void Switch(i32 arg1);
-
-    // ?Update@UITextRoller2@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     // Members from 0x06C; everything below that belongs to uiWidget.

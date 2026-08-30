@@ -40,23 +40,50 @@ public:
     // ??1aiVehiclePhysics@@QAE@XZ
     ARTS_IMPORT ~aiVehiclePhysics();
 
-    // ?BackBumperDistance@aiVehiclePhysics@@UAEMXZ
-    ARTS_IMPORT virtual f32 BackBumperDistance();
+    // ?Position@aiVehiclePhysics@@UAEXAAVVector3@@@Z
+    ARTS_IMPORT virtual void Position(Vector3& arg1);
 
-    // ?CurrentLane@aiVehiclePhysics@@UAEHXZ
-    ARTS_IMPORT virtual i32 CurrentLane();
-
-    // ?CurrentRdVert@aiVehiclePhysics@@UAEHXZ
-    ARTS_IMPORT virtual i32 CurrentRdVert();
-
-    // ?CurrentRoadId@aiVehiclePhysics@@UAEHXZ
-    ARTS_IMPORT virtual i32 CurrentRoadId();
+    // ?Speed@aiVehiclePhysics@@UAEMXZ
+    ARTS_IMPORT virtual f32 Speed();
 
     // ?CurrentRoadIdx@aiVehiclePhysics@@UAEHPAPAVaiPath@@QA_NPAH@Z
     ARTS_IMPORT virtual i32 CurrentRoadIdx(aiPath** arg1, bool*const arg2, i32* arg3);
 
+    // ?CurrentRdVert@aiVehiclePhysics@@UAEHXZ
+    ARTS_IMPORT virtual i32 CurrentRdVert();
+
+    // ?Reset@aiVehiclePhysics@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
+    // ?Type@aiVehiclePhysics@@UAEHXZ
+    ARTS_IMPORT virtual i32 Type();
+
+    // ?GetMatrix@aiVehiclePhysics@@UAEAAVMatrix34@@XZ
+    ARTS_IMPORT virtual Matrix34& GetMatrix();
+
+    // ?FrontBumperDistance@aiVehiclePhysics@@UAEMXZ
+    ARTS_IMPORT virtual f32 FrontBumperDistance();
+
+    // ?BackBumperDistance@aiVehiclePhysics@@UAEMXZ
+    ARTS_IMPORT virtual f32 BackBumperDistance();
+
+    // ?LSideDistance@aiVehiclePhysics@@UAEMXZ
+    ARTS_IMPORT virtual f32 LSideDistance();
+
+    // ?RSideDistance@aiVehiclePhysics@@UAEMXZ
+    ARTS_IMPORT virtual f32 RSideDistance();
+
+    // ?CurrentLane@aiVehiclePhysics@@UAEHXZ
+    ARTS_IMPORT virtual i32 CurrentLane();
+
+    // ?CurrentRoadId@aiVehiclePhysics@@UAEHXZ
+    ARTS_IMPORT virtual i32 CurrentRoadId();
+
     // ?DrawId@aiVehiclePhysics@@UAEXXZ
     ARTS_IMPORT virtual void DrawId();
+
+    // ?ReplayDebug@aiVehiclePhysics@@UAEXXZ
+    ARTS_IMPORT virtual void ReplayDebug();
 
     // ?DrawRouteThroughTraffic@aiVehiclePhysics@@QAEXXZ
     ARTS_IMPORT void DrawRouteThroughTraffic();
@@ -70,44 +97,17 @@ public:
     // ?Dump@aiVehiclePhysics@@QAEXXZ
     ARTS_IMPORT void Dump();
 
-    // ?FrontBumperDistance@aiVehiclePhysics@@UAEMXZ
-    ARTS_IMPORT virtual f32 FrontBumperDistance();
-
-    // ?GetMatrix@aiVehiclePhysics@@UAEAAVMatrix34@@XZ
-    ARTS_IMPORT virtual Matrix34& GetMatrix();
-
     // ?Init@aiVehiclePhysics@@QAEXHPADFH@Z
     ARTS_IMPORT void Init(i32 arg1, char* arg2, i16 arg3, i32 arg4);
-
-    // ?LSideDistance@aiVehiclePhysics@@UAEMXZ
-    ARTS_IMPORT virtual f32 LSideDistance();
 
     // ?Mirror@aiVehiclePhysics@@QAEXPAVvehCar@@@Z
     ARTS_IMPORT void Mirror(vehCar* arg1);
 
-    // ?Position@aiVehiclePhysics@@UAEXAAVVector3@@@Z
-    ARTS_IMPORT virtual void Position(Vector3& arg1);
-
     // ?RegisterRoute@aiVehiclePhysics@@QAEXPAFFABVVector3@@1HMM_N22222MMMM@Z
     ARTS_IMPORT void RegisterRoute(i16* arg1, i16 arg2, const Vector3& arg3, const Vector3& arg4, i32 arg5, f32 arg6, f32 arg7, bool arg8, bool arg9, bool arg10, bool arg11, bool arg12, bool arg13, f32 arg14, f32 arg15, f32 arg16, f32 arg17);
 
-    // ?ReplayDebug@aiVehiclePhysics@@UAEXXZ
-    ARTS_IMPORT virtual void ReplayDebug();
-
-    // ?Reset@aiVehiclePhysics@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?RSideDistance@aiVehiclePhysics@@UAEMXZ
-    ARTS_IMPORT virtual f32 RSideDistance();
-
-    // ?Speed@aiVehiclePhysics@@UAEMXZ
-    ARTS_IMPORT virtual f32 Speed();
-
     // ?StopRoadTraffic@aiVehiclePhysics@@QAEX_N@Z
     ARTS_IMPORT void StopRoadTraffic(bool arg1);
-
-    // ?Type@aiVehiclePhysics@@UAEHXZ
-    ARTS_IMPORT virtual i32 Type();
 
 private:
     // ?Backup@aiVehiclePhysics@@AAEXXZ

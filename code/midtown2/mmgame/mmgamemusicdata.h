@@ -28,14 +28,14 @@ class Stream;
 class mmGameMusicData
 {
 public:
+    // ?LoadMusic@mmGameMusicData@@UAE_NPAD@Z
+    ARTS_IMPORT virtual bool LoadMusic(char* arg1);
+
     // ?GetNumDMusicChoiceGroups@mmGameMusicData@@QAEFPAVStream@@@Z
     ARTS_IMPORT i16 GetNumDMusicChoiceGroups(Stream* arg1);
 
     // ?Load@mmGameMusicData@@QAE_NPAD0@Z
     ARTS_IMPORT bool Load(char* arg1, char* arg2);
-
-    // ?LoadMusic@mmGameMusicData@@UAE_NPAD@Z
-    ARTS_IMPORT virtual bool LoadMusic(char* arg1);
 
     // ?RandomizeNumber@mmGameMusicData@@QAEFF@Z
     ARTS_IMPORT i16 RandomizeNumber(i16 arg1);

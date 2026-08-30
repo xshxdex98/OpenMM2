@@ -34,11 +34,11 @@ public:
     // ??1Dialog_TCPIP@@UAE@XZ
     ARTS_IMPORT virtual ~Dialog_TCPIP();
 
-    // ?IPAddressCallback@Dialog_TCPIP@@QAEXXZ
-    ARTS_IMPORT void IPAddressCallback();
-
     // ?PreSetup@Dialog_TCPIP@@UAEXXZ
     ARTS_IMPORT virtual void PreSetup();
+
+    // ?IPAddressCallback@Dialog_TCPIP@@QAEXXZ
+    ARTS_IMPORT void IPAddressCallback();
 
     // ?SetIPAddress@Dialog_TCPIP@@QAEXPAD@Z
     ARTS_IMPORT void SetIPAddress(char* arg1);

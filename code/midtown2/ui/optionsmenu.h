@@ -34,14 +34,14 @@ public:
     // ??1OptionsMenu@@UAE@XZ
     ARTS_IMPORT virtual ~OptionsMenu();
 
-    // ?FocusDescription@OptionsMenu@@QAEXHH@Z
-    ARTS_IMPORT void FocusDescription(i32 arg1, i32 arg2);
+    // ?PreSetup@OptionsMenu@@UAEXXZ
+    ARTS_IMPORT virtual void PreSetup();
 
     // ?PostSetup@OptionsMenu@@UAEXXZ
     ARTS_IMPORT virtual void PostSetup();
 
-    // ?PreSetup@OptionsMenu@@UAEXXZ
-    ARTS_IMPORT virtual void PreSetup();
+    // ?FocusDescription@OptionsMenu@@QAEXHH@Z
+    ARTS_IMPORT void FocusDescription(i32 arg1, i32 arg2);
 };
 
 // ??_7OptionsMenu@@6B@

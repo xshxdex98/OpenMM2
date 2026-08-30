@@ -34,6 +34,9 @@ public:
     // ??1mmDirSnd@@QAE@XZ
     ARTS_IMPORT ~mmDirSnd();
 
+    // ?InitPrimarySoundBuffer@mmDirSnd@@UAEHKEPAD@Z
+    ARTS_IMPORT virtual i32 InitPrimarySoundBuffer(ulong arg1, u8 arg2, char* arg3);
+
     // ?DeInit@mmDirSnd@@QAEXFF@Z
     ARTS_IMPORT void DeInit(i16 arg1, i16 arg2);
 
@@ -45,9 +48,6 @@ public:
 
     // ?Init@mmDirSnd@@SAPAV1@KEHHPADFF@Z
     ARTS_IMPORT static mmDirSnd* Init(ulong arg1, u8 arg2, i32 arg3, i32 arg4, char* arg5, i16 arg6, i16 arg7);
-
-    // ?InitPrimarySoundBuffer@mmDirSnd@@UAEHKEPAD@Z
-    ARTS_IMPORT virtual i32 InitPrimarySoundBuffer(ulong arg1, u8 arg2, char* arg3);
 
 public:
     // Members from 0x03C; everything below that belongs to DirSnd.

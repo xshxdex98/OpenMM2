@@ -37,6 +37,9 @@ public:
     // ??1TextDropWidget@@UAE@XZ
     ARTS_IMPORT virtual ~TextDropWidget();
 
+    // ?Update@TextDropWidget@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?Capture@TextDropWidget@@QAEHMM@Z
     ARTS_IMPORT i32 Capture(f32 arg1, f32 arg2);
 
@@ -81,9 +84,6 @@ public:
 
     // ?Switch@TextDropWidget@@QAEXHAAVVector4@@@Z
     ARTS_IMPORT void Switch(i32 arg1, Vector4& arg2);
-
-    // ?Update@TextDropWidget@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7TextDropWidget@@6B@

@@ -39,6 +39,12 @@ public:
     // ??1vehWheelPtx@@UAE@XZ
     ARTS_IMPORT virtual ~vehWheelPtx();
 
+    // ?Update@vehWheelPtx@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@vehWheelPtx@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?Blast@vehWheelPtx@@QAEXPAVvehWheel@@MHH@Z
     ARTS_IMPORT void Blast(vehWheel* arg1, f32 arg2, i32 arg3, i32 arg4);
 
@@ -50,12 +56,6 @@ public:
 
     // ?Init@vehWheelPtx@@QAEXPAVvehCarSim@@@Z
     ARTS_IMPORT void Init(vehCarSim* arg1);
-
-    // ?Reset@vehWheelPtx@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?Update@vehWheelPtx@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
     // ?UpdateWheel@vehWheelPtx@@QAEXPAVvehWheel@@@Z
     ARTS_IMPORT void UpdateWheel(vehWheel* arg1);

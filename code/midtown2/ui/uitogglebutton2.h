@@ -39,29 +39,29 @@ public:
     // ??1UIToggleButton2@@UAE@XZ
     ARTS_IMPORT virtual ~UIToggleButton2();
 
-    // ?Action@UIToggleButton2@@UAEXTeqEvent@@@Z
-    ARTS_IMPORT virtual void Action(eqEvent arg1);
+    // ?Update@UIToggleButton2@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
 
     // ?Disable@UIToggleButton2@@UAEXXZ
     ARTS_IMPORT virtual void Disable();
 
-    // ?DoToggle@UIToggleButton2@@UAEXXZ
-    ARTS_IMPORT virtual void DoToggle();
-
     // ?Enable@UIToggleButton2@@UAEXXZ
     ARTS_IMPORT virtual void Enable();
 
-    // ?Init@UIToggleButton2@@QAEXPAULocString@@PAHMMMMHHVdatCallback@@@Z
-    ARTS_IMPORT void Init(LocString* arg1, i32* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, i32 arg7, i32 arg8, datCallback arg9);
+    // ?Action@UIToggleButton2@@UAEXTeqEvent@@@Z
+    ARTS_IMPORT virtual void Action(eqEvent arg1);
 
     // ?Switch@UIToggleButton2@@UAEXH@Z
     ARTS_IMPORT virtual void Switch(i32 arg1);
 
+    // ?DoToggle@UIToggleButton2@@UAEXXZ
+    ARTS_IMPORT virtual void DoToggle();
+
+    // ?Init@UIToggleButton2@@QAEXPAULocString@@PAHMMMMHHVdatCallback@@@Z
+    ARTS_IMPORT void Init(LocString* arg1, i32* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, i32 arg7, i32 arg8, datCallback arg9);
+
     // ?Unkill@UIToggleButton2@@QAEXXZ
     ARTS_IMPORT void Unkill();
-
-    // ?Update@UIToggleButton2@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 protected:
     // ?DrawOff@UIToggleButton2@@MAEXXZ

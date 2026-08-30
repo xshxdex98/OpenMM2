@@ -36,6 +36,12 @@ public:
     // ??1mmPopup@@UAE@XZ
     ARTS_IMPORT virtual ~mmPopup();
 
+    // ?Update@mmPopup@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@mmPopup@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?ChatCB@mmPopup@@QAEXXZ
     ARTS_IMPORT void ChatCB();
 
@@ -69,9 +75,6 @@ public:
     // ?ProcessKeymap@mmPopup@@QAEXH@Z
     ARTS_IMPORT void ProcessKeymap(i32 arg1);
 
-    // ?Reset@mmPopup@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?SaveReplay@mmPopup@@QAEXXZ
     ARTS_IMPORT void SaveReplay();
 
@@ -89,9 +92,6 @@ public:
 
     // ?Unlock@mmPopup@@QAEXXZ
     ARTS_IMPORT void Unlock();
-
-    // ?Update@mmPopup@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7mmPopup@@6B@

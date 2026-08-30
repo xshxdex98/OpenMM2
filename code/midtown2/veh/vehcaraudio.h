@@ -41,6 +41,21 @@ public:
     // ?AssignSounds@vehCarAudio@@UAEXXZ
     ARTS_IMPORT virtual void AssignSounds();
 
+    // ?UnAssignSounds@vehCarAudio@@UAEXH@Z
+    ARTS_IMPORT virtual void UnAssignSounds(i32 arg1);
+
+    // ?UpdateAudio@vehCarAudio@@UAEXXZ
+    ARTS_IMPORT virtual void UpdateAudio();
+
+    // ?Update@vehCarAudio@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?SetNon3DParams@vehCarAudio@@UAEXXZ
+    ARTS_IMPORT virtual void SetNon3DParams();
+
+    // ?Set3DParams@vehCarAudio@@UAEXXZ
+    ARTS_IMPORT virtual void Set3DParams();
+
     // ?DeallocateStatics@vehCarAudio@@SAXXZ
     ARTS_IMPORT static void DeallocateStatics();
 
@@ -86,26 +101,11 @@ public:
     // ?Set2DPan@vehCarAudio@@QAEXM@Z
     ARTS_IMPORT void Set2DPan(f32 arg1);
 
-    // ?Set3DParams@vehCarAudio@@UAEXXZ
-    ARTS_IMPORT virtual void Set3DParams();
-
     // ?SetMinAmpSpeed@vehCarAudio@@QAEXM@Z
     ARTS_IMPORT void SetMinAmpSpeed(f32 arg1);
 
-    // ?SetNon3DParams@vehCarAudio@@UAEXXZ
-    ARTS_IMPORT virtual void SetNon3DParams();
-
     // ?StopHorn@vehCarAudio@@QAEXXZ
     ARTS_IMPORT void StopHorn();
-
-    // ?UnAssignSounds@vehCarAudio@@UAEXH@Z
-    ARTS_IMPORT virtual void UnAssignSounds(i32 arg1);
-
-    // ?Update@vehCarAudio@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
-
-    // ?UpdateAudio@vehCarAudio@@UAEXXZ
-    ARTS_IMPORT virtual void UpdateAudio();
 
     // ?UpdateAudio3D@vehCarAudio@@QAEHM@Z
     ARTS_IMPORT i32 UpdateAudio3D(f32 arg1);

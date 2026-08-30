@@ -41,53 +41,53 @@ public:
     // ??1aiSubway@@QAE@XZ
     ARTS_IMPORT ~aiSubway();
 
-    // ?BackBumperDistance@aiSubway@@UAEMXZ
-    ARTS_IMPORT virtual f32 BackBumperDistance();
-
-    // ?CurrentLane@aiSubway@@UAEHXZ
-    ARTS_IMPORT virtual i32 CurrentLane();
-
-    // ?CurrentRdVert@aiSubway@@UAEHXZ
-    ARTS_IMPORT virtual i32 CurrentRdVert();
-
-    // ?CurrentRoadId@aiSubway@@UAEHXZ
-    ARTS_IMPORT virtual i32 CurrentRoadId();
-
-    // ?CurrentRoadIdx@aiSubway@@UAEHPAPAVaiPath@@QA_NPAH@Z
-    ARTS_IMPORT virtual i32 CurrentRoadIdx(aiPath** arg1, bool*const arg2, i32* arg3);
-
-    // ?DrawId@aiSubway@@UAEXXZ
-    ARTS_IMPORT virtual void DrawId();
-
-    // ?FrontBumperDistance@aiSubway@@UAEMXZ
-    ARTS_IMPORT virtual f32 FrontBumperDistance();
-
-    // ?GetMatrix@aiSubway@@UAEAAVMatrix34@@XZ
-    ARTS_IMPORT virtual Matrix34& GetMatrix();
-
-    // ?Init@aiSubway@@QAEXPADHHHHHPAV1@1@Z
-    ARTS_IMPORT void Init(char* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5, i32 arg6, aiSubway* arg7, aiSubway* arg8);
-
-    // ?LSideDistance@aiSubway@@UAEMXZ
-    ARTS_IMPORT virtual f32 LSideDistance();
-
     // ?Position@aiSubway@@UAEXAAVVector3@@@Z
     ARTS_IMPORT virtual void Position(Vector3& arg1);
-
-    // ?Reset@aiSubway@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?RSideDistance@aiSubway@@UAEMXZ
-    ARTS_IMPORT virtual f32 RSideDistance();
 
     // ?Speed@aiSubway@@UAEMXZ
     ARTS_IMPORT virtual f32 Speed();
 
-    // ?Type@aiSubway@@UAEHXZ
-    ARTS_IMPORT virtual i32 Type();
+    // ?CurrentRoadIdx@aiSubway@@UAEHPAPAVaiPath@@QA_NPAH@Z
+    ARTS_IMPORT virtual i32 CurrentRoadIdx(aiPath** arg1, bool*const arg2, i32* arg3);
+
+    // ?CurrentRdVert@aiSubway@@UAEHXZ
+    ARTS_IMPORT virtual i32 CurrentRdVert();
 
     // ?Update@aiSubway@@UAEXXZ
     ARTS_IMPORT virtual void Update();
+
+    // ?Reset@aiSubway@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
+    // ?Type@aiSubway@@UAEHXZ
+    ARTS_IMPORT virtual i32 Type();
+
+    // ?GetMatrix@aiSubway@@UAEAAVMatrix34@@XZ
+    ARTS_IMPORT virtual Matrix34& GetMatrix();
+
+    // ?FrontBumperDistance@aiSubway@@UAEMXZ
+    ARTS_IMPORT virtual f32 FrontBumperDistance();
+
+    // ?BackBumperDistance@aiSubway@@UAEMXZ
+    ARTS_IMPORT virtual f32 BackBumperDistance();
+
+    // ?LSideDistance@aiSubway@@UAEMXZ
+    ARTS_IMPORT virtual f32 LSideDistance();
+
+    // ?RSideDistance@aiSubway@@UAEMXZ
+    ARTS_IMPORT virtual f32 RSideDistance();
+
+    // ?CurrentLane@aiSubway@@UAEHXZ
+    ARTS_IMPORT virtual i32 CurrentLane();
+
+    // ?CurrentRoadId@aiSubway@@UAEHXZ
+    ARTS_IMPORT virtual i32 CurrentRoadId();
+
+    // ?DrawId@aiSubway@@UAEXXZ
+    ARTS_IMPORT virtual void DrawId();
+
+    // ?Init@aiSubway@@QAEXPADHHHHHPAV1@1@Z
+    ARTS_IMPORT void Init(char* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5, i32 arg6, aiSubway* arg7, aiSubway* arg8);
 
 private:
     // ?ComputeXZCurve@aiSubway@@AAEXAAVVector3@@000@Z

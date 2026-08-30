@@ -36,6 +36,9 @@ public:
     // ??1PUResults@@UAE@XZ
     ARTS_IMPORT virtual ~PUResults();
 
+    // ?Reset@PUResults@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?AddLoser@PUResults@@QAEXHPBD@Z
     ARTS_IMPORT void AddLoser(i32 arg1, const char* arg2);
 
@@ -74,9 +77,6 @@ public:
 
     // ?RaceMenuRO@PUResults@@QAEXH@Z
     ARTS_IMPORT void RaceMenuRO(i32 arg1);
-
-    // ?Reset@PUResults@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
 
     // ?RestartRO@PUResults@@QAEXH@Z
     ARTS_IMPORT void RestartRO(i32 arg1);

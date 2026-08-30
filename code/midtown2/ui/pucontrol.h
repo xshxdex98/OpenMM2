@@ -34,14 +34,14 @@ public:
     // ??1PUControl@@UAE@XZ
     ARTS_IMPORT virtual ~PUControl();
 
+    // ?PreSetup@PUControl@@UAEXXZ
+    ARTS_IMPORT virtual void PreSetup();
+
     // ?CancelAction@PUControl@@QAEXXZ
     ARTS_IMPORT void CancelAction();
 
     // ?ControlSelect@PUControl@@QAEXXZ
     ARTS_IMPORT void ControlSelect();
-
-    // ?PreSetup@PUControl@@UAEXXZ
-    ARTS_IMPORT virtual void PreSetup();
 
     // ?SetRWStates@PUControl@@QAEXXZ
     ARTS_IMPORT void SetRWStates();

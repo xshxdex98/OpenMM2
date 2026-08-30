@@ -36,17 +36,20 @@ public:
     // ??1camPointCS@@UAE@XZ
     ARTS_IMPORT virtual ~camPointCS();
 
+    // ?Update@camPointCS@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@camPointCS@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?GetClassName@camPointCS@@UAEPADXZ
     ARTS_IMPORT virtual char* GetClassName();
-
-    // ?GetPos@camPointCS@@QAE?AVVector3@@XZ
-    ARTS_IMPORT Vector3 GetPos();
 
     // ?MakeActive@camPointCS@@UAEXXZ
     ARTS_IMPORT virtual void MakeActive();
 
-    // ?Reset@camPointCS@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
+    // ?GetPos@camPointCS@@QAE?AVVector3@@XZ
+    ARTS_IMPORT Vector3 GetPos();
 
     // ?SetAppRate@camPointCS@@QAEXM@Z
     ARTS_IMPORT void SetAppRate(f32 arg1);
@@ -62,9 +65,6 @@ public:
 
     // ?SetVel@camPointCS@@QAEXAAVVector3@@@Z
     ARTS_IMPORT void SetVel(Vector3& arg1);
-
-    // ?Update@camPointCS@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7camPointCS@@6B@

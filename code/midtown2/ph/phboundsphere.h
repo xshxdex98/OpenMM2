@@ -46,14 +46,32 @@ public:
     // ??1phBoundSphere@@QAE@XZ
     ARTS_IMPORT ~phBoundSphere();
 
+    // ?GetMaterial@phBoundSphere@@UBEPBVphMaterial@@H@Z
+    ARTS_IMPORT virtual const phMaterial* GetMaterial(i32 arg1) const;
+
+    // ?TestProbePoint@phBoundSphere@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@M@Z
+    ARTS_IMPORT virtual bool TestProbePoint(phSegment& arg1, phIntersectionPoint* arg2, f32 arg3) const;
+
+    // ?TestAIPoint@phBoundSphere@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@@Z
+    ARTS_IMPORT virtual bool TestAIPoint(phSegment& arg1, phIntersectionPoint* arg2) const;
+
+    // ?TestEdge@phBoundSphere@@UBEHAAVphSegment@@PAVphIntersection@@H@Z
+    ARTS_IMPORT virtual i32 TestEdge(phSegment& arg1, phIntersection* arg2, i32 arg3) const;
+
+    // ?TestProbe@phBoundSphere@@UBE_NAAVphSegment@@PAVphIntersection@@M@Z
+    ARTS_IMPORT virtual bool TestProbe(phSegment& arg1, phIntersection* arg2, f32 arg3) const;
+
+    // ?TestSphere@phBoundSphere@@UBE_NABVVector3@@MAAVphImpactBase@@@Z
+    ARTS_IMPORT virtual bool TestSphere(const Vector3& arg1, f32 arg2, phImpactBase& arg3) const;
+
+    // ?TestSphere@phBoundSphere@@UBE_NABVVector3@@MAAV2@1AAM@Z
+    ARTS_IMPORT virtual bool TestSphere(const Vector3& arg1, f32 arg2, Vector3& arg3, Vector3& arg4, f32& arg5) const;
+
     // ?CreateOffset@phBoundSphere@@QAEXABVVector3@@@Z
     ARTS_IMPORT void CreateOffset(const Vector3& arg1);
 
     // ?FindImpactSphereToSphere@phBoundSphere@@QBE_NPBV1@PBVMatrix34@@1PAVphColliderBase@@2PAVphImpactBase@@ABVVector3@@@Z
     ARTS_IMPORT bool FindImpactSphereToSphere(const phBoundSphere* arg1, const Matrix34* arg2, const Matrix34* arg3, phColliderBase* arg4, phColliderBase* arg5, phImpactBase* arg6, const Vector3& arg7) const;
-
-    // ?GetMaterial@phBoundSphere@@UBEPBVphMaterial@@H@Z
-    ARTS_IMPORT virtual const phMaterial* GetMaterial(i32 arg1) const;
 
     // ?Load@phBoundSphere@@QAE_NPBD@Z
     ARTS_IMPORT bool Load(const char* arg1);
@@ -66,24 +84,6 @@ public:
 
     // ?ShiftCentroid@phBoundSphere@@QAEXABVVector3@@@Z
     ARTS_IMPORT void ShiftCentroid(const Vector3& arg1);
-
-    // ?TestAIPoint@phBoundSphere@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@@Z
-    ARTS_IMPORT virtual bool TestAIPoint(phSegment& arg1, phIntersectionPoint* arg2) const;
-
-    // ?TestEdge@phBoundSphere@@UBEHAAVphSegment@@PAVphIntersection@@H@Z
-    ARTS_IMPORT virtual i32 TestEdge(phSegment& arg1, phIntersection* arg2, i32 arg3) const;
-
-    // ?TestProbe@phBoundSphere@@UBE_NAAVphSegment@@PAVphIntersection@@M@Z
-    ARTS_IMPORT virtual bool TestProbe(phSegment& arg1, phIntersection* arg2, f32 arg3) const;
-
-    // ?TestProbePoint@phBoundSphere@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@M@Z
-    ARTS_IMPORT virtual bool TestProbePoint(phSegment& arg1, phIntersectionPoint* arg2, f32 arg3) const;
-
-    // ?TestSphere@phBoundSphere@@UBE_NABVVector3@@MAAV2@1AAM@Z
-    ARTS_IMPORT virtual bool TestSphere(const Vector3& arg1, f32 arg2, Vector3& arg3, Vector3& arg4, f32& arg5) const;
-
-    // ?TestSphere@phBoundSphere@@UBE_NABVVector3@@MAAVphImpactBase@@@Z
-    ARTS_IMPORT virtual bool TestSphere(const Vector3& arg1, f32 arg2, phImpactBase& arg3) const;
 
 public:
     // Members from 0x04C; everything below that belongs to phBound.

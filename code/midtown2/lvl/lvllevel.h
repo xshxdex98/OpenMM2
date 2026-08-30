@@ -42,8 +42,11 @@ public:
     // ??1lvlLevel@@UAE@XZ
     ARTS_IMPORT virtual ~lvlLevel();
 
-    // ?ClampToWorld@lvlLevel@@UAE_NAAVVector3@@@Z
-    ARTS_IMPORT virtual bool ClampToWorld(Vector3& arg1);
+    // ?Update@lvlLevel@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?GetVisitList@lvlLevel@@UAEHPAHHABVVector3@@1HH@Z
+    ARTS_IMPORT virtual i32 GetVisitList(i32* arg1, i32 arg2, const Vector3& arg3, const Vector3& arg4, i32 arg5, i32 arg6);
 
     // ?Collide@lvlLevel@@UAE_NHAAVlvlSegment@@PAVlvlIntersection@@@Z
     ARTS_IMPORT virtual bool Collide(i32 arg1, lvlSegment& arg2, lvlIntersection* arg3);
@@ -51,14 +54,17 @@ public:
     // ?GetBoundSphere@lvlLevel@@UAE_NAAVVector4@@H@Z
     ARTS_IMPORT virtual bool GetBoundSphere(Vector4& arg1, i32 arg2);
 
-    // ?GetEnvMap@lvlLevel@@UAEPAVgfxTexture@@HABVVector3@@AAM@Z
-    ARTS_IMPORT virtual gfxTexture* GetEnvMap(i32 arg1, const Vector3& arg2, f32& arg3);
+    // ?SetObjectDetail@lvlLevel@@UAEXH@Z
+    ARTS_IMPORT virtual void SetObjectDetail(i32 arg1);
 
-    // ?GetVisitList@lvlLevel@@UAEHPAHHABVVector3@@1HH@Z
-    ARTS_IMPORT virtual i32 GetVisitList(i32* arg1, i32 arg2, const Vector3& arg3, const Vector3& arg4, i32 arg5, i32 arg6);
+    // ?ClampToWorld@lvlLevel@@UAE_NAAVVector3@@@Z
+    ARTS_IMPORT virtual bool ClampToWorld(Vector3& arg1);
 
     // ?LoadInstances@lvlLevel@@UAE_NPBD0@Z
     ARTS_IMPORT virtual bool LoadInstances(const char* arg1, const char* arg2);
+
+    // ?GetEnvMap@lvlLevel@@UAEPAVgfxTexture@@HABVVector3@@AAM@Z
+    ARTS_IMPORT virtual gfxTexture* GetEnvMap(i32 arg1, const Vector3& arg2, f32& arg3);
 
     // ?MoveToRoom@lvlLevel@@QAEXPAVlvlInstance@@H@Z
     ARTS_IMPORT void MoveToRoom(lvlInstance* arg1, i32 arg2);
@@ -71,12 +77,6 @@ public:
 
     // ?ResetInstances@lvlLevel@@QAEXXZ
     ARTS_IMPORT void ResetInstances();
-
-    // ?SetObjectDetail@lvlLevel@@UAEXH@Z
-    ARTS_IMPORT virtual void SetObjectDetail(i32 arg1);
-
-    // ?Update@lvlLevel@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     static lvlLevel*& Access_sm_Singleton() { return sm_Singleton; }

@@ -28,20 +28,20 @@ struct IDirectInputDevice2A;
 class mmFrictionFF
 {
 public:
-    // ?Assign@mmFrictionFF@@QAEHJ@Z
-    ARTS_IMPORT i32 Assign(ilong arg1);
-
     // ?Init@mmFrictionFF@@UAEHPAUIDirectInputDevice2A@@@Z
     ARTS_IMPORT virtual i32 Init(IDirectInputDevice2A* arg1);
 
     // ?Play@mmFrictionFF@@UAEHXZ
     ARTS_IMPORT virtual i32 Play();
 
+    // ?Stop@mmFrictionFF@@UAEHXZ
+    ARTS_IMPORT virtual i32 Stop();
+
     // ?SetValues@mmFrictionFF@@UAEHMM@Z
     ARTS_IMPORT virtual i32 SetValues(f32 arg1, f32 arg2);
 
-    // ?Stop@mmFrictionFF@@UAEHXZ
-    ARTS_IMPORT virtual i32 Stop();
+    // ?Assign@mmFrictionFF@@QAEHJ@Z
+    ARTS_IMPORT i32 Assign(ilong arg1);
 };
 
 // ??_7mmFrictionFF@@6B@

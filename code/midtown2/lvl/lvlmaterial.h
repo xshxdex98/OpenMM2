@@ -33,14 +33,14 @@ public:
     // ??0lvlMaterial@@QAE@XZ
     ARTS_IMPORT lvlMaterial();
 
+    // ?Save@lvlMaterial@@UAEXAAVdatAsciiTokenizer@@@Z
+    ARTS_IMPORT virtual void Save(datAsciiTokenizer& arg1);
+
     // ?Copy@lvlMaterial@@QAEXABV1@@Z
     ARTS_IMPORT void Copy(const lvlMaterial& arg1);
 
     // ?Load@lvlMaterial@@QAEXAAVdatAsciiTokenizer@@@Z
     ARTS_IMPORT void Load(datAsciiTokenizer& arg1);
-
-    // ?Save@lvlMaterial@@UAEXAAVdatAsciiTokenizer@@@Z
-    ARTS_IMPORT virtual void Save(datAsciiTokenizer& arg1);
 
 public:
     // Members from 0x030; everything below that belongs to phMaterial.

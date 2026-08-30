@@ -36,8 +36,20 @@ public:
     // ??1asNode@@UAE@XZ
     ARTS_IMPORT virtual ~asNode();
 
-    // ?AddChild@asNode@@QAEHPAV1@@Z
-    ARTS_IMPORT i32 AddChild(asNode* arg1);
+    // ?Update@asNode@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@asNode@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
+    // ?ResChange@asNode@@UAEXHH@Z
+    ARTS_IMPORT virtual void ResChange(i32 arg1, i32 arg2);
+
+    // ?UpdatePaused@asNode@@UAEXXZ
+    ARTS_IMPORT virtual void UpdatePaused();
+
+    // ?FileIO@asNode@@UAEXAAVdatParser@@@Z
+    ARTS_IMPORT virtual void FileIO(datParser& arg1);
 
     // ?AfterLoad@asNode@@UAEXXZ
     ARTS_IMPORT virtual void AfterLoad();
@@ -45,11 +57,11 @@ public:
     // ?BeforeSave@asNode@@UAEXXZ
     ARTS_IMPORT virtual void BeforeSave();
 
-    // ?FileIO@asNode@@UAEXAAVdatParser@@@Z
-    ARTS_IMPORT virtual void FileIO(datParser& arg1);
+    // ?Save@asNode@@UAE_NXZ
+    ARTS_IMPORT virtual bool Save();
 
-    // ?GetChild@asNode@@QAEPAV1@H@Z
-    ARTS_IMPORT asNode* GetChild(i32 arg1);
+    // ?Load@asNode@@UAE_NXZ
+    ARTS_IMPORT virtual bool Load();
 
     // ?GetClassName@asNode@@UAEPADXZ
     ARTS_IMPORT virtual char* GetClassName();
@@ -60,6 +72,12 @@ public:
     // ?GetDirName@asNode@@UAEPBDXZ
     ARTS_IMPORT virtual const char* GetDirName();
 
+    // ?AddChild@asNode@@QAEHPAV1@@Z
+    ARTS_IMPORT i32 AddChild(asNode* arg1);
+
+    // ?GetChild@asNode@@QAEPAV1@H@Z
+    ARTS_IMPORT asNode* GetChild(i32 arg1);
+
     // ?GetLastChild@asNode@@QAEPAV1@XZ
     ARTS_IMPORT asNode* GetLastChild();
 
@@ -68,9 +86,6 @@ public:
 
     // ?InsertChild@asNode@@QAEHHPAV1@@Z
     ARTS_IMPORT i32 InsertChild(i32 arg1, asNode* arg2);
-
-    // ?Load@asNode@@UAE_NXZ
-    ARTS_IMPORT virtual bool Load();
 
     // ?NumChildren@asNode@@QAEHXZ
     ARTS_IMPORT i32 NumChildren();
@@ -84,26 +99,11 @@ public:
     // ?RemoveChild@asNode@@QAEHPAV1@@Z
     ARTS_IMPORT i32 RemoveChild(asNode* arg1);
 
-    // ?ResChange@asNode@@UAEXHH@Z
-    ARTS_IMPORT virtual void ResChange(i32 arg1, i32 arg2);
-
-    // ?Reset@asNode@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?Save@asNode@@UAE_NXZ
-    ARTS_IMPORT virtual bool Save();
-
     // ?SetName@asNode@@QAEXPBD@Z
     ARTS_IMPORT void SetName(const char* arg1);
 
     // ?SwitchTo@asNode@@QAEXH@Z
     ARTS_IMPORT void SwitchTo(i32 arg1);
-
-    // ?Update@asNode@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
-
-    // ?UpdatePaused@asNode@@UAEXXZ
-    ARTS_IMPORT virtual void UpdatePaused();
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

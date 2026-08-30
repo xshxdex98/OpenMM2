@@ -39,6 +39,12 @@ public:
     // ?Cull@mmCDPlayer@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
 
+    // ?Update@mmCDPlayer@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@mmCDPlayer@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?Init@mmCDPlayer@@QAEXPAVmmHUD@@@Z
     ARTS_IMPORT void Init(mmHUD* arg1);
 
@@ -51,14 +57,8 @@ public:
     // ?PrevTrack@mmCDPlayer@@QAEXXZ
     ARTS_IMPORT void PrevTrack();
 
-    // ?Reset@mmCDPlayer@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?Toggle@mmCDPlayer@@QAEXXZ
     ARTS_IMPORT void Toggle();
-
-    // ?Update@mmCDPlayer@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7mmCDPlayer@@6B@

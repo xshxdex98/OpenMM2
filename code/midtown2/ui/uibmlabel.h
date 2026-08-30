@@ -37,14 +37,14 @@ public:
     // ?Cull@UIBMLabel@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
 
+    // ?Update@UIBMLabel@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?Init@UIBMLabel@@QAEXPAVstring@@MMPAH@Z
     ARTS_IMPORT void Init(string* arg1, f32 arg2, f32 arg3, i32* arg4);
 
     // ?SetBitmapName@UIBMLabel@@QAEXPAVstring@@@Z
     ARTS_IMPORT void SetBitmapName(string* arg1);
-
-    // ?Update@UIBMLabel@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 private:
     // ?LoadBitmap@UIBMLabel@@AAEXXZ

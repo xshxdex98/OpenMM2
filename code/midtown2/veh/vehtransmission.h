@@ -37,6 +37,18 @@ public:
     // ??1vehTransmission@@UAE@XZ
     ARTS_IMPORT virtual ~vehTransmission();
 
+    // ?Update@vehTransmission@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@vehTransmission@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
+    // ?FileIO@vehTransmission@@UAEXAAVdatParser@@@Z
+    ARTS_IMPORT virtual void FileIO(datParser& arg1);
+
+    // ?GetClassName@vehTransmission@@UAEPADXZ
+    ARTS_IMPORT virtual char* GetClassName();
+
     // ?Automatic@vehTransmission@@QAEXH@Z
     ARTS_IMPORT void Automatic(i32 arg1);
 
@@ -46,17 +58,8 @@ public:
     // ?Downshift@vehTransmission@@QAEHXZ
     ARTS_IMPORT i32 Downshift();
 
-    // ?FileIO@vehTransmission@@UAEXAAVdatParser@@@Z
-    ARTS_IMPORT virtual void FileIO(datParser& arg1);
-
-    // ?GetClassName@vehTransmission@@UAEPADXZ
-    ARTS_IMPORT virtual char* GetClassName();
-
     // ?Init@vehTransmission@@QAEXPAVvehCarSim@@@Z
     ARTS_IMPORT void Init(vehCarSim* arg1);
-
-    // ?Reset@vehTransmission@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
 
     // ?SetCurrentGear@vehTransmission@@QAEHH@Z
     ARTS_IMPORT i32 SetCurrentGear(i32 arg1);
@@ -69,9 +72,6 @@ public:
 
     // ?SetReverse@vehTransmission@@QAEXXZ
     ARTS_IMPORT void SetReverse();
-
-    // ?Update@vehTransmission@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
     // ?Upshift@vehTransmission@@QAEHXZ
     ARTS_IMPORT i32 Upshift();

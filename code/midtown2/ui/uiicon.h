@@ -42,6 +42,12 @@ public:
     // ?Cull@UIIcon@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
 
+    // ?Update@UIIcon@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Switch@UIIcon@@UAEXH@Z
+    ARTS_IMPORT virtual void Switch(i32 arg1);
+
     // ?GetHitArea@UIIcon@@QAEXAAM0@Z
     ARTS_IMPORT void GetHitArea(f32& arg1, f32& arg2);
 
@@ -53,12 +59,6 @@ public:
 
     // ?LoadBitmap@UIIcon@@QAEXPAD@Z
     ARTS_IMPORT void LoadBitmap(char* arg1);
-
-    // ?Switch@UIIcon@@UAEXH@Z
-    ARTS_IMPORT virtual void Switch(i32 arg1);
-
-    // ?Update@UIIcon@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     // Members from 0x06C; everything below that belongs to uiWidget.

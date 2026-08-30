@@ -36,20 +36,14 @@ public:
     // ??1mmSingleCircuit@@UAE@XZ
     ARTS_IMPORT virtual ~mmSingleCircuit();
 
-    // ?GetWaypoints@mmSingleCircuit@@UAEPAVmmWaypoints@@XZ
-    ARTS_IMPORT virtual mmWaypoints* GetWaypoints();
+    // ?Update@mmSingleCircuit@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
 
-    // ?HitWaterHandler@mmSingleCircuit@@UAEXXZ
-    ARTS_IMPORT virtual void HitWaterHandler();
+    // ?Reset@mmSingleCircuit@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
 
     // ?Init@mmSingleCircuit@@UAEHXZ
     ARTS_IMPORT virtual i32 Init();
-
-    // ?InitGameObjects@mmSingleCircuit@@UAEXXZ
-    ARTS_IMPORT virtual void InitGameObjects();
-
-    // ?InitHUD@mmSingleCircuit@@UAEXXZ
-    ARTS_IMPORT virtual void InitHUD();
 
     // ?InitMyPlayer@mmSingleCircuit@@UAEXXZ
     ARTS_IMPORT virtual void InitMyPlayer();
@@ -57,17 +51,14 @@ public:
     // ?InitOtherPlayers@mmSingleCircuit@@UAEXXZ
     ARTS_IMPORT virtual void InitOtherPlayers();
 
-    // ?NextRace@mmSingleCircuit@@UAEXXZ
-    ARTS_IMPORT virtual void NextRace();
+    // ?InitGameObjects@mmSingleCircuit@@UAEXXZ
+    ARTS_IMPORT virtual void InitGameObjects();
 
-    // ?Reset@mmSingleCircuit@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
+    // ?InitHUD@mmSingleCircuit@@UAEXXZ
+    ARTS_IMPORT virtual void InitHUD();
 
-    // ?SwitchState@mmSingleCircuit@@UAEXH@Z
-    ARTS_IMPORT virtual void SwitchState(i32 arg1);
-
-    // ?Update@mmSingleCircuit@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
+    // ?UpdateGameInput@mmSingleCircuit@@UAEXH@Z
+    ARTS_IMPORT virtual void UpdateGameInput(i32 arg1);
 
     // ?UpdateDebugKeyInput@mmSingleCircuit@@UAEXH@Z
     ARTS_IMPORT virtual void UpdateDebugKeyInput(i32 arg1);
@@ -75,8 +66,17 @@ public:
     // ?UpdateGame@mmSingleCircuit@@UAEXXZ
     ARTS_IMPORT virtual void UpdateGame();
 
-    // ?UpdateGameInput@mmSingleCircuit@@UAEXH@Z
-    ARTS_IMPORT virtual void UpdateGameInput(i32 arg1);
+    // ?NextRace@mmSingleCircuit@@UAEXXZ
+    ARTS_IMPORT virtual void NextRace();
+
+    // ?HitWaterHandler@mmSingleCircuit@@UAEXXZ
+    ARTS_IMPORT virtual void HitWaterHandler();
+
+    // ?SwitchState@mmSingleCircuit@@UAEXH@Z
+    ARTS_IMPORT virtual void SwitchState(i32 arg1);
+
+    // ?GetWaypoints@mmSingleCircuit@@UAEPAVmmWaypoints@@XZ
+    ARTS_IMPORT virtual mmWaypoints* GetWaypoints();
 
     // ?UpdateOpponentStatus@mmSingleCircuit@@QAEXXZ
     ARTS_IMPORT void UpdateOpponentStatus();

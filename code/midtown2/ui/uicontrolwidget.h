@@ -39,8 +39,20 @@ public:
     // ??1UIControlWidget@@UAE@XZ
     ARTS_IMPORT virtual ~UIControlWidget();
 
+    // ?Update@UIControlWidget@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?TurnOn@UIControlWidget@@UAEXXZ
+    ARTS_IMPORT virtual void TurnOn();
+
+    // ?TurnOff@UIControlWidget@@UAEXXZ
+    ARTS_IMPORT virtual void TurnOff();
+
     // ?Action@UIControlWidget@@UAEXTeqEvent@@@Z
     ARTS_IMPORT virtual void Action(eqEvent arg1);
+
+    // ?Switch@UIControlWidget@@UAEXH@Z
+    ARTS_IMPORT virtual void Switch(i32 arg1);
 
     // ?DisableField@UIControlWidget@@QAEXXZ
     ARTS_IMPORT void DisableField();
@@ -53,18 +65,6 @@ public:
 
     // ?SetPosition@UIControlWidget@@QAEXMMMM@Z
     ARTS_IMPORT void SetPosition(f32 arg1, f32 arg2, f32 arg3, f32 arg4);
-
-    // ?Switch@UIControlWidget@@UAEXH@Z
-    ARTS_IMPORT virtual void Switch(i32 arg1);
-
-    // ?TurnOff@UIControlWidget@@UAEXXZ
-    ARTS_IMPORT virtual void TurnOff();
-
-    // ?TurnOn@UIControlWidget@@UAEXXZ
-    ARTS_IMPORT virtual void TurnOn();
-
-    // ?Update@UIControlWidget@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
     // ?UpdateField@UIControlWidget@@QAEXXZ
     ARTS_IMPORT void UpdateField();

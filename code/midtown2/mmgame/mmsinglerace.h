@@ -36,20 +36,14 @@ public:
     // ??1mmSingleRace@@UAE@XZ
     ARTS_IMPORT virtual ~mmSingleRace();
 
-    // ?GetWaypoints@mmSingleRace@@UAEPAVmmWaypoints@@XZ
-    ARTS_IMPORT virtual mmWaypoints* GetWaypoints();
+    // ?Update@mmSingleRace@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
 
-    // ?HitWaterHandler@mmSingleRace@@UAEXXZ
-    ARTS_IMPORT virtual void HitWaterHandler();
+    // ?Reset@mmSingleRace@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
 
     // ?Init@mmSingleRace@@UAEHXZ
     ARTS_IMPORT virtual i32 Init();
-
-    // ?InitGameObjects@mmSingleRace@@UAEXXZ
-    ARTS_IMPORT virtual void InitGameObjects();
-
-    // ?InitHUD@mmSingleRace@@UAEXXZ
-    ARTS_IMPORT virtual void InitHUD();
 
     // ?InitMyPlayer@mmSingleRace@@UAEXXZ
     ARTS_IMPORT virtual void InitMyPlayer();
@@ -57,17 +51,14 @@ public:
     // ?InitOtherPlayers@mmSingleRace@@UAEXXZ
     ARTS_IMPORT virtual void InitOtherPlayers();
 
-    // ?NextRace@mmSingleRace@@UAEXXZ
-    ARTS_IMPORT virtual void NextRace();
+    // ?InitGameObjects@mmSingleRace@@UAEXXZ
+    ARTS_IMPORT virtual void InitGameObjects();
 
-    // ?Reset@mmSingleRace@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
+    // ?InitHUD@mmSingleRace@@UAEXXZ
+    ARTS_IMPORT virtual void InitHUD();
 
-    // ?SwitchState@mmSingleRace@@UAEXH@Z
-    ARTS_IMPORT virtual void SwitchState(i32 arg1);
-
-    // ?Update@mmSingleRace@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
+    // ?UpdateGameInput@mmSingleRace@@UAEXH@Z
+    ARTS_IMPORT virtual void UpdateGameInput(i32 arg1);
 
     // ?UpdateDebugKeyInput@mmSingleRace@@UAEXH@Z
     ARTS_IMPORT virtual void UpdateDebugKeyInput(i32 arg1);
@@ -75,8 +66,17 @@ public:
     // ?UpdateGame@mmSingleRace@@UAEXXZ
     ARTS_IMPORT virtual void UpdateGame();
 
-    // ?UpdateGameInput@mmSingleRace@@UAEXH@Z
-    ARTS_IMPORT virtual void UpdateGameInput(i32 arg1);
+    // ?NextRace@mmSingleRace@@UAEXXZ
+    ARTS_IMPORT virtual void NextRace();
+
+    // ?HitWaterHandler@mmSingleRace@@UAEXXZ
+    ARTS_IMPORT virtual void HitWaterHandler();
+
+    // ?SwitchState@mmSingleRace@@UAEXH@Z
+    ARTS_IMPORT virtual void SwitchState(i32 arg1);
+
+    // ?GetWaypoints@mmSingleRace@@UAEPAVmmWaypoints@@XZ
+    ARTS_IMPORT virtual mmWaypoints* GetWaypoints();
 
     // ?UpdateOpponentStatus@mmSingleRace@@QAEXXZ
     ARTS_IMPORT void UpdateOpponentStatus();

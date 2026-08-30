@@ -32,8 +32,23 @@ class dgPhysEntity;
 class vehTrailerInstance : public lvlInstance
 {
 public:
+    // ?GetPosition@vehTrailerInstance@@UAEABVVector3@@XZ
+    ARTS_IMPORT virtual const Vector3& GetPosition();
+
+    // ?GetMatrix@vehTrailerInstance@@UAEABVMatrix34@@AAV2@@Z
+    ARTS_IMPORT virtual const Matrix34& GetMatrix(Matrix34& arg1);
+
+    // ?SetMatrix@vehTrailerInstance@@UAEXABVMatrix34@@@Z
+    ARTS_IMPORT virtual void SetMatrix(const Matrix34& arg1);
+
+    // ?GetEntity@vehTrailerInstance@@UAEPAVdgPhysEntity@@XZ
+    ARTS_IMPORT virtual dgPhysEntity* GetEntity();
+
     // ?AttachEntity@vehTrailerInstance@@UAEPAVdgPhysEntity@@XZ
     ARTS_IMPORT virtual dgPhysEntity* AttachEntity();
+
+    // ?GetVelocity@vehTrailerInstance@@UAEABVVector3@@XZ
+    ARTS_IMPORT virtual const Vector3& GetVelocity();
 
     // ?Draw@vehTrailerInstance@@UAEXH@Z
     ARTS_IMPORT virtual void Draw(i32 arg1);
@@ -44,29 +59,14 @@ public:
     // ?DrawShadowMap@vehTrailerInstance@@UAEXXZ
     ARTS_IMPORT virtual void DrawShadowMap();
 
-    // ?GetEntity@vehTrailerInstance@@UAEPAVdgPhysEntity@@XZ
-    ARTS_IMPORT virtual dgPhysEntity* GetEntity();
-
-    // ?GetMatrix@vehTrailerInstance@@UAEABVMatrix34@@AAV2@@Z
-    ARTS_IMPORT virtual const Matrix34& GetMatrix(Matrix34& arg1);
-
-    // ?GetPosition@vehTrailerInstance@@UAEABVVector3@@XZ
-    ARTS_IMPORT virtual const Vector3& GetPosition();
+    // ?SizeOf@vehTrailerInstance@@UAEIXZ
+    ARTS_IMPORT virtual u32 SizeOf();
 
     // ?GetTrailerHitch@vehTrailerInstance@@QAE_NPAVVector3@@@Z
     ARTS_IMPORT bool GetTrailerHitch(Vector3* arg1);
 
-    // ?GetVelocity@vehTrailerInstance@@UAEABVVector3@@XZ
-    ARTS_IMPORT virtual const Vector3& GetVelocity();
-
     // ?Init@vehTrailerInstance@@QAEXPBDABVVector3@@H@Z
     ARTS_IMPORT void Init(const char* arg1, const Vector3& arg2, i32 arg3);
-
-    // ?SetMatrix@vehTrailerInstance@@UAEXABVMatrix34@@@Z
-    ARTS_IMPORT virtual void SetMatrix(const Matrix34& arg1);
-
-    // ?SizeOf@vehTrailerInstance@@UAEIXZ
-    ARTS_IMPORT virtual u32 SizeOf();
 };
 
 // ??_7vehTrailerInstance@@6B@

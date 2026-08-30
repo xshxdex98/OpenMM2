@@ -34,11 +34,11 @@ public:
     // ??1dgUnhitYBangerInstance@@QAE@XZ
     ARTS_IMPORT ~dgUnhitYBangerInstance();
 
-    // ?GetMatrix@dgUnhitYBangerInstance@@UAEABVMatrix34@@AAV2@@Z
-    ARTS_IMPORT virtual const Matrix34& GetMatrix(Matrix34& arg1);
-
     // ?GetPosition@dgUnhitYBangerInstance@@UAEABVVector3@@XZ
     ARTS_IMPORT virtual const Vector3& GetPosition();
+
+    // ?GetMatrix@dgUnhitYBangerInstance@@UAEABVMatrix34@@AAV2@@Z
+    ARTS_IMPORT virtual const Matrix34& GetMatrix(Matrix34& arg1);
 
     // ?SetMatrix@dgUnhitYBangerInstance@@UAEXABVMatrix34@@@Z
     ARTS_IMPORT virtual void SetMatrix(const Matrix34& arg1);

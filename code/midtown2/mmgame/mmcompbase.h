@@ -34,20 +34,29 @@ public:
     // ??1mmCompBase@@UAE@XZ
     ARTS_IMPORT virtual ~mmCompBase();
 
-    // ?Action@mmCompBase@@UAEXTeqEvent@@@Z
-    ARTS_IMPORT virtual void Action(eqEvent arg1);
+    // ?Update@mmCompBase@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@mmCompBase@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
+    // ?DisableBlt@mmCompBase@@UAEXXZ
+    ARTS_IMPORT virtual void DisableBlt();
+
+    // ?SetBltXY@mmCompBase@@UAEXMM@Z
+    ARTS_IMPORT virtual void SetBltXY(f32 arg1, f32 arg2);
 
     // ?Action@mmCompBase@@UAEXTeqEvent@@MMH@Z
     ARTS_IMPORT virtual void Action(eqEvent arg1, f32 arg2, f32 arg3, i32 arg4);
 
-    // ?Box@mmCompBase@@UAEXHPAVmmTextNode@@H@Z
-    ARTS_IMPORT virtual void Box(i32 arg1, mmTextNode* arg2, i32 arg3);
+    // ?Action@mmCompBase@@UAEXTeqEvent@@@Z
+    ARTS_IMPORT virtual void Action(eqEvent arg1);
 
     // ?CaptureAction@mmCompBase@@UAEXTeqEvent@@@Z
     ARTS_IMPORT virtual void CaptureAction(eqEvent arg1);
 
-    // ?DisableBlt@mmCompBase@@UAEXXZ
-    ARTS_IMPORT virtual void DisableBlt();
+    // ?Switch@mmCompBase@@UAEXH@Z
+    ARTS_IMPORT virtual void Switch(i32 arg1);
 
     // ?EvalMouseXY@mmCompBase@@UAEXMM@Z
     ARTS_IMPORT virtual void EvalMouseXY(f32 arg1, f32 arg2);
@@ -55,20 +64,11 @@ public:
     // ?Highlight@mmCompBase@@UAEXPAVmmTextNode@@H@Z
     ARTS_IMPORT virtual void Highlight(mmTextNode* arg1, i32 arg2);
 
-    // ?Reset@mmCompBase@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?SetBltXY@mmCompBase@@UAEXMM@Z
-    ARTS_IMPORT virtual void SetBltXY(f32 arg1, f32 arg2);
+    // ?Box@mmCompBase@@UAEXHPAVmmTextNode@@H@Z
+    ARTS_IMPORT virtual void Box(i32 arg1, mmTextNode* arg2, i32 arg3);
 
     // ?SetGeometry@mmCompBase@@UAEXMMMM@Z
     ARTS_IMPORT virtual void SetGeometry(f32 arg1, f32 arg2, f32 arg3, f32 arg4);
-
-    // ?Switch@mmCompBase@@UAEXH@Z
-    ARTS_IMPORT virtual void Switch(i32 arg1);
-
-    // ?Update@mmCompBase@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7mmCompBase@@6B@

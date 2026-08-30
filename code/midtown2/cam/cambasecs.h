@@ -38,29 +38,29 @@ public:
     // ??1camBaseCS@@UAE@XZ
     ARTS_IMPORT virtual ~camBaseCS();
 
-    // ?AfterLoad@camBaseCS@@UAEXXZ
-    ARTS_IMPORT virtual void AfterLoad();
-
     // ?FileIO@camBaseCS@@UAEXAAVdatParser@@@Z
     ARTS_IMPORT virtual void FileIO(datParser& arg1);
 
-    // ?ForceMatrixDelta@camBaseCS@@UAEXABVVector3@@@Z
-    ARTS_IMPORT virtual void ForceMatrixDelta(const Vector3& arg1);
+    // ?AfterLoad@camBaseCS@@UAEXXZ
+    ARTS_IMPORT virtual void AfterLoad();
 
     // ?GetDirName@camBaseCS@@UAEPBDXZ
     ARTS_IMPORT virtual const char* GetDirName();
 
-    // ?IsViewCSInTransition@camBaseCS@@QAEHXZ
-    ARTS_IMPORT i32 IsViewCSInTransition();
-
     // ?MakeActive@camBaseCS@@UAEXXZ
     ARTS_IMPORT virtual void MakeActive();
+
+    // ?UpdateInput@camBaseCS@@UAEXXZ
+    ARTS_IMPORT virtual void UpdateInput();
+
+    // ?ForceMatrixDelta@camBaseCS@@UAEXABVVector3@@@Z
+    ARTS_IMPORT virtual void ForceMatrixDelta(const Vector3& arg1);
 
     // ?SetST@camBaseCS@@UAEXPAM@Z
     ARTS_IMPORT virtual void SetST(f32* arg1);
 
-    // ?UpdateInput@camBaseCS@@UAEXXZ
-    ARTS_IMPORT virtual void UpdateInput();
+    // ?IsViewCSInTransition@camBaseCS@@QAEHXZ
+    ARTS_IMPORT i32 IsViewCSInTransition();
 
     // ?UpdateView@camBaseCS@@QAEXXZ
     ARTS_IMPORT void UpdateView();

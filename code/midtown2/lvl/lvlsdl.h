@@ -42,23 +42,23 @@ public:
     // ??1lvlSDL@@QAE@XZ
     ARTS_IMPORT ~lvlSDL();
 
-    // ?CollideAI@lvlSDL@@UBE_NAAVlvlSegment@@PAVlvlIntersection@@PAHH@Z
-    ARTS_IMPORT virtual bool CollideAI(lvlSegment& arg1, lvlIntersection* arg2, i32* arg3, i32 arg4) const;
+    // ?GetVertex@lvlSDL@@UBEABVVector3@@H@Z
+    ARTS_IMPORT virtual const Vector3& GetVertex(i32 arg1) const;
 
     // ?CollideEdge@lvlSDL@@UBEHAAVlvlSegment@@PAVlvlIntersection@@HPAHH@Z
     ARTS_IMPORT virtual i32 CollideEdge(lvlSegment& arg1, lvlIntersection* arg2, i32 arg3, i32* arg4, i32 arg5) const;
 
-    // ?CollidePolyToLevel@lvlSDL@@UBEHPBVphBoundPolygonal@@PAHHPAVphColliderBase@@PBVMatrix34@@3PAVlvlIntersection@@H1_N@Z
-    ARTS_IMPORT virtual i32 CollidePolyToLevel(const phBoundPolygonal* arg1, i32* arg2, i32 arg3, phColliderBase* arg4, const Matrix34* arg5, const Matrix34* arg6, lvlIntersection* arg7, i32 arg8, i32* arg9, bool arg10) const;
-
     // ?CollideProbe@lvlSDL@@UBE_NAAVlvlSegment@@PAVlvlIntersection@@M@Z
     ARTS_IMPORT virtual bool CollideProbe(lvlSegment& arg1, lvlIntersection* arg2, f32 arg3) const;
 
+    // ?CollideAI@lvlSDL@@UBE_NAAVlvlSegment@@PAVlvlIntersection@@PAHH@Z
+    ARTS_IMPORT virtual bool CollideAI(lvlSegment& arg1, lvlIntersection* arg2, i32* arg3, i32 arg4) const;
+
+    // ?CollidePolyToLevel@lvlSDL@@UBEHPBVphBoundPolygonal@@PAHHPAVphColliderBase@@PBVMatrix34@@3PAVlvlIntersection@@H1_N@Z
+    ARTS_IMPORT virtual i32 CollidePolyToLevel(const phBoundPolygonal* arg1, i32* arg2, i32 arg3, phColliderBase* arg4, const Matrix34* arg5, const Matrix34* arg6, lvlIntersection* arg7, i32 arg8, i32* arg9, bool arg10) const;
+
     // ?Enumerate@lvlSDL@@QBEXHP6AXABV1@HHHPBGPAX@Z2@Z
     ARTS_IMPORT void Enumerate(i32 arg1, void (__cdecl* arg2)(const lvlSDL&,i32,i32,i32,unsigned const i16*,void*), void* arg3) const;
-
-    // ?GetVertex@lvlSDL@@UBEABVVector3@@H@Z
-    ARTS_IMPORT virtual const Vector3& GetVertex(i32 arg1) const;
 
     // ?LoadBinary@lvlSDL@@QAE_NPBD@Z
     ARTS_IMPORT bool LoadBinary(const char* arg1);

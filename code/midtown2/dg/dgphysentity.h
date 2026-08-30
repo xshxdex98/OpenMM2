@@ -40,23 +40,23 @@ public:
     // ??1dgPhysEntity@@UAE@XZ
     ARTS_IMPORT virtual ~dgPhysEntity();
 
-    // ?DetachMe@dgPhysEntity@@UAEXXZ
-    ARTS_IMPORT virtual void DetachMe();
+    // ?PreUpdate@dgPhysEntity@@UAEXXZ
+    ARTS_IMPORT virtual void PreUpdate();
 
-    // ?FirstImpactCallback@dgPhysEntity@@UAEXXZ
-    ARTS_IMPORT virtual void FirstImpactCallback();
+    // ?Update@dgPhysEntity@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
 
     // ?GetCollider@dgPhysEntity@@UAEPAVphCollider@@XZ
     ARTS_IMPORT virtual phCollider* GetCollider();
 
-    // ?PreUpdate@dgPhysEntity@@UAEXXZ
-    ARTS_IMPORT virtual void PreUpdate();
+    // ?DetachMe@dgPhysEntity@@UAEXXZ
+    ARTS_IMPORT virtual void DetachMe();
 
     // ?RequiresTerrainCollision@dgPhysEntity@@UAE_NXZ
     ARTS_IMPORT virtual bool RequiresTerrainCollision();
 
-    // ?Update@dgPhysEntity@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
+    // ?FirstImpactCallback@dgPhysEntity@@UAEXXZ
+    ARTS_IMPORT virtual void FirstImpactCallback();
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

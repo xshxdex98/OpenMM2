@@ -43,6 +43,9 @@ public:
     // ?Action@UITextScroll@@UAEXTeqEvent@@@Z
     ARTS_IMPORT virtual void Action(eqEvent arg1);
 
+    // ?Switch@UITextScroll@@UAEXH@Z
+    ARTS_IMPORT virtual void Switch(i32 arg1);
+
     // ?GetCurrentString@UITextScroll@@QAEXPADH@Z
     ARTS_IMPORT void GetCurrentString(char* arg1, i32 arg2);
 
@@ -69,9 +72,6 @@ public:
 
     // ?SetVScrollVals@UITextScroll@@QAEXXZ
     ARTS_IMPORT void SetVScrollVals();
-
-    // ?Switch@UITextScroll@@UAEXH@Z
-    ARTS_IMPORT virtual void Switch(i32 arg1);
 
     // ?VScrollCB@UITextScroll@@QAEXXZ
     ARTS_IMPORT void VScrollCB();

@@ -42,11 +42,11 @@ public:
     // ?GetNumMaterials@dgBoundHotdog@@UBEHXZ
     ARTS_IMPORT virtual i32 GetNumMaterials() const;
 
-    // ?SetElasticity@dgBoundHotdog@@UAEXM@Z
-    ARTS_IMPORT virtual void SetElasticity(f32 arg1);
-
     // ?SetFriction@dgBoundHotdog@@UAEXM@Z
     ARTS_IMPORT virtual void SetFriction(f32 arg1);
+
+    // ?SetElasticity@dgBoundHotdog@@UAEXM@Z
+    ARTS_IMPORT virtual void SetElasticity(f32 arg1);
 };
 
 // ??_7dgBoundHotdog@@6B@

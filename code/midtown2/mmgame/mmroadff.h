@@ -28,20 +28,20 @@ struct IDirectInputDevice2A;
 class mmRoadFF
 {
 public:
-    // ?Assign@mmRoadFF@@QAEHJJ@Z
-    ARTS_IMPORT i32 Assign(ilong arg1, ilong arg2);
-
     // ?Init@mmRoadFF@@UAEHPAUIDirectInputDevice2A@@@Z
     ARTS_IMPORT virtual i32 Init(IDirectInputDevice2A* arg1);
 
     // ?Play@mmRoadFF@@UAEHXZ
     ARTS_IMPORT virtual i32 Play();
 
+    // ?Stop@mmRoadFF@@UAEHXZ
+    ARTS_IMPORT virtual i32 Stop();
+
     // ?SetValues@mmRoadFF@@UAEHMM@Z
     ARTS_IMPORT virtual i32 SetValues(f32 arg1, f32 arg2);
 
-    // ?Stop@mmRoadFF@@UAEHXZ
-    ARTS_IMPORT virtual i32 Stop();
+    // ?Assign@mmRoadFF@@QAEHJJ@Z
+    ARTS_IMPORT i32 Assign(ilong arg1, ilong arg2);
 };
 
 // ??_7mmRoadFF@@6B@

@@ -63,6 +63,24 @@ public:
     // ??1UIMenu@@UAE@XZ
     ARTS_IMPORT virtual ~UIMenu();
 
+    // ?Update@UIMenu@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?PreSetup@UIMenu@@UAEXXZ
+    ARTS_IMPORT virtual void PreSetup();
+
+    // ?PostSetup@UIMenu@@UAEXXZ
+    ARTS_IMPORT virtual void PostSetup();
+
+    // ?BackUp@UIMenu@@UAEXXZ
+    ARTS_IMPORT virtual void BackUp();
+
+    // ?CheckInput@UIMenu@@UAEXXZ
+    ARTS_IMPORT virtual void CheckInput();
+
+    // ?IsAnOptionMenu@UIMenu@@UAEHXZ
+    ARTS_IMPORT virtual i32 IsAnOptionMenu();
+
     // ?AddBMButton@UIMenu@@QAEPAVUIBMButton@@HPADMMHVdatCallback@@PAHHH1@Z
     ARTS_IMPORT UIBMButton* AddBMButton(i32 arg1, char* arg2, f32 arg3, f32 arg4, i32 arg5, datCallback arg6, i32* arg7, i32 arg8, i32 arg9, datCallback arg10);
 
@@ -132,12 +150,6 @@ public:
     // ?AssignName@UIMenu@@QAEXPAULocString@@@Z
     ARTS_IMPORT void AssignName(LocString* arg1);
 
-    // ?BackUp@UIMenu@@UAEXXZ
-    ARTS_IMPORT virtual void BackUp();
-
-    // ?CheckInput@UIMenu@@UAEXXZ
-    ARTS_IMPORT virtual void CheckInput();
-
     // ?CheckMouseHits@UIMenu@@QAEXXZ
     ARTS_IMPORT void CheckMouseHits();
 
@@ -183,9 +195,6 @@ public:
     // ?Increment@UIMenu@@QAEHXZ
     ARTS_IMPORT i32 Increment();
 
-    // ?IsAnOptionMenu@UIMenu@@UAEHXZ
-    ARTS_IMPORT virtual i32 IsAnOptionMenu();
-
     // ?KeyboardAction@UIMenu@@QAEXTeqEvent@@@Z
     ARTS_IMPORT void KeyboardAction(eqEvent arg1);
 
@@ -194,12 +203,6 @@ public:
 
     // ?MouseHitCheck@UIMenu@@QAEPAVuiWidget@@HMM@Z
     ARTS_IMPORT uiWidget* MouseHitCheck(i32 arg1, f32 arg2, f32 arg3);
-
-    // ?PostSetup@UIMenu@@UAEXXZ
-    ARTS_IMPORT virtual void PostSetup();
-
-    // ?PreSetup@UIMenu@@UAEXXZ
-    ARTS_IMPORT virtual void PreSetup();
 
     // ?ScaleWidget@UIMenu@@QAEXAAM000@Z
     ARTS_IMPORT void ScaleWidget(f32& arg1, f32& arg2, f32& arg3, f32& arg4);
@@ -218,9 +221,6 @@ public:
 
     // ?SetSelected@UIMenu@@QAEXXZ
     ARTS_IMPORT void SetSelected();
-
-    // ?Update@UIMenu@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
     // ?UI_LEFT_MARGIN@UIMenu@@2MA
     ARTS_IMPORT static f32 UI_LEFT_MARGIN;

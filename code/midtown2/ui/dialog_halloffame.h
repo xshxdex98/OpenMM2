@@ -34,14 +34,14 @@ public:
     // ??1Dialog_HallOfFame@@UAE@XZ
     ARTS_IMPORT virtual ~Dialog_HallOfFame();
 
+    // ?PreSetup@Dialog_HallOfFame@@UAEXXZ
+    ARTS_IMPORT virtual void PreSetup();
+
     // ?AddRaceRecord@Dialog_HallOfFame@@QAEXHPAD00H00@Z
     ARTS_IMPORT void AddRaceRecord(i32 arg1, char* arg2, char* arg3, char* arg4, i32 arg5, char* arg6, char* arg7);
 
     // ?InitRaceRecord@Dialog_HallOfFame@@QAEXXZ
     ARTS_IMPORT void InitRaceRecord();
-
-    // ?PreSetup@Dialog_HallOfFame@@UAEXXZ
-    ARTS_IMPORT virtual void PreSetup();
 
     // ?ResetRaceRecord@Dialog_HallOfFame@@QAEXXZ
     ARTS_IMPORT void ResetRaceRecord();

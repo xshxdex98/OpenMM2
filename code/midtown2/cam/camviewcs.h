@@ -41,6 +41,12 @@ public:
     // ??1camViewCS@@UAE@XZ
     ARTS_IMPORT virtual ~camViewCS();
 
+    // ?Update@camViewCS@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@camViewCS@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?FileIO@camViewCS@@UAEXAAVdatParser@@@Z
     ARTS_IMPORT virtual void FileIO(datParser& arg1);
 
@@ -62,14 +68,8 @@ public:
     // ?OneShot@camViewCS@@QAEXXZ
     ARTS_IMPORT void OneShot();
 
-    // ?Reset@camViewCS@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?SetCam@camViewCS@@QAEXPAVcamCarCS@@@Z
     ARTS_IMPORT void SetCam(camCarCS* arg1);
-
-    // ?Update@camViewCS@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     // Members from 0x018; everything below that belongs to asNode.

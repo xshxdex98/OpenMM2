@@ -38,20 +38,29 @@ public:
     // ??1UIVScrollBar@@UAE@XZ
     ARTS_IMPORT virtual ~UIVScrollBar();
 
-    // ?Action@UIVScrollBar@@UAEXTeqEvent@@@Z
-    ARTS_IMPORT virtual void Action(eqEvent arg1);
-
     // ?Cull@UIVScrollBar@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
 
-    // ?Dec@UIVScrollBar@@QAEMXZ
-    ARTS_IMPORT f32 Dec();
+    // ?Update@UIVScrollBar@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
 
     // ?Disable@UIVScrollBar@@UAEXXZ
     ARTS_IMPORT virtual void Disable();
 
     // ?Enable@UIVScrollBar@@UAEXXZ
     ARTS_IMPORT virtual void Enable();
+
+    // ?Action@UIVScrollBar@@UAEXTeqEvent@@@Z
+    ARTS_IMPORT virtual void Action(eqEvent arg1);
+
+    // ?Switch@UIVScrollBar@@UAEXH@Z
+    ARTS_IMPORT virtual void Switch(i32 arg1);
+
+    // ?SetPosition@UIVScrollBar@@UAEXMM@Z
+    ARTS_IMPORT virtual void SetPosition(f32 arg1, f32 arg2);
+
+    // ?Dec@UIVScrollBar@@QAEMXZ
+    ARTS_IMPORT f32 Dec();
 
     // ?EvalMouseXY@UIVScrollBar@@QAEXMM@Z
     ARTS_IMPORT void EvalMouseXY(f32 arg1, f32 arg2);
@@ -68,9 +77,6 @@ public:
     // ?SetHotSpots@UIVScrollBar@@QAEXXZ
     ARTS_IMPORT void SetHotSpots();
 
-    // ?SetPosition@UIVScrollBar@@UAEXMM@Z
-    ARTS_IMPORT virtual void SetPosition(f32 arg1, f32 arg2);
-
     // ?SetRange@UIVScrollBar@@QAEXMM@Z
     ARTS_IMPORT void SetRange(f32 arg1, f32 arg2);
 
@@ -79,12 +85,6 @@ public:
 
     // ?SetTrough@UIVScrollBar@@QAEXMM@Z
     ARTS_IMPORT void SetTrough(f32 arg1, f32 arg2);
-
-    // ?Switch@UIVScrollBar@@UAEXH@Z
-    ARTS_IMPORT virtual void Switch(i32 arg1);
-
-    // ?Update@UIVScrollBar@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7UIVScrollBar@@6B@

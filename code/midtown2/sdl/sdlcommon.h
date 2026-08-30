@@ -39,20 +39,20 @@ public:
     // ??1sdlCommon@@QAE@XZ
     ARTS_IMPORT ~sdlCommon();
 
-    // ?AllocateState@sdlCommon@@UBEPADXZ
-    ARTS_IMPORT virtual char* AllocateState() const;
-
-    // ?BACKFACE@sdlCommon@@SA_NABVVector3@@0@Z
-    ARTS_IMPORT static bool BACKFACE(const Vector3& arg1, const Vector3& arg2);
-
-    // ?CollideAIPoint@sdlCommon@@UBE_NAAVlvlSegment@@PAVlvlIntersectionPoint@@@Z
-    ARTS_IMPORT virtual bool CollideAIPoint(lvlSegment& arg1, lvlIntersectionPoint* arg2) const;
-
     // ?CollideEdgePoint@sdlCommon@@UBEHAAVlvlSegment@@PAVlvlIntersectionPoint@@H@Z
     ARTS_IMPORT virtual i32 CollideEdgePoint(lvlSegment& arg1, lvlIntersectionPoint* arg2, i32 arg3) const;
 
     // ?CollideProbePoint@sdlCommon@@UBE_NAAVlvlSegment@@PAVlvlIntersectionPoint@@M@Z
     ARTS_IMPORT virtual bool CollideProbePoint(lvlSegment& arg1, lvlIntersectionPoint* arg2, f32 arg3) const;
+
+    // ?CollideAIPoint@sdlCommon@@UBE_NAAVlvlSegment@@PAVlvlIntersectionPoint@@@Z
+    ARTS_IMPORT virtual bool CollideAIPoint(lvlSegment& arg1, lvlIntersectionPoint* arg2) const;
+
+    // ?AllocateState@sdlCommon@@UBEPADXZ
+    ARTS_IMPORT virtual char* AllocateState() const;
+
+    // ?BACKFACE@sdlCommon@@SA_NABVVector3@@0@Z
+    ARTS_IMPORT static bool BACKFACE(const Vector3& arg1, const Vector3& arg2);
 
     // ?UpdateLighting@sdlCommon@@SAXXZ
     ARTS_IMPORT static void UpdateLighting();

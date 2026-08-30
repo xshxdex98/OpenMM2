@@ -36,6 +36,9 @@ public:
     // ??1uiNavBar@@UAE@XZ
     ARTS_IMPORT virtual ~uiNavBar();
 
+    // ?Update@uiNavBar@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?BackUp@uiNavBar@@UAEXXZ
     ARTS_IMPORT virtual void BackUp();
 
@@ -65,9 +68,6 @@ public:
 
     // ?TurnOnPrev@uiNavBar@@QAEXXZ
     ARTS_IMPORT void TurnOnPrev();
-
-    // ?Update@uiNavBar@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     // Members from 0x08C; everything below that belongs to UIMenu.

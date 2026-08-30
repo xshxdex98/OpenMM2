@@ -37,23 +37,23 @@ public:
     // ?Cull@mmWPHUD@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
 
-    // ?Init@mmWPHUD@@QAEXHPAH0H@Z
-    ARTS_IMPORT void Init(i32 arg1, i32* arg2, i32* arg3, i32 arg4);
+    // ?Update@mmWPHUD@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@mmWPHUD@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
 
     // ?PostUpdate@mmWPHUD@@UAEXXZ
     ARTS_IMPORT virtual void PostUpdate();
 
-    // ?Reset@mmWPHUD@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
+    // ?Init@mmWPHUD@@QAEXHPAH0H@Z
+    ARTS_IMPORT void Init(i32 arg1, i32* arg2, i32* arg3, i32 arg4);
 
     // ?SetStandings@mmWPHUD@@QAEXHH@Z
     ARTS_IMPORT void SetStandings(i32 arg1, i32 arg2);
 
     // ?SetWPCleared@mmWPHUD@@QAEXXZ
     ARTS_IMPORT void SetWPCleared();
-
-    // ?Update@mmWPHUD@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7mmWPHUD@@6B@

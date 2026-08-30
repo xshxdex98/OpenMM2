@@ -42,6 +42,21 @@ public:
     // ?AssignSounds@vehPoliceCarAudio@@UAEXXZ
     ARTS_IMPORT virtual void AssignSounds();
 
+    // ?UnAssignSounds@vehPoliceCarAudio@@UAEXH@Z
+    ARTS_IMPORT virtual void UnAssignSounds(i32 arg1);
+
+    // ?UpdateAudio@vehPoliceCarAudio@@UAEXXZ
+    ARTS_IMPORT virtual void UpdateAudio();
+
+    // ?Update@vehPoliceCarAudio@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?SetNon3DParams@vehPoliceCarAudio@@UAEXXZ
+    ARTS_IMPORT virtual void SetNon3DParams();
+
+    // ?Set3DParams@vehPoliceCarAudio@@UAEXXZ
+    ARTS_IMPORT virtual void Set3DParams();
+
     // ?DamageSiren@vehPoliceCarAudio@@QAEXXZ
     ARTS_IMPORT void DamageSiren();
 
@@ -78,26 +93,11 @@ public:
     // ?Set2DPan@vehPoliceCarAudio@@QAEXM@Z
     ARTS_IMPORT void Set2DPan(f32 arg1);
 
-    // ?Set3DParams@vehPoliceCarAudio@@UAEXXZ
-    ARTS_IMPORT virtual void Set3DParams();
-
-    // ?SetNon3DParams@vehPoliceCarAudio@@UAEXXZ
-    ARTS_IMPORT virtual void SetNon3DParams();
-
     // ?StartSiren@vehPoliceCarAudio@@QAEXH@Z
     ARTS_IMPORT void StartSiren(i32 arg1);
 
     // ?StopSiren@vehPoliceCarAudio@@QAEXXZ
     ARTS_IMPORT void StopSiren();
-
-    // ?UnAssignSounds@vehPoliceCarAudio@@UAEXH@Z
-    ARTS_IMPORT virtual void UnAssignSounds(i32 arg1);
-
-    // ?Update@vehPoliceCarAudio@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
-
-    // ?UpdateAudio@vehPoliceCarAudio@@UAEXXZ
-    ARTS_IMPORT virtual void UpdateAudio();
 
     // ?UpdateAudio3D@vehPoliceCarAudio@@QAEHM@Z
     ARTS_IMPORT i32 UpdateAudio3D(f32 arg1);

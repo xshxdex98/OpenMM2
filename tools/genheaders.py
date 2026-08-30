@@ -257,14 +257,61 @@ def emit_members(cls, is_polymorphic):
     return lines, size, ok
 
 
-def sort_key(sym):
-    """Constructor, destructor, then strictly alphabetical.
+def vtable_slots():
+    """{mangled: slot index} for every method that occupies a vftable slot.
 
-    Measured across 298 upstream headers at 0.87 mean sortedness - it is a real rule, and an
-    unusual enough one that matching it is most of what makes a header look native.
+    A symbol's index is the same in every table it appears in, because a derived table repeats its
+    base's layout before adding to it, so one flat map is enough.
     """
-    rank = {"constructor": 0, "destructor": 1}.get(sym["kind"], 2)
-    return (rank, (sym.get("name") or "").lstrip("~").lower(), sym.get("mangled") or "")
+    global _VTABLE_SLOTS
+    if _VTABLE_SLOTS is None:
+        _VTABLE_SLOTS = {}
+        path = os.path.join(ROOT, "data", "vtable_order.json")
+        if os.path.exists(path):
+            with open(path, encoding="utf-8") as f:
+                for entry in json.load(f).values():
+                    for slot in (entry.get("slots") or []):
+                        m = slot.get("symbol")
+                        if m and m not in _VTABLE_SLOTS:
+                            _VTABLE_SLOTS[m] = slot["index"]
+    return _VTABLE_SLOTS
+
+
+_VTABLE_SLOTS = None
+
+
+def sort_key(sym):
+    """Constructor, destructor, virtuals IN VTABLE ORDER, then strictly alphabetical.
+
+    The alphabetical rule was measured across 298 upstream headers at 0.87 mean sortedness - it is
+    a real rule, and an unusual enough one that matching it is most of what makes a header look
+    native. It cannot apply to virtuals, and this is not a style question.
+
+    MSVC assigns vtable slots from the order virtuals are DECLARED. Sorting them alphabetically
+    therefore builds a table whose entries are in the wrong places, and every original call
+    dispatching through it lands on the wrong method - with no link error, no crash at the call
+    site, and nothing to point at afterwards. Aud3DObject is the clearest case in the binary: the
+    required order is AssignSounds, UnAssignSounds, UpdateAudio, Update, SetNon3DParams,
+    Set3DParams, and alphabetical puts four of those six in the wrong slot.
+
+    The destructor keeps its place at rank 1 rather than being sorted with the other virtuals,
+    because that is both the house style and correct: measured over the whole binary, a deleting
+    destructor sits at slot 0 in 231 of the 231 classes that have one. Where a class has a virtual
+    destructor, declaring it first is exactly what the table wants.
+
+    A virtual absent from vtable_order.json sorts alphabetically among the non-virtuals, which is
+    the old behaviour and the safe fallback when the table for a class was never recovered.
+    """
+    kind = sym["kind"]
+    if kind in ("constructor", "destructor"):
+        rank = 0 if kind == "constructor" else 1
+        return (rank, 0, (sym.get("name") or "").lstrip("~").lower(), sym.get("mangled") or "")
+
+    slot = vtable_slots().get(sym.get("mangled")) if sym.get("virtual") else None
+    if slot is not None:
+        return (2, slot, "", sym.get("mangled") or "")
+
+    return (3, 0, (sym.get("name") or "").lower(), sym.get("mangled") or "")
 
 
 def declare(sym):

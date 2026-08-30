@@ -39,20 +39,20 @@ public:
     // ??1dgRoadDecalInstance@@QAE@XZ
     ARTS_IMPORT ~dgRoadDecalInstance();
 
+    // ?GetPosition@dgRoadDecalInstance@@UAEABVVector3@@XZ
+    ARTS_IMPORT virtual const Vector3& GetPosition();
+
+    // ?GetMatrix@dgRoadDecalInstance@@UAEABVMatrix34@@AAV2@@Z
+    ARTS_IMPORT virtual const Matrix34& GetMatrix(Matrix34& arg1);
+
+    // ?SetMatrix@dgRoadDecalInstance@@UAEXABVMatrix34@@@Z
+    ARTS_IMPORT virtual void SetMatrix(const Matrix34& arg1);
+
     // ?Draw@dgRoadDecalInstance@@UAEXH@Z
     ARTS_IMPORT virtual void Draw(i32 arg1);
 
     // ?DrawShadow@dgRoadDecalInstance@@UAEXXZ
     ARTS_IMPORT virtual void DrawShadow();
-
-    // ?GetMatrix@dgRoadDecalInstance@@UAEABVMatrix34@@AAV2@@Z
-    ARTS_IMPORT virtual const Matrix34& GetMatrix(Matrix34& arg1);
-
-    // ?GetPosition@dgRoadDecalInstance@@UAEABVVector3@@XZ
-    ARTS_IMPORT virtual const Vector3& GetPosition();
-
-    // ?SetMatrix@dgRoadDecalInstance@@UAEXABVMatrix34@@@Z
-    ARTS_IMPORT virtual void SetMatrix(const Matrix34& arg1);
 
     // ?SizeOf@dgRoadDecalInstance@@UAEIXZ
     ARTS_IMPORT virtual u32 SizeOf();

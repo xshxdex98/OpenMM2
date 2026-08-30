@@ -40,14 +40,14 @@ public:
     // ?Cull@mmIcons@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
 
+    // ?Update@mmIcons@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?Init@mmIcons@@QAEXPAVMatrix34@@MMH@Z
     ARTS_IMPORT void Init(Matrix34* arg1, f32 arg2, f32 arg3, i32 arg4);
 
     // ?RegisterOpponents@mmIcons@@QAEXPAUOppIconInfo@@HPAX@Z
     ARTS_IMPORT void RegisterOpponents(OppIconInfo* arg1, i32 arg2, void* arg3);
-
-    // ?Update@mmIcons@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     // Members from 0x018; everything below that belongs to asNode.

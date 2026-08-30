@@ -38,35 +38,35 @@ public:
     // ??1aiBanger@@QAE@XZ
     ARTS_IMPORT ~aiBanger();
 
+    // ?Position@aiBanger@@UAEXAAVVector3@@@Z
+    ARTS_IMPORT virtual void Position(Vector3& arg1);
+
+    // ?Speed@aiBanger@@UAEMXZ
+    ARTS_IMPORT virtual f32 Speed();
+
     // ?BreakThreshold@aiBanger@@UAEMXZ
     ARTS_IMPORT virtual f32 BreakThreshold();
-
-    // ?CurrentRdVert@aiBanger@@UAEHXZ
-    ARTS_IMPORT virtual i32 CurrentRdVert();
-
-    // ?CurrentRoadIdx@aiBanger@@UAEHPAPAVaiPath@@QA_NPAH@Z
-    ARTS_IMPORT virtual i32 CurrentRoadIdx(aiPath** arg1, bool*const arg2, i32* arg3);
-
-    // ?Draw@aiBanger@@QAEXXZ
-    ARTS_IMPORT void Draw();
 
     // ?Drivable@aiBanger@@UAEHXZ
     ARTS_IMPORT virtual i32 Drivable();
 
-    // ?IsBlockingTarget@aiBanger@@UAEMABVVector3@@0MM@Z
-    ARTS_IMPORT virtual f32 IsBlockingTarget(const Vector3& arg1, const Vector3& arg2, f32 arg3, f32 arg4);
+    // ?CurrentRoadIdx@aiBanger@@UAEHPAPAVaiPath@@QA_NPAH@Z
+    ARTS_IMPORT virtual i32 CurrentRoadIdx(aiPath** arg1, bool*const arg2, i32* arg3);
 
-    // ?Position@aiBanger@@UAEXAAVVector3@@@Z
-    ARTS_IMPORT virtual void Position(Vector3& arg1);
+    // ?CurrentRdVert@aiBanger@@UAEHXZ
+    ARTS_IMPORT virtual i32 CurrentRdVert();
 
     // ?PreAvoid@aiBanger@@UAEXABVVector3@@0MAAV2@1@Z
     ARTS_IMPORT virtual void PreAvoid(const Vector3& arg1, const Vector3& arg2, f32 arg3, Vector3& arg4, Vector3& arg5);
 
+    // ?IsBlockingTarget@aiBanger@@UAEMABVVector3@@0MM@Z
+    ARTS_IMPORT virtual f32 IsBlockingTarget(const Vector3& arg1, const Vector3& arg2, f32 arg3, f32 arg4);
+
+    // ?Draw@aiBanger@@QAEXXZ
+    ARTS_IMPORT void Draw();
+
     // ?Radius@aiBanger@@QAEMXZ
     ARTS_IMPORT f32 Radius();
-
-    // ?Speed@aiBanger@@UAEMXZ
-    ARTS_IMPORT virtual f32 Speed();
 
 public:
     // Members from 0x008; everything below that belongs to aiObstacle.

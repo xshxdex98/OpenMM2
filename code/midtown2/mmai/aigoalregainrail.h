@@ -37,20 +37,20 @@ public:
     // ??1aiGoalRegainRail@@QAE@XZ
     ARTS_IMPORT ~aiGoalRegainRail();
 
-    // ?Dump@aiGoalRegainRail@@QAEXXZ
-    ARTS_IMPORT void Dump();
-
     // ?Init@aiGoalRegainRail@@UAEXXZ
     ARTS_IMPORT virtual void Init();
-
-    // ?ReplayDebug@aiGoalRegainRail@@QAEXXZ
-    ARTS_IMPORT void ReplayDebug();
 
     // ?Reset@aiGoalRegainRail@@UAEXXZ
     ARTS_IMPORT virtual void Reset();
 
     // ?Update@aiGoalRegainRail@@UAEXXZ
     ARTS_IMPORT virtual void Update();
+
+    // ?Dump@aiGoalRegainRail@@QAEXXZ
+    ARTS_IMPORT void Dump();
+
+    // ?ReplayDebug@aiGoalRegainRail@@QAEXXZ
+    ARTS_IMPORT void ReplayDebug();
 };
 
 // ??_7aiGoalRegainRail@@6B@

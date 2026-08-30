@@ -35,11 +35,11 @@ public:
     // ?Play@mmEffectFF@@UAEHXZ
     ARTS_IMPORT virtual i32 Play();
 
-    // ?SetValues@mmEffectFF@@UAEHMM@Z
-    ARTS_IMPORT virtual i32 SetValues(f32 arg1, f32 arg2);
-
     // ?Stop@mmEffectFF@@UAEHXZ
     ARTS_IMPORT virtual i32 Stop();
+
+    // ?SetValues@mmEffectFF@@UAEHMM@Z
+    ARTS_IMPORT virtual i32 SetValues(f32 arg1, f32 arg2);
 };
 
 // ??_7mmEffectFF@@6B@

@@ -34,14 +34,14 @@ public:
     // ??1gizSailboatMgr@@UAE@XZ
     ARTS_IMPORT virtual ~gizSailboatMgr();
 
-    // ?Init@gizSailboatMgr@@QAE_NPAD00@Z
-    ARTS_IMPORT bool Init(char* arg1, char* arg2, char* arg3);
+    // ?Update@gizSailboatMgr@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
 
     // ?Reset@gizSailboatMgr@@UAEXXZ
     ARTS_IMPORT virtual void Reset();
 
-    // ?Update@gizSailboatMgr@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
+    // ?Init@gizSailboatMgr@@QAE_NPAD00@Z
+    ARTS_IMPORT bool Init(char* arg1, char* arg2, char* arg3);
 
 private:
     // ?ApplyTuning@gizSailboatMgr@@AAEXXZ

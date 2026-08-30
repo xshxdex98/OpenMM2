@@ -36,6 +36,12 @@ public:
     // ??1Dialog_Eject@@UAE@XZ
     ARTS_IMPORT virtual ~Dialog_Eject();
 
+    // ?PreSetup@Dialog_Eject@@UAEXXZ
+    ARTS_IMPORT virtual void PreSetup();
+
+    // ?PostSetup@Dialog_Eject@@UAEXXZ
+    ARTS_IMPORT virtual void PostSetup();
+
     // ?AddName@Dialog_Eject@@QAEXPBDKH@Z
     ARTS_IMPORT void AddName(const char* arg1, ulong arg2, i32 arg3);
 
@@ -53,12 +59,6 @@ public:
 
     // ?PostNames@Dialog_Eject@@QAEXXZ
     ARTS_IMPORT void PostNames();
-
-    // ?PostSetup@Dialog_Eject@@UAEXXZ
-    ARTS_IMPORT virtual void PostSetup();
-
-    // ?PreSetup@Dialog_Eject@@UAEXXZ
-    ARTS_IMPORT virtual void PreSetup();
 
     // ?RemoveName@Dialog_Eject@@QAEXK@Z
     ARTS_IMPORT void RemoveName(ulong arg1);

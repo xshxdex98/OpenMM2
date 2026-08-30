@@ -42,11 +42,14 @@ public:
     // ??1mmTextNode@@UAE@XZ
     ARTS_IMPORT virtual ~mmTextNode();
 
-    // ?AddText@mmTextNode@@QAEHPBXPBULocString@@HMM@Z
-    ARTS_IMPORT i32 AddText(const void* arg1, const LocString* arg2, i32 arg3, f32 arg4, f32 arg5);
-
     // ?Cull@mmTextNode@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
+
+    // ?Update@mmTextNode@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?AddText@mmTextNode@@QAEHPBXPBULocString@@HMM@Z
+    ARTS_IMPORT i32 AddText(const void* arg1, const LocString* arg2, i32 arg3, f32 arg4, f32 arg5);
 
     // ?GetEffects@mmTextNode@@QAEHH@Z
     ARTS_IMPORT i32 GetEffects(i32 arg1);
@@ -89,9 +92,6 @@ public:
 
     // ?SetTextPosition@mmTextNode@@QAEXHMM@Z
     ARTS_IMPORT void SetTextPosition(i32 arg1, f32 arg2, f32 arg3);
-
-    // ?Update@mmTextNode@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     // Members from 0x018; everything below that belongs to asNode.

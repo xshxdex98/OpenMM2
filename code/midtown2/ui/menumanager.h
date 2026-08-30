@@ -50,6 +50,12 @@ public:
     // ??1MenuManager@@UAE@XZ
     ARTS_IMPORT virtual ~MenuManager();
 
+    // ?Update@MenuManager@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?ResChange@MenuManager@@UAEXHH@Z
+    ARTS_IMPORT virtual void ResChange(i32 arg1, i32 arg2);
+
     // ?ActionID@MenuManager@@QAEHH@Z
     ARTS_IMPORT i32 ActionID(i32 arg1);
 
@@ -179,9 +185,6 @@ public:
     // ?RegisterWidgetFocus@MenuManager@@QAEXHMMMMPAVuiWidget@@@Z
     ARTS_IMPORT void RegisterWidgetFocus(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, uiWidget* arg6);
 
-    // ?ResChange@MenuManager@@UAEXHH@Z
-    ARTS_IMPORT virtual void ResChange(i32 arg1, i32 arg2);
-
     // ?ScanGlobalKeys@MenuManager@@QAEHH@Z
     ARTS_IMPORT i32 ScanGlobalKeys(i32 arg1);
 
@@ -208,9 +211,6 @@ public:
 
     // ?TogglePU@MenuManager@@QAEXXZ
     ARTS_IMPORT void TogglePU();
-
-    // ?Update@MenuManager@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
     // ?Instance@MenuManager@@2PAV1@A
     ARTS_IMPORT static MenuManager* Instance;

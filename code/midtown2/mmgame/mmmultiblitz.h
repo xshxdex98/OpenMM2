@@ -38,14 +38,14 @@ public:
     // ??1mmMultiBlitz@@UAE@XZ
     ARTS_IMPORT virtual ~mmMultiBlitz();
 
-    // ?GameMessage@mmMultiBlitz@@UAEXPAUNET_RCXHEAD@@@Z
-    ARTS_IMPORT virtual void GameMessage(NET_RCXHEAD* arg1);
-
-    // ?GetWaypoints@mmMultiBlitz@@UAEPAVmmWaypoints@@XZ
-    ARTS_IMPORT virtual mmWaypoints* GetWaypoints();
+    // ?Reset@mmMultiBlitz@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
 
     // ?Init@mmMultiBlitz@@UAEHXZ
     ARTS_IMPORT virtual i32 Init();
+
+    // ?InitMyPlayer@mmMultiBlitz@@UAEXXZ
+    ARTS_IMPORT virtual void InitMyPlayer();
 
     // ?InitGameObjects@mmMultiBlitz@@UAEXXZ
     ARTS_IMPORT virtual void InitGameObjects();
@@ -53,29 +53,29 @@ public:
     // ?InitHUD@mmMultiBlitz@@UAEXXZ
     ARTS_IMPORT virtual void InitHUD();
 
-    // ?InitMyPlayer@mmMultiBlitz@@UAEXXZ
-    ARTS_IMPORT virtual void InitMyPlayer();
-
-    // ?InitNetworkPlayers@mmMultiBlitz@@UAEXXZ
-    ARTS_IMPORT virtual void InitNetworkPlayers();
-
-    // ?PlayTimerWarning@mmMultiBlitz@@QAEXM@Z
-    ARTS_IMPORT void PlayTimerWarning(f32 arg1);
-
-    // ?Reset@mmMultiBlitz@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?SwitchState@mmMultiBlitz@@UAEXH@Z
-    ARTS_IMPORT virtual void SwitchState(i32 arg1);
-
-    // ?SystemMessage@mmMultiBlitz@@UAEXPAUNETSYS_MSG@@@Z
-    ARTS_IMPORT virtual void SystemMessage(NETSYS_MSG* arg1);
+    // ?UpdateGameInput@mmMultiBlitz@@UAEXH@Z
+    ARTS_IMPORT virtual void UpdateGameInput(i32 arg1);
 
     // ?UpdateGame@mmMultiBlitz@@UAEXXZ
     ARTS_IMPORT virtual void UpdateGame();
 
-    // ?UpdateGameInput@mmMultiBlitz@@UAEXH@Z
-    ARTS_IMPORT virtual void UpdateGameInput(i32 arg1);
+    // ?SwitchState@mmMultiBlitz@@UAEXH@Z
+    ARTS_IMPORT virtual void SwitchState(i32 arg1);
+
+    // ?GetWaypoints@mmMultiBlitz@@UAEPAVmmWaypoints@@XZ
+    ARTS_IMPORT virtual mmWaypoints* GetWaypoints();
+
+    // ?InitNetworkPlayers@mmMultiBlitz@@UAEXXZ
+    ARTS_IMPORT virtual void InitNetworkPlayers();
+
+    // ?SystemMessage@mmMultiBlitz@@UAEXPAUNETSYS_MSG@@@Z
+    ARTS_IMPORT virtual void SystemMessage(NETSYS_MSG* arg1);
+
+    // ?GameMessage@mmMultiBlitz@@UAEXPAUNET_RCXHEAD@@@Z
+    ARTS_IMPORT virtual void GameMessage(NET_RCXHEAD* arg1);
+
+    // ?PlayTimerWarning@mmMultiBlitz@@QAEXM@Z
+    ARTS_IMPORT void PlayTimerWarning(f32 arg1);
 };
 
 // ??_7mmMultiBlitz@@6B@

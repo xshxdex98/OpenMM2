@@ -36,11 +36,26 @@ public:
     // ??1Aud3DObject@@UAE@XZ
     ARTS_IMPORT virtual ~Aud3DObject();
 
-    // ?AddTo3DMgr@Aud3DObject@@QAEXXZ
-    ARTS_IMPORT void AddTo3DMgr();
-
     // ?AssignSounds@Aud3DObject@@UAEXXZ
     ARTS_IMPORT virtual void AssignSounds();
+
+    // ?UnAssignSounds@Aud3DObject@@UAEXH@Z
+    ARTS_IMPORT virtual void UnAssignSounds(i32 arg1);
+
+    // ?UpdateAudio@Aud3DObject@@UAEXXZ
+    ARTS_IMPORT virtual void UpdateAudio();
+
+    // ?Update@Aud3DObject@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?SetNon3DParams@Aud3DObject@@UAEXXZ
+    ARTS_IMPORT virtual void SetNon3DParams();
+
+    // ?Set3DParams@Aud3DObject@@UAEXXZ
+    ARTS_IMPORT virtual void Set3DParams();
+
+    // ?AddTo3DMgr@Aud3DObject@@QAEXXZ
+    ARTS_IMPORT void AddTo3DMgr();
 
     // ?CalcDistToClosestHeads2@Aud3DObject@@QAEXXZ
     ARTS_IMPORT void CalcDistToClosestHeads2();
@@ -87,26 +102,11 @@ public:
     // ?Set3D@Aud3DObject@@QAEX_N@Z
     ARTS_IMPORT void Set3D(bool arg1);
 
-    // ?Set3DParams@Aud3DObject@@UAEXXZ
-    ARTS_IMPORT virtual void Set3DParams();
-
     // ?SetDropOffs@Aud3DObject@@QAEXMM@Z
     ARTS_IMPORT void SetDropOffs(f32 arg1, f32 arg2);
 
-    // ?SetNon3DParams@Aud3DObject@@UAEXXZ
-    ARTS_IMPORT virtual void SetNon3DParams();
-
     // ?SetPositionPtr@Aud3DObject@@QAEXPAVVector3@@@Z
     ARTS_IMPORT void SetPositionPtr(Vector3* arg1);
-
-    // ?UnAssignSounds@Aud3DObject@@UAEXH@Z
-    ARTS_IMPORT virtual void UnAssignSounds(i32 arg1);
-
-    // ?Update@Aud3DObject@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
-
-    // ?UpdateAudio@Aud3DObject@@UAEXXZ
-    ARTS_IMPORT virtual void UpdateAudio();
 
     // ?UpdateNonVirtual@Aud3DObject@@QAEXXZ
     ARTS_IMPORT void UpdateNonVirtual();

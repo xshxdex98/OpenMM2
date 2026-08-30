@@ -34,17 +34,14 @@ public:
     // ??1mmSingleRoam@@UAE@XZ
     ARTS_IMPORT virtual ~mmSingleRoam();
 
-    // ?HitWaterHandler@mmSingleRoam@@UAEXXZ
-    ARTS_IMPORT virtual void HitWaterHandler();
+    // ?Update@mmSingleRoam@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@mmSingleRoam@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
 
     // ?Init@mmSingleRoam@@UAEHXZ
     ARTS_IMPORT virtual i32 Init();
-
-    // ?InitGameObjects@mmSingleRoam@@UAEXXZ
-    ARTS_IMPORT virtual void InitGameObjects();
-
-    // ?InitHUD@mmSingleRoam@@UAEXXZ
-    ARTS_IMPORT virtual void InitHUD();
 
     // ?InitMyPlayer@mmSingleRoam@@UAEXXZ
     ARTS_IMPORT virtual void InitMyPlayer();
@@ -52,17 +49,14 @@ public:
     // ?InitOtherPlayers@mmSingleRoam@@UAEXXZ
     ARTS_IMPORT virtual void InitOtherPlayers();
 
-    // ?NextRace@mmSingleRoam@@UAEXXZ
-    ARTS_IMPORT virtual void NextRace();
+    // ?InitGameObjects@mmSingleRoam@@UAEXXZ
+    ARTS_IMPORT virtual void InitGameObjects();
 
-    // ?Reset@mmSingleRoam@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
+    // ?InitHUD@mmSingleRoam@@UAEXXZ
+    ARTS_IMPORT virtual void InitHUD();
 
-    // ?SwitchState@mmSingleRoam@@UAEXH@Z
-    ARTS_IMPORT virtual void SwitchState(i32 arg1);
-
-    // ?Update@mmSingleRoam@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
+    // ?UpdateGameInput@mmSingleRoam@@UAEXH@Z
+    ARTS_IMPORT virtual void UpdateGameInput(i32 arg1);
 
     // ?UpdateDebugKeyInput@mmSingleRoam@@UAEXH@Z
     ARTS_IMPORT virtual void UpdateDebugKeyInput(i32 arg1);
@@ -70,8 +64,14 @@ public:
     // ?UpdateGame@mmSingleRoam@@UAEXXZ
     ARTS_IMPORT virtual void UpdateGame();
 
-    // ?UpdateGameInput@mmSingleRoam@@UAEXH@Z
-    ARTS_IMPORT virtual void UpdateGameInput(i32 arg1);
+    // ?NextRace@mmSingleRoam@@UAEXXZ
+    ARTS_IMPORT virtual void NextRace();
+
+    // ?HitWaterHandler@mmSingleRoam@@UAEXXZ
+    ARTS_IMPORT virtual void HitWaterHandler();
+
+    // ?SwitchState@mmSingleRoam@@UAEXH@Z
+    ARTS_IMPORT virtual void SwitchState(i32 arg1);
 };
 
 // ??_7mmSingleRoam@@6B@

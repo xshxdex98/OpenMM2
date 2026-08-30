@@ -40,11 +40,14 @@ public:
     // ??0phJoint@@QAE@XZ
     ARTS_IMPORT phJoint();
 
-    // ?ComputeInvMassMatrix@phJoint@@UAEXXZ
-    ARTS_IMPORT virtual void ComputeInvMassMatrix();
+    // ?IsBroken@phJoint@@UBE_NXZ
+    ARTS_IMPORT virtual bool IsBroken() const;
 
     // ?ComputeInvMassMatrix@phJoint@@UBEXPAVphInertialCS@@AAVMatrix34@@ABVVector3@@@Z
     ARTS_IMPORT virtual void ComputeInvMassMatrix(phInertialCS* arg1, Matrix34& arg2, const Vector3& arg3) const;
+
+    // ?ComputeInvMassMatrix@phJoint@@UAEXXZ
+    ARTS_IMPORT virtual void ComputeInvMassMatrix();
 
     // ?ComputeJointForce@phJoint@@UAEXXZ
     ARTS_IMPORT virtual void ComputeJointForce();
@@ -60,9 +63,6 @@ public:
 
     // ?Init@phJoint@@QAEXPAVphInertialCS@@0ABVVector3@@@Z
     ARTS_IMPORT void Init(phInertialCS* arg1, phInertialCS* arg2, const Vector3& arg3);
-
-    // ?IsBroken@phJoint@@UBE_NXZ
-    ARTS_IMPORT virtual bool IsBroken() const;
 
     // ?Reset@phJoint@@QAEXXZ
     ARTS_IMPORT void Reset();

@@ -48,35 +48,23 @@ public:
     // ??1cityLevel@@UAE@XZ
     ARTS_IMPORT virtual ~cityLevel();
 
-    // ?Collide@cityLevel@@UAE_NHAAVlvlSegment@@PAVlvlIntersection@@@Z
-    ARTS_IMPORT virtual bool Collide(i32 arg1, lvlSegment& arg2, lvlIntersection* arg3);
+    // ?Load@cityLevel@@UAEXPBD@Z
+    ARTS_IMPORT virtual void Load(const char* arg1);
+
+    // ?Update@cityLevel@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?PreDraw@cityLevel@@UAEXXZ
+    ARTS_IMPORT virtual void PreDraw();
+
+    // ?PostDraw@cityLevel@@UAEXXZ
+    ARTS_IMPORT virtual void PostDraw();
 
     // ?Draw@cityLevel@@UAEXABVgfxViewport@@I@Z
     ARTS_IMPORT virtual void Draw(const gfxViewport& arg1, u32 arg2);
 
-    // ?EnablePVS@cityLevel@@QAEX_N@Z
-    ARTS_IMPORT void EnablePVS(bool arg1);
-
-    // ?EnableSky@cityLevel@@QAEX_N@Z
-    ARTS_IMPORT void EnableSky(bool arg1);
-
     // ?FindRoomId@cityLevel@@UAEHABVVector3@@H@Z
     ARTS_IMPORT virtual i32 FindRoomId(const Vector3& arg1, i32 arg2);
-
-    // ?GetBound@cityLevel@@UAEPBVlvlLevelBound@@XZ
-    ARTS_IMPORT virtual const lvlLevelBound* GetBound();
-
-    // ?GetBoundSphere@cityLevel@@UAE_NAAVVector4@@H@Z
-    ARTS_IMPORT virtual bool GetBoundSphere(Vector4& arg1, i32 arg2);
-
-    // ?GetEnvMap@cityLevel@@UAEPAVgfxTexture@@HABVVector3@@AAM@Z
-    ARTS_IMPORT virtual gfxTexture* GetEnvMap(i32 arg1, const Vector3& arg2, f32& arg3);
-
-    // ?GetLastStartRoom@cityLevel@@QAEHXZ
-    ARTS_IMPORT i32 GetLastStartRoom();
-
-    // ?GetLightingIntensity@cityLevel@@UBEMABVVector3@@@Z
-    ARTS_IMPORT virtual f32 GetLightingIntensity(const Vector3& arg1) const;
 
     // ?GetNeighborCount@cityLevel@@UAEHH@Z
     ARTS_IMPORT virtual i32 GetNeighborCount(i32 arg1);
@@ -84,23 +72,50 @@ public:
     // ?GetNeighbors@cityLevel@@UAEHPAHH@Z
     ARTS_IMPORT virtual i32 GetNeighbors(i32* arg1, i32 arg2);
 
-    // ?GetRoomPerimeter@cityLevel@@UAEHHQAVVector3@@H@Z
-    ARTS_IMPORT virtual i32 GetRoomPerimeter(i32 arg1, Vector3*const arg2, i32 arg3);
-
     // ?GetTouchedNeighbors@cityLevel@@UAEHPAHHHABVVector4@@@Z
     ARTS_IMPORT virtual i32 GetTouchedNeighbors(i32* arg1, i32 arg2, i32 arg3, const Vector4& arg4);
 
-    // ?GetTouchedNeighborsR@cityLevel@@QAEHPAHHHABVVector4@@H@Z
-    ARTS_IMPORT i32 GetTouchedNeighborsR(i32* arg1, i32 arg2, i32 arg3, const Vector4& arg4, i32 arg5);
+    // ?GetRoomPerimeter@cityLevel@@UAEHHQAVVector3@@H@Z
+    ARTS_IMPORT virtual i32 GetRoomPerimeter(i32 arg1, Vector3*const arg2, i32 arg3);
 
     // ?GetVisitList@cityLevel@@UAEHPAHHABVVector3@@1HH@Z
     ARTS_IMPORT virtual i32 GetVisitList(i32* arg1, i32 arg2, const Vector3& arg3, const Vector3& arg4, i32 arg5, i32 arg6);
 
+    // ?Collide@cityLevel@@UAE_NHAAVlvlSegment@@PAVlvlIntersection@@@Z
+    ARTS_IMPORT virtual bool Collide(i32 arg1, lvlSegment& arg2, lvlIntersection* arg3);
+
+    // ?GetBoundSphere@cityLevel@@UAE_NAAVVector4@@H@Z
+    ARTS_IMPORT virtual bool GetBoundSphere(Vector4& arg1, i32 arg2);
+
+    // ?GetBound@cityLevel@@UAEPBVlvlLevelBound@@XZ
+    ARTS_IMPORT virtual const lvlLevelBound* GetBound();
+
+    // ?SetObjectDetail@cityLevel@@UAEXH@Z
+    ARTS_IMPORT virtual void SetObjectDetail(i32 arg1);
+
     // ?GetWaterLevel@cityLevel@@UBEMH@Z
     ARTS_IMPORT virtual f32 GetWaterLevel(i32 arg1) const;
 
-    // ?Load@cityLevel@@UAEXPBD@Z
-    ARTS_IMPORT virtual void Load(const char* arg1);
+    // ?GetLightingIntensity@cityLevel@@UBEMABVVector3@@@Z
+    ARTS_IMPORT virtual f32 GetLightingIntensity(const Vector3& arg1) const;
+
+    // ?SetPtxHeight@cityLevel@@UAEXAAVasParticles@@@Z
+    ARTS_IMPORT virtual void SetPtxHeight(asParticles& arg1);
+
+    // ?GetEnvMap@cityLevel@@UAEPAVgfxTexture@@HABVVector3@@AAM@Z
+    ARTS_IMPORT virtual gfxTexture* GetEnvMap(i32 arg1, const Vector3& arg2, f32& arg3);
+
+    // ?EnablePVS@cityLevel@@QAEX_N@Z
+    ARTS_IMPORT void EnablePVS(bool arg1);
+
+    // ?EnableSky@cityLevel@@QAEX_N@Z
+    ARTS_IMPORT void EnableSky(bool arg1);
+
+    // ?GetLastStartRoom@cityLevel@@QAEHXZ
+    ARTS_IMPORT i32 GetLastStartRoom();
+
+    // ?GetTouchedNeighborsR@cityLevel@@QAEHPAHHHABVVector4@@H@Z
+    ARTS_IMPORT i32 GetTouchedNeighborsR(i32* arg1, i32 arg2, i32 arg3, const Vector4& arg4, i32 arg5);
 
     // ?LoadPath@cityLevel@@SAXPBDABVMatrix34@@_N@Z
     ARTS_IMPORT static void LoadPath(const char* arg1, const Matrix34& arg2, bool arg3);
@@ -108,23 +123,8 @@ public:
     // ?LoadProp@cityLevel@@SAXHPBDABVMatrix34@@@Z
     ARTS_IMPORT static void LoadProp(i32 arg1, const char* arg2, const Matrix34& arg3);
 
-    // ?PostDraw@cityLevel@@UAEXXZ
-    ARTS_IMPORT virtual void PostDraw();
-
-    // ?PreDraw@cityLevel@@UAEXXZ
-    ARTS_IMPORT virtual void PreDraw();
-
-    // ?SetObjectDetail@cityLevel@@UAEXH@Z
-    ARTS_IMPORT virtual void SetObjectDetail(i32 arg1);
-
-    // ?SetPtxHeight@cityLevel@@UAEXAAVasParticles@@@Z
-    ARTS_IMPORT virtual void SetPtxHeight(asParticles& arg1);
-
     // ?SetupLighting@cityLevel@@SAXABVVector3@@@Z
     ARTS_IMPORT static void SetupLighting(const Vector3& arg1);
-
-    // ?Update@cityLevel@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
     // ?sm_SDLVLowThresh@cityLevel@@2MA
     ARTS_IMPORT static f32 sm_SDLVLowThresh;

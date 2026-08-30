@@ -40,8 +40,44 @@ public:
     // ??1CFileStream@@QAE@XZ
     ARTS_IMPORT ~CFileStream();
 
+    // ?QueryInterface@CFileStream@@UAGJABU_GUID@@PAPAX@Z
+    ARTS_IMPORT virtual ilong QueryInterface(const _GUID& arg1, void** arg2);
+
     // ?AddRef@CFileStream@@UAGKXZ
     ARTS_IMPORT virtual ulong AddRef();
+
+    // ?Release@CFileStream@@UAGKXZ
+    ARTS_IMPORT virtual ulong Release();
+
+    // ?Read@CFileStream@@UAGJPAXKPAK@Z
+    ARTS_IMPORT virtual ilong Read(void* arg1, ulong arg2, ulong* arg3);
+
+    // ?Write@CFileStream@@UAGJPBXKPAK@Z
+    ARTS_IMPORT virtual ilong Write(const void* arg1, ulong arg2, ulong* arg3);
+
+    // ?Seek@CFileStream@@UAGJT_LARGE_INTEGER@@KPAT_ULARGE_INTEGER@@@Z
+    ARTS_IMPORT virtual ilong Seek(_LARGE_INTEGER arg1, ulong arg2, _ULARGE_INTEGER* arg3);
+
+    // ?SetSize@CFileStream@@UAGJT_ULARGE_INTEGER@@@Z
+    ARTS_IMPORT virtual ilong SetSize(_ULARGE_INTEGER arg1);
+
+    // ?CopyTo@CFileStream@@UAGJPAUIStream@@T_ULARGE_INTEGER@@PAT3@2@Z
+    ARTS_IMPORT virtual ilong CopyTo(IStream* arg1, _ULARGE_INTEGER arg2, _ULARGE_INTEGER* arg3, _ULARGE_INTEGER* arg4);
+
+    // ?Commit@CFileStream@@UAGJK@Z
+    ARTS_IMPORT virtual ilong Commit(ulong arg1);
+
+    // ?Revert@CFileStream@@UAGJXZ
+    ARTS_IMPORT virtual ilong Revert();
+
+    // ?LockRegion@CFileStream@@UAGJT_ULARGE_INTEGER@@0K@Z
+    ARTS_IMPORT virtual ilong LockRegion(_ULARGE_INTEGER arg1, _ULARGE_INTEGER arg2, ulong arg3);
+
+    // ?UnlockRegion@CFileStream@@UAGJT_ULARGE_INTEGER@@0K@Z
+    ARTS_IMPORT virtual ilong UnlockRegion(_ULARGE_INTEGER arg1, _ULARGE_INTEGER arg2, ulong arg3);
+
+    // ?Stat@CFileStream@@UAGJPAUtagSTATSTG@@K@Z
+    ARTS_IMPORT virtual ilong Stat(tagSTATSTG* arg1, ulong arg2);
 
     // ?Clone@CFileStream@@UAGJPAPAUIStream@@@Z
     ARTS_IMPORT virtual ilong Clone(IStream** arg1);
@@ -49,53 +85,17 @@ public:
     // ?Close@CFileStream@@QAEJXZ
     ARTS_IMPORT ilong Close();
 
-    // ?Commit@CFileStream@@UAGJK@Z
-    ARTS_IMPORT virtual ilong Commit(ulong arg1);
-
-    // ?CopyTo@CFileStream@@UAGJPAUIStream@@T_ULARGE_INTEGER@@PAT3@2@Z
-    ARTS_IMPORT virtual ilong CopyTo(IStream* arg1, _ULARGE_INTEGER arg2, _ULARGE_INTEGER* arg3, _ULARGE_INTEGER* arg4);
-
     // ?GetLoader@CFileStream@@UAGJPAPAUIDirectMusicLoader@@@Z
     ARTS_IMPORT virtual ilong GetLoader(IDirectMusicLoader** arg1);
 
     // ?GetNextPtr@CFileStream@@QAEPAV1@XZ
     ARTS_IMPORT CFileStream* GetNextPtr();
 
-    // ?LockRegion@CFileStream@@UAGJT_ULARGE_INTEGER@@0K@Z
-    ARTS_IMPORT virtual ilong LockRegion(_ULARGE_INTEGER arg1, _ULARGE_INTEGER arg2, ulong arg3);
-
     // ?Open@CFileStream@@QAEJPAGK@Z
     ARTS_IMPORT ilong Open(u16* arg1, ulong arg2);
 
-    // ?QueryInterface@CFileStream@@UAGJABU_GUID@@PAPAX@Z
-    ARTS_IMPORT virtual ilong QueryInterface(const _GUID& arg1, void** arg2);
-
-    // ?Read@CFileStream@@UAGJPAXKPAK@Z
-    ARTS_IMPORT virtual ilong Read(void* arg1, ulong arg2, ulong* arg3);
-
-    // ?Release@CFileStream@@UAGKXZ
-    ARTS_IMPORT virtual ulong Release();
-
-    // ?Revert@CFileStream@@UAGJXZ
-    ARTS_IMPORT virtual ilong Revert();
-
-    // ?Seek@CFileStream@@UAGJT_LARGE_INTEGER@@KPAT_ULARGE_INTEGER@@@Z
-    ARTS_IMPORT virtual ilong Seek(_LARGE_INTEGER arg1, ulong arg2, _ULARGE_INTEGER* arg3);
-
     // ?SetNextPtr@CFileStream@@QAEXPAV1@@Z
     ARTS_IMPORT void SetNextPtr(CFileStream* arg1);
-
-    // ?SetSize@CFileStream@@UAGJT_ULARGE_INTEGER@@@Z
-    ARTS_IMPORT virtual ilong SetSize(_ULARGE_INTEGER arg1);
-
-    // ?Stat@CFileStream@@UAGJPAUtagSTATSTG@@K@Z
-    ARTS_IMPORT virtual ilong Stat(tagSTATSTG* arg1, ulong arg2);
-
-    // ?UnlockRegion@CFileStream@@UAGJT_ULARGE_INTEGER@@0K@Z
-    ARTS_IMPORT virtual ilong UnlockRegion(_ULARGE_INTEGER arg1, _ULARGE_INTEGER arg2, ulong arg3);
-
-    // ?Write@CFileStream@@UAGJPBXKPAK@Z
-    ARTS_IMPORT virtual ilong Write(const void* arg1, ulong arg2, ulong* arg3);
 };
 
 // ??_7CFileStream@@6BIDirectMusicGetLoader@@@

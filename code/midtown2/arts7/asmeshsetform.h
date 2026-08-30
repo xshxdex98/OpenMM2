@@ -41,6 +41,9 @@ public:
     // ?Cull@asMeshSetForm@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
 
+    // ?Update@asMeshSetForm@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?EnableAlpha@asMeshSetForm@@QAEX_N@Z
     ARTS_IMPORT void EnableAlpha(bool arg1);
 
@@ -55,9 +58,6 @@ public:
 
     // ?SetZWrite@asMeshSetForm@@QAEX_N@Z
     ARTS_IMPORT void SetZWrite(bool arg1);
-
-    // ?Update@asMeshSetForm@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     // Members from 0x018; everything below that belongs to asNode.

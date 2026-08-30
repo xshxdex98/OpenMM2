@@ -37,23 +37,20 @@ public:
     // ??1mmCompReplay@@UAE@XZ
     ARTS_IMPORT virtual ~mmCompReplay();
 
-    // ?Box@mmCompReplay@@UAEXHPAVmmTextNode@@H@Z
-    ARTS_IMPORT virtual void Box(i32 arg1, mmTextNode* arg2, i32 arg3);
-
     // ?Cull@mmCompReplay@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
+
+    // ?Update@mmCompReplay@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@mmCompReplay@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
 
     // ?Highlight@mmCompReplay@@UAEXPAVmmTextNode@@H@Z
     ARTS_IMPORT virtual void Highlight(mmTextNode* arg1, i32 arg2);
 
-    // ?Init@mmCompReplay@@QAEXPAD@Z
-    ARTS_IMPORT void Init(char* arg1);
-
-    // ?InitTitle@mmCompReplay@@QAEXMMMMPAULocString@@@Z
-    ARTS_IMPORT void InitTitle(f32 arg1, f32 arg2, f32 arg3, f32 arg4, LocString* arg5);
-
-    // ?Reset@mmCompReplay@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
+    // ?Box@mmCompReplay@@UAEXHPAVmmTextNode@@H@Z
+    ARTS_IMPORT virtual void Box(i32 arg1, mmTextNode* arg2, i32 arg3);
 
     // ?SetGeometry@mmCompReplay@@UAEXMMMM@Z
     ARTS_IMPORT virtual void SetGeometry(f32 arg1, f32 arg2, f32 arg3, f32 arg4);
@@ -61,14 +58,17 @@ public:
     // ?SetPosition@mmCompReplay@@UAEXPAVmmTextNode@@HM@Z
     ARTS_IMPORT virtual void SetPosition(mmTextNode* arg1, i32 arg2, f32 arg3);
 
+    // ?Init@mmCompReplay@@QAEXPAD@Z
+    ARTS_IMPORT void Init(char* arg1);
+
+    // ?InitTitle@mmCompReplay@@QAEXMMMMPAULocString@@@Z
+    ARTS_IMPORT void InitTitle(f32 arg1, f32 arg2, f32 arg3, f32 arg4, LocString* arg5);
+
     // ?SetSubwidgetGeometry@mmCompReplay@@QAEXXZ
     ARTS_IMPORT void SetSubwidgetGeometry();
 
     // ?SetTitleGeometry@mmCompReplay@@QAEXXZ
     ARTS_IMPORT void SetTitleGeometry();
-
-    // ?Update@mmCompReplay@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7mmCompReplay@@6B@

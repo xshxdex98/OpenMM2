@@ -37,26 +37,26 @@ public:
     // ??1aiGoalAvoidPlayer@@QAE@XZ
     ARTS_IMPORT ~aiGoalAvoidPlayer();
 
-    // ?Context@aiGoalAvoidPlayer@@QAEHXZ
-    ARTS_IMPORT i32 Context();
-
-    // ?Dump@aiGoalAvoidPlayer@@QAEXXZ
-    ARTS_IMPORT void Dump();
-
     // ?Init@aiGoalAvoidPlayer@@UAEXXZ
     ARTS_IMPORT virtual void Init();
-
-    // ?Priority@aiGoalAvoidPlayer@@QAEHXZ
-    ARTS_IMPORT i32 Priority();
-
-    // ?ReplayDebug@aiGoalAvoidPlayer@@QAEXXZ
-    ARTS_IMPORT void ReplayDebug();
 
     // ?Reset@aiGoalAvoidPlayer@@UAEXXZ
     ARTS_IMPORT virtual void Reset();
 
     // ?Update@aiGoalAvoidPlayer@@UAEXXZ
     ARTS_IMPORT virtual void Update();
+
+    // ?Context@aiGoalAvoidPlayer@@QAEHXZ
+    ARTS_IMPORT i32 Context();
+
+    // ?Dump@aiGoalAvoidPlayer@@QAEXXZ
+    ARTS_IMPORT void Dump();
+
+    // ?Priority@aiGoalAvoidPlayer@@QAEHXZ
+    ARTS_IMPORT i32 Priority();
+
+    // ?ReplayDebug@aiGoalAvoidPlayer@@QAEXXZ
+    ARTS_IMPORT void ReplayDebug();
 
 private:
     // ?AvoidPlayer@aiGoalAvoidPlayer@@AAEXXZ

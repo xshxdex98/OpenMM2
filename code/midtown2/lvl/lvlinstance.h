@@ -41,32 +41,29 @@ public:
     // ??1lvlInstance@@QAE@XZ
     ARTS_IMPORT ~lvlInstance();
 
-    // ?AddGeom@lvlInstance@@QAEHPBD0H@Z
-    ARTS_IMPORT i32 AddGeom(const char* arg1, const char* arg2, i32 arg3);
+    // ?Reset@lvlInstance@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
 
-    // ?AddSphere@lvlInstance@@SAHM@Z
-    ARTS_IMPORT static i32 AddSphere(f32 arg1);
+    // ?IsVisible@lvlInstance@@UAEHABVgfxViewport@@@Z
+    ARTS_IMPORT virtual i32 IsVisible(const gfxViewport& arg1);
+
+    // ?SetVariant@lvlInstance@@UAEXH@Z
+    ARTS_IMPORT virtual void SetVariant(i32 arg1);
+
+    // ?GetRadius@lvlInstance@@UAE?BMXZ
+    ARTS_IMPORT virtual const f32 GetRadius();
+
+    // ?GetEntity@lvlInstance@@UAEPAVdgPhysEntity@@XZ
+    ARTS_IMPORT virtual dgPhysEntity* GetEntity();
 
     // ?AttachEntity@lvlInstance@@UAEPAVdgPhysEntity@@XZ
     ARTS_IMPORT virtual dgPhysEntity* AttachEntity();
 
-    // ?BeginGeom@lvlInstance@@QAE_NPBD0H@Z
-    ARTS_IMPORT bool BeginGeom(const char* arg1, const char* arg2, i32 arg3);
+    // ?GetVelocity@lvlInstance@@UAEABVVector3@@XZ
+    ARTS_IMPORT virtual const Vector3& GetVelocity();
 
     // ?Detach@lvlInstance@@UAEXXZ
     ARTS_IMPORT virtual void Detach();
-
-    // ?DrawGlow@lvlInstance@@UAEXXZ
-    ARTS_IMPORT virtual void DrawGlow();
-
-    // ?DrawPhysics@lvlInstance@@UAEXABVVector3@@@Z
-    ARTS_IMPORT virtual void DrawPhysics(const Vector3& arg1);
-
-    // ?DrawReflected@lvlInstance@@UAEXM@Z
-    ARTS_IMPORT virtual void DrawReflected(f32 arg1);
-
-    // ?DrawReflectedParts@lvlInstance@@UAEXH@Z
-    ARTS_IMPORT virtual void DrawReflectedParts(i32 arg1);
 
     // ?DrawShadow@lvlInstance@@UAEXXZ
     ARTS_IMPORT virtual void DrawShadow();
@@ -74,32 +71,56 @@ public:
     // ?DrawShadowMap@lvlInstance@@UAEXXZ
     ARTS_IMPORT virtual void DrawShadowMap();
 
-    // ?EndGeom@lvlInstance@@QAEXXZ
-    ARTS_IMPORT void EndGeom();
+    // ?DrawGlow@lvlInstance@@UAEXXZ
+    ARTS_IMPORT virtual void DrawGlow();
 
-    // ?GetBound@lvlInstance@@UAEPBVphBound@@H@Z
-    ARTS_IMPORT virtual const phBound* GetBound(i32 arg1);
+    // ?DrawReflected@lvlInstance@@UAEXM@Z
+    ARTS_IMPORT virtual void DrawReflected(f32 arg1);
 
-    // ?GetBoundSphere@lvlInstance@@QAEAAVVector4@@AAV2@@Z
-    ARTS_IMPORT Vector4& GetBoundSphere(Vector4& arg1);
+    // ?DrawReflectedParts@lvlInstance@@UAEXH@Z
+    ARTS_IMPORT virtual void DrawReflectedParts(i32 arg1);
 
-    // ?GetEntity@lvlInstance@@UAEPAVdgPhysEntity@@XZ
-    ARTS_IMPORT virtual dgPhysEntity* GetEntity();
+    // ?Init@lvlInstance@@UAEHPBDABVMatrix34@@H@Z
+    ARTS_IMPORT virtual i32 Init(const char* arg1, const Matrix34& arg2, i32 arg3);
 
-    // ?GetLightInfo@lvlInstance@@UAEXHPAVcltLight@@@Z
-    ARTS_IMPORT virtual void GetLightInfo(i32 arg1, cltLight* arg2);
+    // ?IsLandmark@lvlInstance@@UAE_NXZ
+    ARTS_IMPORT virtual bool IsLandmark();
+
+    // ?IsCollidable@lvlInstance@@UAE_NXZ
+    ARTS_IMPORT virtual bool IsCollidable();
+
+    // ?IsTerrainCollidable@lvlInstance@@UAE_NXZ
+    ARTS_IMPORT virtual bool IsTerrainCollidable();
 
     // ?GetNumLightSources@lvlInstance@@UAEHXZ
     ARTS_IMPORT virtual i32 GetNumLightSources();
 
-    // ?GetRadius@lvlInstance@@UAE?BMXZ
-    ARTS_IMPORT virtual const f32 GetRadius();
+    // ?GetLightInfo@lvlInstance@@UAEXHPAVcltLight@@@Z
+    ARTS_IMPORT virtual void GetLightInfo(i32 arg1, cltLight* arg2);
 
-    // ?GetVelocity@lvlInstance@@UAEABVVector3@@XZ
-    ARTS_IMPORT virtual const Vector3& GetVelocity();
+    // ?SetupGfxLights@lvlInstance@@UAEHABVMatrix34@@@Z
+    ARTS_IMPORT virtual i32 SetupGfxLights(const Matrix34& arg1);
 
-    // ?Init@lvlInstance@@UAEHPBDABVMatrix34@@H@Z
-    ARTS_IMPORT virtual i32 Init(const char* arg1, const Matrix34& arg2, i32 arg3);
+    // ?GetBound@lvlInstance@@UAEPBVphBound@@H@Z
+    ARTS_IMPORT virtual const phBound* GetBound(i32 arg1);
+
+    // ?AddGeom@lvlInstance@@QAEHPBD0H@Z
+    ARTS_IMPORT i32 AddGeom(const char* arg1, const char* arg2, i32 arg3);
+
+    // ?AddSphere@lvlInstance@@SAHM@Z
+    ARTS_IMPORT static i32 AddSphere(f32 arg1);
+
+    // ?BeginGeom@lvlInstance@@QAE_NPBD0H@Z
+    ARTS_IMPORT bool BeginGeom(const char* arg1, const char* arg2, i32 arg3);
+
+    // ?DrawPhysics@lvlInstance@@UAEXABVVector3@@@Z
+    ARTS_IMPORT virtual void DrawPhysics(const Vector3& arg1);
+
+    // ?EndGeom@lvlInstance@@QAEXXZ
+    ARTS_IMPORT void EndGeom();
+
+    // ?GetBoundSphere@lvlInstance@@QAEAAVVector4@@AAV2@@Z
+    ARTS_IMPORT Vector4& GetBoundSphere(Vector4& arg1);
 
     // ?InitBoundTerrain@lvlInstance@@QAE_NPBD@Z
     ARTS_IMPORT bool InitBoundTerrain(const char* arg1);
@@ -112,18 +133,6 @@ public:
 
     // ?InitGhostBound@lvlInstance@@QAE_NPAVphBound@@PBVVector3@@H@Z
     ARTS_IMPORT bool InitGhostBound(phBound* arg1, const Vector3* arg2, i32 arg3);
-
-    // ?IsCollidable@lvlInstance@@UAE_NXZ
-    ARTS_IMPORT virtual bool IsCollidable();
-
-    // ?IsLandmark@lvlInstance@@UAE_NXZ
-    ARTS_IMPORT virtual bool IsLandmark();
-
-    // ?IsTerrainCollidable@lvlInstance@@UAE_NXZ
-    ARTS_IMPORT virtual bool IsTerrainCollidable();
-
-    // ?IsVisible@lvlInstance@@UAEHABVgfxViewport@@@Z
-    ARTS_IMPORT virtual i32 IsVisible(const gfxViewport& arg1);
 
     // ?LoadBoundOnLastEntry@lvlInstance@@QAE_NPBD@Z
     ARTS_IMPORT bool LoadBoundOnLastEntry(const char* arg1);
@@ -143,9 +152,6 @@ public:
     // ?PreLoadShader@lvlInstance@@QAEXH@Z
     ARTS_IMPORT void PreLoadShader(i32 arg1);
 
-    // ?Reset@lvlInstance@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?ResetAll@lvlInstance@@SAXXZ
     ARTS_IMPORT static void ResetAll();
 
@@ -154,12 +160,6 @@ public:
 
     // ?SetShadowBillboardMtx@lvlInstance@@SAXAAVMatrix44@@@Z
     ARTS_IMPORT static void SetShadowBillboardMtx(Matrix44& arg1);
-
-    // ?SetupGfxLights@lvlInstance@@UAEHABVMatrix34@@@Z
-    ARTS_IMPORT virtual i32 SetupGfxLights(const Matrix34& arg1);
-
-    // ?SetVariant@lvlInstance@@UAEXH@Z
-    ARTS_IMPORT virtual void SetVariant(i32 arg1);
 
     // ?sm_ObjNoDrawThresh@lvlInstance@@2MA
     ARTS_IMPORT static f32 sm_ObjNoDrawThresh;

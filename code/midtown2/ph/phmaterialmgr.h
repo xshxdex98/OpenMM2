@@ -34,6 +34,12 @@ public:
     // ??1phMaterialMgr@@QAE@XZ
     ARTS_IMPORT ~phMaterialMgr();
 
+    // ?Load@phMaterialMgr@@UAEPAVphMaterial@@PAVStream@@@Z
+    ARTS_IMPORT virtual phMaterial* Load(Stream* arg1);
+
+    // ?Load@phMaterialMgr@@UAEPAVphMaterial@@PAVdatAsciiTokenizer@@@Z
+    ARTS_IMPORT virtual phMaterial* Load(datAsciiTokenizer* arg1);
+
     // ?AddToTable@phMaterialMgr@@QAEXPAVphMaterial@@@Z
     ARTS_IMPORT void AddToTable(phMaterial* arg1);
 
@@ -48,12 +54,6 @@ public:
 
     // ?FindNameOfIndex@phMaterialMgr@@QAEPBDH@Z
     ARTS_IMPORT const char* FindNameOfIndex(i32 arg1);
-
-    // ?Load@phMaterialMgr@@UAEPAVphMaterial@@PAVStream@@@Z
-    ARTS_IMPORT virtual phMaterial* Load(Stream* arg1);
-
-    // ?Load@phMaterialMgr@@UAEPAVphMaterial@@PAVdatAsciiTokenizer@@@Z
-    ARTS_IMPORT virtual phMaterial* Load(datAsciiTokenizer* arg1);
 
     // ?LoadTable@phMaterialMgr@@QAE_NPBD@Z
     ARTS_IMPORT bool LoadTable(const char* arg1);

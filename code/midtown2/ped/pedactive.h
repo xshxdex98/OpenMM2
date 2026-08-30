@@ -39,14 +39,11 @@ public:
     // ??1pedActive@@UAE@XZ
     ARTS_IMPORT virtual ~pedActive();
 
-    // ?Activate@pedActive@@UAEXPAVaiPedestrianInstance@@PAVpedActiveData@@@Z
-    ARTS_IMPORT virtual void Activate(aiPedestrianInstance* arg1, pedActiveData* arg2);
+    // ?Update@pedActive@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
 
-    // ?Deactivate@pedActive@@UAEXXZ
-    ARTS_IMPORT virtual void Deactivate();
-
-    // ?FirstImpactCallback@pedActive@@UAEXXZ
-    ARTS_IMPORT virtual void FirstImpactCallback();
+    // ?PostUpdate@pedActive@@UAEXXZ
+    ARTS_IMPORT virtual void PostUpdate();
 
     // ?GetICS@pedActive@@UAEPAVphInertialCS@@XZ
     ARTS_IMPORT virtual phInertialCS* GetICS();
@@ -54,14 +51,20 @@ public:
     // ?GetInst@pedActive@@UAEPAVlvlInstance@@XZ
     ARTS_IMPORT virtual lvlInstance* GetInst();
 
-    // ?IsAsleep@pedActive@@QAEHXZ
-    ARTS_IMPORT i32 IsAsleep();
-
-    // ?PostUpdate@pedActive@@UAEXXZ
-    ARTS_IMPORT virtual void PostUpdate();
+    // ?FirstImpactCallback@pedActive@@UAEXXZ
+    ARTS_IMPORT virtual void FirstImpactCallback();
 
     // ?Reset@pedActive@@UAEXXZ
     ARTS_IMPORT virtual void Reset();
+
+    // ?Activate@pedActive@@UAEXPAVaiPedestrianInstance@@PAVpedActiveData@@@Z
+    ARTS_IMPORT virtual void Activate(aiPedestrianInstance* arg1, pedActiveData* arg2);
+
+    // ?Deactivate@pedActive@@UAEXXZ
+    ARTS_IMPORT virtual void Deactivate();
+
+    // ?IsAsleep@pedActive@@QAEHXZ
+    ARTS_IMPORT i32 IsAsleep();
 
     // ?SetRagdollBlend@pedActive@@QAEXM@Z
     ARTS_IMPORT void SetRagdollBlend(f32 arg1);
@@ -71,9 +74,6 @@ public:
 
     // ?StopRagdoll@pedActive@@QAEXXZ
     ARTS_IMPORT void StopRagdoll();
-
-    // ?Update@pedActive@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7pedActive@@6B@

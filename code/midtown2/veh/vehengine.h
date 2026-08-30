@@ -37,6 +37,18 @@ public:
     // ??1vehEngine@@UAE@XZ
     ARTS_IMPORT virtual ~vehEngine();
 
+    // ?Update@vehEngine@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@vehEngine@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
+    // ?FileIO@vehEngine@@UAEXAAVdatParser@@@Z
+    ARTS_IMPORT virtual void FileIO(datParser& arg1);
+
+    // ?GetClassName@vehEngine@@UAEPADXZ
+    ARTS_IMPORT virtual char* GetClassName();
+
     // ?CalcHPAtFullThrottle@vehEngine@@QAEMM@Z
     ARTS_IMPORT f32 CalcHPAtFullThrottle(f32 arg1);
 
@@ -52,20 +64,8 @@ public:
     // ?ComputeConstants@vehEngine@@QAEXXZ
     ARTS_IMPORT void ComputeConstants();
 
-    // ?FileIO@vehEngine@@UAEXAAVdatParser@@@Z
-    ARTS_IMPORT virtual void FileIO(datParser& arg1);
-
-    // ?GetClassName@vehEngine@@UAEPADXZ
-    ARTS_IMPORT virtual char* GetClassName();
-
     // ?Init@vehEngine@@QAEXPAVvehCarSim@@PBD1@Z
     ARTS_IMPORT void Init(vehCarSim* arg1, const char* arg2, const char* arg3);
-
-    // ?Reset@vehEngine@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?Update@vehEngine@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7vehEngine@@6B@

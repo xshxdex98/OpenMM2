@@ -37,17 +37,17 @@ public:
     // ??1mmArrow@@UAE@XZ
     ARTS_IMPORT virtual ~mmArrow();
 
-    // ?Init@mmArrow@@QAEXPAVMatrix34@@@Z
-    ARTS_IMPORT void Init(Matrix34* arg1);
+    // ?Update@mmArrow@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
 
     // ?Reset@mmArrow@@UAEXXZ
     ARTS_IMPORT virtual void Reset();
 
+    // ?Init@mmArrow@@QAEXPAVMatrix34@@@Z
+    ARTS_IMPORT void Init(Matrix34* arg1);
+
     // ?SetInterest@mmArrow@@QAEXPAVVector3@@@Z
     ARTS_IMPORT void SetInterest(Vector3* arg1);
-
-    // ?Update@mmArrow@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 private:
     // ?ReColorArrow@mmArrow@@AAEXH@Z

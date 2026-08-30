@@ -37,17 +37,17 @@ public:
     // ??1vehSplash@@UAE@XZ
     ARTS_IMPORT virtual ~vehSplash();
 
+    // ?Update@vehSplash@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@vehSplash@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?Activate@vehSplash@@QAEXM@Z
     ARTS_IMPORT void Activate(f32 arg1);
 
     // ?Init@vehSplash@@QAEXPAVphInertialCS@@ABVVector3@@1@Z
     ARTS_IMPORT void Init(phInertialCS* arg1, const Vector3& arg2, const Vector3& arg3);
-
-    // ?Reset@vehSplash@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?Update@vehSplash@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7vehSplash@@6B@

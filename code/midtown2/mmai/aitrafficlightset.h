@@ -37,14 +37,14 @@ public:
     // ??1aiTrafficLightSet@@UAE@XZ
     ARTS_IMPORT virtual ~aiTrafficLightSet();
 
+    // ?Update@aiTrafficLightSet@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?Reset@aiTrafficLightSet@@UAEXXZ
     ARTS_IMPORT virtual void Reset();
 
     // ?SetFourWay@aiTrafficLightSet@@QAEXXZ
     ARTS_IMPORT void SetFourWay();
-
-    // ?Update@aiTrafficLightSet@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     static i16& Access_ObjCount() { return ObjCount; }

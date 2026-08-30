@@ -38,14 +38,14 @@ public:
     // ??1vehWheelCheap@@UAE@XZ
     ARTS_IMPORT virtual ~vehWheelCheap();
 
-    // ?Init@vehWheelCheap@@QAEXPAVVector3@@PAVaiVehicleData@@PAVphInertialCS@@@Z
-    ARTS_IMPORT void Init(Vector3* arg1, aiVehicleData* arg2, phInertialCS* arg3);
+    // ?Update@vehWheelCheap@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
 
     // ?Reset@vehWheelCheap@@UAEXXZ
     ARTS_IMPORT virtual void Reset();
 
-    // ?Update@vehWheelCheap@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
+    // ?Init@vehWheelCheap@@QAEXPAVVector3@@PAVaiVehicleData@@PAVphInertialCS@@@Z
+    ARTS_IMPORT void Init(Vector3* arg1, aiVehicleData* arg2, phInertialCS* arg3);
 };
 
 // ??_7vehWheelCheap@@6B@

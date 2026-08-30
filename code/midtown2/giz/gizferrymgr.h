@@ -37,14 +37,14 @@ public:
     // ?Cull@gizFerryMgr@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
 
-    // ?Init@gizFerryMgr@@QAE_NPAD00@Z
-    ARTS_IMPORT bool Init(char* arg1, char* arg2, char* arg3);
+    // ?Update@gizFerryMgr@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
 
     // ?Reset@gizFerryMgr@@UAEXXZ
     ARTS_IMPORT virtual void Reset();
 
-    // ?Update@gizFerryMgr@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
+    // ?Init@gizFerryMgr@@QAE_NPAD00@Z
+    ARTS_IMPORT bool Init(char* arg1, char* arg2, char* arg3);
 
 private:
     // ?ApplyTuning@gizFerryMgr@@AAEXXZ

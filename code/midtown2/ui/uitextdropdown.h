@@ -40,23 +40,29 @@ public:
     // ??1UITextDropdown@@UAE@XZ
     ARTS_IMPORT virtual ~UITextDropdown();
 
+    // ?Cull@UITextDropdown@@UAEXXZ
+    ARTS_IMPORT virtual void Cull();
+
+    // ?Update@UITextDropdown@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?Action@UITextDropdown@@UAEXTeqEvent@@@Z
     ARTS_IMPORT virtual void Action(eqEvent arg1);
+
+    // ?CaptureAction@UITextDropdown@@UAEXTeqEvent@@@Z
+    ARTS_IMPORT virtual void CaptureAction(eqEvent arg1);
+
+    // ?Switch@UITextDropdown@@UAEXH@Z
+    ARTS_IMPORT virtual void Switch(i32 arg1);
+
+    // ?GetScreenHeight@UITextDropdown@@UAEMXZ
+    ARTS_IMPORT virtual f32 GetScreenHeight();
 
     // ?AnyEnabled@UITextDropdown@@QAEHXZ
     ARTS_IMPORT i32 AnyEnabled();
 
     // ?AssignString@UITextDropdown@@QAEXVstring@@@Z
     ARTS_IMPORT void AssignString(string arg1);
-
-    // ?CaptureAction@UITextDropdown@@UAEXTeqEvent@@@Z
-    ARTS_IMPORT virtual void CaptureAction(eqEvent arg1);
-
-    // ?Cull@UITextDropdown@@UAEXXZ
-    ARTS_IMPORT virtual void Cull();
-
-    // ?GetScreenHeight@UITextDropdown@@UAEMXZ
-    ARTS_IMPORT virtual f32 GetScreenHeight();
 
     // ?GetValue@UITextDropdown@@QAEHXZ
     ARTS_IMPORT i32 GetValue();
@@ -81,12 +87,6 @@ public:
 
     // ?SetValue@UITextDropdown@@QAEHH@Z
     ARTS_IMPORT i32 SetValue(i32 arg1);
-
-    // ?Switch@UITextDropdown@@UAEXH@Z
-    ARTS_IMPORT virtual void Switch(i32 arg1);
-
-    // ?Update@UITextDropdown@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7UITextDropdown@@6B@

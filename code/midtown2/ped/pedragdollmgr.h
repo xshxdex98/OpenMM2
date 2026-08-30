@@ -39,6 +39,12 @@ public:
     // ??1pedRagdollMgr@@UAE@XZ
     ARTS_IMPORT virtual ~pedRagdollMgr();
 
+    // ?Update@pedRagdollMgr@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@pedRagdollMgr@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?Attach@pedRagdollMgr@@QAEPAVpedActive@@PAVaiPedestrianInstance@@@Z
     ARTS_IMPORT pedActive* Attach(aiPedestrianInstance* arg1);
 
@@ -48,14 +54,8 @@ public:
     // ?Init@pedRagdollMgr@@QAEXHPAPAD@Z
     ARTS_IMPORT void Init(i32 arg1, char** arg2);
 
-    // ?Reset@pedRagdollMgr@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?UnusedActive@pedRagdollMgr@@QAE_NXZ
     ARTS_IMPORT bool UnusedActive();
-
-    // ?Update@pedRagdollMgr@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
     // ?Instance@pedRagdollMgr@@2PAV1@A
     ARTS_IMPORT static pedRagdollMgr* Instance;

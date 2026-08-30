@@ -34,14 +34,14 @@ public:
     // ??1gizTrainMgr@@UAE@XZ
     ARTS_IMPORT virtual ~gizTrainMgr();
 
-    // ?Init@gizTrainMgr@@QAE_NPAD00@Z
-    ARTS_IMPORT bool Init(char* arg1, char* arg2, char* arg3);
+    // ?Update@gizTrainMgr@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
 
     // ?Reset@gizTrainMgr@@UAEXXZ
     ARTS_IMPORT virtual void Reset();
 
-    // ?Update@gizTrainMgr@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
+    // ?Init@gizTrainMgr@@QAE_NPAD00@Z
+    ARTS_IMPORT bool Init(char* arg1, char* arg2, char* arg3);
 
 private:
     // ?ApplyTuning@gizTrainMgr@@AAEXXZ

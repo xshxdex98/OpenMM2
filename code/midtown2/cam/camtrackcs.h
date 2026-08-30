@@ -40,11 +40,17 @@ public:
     // ??1camTrackCS@@UAE@XZ
     ARTS_IMPORT virtual ~camTrackCS();
 
-    // ?AfterLoad@camTrackCS@@UAEXXZ
-    ARTS_IMPORT virtual void AfterLoad();
+    // ?Update@camTrackCS@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@camTrackCS@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
 
     // ?FileIO@camTrackCS@@UAEXAAVdatParser@@@Z
     ARTS_IMPORT virtual void FileIO(datParser& arg1);
+
+    // ?AfterLoad@camTrackCS@@UAEXXZ
+    ARTS_IMPORT virtual void AfterLoad();
 
     // ?GetClassName@camTrackCS@@UAEPADXZ
     ARTS_IMPORT virtual char* GetClassName();
@@ -52,17 +58,11 @@ public:
     // ?MakeActive@camTrackCS@@UAEXXZ
     ARTS_IMPORT virtual void MakeActive();
 
-    // ?Reset@camTrackCS@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
+    // ?UpdateInput@camTrackCS@@UAEXXZ
+    ARTS_IMPORT virtual void UpdateInput();
 
     // ?SwingToRear@camTrackCS@@QAEXXZ
     ARTS_IMPORT void SwingToRear();
-
-    // ?Update@camTrackCS@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
-
-    // ?UpdateInput@camTrackCS@@UAEXXZ
-    ARTS_IMPORT virtual void UpdateInput();
 
 private:
     // ?Collide@camTrackCS@@AAEXVVector3@@@Z

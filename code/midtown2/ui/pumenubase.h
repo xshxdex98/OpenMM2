@@ -38,6 +38,12 @@ public:
     // ??1PUMenuBase@@UAE@XZ
     ARTS_IMPORT virtual ~PUMenuBase();
 
+    // ?Cull@PUMenuBase@@UAEXXZ
+    ARTS_IMPORT virtual void Cull();
+
+    // ?Update@PUMenuBase@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?AddExit@PUMenuBase@@QAEMMMMM@Z
     ARTS_IMPORT f32 AddExit(f32 arg1, f32 arg2, f32 arg3, f32 arg4);
 
@@ -53,17 +59,11 @@ public:
     // ?CreateTitle@PUMenuBase@@QAEMH@Z
     ARTS_IMPORT f32 CreateTitle(i32 arg1);
 
-    // ?Cull@PUMenuBase@@UAEXXZ
-    ARTS_IMPORT virtual void Cull();
-
     // ?DisableExit@PUMenuBase@@QAEXXZ
     ARTS_IMPORT void DisableExit();
 
     // ?EnableExit@PUMenuBase@@QAEXXZ
     ARTS_IMPORT void EnableExit();
-
-    // ?Update@PUMenuBase@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     // Members from 0x08C; everything below that belongs to UIMenu.

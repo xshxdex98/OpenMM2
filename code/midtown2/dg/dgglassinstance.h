@@ -36,23 +36,23 @@ public:
     // ??0dgGlassInstance@@QAE@XZ
     ARTS_IMPORT dgGlassInstance();
 
+    // ?Reset@dgGlassInstance@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?Draw@dgGlassInstance@@UAEXH@Z
     ARTS_IMPORT virtual void Draw(i32 arg1);
 
     // ?DrawGlow@dgGlassInstance@@UAEXXZ
     ARTS_IMPORT virtual void DrawGlow();
 
+    // ?SizeOf@dgGlassInstance@@UAEIXZ
+    ARTS_IMPORT virtual u32 SizeOf();
+
     // ?Impact@dgGlassInstance@@UAEXPAVlvlInstance@@PAVVector3@@@Z
     ARTS_IMPORT virtual void Impact(lvlInstance* arg1, Vector3* arg2);
 
     // ?InitStaticSystems@dgGlassInstance@@SAXXZ
     ARTS_IMPORT static void InitStaticSystems();
-
-    // ?Reset@dgGlassInstance@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?SizeOf@dgGlassInstance@@UAEIXZ
-    ARTS_IMPORT virtual u32 SizeOf();
 
 public:
     static dgGlassInstance**& Access_sm_ActiveGlassInstance() { return sm_ActiveGlassInstance; }

@@ -36,11 +36,11 @@ public:
     // ?Init@crArmData@@UAEXAAVcrSkeletonData@@D@Z
     ARTS_IMPORT virtual void Init(crSkeletonData& arg1, char arg2);
 
-    // ?MatchPose@crArmData@@UBEXAAVcrSkeleton@@AAVcrIKGoal@@@Z
-    ARTS_IMPORT virtual void MatchPose(crSkeleton& arg1, crIKGoal& arg2) const;
-
     // ?SolveIK@crArmData@@UBEXAAVcrSkeleton@@AAVcrIKGoal@@@Z
     ARTS_IMPORT virtual void SolveIK(crSkeleton& arg1, crIKGoal& arg2) const;
+
+    // ?MatchPose@crArmData@@UBEXAAVcrSkeleton@@AAVcrIKGoal@@@Z
+    ARTS_IMPORT virtual void MatchPose(crSkeleton& arg1, crIKGoal& arg2) const;
 };
 
 // ??_7crArmData@@6B@

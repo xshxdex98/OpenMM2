@@ -36,6 +36,9 @@ public:
     // ??1Dialog_Serial@@UAE@XZ
     ARTS_IMPORT virtual ~Dialog_Serial();
 
+    // ?PreSetup@Dialog_Serial@@UAEXXZ
+    ARTS_IMPORT virtual void PreSetup();
+
     // ?BuildComs@Dialog_Serial@@QAEXXZ
     ARTS_IMPORT void BuildComs();
 
@@ -44,9 +47,6 @@ public:
 
     // ?IPAddressCallback@Dialog_Serial@@QAEXXZ
     ARTS_IMPORT void IPAddressCallback();
-
-    // ?PreSetup@Dialog_Serial@@UAEXXZ
-    ARTS_IMPORT virtual void PreSetup();
 };
 
 // ??_7Dialog_Serial@@6B@

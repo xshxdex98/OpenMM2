@@ -37,6 +37,12 @@ public:
     // ??1AudManagerBase@@UAE@XZ
     ARTS_IMPORT virtual ~AudManagerBase();
 
+    // ?Update@AudManagerBase@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?UpdatePaused@AudManagerBase@@UAEXXZ
+    ARTS_IMPORT virtual void UpdatePaused();
+
     // ?Disable@AudManagerBase@@QAEXXZ
     ARTS_IMPORT void Disable();
 
@@ -87,12 +93,6 @@ public:
 
     // ?StopAllSounds@AudManagerBase@@QAEXXZ
     ARTS_IMPORT void StopAllSounds();
-
-    // ?Update@AudManagerBase@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
-
-    // ?UpdatePaused@AudManagerBase@@UAEXXZ
-    ARTS_IMPORT virtual void UpdatePaused();
 };
 
 // ??_7AudManagerBase@@6B@

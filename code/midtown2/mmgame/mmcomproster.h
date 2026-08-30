@@ -40,6 +40,21 @@ public:
     // ?Cull@mmCompRoster@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
 
+    // ?Update@mmCompRoster@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@mmCompRoster@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
+    // ?SetBltXY@mmCompRoster@@UAEXMM@Z
+    ARTS_IMPORT virtual void SetBltXY(f32 arg1, f32 arg2);
+
+    // ?SetGeometry@mmCompRoster@@UAEXMMMM@Z
+    ARTS_IMPORT virtual void SetGeometry(f32 arg1, f32 arg2, f32 arg3, f32 arg4);
+
+    // ?SetPosition@mmCompRoster@@UAEXPAVmmTextNode@@HM@Z
+    ARTS_IMPORT virtual void SetPosition(mmTextNode* arg1, i32 arg2, f32 arg3);
+
     // ?Init@mmCompRoster@@QAEXPAD00KHH@Z
     ARTS_IMPORT void Init(char* arg1, char* arg2, char* arg3, ulong arg4, i32 arg5, i32 arg6);
 
@@ -52,12 +67,6 @@ public:
     // ?LoadTeamBitmap@mmCompRoster@@QAEXPAD@Z
     ARTS_IMPORT void LoadTeamBitmap(char* arg1);
 
-    // ?Reset@mmCompRoster@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?SetBltXY@mmCompRoster@@UAEXMM@Z
-    ARTS_IMPORT virtual void SetBltXY(f32 arg1, f32 arg2);
-
     // ?SetCar@mmCompRoster@@QAEXPAD@Z
     ARTS_IMPORT void SetCar(char* arg1);
 
@@ -67,14 +76,8 @@ public:
     // ?SetError@mmCompRoster@@QAEXXZ
     ARTS_IMPORT void SetError();
 
-    // ?SetGeometry@mmCompRoster@@UAEXMMMM@Z
-    ARTS_IMPORT virtual void SetGeometry(f32 arg1, f32 arg2, f32 arg3, f32 arg4);
-
     // ?SetName@mmCompRoster@@QAEXPAD@Z
     ARTS_IMPORT void SetName(char* arg1);
-
-    // ?SetPosition@mmCompRoster@@UAEXPAVmmTextNode@@HM@Z
-    ARTS_IMPORT virtual void SetPosition(mmTextNode* arg1, i32 arg2, f32 arg3);
 
     // ?SetReady@mmCompRoster@@QAEXH@Z
     ARTS_IMPORT void SetReady(i32 arg1);
@@ -84,9 +87,6 @@ public:
 
     // ?SetTeam@mmCompRoster@@QAEXH@Z
     ARTS_IMPORT void SetTeam(i32 arg1);
-
-    // ?Update@mmCompRoster@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

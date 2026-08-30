@@ -37,11 +37,11 @@ public:
     // ?Cull@AboutMenu@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
 
-    // ?PreSetup@AboutMenu@@UAEXXZ
-    ARTS_IMPORT virtual void PreSetup();
-
     // ?Update@AboutMenu@@UAEXXZ
     ARTS_IMPORT virtual void Update();
+
+    // ?PreSetup@AboutMenu@@UAEXXZ
+    ARTS_IMPORT virtual void PreSetup();
 };
 
 // ??_7AboutMenu@@6B@

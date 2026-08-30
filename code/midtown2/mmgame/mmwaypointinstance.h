@@ -37,23 +37,23 @@ public:
     // ??1mmWaypointInstance@@QAE@XZ
     ARTS_IMPORT ~mmWaypointInstance();
 
-    // ?GetMatrix@mmWaypointInstance@@UAEABVMatrix34@@AAV2@@Z
-    ARTS_IMPORT virtual const Matrix34& GetMatrix(Matrix34& arg1);
-
     // ?GetPosition@mmWaypointInstance@@UAEABVVector3@@XZ
     ARTS_IMPORT virtual const Vector3& GetPosition();
 
-    // ?MakeInvisible@mmWaypointInstance@@QAEXXZ
-    ARTS_IMPORT void MakeInvisible();
-
-    // ?MakeVisible@mmWaypointInstance@@QAEXXZ
-    ARTS_IMPORT void MakeVisible();
+    // ?GetMatrix@mmWaypointInstance@@UAEABVMatrix34@@AAV2@@Z
+    ARTS_IMPORT virtual const Matrix34& GetMatrix(Matrix34& arg1);
 
     // ?SetMatrix@mmWaypointInstance@@UAEXABVMatrix34@@@Z
     ARTS_IMPORT virtual void SetMatrix(const Matrix34& arg1);
 
     // ?SetVariant@mmWaypointInstance@@UAEXH@Z
     ARTS_IMPORT virtual void SetVariant(i32 arg1);
+
+    // ?MakeInvisible@mmWaypointInstance@@QAEXXZ
+    ARTS_IMPORT void MakeInvisible();
+
+    // ?MakeVisible@mmWaypointInstance@@QAEXXZ
+    ARTS_IMPORT void MakeVisible();
 
 public:
     // Members from 0x014; everything below that belongs to lvlInstance.

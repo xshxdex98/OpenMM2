@@ -42,11 +42,11 @@ public:
     // ?GetNumMaterials@dgBoundGeometry@@UBEHXZ
     ARTS_IMPORT virtual i32 GetNumMaterials() const;
 
-    // ?SetElasticity@dgBoundGeometry@@UAEXM@Z
-    ARTS_IMPORT virtual void SetElasticity(f32 arg1);
-
     // ?SetFriction@dgBoundGeometry@@UAEXM@Z
     ARTS_IMPORT virtual void SetFriction(f32 arg1);
+
+    // ?SetElasticity@dgBoundGeometry@@UAEXM@Z
+    ARTS_IMPORT virtual void SetElasticity(f32 arg1);
 };
 
 // ??_7dgBoundGeometry@@6B@

@@ -38,6 +38,21 @@ public:
     // ??1mmHUD@@UAE@XZ
     ARTS_IMPORT virtual ~mmHUD();
 
+    // ?Cull@mmHUD@@UAEXXZ
+    ARTS_IMPORT virtual void Cull();
+
+    // ?Update@mmHUD@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@mmHUD@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
+    // ?ResChange@mmHUD@@UAEXHH@Z
+    ARTS_IMPORT virtual void ResChange(i32 arg1, i32 arg2);
+
+    // ?UpdatePaused@mmHUD@@UAEXXZ
+    ARTS_IMPORT virtual void UpdatePaused();
+
     // ?ActivateDash@mmHUD@@QAEXXZ
     ARTS_IMPORT void ActivateDash();
 
@@ -46,9 +61,6 @@ public:
 
     // ?AddPlayer@mmHUD@@QAEXPBDKHH@Z
     ARTS_IMPORT void AddPlayer(const char* arg1, ulong arg2, i32 arg3, i32 arg4);
-
-    // ?Cull@mmHUD@@UAEXXZ
-    ARTS_IMPORT virtual void Cull();
 
     // ?DeactivateDash@mmHUD@@QAEXXZ
     ARTS_IMPORT void DeactivateDash();
@@ -88,12 +100,6 @@ public:
 
     // ?RemovePlayer@mmHUD@@QAEXK@Z
     ARTS_IMPORT void RemovePlayer(ulong arg1);
-
-    // ?ResChange@mmHUD@@UAEXHH@Z
-    ARTS_IMPORT virtual void ResChange(i32 arg1, i32 arg2);
-
-    // ?Reset@mmHUD@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
 
     // ?ResetTimers@mmHUD@@QAEXXZ
     ARTS_IMPORT void ResetTimers();
@@ -142,12 +148,6 @@ public:
 
     // ?TogglePositionDisplay@mmHUD@@QAEXH@Z
     ARTS_IMPORT void TogglePositionDisplay(i32 arg1);
-
-    // ?Update@mmHUD@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
-
-    // ?UpdatePaused@mmHUD@@UAEXXZ
-    ARTS_IMPORT virtual void UpdatePaused();
 };
 
 // ??_7mmHUD@@6B@

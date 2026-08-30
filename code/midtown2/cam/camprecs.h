@@ -37,23 +37,23 @@ public:
     // ??1camPreCS@@UAE@XZ
     ARTS_IMPORT virtual ~camPreCS();
 
+    // ?Update@camPreCS@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@camPreCS@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?FileIO@camPreCS@@UAEXAAVdatParser@@@Z
     ARTS_IMPORT virtual void FileIO(datParser& arg1);
 
     // ?GetClassName@camPreCS@@UAEPADXZ
     ARTS_IMPORT virtual char* GetClassName();
 
-    // ?Init@camPreCS@@QAEXPAVvehCar@@@Z
-    ARTS_IMPORT void Init(vehCar* arg1);
-
     // ?MakeActive@camPreCS@@UAEXXZ
     ARTS_IMPORT virtual void MakeActive();
 
-    // ?Reset@camPreCS@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?Update@camPreCS@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
+    // ?Init@camPreCS@@QAEXPAVvehCar@@@Z
+    ARTS_IMPORT void Init(vehCar* arg1);
 };
 
 // ??_7camPreCS@@6B@

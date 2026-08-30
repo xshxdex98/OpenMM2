@@ -37,6 +37,9 @@ public:
     // ??1vehGyro@@UAE@XZ
     ARTS_IMPORT virtual ~vehGyro();
 
+    // ?Update@vehGyro@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?FileIO@vehGyro@@UAEXAAVdatParser@@@Z
     ARTS_IMPORT virtual void FileIO(datParser& arg1);
 
@@ -48,9 +51,6 @@ public:
 
     // ?Init@vehGyro@@QAEXPAVvehCarSim@@PBD@Z
     ARTS_IMPORT void Init(vehCarSim* arg1, const char* arg2);
-
-    // ?Update@vehGyro@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     // Members from 0x018; everything below that belongs to asNode.

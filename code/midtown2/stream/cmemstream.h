@@ -40,41 +40,20 @@ public:
     // ??1CMemStream@@QAE@XZ
     ARTS_IMPORT ~CMemStream();
 
-    // ?AddRef@CMemStream@@UAGKXZ
-    ARTS_IMPORT virtual ulong AddRef();
-
-    // ?Clone@CMemStream@@UAGJPAPAUIStream@@@Z
-    ARTS_IMPORT virtual ilong Clone(IStream** arg1);
-
-    // ?Close@CMemStream@@QAEJXZ
-    ARTS_IMPORT ilong Close();
-
-    // ?Commit@CMemStream@@UAGJK@Z
-    ARTS_IMPORT virtual ilong Commit(ulong arg1);
-
-    // ?CopyTo@CMemStream@@UAGJPAUIStream@@T_ULARGE_INTEGER@@PAT3@2@Z
-    ARTS_IMPORT virtual ilong CopyTo(IStream* arg1, _ULARGE_INTEGER arg2, _ULARGE_INTEGER* arg3, _ULARGE_INTEGER* arg4);
-
-    // ?GetLoader@CMemStream@@UAGJPAPAUIDirectMusicLoader@@@Z
-    ARTS_IMPORT virtual ilong GetLoader(IDirectMusicLoader** arg1);
-
-    // ?LockRegion@CMemStream@@UAGJT_ULARGE_INTEGER@@0K@Z
-    ARTS_IMPORT virtual ilong LockRegion(_ULARGE_INTEGER arg1, _ULARGE_INTEGER arg2, ulong arg3);
-
-    // ?Open@CMemStream@@QAEJPAE_J@Z
-    ARTS_IMPORT ilong Open(u8* arg1, i64 arg2);
-
     // ?QueryInterface@CMemStream@@UAGJABU_GUID@@PAPAX@Z
     ARTS_IMPORT virtual ilong QueryInterface(const _GUID& arg1, void** arg2);
 
-    // ?Read@CMemStream@@UAGJPAXKPAK@Z
-    ARTS_IMPORT virtual ilong Read(void* arg1, ulong arg2, ulong* arg3);
+    // ?AddRef@CMemStream@@UAGKXZ
+    ARTS_IMPORT virtual ulong AddRef();
 
     // ?Release@CMemStream@@UAGKXZ
     ARTS_IMPORT virtual ulong Release();
 
-    // ?Revert@CMemStream@@UAGJXZ
-    ARTS_IMPORT virtual ilong Revert();
+    // ?Read@CMemStream@@UAGJPAXKPAK@Z
+    ARTS_IMPORT virtual ilong Read(void* arg1, ulong arg2, ulong* arg3);
+
+    // ?Write@CMemStream@@UAGJPBXKPAK@Z
+    ARTS_IMPORT virtual ilong Write(const void* arg1, ulong arg2, ulong* arg3);
 
     // ?Seek@CMemStream@@UAGJT_LARGE_INTEGER@@KPAT_ULARGE_INTEGER@@@Z
     ARTS_IMPORT virtual ilong Seek(_LARGE_INTEGER arg1, ulong arg2, _ULARGE_INTEGER* arg3);
@@ -82,14 +61,35 @@ public:
     // ?SetSize@CMemStream@@UAGJT_ULARGE_INTEGER@@@Z
     ARTS_IMPORT virtual ilong SetSize(_ULARGE_INTEGER arg1);
 
-    // ?Stat@CMemStream@@UAGJPAUtagSTATSTG@@K@Z
-    ARTS_IMPORT virtual ilong Stat(tagSTATSTG* arg1, ulong arg2);
+    // ?CopyTo@CMemStream@@UAGJPAUIStream@@T_ULARGE_INTEGER@@PAT3@2@Z
+    ARTS_IMPORT virtual ilong CopyTo(IStream* arg1, _ULARGE_INTEGER arg2, _ULARGE_INTEGER* arg3, _ULARGE_INTEGER* arg4);
+
+    // ?Commit@CMemStream@@UAGJK@Z
+    ARTS_IMPORT virtual ilong Commit(ulong arg1);
+
+    // ?Revert@CMemStream@@UAGJXZ
+    ARTS_IMPORT virtual ilong Revert();
+
+    // ?LockRegion@CMemStream@@UAGJT_ULARGE_INTEGER@@0K@Z
+    ARTS_IMPORT virtual ilong LockRegion(_ULARGE_INTEGER arg1, _ULARGE_INTEGER arg2, ulong arg3);
 
     // ?UnlockRegion@CMemStream@@UAGJT_ULARGE_INTEGER@@0K@Z
     ARTS_IMPORT virtual ilong UnlockRegion(_ULARGE_INTEGER arg1, _ULARGE_INTEGER arg2, ulong arg3);
 
-    // ?Write@CMemStream@@UAGJPBXKPAK@Z
-    ARTS_IMPORT virtual ilong Write(const void* arg1, ulong arg2, ulong* arg3);
+    // ?Stat@CMemStream@@UAGJPAUtagSTATSTG@@K@Z
+    ARTS_IMPORT virtual ilong Stat(tagSTATSTG* arg1, ulong arg2);
+
+    // ?Clone@CMemStream@@UAGJPAPAUIStream@@@Z
+    ARTS_IMPORT virtual ilong Clone(IStream** arg1);
+
+    // ?Close@CMemStream@@QAEJXZ
+    ARTS_IMPORT ilong Close();
+
+    // ?GetLoader@CMemStream@@UAGJPAPAUIDirectMusicLoader@@@Z
+    ARTS_IMPORT virtual ilong GetLoader(IDirectMusicLoader** arg1);
+
+    // ?Open@CMemStream@@QAEJPAE_J@Z
+    ARTS_IMPORT ilong Open(u8* arg1, i64 arg2);
 };
 
 // ??_7CMemStream@@6BIDirectMusicGetLoader@@@

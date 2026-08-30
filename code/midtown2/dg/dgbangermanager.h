@@ -36,6 +36,9 @@ public:
     // ??1dgBangerManager@@UAE@XZ
     ARTS_IMPORT virtual ~dgBangerManager();
 
+    // ?Reset@dgBangerManager@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?GetBanger@dgBangerManager@@QAEPAVdgHitBangerInstance@@XZ
     ARTS_IMPORT dgHitBangerInstance* GetBanger();
 
@@ -44,9 +47,6 @@ public:
 
     // ?InitGlow@dgBangerManager@@QAEXPBD@Z
     ARTS_IMPORT void InitGlow(const char* arg1);
-
-    // ?Reset@dgBangerManager@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
 
 public:
     static dgBangerManager*& Access_Instance() { return Instance; }

@@ -38,17 +38,17 @@ public:
     // ??1vehSuspension@@UAE@XZ
     ARTS_IMPORT virtual ~vehSuspension();
 
-    // ?Copy@vehSuspension@@QAEXABV1@@Z
-    ARTS_IMPORT void Copy(const vehSuspension& arg1);
+    // ?Update@vehSuspension@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
 
     // ?GetClassName@vehSuspension@@UAEPADXZ
     ARTS_IMPORT virtual char* GetClassName();
 
+    // ?Copy@vehSuspension@@QAEXABV1@@Z
+    ARTS_IMPORT void Copy(const vehSuspension& arg1);
+
     // ?Init@vehSuspension@@QAEXPAVvehCarSim@@PBD1PAVvehWheel@@@Z
     ARTS_IMPORT void Init(vehCarSim* arg1, const char* arg2, const char* arg3, vehWheel* arg4);
-
-    // ?Update@vehSuspension@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     // Members from 0x018; everything below that belongs to asNode.

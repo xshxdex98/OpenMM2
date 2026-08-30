@@ -34,20 +34,20 @@ public:
     // ??1mmCollideHUD@@UAE@XZ
     ARTS_IMPORT virtual ~mmCollideHUD();
 
-    // ?Init@mmCollideHUD@@QAEXHPAH0H@Z
-    ARTS_IMPORT void Init(i32 arg1, i32* arg2, i32* arg3, i32 arg4);
+    // ?Update@mmCollideHUD@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
 
     // ?Reset@mmCollideHUD@@UAEXXZ
     ARTS_IMPORT virtual void Reset();
+
+    // ?Init@mmCollideHUD@@QAEXHPAH0H@Z
+    ARTS_IMPORT void Init(i32 arg1, i32* arg2, i32* arg3, i32 arg4);
 
     // ?SetBangerCount@mmCollideHUD@@QAEXH@Z
     ARTS_IMPORT void SetBangerCount(i32 arg1);
 
     // ?SetVehicleCount@mmCollideHUD@@QAEXH@Z
     ARTS_IMPORT void SetVehicleCount(i32 arg1);
-
-    // ?Update@mmCollideHUD@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7mmCollideHUD@@6B@

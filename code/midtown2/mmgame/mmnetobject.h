@@ -42,14 +42,17 @@ public:
     // ??1mmNetObject@@UAE@XZ
     ARTS_IMPORT virtual ~mmNetObject();
 
+    // ?Cull@mmNetObject@@UAEXXZ
+    ARTS_IMPORT virtual void Cull();
+
+    // ?Update@mmNetObject@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?Activate@mmNetObject@@QAEXXZ
     ARTS_IMPORT void Activate();
 
     // ?Clear@mmNetObject@@QAEXXZ
     ARTS_IMPORT void Clear();
-
-    // ?Cull@mmNetObject@@UAEXXZ
-    ARTS_IMPORT virtual void Cull();
 
     // ?Deactivate@mmNetObject@@QAEXXZ
     ARTS_IMPORT void Deactivate();
@@ -95,9 +98,6 @@ public:
 
     // ?SetScore@mmNetObject@@QAEXH@Z
     ARTS_IMPORT void SetScore(i32 arg1);
-
-    // ?Update@mmNetObject@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     // Members from 0x020; everything below that belongs to asNetObject.

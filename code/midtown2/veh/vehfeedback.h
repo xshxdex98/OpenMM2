@@ -36,20 +36,17 @@ public:
     // ??1vehFeedback@@UAE@XZ
     ARTS_IMPORT virtual ~vehFeedback();
 
-    // ?ClearAllSamples@vehFeedback@@UAEH_N@Z
-    ARTS_IMPORT virtual i32 ClearAllSamples(bool arg1);
+    // ?SetFeedback@vehFeedback@@UAEH_N@Z
+    ARTS_IMPORT virtual i32 SetFeedback(bool arg1);
 
-    // ?GetNextUnit@vehFeedback@@UAEMH@Z
-    ARTS_IMPORT virtual f32 GetNextUnit(i32 arg1);
+    // ?SetTimingUnit@vehFeedback@@UAEHM@Z
+    ARTS_IMPORT virtual i32 SetTimingUnit(f32 arg1);
 
     // ?GetNumActuators@vehFeedback@@UAEHXZ
     ARTS_IMPORT virtual i32 GetNumActuators();
 
-    // ?GetPad@vehFeedback@@QAEPAVioPad@@XZ
-    ARTS_IMPORT ioPad* GetPad();
-
-    // ?GetPadID@vehFeedback@@QAEHXZ
-    ARTS_IMPORT i32 GetPadID();
+    // ?SetActuatorValue@vehFeedback@@UAEHHM@Z
+    ARTS_IMPORT virtual i32 SetActuatorValue(i32 arg1, f32 arg2);
 
     // ?PlayFeedbackSample@vehFeedback@@UAEHHHPAMPAH@Z
     ARTS_IMPORT virtual i32 PlayFeedbackSample(i32 arg1, i32 arg2, f32* arg3, i32* arg4);
@@ -57,23 +54,26 @@ public:
     // ?PlayFeedbackSampleID@vehFeedback@@UAEHH@Z
     ARTS_IMPORT virtual i32 PlayFeedbackSampleID(i32 arg1);
 
-    // ?SetActuatorValue@vehFeedback@@UAEHHM@Z
-    ARTS_IMPORT virtual i32 SetActuatorValue(i32 arg1, f32 arg2);
+    // ?GetNextUnit@vehFeedback@@UAEMH@Z
+    ARTS_IMPORT virtual f32 GetNextUnit(i32 arg1);
 
-    // ?SetFeedback@vehFeedback@@UAEH_N@Z
-    ARTS_IMPORT virtual i32 SetFeedback(bool arg1);
+    // ?Update@vehFeedback@@UAEHXZ
+    ARTS_IMPORT virtual i32 Update();
+
+    // ?ClearAllSamples@vehFeedback@@UAEH_N@Z
+    ARTS_IMPORT virtual i32 ClearAllSamples(bool arg1);
+
+    // ?GetPad@vehFeedback@@QAEPAVioPad@@XZ
+    ARTS_IMPORT ioPad* GetPad();
+
+    // ?GetPadID@vehFeedback@@QAEHXZ
+    ARTS_IMPORT i32 GetPadID();
 
     // ?SetPad@vehFeedback@@QAEXPAVioPad@@@Z
     ARTS_IMPORT void SetPad(ioPad* arg1);
 
     // ?SetPadID@vehFeedback@@QAEXH@Z
     ARTS_IMPORT void SetPadID(i32 arg1);
-
-    // ?SetTimingUnit@vehFeedback@@UAEHM@Z
-    ARTS_IMPORT virtual i32 SetTimingUnit(f32 arg1);
-
-    // ?Update@vehFeedback@@UAEHXZ
-    ARTS_IMPORT virtual i32 Update();
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

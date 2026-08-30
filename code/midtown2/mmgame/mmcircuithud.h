@@ -34,14 +34,17 @@ public:
     // ??1mmCircuitHUD@@UAE@XZ
     ARTS_IMPORT virtual ~mmCircuitHUD();
 
-    // ?Init@mmCircuitHUD@@QAEXXZ
-    ARTS_IMPORT void Init();
+    // ?Update@mmCircuitHUD@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@mmCircuitHUD@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
 
     // ?PostUpdate@mmCircuitHUD@@UAEXXZ
     ARTS_IMPORT virtual void PostUpdate();
 
-    // ?Reset@mmCircuitHUD@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
+    // ?Init@mmCircuitHUD@@QAEXXZ
+    ARTS_IMPORT void Init();
 
     // ?SetLapTime@mmCircuitHUD@@QAEXHMPADH@Z
     ARTS_IMPORT void SetLapTime(i32 arg1, f32 arg2, char* arg3, i32 arg4);
@@ -51,9 +54,6 @@ public:
 
     // ?SetWPCleared@mmCircuitHUD@@QAEXHH@Z
     ARTS_IMPORT void SetWPCleared(i32 arg1, i32 arg2);
-
-    // ?Update@mmCircuitHUD@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7mmCircuitHUD@@6B@

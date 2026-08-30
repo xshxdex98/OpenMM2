@@ -40,14 +40,17 @@ public:
     // ??1dgUnhitBangerInstance@@QAE@XZ
     ARTS_IMPORT ~dgUnhitBangerInstance();
 
+    // ?Reset@dgUnhitBangerInstance@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
+    // ?Init@dgUnhitBangerInstance@@UAEHPBDABVMatrix34@@H@Z
+    ARTS_IMPORT virtual i32 Init(const char* arg1, const Matrix34& arg2, i32 arg3);
+
     // ?Impact@dgUnhitBangerInstance@@UAEXPAVlvlInstance@@PAVVector3@@@Z
     ARTS_IMPORT virtual void Impact(lvlInstance* arg1, Vector3* arg2);
 
     // ?ImpactCB@dgUnhitBangerInstance@@UAEXPAVdgHitBangerInstance@@@Z
     ARTS_IMPORT virtual void ImpactCB(dgHitBangerInstance* arg1);
-
-    // ?Init@dgUnhitBangerInstance@@UAEHPBDABVMatrix34@@H@Z
-    ARTS_IMPORT virtual i32 Init(const char* arg1, const Matrix34& arg2, i32 arg3);
 
     // ?InitBound@dgUnhitBangerInstance@@QAE_NPBD0PAVdgBangerData@@H@Z
     ARTS_IMPORT bool InitBound(const char* arg1, const char* arg2, dgBangerData* arg3, i32 arg4);
@@ -57,9 +60,6 @@ public:
 
     // ?RequestBanger@dgUnhitBangerInstance@@SAPAV1@PBDH@Z
     ARTS_IMPORT static dgUnhitBangerInstance* RequestBanger(const char* arg1, i32 arg2);
-
-    // ?Reset@dgUnhitBangerInstance@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
 };
 
 // ??_7dgUnhitBangerInstance@@6B@

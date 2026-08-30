@@ -40,6 +40,18 @@ public:
     // ??1phBoundGeometry@@QAE@XZ
     ARTS_IMPORT ~phBoundGeometry();
 
+    // ?GetMaterial@phBoundGeometry@@UBEPBVphMaterial@@H@Z
+    ARTS_IMPORT virtual const phMaterial* GetMaterial(i32 arg1) const;
+
+    // ?GetEdgeCosine@phBoundGeometry@@UBEMH@Z
+    ARTS_IMPORT virtual f32 GetEdgeCosine(i32 arg1) const;
+
+    // ?GetEdgeNormal@phBoundGeometry@@UBEABVVector3@@HAAV2@@Z
+    ARTS_IMPORT virtual const Vector3& GetEdgeNormal(i32 arg1, Vector3& arg2) const;
+
+    // ?PostLoadCompute@phBoundGeometry@@UAEXXZ
+    ARTS_IMPORT virtual void PostLoadCompute();
+
     // ?CalculatePolyNormals@phBoundGeometry@@QAEXXZ
     ARTS_IMPORT void CalculatePolyNormals();
 
@@ -51,15 +63,6 @@ public:
 
     // ?ComputeEdges@phBoundGeometry@@QAEXXZ
     ARTS_IMPORT void ComputeEdges();
-
-    // ?GetEdgeCosine@phBoundGeometry@@UBEMH@Z
-    ARTS_IMPORT virtual f32 GetEdgeCosine(i32 arg1) const;
-
-    // ?GetEdgeNormal@phBoundGeometry@@UBEABVVector3@@HAAV2@@Z
-    ARTS_IMPORT virtual const Vector3& GetEdgeNormal(i32 arg1, Vector3& arg2) const;
-
-    // ?GetMaterial@phBoundGeometry@@UBEPBVphMaterial@@H@Z
-    ARTS_IMPORT virtual const phMaterial* GetMaterial(i32 arg1) const;
 
     // ?GhostSection@phBoundGeometry@@QAE_NPBV1@PBVVector3@@HMM@Z
     ARTS_IMPORT bool GhostSection(const phBoundGeometry* arg1, const Vector3* arg2, i32 arg3, f32 arg4, f32 arg5);
@@ -75,9 +78,6 @@ public:
 
     // ?OverlapRegion@phBoundGeometry@@QAE_NPBVVector3@@HMM@Z
     ARTS_IMPORT bool OverlapRegion(const Vector3* arg1, i32 arg2, f32 arg3, f32 arg4);
-
-    // ?PostLoadCompute@phBoundGeometry@@UAEXXZ
-    ARTS_IMPORT virtual void PostLoadCompute();
 
     // ?ReComputeEdgeNormals@phBoundGeometry@@QAEXXZ
     ARTS_IMPORT void ReComputeEdgeNormals();

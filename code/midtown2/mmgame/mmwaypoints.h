@@ -38,6 +38,15 @@ public:
     // ??1mmWaypoints@@UAE@XZ
     ARTS_IMPORT virtual ~mmWaypoints();
 
+    // ?Cull@mmWaypoints@@UAEXXZ
+    ARTS_IMPORT virtual void Cull();
+
+    // ?Update@mmWaypoints@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@mmWaypoints@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?AIWPHit@mmWaypoints@@QAEHHHVMatrix34@@VVector3@@M@Z
     ARTS_IMPORT i32 AIWPHit(i32 arg1, i32 arg2, Matrix34 arg3, Vector3 arg4, f32 arg5);
 
@@ -46,9 +55,6 @@ public:
 
     // ?AnyWPHits@mmWaypoints@@QAEHH@Z
     ARTS_IMPORT i32 AnyWPHits(i32 arg1);
-
-    // ?Cull@mmWaypoints@@UAEXXZ
-    ARTS_IMPORT virtual void Cull();
 
     // ?DeactivateFinish@mmWaypoints@@QAEXXZ
     ARTS_IMPORT void DeactivateFinish();
@@ -95,9 +101,6 @@ public:
     // ?ReInit@mmWaypoints@@QAEXHPADI@Z
     ARTS_IMPORT void ReInit(i32 arg1, char* arg2, u32 arg3);
 
-    // ?Reset@mmWaypoints@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?ResetAllTags@mmWaypoints@@QAEXXZ
     ARTS_IMPORT void ResetAllTags();
 
@@ -106,9 +109,6 @@ public:
 
     // ?SetArrow@mmWaypoints@@QAEXXZ
     ARTS_IMPORT void SetArrow();
-
-    // ?Update@mmWaypoints@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 protected:
     // ?ClearWaypoint@mmWaypoints@@IAEXH@Z

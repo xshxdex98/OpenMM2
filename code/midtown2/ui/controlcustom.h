@@ -34,23 +34,23 @@ public:
     // ??1ControlCustom@@UAE@XZ
     ARTS_IMPORT virtual ~ControlCustom();
 
-    // ?BadAssignCB@ControlCustom@@QAEXXZ
-    ARTS_IMPORT void BadAssignCB();
-
     // ?CancelAction@ControlCustom@@UAEXXZ
     ARTS_IMPORT virtual void CancelAction();
-
-    // ?CancelBadAssignment@ControlCustom@@QAEXXZ
-    ARTS_IMPORT void CancelBadAssignment();
-
-    // ?ClearBadAssignment@ControlCustom@@QAEXXZ
-    ARTS_IMPORT void ClearBadAssignment();
 
     // ?DoneAction@ControlCustom@@UAEXXZ
     ARTS_IMPORT virtual void DoneAction();
 
     // ?ResetDefaultAction@ControlCustom@@UAEXXZ
     ARTS_IMPORT virtual void ResetDefaultAction();
+
+    // ?BadAssignCB@ControlCustom@@QAEXXZ
+    ARTS_IMPORT void BadAssignCB();
+
+    // ?CancelBadAssignment@ControlCustom@@QAEXXZ
+    ARTS_IMPORT void CancelBadAssignment();
+
+    // ?ClearBadAssignment@ControlCustom@@QAEXXZ
+    ARTS_IMPORT void ClearBadAssignment();
 
     // ?VerifyBadAssignment@ControlCustom@@QAEXXZ
     ARTS_IMPORT void VerifyBadAssignment();

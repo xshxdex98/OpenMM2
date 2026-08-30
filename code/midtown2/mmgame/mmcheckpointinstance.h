@@ -39,11 +39,11 @@ public:
     // ?Draw@mmCheckpointInstance@@UAEXH@Z
     ARTS_IMPORT virtual void Draw(i32 arg1);
 
-    // ?Init@mmCheckpointInstance@@UAEXPADVVector3@@@Z
-    ARTS_IMPORT virtual void Init(char* arg1, Vector3 arg2);
-
     // ?SizeOf@mmCheckpointInstance@@UAEIXZ
     ARTS_IMPORT virtual u32 SizeOf();
+
+    // ?Init@mmCheckpointInstance@@UAEXPADVVector3@@@Z
+    ARTS_IMPORT virtual void Init(char* arg1, Vector3 arg2);
 };
 
 // ??_7mmCheckpointInstance@@6B@

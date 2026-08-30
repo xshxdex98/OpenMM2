@@ -34,11 +34,11 @@ public:
     // ??1CrashCourseIntro@@UAE@XZ
     ARTS_IMPORT virtual ~CrashCourseIntro();
 
-    // ?PostSetup@CrashCourseIntro@@UAEXXZ
-    ARTS_IMPORT virtual void PostSetup();
-
     // ?PreSetup@CrashCourseIntro@@UAEXXZ
     ARTS_IMPORT virtual void PreSetup();
+
+    // ?PostSetup@CrashCourseIntro@@UAEXXZ
+    ARTS_IMPORT virtual void PostSetup();
 };
 
 // ??_7CrashCourseIntro@@6B@

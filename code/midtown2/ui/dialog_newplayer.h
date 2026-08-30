@@ -34,11 +34,11 @@ public:
     // ??1Dialog_NewPlayer@@UAE@XZ
     ARTS_IMPORT virtual ~Dialog_NewPlayer();
 
-    // ?EnterNewPlayer@Dialog_NewPlayer@@QAEXXZ
-    ARTS_IMPORT void EnterNewPlayer();
-
     // ?PreSetup@Dialog_NewPlayer@@UAEXXZ
     ARTS_IMPORT virtual void PreSetup();
+
+    // ?EnterNewPlayer@Dialog_NewPlayer@@QAEXXZ
+    ARTS_IMPORT void EnterNewPlayer();
 };
 
 // ??_7Dialog_NewPlayer@@6B@

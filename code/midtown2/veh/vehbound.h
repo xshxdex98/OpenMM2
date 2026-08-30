@@ -34,14 +34,14 @@ public:
     // ??1vehBound@@QAE@XZ
     ARTS_IMPORT ~vehBound();
 
-    // ?Init@vehBound@@QAEXXZ
-    ARTS_IMPORT void Init();
+    // ?SetFriction@vehBound@@UAEXM@Z
+    ARTS_IMPORT virtual void SetFriction(f32 arg1);
 
     // ?SetElasticity@vehBound@@UAEXM@Z
     ARTS_IMPORT virtual void SetElasticity(f32 arg1);
 
-    // ?SetFriction@vehBound@@UAEXM@Z
-    ARTS_IMPORT virtual void SetFriction(f32 arg1);
+    // ?Init@vehBound@@QAEXXZ
+    ARTS_IMPORT void Init();
 };
 
 // ??_7vehBound@@6B@

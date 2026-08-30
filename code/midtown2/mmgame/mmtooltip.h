@@ -39,6 +39,9 @@ public:
     // ??1mmToolTip@@UAE@XZ
     ARTS_IMPORT virtual ~mmToolTip();
 
+    // ?Update@mmToolTip@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?Init@mmToolTip@@QAEXPAVUIMenu@@PAULocString@@@Z
     ARTS_IMPORT void Init(UIMenu* arg1, LocString* arg2);
 
@@ -47,9 +50,6 @@ public:
 
     // ?Switch@mmToolTip@@QAEXH@Z
     ARTS_IMPORT void Switch(i32 arg1);
-
-    // ?Update@mmToolTip@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     // Members from 0x018; everything below that belongs to asNode.

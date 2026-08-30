@@ -37,20 +37,20 @@ public:
     // ??1aiGoalCollision@@QAE@XZ
     ARTS_IMPORT ~aiGoalCollision();
 
-    // ?Context@aiGoalCollision@@QAEHXZ
-    ARTS_IMPORT i32 Context();
-
     // ?Init@aiGoalCollision@@UAEXXZ
     ARTS_IMPORT virtual void Init();
-
-    // ?Priority@aiGoalCollision@@QAEHXZ
-    ARTS_IMPORT i32 Priority();
 
     // ?Reset@aiGoalCollision@@UAEXXZ
     ARTS_IMPORT virtual void Reset();
 
     // ?Update@aiGoalCollision@@UAEXXZ
     ARTS_IMPORT virtual void Update();
+
+    // ?Context@aiGoalCollision@@QAEHXZ
+    ARTS_IMPORT i32 Context();
+
+    // ?Priority@aiGoalCollision@@QAEHXZ
+    ARTS_IMPORT i32 Priority();
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

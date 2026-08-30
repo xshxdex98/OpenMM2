@@ -38,14 +38,17 @@ public:
     // ??1VSWidget@@UAE@XZ
     ARTS_IMPORT virtual ~VSWidget();
 
+    // ?Cull@VSWidget@@UAEXXZ
+    ARTS_IMPORT virtual void Cull();
+
+    // ?Update@VSWidget@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?Action@VSWidget@@QAEHTeqEvent@@MMH@Z
     ARTS_IMPORT i32 Action(eqEvent arg1, f32 arg2, f32 arg3, i32 arg4);
 
     // ?CalcTroughRatio@VSWidget@@QAEXM@Z
     ARTS_IMPORT void CalcTroughRatio(f32 arg1);
-
-    // ?Cull@VSWidget@@UAEXXZ
-    ARTS_IMPORT virtual void Cull();
 
     // ?Dec@VSWidget@@QAEMXZ
     ARTS_IMPORT f32 Dec();
@@ -76,9 +79,6 @@ public:
 
     // ?SyncData@VSWidget@@QAEXXZ
     ARTS_IMPORT void SyncData();
-
-    // ?Update@VSWidget@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     // Members from 0x018; everything below that belongs to asNode.

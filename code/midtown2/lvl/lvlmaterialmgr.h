@@ -32,6 +32,9 @@ class phMaterial;
 class lvlMaterialMgr : public phMaterialMgr
 {
 public:
+    // ?Load@lvlMaterialMgr@@UAEPAVphMaterial@@PAVdatAsciiTokenizer@@@Z
+    ARTS_IMPORT virtual phMaterial* Load(datAsciiTokenizer* arg1);
+
     // ?CreateInstance@lvlMaterialMgr@@SAAAV1@XZ
     ARTS_IMPORT static lvlMaterialMgr& CreateInstance();
 
@@ -43,9 +46,6 @@ public:
 
     // ?GetInstance@lvlMaterialMgr@@SAAAV1@XZ
     ARTS_IMPORT static lvlMaterialMgr& GetInstance();
-
-    // ?Load@lvlMaterialMgr@@UAEPAVphMaterial@@PAVdatAsciiTokenizer@@@Z
-    ARTS_IMPORT virtual phMaterial* Load(datAsciiTokenizer* arg1);
 
     // ?Lookup@lvlMaterialMgr@@QAEPAVlvlMaterial@@H@Z
     ARTS_IMPORT lvlMaterial* Lookup(i32 arg1);

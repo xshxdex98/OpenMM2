@@ -36,17 +36,17 @@ public:
     // ??1gizSailboat@@QAE@XZ
     ARTS_IMPORT ~gizSailboat();
 
-    // ?Init@gizSailboat@@QAEXPADPAVdgPath@@@Z
-    ARTS_IMPORT void Init(char* arg1, dgPath* arg2);
-
     // ?Reset@gizSailboat@@UAEXXZ
     ARTS_IMPORT virtual void Reset();
 
-    // ?SetSpeed@gizSailboat@@QAEXM@Z
-    ARTS_IMPORT void SetSpeed(f32 arg1);
-
     // ?SizeOf@gizSailboat@@UAEIXZ
     ARTS_IMPORT virtual u32 SizeOf();
+
+    // ?Init@gizSailboat@@QAEXPADPAVdgPath@@@Z
+    ARTS_IMPORT void Init(char* arg1, dgPath* arg2);
+
+    // ?SetSpeed@gizSailboat@@QAEXM@Z
+    ARTS_IMPORT void SetSpeed(f32 arg1);
 
     // ?Update@gizSailboat@@QAEXXZ
     ARTS_IMPORT void Update();

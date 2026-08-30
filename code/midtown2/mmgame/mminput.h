@@ -39,6 +39,12 @@ public:
     // ??1mmInput@@UAE@XZ
     ARTS_IMPORT virtual ~mmInput();
 
+    // ?Update@mmInput@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@mmInput@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?AssignIO@mmInput@@QAEXPAVmmIO@@HH@Z
     ARTS_IMPORT void AssignIO(mmIO* arg1, i32 arg2, i32 arg3);
 
@@ -150,9 +156,6 @@ public:
     // ?PrintIODev@mmInput@@QAEXXZ
     ARTS_IMPORT void PrintIODev();
 
-    // ?Reset@mmInput@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?RestoreDefaultConfig@mmInput@@QAEXH@Z
     ARTS_IMPORT void RestoreDefaultConfig(i32 arg1);
 
@@ -188,9 +191,6 @@ public:
 
     // ?ToggleFFEnabled@mmInput@@QAEHH@Z
     ARTS_IMPORT i32 ToggleFFEnabled(i32 arg1);
-
-    // ?Update@mmInput@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
     // ?WheelConnected@mmInput@@QAEHXZ
     ARTS_IMPORT i32 WheelConnected();

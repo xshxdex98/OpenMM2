@@ -36,20 +36,20 @@ public:
     // ??1gizBridge@@QAE@XZ
     ARTS_IMPORT ~gizBridge();
 
-    // ?Cull@gizBridge@@QAEXH@Z
-    ARTS_IMPORT void Cull(i32 arg1);
+    // ?Reset@gizBridge@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
 
     // ?Draw@gizBridge@@UAEXH@Z
     ARTS_IMPORT virtual void Draw(i32 arg1);
 
-    // ?Init@gizBridge@@QAEXPADABVMatrix34@@@Z
-    ARTS_IMPORT void Init(char* arg1, const Matrix34& arg2);
-
-    // ?Reset@gizBridge@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?SizeOf@gizBridge@@UAEIXZ
     ARTS_IMPORT virtual u32 SizeOf();
+
+    // ?Cull@gizBridge@@QAEXH@Z
+    ARTS_IMPORT void Cull(i32 arg1);
+
+    // ?Init@gizBridge@@QAEXPADABVMatrix34@@@Z
+    ARTS_IMPORT void Init(char* arg1, const Matrix34& arg2);
 
     // ?Trigger@gizBridge@@QAE_NXZ
     ARTS_IMPORT bool Trigger();

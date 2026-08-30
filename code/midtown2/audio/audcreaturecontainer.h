@@ -39,6 +39,15 @@ public:
     // ?AssignSounds@AudCreatureContainer@@UAEXXZ
     ARTS_IMPORT virtual void AssignSounds();
 
+    // ?UnAssignSounds@AudCreatureContainer@@UAEXH@Z
+    ARTS_IMPORT virtual void UnAssignSounds(i32 arg1);
+
+    // ?UpdateAudio@AudCreatureContainer@@UAEXXZ
+    ARTS_IMPORT virtual void UpdateAudio();
+
+    // ?Update@AudCreatureContainer@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?DeallocateStatics@AudCreatureContainer@@SAXXZ
     ARTS_IMPORT static void DeallocateStatics();
 
@@ -72,17 +81,8 @@ public:
     // ?Reset@AudCreatureContainer@@QAEXXZ
     ARTS_IMPORT void Reset();
 
-    // ?UnAssignSounds@AudCreatureContainer@@UAEXH@Z
-    ARTS_IMPORT virtual void UnAssignSounds(i32 arg1);
-
-    // ?Update@AudCreatureContainer@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
-
     // ?UpdateAudio@AudCreatureContainer@@QAEHM@Z
     ARTS_IMPORT i32 UpdateAudio(f32 arg1);
-
-    // ?UpdateAudio@AudCreatureContainer@@UAEXXZ
-    ARTS_IMPORT virtual void UpdateAudio();
 
     // ?UpdateStatics@AudCreatureContainer@@SAXM@Z
     ARTS_IMPORT static void UpdateStatics(f32 arg1);

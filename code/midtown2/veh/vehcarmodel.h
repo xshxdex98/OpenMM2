@@ -44,20 +44,50 @@ public:
     // ??1vehCarModel@@QAE@XZ
     ARTS_IMPORT ~vehCarModel();
 
+    // ?Reset@vehCarModel@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
+    // ?GetPosition@vehCarModel@@UAEABVVector3@@XZ
+    ARTS_IMPORT virtual const Vector3& GetPosition();
+
+    // ?GetMatrix@vehCarModel@@UAEABVMatrix34@@AAV2@@Z
+    ARTS_IMPORT virtual const Matrix34& GetMatrix(Matrix34& arg1);
+
+    // ?SetMatrix@vehCarModel@@UAEXABVMatrix34@@@Z
+    ARTS_IMPORT virtual void SetMatrix(const Matrix34& arg1);
+
+    // ?GetEntity@vehCarModel@@UAEPAVdgPhysEntity@@XZ
+    ARTS_IMPORT virtual dgPhysEntity* GetEntity();
+
     // ?AttachEntity@vehCarModel@@UAEPAVdgPhysEntity@@XZ
     ARTS_IMPORT virtual dgPhysEntity* AttachEntity();
+
+    // ?GetVelocity@vehCarModel@@UAEABVVector3@@XZ
+    ARTS_IMPORT virtual const Vector3& GetVelocity();
+
+    // ?Draw@vehCarModel@@UAEXH@Z
+    ARTS_IMPORT virtual void Draw(i32 arg1);
+
+    // ?DrawShadow@vehCarModel@@UAEXXZ
+    ARTS_IMPORT virtual void DrawShadow();
+
+    // ?DrawShadowMap@vehCarModel@@UAEXXZ
+    ARTS_IMPORT virtual void DrawShadowMap();
+
+    // ?DrawGlow@vehCarModel@@UAEXXZ
+    ARTS_IMPORT virtual void DrawGlow();
+
+    // ?DrawReflected@vehCarModel@@UAEXM@Z
+    ARTS_IMPORT virtual void DrawReflected(f32 arg1);
+
+    // ?SizeOf@vehCarModel@@UAEIXZ
+    ARTS_IMPORT virtual u32 SizeOf();
 
     // ?BreakElectrics@vehCarModel@@QAEXABVVector3@@@Z
     ARTS_IMPORT void BreakElectrics(const Vector3& arg1);
 
     // ?ClearDamage@vehCarModel@@QAEXXZ
     ARTS_IMPORT void ClearDamage();
-
-    // ?Draw@vehCarModel@@UAEXH@Z
-    ARTS_IMPORT virtual void Draw(i32 arg1);
-
-    // ?DrawGlow@vehCarModel@@UAEXXZ
-    ARTS_IMPORT virtual void DrawGlow();
 
     // ?DrawHeadlights@vehCarModel@@QAEX_N@Z
     ARTS_IMPORT void DrawHeadlights(bool arg1);
@@ -68,32 +98,11 @@ public:
     // ?DrawPart@vehCarModel@@QAEXPAVmodStatic@@ABVMatrix34@@PAVmodShader@@@Z
     ARTS_IMPORT void DrawPart(modStatic* arg1, const Matrix34& arg2, modShader* arg3);
 
-    // ?DrawReflected@vehCarModel@@UAEXM@Z
-    ARTS_IMPORT virtual void DrawReflected(f32 arg1);
-
-    // ?DrawShadow@vehCarModel@@UAEXXZ
-    ARTS_IMPORT virtual void DrawShadow();
-
-    // ?DrawShadowMap@vehCarModel@@UAEXXZ
-    ARTS_IMPORT virtual void DrawShadowMap();
-
     // ?EjectOneshot@vehCarModel@@QAEXXZ
     ARTS_IMPORT void EjectOneshot();
 
-    // ?GetEntity@vehCarModel@@UAEPAVdgPhysEntity@@XZ
-    ARTS_IMPORT virtual dgPhysEntity* GetEntity();
-
-    // ?GetMatrix@vehCarModel@@UAEABVMatrix34@@AAV2@@Z
-    ARTS_IMPORT virtual const Matrix34& GetMatrix(Matrix34& arg1);
-
-    // ?GetPosition@vehCarModel@@UAEABVVector3@@XZ
-    ARTS_IMPORT virtual const Vector3& GetPosition();
-
     // ?GetTrailerHitch@vehCarModel@@QAE_NPAVVector3@@@Z
     ARTS_IMPORT bool GetTrailerHitch(Vector3* arg1);
-
-    // ?GetVelocity@vehCarModel@@UAEABVVector3@@XZ
-    ARTS_IMPORT virtual const Vector3& GetVelocity();
 
     // ?GetVisible@vehCarModel@@QAE_NXZ
     ARTS_IMPORT bool GetVisible();
@@ -104,17 +113,8 @@ public:
     // ?InitBound@vehCarModel@@QAEXPBD_N@Z
     ARTS_IMPORT void InitBound(const char* arg1, bool arg2);
 
-    // ?Reset@vehCarModel@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?SetMatrix@vehCarModel@@UAEXABVMatrix34@@@Z
-    ARTS_IMPORT virtual void SetMatrix(const Matrix34& arg1);
-
     // ?SetVisible@vehCarModel@@QAEX_N@Z
     ARTS_IMPORT void SetVisible(bool arg1);
-
-    // ?SizeOf@vehCarModel@@UAEIXZ
-    ARTS_IMPORT virtual u32 SizeOf();
 
 protected:
     // ?GetSurfaceColor@vehCarModel@@IAE_NPAVmodStatic@@AAVVector3@@@Z

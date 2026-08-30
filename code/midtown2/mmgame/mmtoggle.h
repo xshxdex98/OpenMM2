@@ -37,11 +37,11 @@ public:
     // ?Cull@mmToggle@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
 
-    // ?Init@mmToggle@@QAEXPADMMMM@Z
-    ARTS_IMPORT void Init(char* arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5);
-
     // ?Update@mmToggle@@UAEXXZ
     ARTS_IMPORT virtual void Update();
+
+    // ?Init@mmToggle@@QAEXPADMMMM@Z
+    ARTS_IMPORT void Init(char* arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5);
 
 private:
     // ?LoadBitmap@mmToggle@@AAEXPAD@Z

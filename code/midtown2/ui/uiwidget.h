@@ -41,29 +41,32 @@ public:
     // ??1uiWidget@@UAE@XZ
     ARTS_IMPORT virtual ~uiWidget();
 
-    // ?Action@uiWidget@@UAEXTeqEvent@@@Z
-    ARTS_IMPORT virtual void Action(eqEvent arg1);
-
-    // ?AddToolTip@uiWidget@@QAEXPAVUIMenu@@PAULocString@@@Z
-    ARTS_IMPORT void AddToolTip(UIMenu* arg1, LocString* arg2);
-
-    // ?CaptureAction@uiWidget@@UAEXTeqEvent@@@Z
-    ARTS_IMPORT virtual void CaptureAction(eqEvent arg1);
-
     // ?Disable@uiWidget@@UAEXXZ
     ARTS_IMPORT virtual void Disable();
 
     // ?Enable@uiWidget@@UAEXXZ
     ARTS_IMPORT virtual void Enable();
 
+    // ?TurnOn@uiWidget@@UAEXXZ
+    ARTS_IMPORT virtual void TurnOn();
+
+    // ?TurnOff@uiWidget@@UAEXXZ
+    ARTS_IMPORT virtual void TurnOff();
+
+    // ?SetReadOnly@uiWidget@@UAEXH@Z
+    ARTS_IMPORT virtual void SetReadOnly(i32 arg1);
+
+    // ?Action@uiWidget@@UAEXTeqEvent@@@Z
+    ARTS_IMPORT virtual void Action(eqEvent arg1);
+
+    // ?CaptureAction@uiWidget@@UAEXTeqEvent@@@Z
+    ARTS_IMPORT virtual void CaptureAction(eqEvent arg1);
+
+    // ?Switch@uiWidget@@UAEXH@Z
+    ARTS_IMPORT virtual void Switch(i32 arg1);
+
     // ?EvalMouseX@uiWidget@@UAEXM@Z
     ARTS_IMPORT virtual void EvalMouseX(f32 arg1);
-
-    // ?GetScreenHeight@uiWidget@@UAEMXZ
-    ARTS_IMPORT virtual f32 GetScreenHeight();
-
-    // ?ResetToolTip@uiWidget@@QAEXXZ
-    ARTS_IMPORT void ResetToolTip();
 
     // ?ReturnDescription@uiWidget@@UAEPADXZ
     ARTS_IMPORT virtual char* ReturnDescription();
@@ -71,20 +74,17 @@ public:
     // ?SetPosition@uiWidget@@UAEXMM@Z
     ARTS_IMPORT virtual void SetPosition(f32 arg1, f32 arg2);
 
-    // ?SetReadOnly@uiWidget@@UAEXH@Z
-    ARTS_IMPORT virtual void SetReadOnly(i32 arg1);
+    // ?GetScreenHeight@uiWidget@@UAEMXZ
+    ARTS_IMPORT virtual f32 GetScreenHeight();
+
+    // ?AddToolTip@uiWidget@@QAEXPAVUIMenu@@PAULocString@@@Z
+    ARTS_IMPORT void AddToolTip(UIMenu* arg1, LocString* arg2);
+
+    // ?ResetToolTip@uiWidget@@QAEXXZ
+    ARTS_IMPORT void ResetToolTip();
 
     // ?SetToolTipText@uiWidget@@QAEXPAULocString@@@Z
     ARTS_IMPORT void SetToolTipText(LocString* arg1);
-
-    // ?Switch@uiWidget@@UAEXH@Z
-    ARTS_IMPORT virtual void Switch(i32 arg1);
-
-    // ?TurnOff@uiWidget@@UAEXXZ
-    ARTS_IMPORT virtual void TurnOff();
-
-    // ?TurnOn@uiWidget@@UAEXXZ
-    ARTS_IMPORT virtual void TurnOn();
 
 public:
     // Members from 0x018; everything below that belongs to asNode.

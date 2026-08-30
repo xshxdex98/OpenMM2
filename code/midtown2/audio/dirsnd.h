@@ -39,6 +39,9 @@ public:
     // ??1DirSnd@@QAE@XZ
     ARTS_IMPORT ~DirSnd();
 
+    // ?InitPrimarySoundBuffer@DirSnd@@UAEHKEPAD@Z
+    ARTS_IMPORT virtual i32 InitPrimarySoundBuffer(ulong arg1, u8 arg2, char* arg3);
+
     // ?ClearDSDeviceList@DirSnd@@QAEXXZ
     ARTS_IMPORT void ClearDSDeviceList();
 
@@ -59,9 +62,6 @@ public:
 
     // ?Init3DListener@DirSnd@@QAEHMMMMM@Z
     ARTS_IMPORT i32 Init3DListener(f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5);
-
-    // ?InitPrimarySoundBuffer@DirSnd@@UAEHKEPAD@Z
-    ARTS_IMPORT virtual i32 InitPrimarySoundBuffer(ulong arg1, u8 arg2, char* arg3);
 
     // ?IsDSDeviceInList@DirSnd@@QAEHPAU_GUID@@@Z
     ARTS_IMPORT i32 IsDSDeviceInList(_GUID* arg1);

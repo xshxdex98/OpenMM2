@@ -38,8 +38,14 @@ public:
     // ??1UILabel@@UAE@XZ
     ARTS_IMPORT virtual ~UILabel();
 
+    // ?Update@UILabel@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?Action@UILabel@@UAEXTeqEvent@@@Z
     ARTS_IMPORT virtual void Action(eqEvent arg1);
+
+    // ?Switch@UILabel@@UAEXH@Z
+    ARTS_IMPORT virtual void Switch(i32 arg1);
 
     // ?Init@UILabel@@QAEXPAULocString@@HMMMMH@Z
     ARTS_IMPORT void Init(LocString* arg1, i32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, i32 arg7);
@@ -50,14 +56,8 @@ public:
     // ?SetText@UILabel@@QAEXPAULocString@@@Z
     ARTS_IMPORT void SetText(LocString* arg1);
 
-    // ?Switch@UILabel@@UAEXH@Z
-    ARTS_IMPORT virtual void Switch(i32 arg1);
-
     // ?SwitchState@UILabel@@QAEXH@Z
     ARTS_IMPORT void SwitchState(i32 arg1);
-
-    // ?Update@UILabel@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     // Members from 0x06C; everything below that belongs to uiWidget.

@@ -40,6 +40,18 @@ public:
     // ??1vehWheel@@UAE@XZ
     ARTS_IMPORT virtual ~vehWheel();
 
+    // ?Update@vehWheel@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@vehWheel@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
+    // ?FileIO@vehWheel@@UAEXAAVdatParser@@@Z
+    ARTS_IMPORT virtual void FileIO(datParser& arg1);
+
+    // ?GetClassName@vehWheel@@UAEPADXZ
+    ARTS_IMPORT virtual char* GetClassName();
+
     // ?AddNormalLoad@vehWheel@@QAEXM@Z
     ARTS_IMPORT void AddNormalLoad(f32 arg1);
 
@@ -51,12 +63,6 @@ public:
 
     // ?CopyVars@vehWheel@@QAEXPAV1@@Z
     ARTS_IMPORT void CopyVars(vehWheel* arg1);
-
-    // ?FileIO@vehWheel@@UAEXAAVdatParser@@@Z
-    ARTS_IMPORT virtual void FileIO(datParser& arg1);
-
-    // ?GetClassName@vehWheel@@UAEPADXZ
-    ARTS_IMPORT virtual char* GetClassName();
 
     // ?GetSurfaceSound@vehWheel@@QAEHXZ
     ARTS_IMPORT i32 GetSurfaceSound();
@@ -73,17 +79,11 @@ public:
     // ?Init@vehWheel@@QAEXPAVvehCarSim@@PBDPADVVector3@@PAVphInertialCS@@HH@Z
     ARTS_IMPORT void Init(vehCarSim* arg1, const char* arg2, char* arg3, Vector3 arg4, phInertialCS* arg5, i32 arg6, i32 arg7);
 
-    // ?Reset@vehWheel@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?SetInputs@vehWheel@@QAEXMMM@Z
     ARTS_IMPORT void SetInputs(f32 arg1, f32 arg2, f32 arg3);
 
     // ?SetNormalLoad@vehWheel@@QAEXM@Z
     ARTS_IMPORT void SetNormalLoad(f32 arg1);
-
-    // ?Update@vehWheel@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 private:
     // ?CalcSuspensionForce@vehWheel@@AAEXM_NM@Z

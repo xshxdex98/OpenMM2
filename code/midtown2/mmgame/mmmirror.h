@@ -39,6 +39,12 @@ public:
     // ?Cull@mmMirror@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
 
+    // ?Update@mmMirror@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@mmMirror@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?FileIO@mmMirror@@UAEXAAVdatParser@@@Z
     ARTS_IMPORT virtual void FileIO(datParser& arg1);
 
@@ -47,12 +53,6 @@ public:
 
     // ?Init@mmMirror@@QAEXXZ
     ARTS_IMPORT void Init();
-
-    // ?Reset@mmMirror@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?Update@mmMirror@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7mmMirror@@6B@

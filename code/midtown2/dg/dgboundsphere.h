@@ -42,11 +42,11 @@ public:
     // ?GetNumMaterials@dgBoundSphere@@UBEHXZ
     ARTS_IMPORT virtual i32 GetNumMaterials() const;
 
-    // ?SetElasticity@dgBoundSphere@@UAEXM@Z
-    ARTS_IMPORT virtual void SetElasticity(f32 arg1);
-
     // ?SetFriction@dgBoundSphere@@UAEXM@Z
     ARTS_IMPORT virtual void SetFriction(f32 arg1);
+
+    // ?SetElasticity@dgBoundSphere@@UAEXM@Z
+    ARTS_IMPORT virtual void SetElasticity(f32 arg1);
 };
 
 // ??_7dgBoundSphere@@6B@

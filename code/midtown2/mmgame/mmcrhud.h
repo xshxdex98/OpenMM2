@@ -39,6 +39,15 @@ public:
     // ??1mmCRHUD@@UAE@XZ
     ARTS_IMPORT virtual ~mmCRHUD();
 
+    // ?Update@mmCRHUD@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@mmCRHUD@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
+    // ?PostUpdate@mmCRHUD@@UAEXXZ
+    ARTS_IMPORT virtual void PostUpdate();
+
     // ?ActivateGold@mmCRHUD@@QAEXXZ
     ARTS_IMPORT void ActivateGold();
 
@@ -57,14 +66,8 @@ public:
     // ?Init@mmCRHUD@@QAEXPAVMatrix34@@PADW4mmCRGameClass@@@Z
     ARTS_IMPORT void Init(Matrix34* arg1, char* arg2, mmCRGameClass arg3);
 
-    // ?PostUpdate@mmCRHUD@@UAEXXZ
-    ARTS_IMPORT virtual void PostUpdate();
-
     // ?RemovePlayer@mmCRHUD@@QAEXK@Z
     ARTS_IMPORT void RemovePlayer(ulong arg1);
-
-    // ?Reset@mmCRHUD@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
 
     // ?SetBlueScore@mmCRHUD@@QAEXH@Z
     ARTS_IMPORT void SetBlueScore(i32 arg1);
@@ -86,9 +89,6 @@ public:
 
     // ?UnPackColor@mmCRHUD@@QAEXIAAVVector4@@@Z
     ARTS_IMPORT void UnPackColor(u32 arg1, Vector4& arg2);
-
-    // ?Update@mmCRHUD@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
     // ?UpdateGold@mmCRHUD@@QAEXXZ
     ARTS_IMPORT void UpdateGold();

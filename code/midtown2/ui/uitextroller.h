@@ -41,11 +41,17 @@ public:
     // ??1UITextRoller@@UAE@XZ
     ARTS_IMPORT virtual ~UITextRoller();
 
+    // ?Cull@UITextRoller@@UAEXXZ
+    ARTS_IMPORT virtual void Cull();
+
+    // ?Update@UITextRoller@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?Action@UITextRoller@@UAEXTeqEvent@@@Z
     ARTS_IMPORT virtual void Action(eqEvent arg1);
 
-    // ?Cull@UITextRoller@@UAEXXZ
-    ARTS_IMPORT virtual void Cull();
+    // ?Switch@UITextRoller@@UAEXH@Z
+    ARTS_IMPORT virtual void Switch(i32 arg1);
 
     // ?Dec@UITextRoller@@QAEHXZ
     ARTS_IMPORT i32 Dec();
@@ -67,12 +73,6 @@ public:
 
     // ?SetValue@UITextRoller@@QAEHH@Z
     ARTS_IMPORT i32 SetValue(i32 arg1);
-
-    // ?Switch@UITextRoller@@UAEXH@Z
-    ARTS_IMPORT virtual void Switch(i32 arg1);
-
-    // ?Update@UITextRoller@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 };
 
 // ??_7UITextRoller@@6B@

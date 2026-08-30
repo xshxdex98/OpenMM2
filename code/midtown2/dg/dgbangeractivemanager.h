@@ -37,6 +37,12 @@ public:
     // ??1dgBangerActiveManager@@UAE@XZ
     ARTS_IMPORT virtual ~dgBangerActiveManager();
 
+    // ?Update@dgBangerActiveManager@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@dgBangerActiveManager@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?Attach@dgBangerActiveManager@@QAEPAVdgBangerActive@@PAVdgBangerInstance@@@Z
     ARTS_IMPORT dgBangerActive* Attach(dgBangerInstance* arg1);
 
@@ -45,12 +51,6 @@ public:
 
     // ?GetActive@dgBangerActiveManager@@QAEPAVdgBangerActive@@PAVdgBangerInstance@@@Z
     ARTS_IMPORT dgBangerActive* GetActive(dgBangerInstance* arg1);
-
-    // ?Reset@dgBangerActiveManager@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
-    // ?Update@dgBangerActiveManager@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     static dgBangerActiveManager*& Access_Instance() { return Instance; }

@@ -36,11 +36,11 @@ public:
     // ??1dgBangerData@@UAE@XZ
     ARTS_IMPORT virtual ~dgBangerData();
 
-    // ?AdjustBound@dgBangerData@@QAEXXZ
-    ARTS_IMPORT void AdjustBound();
+    // ?Save@dgBangerData@@UAE_NXZ
+    ARTS_IMPORT virtual bool Save();
 
-    // ?AdjustPrim@dgBangerData@@QAEXXZ
-    ARTS_IMPORT void AdjustPrim();
+    // ?Load@dgBangerData@@UAE_NXZ
+    ARTS_IMPORT virtual bool Load();
 
     // ?GetClassName@dgBangerData@@UAEPADXZ
     ARTS_IMPORT virtual char* GetClassName();
@@ -48,17 +48,17 @@ public:
     // ?GetDirName@dgBangerData@@UAEPBDXZ
     ARTS_IMPORT virtual const char* GetDirName();
 
+    // ?AdjustBound@dgBangerData@@QAEXXZ
+    ARTS_IMPORT void AdjustBound();
+
+    // ?AdjustPrim@dgBangerData@@QAEXXZ
+    ARTS_IMPORT void AdjustPrim();
+
     // ?InitBound@dgBangerData@@QAEXXZ
     ARTS_IMPORT void InitBound();
 
-    // ?Load@dgBangerData@@UAE_NXZ
-    ARTS_IMPORT virtual bool Load();
-
     // ?LoadEntry@dgBangerData@@QAEHPAD@Z
     ARTS_IMPORT i32 LoadEntry(char* arg1);
-
-    // ?Save@dgBangerData@@UAE_NXZ
-    ARTS_IMPORT virtual bool Save();
 
 public:
     // Members from 0x018; everything below that belongs to asNode.

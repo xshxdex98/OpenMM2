@@ -40,6 +40,12 @@ public:
     // ?Cull@mmReplayManager@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
 
+    // ?Update@mmReplayManager@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@mmReplayManager@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
+
     // ?EndOfReplay@mmReplayManager@@QAE_NXZ
     ARTS_IMPORT bool EndOfReplay();
 
@@ -64,9 +70,6 @@ public:
     // ?LoadReplayDesc@mmReplayManager@@QAEHPAD@Z
     ARTS_IMPORT i32 LoadReplayDesc(char* arg1);
 
-    // ?Reset@mmReplayManager@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?SaveReplay@mmReplayManager@@QAEXPAD@Z
     ARTS_IMPORT void SaveReplay(char* arg1);
 
@@ -78,9 +81,6 @@ public:
 
     // ?SetReplayDesc@mmReplayManager@@QAEXPAD@Z
     ARTS_IMPORT void SetReplayDesc(char* arg1);
-
-    // ?Update@mmReplayManager@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 public:
     static mmReplayManager*& Access_Instance() { return Instance; }

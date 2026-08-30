@@ -36,23 +36,23 @@ public:
     // ??1aiVehicle@@QAE@XZ
     ARTS_IMPORT ~aiVehicle();
 
-    // ?Init@aiVehicle@@QAEXH@Z
-    ARTS_IMPORT void Init(i32 arg1);
+    // ?PreAvoid@aiVehicle@@UAEXABVVector3@@0MAAV2@1@Z
+    ARTS_IMPORT virtual void PreAvoid(const Vector3& arg1, const Vector3& arg2, f32 arg3, Vector3& arg4, Vector3& arg5);
 
     // ?IsBlockingTarget@aiVehicle@@UAEMABVVector3@@0MM@Z
     ARTS_IMPORT virtual f32 IsBlockingTarget(const Vector3& arg1, const Vector3& arg2, f32 arg3, f32 arg4);
 
-    // ?PreAvoid@aiVehicle@@UAEXABVVector3@@0MAAV2@1@Z
-    ARTS_IMPORT virtual void PreAvoid(const Vector3& arg1, const Vector3& arg2, f32 arg3, Vector3& arg4, Vector3& arg5);
-
-    // ?ReplayDebug@aiVehicle@@UAEXXZ
-    ARTS_IMPORT virtual void ReplayDebug();
+    // ?Update@aiVehicle@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
 
     // ?Reset@aiVehicle@@UAEXXZ
     ARTS_IMPORT virtual void Reset();
 
-    // ?Update@aiVehicle@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
+    // ?ReplayDebug@aiVehicle@@UAEXXZ
+    ARTS_IMPORT virtual void ReplayDebug();
+
+    // ?Init@aiVehicle@@QAEXH@Z
+    ARTS_IMPORT void Init(i32 arg1);
 
 public:
     // Members from 0x008; everything below that belongs to aiObstacle.

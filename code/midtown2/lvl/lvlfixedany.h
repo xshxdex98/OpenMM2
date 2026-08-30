@@ -33,11 +33,11 @@ public:
     // ??0lvlFixedAny@@QAE@XZ
     ARTS_IMPORT lvlFixedAny();
 
+    // ?SetVariant@lvlFixedAny@@UAEXH@Z
+    ARTS_IMPORT virtual void SetVariant(i32 arg1);
+
     // ?Draw@lvlFixedAny@@UAEXH@Z
     ARTS_IMPORT virtual void Draw(i32 arg1);
-
-    // ?DrawReflectedParts@lvlFixedAny@@UAEXH@Z
-    ARTS_IMPORT virtual void DrawReflectedParts(i32 arg1);
 
     // ?DrawShadow@lvlFixedAny@@UAEXXZ
     ARTS_IMPORT virtual void DrawShadow();
@@ -45,11 +45,11 @@ public:
     // ?DrawShadowMap@lvlFixedAny@@UAEXXZ
     ARTS_IMPORT virtual void DrawShadowMap();
 
+    // ?DrawReflectedParts@lvlFixedAny@@UAEXH@Z
+    ARTS_IMPORT virtual void DrawReflectedParts(i32 arg1);
+
     // ?Init@lvlFixedAny@@UAEHPBDABVMatrix34@@H@Z
     ARTS_IMPORT virtual i32 Init(const char* arg1, const Matrix34& arg2, i32 arg3);
-
-    // ?SetVariant@lvlFixedAny@@UAEXH@Z
-    ARTS_IMPORT virtual void SetVariant(i32 arg1);
 };
 
 // ??_7lvlFixedAny@@6B@

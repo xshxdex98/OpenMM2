@@ -44,6 +44,9 @@ public:
     // ??1AudSoundBase@@UAE@XZ
     ARTS_IMPORT virtual ~AudSoundBase();
 
+    // ?Update@AudSoundBase@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
     // ?AllOneShotLayersPlaying@AudSoundBase@@QAEHXZ
     ARTS_IMPORT i32 AllOneShotLayersPlaying();
 
@@ -175,9 +178,6 @@ public:
 
     // ?Stop@AudSoundBase@@QAEXXZ
     ARTS_IMPORT void Stop();
-
-    // ?Update@AudSoundBase@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
     // ?UpdateEcho@AudSoundBase@@QAEXXZ
     ARTS_IMPORT void UpdateEcho();

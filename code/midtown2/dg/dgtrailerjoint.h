@@ -39,14 +39,17 @@ public:
     // ??1dgTrailerJoint@@UAE@XZ
     ARTS_IMPORT virtual ~dgTrailerJoint();
 
+    // ?IsBroken@dgTrailerJoint@@UBE_NXZ
+    ARTS_IMPORT virtual bool IsBroken() const;
+
+    // ?ComputeInvMassMatrix@dgTrailerJoint@@UBEXPAVphInertialCS@@AAVMatrix34@@ABVVector3@@@Z
+    ARTS_IMPORT virtual void ComputeInvMassMatrix(phInertialCS* arg1, Matrix34& arg2, const Vector3& arg3) const;
+
     // ?BreakJoint@dgTrailerJoint@@QAEXXZ
     ARTS_IMPORT void BreakJoint();
 
     // ?ComputeInvMassMatrix@dgTrailerJoint@@QAEXPAVphInertialCS@@0AAVMatrix34@@ABVVector3@@@Z
     ARTS_IMPORT void ComputeInvMassMatrix(phInertialCS* arg1, phInertialCS* arg2, Matrix34& arg3, const Vector3& arg4);
-
-    // ?ComputeInvMassMatrix@dgTrailerJoint@@UBEXPAVphInertialCS@@AAVMatrix34@@ABVVector3@@@Z
-    ARTS_IMPORT virtual void ComputeInvMassMatrix(phInertialCS* arg1, Matrix34& arg2, const Vector3& arg3) const;
 
     // ?DoJointLimits@dgTrailerJoint@@QAEXMABVVector3@@M0AAV2@ABVMatrix34@@2222@Z
     ARTS_IMPORT void DoJointLimits(f32 arg1, const Vector3& arg2, f32 arg3, const Vector3& arg4, Vector3& arg5, const Matrix34& arg6, const Matrix34& arg7, const Matrix34& arg8, const Matrix34& arg9, const Matrix34& arg10);
@@ -65,9 +68,6 @@ public:
 
     // ?Init@dgTrailerJoint@@QAEXPBDPAVphInertialCS@@1ABVVector3@@2@Z
     ARTS_IMPORT void Init(const char* arg1, phInertialCS* arg2, phInertialCS* arg3, const Vector3& arg4, const Vector3& arg5);
-
-    // ?IsBroken@dgTrailerJoint@@UBE_NXZ
-    ARTS_IMPORT virtual bool IsBroken() const;
 
     // ?Load@dgTrailerJoint@@UAE_NXZ
     ARTS_IMPORT virtual bool Load();

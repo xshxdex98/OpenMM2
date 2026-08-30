@@ -37,8 +37,17 @@ public:
     // ??0phColliderJointed@@QAE@XZ
     ARTS_IMPORT phColliderJointed();
 
-    // ?Attach@phColliderJointed@@QAEXPBVphJoint@@@Z
-    ARTS_IMPORT void Attach(const phJoint* arg1);
+    // ?GetInvMassMatrix@phColliderJointed@@UBEXABVVector3@@0AAVMatrix34@@H@Z
+    ARTS_IMPORT virtual void GetInvMassMatrix(const Vector3& arg1, const Vector3& arg2, Matrix34& arg3, i32 arg4) const;
+
+    // ?GetInvMassMatrix@phColliderJointed@@UBEXABVVector3@@AAVMatrix34@@H@Z
+    ARTS_IMPORT virtual void GetInvMassMatrix(const Vector3& arg1, Matrix34& arg2, i32 arg3) const;
+
+    // ?Impact@phColliderJointed@@UAEXPBVphImpactBase@@ABVVector3@@@Z
+    ARTS_IMPORT virtual void Impact(const phImpactBase* arg1, const Vector3& arg2);
+
+    // ?Impact@phColliderJointed@@UAEXPBVphImpactBase@@ABVVector3@@1@Z
+    ARTS_IMPORT virtual void Impact(const phImpactBase* arg1, const Vector3& arg2, const Vector3& arg3);
 
     // ?Contact@phColliderJointed@@UAEXABVVector3@@PBVphContact@@@Z
     ARTS_IMPORT virtual void Contact(const Vector3& arg1, const phContact* arg2);
@@ -49,17 +58,8 @@ public:
     // ?Contact@phColliderJointed@@UAEXPBVphImpactBase@@ABVVector3@@11ABVMatrix34@@@Z
     ARTS_IMPORT virtual void Contact(const phImpactBase* arg1, const Vector3& arg2, const Vector3& arg3, const Vector3& arg4, const Matrix34& arg5);
 
-    // ?GetInvMassMatrix@phColliderJointed@@UBEXABVVector3@@0AAVMatrix34@@H@Z
-    ARTS_IMPORT virtual void GetInvMassMatrix(const Vector3& arg1, const Vector3& arg2, Matrix34& arg3, i32 arg4) const;
-
-    // ?GetInvMassMatrix@phColliderJointed@@UBEXABVVector3@@AAVMatrix34@@H@Z
-    ARTS_IMPORT virtual void GetInvMassMatrix(const Vector3& arg1, Matrix34& arg2, i32 arg3) const;
-
-    // ?Impact@phColliderJointed@@UAEXPBVphImpactBase@@ABVVector3@@1@Z
-    ARTS_IMPORT virtual void Impact(const phImpactBase* arg1, const Vector3& arg2, const Vector3& arg3);
-
-    // ?Impact@phColliderJointed@@UAEXPBVphImpactBase@@ABVVector3@@@Z
-    ARTS_IMPORT virtual void Impact(const phImpactBase* arg1, const Vector3& arg2);
+    // ?Attach@phColliderJointed@@QAEXPBVphJoint@@@Z
+    ARTS_IMPORT void Attach(const phJoint* arg1);
 
     // ?InitArray@phColliderJointed@@SAXQAV1@H@Z
     ARTS_IMPORT static void InitArray(phColliderJointed*const arg1, i32 arg2);

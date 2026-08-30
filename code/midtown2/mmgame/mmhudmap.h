@@ -43,20 +43,26 @@ public:
     // ??1mmHudMap@@UAE@XZ
     ARTS_IMPORT virtual ~mmHudMap();
 
-    // ?Activate@mmHudMap@@QAEXXZ
-    ARTS_IMPORT void Activate();
-
     // ?Cull@mmHudMap@@UAEXXZ
     ARTS_IMPORT virtual void Cull();
 
-    // ?Deactivate@mmHudMap@@QAEXXZ
-    ARTS_IMPORT void Deactivate();
+    // ?Update@mmHudMap@@UAEXXZ
+    ARTS_IMPORT virtual void Update();
+
+    // ?Reset@mmHudMap@@UAEXXZ
+    ARTS_IMPORT virtual void Reset();
 
     // ?FileIO@mmHudMap@@UAEXAAVdatParser@@@Z
     ARTS_IMPORT virtual void FileIO(datParser& arg1);
 
     // ?GetClassName@mmHudMap@@UAEPADXZ
     ARTS_IMPORT virtual char* GetClassName();
+
+    // ?Activate@mmHudMap@@QAEXXZ
+    ARTS_IMPORT void Activate();
+
+    // ?Deactivate@mmHudMap@@QAEXXZ
+    ARTS_IMPORT void Deactivate();
 
     // ?GetOrient@mmHudMap@@QAE_NXZ
     ARTS_IMPORT bool GetOrient();
@@ -73,9 +79,6 @@ public:
     // ?RegisterOpponents@mmHudMap@@QAEXPAUOppIconInfo@@H@Z
     ARTS_IMPORT void RegisterOpponents(OppIconInfo* arg1, i32 arg2);
 
-    // ?Reset@mmHudMap@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
-
     // ?SetOrient@mmHudMap@@QAEX_N@Z
     ARTS_IMPORT void SetOrient(bool arg1);
 
@@ -87,9 +90,6 @@ public:
 
     // ?ToggleMapRes@mmHudMap@@QAEXXZ
     ARTS_IMPORT void ToggleMapRes();
-
-    // ?Update@mmHudMap@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
 
 protected:
     // ?GetCurrentMapMode@mmHudMap@@IAEHXZ
