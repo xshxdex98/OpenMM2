@@ -43,9 +43,6 @@ public:
     // ?Init@ptxGlass@@QAEXHHPAVgfxTexture@@@Z
     ARTS_IMPORT void Init(i32 arg1, i32 arg2, gfxTexture* gfxTexture);
 
-    // ?SetCentroidFromVerts@ptxShard@ptxGlass@@QAEXXZ
-    ARTS_IMPORT void SetCentroidFromVerts();
-
     // ?Update@ptxGlass@@QAEXM@Z
     ARTS_IMPORT void Update(f32 draw_list);
 };

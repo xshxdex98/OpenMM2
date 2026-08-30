@@ -153,7 +153,7 @@ public:
     i32 LastGear; // 0x124
     i32 field_128; // 0x128
     u8 field_12c; // 0x12C
-    bool EchoOn; // 0x12D
+    bool EchoOn_; // 0x12D
     u8 field_12e; // 0x12E
     u8 field_12f; // 0x12F
 };

@@ -25,7 +25,6 @@
 
 struct DIDEVICEINSTANCEA;
 struct DIDEVICEOBJECTINSTANCEA;
-struct GUID;
 
 class ioJoystick
 {

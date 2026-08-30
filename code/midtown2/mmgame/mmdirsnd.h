@@ -52,8 +52,8 @@ public:
 public:
     // Members from 0x03C; everything below that belongs to DirSnd.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i32 EAXEnabled; // 0x03C
-    i32 DSound3DEnabled; // 0x040
+    i32 EAXEnabled_; // 0x03C
+    i32 DSound3DEnabled_; // 0x040
 };
 
 // ??_7mmDirSnd@@6B@

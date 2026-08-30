@@ -112,7 +112,7 @@ public:
     u32 Type; // 0x008
     Vector3 field_C; // 0x00C
     Vector3 field_18; // 0x018
-    u8 IsOffset; // 0x024
+    u8 IsOffset_; // 0x024
     Vector3 Offset; // 0x028
     f32 Radius; // 0x034
     u32 field_38; // 0x038

@@ -57,6 +57,8 @@ class UIMenu : public asNode
 public:
     enum eSource : i32;
 
+    enum eSource : i32;
+
     // ??0UIMenu@@QAE@H@Z
     ARTS_IMPORT UIMenu(i32 menuID);
 

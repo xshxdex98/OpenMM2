@@ -31,6 +31,8 @@ class Stream;
 class mmReplayManager : public asNode
 {
 public:
+    struct vTable;
+
     // ??0mmReplayManager@@QAE@XZ
     ARTS_IMPORT mmReplayManager();
 

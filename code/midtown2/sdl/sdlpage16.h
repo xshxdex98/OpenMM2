@@ -39,7 +39,7 @@ public:
     ARTS_IMPORT sdlPage16(i32 perimeterVertexCount, i32 vertexIndicesCount);
 
     // ?ArcMap@sdlPage16@@QBEXPAMPBGHHH@Z
-    ARTS_IMPORT void ArcMap(f32* arg1, unsigned const i16* arg2, i32 arg3, i32 arg4, i32 arg5) const;
+    ARTS_IMPORT void ArcMap(f32* arg1, const u16* arg2, i32 arg3, i32 arg4, i32 arg5) const;
 
     // ?Collect@sdlPage16@@QBEHPBVVector4@@PAVsdlPoly@@HAAH@Z
     ARTS_IMPORT i32 Collect(const Vector4* arg1, sdlPoly* arg2, i32 arg3, i32& arg4) const;
@@ -54,7 +54,7 @@ public:
     ARTS_IMPORT void Draw(i32 arg1, u32 arg2) const;
 
     // ?FindBoundingIsoParams@sdlPage16@@SAXPBVVector4@@PBVVector3@@PBGHHAAH3@Z
-    ARTS_IMPORT static void FindBoundingIsoParams(const Vector4* arg1, const Vector3* arg2, unsigned const i16* arg3, i32 arg4, i32 arg5, i32& arg6, i32& arg7);
+    ARTS_IMPORT static void FindBoundingIsoParams(const Vector4* arg1, const Vector3* arg2, const u16* arg3, i32 arg4, i32 arg5, i32& arg6, i32& arg7);
 
     // ?GetCentroid@sdlPage16@@QBEXAAVVector3@@@Z
     ARTS_IMPORT void GetCentroid(Vector3& out) const;
@@ -84,7 +84,7 @@ public:
     ARTS_IMPORT bool PointInPerimeter(f32 x, f32 z) const;
 
     // ?WallMap@sdlPage16@@QBEXPAMPBGMHH@Z
-    ARTS_IMPORT void WallMap(f32* arg1, unsigned const i16* arg2, f32 arg3, i32 arg4, i32 arg5) const;
+    ARTS_IMPORT void WallMap(f32* arg1, const u16* arg2, f32 arg3, i32 arg4, i32 arg5) const;
 
 private:
     // ?GetShadedColor@sdlPage16@@DAIII@Z

@@ -28,6 +28,8 @@ class Vector2;
 class phConvexPoly
 {
 public:
+    struct Data;
+
     // ?AdvanceV@phConvexPoly@@SAXXZ
     ARTS_IMPORT static void AdvanceV();
 

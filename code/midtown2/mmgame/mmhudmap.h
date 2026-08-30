@@ -37,6 +37,9 @@ public:
     enum IconType : i32;
     enum IndicatorType : i32;
 
+    enum IconType : i32;
+    enum IndicatorType : i32;
+
     // ??0mmHudMap@@QAE@XZ
     ARTS_IMPORT mmHudMap();
 

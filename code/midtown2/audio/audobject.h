@@ -40,6 +40,9 @@ public:
     enum AUD_OBJECTFLAGS : i32;
     enum AUD_OBJECTSTATUS : i32;
 
+    enum AUD_OBJECTFLAGS : i32;
+    enum AUD_OBJECTSTATUS : i32;
+
     // ?CreateDuplicate@audObject@@QAEPAV1@PAV1@@Z
     ARTS_IMPORT audObject* CreateDuplicate(audObject* perpCar);
 

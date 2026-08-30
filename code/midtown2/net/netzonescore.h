@@ -23,7 +23,6 @@
 
 #include "core/arts.h"
 
-struct GUID;
 struct IDirectPlayLobby3;
 class IZoneScore;
 struct _GUID;

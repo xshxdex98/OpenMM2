@@ -33,6 +33,8 @@ class audControl
 public:
     enum AUDCONTROLFLAGS : i32;
 
+    enum AUDCONTROLFLAGS : i32;
+
     // ?Add@audControl@@QAEHPAVaudObject@@H@Z
     ARTS_IMPORT i32 Add(audObject* arg1, i32 arg2);
 

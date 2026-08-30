@@ -23,6 +23,8 @@
 
 #include "core/arts.h"
 
+struct IDirectSound;
+struct IDirectSoundBuffer;
 struct IUnknown;
 struct _DSBUFFERDESC;
 struct _GUID;
@@ -88,8 +90,8 @@ protected:
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
     mmDirSndVTable* lpVTbl; // 0x000
-    LPDIRECTSOUNDBUFFER lpDSBuffer; // 0x004
-    LPDIRECTSOUND lpDS; // 0x008
+    IDirectSoundBuffer* lpDSBuffer; // 0x004
+    IDirectSound* lpDS; // 0x008
     HWND hWnd; // 0x00C
     i32 field_10; // 0x010
     mmSoundDriver* FirstDriver; // 0x014

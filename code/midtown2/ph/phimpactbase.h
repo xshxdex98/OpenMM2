@@ -31,6 +31,8 @@ class phColliderBase;
 class phImpactBase
 {
 public:
+    struct BoundCallbackData;
+
     // ?AddImpactShaftPlaneTest@phImpactBase@@SA_NPAV1@PAHABVVector3@@M2@Z
     ARTS_IMPORT static bool AddImpactShaftPlaneTest(phImpactBase* data_type, i32* v, const Vector3& arg3, f32 arg4, const Vector3& arg5);
 

@@ -35,6 +35,8 @@ class phBound;
 class lvlInstance
 {
 public:
+    struct GeomTableEntry;
+
     // ??0lvlInstance@@QAE@XZ
     ARTS_IMPORT lvlInstance();
 

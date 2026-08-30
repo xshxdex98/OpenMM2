@@ -28,6 +28,8 @@ class gfxImage
 public:
     enum gfxImageFormat : i32;
 
+    enum gfxImageFormat : i32;
+
     // ?Create@gfxImage@@SAPAV1@HHW4gfxImageFormat@1@0H@Z
     ARTS_IMPORT static gfxImage* Create(i32 arg1, i32 arg2, gfxImage::gfxImageFormat arg3, gfxImage::gfxImageFormat arg4, i32 arg5);
 

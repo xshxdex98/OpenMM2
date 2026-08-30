@@ -38,6 +38,9 @@ class phSegment;
 class phBoundPolygonal : public phBound
 {
 public:
+    struct DispSegment;
+    struct Segment;
+
     // ?CenterBound@phBoundPolygonal@@UAEXXZ
     ARTS_IMPORT virtual void CenterBound();
 

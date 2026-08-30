@@ -58,17 +58,17 @@ public:
     ARTS_IMPORT virtual i32 CollidePolyToLevel(const phBoundPolygonal* arg1, i32* arg2, i32 arg3, phColliderBase* arg4, const Matrix34* arg5, const Matrix34* arg6, lvlIntersection* arg7, i32 arg8, i32* arg9, bool arg10) const;
 
     // ?Enumerate@lvlSDL@@QBEXHP6AXABV1@HHHPBGPAX@Z2@Z
-    ARTS_IMPORT void Enumerate(i32 arg1, void (__cdecl* arg2)(const lvlSDL&,i32,i32,i32,unsigned const i16*,void*), void* arg3) const;
+    ARTS_IMPORT void Enumerate(i32 arg1, void (__cdecl* arg2)(const lvlSDL&,i32,i32,i32,const u16*,void*), void* arg3) const;
 
     // ?LoadBinary@lvlSDL@@QAE_NPBD@Z
     ARTS_IMPORT bool LoadBinary(const char* arg_0);
 
     // ?Propulate@lvlSDL@@SAXABV1@HHHPBGPAX@Z
-    ARTS_IMPORT static void Propulate(const lvlSDL& arg1, i32 arg2, i32 arg3, i32 arg4, unsigned const i16* arg5, void* arg6);
+    ARTS_IMPORT static void Propulate(const lvlSDL& arg1, i32 arg2, i32 arg3, i32 arg4, const u16* arg5, void* arg6);
 
 private:
     // ?IsoLerp@lvlSDL@@CA_NAAVVector3@@AAHPBV2@HPBGHM_N4@Z
-    ARTS_IMPORT static bool IsoLerp(Vector3& arg1, i32& arg2, const Vector3* arg3, i32 arg4, unsigned const i16* arg5, i32 arg6, f32 arg7, bool arg8, bool arg9);
+    ARTS_IMPORT static bool IsoLerp(Vector3& arg1, i32& arg2, const Vector3* arg3, i32 arg4, const u16* arg5, i32 arg6, f32 arg7, bool arg8, bool arg9);
 
 public:
     // Members from 0x04C; everything below that belongs to sdlCommon.

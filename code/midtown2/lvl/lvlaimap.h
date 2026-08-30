@@ -133,7 +133,7 @@ public:
     ARTS_IMPORT static void LoadBinary(Stream* arg1);
 
     // ?LoadCurrent@lvlAiMap@@SAXABVlvlSDL@@HHHPBGPAX@Z
-    ARTS_IMPORT static void LoadCurrent(const lvlSDL& arg1, i32 arg2, i32 arg3, i32 arg4, unsigned const i16* arg5, void* arg6);
+    ARTS_IMPORT static void LoadCurrent(const lvlSDL& arg1, i32 arg2, i32 arg3, i32 arg4, const u16* arg5, void* arg6);
 
     // ?SetRoad@lvlAiMap@@SAXABVlvlSDL@@H_N@Z
     ARTS_IMPORT static void SetRoad(const lvlSDL& arg1, i32 arg2, bool arg3);

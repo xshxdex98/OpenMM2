@@ -81,11 +81,24 @@ def main():
         print("PASS: every generated header compiles, and every check_size holds")
         return 0
 
-    print("\nFAIL: %d error(s)" % len(errors))
-    for ln in errors[:25]:
-        print("  " + ln.strip())
-    if len(errors) > 25:
-        print("  ... and %d more" % (len(errors) - 25))
+    # The FULL list goes to a file. Printing a capped list and counting the printed lines is how
+    # "25 errors" got mistaken for the total through several rounds of fixing.
+    log = os.path.join(out, "headers.log")
+    with open(log, "w", encoding="utf-8", newline="\n") as f:
+        f.write(text)
+
+    import collections
+    by_header = collections.Counter()
+    for ln in errors:
+        head = ln.split("(")[0].strip()
+        by_header[os.path.basename(head)] += 1
+
+    print("\nFAIL: %d error(s) across %d header(s)" % (len(errors), len(by_header)))
+    for name, n in by_header.most_common(20):
+        print("  %-34s %d" % (name, n))
+    if len(by_header) > 20:
+        print("  ... and %d more headers" % (len(by_header) - 20))
+    print("\nfull compiler output: %s" % log)
     print("\nA syntax error here is usually a bad member TYPE from data/layouts.json; a failing")
     print("check_size is usually a bad member WIDTH. See tools/kit_layouts.py.")
     return 1

@@ -36,10 +36,10 @@ public:
     ARTS_IMPORT datMultiTokenizer();
 
     // ?GetReadTokenizer@datMultiTokenizer@@QAEAAVdatBaseTokenizer@@PBDPAVStream@@00@Z
-    ARTS_IMPORT datBaseTokenizer& GetReadTokenizer(const char* arg1, Stream* arg2, const char* arg3, const char* arg4);
+    ARTS_IMPORT datBaseTokenizer& GetReadTokenizer(const char* arg1, ::Stream* arg2, const char* arg3, const char* arg4);
 
     // ?GetWriteTokenizer@datMultiTokenizer@@QAEAAVdatBaseTokenizer@@PBDPAVStream@@_N0@Z
-    ARTS_IMPORT datBaseTokenizer& GetWriteTokenizer(const char* arg1, Stream* arg2, bool arg3, const char* arg4);
+    ARTS_IMPORT datBaseTokenizer& GetWriteTokenizer(const char* arg1, ::Stream* arg2, bool arg3, const char* arg4);
 
 public:
     // Members from 0x01C; everything below that belongs to datAsciiTokenizer.

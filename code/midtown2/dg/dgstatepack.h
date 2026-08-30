@@ -23,6 +23,9 @@
 
 #include "core/arts.h"
 
+enum dgGameMode : i32;
+enum dgSkillLevel : i32;
+
 class dgStatePack
 {
 public:

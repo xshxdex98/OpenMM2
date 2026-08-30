@@ -38,6 +38,9 @@ public:
     enum AUDTYPE : i32;
     enum SOUNDFLAG : i32;
 
+    enum AUDTYPE : i32;
+    enum SOUNDFLAG : i32;
+
     // ?AddControl@audManager@@QAEHW4AUDTYPE@1@PAVaudControl@@@Z
     ARTS_IMPORT i32 AddControl(audManager::AUDTYPE arg1, audControl* arg2);
 

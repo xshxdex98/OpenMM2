@@ -35,13 +35,13 @@ class gfxPacket
 {
 public:
     // ??0gfxPacket@@QAE@IIIPBEIPBGIPAVgfxReskin@@IE00_N@Z
-    ARTS_IMPORT gfxPacket(u32 arg1, u32 arg2, u32 arg3, unsigned const char* arg4, u32 arg5, unsigned const i16* arg6, u32 arg7, gfxReskin* arg8, u32 arg9, u8 arg10, unsigned const char* arg11, unsigned const char* arg12, bool arg13);
+    ARTS_IMPORT gfxPacket(u32 arg1, u32 arg2, u32 arg3, const u8* arg4, u32 arg5, const u16* arg6, u32 arg7, gfxReskin* arg8, u32 arg9, u8 arg10, const u8* arg11, const u8* arg12, bool arg13);
 
     // ??0gfxPacket@@QAE@PBV0@@Z
     ARTS_IMPORT gfxPacket(const gfxPacket* arg1);
 
     // ?AutoSetPacking@gfxPacket@@SAXIIPBE@Z
-    ARTS_IMPORT static void AutoSetPacking(u32 arg1, u32 arg2, unsigned const char* arg3);
+    ARTS_IMPORT static void AutoSetPacking(u32 arg1, u32 arg2, const u8* arg3);
 
     // ?BeginProp@gfxPacket@@SAXXZ
     ARTS_IMPORT static void BeginProp();

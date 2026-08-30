@@ -36,6 +36,8 @@ class phSegment;
 class dgPhysManager : public phPhysicsManager
 {
 public:
+    struct CollisionTableEntry;
+
     // ??0dgPhysManager@@QAE@XZ
     ARTS_IMPORT dgPhysManager();
 

@@ -29,7 +29,6 @@
 
 class DPLCONNECTION;
 struct DPMSG_GENERIC;
-struct GUID;
 class IDirectPlay4A;
 class IDirectPlayLobby3A;
 struct NETCOMMPACK;
@@ -238,7 +237,7 @@ public:
     datCallback AppMessageCB; // 0x00C
     IDirectPlay4A* pDPlay; // 0x018
     IDirectPlayLobby3A* pLobby; // 0x01C
-    DPID PlayerID; // 0x020
+    u32 PlayerID; // 0x020
     DPLCONNECTION* pConnection; // 0x024
     GUID* pGUID; // 0x028
     void* nRecvBufSize; // 0x02C

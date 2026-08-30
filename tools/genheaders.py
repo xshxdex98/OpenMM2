@@ -60,6 +60,25 @@ PRIMITIVES = OrderedDict([
     # Windows typedefs, mapped to the project's own fixed-width names. These carry real sizes and
     # must map to something the same width, or the class they appear in changes size and its
     # check_size assertion starts failing for reasons that have nothing to do with the layout.
+    # Windows and DirectX pointer typedefs. These are NAMES for pointer types, and leaving
+    # them alone made the generator forward-declare the typedef itself and then use it by
+    # value. Mapping them to the pointer form lets the ordinary forward-declaration path
+    # handle them - `struct IDirectSound;` - which is what it already does elsewhere.
+    # Direct3D 7 VALUE types. gfxLight is D3DLIGHT7 field for field, holding these by value,
+    # so a forward declaration cannot serve - they need real types of the right size. The
+    # layouts are fixed by the D3D7 ABI: D3DVALUE is a float, D3DVECTOR is three of them (the
+    # same twelve bytes as Vector3), D3DLIGHTTYPE is an enum and so four bytes, and
+    # D3DCOLORVALUE is four floats - defined in core/arts.h beside GUID.
+    ("D3DCOLORVALUE", "D3DCOLORVALUE"),
+    ("D3DLIGHTTYPE", "i32"),
+    ("D3DVECTOR", "D3DVECTOR"),
+    ("D3DVALUE", "f32"),
+    ("LPDIRECTSOUNDBUFFER", "IDirectSoundBuffer*"),
+    ("LPDIRECTSOUND", "IDirectSound*"),
+    ("LPDIRECTDRAWSURFACE7", "IDirectDrawSurface7*"),
+    ("LPDIRECTDRAW7", "IDirectDraw7*"),
+    # DPID is DirectPlay's player id - a DWORD, not a pointer.
+    ("DPID", "u32"),
     ("BOOL", "i32"),
     ("HRESULT", "i32"),
     ("DWORD", "u32"),
@@ -95,6 +114,9 @@ IDENT = re.compile(r"\b([A-Za-z_]\w*(?:::\w+)*)\b")
 BUILTIN = set(PRIMITIVES.values()) | {
     "void", "char", "bool", "int", "float", "double", "short", "long", "unsigned", "signed",
     "const", "volatile", "__int64", "operator", "static", "virtual",
+    # Defined in core/arts.h, which every generated header includes. Forward-declaring it as well
+    # is a redefinition against the typedef.
+    "GUID", "D3DCOLORVALUE", "D3DVECTOR",
     # Calling conventions read as identifiers but are keywords. They were filtered by accident
     # while forward declarations required a leading letter; once underscore-prefixed names were
     # allowed - which _GUID and _DDPIXELFORMAT need - "struct __stdcall;" appeared and MSVC
@@ -111,12 +133,15 @@ def map_type(text):
 
     t = TAGS.sub("", text).strip()
 
-    # MSVC writes east const; the codebase writes west const.
-    t = re.sub(r"\b(\w+)\s+const\b", r"const \1", t)
-
+    # Primitives FIRST. The east-const rewrite below matches a single word before `const`, so
+    # on a two-word type it splits it: `unsigned short const *` became `unsigned const short*`,
+    # and only then did short -> i16 run, giving `unsigned const i16*` - not a type. Mapping
+    # first collapses the type to one word, after which the rewrite is safe.
     for msvc, arts in PRIMITIVES.items():
         t = re.sub(r"\b%s\b" % re.escape(msvc), arts, t)
 
+    # MSVC writes east const; the codebase writes west const.
+    t = re.sub(r"\b(\w+)\s+const\b", r"const \1", t)
     t = re.sub(r"\s*\*\s*", "*", t)
     t = re.sub(r"\s*&\s*", "&", t)
     t = re.sub(r"\s+", " ", t).strip()
@@ -202,6 +227,17 @@ def size_of(cls):
 # because the sources disagree: the IDA types say "vTable", datParser recovery says "vtable",
 # and a member that slips through is emitted as a real field on a class that already has an
 # implicit vptr - two pointers, and a sizeof that no longer matches the original.
+# {owner: {nested type names}} - every `Owner::Nested` anything refers to, filled in main().
+# A nested type can only be declared inside its owner, so this is what lets that happen.
+NESTED = {}
+
+# Nested names MSVC mangles as W4<Name>@1@, i.e. nested enums. Anything else nested is a struct.
+NESTED_ENUMS = set()
+
+# {class: {method names}} - filled in main() before any header is written, so emit_members can
+# tell when a recovered field name collides with a real method.
+METHOD_NAMES = {}
+
 VPTR_NAMES = {"vtable", "vfptr", "__vftable", "vtbl", "vptr"}
 
 
@@ -243,10 +279,29 @@ def emit_members(cls, is_polymorphic):
         if m["offset"] < skip_to:
             continue
 
+        # A data member cannot share a name with a member function. phBound declares both an
+        # IsOffset() method and an IsOffset field; the method name comes from the linker map and
+        # the field name from a recovery, so the field yields. The trailing underscore is this
+        # codebase's marker for a name we chose rather than one from 1999.
+        if m["name"] in METHOD_NAMES.get(cls, ()):
+            m = dict(m, name=m["name"] + "_")
+
         # Member types go through the same mapping as signature types. They did not, so a member
         # declared BOOL stayed BOOL - a Windows typedef nothing here declares - and the class then
         # failed its check_size, which reads like a layout error rather than an undeclared type.
-        decl = "%s %s" % (map_type(m["type"]), m["name"])
+        mtype = map_type(m["type"])
+
+        # A function pointer puts the name INSIDE the declarator:
+        #     void (__cdecl* OnSparkAdded)(asSparkInfo*, asSparkPos*)
+        # never `void (__cdecl*)(asSparkInfo*, asSparkPos*) OnSparkAdded`, which is not a
+        # declaration at all. declare() already did this for PARAMETERS; members reached the
+        # same shape and were emitted flat, so asBirthRule had never compiled.
+        fp = re.match(r"^(.*\(\s*(?:__stdcall|__cdecl|__fastcall|__thiscall)?\s*"
+                      r"(?:[A-Za-z_]\w*::)*\*)(\)\(.*)$", mtype)
+        if fp:
+            decl = "%s%s%s" % (fp.group(1), m["name"], fp.group(2))
+        else:
+            decl = "%s %s" % (mtype, m["name"])
         if m.get("count"):
             decl += "[%d]" % m["count"]
 
@@ -318,6 +373,30 @@ def sort_key(sym):
 PARAMS = {}
 
 
+def shadowing_members(cls):
+    """Member names in `cls` or any ancestor that would hide a type of the same name."""
+    names = set()
+    seen = set()
+    while cls and cls not in seen:
+        seen.add(cls)
+        info = LAYOUT.get(cls)
+        if info:
+            for m in info.get("members") or []:
+                if m.get("name"):
+                    names.add(m["name"])
+        cls = base_of(cls)
+    return names
+
+
+def unshadow(text, shadowed):
+    """Qualify any type name in `text` that a member of the enclosing class would hide."""
+    if not shadowed or not text:
+        return text
+    return re.sub(r"\b([A-Za-z_]\w*)\b",
+                  lambda m: "::" + m.group(1) if m.group(1) in shadowed else m.group(1),
+                  text)
+
+
 def param_name(sym, index, arity):
     """The recovered name for parameter `index`, or argN.
 
@@ -356,14 +435,16 @@ def declare(sym):
 
     kind = sym["kind"]
 
+    shadowed = shadowing_members(sym.get("class") or "")
+
     if kind not in ("constructor", "destructor"):
-        parts.append(map_type(sym.get("type")))
+        parts.append(unshadow(map_type(sym.get("type")), shadowed))
 
     args = []
     for i, p in enumerate(sym.get("params") or []):
         # A function-pointer parameter puts its name inside the parentheses, not after them.
         # "i32 (__stdcall*)(...) arg2" is not a declaration; "i32 (__stdcall* arg2)(...)" is.
-        ty = map_type(p)
+        ty = unshadow(map_type(p), shadowed)
 
         # Varargs take no name. "const char* arg1, ... arg2" is not a declaration.
         if ty.strip() in ("...", "..."):
@@ -519,7 +600,7 @@ def emit_class(cls, syms, index, subsys):
     if info:
         for m in info.get("members") or []:
             if m.get("type"):
-                v, r = referenced_types([m["type"]])
+                v, r = referenced_types([map_type(m["type"])])
                 val |= v
                 ref |= r
 
@@ -563,6 +644,16 @@ def emit_class(cls, syms, index, subsys):
     for s in functions + statics:
         for m in re.finditer(r"W4([A-Za-z_][A-Za-z0-9_]*)@@", s.get("mangled") or ""):
             global_enums.add(m.group(1))
+    # A MEMBER can be an enum too, and its type never appears in a mangled function name, so the
+    # scan above misses it entirely: dgStatePack holds a GameMode and a SkillLevel, gfxLight a
+    # dltType, and each was simply an undeclared identifier. The IDB records what kind of type each
+    # name is, so ask it rather than guessing from the spelling.
+    if info:
+        for m in info.get("members") or []:
+            base = map_type(m.get("type") or "").replace("*", "").strip()
+            if base and TYPE_TAGS.get(base) == "enum":
+                global_enums.add(base)
+
     global_enums -= own
 
     if global_enums:
@@ -606,6 +697,17 @@ def emit_class(cls, syms, index, subsys):
         out.append("class %s" % leaf)
     out.append("{")
     out.append("public:")
+
+    # Nested types anything refers to as Owner::Nested. Declared here because that is the only
+    # place they CAN be declared - a nested name cannot be forward-declared from outside its owner.
+    # A declaration is sufficient for the pointers and references these are used as.
+    for nested in sorted(NESTED.get(leaf, ())):
+        if nested in NESTED_ENUMS or TYPE_TAGS.get(nested) == "enum":
+            out.append("    enum %s : i32;" % nested)
+        else:
+            out.append("    struct %s;" % nested)
+    if NESTED.get(leaf):
+        out.append("")
 
     # Nested enums, declared opaquely.
     #
@@ -893,9 +995,48 @@ def main():
         print("%d functions have a recovered parameter name" % len(PARAMS))
 
     classes = {}
+    nested_skipped = 0
     for s in syms:
-        if s.get("class"):
-            classes.setdefault(s["class"].split("::")[0], []).append(s)
+        cls = s.get("class")
+        if not cls:
+            continue
+        if "::" in cls:
+            # A member of a NESTED class. Filing it under the outer class produces nonsense -
+            # ??0TerrainContact@phInertialCS@@ became `void phInertialCS();` - and a nested class
+            # needs a declaration inside its owner, which this generator does not write. Skipped
+            # rather than misfiled; see docs/harness.md.
+            nested_skipped += 1
+            continue
+        classes.setdefault(cls, []).append(s)
+    if nested_skipped:
+        print("%d symbols belong to nested classes and are not emitted" % nested_skipped)
+
+    for cls, group in classes.items():
+        METHOD_NAMES[cls] = {g.get("name") for g in group
+                             if g.get("code") and g.get("name")}
+
+    # Every Owner::Nested named by a return type, a parameter or a member.
+    # MSVC spells a nested enum W4<Name>@1@ in the mangled name. That is the only reliable way
+    # to tell one from a nested struct here, since TYPE_TAGS holds no nested names.
+    for s2 in syms:
+        for m in re.finditer(r"W4([A-Za-z_]\w*)@1@", s2.get("mangled") or ""):
+            NESTED_ENUMS.add(m.group(1))
+
+    nested_re = re.compile(r"\b([A-Za-z_]\w*)::([A-Za-z_]\w*)\b")
+    def note_nested(text):
+        for m in nested_re.finditer(TAGS.sub("", text or "")):
+            owner, name = m.group(1), m.group(2)
+            if owner in classes and name != owner:
+                NESTED.setdefault(owner, set()).add(name)
+
+    for s2 in syms:
+        note_nested(s2.get("type"))
+        for prm in (s2.get("params") or []):
+            note_nested(prm)
+    for cls2, info2 in LAYOUT.items():
+        if isinstance(info2, dict):
+            for m2 in info2.get("members") or []:
+                note_nested(m2.get("type"))
 
     # HAND-WRITTEN HEADERS THIS GENERATOR CANNOT PRODUCE, BUT MUST STILL BE ABLE TO INCLUDE.
     #

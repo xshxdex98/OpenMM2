@@ -34,19 +34,19 @@ public:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    D3DLIGHTTYPE dltType; // 0x000
+    i32 dltType; // 0x000
     D3DCOLORVALUE dcvDiffuse; // 0x004
     D3DCOLORVALUE dcvSpecular; // 0x014
     D3DCOLORVALUE dcvAmbient; // 0x024
     D3DVECTOR dvPosition; // 0x034
     D3DVECTOR dvDirection; // 0x040
-    D3DVALUE dvRange; // 0x04C
-    D3DVALUE dvFalloff; // 0x050
-    D3DVALUE dvAttenuation0; // 0x054
-    D3DVALUE dvAttenuation1; // 0x058
-    D3DVALUE dvAttenuation2; // 0x05C
-    D3DVALUE dvTheta; // 0x060
-    D3DVALUE dvPhi; // 0x064
+    f32 dvRange; // 0x04C
+    f32 dvFalloff; // 0x050
+    f32 dvAttenuation0; // 0x054
+    f32 dvAttenuation1; // 0x058
+    f32 dvAttenuation2; // 0x05C
+    f32 dvTheta; // 0x060
+    f32 dvPhi; // 0x064
 };
 
 check_size(gfxLight, 0x68);

@@ -28,6 +28,9 @@ struct memMemStats;
 class memMemoryAllocator
 {
 public:
+    struct freenode;
+    struct node;
+
     // ??0memMemoryAllocator@@QAE@XZ
     ARTS_IMPORT memMemoryAllocator();
 

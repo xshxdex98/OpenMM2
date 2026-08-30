@@ -36,6 +36,8 @@ class asCamera : public asNode
 public:
     enum kNearClip : i32;
 
+    enum kNearClip : i32;
+
     // ??0asCamera@@QAE@XZ
     ARTS_IMPORT asCamera();
 

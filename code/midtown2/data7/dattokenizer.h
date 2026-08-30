@@ -31,7 +31,7 @@ class datTokenizer : public datAsciiTokenizer
 {
 public:
     // ??0datTokenizer@@QAE@PBDPAVStream@@@Z
-    ARTS_IMPORT datTokenizer(const char* arg1, Stream* arg2);
+    ARTS_IMPORT datTokenizer(const char* arg1, ::Stream* arg2);
 
     // ??0datTokenizer@@QAE@XZ
     ARTS_IMPORT datTokenizer();

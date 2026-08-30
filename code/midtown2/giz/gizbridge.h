@@ -30,6 +30,8 @@
 class gizBridge : public dgUnhitMtxBangerInstance
 {
 public:
+    struct mmBridgeAudio;
+
     // ??0gizBridge@@QAE@XZ
     ARTS_IMPORT gizBridge();
 
@@ -49,7 +51,7 @@ public:
     ARTS_IMPORT void Cull(i32 cullMode);
 
     // ?Init@gizBridge@@QAEXPADABVMatrix34@@@Z
-    ARTS_IMPORT void Init(char* arg1, const Matrix34& arg2);
+    ARTS_IMPORT void Init(char* arg1, const ::Matrix34& arg2);
 
     // ?Trigger@gizBridge@@QAE_NXZ
     ARTS_IMPORT bool Trigger();

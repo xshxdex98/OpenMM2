@@ -30,6 +30,8 @@ class datTimeManager
 public:
     enum EnumTimeMode : i32;
 
+    enum EnumTimeMode : i32;
+
     // ?FixedFrame@datTimeManager@@SAXMI@Z
     ARTS_IMPORT static void FixedFrame(f32 arg1, u32 arg2);
 

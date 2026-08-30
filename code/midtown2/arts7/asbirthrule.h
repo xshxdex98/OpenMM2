@@ -99,7 +99,7 @@ public:
     i32 TexFrameEnd; // 0x0A4
     i32 InitialBlast; // 0x0A8
     i32 BirthFlags; // 0x0AC
-    void (__cdecl*)(asSparkInfo*, asSparkPos*) OnSparkAdded; // 0x0B0
+    void (__cdecl*OnSparkAdded)(asSparkInfo*, asSparkPos*); // 0x0B0
 };
 
 // ??_7asBirthRule@@6B@

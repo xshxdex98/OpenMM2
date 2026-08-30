@@ -145,9 +145,6 @@ public:
     // ?MoveICS@phInertialCS@@QAEXXZ
     ARTS_IMPORT void MoveICS();
 
-    // ??0TerrainContact@phInertialCS@@QAE@XZ
-    ARTS_IMPORT void phInertialCS();
-
     // ?PrincipalAxis@phInertialCS@@QAE?AVVector3@@MMMM@Z
     ARTS_IMPORT Vector3 PrincipalAxis(f32 arg1, f32 arg2, f32 arg3, f32 arg4);
 

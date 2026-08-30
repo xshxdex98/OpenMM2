@@ -35,6 +35,8 @@ class gfxBitmap;
 class asCullManager : public asNode
 {
 public:
+    struct VTbl;
+
     // ??0asCullManager@@QAE@HH@Z
     ARTS_IMPORT asCullManager(i32 maxCullables, i32 maxCullables2D);
 

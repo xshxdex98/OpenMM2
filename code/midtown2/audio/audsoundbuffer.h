@@ -30,6 +30,8 @@ class audSoundBuffer
 public:
     enum SOUNDBUFFERTYPE : i32;
 
+    enum SOUNDBUFFERTYPE : i32;
+
     // ?BytesAdded@audSoundBuffer@@QAE_NH@Z
     ARTS_IMPORT bool BytesAdded(i32 arg1);
 
