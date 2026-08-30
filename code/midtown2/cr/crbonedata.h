@@ -40,7 +40,7 @@ public:
     ARTS_IMPORT void ApplyLimits(Matrix34& arg1) const;
 
     // ?Load@crBoneData@@QAE_NAAVdatTokenizer@@PAPAV1@AAH@Z
-    ARTS_IMPORT bool Load(datTokenizer& arg1, crBoneData** arg2, i32& arg3);
+    ARTS_IMPORT bool Load(datTokenizer& instance, crBoneData** arg2, i32& arg3);
 
     // ?Transform@crBoneData@@QBEXPBVMatrix34@@PAVcrBone@@@Z
     ARTS_IMPORT void Transform(const Matrix34* arg1, crBone* arg2) const;

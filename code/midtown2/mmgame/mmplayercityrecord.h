@@ -42,7 +42,7 @@ public:
     ARTS_IMPORT u32 ComputeCRC();
 
     // ?GetNumPassed@mmPlayerCityRecord@@QAEHH@Z
-    ARTS_IMPORT i32 GetNumPassed(i32 arg1);
+    ARTS_IMPORT i32 GetNumPassed(i32 getter);
 
     // ?GetNumRaces@mmPlayerCityRecord@@QAEHH@Z
     ARTS_IMPORT i32 GetNumRaces(i32 arg1);
@@ -51,7 +51,7 @@ public:
     ARTS_IMPORT ulong GetPassedMask(i32 arg1);
 
     // ?GetRecord@mmPlayerCityRecord@@QAEHAAVmmPlayerRecord@@HH@Z
-    ARTS_IMPORT i32 GetRecord(mmPlayerRecord& arg1, i32 arg2, i32 arg3);
+    ARTS_IMPORT i32 GetRecord(mmPlayerRecord& arg1, i32 arg2, i32 position);
 
     // ?InitCityRecord@mmPlayerCityRecord@@QAEXPADMHHHH@Z
     ARTS_IMPORT void InitCityRecord(char* arg1, f32 arg2, i32 arg3, i32 arg4, i32 arg5, i32 arg6);
@@ -60,7 +60,7 @@ public:
     ARTS_IMPORT i32 NewRecord(mmPlayerRecord arg1, i32 arg2, i32 arg3);
 
     // ?Open@mmPlayerCityRecord@@QAEHPADM@Z
-    ARTS_IMPORT i32 Open(char* arg1, f32 arg2);
+    ARTS_IMPORT i32 Open(char* getter, f32 transformer);
 
     // ?Reset@mmPlayerCityRecord@@QAEXXZ
     ARTS_IMPORT void Reset();

@@ -47,7 +47,7 @@ public:
     ARTS_IMPORT virtual void Impact(const phImpactBase* arg1, const Vector3& arg2);
 
     // ?Impact@phColliderJointed@@UAEXPBVphImpactBase@@ABVVector3@@1@Z
-    ARTS_IMPORT virtual void Impact(const phImpactBase* arg1, const Vector3& arg2, const Vector3& arg3);
+    ARTS_IMPORT virtual void Impact(const phImpactBase* arg1, const Vector3& rhs, const Vector3& arg3);
 
     // ?Contact@phColliderJointed@@UAEXABVVector3@@PBVphContact@@@Z
     ARTS_IMPORT virtual void Contact(const Vector3& arg1, const phContact* arg2);
@@ -62,7 +62,7 @@ public:
     ARTS_IMPORT void Attach(const phJoint* arg1);
 
     // ?InitArray@phColliderJointed@@SAXQAV1@H@Z
-    ARTS_IMPORT static void InitArray(phColliderJointed*const arg1, i32 arg2);
+    ARTS_IMPORT static void InitArray(phColliderJointed*const output, i32 i);
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

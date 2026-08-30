@@ -41,7 +41,7 @@ public:
     ARTS_IMPORT void Draw();
 
     // ?Init@asLineSparks@@QAEXHPAD@Z
-    ARTS_IMPORT void Init(i32 arg1, char* arg2);
+    ARTS_IMPORT void Init(i32 arg1, char* textureName);
 
     // ?RadialBlast@asLineSparks@@QAEXHAAVVector3@@0@Z
     ARTS_IMPORT void RadialBlast(i32 arg1, Vector3& arg2, Vector3& arg3);

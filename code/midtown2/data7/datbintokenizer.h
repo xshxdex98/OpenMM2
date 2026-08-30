@@ -39,7 +39,7 @@ public:
     ARTS_IMPORT virtual f32 GetFloat();
 
     // ?GetVector@datBinTokenizer@@UAEXAAVVector4@@@Z
-    ARTS_IMPORT virtual void GetVector(Vector4& arg1);
+    ARTS_IMPORT virtual void GetVector(Vector4& stream);
 
     // ?GetVector@datBinTokenizer@@UAEXAAVVector3@@@Z
     ARTS_IMPORT virtual void GetVector(Vector3& arg1);
@@ -66,7 +66,7 @@ public:
     ARTS_IMPORT virtual void MatchVector(const char* arg1, Vector2& arg2);
 
     // ?Put@datBinTokenizer@@UAE_NABVVector4@@@Z
-    ARTS_IMPORT virtual bool Put(const Vector4& arg1);
+    ARTS_IMPORT virtual bool Put(const Vector4& lpData);
 
     // ?Put@datBinTokenizer@@UAE_NABVVector3@@@Z
     ARTS_IMPORT virtual bool Put(const Vector3& arg1);
@@ -75,13 +75,13 @@ public:
     ARTS_IMPORT virtual bool Put(const Vector2& arg1);
 
     // ?Put@datBinTokenizer@@UAE_NM@Z
-    ARTS_IMPORT virtual bool Put(f32 arg1);
+    ARTS_IMPORT virtual bool Put(f32 Data);
 
     // ?Put@datBinTokenizer@@UAE_NH@Z
     ARTS_IMPORT virtual bool Put(i32 arg1);
 
     // ?Put@datBinTokenizer@@UAE_NPBDI@Z
-    ARTS_IMPORT virtual bool Put(const char* arg1, u32 arg2);
+    ARTS_IMPORT virtual bool Put(const char* lpData, u32 arg2);
 
     // ?PutDelimiter@datBinTokenizer@@UAE_NPBD@Z
     ARTS_IMPORT virtual bool PutDelimiter(const char* arg1);

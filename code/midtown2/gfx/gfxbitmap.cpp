@@ -295,7 +295,7 @@ gfxBitmap* gfxBitmap::Create(i32 arg1, i32 arg2, bool arg3)
 }
 
 // ?Load@gfxBitmap@@QAE_NPAVgfxImage@@@Z
-bool gfxBitmap::Load(gfxImage* arg1)
+bool gfxBitmap::Load(gfxImage* image)
 {
 #ifdef ARTS_AGIGL
     if (agiGLEnabled())
@@ -321,23 +321,23 @@ bool gfxBitmap::Load(gfxImage* arg1)
             }
         }
 
-        return agiGLBitmapLoad(Surface, arg1, Width, Height);
+        return agiGLBitmapLoad(Surface, image, Width, Height);
 #endif
 
-    return ArtsOrigBitmapLoad(this, arg1);
+    return ArtsOrigBitmapLoad(this, image);
 }
 
 // ?Clear@gfxBitmap@@QAEXI@Z
-void gfxBitmap::Clear(u32 arg1)
+void gfxBitmap::Clear(u32 fillColor)
 {
 #ifdef ARTS_AGIGL
     if (agiGLEnabled())
     {
-        agiGLBitmapClear(Surface, arg1, Width, Height);
+        agiGLBitmapClear(Surface, fillColor, Width, Height);
 
         return;
     }
 #endif
 
-    ArtsOrigBitmapClear(this, arg1);
+    ArtsOrigBitmapClear(this, fillColor);
 }

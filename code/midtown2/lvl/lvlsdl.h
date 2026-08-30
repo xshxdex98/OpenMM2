@@ -43,7 +43,7 @@ public:
     ARTS_IMPORT ~lvlSDL();
 
     // ?GetVertex@lvlSDL@@UBEABVVector3@@H@Z
-    ARTS_IMPORT virtual const Vector3& GetVertex(i32 arg1) const;
+    ARTS_IMPORT virtual const Vector3& GetVertex(i32 index) const;
 
     // ?CollideEdge@lvlSDL@@UBEHAAVlvlSegment@@PAVlvlIntersection@@HPAHH@Z
     ARTS_IMPORT virtual i32 CollideEdge(lvlSegment& arg1, lvlIntersection* arg2, i32 arg3, i32* arg4, i32 arg5) const;
@@ -61,7 +61,7 @@ public:
     ARTS_IMPORT void Enumerate(i32 arg1, void (__cdecl* arg2)(const lvlSDL&,i32,i32,i32,unsigned const i16*,void*), void* arg3) const;
 
     // ?LoadBinary@lvlSDL@@QAE_NPBD@Z
-    ARTS_IMPORT bool LoadBinary(const char* arg1);
+    ARTS_IMPORT bool LoadBinary(const char* arg_0);
 
     // ?Propulate@lvlSDL@@SAXABV1@HHHPBGPAX@Z
     ARTS_IMPORT static void Propulate(const lvlSDL& arg1, i32 arg2, i32 arg3, i32 arg4, unsigned const i16* arg5, void* arg6);

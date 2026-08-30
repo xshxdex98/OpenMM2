@@ -53,13 +53,13 @@ public:
     ARTS_IMPORT virtual const phMaterial* GetMaterial(i32 arg1) const;
 
     // ?TestProbePoint@phBoundBox@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@M@Z
-    ARTS_IMPORT virtual bool TestProbePoint(phSegment& arg1, phIntersectionPoint* arg2, f32 arg3) const;
+    ARTS_IMPORT virtual bool TestProbePoint(phSegment& id, phIntersectionPoint* pos, f32 dock_node) const;
 
     // ?TestAIPoint@phBoundBox@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@@Z
     ARTS_IMPORT virtual bool TestAIPoint(phSegment& arg1, phIntersectionPoint* arg2) const;
 
     // ?TestEdge@phBoundBox@@UBEHAAVphSegment@@PAVphIntersection@@H@Z
-    ARTS_IMPORT virtual i32 TestEdge(phSegment& arg1, phIntersection* arg2, i32 arg3) const;
+    ARTS_IMPORT virtual i32 TestEdge(phSegment& label, phIntersection* size_arg, i32 flags) const;
 
     // ?TestProbe@phBoundBox@@UBE_NAAVphSegment@@PAVphIntersection@@M@Z
     ARTS_IMPORT virtual bool TestProbe(phSegment& arg1, phIntersection* arg2, f32 arg3) const;
@@ -89,7 +89,7 @@ public:
     ARTS_IMPORT static bool ProbeVsBox(const Vector3& arg1, phSegment& arg2, phIntersectionPoint* arg3, ilong* arg4, f32 arg5);
 
     // ?ScaleSize@phBoundBox@@QAEXABVVector3@@@Z
-    ARTS_IMPORT void ScaleSize(const Vector3& arg1);
+    ARTS_IMPORT void ScaleSize(const Vector3& arg0);
 
     // ?SetQuickTestInfo@phBoundBox@@QAEXXZ
     ARTS_IMPORT void SetQuickTestInfo();
@@ -105,17 +105,17 @@ protected:
     ARTS_IMPORT void BoxToBoxFaceImpacts(const Vector3& arg1, phImpactBase* arg2, i32 arg3, bool arg4, const Matrix34* arg5, const Matrix34* arg6, const Matrix34* arg7, const Matrix34* arg8, phColliderBase* arg9, phColliderBase* arg10) const;
 
     // ?TestProbeSlave@phBoundBox@@IBE_NAAVphSegment@@PAVphIntersectionPoint@@PAJM@Z
-    ARTS_IMPORT bool TestProbeSlave(phSegment& arg1, phIntersectionPoint* arg2, ilong* arg3, f32 arg4) const;
+    ARTS_IMPORT bool TestProbeSlave(phSegment& str_id, phIntersectionPoint* dir, ilong* size, f32 arg4) const;
 
 private:
     // ?AddEdgeChecks@phBoundBox@@CAXHH_N@Z
-    ARTS_IMPORT static void AddEdgeChecks(i32 arg1, i32 arg2, bool arg3);
+    ARTS_IMPORT static void AddEdgeChecks(i32 c, i32 lhs, bool rhs);
 
     // ?AvoidEdgeChecks@phBoundBox@@CAXHH@Z
     ARTS_IMPORT static void AvoidEdgeChecks(i32 arg1, i32 arg2);
 
     // ?AvoidEdgeChecks@phBoundBox@@CAXHH_N@Z
-    ARTS_IMPORT static void AvoidEdgeChecks(i32 arg1, i32 arg2, bool arg3);
+    ARTS_IMPORT static void AvoidEdgeChecks(i32 lhs, i32 rhs, bool arg3);
 
     // ?BoxToBoxFaceImpactsOffset@phBoundBox@@CAXABVVector3@@00PAVphImpactBase@@H_NPBVMatrix34@@333PAVphColliderBase@@4@Z
     ARTS_IMPORT static void BoxToBoxFaceImpactsOffset(const Vector3& arg1, const Vector3& arg2, const Vector3& arg3, phImpactBase* arg4, i32 arg5, bool arg6, const Matrix34* arg7, const Matrix34* arg8, const Matrix34* arg9, const Matrix34* arg10, phColliderBase* arg11, phColliderBase* arg12);
@@ -124,7 +124,7 @@ private:
     ARTS_IMPORT static bool CheckFourFaceDotPattern();
 
     // ?FindFaceDots@phBoundBox@@CAXMPAH0@Z
-    ARTS_IMPORT static void FindFaceDots(f32 arg1, i32* arg2, i32* arg3);
+    ARTS_IMPORT static void FindFaceDots(f32 count, i32* spacing, i32* clear);
 
     // ?MakeTransformedCorners@phBoundBox@@CAXABVVector3@@0_N@Z
     ARTS_IMPORT static void MakeTransformedCorners(const Vector3& arg1, const Vector3& arg2, bool arg3);
@@ -136,7 +136,7 @@ private:
     ARTS_IMPORT static void RemoveFifthFaceDotZero();
 
     // ?UseThisImpact@phBoundBox@@CA_NABVVector3@@0MPBVMatrix34@@111@Z
-    ARTS_IMPORT static bool UseThisImpact(const Vector3& arg1, const Vector3& arg2, f32 arg3, const Matrix34* arg4, const Matrix34* arg5, const Matrix34* arg6, const Matrix34* arg7);
+    ARTS_IMPORT static bool UseThisImpact(const Vector3& lhs, const Vector3& rhs, f32 arg3, const Matrix34* arg4, const Matrix34* arg5, const Matrix34* arg6, const Matrix34* arg7);
 
     // ?VerifyFaceDotPattern@phBoundBox@@CA_NXZ
     ARTS_IMPORT static bool VerifyFaceDotPattern();

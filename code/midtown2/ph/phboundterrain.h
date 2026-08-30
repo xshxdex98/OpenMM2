@@ -53,7 +53,7 @@ public:
     ARTS_IMPORT ~phBoundTerrain();
 
     // ?TestProbePoint@phBoundTerrain@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@M@Z
-    ARTS_IMPORT virtual bool TestProbePoint(phSegment& arg1, phIntersectionPoint* arg2, f32 arg3) const;
+    ARTS_IMPORT virtual bool TestProbePoint(phSegment& src, phIntersectionPoint* output, f32 arg3) const;
 
     // ?TestAIPoint@phBoundTerrain@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@@Z
     ARTS_IMPORT virtual bool TestAIPoint(phSegment& arg1, phIntersectionPoint* arg2) const;
@@ -80,19 +80,19 @@ public:
     ARTS_IMPORT i32 FindImpactsSphereToTerrain(const phBoundSphere* arg1, const Matrix34* arg2, const Matrix34* arg3, phColliderBase* arg4, phColliderBase* arg5, phImpactBase* arg6, i32 arg7, const Vector3& arg8, const Vector3& arg9) const;
 
     // ?InitPolyIterator@phBoundTerrain@@QBEXABVVector3@@M@Z
-    ARTS_IMPORT void InitPolyIterator(const Vector3& arg1, f32 arg2) const;
+    ARTS_IMPORT void InitPolyIterator(const Vector3& v, f32 mn) const;
 
     // ?InitPolyIterator@phBoundTerrain@@QBEXABVphSegment@@@Z
-    ARTS_IMPORT void InitPolyIterator(const phSegment& arg1) const;
+    ARTS_IMPORT void InitPolyIterator(const phSegment& src) const;
 
     // ?Load@phBoundTerrain@@QAE_NPBD@Z
-    ARTS_IMPORT bool Load(const char* arg1);
+    ARTS_IMPORT bool Load(const char* state);
 
     // ?PackNormal@phBoundTerrain@@SAXAAIABVVector4@@@Z
     ARTS_IMPORT static void PackNormal(u32& arg1, const Vector4& arg2);
 
     // ?Save@phBoundTerrain@@QAE_NPBD@Z
-    ARTS_IMPORT bool Save(const char* arg1);
+    ARTS_IMPORT bool Save(const char* str);
 
     // ?SetHotEdges@phBoundTerrain@@QAEX_N@Z
     ARTS_IMPORT void SetHotEdges(bool arg1);
@@ -111,7 +111,7 @@ public:
 
 protected:
     // ?CalculateBuckets@phBoundTerrain@@IBEXMMMM@Z
-    ARTS_IMPORT void CalculateBuckets(f32 arg1, f32 arg2, f32 arg3, f32 arg4) const;
+    ARTS_IMPORT void CalculateBuckets(f32 data_type, f32 v, f32 v_speed, f32 v_min) const;
 
 public:
     // Members from 0x07C; everything below that belongs to phBoundGeometry.

@@ -69,10 +69,10 @@ public:
     ARTS_IMPORT virtual void InitNetworkPlayers();
 
     // ?SystemMessage@mmMultiBlitz@@UAEXPAUNETSYS_MSG@@@Z
-    ARTS_IMPORT virtual void SystemMessage(NETSYS_MSG* arg1);
+    ARTS_IMPORT virtual void SystemMessage(NETSYS_MSG* window);
 
     // ?GameMessage@mmMultiBlitz@@UAEXPAUNET_RCXHEAD@@@Z
-    ARTS_IMPORT virtual void GameMessage(NET_RCXHEAD* arg1);
+    ARTS_IMPORT virtual void GameMessage(NET_RCXHEAD* root_id);
 
     // ?PlayTimerWarning@mmMultiBlitz@@QAEXM@Z
     ARTS_IMPORT void PlayTimerWarning(f32 arg1);

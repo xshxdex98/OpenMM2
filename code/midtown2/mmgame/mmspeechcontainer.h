@@ -56,7 +56,7 @@ private:
     ARTS_IMPORT void InitCC(i32 arg1, char* arg2);
 
     // ?InitCNR@mmSpeechContainer@@AAEXPAD@Z
-    ARTS_IMPORT void InitCNR(char* arg1);
+    ARTS_IMPORT void InitCNR(char* renderer);
 
     // ?InitRace@mmSpeechContainer@@AAEXHHPAD@Z
     ARTS_IMPORT void InitRace(i32 arg1, i32 arg2, char* arg3);

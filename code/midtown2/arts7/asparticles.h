@@ -52,10 +52,10 @@ public:
     ARTS_IMPORT void Reset();
 
     // ?SetTexture@asParticles@@QAEXPAVgfxTexture@@@Z
-    ARTS_IMPORT void SetTexture(gfxTexture* arg1);
+    ARTS_IMPORT void SetTexture(gfxTexture* gfxTexture);
 
     // ?SetTexture@asParticles@@QAEXPBD@Z
-    ARTS_IMPORT void SetTexture(const char* arg1);
+    ARTS_IMPORT void SetTexture(const char* textureName);
 
     // ?Update@asParticles@@QAEXXZ
     ARTS_IMPORT void Update();

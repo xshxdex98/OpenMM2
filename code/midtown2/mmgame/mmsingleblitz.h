@@ -79,7 +79,7 @@ public:
     ARTS_IMPORT virtual mmWaypoints* GetWaypoints();
 
     // ?PlayTimerWarning@mmSingleBlitz@@QAEXM@Z
-    ARTS_IMPORT void PlayTimerWarning(f32 arg1);
+    ARTS_IMPORT void PlayTimerWarning(f32 window);
 
 private:
     // ?FinishMessage@mmSingleBlitz@@AAEXH@Z

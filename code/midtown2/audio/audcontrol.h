@@ -148,7 +148,7 @@ public:
     ARTS_IMPORT void SetVolPCEchoBuffers(f32 arg1);
 
     // ?SetVolume@audControl@@QAEXMH@Z
-    ARTS_IMPORT void SetVolume(f32 arg1, i32 arg2);
+    ARTS_IMPORT void SetVolume(f32 result, i32 arg2);
 
     // ?Stop@audControl@@QAE_NH@Z
     ARTS_IMPORT bool Stop(i32 arg1);

@@ -46,7 +46,7 @@ public:
     ARTS_IMPORT virtual char* GetClassName();
 
     // ?Init@asRoot@@QAEX_N@Z
-    ARTS_IMPORT void Init(bool arg1);
+    ARTS_IMPORT void Init(bool nanSignal);
 
     // ?IsPaused@asRoot@@QAE_NXZ
     ARTS_IMPORT bool IsPaused();

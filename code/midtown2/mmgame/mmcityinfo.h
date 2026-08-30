@@ -33,7 +33,7 @@ public:
     ARTS_EXPORT virtual ~mmCityInfo();
 
     // ?Load@mmCityInfo@@QAEHPAD@Z
-    ARTS_IMPORT i32 Load(char* arg1);
+    ARTS_IMPORT i32 Load(char* getter);
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

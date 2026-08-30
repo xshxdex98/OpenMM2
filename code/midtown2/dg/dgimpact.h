@@ -35,7 +35,7 @@ public:
     ARTS_IMPORT i32 CalcCollision(const Vector3& arg1, f32 arg2, Vector3* arg3, Vector3* arg4, Vector3* arg5, Vector3* arg6, f32 arg7);
 
     // ?CalcImpact@dgImpact@@SAHPAV1@MM@Z
-    ARTS_IMPORT static i32 CalcImpact(dgImpact* arg1, f32 arg2, f32 arg3);
+    ARTS_IMPORT static i32 CalcImpact(dgImpact* arg1, f32 arg2, f32 arg8);
 };
 
 // check_size(dgImpact, 0x0); // TODO: no layout in the IDB type library

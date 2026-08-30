@@ -37,7 +37,7 @@ public:
     ARTS_IMPORT ~mmCheckpointInstance();
 
     // ?Draw@mmCheckpointInstance@@UAEXH@Z
-    ARTS_IMPORT virtual void Draw(i32 arg1);
+    ARTS_IMPORT virtual void Draw(i32 sz);
 
     // ?SizeOf@mmCheckpointInstance@@UAEIXZ
     ARTS_IMPORT virtual u32 SizeOf();

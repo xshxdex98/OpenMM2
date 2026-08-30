@@ -41,13 +41,13 @@ public:
     ARTS_IMPORT ulong GetPosition(u8* arg1, u8* arg2, u8* arg3, u8* arg4);
 
     // ?Init@CDMan@@QAEKF@Z
-    ARTS_IMPORT ulong Init(i16 arg1);
+    ARTS_IMPORT ulong Init(i16 renderer);
 
     // ?PlayTrack@CDMan@@QAEKEE@Z
-    ARTS_IMPORT ulong PlayTrack(u8 arg1, u8 arg2);
+    ARTS_IMPORT ulong PlayTrack(u8 renderer, u8 dwParam2);
 
     // ?PlayTrack@CDMan@@QAEKEEEEE@Z
-    ARTS_IMPORT ulong PlayTrack(u8 arg1, u8 arg2, u8 arg3, u8 arg4, u8 arg5);
+    ARTS_IMPORT ulong PlayTrack(u8 arg1, u8 arg2, u8 arg3, u8 arg4, u8 dwParam2);
 
     // ?ResumePlay@CDMan@@QAEKXZ
     ARTS_IMPORT ulong ResumePlay();

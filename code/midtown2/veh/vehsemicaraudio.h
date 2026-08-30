@@ -45,7 +45,7 @@ public:
     ARTS_IMPORT virtual void AssignSounds();
 
     // ?UnAssignSounds@vehSemiCarAudio@@UAEXH@Z
-    ARTS_IMPORT virtual void UnAssignSounds(i32 arg1);
+    ARTS_IMPORT virtual void UnAssignSounds(i32 label_id);
 
     // ?UpdateAudio@vehSemiCarAudio@@UAEXXZ
     ARTS_IMPORT virtual void UpdateAudio();
@@ -69,7 +69,7 @@ public:
     ARTS_IMPORT void Init(vehCarSim* arg1, vehCarDamage* arg2, char* arg3, bool arg4, bool arg5, bool arg6);
 
     // ?Load@vehSemiCarAudio@@QAEXPAD@Z
-    ARTS_IMPORT void Load(char* arg1);
+    ARTS_IMPORT void Load(char* label_id);
 
     // ?RemoveFromManager@vehSemiCarAudio@@QAEXXZ
     ARTS_IMPORT void RemoveFromManager();

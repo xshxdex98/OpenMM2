@@ -29,16 +29,16 @@ class ioEventQueue
 {
 public:
     // ?Command@ioEventQueue@@SAXPAX@Z
-    ARTS_IMPORT static void Command(void* arg1);
+    ARTS_IMPORT static void Command(void* modifiers);
 
     // ?Peek@ioEventQueue@@SA_NAAUioEvent@@AAH@Z
-    ARTS_IMPORT static bool Peek(ioEvent& arg1, i32& arg2);
+    ARTS_IMPORT static bool Peek(ioEvent& event, i32& index);
 
     // ?Pop@ioEventQueue@@SA_NAAUioEvent@@@Z
     ARTS_IMPORT static bool Pop(ioEvent& arg1);
 
     // ?Queue@ioEventQueue@@SAXW4ioEventType@ioEvent@@HHH@Z
-    ARTS_IMPORT static void Queue(ioEvent::ioEventType arg1, i32 arg2, i32 arg3, i32 arg4);
+    ARTS_IMPORT static void Queue(ioEvent::ioEventType type, i32 x, i32 y, i32 modifiers);
 };
 
 // check_size(ioEventQueue, 0x1); // size known, members are not - cannot verify

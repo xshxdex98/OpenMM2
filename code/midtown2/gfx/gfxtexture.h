@@ -46,10 +46,10 @@ public:
     ARTS_IMPORT static gfxTexture* Create(i32 arg1, i32 arg2, gfxImage::gfxImageFormat arg3, gfxImage::gfxImageFormat arg4, i32 arg5);
 
     // ?Create@gfxTexture@@SAPAV1@PAVgfxImage@@_N@Z
-    ARTS_IMPORT static gfxTexture* Create(gfxImage* arg1, bool arg2);
+    ARTS_IMPORT static gfxTexture* Create(gfxImage* image, bool mipMap);
 
     // ?CreateCubeMap@gfxTexture@@SAPAV1@HHQAPAV1@@Z
-    ARTS_IMPORT static gfxTexture* CreateCubeMap(i32 arg1, i32 arg2, gfxTexture**const arg3);
+    ARTS_IMPORT static gfxTexture* CreateCubeMap(i32 width, i32 height, gfxTexture**const textureArray);
 
     // ?CreateFromTexture@gfxTexture@@QAEPAV1@PBDHHHH@Z
     ARTS_EXPORT gfxTexture* CreateFromTexture(const char* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5);
@@ -58,7 +58,7 @@ public:
     ARTS_IMPORT static gfxTexture* CreateRenderTarget(i32 arg1, i32 arg2, u32 arg3, u32 arg4);
 
     // ?EnableCache@gfxTexture@@SAX_N@Z
-    ARTS_IMPORT static void EnableCache(bool arg1);
+    ARTS_IMPORT static void EnableCache(bool cacheEnabled);
 
     // ?EnableTrilinearMipMaping@gfxTexture@@SAX_N@Z
     ARTS_EXPORT static void EnableTrilinearMipMaping(bool arg1);
@@ -70,7 +70,7 @@ public:
     ARTS_IMPORT u32 GetColor() const;
 
     // ?GetDefaultMIPMapEnv@gfxTexture@@SAXAAIAAM@Z
-    ARTS_EXPORT static void GetDefaultMIPMapEnv(u32& arg1, f32& arg2);
+    ARTS_EXPORT static void GetDefaultMIPMapEnv(u32& unk1, f32& unk2);
 
     // ?GetMIPMapEnv@gfxTexture@@QAEXAAIAAM@Z
     ARTS_EXPORT void GetMIPMapEnv(u32& arg1, f32& arg2);
@@ -82,7 +82,7 @@ public:
     ARTS_IMPORT static void KillAll();
 
     // ?Load@gfxTexture@@QAEXPAVgfxImage@@@Z
-    ARTS_IMPORT void Load(gfxImage* arg1);
+    ARTS_IMPORT void Load(gfxImage* image);
 
     // ?MakeAllUnresident@gfxTexture@@SAXXZ
     ARTS_IMPORT static void MakeAllUnresident();
@@ -106,10 +106,10 @@ public:
     ARTS_EXPORT void SetMIPMapEnv(u32 arg1, f32 arg2);
 
     // ?SetName@gfxTexture@@QAEXPBD@Z
-    ARTS_IMPORT void SetName(const char* arg1);
+    ARTS_IMPORT void SetName(const char* newName);
 
     // ?SetTexEnv@gfxTexture@@QAEXI@Z
-    ARTS_EXPORT void SetTexEnv(u32 arg1);
+    ARTS_EXPORT void SetTexEnv(u32 texEnv);
 
     // ?ShutdownCache@gfxTexture@@SAXXZ
     ARTS_IMPORT static void ShutdownCache();

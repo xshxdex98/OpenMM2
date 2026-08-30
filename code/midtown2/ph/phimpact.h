@@ -34,7 +34,7 @@ class phImpact
 {
 public:
     // ?CalcCollision@phImpact@@QAEXABVVector3@@MPAV2@11@Z
-    ARTS_IMPORT void CalcCollision(const Vector3& arg1, f32 arg2, Vector3* arg3, Vector3* arg4, Vector3* arg5);
+    ARTS_IMPORT void CalcCollision(const Vector3& arg1, f32 scale, Vector3* arg3, Vector3* arg4, Vector3* arg5);
 
     // ?CalcCollisionNoFriction@phImpact@@SAMABVphInertialCS@@ABVVector3@@M1@Z
     ARTS_IMPORT static f32 CalcCollisionNoFriction(const phInertialCS& arg1, const Vector3& arg2, f32 arg3, const Vector3& arg4);

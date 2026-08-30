@@ -35,7 +35,7 @@ public:
     ARTS_IMPORT ~CArrayList();
 
     // ?Append@CArrayList@@QAEXH@Z
-    ARTS_IMPORT void Append(i32 arg1);
+    ARTS_IMPORT void Append(i32 DrawList);
 
     // ?ReadBinary@CArrayList@@QAEXPAVStream@@@Z
     ARTS_IMPORT void ReadBinary(Stream* arg1);

@@ -59,7 +59,7 @@ public:
     ARTS_IMPORT void Dump();
 
     // ?Init@aiVehicleAmbient@@QAEXPADH@Z
-    ARTS_IMPORT void Init(char* arg1, i32 arg2);
+    ARTS_IMPORT void Init(char* DrawList, i32 __formal);
 
 public:
     // Members from 0x18C; everything below that belongs to aiVehicleSpline.

@@ -64,7 +64,7 @@ public:
     ARTS_IMPORT void Load(datBaseTokenizer* arg1);
 
     // ?Save@asBirthRule@@QAEXPAVdatBaseTokenizer@@H@Z
-    ARTS_IMPORT void Save(datBaseTokenizer* arg1, i32 arg2);
+    ARTS_IMPORT void Save(datBaseTokenizer* out_pixels, i32 out_width);
 
 public:
     // Members from 0x018; everything below that belongs to asNode.

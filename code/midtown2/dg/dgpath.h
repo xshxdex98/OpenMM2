@@ -31,7 +31,7 @@ class dgPath
 {
 public:
     // ??0dgPath@@QAE@PBD@Z
-    ARTS_IMPORT dgPath(const char* arg1);
+    ARTS_IMPORT dgPath(const char* b);
 
     // ??1dgPath@@QAE@XZ
     ARTS_IMPORT ~dgPath();
@@ -40,10 +40,10 @@ public:
     ARTS_IMPORT void Enumerate(void (__cdecl* arg1)(const char*,const Matrix34&,bool), f32 arg2, f32 arg3) const;
 
     // ?Load@dgPath@@SAPAV1@PAVStream@@@Z
-    ARTS_IMPORT static dgPath* Load(Stream* arg1);
+    ARTS_IMPORT static dgPath* Load(Stream* b);
 
     // ?SetName@dgPath@@QAEXPBD@Z
-    ARTS_IMPORT void SetName(const char* arg1);
+    ARTS_IMPORT void SetName(const char* b);
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

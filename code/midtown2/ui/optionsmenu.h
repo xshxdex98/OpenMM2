@@ -29,7 +29,7 @@ class OptionsMenu : public UIMenu
 {
 public:
     // ??0OptionsMenu@@QAE@H@Z
-    ARTS_IMPORT OptionsMenu(i32 arg1);
+    ARTS_IMPORT OptionsMenu(i32 getter);
 
     // ??1OptionsMenu@@UAE@XZ
     ARTS_IMPORT virtual ~OptionsMenu();

@@ -73,16 +73,16 @@ public:
     ARTS_IMPORT bool Collide(lvlSegment& arg1, lvlIntersection* arg2, i32 arg3, lvlInstance* arg4, i32 arg5, i32 arg6);
 
     // ?CollideInstances@dgPhysManager@@QAE_NPAVlvlInstance@@0@Z
-    ARTS_IMPORT bool CollideInstances(lvlInstance* arg1, lvlInstance* arg2);
+    ARTS_IMPORT bool CollideInstances(lvlInstance* arg1, lvlInstance* info);
 
     // ?CollideProbe@dgPhysManager@@QAE_NAAVlvlSegment@@PAVlvlIntersection@@PAVlvlInstance@@@Z
-    ARTS_IMPORT bool CollideProbe(lvlSegment& arg1, lvlIntersection* arg2, lvlInstance* arg3);
+    ARTS_IMPORT bool CollideProbe(lvlSegment& arg1, lvlIntersection* arg4, lvlInstance* arg8);
 
     // ?CollideTerrain@dgPhysManager@@QAE_NPAUCollisionTableEntry@1@@Z
     ARTS_IMPORT bool CollideTerrain(dgPhysManager::CollisionTableEntry* arg1);
 
     // ?DeclareMover@dgPhysManager@@QAEXPAVlvlInstance@@HH@Z
-    ARTS_IMPORT void DeclareMover(lvlInstance* arg1, i32 arg2, i32 arg3);
+    ARTS_IMPORT void DeclareMover(lvlInstance* info, i32 glyph_index, i32 pvertices);
 
     // ?Draw@dgPhysManager@@QAEXXZ
     ARTS_IMPORT void Draw();

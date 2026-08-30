@@ -71,10 +71,10 @@ public:
     ARTS_IMPORT static void FreeAllVertexBuffers();
 
     // ?GetNormal@gfxPacket@@QBEXAAVVector3@@H@Z
-    ARTS_IMPORT void GetNormal(Vector3& arg1, i32 arg2) const;
+    ARTS_IMPORT void GetNormal(Vector3& new_capacity, i32 arg2) const;
 
     // ?GetPosition@gfxPacket@@QBEXAAVVector3@@H@Z
-    ARTS_IMPORT void GetPosition(Vector3& arg1, i32 arg2) const;
+    ARTS_IMPORT void GetPosition(Vector3& arg1, i32 index) const;
 
     // ?GetSkinnedVert@gfxPacket@@QBEXPBVMatrix34@@AAVVector3@@H@Z
     ARTS_IMPORT void GetSkinnedVert(const Matrix34* arg1, Vector3& arg2, i32 arg3) const;
@@ -83,7 +83,7 @@ public:
     ARTS_IMPORT void GetTexCoord(Vector2& arg1, i32 arg2) const;
 
     // ?GetTri@gfxPacket@@QBEXQAHH@Z
-    ARTS_IMPORT void GetTri(i32*const arg1, i32 arg2) const;
+    ARTS_IMPORT void GetTri(i32*const out, i32 index) const;
 
     // ?MakeList@gfxPacket@@SAPAVgfxPacketList@@PAV1@@Z
     ARTS_IMPORT static gfxPacketList* MakeList(gfxPacket* arg1);
@@ -92,7 +92,7 @@ public:
     ARTS_IMPORT void OrthoMap(f32 arg1);
 
     // ?ReserveVertexBuffer@gfxPacket@@SAXII@Z
-    ARTS_IMPORT static void ReserveVertexBuffer(u32 arg1, u32 arg2);
+    ARTS_IMPORT static void ReserveVertexBuffer(u32 arg_0, u32 arg_4);
 
     // ?RestoreAllVertexBuffers@gfxPacket@@SAXXZ
     ARTS_IMPORT static void RestoreAllVertexBuffers();
@@ -101,13 +101,13 @@ public:
     ARTS_IMPORT static void SetDefaultPacking();
 
     // ?SetNormal@gfxPacket@@QBEXABVVector3@@H@Z
-    ARTS_IMPORT void SetNormal(const Vector3& arg1, i32 arg2) const;
+    ARTS_IMPORT void SetNormal(const Vector3& normal, i32 index) const;
 
     // ?SetPacking@gfxPacket@@SAXMEEEME@Z
-    ARTS_IMPORT static void SetPacking(f32 arg1, u8 arg2, u8 arg3, u8 arg4, f32 arg5, u8 arg6);
+    ARTS_IMPORT static void SetPacking(f32 new_size, u8 arg2, u8 arg3, u8 arg4, f32 arg5, u8 arg6);
 
     // ?SetPosition@gfxPacket@@QBEXABVVector3@@H@Z
-    ARTS_IMPORT void SetPosition(const Vector3& arg1, i32 arg2) const;
+    ARTS_IMPORT void SetPosition(const Vector3& new_capacity, i32 arg2) const;
 
 public:
     static u8& Access_sm_VertBits() { return sm_VertBits; }

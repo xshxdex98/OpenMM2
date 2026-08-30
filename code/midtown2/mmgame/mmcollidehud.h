@@ -41,7 +41,7 @@ public:
     ARTS_IMPORT virtual void Reset();
 
     // ?Init@mmCollideHUD@@QAEXHPAH0H@Z
-    ARTS_IMPORT void Init(i32 arg1, i32* arg2, i32* arg3, i32 arg4);
+    ARTS_IMPORT void Init(i32 arg1, i32* arg2, i32* outHeight, i32 outWidth);
 
     // ?SetBangerCount@mmCollideHUD@@QAEXH@Z
     ARTS_IMPORT void SetBangerCount(i32 arg1);

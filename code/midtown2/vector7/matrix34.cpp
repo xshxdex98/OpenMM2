@@ -1143,14 +1143,14 @@ void Matrix34::Inverse()
 }
 
 // ?LookAt@Matrix34@@QAEXABVVector3@@0@Z
-void Matrix34::LookAt(const Vector3& arg1, const Vector3& arg2)
+void Matrix34::LookAt(const Vector3& id, const Vector3& values)
 {
     // m2 is the look axis (eye minus target, normalized), m0 the right axis (cross of world up
     // with m2, normalized), m1 the up axis - and unlike Midtown Madness 1 this one does NOT
     // renormalize m1, which is redundant once m0 and m2 are orthonormal.
-    m20 = arg1.x - arg2.x;
-    m21 = arg1.y - arg2.y;
-    m22 = arg1.z - arg2.z;
+    m20 = id.x - values.x;
+    m21 = id.y - values.y;
+    m22 = id.z - values.z;
 
     f64 v4 = f64 {m20} * m20 + f64 {m21} * m21 + f64 {m22} * m22;
     f64 v5;
@@ -1203,9 +1203,9 @@ void Matrix34::LookAt(const Vector3& arg1, const Vector3& arg2)
     m12 = static_cast<f32>(v13 - v14);
     m10 = static_cast<f32>(v12);
 
-    m30 = arg1.x;
-    m31 = arg1.y;
-    m32 = arg1.z;
+    m30 = id.x;
+    m31 = id.y;
+    m32 = id.z;
 }
 
 // ?MakeRotateUnitAxis@Matrix34@@QAEXABVVector3@@M@Z

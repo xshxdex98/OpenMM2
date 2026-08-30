@@ -45,13 +45,13 @@ public:
     ARTS_IMPORT void Init(i32 arg1);
 
     // ?Read@MArray@@QAEXPAD@Z
-    ARTS_EXPORT void Read(char* arg1);
+    ARTS_EXPORT void Read(char* file_name);
 
     // ?RetrieveMenuData@MArray@@QAEHHAAM000@Z
     ARTS_IMPORT i32 RetrieveMenuData(i32 arg1, f32& arg2, f32& arg3, f32& arg4, f32& arg5);
 
     // ?Write@MArray@@QAEXPAD@Z
-    ARTS_IMPORT void Write(char* arg1);
+    ARTS_IMPORT void Write(char* path);
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

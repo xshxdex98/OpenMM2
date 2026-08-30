@@ -66,7 +66,7 @@ public:
     ARTS_IMPORT virtual const Vector3& GetVelocity();
 
     // ?Draw@vehCarModel@@UAEXH@Z
-    ARTS_IMPORT virtual void Draw(i32 arg1);
+    ARTS_IMPORT virtual void Draw(i32 lod);
 
     // ?DrawShadow@vehCarModel@@UAEXXZ
     ARTS_IMPORT virtual void DrawShadow();
@@ -118,7 +118,7 @@ public:
 
 protected:
     // ?GetSurfaceColor@vehCarModel@@IAE_NPAVmodStatic@@AAVVector3@@@Z
-    ARTS_IMPORT bool GetSurfaceColor(modStatic* arg1, Vector3& arg2);
+    ARTS_IMPORT bool GetSurfaceColor(modStatic* arg_0, Vector3& colorOut);
 
     // ?InitBreakable@vehCarModel@@IAE_NPAVvehBreakableMgr@@PBD1HH@Z
     ARTS_IMPORT bool InitBreakable(vehBreakableMgr* arg1, const char* arg2, const char* arg3, i32 arg4, i32 arg5);

@@ -54,7 +54,7 @@ private:
     ARTS_IMPORT void End();
 
     // ?EnumDeviceProc@ioJoystick@@CGHPBUDIDEVICEINSTANCEA@@PAX@Z
-    ARTS_IMPORT static i32 EnumDeviceProc(const DIDEVICEINSTANCEA* arg1, void* arg2);
+    ARTS_IMPORT static i32 EnumDeviceProc(const DIDEVICEINSTANCEA* diDevInstance, void* lpContext);
 
     // ?EnumObjectProc@ioJoystick@@CGHPBUDIDEVICEOBJECTINSTANCEA@@PAX@Z
     ARTS_IMPORT static i32 EnumObjectProc(const DIDEVICEOBJECTINSTANCEA* arg1, void* arg2);

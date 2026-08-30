@@ -58,7 +58,7 @@ public:
     ARTS_IMPORT void EchoOn();
 
     // ?Init@AudCreatureContainer@@QAEXPADPAVVector3@@@Z
-    ARTS_IMPORT void Init(char* arg1, Vector3* arg2);
+    ARTS_IMPORT void Init(char* renderer, Vector3* DrawList);
 
     // ?InitStatics@AudCreatureContainer@@SAXXZ
     ARTS_IMPORT static void InitStatics();
@@ -67,10 +67,10 @@ public:
     ARTS_IMPORT bool IsPlaying();
 
     // ?LoadNumFileChoices@AudCreatureContainer@@SAXPADPAH@Z
-    ARTS_IMPORT static void LoadNumFileChoices(char* arg1, i32* arg2);
+    ARTS_IMPORT static void LoadNumFileChoices(char* path, i32* arg2);
 
     // ?LoadVoices@AudCreatureContainer@@QAE_NPAD0@Z
-    ARTS_IMPORT bool LoadVoices(char* arg1, char* arg2);
+    ARTS_IMPORT bool LoadVoices(char* renderer, char* DrawList);
 
     // ?PlayAvoidanceReaction@AudCreatureContainer@@QAEXM@Z
     ARTS_IMPORT void PlayAvoidanceReaction(f32 arg1);
@@ -85,7 +85,7 @@ public:
     ARTS_IMPORT i32 UpdateAudio(f32 arg1);
 
     // ?UpdateStatics@AudCreatureContainer@@SAXM@Z
-    ARTS_IMPORT static void UpdateStatics(f32 arg1);
+    ARTS_IMPORT static void UpdateStatics(f32 renderer);
 
 private:
     // ?UpdateEcho@AudCreatureContainer@@AAEXXZ

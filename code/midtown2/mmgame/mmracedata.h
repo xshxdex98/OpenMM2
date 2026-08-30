@@ -71,7 +71,7 @@ public:
     ARTS_IMPORT i32 GetWeather(i32 arg1, dgSkillLevel arg2);
 
     // ?Load@mmRaceData@@QAEHPAD0@Z
-    ARTS_IMPORT i32 Load(char* arg1, char* arg2);
+    ARTS_IMPORT i32 Load(char* getter, char* transformer);
 };
 
 // check_size(mmRaceData, 0x0); // TODO: no layout in the IDB type library

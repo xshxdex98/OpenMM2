@@ -44,7 +44,7 @@ public:
     ARTS_IMPORT virtual void Reset();
 
     // ?AddVehicleDataEntry@aiVehicleManager@@QAEHPAD@Z
-    ARTS_IMPORT i32 AddVehicleDataEntry(char* arg1);
+    ARTS_IMPORT i32 AddVehicleDataEntry(char* entryName);
 
     // ?Attach@aiVehicleManager@@QAEPAVaiVehicleActive@@PAVaiVehicleInstance@@@Z
     ARTS_IMPORT aiVehicleActive* Attach(aiVehicleInstance* arg1);

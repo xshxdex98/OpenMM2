@@ -38,7 +38,7 @@ public:
     ARTS_IMPORT ~netZoneScore();
 
     // ?Init@netZoneScore@@QAE_NU_GUID@@PAUIDirectPlayLobby3@@@Z
-    ARTS_IMPORT bool Init(_GUID arg1, IDirectPlayLobby3* arg2);
+    ARTS_IMPORT bool Init(_GUID _Al, IDirectPlayLobby3* arg2);
 
     // ?InitResults@netZoneScore@@QAEXH_N@Z
     ARTS_IMPORT void InitResults(i32 arg1, bool arg2);

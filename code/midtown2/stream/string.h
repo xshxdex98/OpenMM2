@@ -60,7 +60,7 @@ public:
     ARTS_IMPORT string FileName() const;
 
     // ?FindFile@string@@QAEHABV1@H00@Z
-    ARTS_IMPORT i32 FindFile(const string& arg1, i32 arg2, const string& arg3, const string& arg4);
+    ARTS_IMPORT i32 FindFile(const string& arg0, i32 arg2, const string& arg3, const string& arg4);
 
     // ?Init@string@@QAEXH@Z
     ARTS_IMPORT void Init(i32 arg1);
@@ -99,7 +99,7 @@ public:
     ARTS_IMPORT void RemoveExtension();
 
     // ?SaveName@string@@QAEXABV1@H00@Z
-    ARTS_IMPORT void SaveName(const string& arg1, i32 arg2, const string& arg3, const string& arg4);
+    ARTS_IMPORT void SaveName(const string& arg0, i32 arg2, const string& arg3, const string& arg4);
 
     // ?SubString@string@@QBE?AV1@H@Z
     ARTS_IMPORT string SubString(i32 arg1) const;

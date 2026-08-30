@@ -43,19 +43,19 @@ public:
     ARTS_IMPORT u32 ComputeCRC();
 
     // ?LoadBinary@mmPlayerRecord@@QAEHPAVStream@@@Z
-    ARTS_IMPORT i32 LoadBinary(Stream* arg1);
+    ARTS_IMPORT i32 LoadBinary(Stream* getter);
 
     // ??4mmPlayerRecord@@QAEXAAV0@@Z
     ARTS_IMPORT void operator=(mmPlayerRecord& arg1);
 
     // ??8mmPlayerRecord@@QAEHABV0@@Z
-    ARTS_IMPORT i32 operator==(const mmPlayerRecord& arg1);
+    ARTS_IMPORT i32 operator==(const mmPlayerRecord& getter);
 
     // ?Reset@mmPlayerRecord@@QAEXXZ
     ARTS_IMPORT void Reset();
 
     // ?SaveBinary@mmPlayerRecord@@QAEHPAVStream@@@Z
-    ARTS_IMPORT i32 SaveBinary(Stream* arg1);
+    ARTS_IMPORT i32 SaveBinary(Stream* Data);
 
     // ?SizeOf@mmPlayerRecord@@2HA
     ARTS_IMPORT static i32 SizeOf;

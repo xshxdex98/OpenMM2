@@ -51,7 +51,7 @@ public:
 
 private:
     // ?LoadOneShots@AudSpeechData@@AAEXPAD0@Z
-    ARTS_IMPORT void LoadOneShots(char* arg1, char* arg2);
+    ARTS_IMPORT void LoadOneShots(char* renderer, char* DrawList);
 };
 
 // check_size(AudSpeechData, 0x0); // TODO: no layout in the IDB type library

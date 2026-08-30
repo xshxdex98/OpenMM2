@@ -47,10 +47,10 @@ public:
     ARTS_IMPORT void Halve();
 
     // ?Reformat@gfxImage@@QAEXW4gfxImageFormat@1@0@Z
-    ARTS_IMPORT void Reformat(gfxImage::gfxImageFormat arg1, gfxImage::gfxImageFormat arg2);
+    ARTS_IMPORT void Reformat(gfxImage::gfxImageFormat newType, gfxImage::gfxImageFormat arg2);
 
     // ?Scale@gfxImage@@QAEXHH@Z
-    ARTS_IMPORT void Scale(i32 arg1, i32 arg2);
+    ARTS_IMPORT void Scale(i32 width, i32 height);
 
     // ?sm_Use565@gfxImage@@2_NA
     ARTS_IMPORT static bool sm_Use565;

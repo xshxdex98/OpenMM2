@@ -33,17 +33,17 @@ public:
     ARTS_IMPORT ~Aud3DAmbObjContainer();
 
     // ?Init@Aud3DAmbObjContainer@@QAE_NPAD@Z
-    ARTS_IMPORT bool Init(char* arg1);
+    ARTS_IMPORT bool Init(char* renderer);
 
     // ?Update@Aud3DAmbObjContainer@@QAEXM@Z
     ARTS_IMPORT void Update(f32 arg1);
 
 private:
     // ?CreateAmbientObject@Aud3DAmbObjContainer@@AAEXPAD@Z
-    ARTS_IMPORT void CreateAmbientObject(char* arg1);
+    ARTS_IMPORT void CreateAmbientObject(char* renderer);
 
     // ?FileValid@Aud3DAmbObjContainer@@AAE_NPAD@Z
-    ARTS_IMPORT bool FileValid(char* arg1);
+    ARTS_IMPORT bool FileValid(char* path);
 };
 
 // check_size(Aud3DAmbObjContainer, 0x0); // TODO: no layout in the IDB type library

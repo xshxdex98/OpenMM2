@@ -35,7 +35,7 @@ public:
     ARTS_IMPORT ~mmNumberFont();
 
     // ?LoadFont@mmNumberFont@@QAEXPADHI@Z
-    ARTS_IMPORT void LoadFont(char* arg1, i32 arg2, u32 arg3);
+    ARTS_IMPORT void LoadFont(char* pszFaceName, i32 cHeight, u32 arg3);
 
     // ?LoadLocFont@mmNumberFont@@QAEXPADPAULocString@@HI@Z
     ARTS_IMPORT void LoadLocFont(char* arg1, LocString* arg2, i32 arg3, u32 arg4);

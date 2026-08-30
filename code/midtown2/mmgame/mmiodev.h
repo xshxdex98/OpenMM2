@@ -41,19 +41,19 @@ public:
     ARTS_IMPORT void Assign(i32 arg1, i32 arg2, i32 arg3);
 
     // ?GetComponentType@mmIODev@@QAEHHH@Z
-    ARTS_IMPORT i32 GetComponentType(i32 arg1, i32 arg2);
+    ARTS_IMPORT i32 GetComponentType(i32 getter1, i32 getter2);
 
     // ?GetDescription@mmIODev@@QAEXPAD@Z
-    ARTS_IMPORT void GetDescription(char* arg1);
+    ARTS_IMPORT void GetDescription(char* getter1);
 
     // ?Init@mmIODev@@QAEXH_J@Z
     ARTS_IMPORT void Init(i32 arg1, i64 arg2);
 
     // ??8mmIODev@@QAEHPATeqEvent@@@Z
-    ARTS_IMPORT i32 operator==(eqEvent* arg1);
+    ARTS_IMPORT i32 operator==(eqEvent* getter1);
 
     // ?Print@mmIODev@@QAEXH@Z
-    ARTS_IMPORT void Print(i32 arg1);
+    ARTS_IMPORT void Print(i32 getter1);
 
     // ?Read@mmIODev@@QAEHPAVStream@@@Z
     ARTS_IMPORT i32 Read(Stream* arg1);
@@ -65,10 +65,10 @@ public:
     ARTS_IMPORT i32 SanityCheckioType(i32 arg1, i32 arg2, i32 arg3);
 
     // ?Write@mmIODev@@QAEHPAVStream@@@Z
-    ARTS_IMPORT i32 Write(Stream* arg1);
+    ARTS_IMPORT i32 Write(Stream* getter1);
 
     // ?WriteBinary@mmIODev@@QAEHPAVStream@@@Z
-    ARTS_IMPORT i32 WriteBinary(Stream* arg1);
+    ARTS_IMPORT i32 WriteBinary(Stream* stream);
 
 public:
     // Members from 0x088; everything below that belongs to mmInfoBase.

@@ -92,7 +92,7 @@ public:
     ARTS_IMPORT void SetCommentary();
 
     // ?SetDevice@AudioOptions@@QAEXH@Z
-    ARTS_IMPORT void SetDevice(i32 arg1);
+    ARTS_IMPORT void SetDevice(i32 getter1);
 
     // ?SetMusic@AudioOptions@@QAEXXZ
     ARTS_IMPORT void SetMusic();

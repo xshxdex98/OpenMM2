@@ -27,7 +27,7 @@ class AudSpeech
 {
 public:
     // ??0AudSpeech@@QAE@_N@Z
-    ARTS_IMPORT AudSpeech(bool arg1);
+    ARTS_IMPORT AudSpeech(bool renderer);
 
     // ??1AudSpeech@@UAE@XZ
     ARTS_IMPORT virtual ~AudSpeech();
@@ -54,7 +54,7 @@ public:
     ARTS_IMPORT void Play(i32 arg1, f32 arg2);
 
     // ?SetExtension@AudSpeech@@QAEXPAD@Z
-    ARTS_IMPORT void SetExtension(char* arg1);
+    ARTS_IMPORT void SetExtension(char* renderer);
 
     // ?SetSubPath@AudSpeech@@QAEXPAD@Z
     ARTS_IMPORT void SetSubPath(char* arg1);
@@ -79,10 +79,10 @@ private:
     ARTS_IMPORT void PlayOneShot(i32 arg1, f32 arg2);
 
     // ?PlayStream@AudSpeech@@AAEXHHM@Z
-    ARTS_IMPORT void PlayStream(i32 arg1, i32 arg2, f32 arg3);
+    ARTS_IMPORT void PlayStream(i32 renderer, i32 DrawList, f32 cull_rect);
 
     // ?PlayStream@AudSpeech@@AAEXHM@Z
-    ARTS_IMPORT void PlayStream(i32 arg1, f32 arg2);
+    ARTS_IMPORT void PlayStream(i32 renderer, f32 DrawList);
 
     // ?PutInQueue@AudSpeech@@AAEXHHM@Z
     ARTS_IMPORT void PutInQueue(i32 arg1, i32 arg2, f32 arg3);

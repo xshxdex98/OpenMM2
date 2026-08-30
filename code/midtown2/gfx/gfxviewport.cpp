@@ -155,7 +155,7 @@ void gfxViewport::DoFlush()
 // The DirectDraw path is untouched. It never sees a zero far because its own bring-up path
 // assigns one before any camera reads it, and in any case this must not change what the game does
 // without -gl.
-void gfxViewport::Perspective(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
+void gfxViewport::Perspective(f32 fov, f32 aspect, f32 arg3, f32 arg4)
 {
 #ifdef ARTS_AGIGL
     if (agiGLEnabled())
@@ -184,7 +184,7 @@ void gfxViewport::Perspective(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
 
         const bool bad_far = !(arg4 > 0.0f) || !(arg4 > arg3) || !(arg4 >= kMinSaneFar);
         const bool bad_near = !(arg3 > 0.0f);
-        const bool bad_fov = !(arg1 > 0.0f);
+        const bool bad_fov = !(fov > 0.0f);
 
         // TEMPORARY PROBE: every Perspective call, first 24 only. The blanket far=600 substitution
         // is suspected of wrecking depth precision for the car preview, which is a small object
@@ -213,7 +213,7 @@ void gfxViewport::Perspective(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
             if ((bad_far || bad_near || bad_fov) || seen < 24 || (seen % 200) == 0)
             {
                 if (agiGLProbeVerbose())
-                    Displayf("PERSP vp=%p fov=%g aspect=%g near=%g far=%g bad=%d", this, arg1, arg2, arg3, arg4,
+                    Displayf("PERSP vp=%p fov=%g aspect=%g near=%g far=%g bad=%d", this, fov, aspect, arg3, arg4,
                         (bad_far || bad_near || bad_fov) ? 1 : 0);
             }
 
@@ -233,14 +233,14 @@ void gfxViewport::Perspective(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
 
                 Displayf("GL: Perspective given fov=%g aspect=%g near=%g far=%g - substituting, "
                          "a zero far is what collapses the projection and flickers the world",
-                    arg1, arg2, arg3, arg4);
+                    fov, aspect, arg3, arg4);
             }
 
             // 0.5 and 600 are the game's own numbers, not invented ones: 0x005D4420 ships as
             // 600.0f in .data and the healthy setup projection measured m10=1.000834 m14=-0.5004,
             // which is exactly near=0.5 far=600.
             if (bad_fov)
-                arg1 = 70.0f;
+                fov = 70.0f;
 
             if (bad_near)
                 arg3 = 0.5f;
@@ -251,5 +251,5 @@ void gfxViewport::Perspective(f32 arg1, f32 arg2, f32 arg3, f32 arg4)
     }
 #endif
 
-    ArtsOrigPerspective(this, arg1, arg2, arg3, arg4);
+    ArtsOrigPerspective(this, fov, aspect, arg3, arg4);
 }

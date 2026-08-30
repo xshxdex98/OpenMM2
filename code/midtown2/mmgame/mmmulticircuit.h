@@ -72,10 +72,10 @@ public:
     ARTS_IMPORT virtual void InitNetworkPlayers();
 
     // ?SystemMessage@mmMultiCircuit@@UAEXPAUNETSYS_MSG@@@Z
-    ARTS_IMPORT virtual void SystemMessage(NETSYS_MSG* arg1);
+    ARTS_IMPORT virtual void SystemMessage(NETSYS_MSG* bb);
 
     // ?GameMessage@mmMultiCircuit@@UAEXPAUNET_RCXHEAD@@@Z
-    ARTS_IMPORT virtual void GameMessage(NET_RCXHEAD* arg1);
+    ARTS_IMPORT virtual void GameMessage(NET_RCXHEAD* ref_pos);
 
 public:
     // Members from 0xB1FC; everything below that belongs to mmGameMulti.

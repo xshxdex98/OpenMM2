@@ -50,7 +50,7 @@ public:
     ARTS_IMPORT void Stop(AudSoundBase* arg1);
 
     // ?Update@vehHornAudioTiming@@QAEXPAVAudSoundBase@@@Z
-    ARTS_IMPORT void Update(AudSoundBase* arg1);
+    ARTS_IMPORT void Update(AudSoundBase* label_id);
 };
 
 // check_size(vehHornAudioTiming, 0x0); // TODO: no layout in the IDB type library

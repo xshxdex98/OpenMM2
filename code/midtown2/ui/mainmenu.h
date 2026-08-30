@@ -76,7 +76,7 @@ public:
     ARTS_IMPORT void RemoveAllPlayers();
 
     // ?RemovePlayer@MainMenu@@QAEXPAD@Z
-    ARTS_IMPORT void RemovePlayer(char* arg1);
+    ARTS_IMPORT void RemovePlayer(char* renderer);
 
     // ?SetController@MainMenu@@QAEXPAD@Z
     ARTS_IMPORT void SetController(char* arg1);

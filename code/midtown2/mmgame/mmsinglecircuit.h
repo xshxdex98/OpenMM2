@@ -86,7 +86,7 @@ public:
 
 private:
     // ?FinishMessage@mmSingleCircuit@@AAEXHH@Z
-    ARTS_IMPORT void FinishMessage(i32 arg1, i32 arg2);
+    ARTS_IMPORT void FinishMessage(i32 id, i32 arg2);
 
     // ?ProgressCheck@mmSingleCircuit@@AAEHHH@Z
     ARTS_IMPORT i32 ProgressCheck(i32 arg1, i32 arg2);

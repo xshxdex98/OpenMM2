@@ -29,7 +29,7 @@ class ControlCustom : public OptionsBase
 {
 public:
     // ??0ControlCustom@@QAE@H@Z
-    ARTS_IMPORT ControlCustom(i32 arg1);
+    ARTS_IMPORT ControlCustom(i32 getter);
 
     // ??1ControlCustom@@UAE@XZ
     ARTS_IMPORT virtual ~ControlCustom();

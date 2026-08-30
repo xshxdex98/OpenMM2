@@ -57,7 +57,7 @@ public:
     ARTS_IMPORT char* GetNetName();
 
     // ?GetNumPassed@mmPlayerData@@QAEHPADH@Z
-    ARTS_IMPORT i32 GetNumPassed(char* arg1, i32 arg2);
+    ARTS_IMPORT i32 GetNumPassed(char* arg0, i32 arg2);
 
     // ?GetPassedMask@mmPlayerData@@QAEHPADH@Z
     ARTS_IMPORT i32 GetPassedMask(char* arg1, i32 arg2);
@@ -66,7 +66,7 @@ public:
     ARTS_IMPORT i32 GetProgress(char* arg1, i32 arg2);
 
     // ?GetScore@mmPlayerData@@QAEHPADH@Z
-    ARTS_IMPORT i32 GetScore(char* arg1, i32 arg2);
+    ARTS_IMPORT i32 GetScore(char* getter, i32 transformer);
 
     // ?GetTagID@mmPlayerData@@QAEMXZ
     ARTS_IMPORT f32 GetTagID();
@@ -75,19 +75,19 @@ public:
     ARTS_IMPORT i32 GetTotalPassed(char* arg1);
 
     // ?GetTotalScore@mmPlayerData@@QAEHPAD@Z
-    ARTS_IMPORT i32 GetTotalScore(char* arg1);
+    ARTS_IMPORT i32 GetTotalScore(char* getter);
 
     // ?Load@mmPlayerData@@QAEHPAD@Z
     ARTS_IMPORT i32 Load(char* arg1);
 
     // ?LoadBinary@mmPlayerData@@QAEHPAD@Z
-    ARTS_IMPORT i32 LoadBinary(char* arg1);
+    ARTS_IMPORT i32 LoadBinary(char* getter);
 
     // ?OpenCityRecord@mmPlayerData@@QAEHPAD@Z
-    ARTS_IMPORT i32 OpenCityRecord(char* arg1);
+    ARTS_IMPORT i32 OpenCityRecord(char* arg0);
 
     // ??4mmPlayerData@@QAEXAAV0@@Z
-    ARTS_IMPORT void operator=(mmPlayerData& arg1);
+    ARTS_IMPORT void operator=(mmPlayerData& getter);
 
     // ?RegisterFinish@mmPlayerData@@QAEHVmmPlayerRecord@@HH@Z
     ARTS_IMPORT i32 RegisterFinish(mmPlayerRecord arg1, i32 arg2, i32 arg3);
@@ -99,13 +99,13 @@ public:
     ARTS_IMPORT i32 ResolveCheckpointProgress(char* arg1);
 
     // ?ResolveCrashProgress@mmPlayerData@@QAEHPAD@Z
-    ARTS_IMPORT i32 ResolveCrashProgress(char* arg1);
+    ARTS_IMPORT i32 ResolveCrashProgress(char* getter);
 
     // ?Save@mmPlayerData@@QAEHPADH@Z
     ARTS_IMPORT i32 Save(char* arg1, i32 arg2);
 
     // ?SaveBinary@mmPlayerData@@QAEHPAD@Z
-    ARTS_IMPORT i32 SaveBinary(char* arg1);
+    ARTS_IMPORT i32 SaveBinary(char* getter);
 
     // ?SetCity@mmPlayerData@@QAEXPAD@Z
     ARTS_IMPORT void SetCity(char* arg1);
@@ -117,7 +117,7 @@ public:
     ARTS_IMPORT void SetName(char* arg1);
 
     // ?SetNetName@mmPlayerData@@QAEXPAD@Z
-    ARTS_IMPORT void SetNetName(char* arg1);
+    ARTS_IMPORT void SetNetName(char* getter);
 
     // ?SetTagID@mmPlayerData@@QAEXM@Z
     ARTS_IMPORT void SetTagID(f32 arg1);

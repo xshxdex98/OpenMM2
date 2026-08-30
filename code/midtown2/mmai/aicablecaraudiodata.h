@@ -59,7 +59,7 @@ public:
     ARTS_IMPORT void UnAssignSounds();
 
     // ?UpdatePlay@aiCableCarAudioData@@QAEXMMM@Z
-    ARTS_IMPORT void UpdatePlay(f32 arg1, f32 arg2, f32 arg3);
+    ARTS_IMPORT void UpdatePlay(f32 id, f32 text, f32 offsetX);
 
     // ?UpdateState@aiCableCarAudioData@@QAEXMM@Z
     ARTS_IMPORT void UpdateState(f32 arg1, f32 arg2);

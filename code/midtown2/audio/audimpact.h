@@ -39,7 +39,7 @@ public:
     ARTS_IMPORT virtual ~AudImpact();
 
     // ?AddToHash@AudImpact@@SAXPADH@Z
-    ARTS_IMPORT static void AddToHash(char* arg1, i32 arg2);
+    ARTS_IMPORT static void AddToHash(char* arg1, i32 entry);
 
     // ?AssignSounds@AudImpact@@QAEXH@Z
     ARTS_IMPORT void AssignSounds(i32 arg1);

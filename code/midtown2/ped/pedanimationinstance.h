@@ -30,7 +30,7 @@ class pedAnimationInstance
 {
 public:
     // ?Draw@pedAnimationInstance@@QAEX_N@Z
-    ARTS_IMPORT void Draw(bool arg1);
+    ARTS_IMPORT void Draw(bool drawModel);
 
     // ?DrawShadow@pedAnimationInstance@@QAEXXZ
     ARTS_IMPORT void DrawShadow();
@@ -39,7 +39,7 @@ public:
     ARTS_IMPORT void Init(char* arg1);
 
     // ?PreUpdate@pedAnimationInstance@@QAEXM@Z
-    ARTS_IMPORT void PreUpdate(f32 arg1);
+    ARTS_IMPORT void PreUpdate(f32 ptr);
 
     // ?Reset@pedAnimationInstance@@QAEXXZ
     ARTS_IMPORT void Reset();
@@ -55,7 +55,7 @@ public:
 
 private:
     // ?Load@pedAnimationInstance@@AAEPAVpedAnimation@@PBD@Z
-    ARTS_IMPORT pedAnimation* Load(const char* arg1);
+    ARTS_IMPORT pedAnimation* Load(const char* ptr);
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

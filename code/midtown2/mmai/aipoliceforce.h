@@ -49,7 +49,7 @@ public:
     ARTS_IMPORT i32 State(vehCar* arg1, vehCar* arg2, f32 arg3);
 
     // ?UnRegisterCop@aiPoliceForce@@QAEHPAVvehCar@@0@Z
-    ARTS_IMPORT i32 UnRegisterCop(vehCar* arg1, vehCar* arg2);
+    ARTS_IMPORT i32 UnRegisterCop(vehCar* DrawList, vehCar* __formal);
 
     // ?Update@aiPoliceForce@@QAEXXZ
     ARTS_IMPORT void Update();

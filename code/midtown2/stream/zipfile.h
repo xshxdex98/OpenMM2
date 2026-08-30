@@ -46,7 +46,7 @@ public:
     ARTS_IMPORT static void KillAll();
 
     // ?Open@zipFile@@QAEHPBD@Z
-    ARTS_IMPORT i32 Open(const char* arg1);
+    ARTS_IMPORT i32 Open(const char* fileName);
 
     // ?zipClose@zipFile@@SAHH@Z
     ARTS_IMPORT static i32 zipClose(i32 arg1);
@@ -58,7 +58,7 @@ public:
     ARTS_IMPORT static i32 zipEnumFiles(const char* arg1, void (__cdecl* arg2)(const char*,bool,void*), void* arg3);
 
     // ?zipOpen@zipFile@@SAHPBD_N@Z
-    ARTS_IMPORT static i32 zipOpen(const char* arg1, bool arg2);
+    ARTS_IMPORT static i32 zipOpen(const char* fileName, bool somethingBad);
 
     // ?zipRead@zipFile@@SAHHPAXH@Z
     ARTS_IMPORT static i32 zipRead(i32 arg1, void* arg2, i32 arg3);
@@ -67,7 +67,7 @@ public:
     ARTS_IMPORT static i32 zipSeek(i32 arg1, i32 arg2, seekWhence arg3);
 
     // ?zipSize@zipFile@@SAHH@Z
-    ARTS_IMPORT static i32 zipSize(i32 arg1);
+    ARTS_IMPORT static i32 zipSize(i32 index);
 
     // ?zipWrite@zipFile@@SAHHPBXH@Z
     ARTS_IMPORT static i32 zipWrite(i32 arg1, const void* arg2, i32 arg3);
@@ -77,10 +77,10 @@ public:
 
 private:
     // ?internalRead@zipFile@@AAEHPAXH_N@Z
-    ARTS_IMPORT i32 internalRead(void* arg1, i32 arg2, bool arg3);
+    ARTS_IMPORT i32 internalRead(void* _Right, i32 arg2, bool arg3);
 
     // ?internalSeek@zipFile@@AAEHH@Z
-    ARTS_IMPORT i32 internalSeek(i32 arg1);
+    ARTS_IMPORT i32 internalSeek(i32 offset);
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

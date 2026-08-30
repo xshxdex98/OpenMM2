@@ -35,7 +35,7 @@ public:
     ARTS_IMPORT ~mmDirSnd();
 
     // ?InitPrimarySoundBuffer@mmDirSnd@@UAEHKEPAD@Z
-    ARTS_IMPORT virtual i32 InitPrimarySoundBuffer(ulong arg1, u8 arg2, char* arg3);
+    ARTS_IMPORT virtual i32 InitPrimarySoundBuffer(ulong sampleRate, u8 allowStero, char* deviceName);
 
     // ?DeInit@mmDirSnd@@QAEXFF@Z
     ARTS_IMPORT void DeInit(i16 arg1, i16 arg2);

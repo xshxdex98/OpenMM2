@@ -66,7 +66,7 @@ public:
     ARTS_IMPORT void SetString(LocString* arg1);
 
     // ?SetType@UIButton@@QAEXH@Z
-    ARTS_IMPORT void SetType(i32 arg1);
+    ARTS_IMPORT void SetType(i32 type);
 
     // ?TestHit@UIButton@@QAEHMM@Z
     ARTS_IMPORT i32 TestHit(f32 arg1, f32 arg2);

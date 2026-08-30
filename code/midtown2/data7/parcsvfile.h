@@ -45,7 +45,7 @@ public:
     ARTS_IMPORT void Kill();
 
     // ?Load@parCsvFile@@QAE_NPBD0_NH@Z
-    ARTS_IMPORT bool Load(const char* arg1, const char* arg2, bool arg3, i32 arg4);
+    ARTS_IMPORT bool Load(const char* prefix, const char* path, bool arg3, i32 arg4);
 
     // ?Print@parCsvFile@@QBEXXZ
     ARTS_IMPORT void Print() const;

@@ -41,13 +41,13 @@ public:
     ARTS_IMPORT virtual phMaterial* Load(datAsciiTokenizer* arg1);
 
     // ?AddToTable@phMaterialMgr@@QAEXPAVphMaterial@@@Z
-    ARTS_IMPORT void AddToTable(phMaterial* arg1);
+    ARTS_IMPORT void AddToTable(phMaterial* entry);
 
     // ?CreateInstance@phMaterialMgr@@SAAAV1@H@Z
     ARTS_IMPORT static phMaterialMgr& CreateInstance(i32 arg1);
 
     // ?Find@phMaterialMgr@@QAEPAVphMaterial@@PBD@Z
-    ARTS_IMPORT phMaterial* Find(const char* arg1);
+    ARTS_IMPORT phMaterial* Find(const char* entryName);
 
     // ?FindIndexOfName@phMaterialMgr@@QAEHPBD@Z
     ARTS_IMPORT i32 FindIndexOfName(const char* arg1);
@@ -56,14 +56,14 @@ public:
     ARTS_IMPORT const char* FindNameOfIndex(i32 arg1);
 
     // ?LoadTable@phMaterialMgr@@QAE_NPBD@Z
-    ARTS_IMPORT bool LoadTable(const char* arg1);
+    ARTS_IMPORT bool LoadTable(const char* path);
 
     // ?Save@phMaterialMgr@@QAEXPAVphMaterial@@PAVdatAsciiTokenizer@@@Z
-    ARTS_IMPORT void Save(phMaterial* arg1, datAsciiTokenizer* arg2);
+    ARTS_IMPORT void Save(phMaterial* entry, datAsciiTokenizer* arg2);
 
 protected:
     // ??0phMaterialMgr@@IAE@PAVphMaterial@@H@Z
-    ARTS_IMPORT phMaterialMgr(phMaterial* arg1, i32 arg2);
+    ARTS_IMPORT phMaterialMgr(phMaterial* entry, i32 arg2);
 
     // ??0phMaterialMgr@@IAE@XZ
     ARTS_IMPORT phMaterialMgr();

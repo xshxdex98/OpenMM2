@@ -39,16 +39,16 @@ public:
     ARTS_IMPORT static gfxBitmap* CreateFitBitmap(const char* arg1, const void* arg2, i32 arg3, i32 arg4);
 
     // ?CreateFont@mmText@@SAPAXPBDH@Z
-    ARTS_IMPORT static void* CreateFont(const char* arg1, i32 arg2);
+    ARTS_IMPORT static void* CreateFont(const char* pszFaceName, i32 cHeight);
 
     // ?CreateLocFont@mmText@@SAPAXPBULocString@@H@Z
     ARTS_EXPORT static void* CreateLocFont(const LocString* arg1, i32 arg2);
 
     // ?DeleteFont@mmText@@SAXPAX@Z
-    ARTS_IMPORT static void DeleteFont(void* arg1);
+    ARTS_IMPORT static void DeleteFont(void* ho);
 
     // ?Draw@mmText@@QAEXPAVgfxBitmap@@MMPBDPBX@Z
-    ARTS_IMPORT void Draw(gfxBitmap* arg1, f32 arg2, f32 arg3, const char* arg4, const void* arg5);
+    ARTS_IMPORT void Draw(gfxBitmap* fontBitmap, f32 x, f32 y, const char* lpString, const void* h);
 
     // ?Draw2@mmText@@QAEXPAVgfxBitmap@@MMPBDPBXI@Z
     ARTS_IMPORT void Draw2(gfxBitmap* arg1, f32 arg2, f32 arg3, const char* arg4, const void* arg5, u32 arg6);

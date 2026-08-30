@@ -88,10 +88,10 @@ public:
     ARTS_IMPORT static Vector3 GetSidewalkVertexSingle(i32 arg1, i32 arg2, i32 arg3);
 
     // ?GetStopLightName@lvlAiMap@@SAPADH@Z
-    ARTS_IMPORT static char* GetStopLightName(i32 arg1);
+    ARTS_IMPORT static char* GetStopLightName(i32 font_cfg_template);
 
     // ?GetStopLightPos@lvlAiMap@@SAXHAAVVector3@@0_N@Z
-    ARTS_IMPORT static void GetStopLightPos(i32 arg1, Vector3& arg2, Vector3& arg3, bool arg4);
+    ARTS_IMPORT static void GetStopLightPos(i32 font_cfg, Vector3& rhs, Vector3& arg3, bool arg4);
 
     // ?GetStopLightType@lvlAiMap@@SAHH@Z
     ARTS_IMPORT static i32 GetStopLightType(i32 arg1);

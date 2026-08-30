@@ -98,7 +98,7 @@ public:
     ARTS_IMPORT void Set2DPan(f32 arg1);
 
     // ?StartSiren@vehPoliceCarAudio@@QAEXH@Z
-    ARTS_IMPORT void StartSiren(i32 arg1);
+    ARTS_IMPORT void StartSiren(i32 label_id);
 
     // ?StopSiren@vehPoliceCarAudio@@QAEXXZ
     ARTS_IMPORT void StopSiren();
@@ -119,7 +119,7 @@ public:
     ARTS_IMPORT void UpdateExplosion(f32 arg1, f32 arg2);
 
     // ?UpdateSiren@vehPoliceCarAudio@@QAEHMMM@Z
-    ARTS_IMPORT i32 UpdateSiren(f32 arg1, f32 arg2, f32 arg3);
+    ARTS_IMPORT i32 UpdateSiren(f32 label_id, f32 getter, f32 arg3);
 
     // ?UpdateSiren@vehPoliceCarAudio@@QAEXXZ
     ARTS_IMPORT void UpdateSiren();
@@ -135,7 +135,7 @@ private:
     ARTS_IMPORT void FluctuateSiren();
 
     // ?Load@vehPoliceCarAudio@@AAEXPBD@Z
-    ARTS_IMPORT void Load(const char* arg1);
+    ARTS_IMPORT void Load(const char* path);
 
     // ?ReadSirenData@vehPoliceCarAudio@@AAEXPAUtagSirenData@@PAD@Z
     ARTS_IMPORT void ReadSirenData(tagSirenData* arg1, char* arg2);

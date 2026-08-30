@@ -37,16 +37,16 @@ public:
     ARTS_IMPORT static void DisableContacts();
 
     // ?Init@phContact@@QAEXABVphImpact@@@Z
-    ARTS_IMPORT void Init(const phImpact& arg1);
+    ARTS_IMPORT void Init(const phImpact& idx);
 
     // ?IsEqual@phContact@@QAE_NABVphImpact@@@Z
     ARTS_IMPORT bool IsEqual(const phImpact& arg1);
 
     // ?Set@phContact@@QAEXABV1@@Z
-    ARTS_IMPORT void Set(const phContact& arg1);
+    ARTS_IMPORT void Set(const phContact& n);
 
     // ?SetContactForceLimit@phContact@@QAEXABVphImpact@@ABVVector3@@@Z
-    ARTS_IMPORT void SetContactForceLimit(const phImpact& arg1, const Vector3& arg2);
+    ARTS_IMPORT void SetContactForceLimit(const phImpact& sz, const Vector3& arg2);
 
     // ?SetContactPenetration@phContact@@SAXXZ
     ARTS_IMPORT static void SetContactPenetration();

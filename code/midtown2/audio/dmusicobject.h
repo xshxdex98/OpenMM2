@@ -76,7 +76,7 @@ public:
     ARTS_IMPORT i32 LoadMotif(char* arg1, char* arg2, i32 arg3);
 
     // ?OpenSegmentFile@DMusicObject@@QAEHPADH_N@Z
-    ARTS_IMPORT i32 OpenSegmentFile(char* arg1, i32 arg2, bool arg3);
+    ARTS_IMPORT i32 OpenSegmentFile(char* renderer, i32 DrawList, bool cull_rect);
 
     // ?PlayBand@DMusicObject@@QAEHHH@Z
     ARTS_IMPORT i32 PlayBand(i32 arg1, i32 arg2);
@@ -103,7 +103,7 @@ public:
     ARTS_IMPORT i32 SegmentSwitch(i32 arg1, u16 arg2, ulong arg3);
 
     // ?SetSearchDirectory@DMusicObject@@QAEHPAD@Z
-    ARTS_IMPORT i32 SetSearchDirectory(char* arg1);
+    ARTS_IMPORT i32 SetSearchDirectory(char* lpMultiByteStr);
 
     // ?StopSegment@DMusicObject@@QAEHH@Z
     ARTS_IMPORT i32 StopSegment(i32 arg1);

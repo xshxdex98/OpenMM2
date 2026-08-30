@@ -58,7 +58,7 @@ public:
     ARTS_IMPORT virtual void InitHUD();
 
     // ?UpdateGameInput@mmSingleRace@@UAEXH@Z
-    ARTS_IMPORT virtual void UpdateGameInput(i32 arg1);
+    ARTS_IMPORT virtual void UpdateGameInput(i32 name);
 
     // ?UpdateDebugKeyInput@mmSingleRace@@UAEXH@Z
     ARTS_IMPORT virtual void UpdateDebugKeyInput(i32 arg1);
@@ -86,7 +86,7 @@ public:
 
 private:
     // ?FinishMessage@mmSingleRace@@AAEXHH@Z
-    ARTS_IMPORT void FinishMessage(i32 arg1, i32 arg2);
+    ARTS_IMPORT void FinishMessage(i32 arg1, i32 arg4);
 
     // ?NextRaceAvailable@mmSingleRace@@AAEHXZ
     ARTS_IMPORT i32 NextRaceAvailable();

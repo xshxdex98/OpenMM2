@@ -71,7 +71,7 @@ public:
     ARTS_IMPORT bool GetZoomIn();
 
     // ?Init@mmHudMap@@QAEXPAVMatrix34@@PAVmmGame@@PAD@Z
-    ARTS_IMPORT void Init(Matrix34* arg1, mmGame* arg2, char* arg3);
+    ARTS_IMPORT void Init(Matrix34* mouse_platform_pos, mmGame* viewport, char* arg3);
 
     // ?RegisterCopsnRobbers@mmHudMap@@QAEXPAPAVVector3@@@Z
     ARTS_IMPORT void RegisterCopsnRobbers(Vector3** arg1);
@@ -99,7 +99,7 @@ protected:
     ARTS_IMPORT i32 GetNextMapMode();
 
     // ?SetMapMode@mmHudMap@@IAEXH@Z
-    ARTS_IMPORT void SetMapMode(i32 arg1);
+    ARTS_IMPORT void SetMapMode(i32 ctx);
 
 private:
     // ?DrawCops@mmHudMap@@AAEXXZ

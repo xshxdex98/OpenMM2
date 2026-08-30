@@ -43,7 +43,7 @@ public:
     ARTS_IMPORT virtual void Update();
 
     // ?Init@mmToolTip@@QAEXPAVUIMenu@@PAULocString@@@Z
-    ARTS_IMPORT void Init(UIMenu* arg1, LocString* arg2);
+    ARTS_IMPORT void Init(UIMenu* pParent, LocString* pText);
 
     // ?SetText@mmToolTip@@QAEXPAULocString@@@Z
     ARTS_IMPORT void SetText(LocString* arg1);

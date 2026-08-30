@@ -30,22 +30,22 @@ class gfxBitmap
 {
 public:
     // ?Clear@gfxBitmap@@QAEXI@Z
-    ARTS_EXPORT void Clear(u32 arg1);
+    ARTS_EXPORT void Clear(u32 fillColor);
 
     // ?Create@gfxBitmap@@SAPAV1@HH_N@Z
-    ARTS_EXPORT static gfxBitmap* Create(i32 arg1, i32 arg2, bool arg3);
+    ARTS_EXPORT static gfxBitmap* Create(i32 width, i32 height, bool arg3);
 
     // ?Create@gfxBitmap@@SAPAV1@PAVgfxImage@@_N@Z
-    ARTS_EXPORT static gfxBitmap* Create(gfxImage* arg1, bool arg2);
+    ARTS_EXPORT static gfxBitmap* Create(gfxImage* image, bool unused);
 
     // ?KillAll@gfxBitmap@@SAXXZ
     ARTS_IMPORT static void KillAll();
 
     // ?Load@gfxBitmap@@QAE_NPAVgfxImage@@@Z
-    ARTS_EXPORT bool Load(gfxImage* arg1);
+    ARTS_EXPORT bool Load(gfxImage* image);
 
     // ?SetName@gfxBitmap@@QAEXPBD@Z
-    ARTS_IMPORT void SetName(const char* arg1);
+    ARTS_IMPORT void SetName(const char* name);
 
 public:
     // The destructor is private in midtown2.exe; this reaches it without
@@ -57,7 +57,7 @@ public:
 
 private:
     // ??0gfxBitmap@@AAE@HH@Z
-    ARTS_IMPORT gfxBitmap(i32 arg1, i32 arg2);
+    ARTS_IMPORT gfxBitmap(i32 width, i32 height);
 
     // ??1gfxBitmap@@AAE@XZ
     ARTS_IMPORT ~gfxBitmap();

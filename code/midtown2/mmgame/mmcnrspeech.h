@@ -39,14 +39,14 @@ public:
     ARTS_IMPORT void Play(i32 arg1);
 
     // ?Play@mmCNRSpeech@@QAEXPAD@Z
-    ARTS_IMPORT void Play(char* arg1);
+    ARTS_IMPORT void Play(char* _First);
 
 private:
     // ?locstrnicmp@mmCNRSpeech@@AAEHPAD0@Z
     ARTS_IMPORT i32 locstrnicmp(char* arg1, char* arg2);
 
     // ?SetReadState@mmCNRSpeech@@AAE_NPAD@Z
-    ARTS_IMPORT bool SetReadState(char* arg1);
+    ARTS_IMPORT bool SetReadState(char* _Count);
 };
 
 // check_size(mmCNRSpeech, 0x1); // size known, members are not - cannot verify

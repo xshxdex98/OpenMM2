@@ -37,7 +37,7 @@ class NetSelectMenu : public UIMenu
 {
 public:
     // ??0NetSelectMenu@@QAE@H@Z
-    ARTS_IMPORT NetSelectMenu(i32 arg1);
+    ARTS_IMPORT NetSelectMenu(i32 renderer);
 
     // ??1NetSelectMenu@@UAE@XZ
     ARTS_IMPORT virtual ~NetSelectMenu();
@@ -49,7 +49,7 @@ public:
     ARTS_IMPORT virtual void PostSetup();
 
     // ?AddModem@NetSelectMenu@@QAEXPADH@Z
-    ARTS_IMPORT void AddModem(char* arg1, i32 arg2);
+    ARTS_IMPORT void AddModem(char* renderer, i32 DrawList);
 
     // ?AddWidgetToList@NetSelectMenu@@QAEXHPAVuiWidget@@@Z
     ARTS_IMPORT void AddWidgetToList(i32 arg1, uiWidget* arg2);

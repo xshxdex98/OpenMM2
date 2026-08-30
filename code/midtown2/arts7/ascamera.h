@@ -58,7 +58,7 @@ public:
     ARTS_IMPORT void FadeOut(f32 arg1, i32 arg2);
 
     // ?GetNearClip@asCamera@@QAEXPAVVector3@@AAVMatrix34@@W4kNearClip@1@@Z
-    ARTS_IMPORT void GetNearClip(Vector3* arg1, Matrix34& arg2, asCamera::kNearClip arg3);
+    ARTS_IMPORT void GetNearClip(Vector3* y_min, Matrix34& x, asCamera::kNearClip y);
 
     // ?GetViewportHeight@asCamera@@QAEHXZ
     ARTS_IMPORT i32 GetViewportHeight();
@@ -67,7 +67,7 @@ public:
     ARTS_IMPORT i32 GetViewportWidth();
 
     // ?SetAmbient@asCamera@@QAEXABVVector3@@@Z
-    ARTS_IMPORT void SetAmbient(const Vector3& arg1);
+    ARTS_IMPORT void SetAmbient(const Vector3& unused);
 
     // ?SetClipArea@asCamera@@QAEXMMMM@Z
     ARTS_IMPORT void SetClipArea(f32 arg1, f32 arg2, f32 arg3, f32 arg4);
@@ -76,10 +76,10 @@ public:
     ARTS_IMPORT void SetFog(f32 arg1, f32 arg2, f32 arg3, f32 arg4);
 
     // ?SetLighting@asCamera@@QAEXH@Z
-    ARTS_IMPORT void SetLighting(i32 arg1);
+    ARTS_IMPORT void SetLighting(i32 lighting);
 
     // ?SetMonochrome@asCamera@@QAEXH@Z
-    ARTS_IMPORT void SetMonochrome(i32 arg1);
+    ARTS_IMPORT void SetMonochrome(i32 unused);
 
     // ?SetUnderlay@asCamera@@QAEXPAD@Z
     ARTS_IMPORT void SetUnderlay(char* arg1);
@@ -88,13 +88,13 @@ public:
     ARTS_IMPORT void SetUnderlayCB(gfxBitmap* arg1, datCallback* arg2);
 
     // ?SetView@asCamera@@QAEXMMMM@Z
-    ARTS_IMPORT void SetView(f32 arg1, f32 arg2, f32 arg3, f32 arg4);
+    ARTS_IMPORT void SetView(f32 arg1, f32 arg4, f32 arg3, f32 arg4);
 
     // ?SetViewport@asCamera@@QAEXMMMMH@Z
     ARTS_IMPORT void SetViewport(f32 arg1, f32 arg2, f32 arg3, f32 arg4, i32 arg5);
 
     // ?SetWorld@asCamera@@QAEXAAVMatrix34@@@Z
-    ARTS_IMPORT void SetWorld(Matrix34& arg1);
+    ARTS_IMPORT void SetWorld(Matrix34& unused);
 
     // ?SphereVisible@asCamera@@QAEMABVVector3@@MPAM@Z
     ARTS_IMPORT f32 SphereVisible(const Vector3& arg1, f32 arg2, f32* arg3);

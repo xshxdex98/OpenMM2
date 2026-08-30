@@ -35,7 +35,7 @@ class phCollider : public phColliderBase
 {
 public:
     // ?Init@phCollider@@QAEXPAVMatrix34@@PBVphBound@@@Z
-    ARTS_IMPORT void Init(Matrix34* arg1, const phBound* arg2);
+    ARTS_IMPORT void Init(Matrix34* atlas, const phBound* rhs);
 
     // ?Init@phCollider@@QAEXPBVphBound@@PAVInstanceData@@PAVphInertialCS@@PAVphSleep@@@Z
     ARTS_IMPORT void Init(const phBound* arg1, InstanceData* arg2, phInertialCS* arg3, phSleep* arg4);
@@ -50,7 +50,7 @@ public:
     ARTS_IMPORT void Init(const phBound* arg1, phInertialCS* arg2, phSleep* arg3);
 
     // ?InitArray@phCollider@@SAXQAV1@H@Z
-    ARTS_IMPORT static void InitArray(phCollider*const arg1, i32 arg2);
+    ARTS_IMPORT static void InitArray(phCollider*const src, i32 dst);
 
     // ?Reset@phCollider@@QAEXXZ
     ARTS_IMPORT void Reset();

@@ -34,7 +34,7 @@ public:
     ARTS_IMPORT bool BytesAdded(i32 arg1);
 
     // ?BytesRemoved@audSoundBuffer@@QAE_NH@Z
-    ARTS_IMPORT bool BytesRemoved(i32 arg1);
+    ARTS_IMPORT bool BytesRemoved(i32 icon);
 
     // ?Create@audSoundBuffer@@QAEPAV1@W4SOUNDBUFFERTYPE@1@H@Z
     ARTS_IMPORT audSoundBuffer* Create(audSoundBuffer::SOUNDBUFFERTYPE arg1, i32 arg2);
@@ -88,7 +88,7 @@ public:
     ARTS_IMPORT void SetIndex2(i32 arg1);
 
     // ?SetIndexes@audSoundBuffer@@QAEXHH@Z
-    ARTS_IMPORT void SetIndexes(i32 arg1, i32 arg2);
+    ARTS_IMPORT void SetIndexes(i32 angle, i32 arg2);
 
     // ?SetSize@audSoundBuffer@@QAEXH@Z
     ARTS_IMPORT void SetSize(i32 arg1);

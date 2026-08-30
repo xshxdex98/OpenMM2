@@ -1,0 +1,3925 @@
+{
+ "?SetMaterial@AgeDevice@@UAGJPAU_D3DMATERIAL7@@@Z": [
+  "This",
+  null
+ ],
+ "?Clear@AgeDevice@@UAGJKPAU_D3DRECT@@KKMK@Z": [
+  "This",
+  null,
+  null,
+  null,
+  null,
+  null,
+  null
+ ],
+ "?SetRenderTarget@AgeDevice@@UAGJPAUIDirectDrawSurface7@@K@Z": [
+  null,
+  "surface",
+  null
+ ],
+ "?GetCaps@AgeDevice@@UAGJPAU_D3DDeviceDesc7@@@Z": [
+  "d3dDeviceDesc"
+ ],
+ "?Release@AgeDevice@@UAGKXZ": [
+  "This"
+ ],
+ "?Initialize@AgeDevice@@UAGJPAUIDirectDrawSurface7@@@Z": [
+  "lpD3DDevice7",
+  "lpDDrawSurface7"
+ ],
+ "?FileValid@Aud3DAmbObjContainer@@AAE_NPAD@Z": [
+  "path"
+ ],
+ "?Init@Aud3DAmbObjContainer@@QAE_NPAD@Z": [
+  "renderer"
+ ],
+ "?CreateAmbientObject@Aud3DAmbObjContainer@@AAEXPAD@Z": [
+  "renderer"
+ ],
+ "?PlayOneShot@Aud3DAmbientObject@@AAEXPAUtagAud3DAmbientSoundData@@@Z": [
+  "renderer"
+ ],
+ "?GetSoundIndex@Aud3DAmbientObject@@QAEHPAD@Z": [
+  "renderer"
+ ],
+ "?Load@Aud3DAmbientObject@@QAEXPAD@Z": [
+  "renderer"
+ ],
+ "?ReadSoundData@Aud3DAmbientObject@@AAE_NPAVStream@@@Z": [
+  "renderer"
+ ],
+ "?AllocateSample@Aud3DObjectManager@@QAEHPADK@Z": [
+  "renderer",
+  "DrawList"
+ ],
+ "?ReadVectorPoints@Aud3DObject@@QAE_NPAVStream@@@Z": [
+  "renderer"
+ ],
+ "?ParseCSVBuffer@AudCreatureAvoid@@QAEHPAVStream@@@Z": [
+  null,
+  null,
+  "renderer"
+ ],
+ "?Init@AudCreatureContainer@@QAEXPADPAVVector3@@@Z": [
+  "renderer",
+  "DrawList"
+ ],
+ "?UpdateStatics@AudCreatureContainer@@SAXM@Z": [
+  "renderer"
+ ],
+ "?LoadVoices@AudCreatureContainer@@QAE_NPAD0@Z": [
+  "renderer",
+  "DrawList"
+ ],
+ "?LoadNumFileChoices@AudCreatureContainer@@SAXPADPAH@Z": [
+  "path",
+  null
+ ],
+ "?ParseCSVBuffer@AudCreatureImpact@@QAEHPAVStream@@@Z": [
+  "renderer"
+ ],
+ "?Load@AudCreature@@SAHPAPAV1@PAD1PAH@Z": [
+  "valueOut",
+  "name",
+  "asssetSection",
+  null
+ ],
+ "?AddToHash@AudCreature@@SAXPADH@Z": [
+  "argName",
+  "entry"
+ ],
+ "?ReadCSV@AudCreature@@AAEHPAVStream@@@Z": [
+  "renderer"
+ ],
+ "?UpdateAttenuation@AudImpactData@@QAEXMM@Z": [
+  "renderer",
+  "DrawList"
+ ],
+ "?Play@AudImpactData@@QAEXMMM@Z": [
+  "renderer",
+  "DrawList",
+  "cull_rect"
+ ],
+ "?AddToHash@AudImpact@@SAXPADH@Z": [
+  null,
+  "entry"
+ ],
+ "?SetStereoFlag@AudManagerBase@@QAEXH@Z": [
+  "stereo"
+ ],
+ "??_GAudManagerBase@@UAEPAXI@Z": [
+  "renderer"
+ ],
+ "?FreeTimeNode@audManager@@QAEXPAVaudTimeNode@@@Z": [
+  "lod"
+ ],
+ "?FreeHeadNode@audManager@@QAEXPAVaudHead@@@Z": [
+  "lod"
+ ],
+ "?SetExtension@AudSoundBase@@QAEXPAD@Z": [
+  "renderer"
+ ],
+ "?SetVolume@AudSoundBase@@QAEXM@Z": [
+  "renderer"
+ ],
+ "?Load@AudSoundBase@@QAEHPADH_N@Z": [
+  "renderer",
+  "DrawList",
+  "cull_rect"
+ ],
+ "?PlayLoop@AudSoundBase@@QAEXMM@Z": [
+  "renderer",
+  "DrawList"
+ ],
+ "?LoadOneShots@AudSpeechData@@AAEXPAD0@Z": [
+  "renderer",
+  "DrawList"
+ ],
+ "??0AudSpeech@@QAE@_N@Z": [
+  "renderer"
+ ],
+ "?SetExtension@AudSpeech@@QAEXPAD@Z": [
+  "renderer"
+ ],
+ "?PlayStream@AudSpeech@@AAEXHM@Z": [
+  "renderer",
+  "DrawList"
+ ],
+ "?PlayStream@AudSpeech@@AAEXHHM@Z": [
+  "renderer",
+  "DrawList",
+  "cull_rect"
+ ],
+ "?StreamingMusicInit@AudStreamingMusic@@QAEHPBD@Z": [
+  "renderer"
+ ],
+ "?SetDevice@AudioOptions@@QAEXH@Z": [
+  "getter1"
+ ],
+ "??_GBase@@UAEPAXI@Z": [
+  "str"
+ ],
+ "?Append@CArrayList@@QAEXH@Z": [
+  "DrawList"
+ ],
+ "?Init@CDMan@@QAEKF@Z": [
+  "renderer"
+ ],
+ "?PlayTrack@CDMan@@QAEKEE@Z": [
+  "renderer",
+  "dwParam2"
+ ],
+ "?PlayTrack@CDMan@@QAEKEEEEE@Z": [
+  null,
+  null,
+  null,
+  null,
+  "dwParam2"
+ ],
+ "?Read@CFileStream@@UAGJPAXKPAK@Z": [
+  null,
+  "buffer",
+  "size",
+  null
+ ],
+ "?Seek@CFileStream@@UAGJT_LARGE_INTEGER@@KPAT_ULARGE_INTEGER@@@Z": [
+  null,
+  "position",
+  null,
+  "whence",
+  null
+ ],
+ "?Open@CMemStream@@QAEJPAE_J@Z": [
+  "lp",
+  "ucb"
+ ],
+ "?Init@Card2D@@QAEXPAVasCamera@@MMMMM@Z": [
+  null,
+  "x",
+  "y",
+  "w",
+  "h",
+  "alpha"
+ ],
+ "?SetDimensions@Card2D@@QAEXMMMM@Z": [
+  "x",
+  "y",
+  "w",
+  "h"
+ ],
+ "?SetPosition@Card2D@@QAEXMM@Z": [
+  "x",
+  "y"
+ ],
+ "??0ControlCustom@@QAE@H@Z": [
+  "getter"
+ ],
+ "??0ControlSetup@@QAE@H@Z": [
+  "getter"
+ ],
+ "?FocusDescription@ControlSetup@@QAEXPAX0@Z": [
+  "getter",
+  null
+ ],
+ "??0CrashCourseIntro@@QAE@H@Z": [
+  "getter"
+ ],
+ "??0CrashCourse@@QAE@H@Z": [
+  "getter"
+ ],
+ "?InitNotificationThread@DMusicObject@@AAEHXZ": [
+  "lpParameter"
+ ],
+ "?SetSearchDirectory@DMusicObject@@QAEHPAD@Z": [
+  "lpMultiByteStr"
+ ],
+ "?OpenSegmentFile@DMusicObject@@QAEHPADH_N@Z": [
+  "renderer",
+  "DrawList",
+  "cull_rect"
+ ],
+ "?RemoveName@Dialog_Eject@@QAEXPBDK@Z": [
+  "getter1",
+  "getter2"
+ ],
+ "?RemoveName@Dialog_Eject@@QAEXK@Z": [
+  "getter1"
+ ],
+ "?Init@DirSnd@@SAPAV1@KE_NPAD@Z": [
+  "samplesPerSec",
+  "allowStero",
+  "enable3D",
+  "deviceName"
+ ],
+ "?IsDSDeviceInList@DirSnd@@QAEHPAU_GUID@@@Z": [
+  "guid"
+ ],
+ "?SetDeviceRating@DirSnd@@QAEXPAUtag_dsdevdesc@@@Z": [
+  "deviceEntry"
+ ],
+ "?InitPrimarySoundBuffer@DirSnd@@UAEHKEPAD@Z": [
+  "sampleRate",
+  null,
+  "lpString2"
+ ],
+ "?CreatePrimaryInterfaceAndBuffer@DirSnd@@IAEHPAU_DSBUFFERDESC@@@Z": [
+  "dsBufferDesc"
+ ],
+ "?SetPrimaryBufferFormat@DirSnd@@QAEXKE@Z": [
+  "sampleRate",
+  "allowStero"
+ ],
+ "?TranslateDSError@DirSnd@@QAEPADJ@Z": [
+  "hResult"
+ ],
+ "?SetBitDepth@DirSnd@@QAEXH@Z": [
+  "bitDepth"
+ ],
+ "?SetDelayTime@EchoEffect@@QAEXM@Z": [
+  "player"
+ ],
+ "??$getPtr@H@@YAPAHPAXH@Z": [
+  "p",
+  "offset"
+ ],
+ "??0HashTable@@QAE@H_NH@Z": [
+  "entryCount",
+  "fixedSize",
+  "fixedCount"
+ ],
+ "?InitFixed@HashTable@@AAEXHH@Z": [
+  "entryCount",
+  null
+ ],
+ "?InitCommon@HashTable@@AAEXH@Z": [
+  "entryCount"
+ ],
+ "??4HashTable@@QAEXABV0@@Z": [
+  "copy"
+ ],
+ "?Insert@HashTable@@QAE_NPBDPAX@Z": [
+  "argName",
+  "entry"
+ ],
+ "?Delete@HashTable@@QAE_NPBD@Z": [
+  "string"
+ ],
+ "?Change@HashTable@@QAE_NPBD0@Z": [
+  "oldName",
+  "newName"
+ ],
+ "?Access@HashTable@@QAEPAXPBD@Z": [
+  "name"
+ ],
+ "?Access@HashTable@@QAE_NPBDPAPBX@Z": [
+  "entryName",
+  "entryOut"
+ ],
+ "?AccessName@HashTable@@QAEPBDH@Z": [
+  "index"
+ ],
+ "?AccessData@HashTable@@QAEPAXH@Z": [
+  "index"
+ ],
+ "?Hash@HashTable@@AAEHPBD@Z": [
+  "string"
+ ],
+ "?ComputePrime@HashTable@@AAEHH@Z": [
+  "prime"
+ ],
+ "?Recompute@HashTable@@AAEXH@Z": [
+  "arraySize"
+ ],
+ "?GetEntry@HashTable@@AAEPAVHashEntry@@H@Z": [
+  "index"
+ ],
+ "?GetFirstEntry@HashTable@@QAE_NAAVHashPosition@@@Z": [
+  "hashPosition"
+ ],
+ "?GetNextEntry@HashTable@@QAE_NAAVHashPosition@@@Z": [
+  "position"
+ ],
+ "?Initialize@HookConfig@@SA_NPBD@Z": [
+  "filename"
+ ],
+ "?SetCRWidgets@HostRaceMenu@@UAEXH@Z": [
+  "getter"
+ ],
+ "?GetLimit@HostRaceMenu@@QAEXAAH0@Z": [
+  "getter",
+  null
+ ],
+ "?SetLimit@HostRaceMenu@@QAEXAAH0@Z": [
+  "getter",
+  null
+ ],
+ "??_GHostRaceMenu@@UAEPAXI@Z": [
+  "getter"
+ ],
+ "?AddBezierCurve@ImDrawList@@QAEXABUImVec2@@000IMH@Z": [
+  "lhs",
+  "rhs"
+ ],
+ "?PathArcToFast@ImDrawList@@QAEXABUImVec2@@MHH@Z": [
+  "index"
+ ],
+ "?HasSelection@ImGuiInputTextState@@QBE_NXZ": [
+  "pos"
+ ],
+ "?Clear@ImGuiStorage@@QAEXXZ": [
+  "p",
+  null,
+  null,
+  null
+ ],
+ "?reserve@ImGuiTextBuffer@@QAEXH@Z": [
+  "capacity"
+ ],
+ "?GetID@ImGuiWindow@@QAEIPBX@Z": [
+  "ptr"
+ ],
+ "?GetIDFromRectangle@ImGuiWindow@@QAEIABUImRect@@@Z": [
+  "r_abs"
+ ],
+ "??0ImPlotPoint@@QAE@NN@Z": [
+  "_x",
+  "_y"
+ ],
+ "?TranslateX@ImRect@@QAEXM@Z": [
+  "dx",
+  null,
+  null,
+  null,
+  null,
+  null
+ ],
+ "?Printf@LogFile@@YAXHPBDZZ": [
+  null,
+  null,
+  "level",
+  "format",
+  null
+ ],
+ "?Write@MArray@@QAEXPAD@Z": [
+  "path"
+ ],
+ "?Read@MArray@@QAEXPAD@Z": [
+  "file_name"
+ ],
+ "?UpdateMusic@MMDMusicManager@@QAEXMH_N@Z": [
+  "renderer",
+  "DrawList",
+  "cull_rect"
+ ],
+ "?EchoOn@MMDMusicManager@@QAEXMM@Z": [
+  "renderer",
+  "DrawList"
+ ],
+ "?RemovePlayer@MainMenu@@QAEXPAD@Z": [
+  "renderer"
+ ],
+ "?Transpose@Matrix33@@QAEXABV1@@Z": [
+  null,
+  null,
+  "bb"
+ ],
+ "?Dot@Matrix34@@QAEXABV1@0@Z": [
+  "lhs",
+  "rhs"
+ ],
+ "?RotateFullY@Matrix34@@QAEXM@Z": [
+  null,
+  null,
+  "arg0"
+ ],
+ "?RotateFullZ@Matrix34@@QAEXM@Z": [
+  null,
+  null,
+  "arg0"
+ ],
+ "?RotateFullUnitAxis@Matrix34@@QAEXABVVector3@@M@Z": [
+  null,
+  null,
+  "arg0",
+  null
+ ],
+ "?MakeRotate@Matrix34@@QAEXABVVector3@@M@Z": [
+  null,
+  "rotation"
+ ],
+ "?LookAt@Matrix34@@QAEXABVVector3@@0@Z": [
+  "id",
+  "values"
+ ],
+ "?Normalize@Matrix34@MM2@@QAEXXZ": [
+  "dir"
+ ],
+ "?Set@Matrix44@@QAEXABV1@@Z": [
+  "x"
+ ],
+ "?Add@Matrix44@@QAEXABV1@@Z": [
+  null,
+  null,
+  "i"
+ ],
+ "?Subtract@Matrix44@@QAEXABV1@@Z": [
+  null,
+  null,
+  "t"
+ ],
+ "?Subtract@Matrix44@@QAEXABV1@0@Z": [
+  null,
+  null,
+  "sz",
+  null
+ ],
+ "?Dot@Matrix44@@QAEAAV1@ABV1@@Z": [
+  "rhs"
+ ],
+ "?Dot@Matrix44@@QAEAAV1@ABV1@0@Z": [
+  "lhs",
+  "rhs"
+ ],
+ "?FastInverse@Matrix44@@QAEXABV1@@Z": [
+  "rhs"
+ ],
+ "?InvertTo@Matrix44@@QBEXAAV1@@Z": [
+  null,
+  null,
+  "label_id"
+ ],
+ "?MouseAction@MenuManager@@QAEPAVuiWidget@@HMM@Z": [
+  "type",
+  "x",
+  "y"
+ ],
+ "?GetFont@MenuManager@@QAEPAXH@Z": [
+  "label_id"
+ ],
+ "?AdjustPopupCard@MenuManager@@QAEXPAVUIMenu@@@Z": [
+  "label_id"
+ ],
+ "?NotifyMouseSelect@MenuManager@@QAEXPAVUIMenu@@@Z": [
+  "label_id"
+ ],
+ "?Switch@MenuManager@@QAEHH@Z": [
+  "label_id"
+ ],
+ "?AddMenu2@MenuManager@@QAEHPAVUIMenu@@@Z": [
+  "label_id"
+ ],
+ "?DeleteMenu@MenuManager@@QAEXPAVUIMenu@@@Z": [
+  "label_id"
+ ],
+ "?AssignMixerVolume@MixerCTL@@QAEKMK@Z": [
+  "renderer",
+  "DrawList"
+ ],
+ "?AssignMixerBalance@MixerCTL@@QAEKMK@Z": [
+  "renderer",
+  "DrawList"
+ ],
+ "??$isnan@N@@YA_NN@Z": [
+  "textureName"
+ ],
+ "??0NetArena@@QAE@H@Z": [
+  "getter"
+ ],
+ "?AddRosterName@NetArena@@QAEXPAD@Z": [
+  "TestChar"
+ ],
+ "?SetStatus@NetArena@@QAEXKHH@Z": [
+  null,
+  "readyStatus",
+  null
+ ],
+ "??0NetSelectMenu@@QAE@H@Z": [
+  "renderer"
+ ],
+ "?AddModem@NetSelectMenu@@QAEXPADH@Z": [
+  "renderer",
+  "DrawList"
+ ],
+ "??_GNetSelectMenu@@UAEPAXI@Z": [
+  "renderer"
+ ],
+ "??0OptionsMenu@@QAE@H@Z": [
+  "getter"
+ ],
+ "??0PUChat@@QAE@HMMMMPAD@Z": [
+  null,
+  null,
+  null,
+  null,
+  "callback",
+  "callback_4"
+ ],
+ "?AddTitle@PUResults@@QAEXPAULocString@@0@Z": [
+  "renderer",
+  "DrawList"
+ ],
+ "?AddName@PUResults@@QAEXHPBDM@Z": [
+  null,
+  "arg4",
+  null
+ ],
+ "?AddName@PURoster@@QAEXPBDKH@Z": [
+  "renderer",
+  "DrawList",
+  "cull_rect"
+ ],
+ "?RemoveName@PURoster@@QAEXPBDK@Z": [
+  "renderer",
+  "DrawList"
+ ],
+ "?Slerp@Quaternion@@QAEXMABV1@0@Z": [
+  null,
+  null,
+  "label_id",
+  "getter",
+  "width"
+ ],
+ "?FromMatrix@Quaternion@@QAEXABVMatrix34@@@Z": [
+  null,
+  null,
+  "label_id"
+ ],
+ "?Multiply@Quaternion@@QAEXABV1@0@Z": [
+  null,
+  null,
+  "label_id",
+  "getter"
+ ],
+ "?Cull@RadialGauge@@QAEXPBVMatrix34@@@Z": [
+  "col"
+ ],
+ "?OpenSegmentFile@SegmentWrapper@@QAE_NPAD_N@Z": [
+  "lpMultiByteStr",
+  "DrawList"
+ ],
+ "?AllocStream@Stream@@CAPAV1@PBDHPBUcoreFileMethods@@@Z": [
+  "name",
+  "handle",
+  "fileMethods"
+ ],
+ "?Open@Stream@@SAPAV1@PBD_N@Z": [
+  "fileName",
+  "readOnly"
+ ],
+ "?Create@Stream@@SAPAV1@PBD@Z": [
+  "fileName"
+ ],
+ "?Open@Stream@@SAPAV1@PBDPBUcoreFileMethods@@_N@Z": [
+  "fileName",
+  "fileMethods",
+  "method"
+ ],
+ "?Create@Stream@@SAPAV1@PBDPBUcoreFileMethods@@@Z": [
+  "name",
+  null
+ ],
+ "?Read@Stream@@QAEHPAXH@Z": [
+  "buffer",
+  "size"
+ ],
+ "?Write@Stream@@QAEHPBXH@Z": [
+  "source",
+  "size"
+ ],
+ "?PutCh@Stream@@QAEHE@Z": [
+  "character"
+ ],
+ "?Seek@Stream@@QAEHH@Z": [
+  "offset"
+ ],
+ "?Switch@TextDropWidget@@QAEXHAAVVector4@@@Z": [
+  null,
+  "pColor"
+ ],
+ "?SetPosition@UIBMButton@@UAEXMM@Z": [
+  "transformer",
+  "DrawList"
+ ],
+ "?Init@UIBMLabel@@QAEXPAVstring@@MMPAH@Z": [
+  "transformer",
+  "DrawList",
+  "values",
+  "rows"
+ ],
+ "?SetType@UIButton@@QAEXH@Z": [
+  "type"
+ ],
+ "?Init@UICWArray@@QAEXMMMMHVdatCallback@@@Z": [
+  null,
+  null,
+  null,
+  "argC",
+  null,
+  null
+ ],
+ "?AddTitle@UICompositeScroll@@QAEXPAVmmCompBase@@@Z": [
+  "child"
+ ],
+ "?GetHit@UICompositeScroll@@QAEHMM@Z": [
+  "transformer",
+  "DrawList"
+ ],
+ "?Switch@UIControlWidget@@UAEXH@Z": [
+  "transformer"
+ ],
+ "?Switch@UIIconW@@UAEXH@Z": [
+  "transformer"
+ ],
+ "?Init@UIIcon@@QAEXPADMM@Z": [
+  "imageName",
+  "x",
+  "y"
+ ],
+ "??0UIMenu@@QAE@H@Z": [
+  "menuID"
+ ],
+ "?ScaleWidget@UIMenu@@QAEXAAM000@Z": [
+  "x",
+  "y",
+  "w",
+  "h"
+ ],
+ "?AddIcon@UIMenu@@QAEPAVUIIcon@@HPADMM@Z": [
+  null,
+  "tooltip",
+  "x",
+  "y"
+ ],
+ "?SetPosition@UISlider@@UAEXMM@Z": [
+  "arg0",
+  null
+ ],
+ "?EvalMouseXY@UISlider@@QAEXMM@Z": [
+  "arg0",
+  null
+ ],
+ "?IsValidChar@UITextField@@QAEHG@Z": [
+  "label_id"
+ ],
+ "?WmCharHandler@UITextField@@QAEXE@Z": [
+  "TestChar"
+ ],
+ "??_GUITextField@@UAEPAXI@Z": [
+  "label_id"
+ ],
+ "?EvalMouseXY@UITextRoller2@@QAEXMM@Z": [
+  "MousePosX",
+  "MousePosY"
+ ],
+ "?SetValue@UITextRoller2@@QAEHH@Z": [
+  "newValue"
+ ],
+ "?SetValue@UITextRoller@@QAEHH@Z": [
+  "label_id"
+ ],
+ "?EvalMouseXY@UIVScrollBar@@QAEXMM@Z": [
+  "transformer",
+  "DrawList"
+ ],
+ "??$IM_DELETE@UImGuiViewportDataWin32@@@@YAXPAUImGuiViewportDataWin32@@@Z": [
+  "p"
+ ],
+ "?Scale@Vector3@@QAEXM@Z": [
+  "scale"
+ ],
+ "?Dot@Vector3@@QAEXABV1@ABVMatrix34@@@Z": [
+  "lhs",
+  "rhs"
+ ],
+ "??0Vector3@@QAE@MMM@Z": [
+  "x",
+  "y",
+  "z"
+ ],
+ "??XVector3@@QAEXABV0@@Z": [
+  "vec",
+  "scale"
+ ],
+ "?Cross@Vector3@@QAEXABV1@0@Z": [
+  "lhs",
+  "rhs"
+ ],
+ "?Set@Vector3@@QAEXMMM@Z": [
+  "x",
+  "y",
+  "z"
+ ],
+ "??YVector3@@QAEXABV0@@Z": [
+  null,
+  "rhs"
+ ],
+ "??ZVector3@@QAEXABV0@@Z": [
+  "lhs",
+  "rhs"
+ ],
+ "?Subtract@Vector3@@QAEXABV1@@Z": [
+  "lhs",
+  "rhs"
+ ],
+ "?Scale@Vector3@@QAEXABV1@M@Z": [
+  "lhs",
+  "scale"
+ ],
+ "?Cross@Vector3@@QAEXABV1@@Z": [
+  "lhs",
+  "rhs"
+ ],
+ "?Dist@Vector3@@QBEMABV1@@Z": [
+  "pos"
+ ],
+ "?Dot@Vector3@@QBEMABV1@@Z": [
+  "lhs",
+  "rhs"
+ ],
+ "??ZVector3@@QAEXAAV0@@Z": [
+  "lhs",
+  "rhs"
+ ],
+ "?SubtractScaled@Vector3@@QAEXABV1@M@Z": [
+  "lhs",
+  "rhs",
+  "scale"
+ ],
+ "??YVector3@@QAEXAAV0@@Z": [
+  "lhs",
+  "rhs"
+ ],
+ "?Dot3x3@Vector3@@QAEXABVMatrix34@@@Z": [
+  "lhs",
+  "matrix"
+ ],
+ "?Dot3x3Transpose@Vector3@@QAEXABVMatrix34@@@Z": [
+  "unused",
+  "matrix"
+ ],
+ "?Set@Vector3@@QAEXABV1@@Z": [
+  "in"
+ ],
+ "?Negate@Vector3@@QAEXABV1@@Z": [
+  null,
+  "unused",
+  "rhs"
+ ],
+ "?AddScaled@Vector3@@QAEXABV1@0M@Z": [
+  "unused",
+  "vec",
+  "scale"
+ ],
+ "?RotateX@Vector3@@QAEXM@Z": [
+  "rotation"
+ ],
+ "?Extend@Vector3@@QAEXM@Z": [
+  null,
+  "min"
+ ],
+ "?Subtract@Vector3@MM2@@QAEXABV12@@Z": [
+  "vec"
+ ],
+ "?Max@Vector4@@QAEXABV1@0@Z": [
+  null,
+  null,
+  "label_id",
+  "getter"
+ ],
+ "??0VehShowcase@@QAE@H@Z": [
+  "renderer"
+ ],
+ "?Set@VolumeDW@@QAEXMM@Z": [
+  null,
+  "renderer",
+  "DrawList"
+ ],
+ "?AddWidgetData@WArray@@QAEXHHAAVVector4@@PAD@Z": [
+  "menuID",
+  "widgetID",
+  "position",
+  null
+ ],
+ "??$Call@XPAVmmCDPlayer@MM2@@$$V@?$Thunk@$0EDDENA@@hook@@SAX$$QBQAVmmCDPlayer@MM2@@@Z": [
+  "This"
+ ],
+ "??$Call@XPAVmmPopup@MM2@@$$V@?$Thunk@$0ECKEAA@@hook@@SAX$$QBQAVmmPopup@MM2@@@Z": [
+  "This"
+ ],
+ "??$Call@XPAVvehSuspension@MM2@@$$V@?$Thunk@$0ENJJCA@@hook@@SAX$$QBQAVvehSuspension@MM2@@@Z": [
+  null,
+  "This"
+ ],
+ "??A?$ImVector@UImDrawCmd@@@@QAEAAUImDrawCmd@@H@Z": [
+  "i",
+  null
+ ],
+ "??A?$ImVector@UImGuiTextRange@ImGuiTextFilter@@@@QAEAAUImGuiTextRange@ImGuiTextFilter@@H@Z": [
+  "i",
+  null
+ ],
+ "?_grow_capacity@?$ImVector@UImGuiDockNodeSettings@@@@QBEHH@Z": [
+  "sz"
+ ],
+ "?clear@?$ImVector@H@@QAEXXZ": [
+  "arg0"
+ ],
+ "?contains@?$ImVector@PAUImGuiViewport@@@@QBE_NABQAUImGuiViewport@@@Z": [
+  "v"
+ ],
+ "?pop_back@?$ImVector@M@@QAEXXZ": [
+  "ecx0"
+ ],
+ "?push_front@?$ImVector@PAUImGuiWindow@@@@QAEXABQAUImGuiWindow@@@Z": [
+  "v"
+ ],
+ "?reserve@?$ImVector@D@@QAEXH@Z": [
+  "new_capacity"
+ ],
+ "?resize@?$ImVector@E@@QAEXH@Z": [
+  "new_size"
+ ],
+ "?resize@?$ImVector@G@@QAEXH@Z": [
+  "new_size",
+  "_Y"
+ ],
+ "?resize@?$ImVector@UImFontGlyph@@@@QAEXH@Z": [
+  "new_size"
+ ],
+ "?_grow_capacity@?$ImVector@UImGuiColumnData@@@@QBEHH@Z": [
+  "sz",
+  null,
+  null
+ ],
+ "?_grow_capacity@?$ImVector@UImGuiTabItem@@@@QBEHH@Z": [
+  "sz"
+ ],
+ "?empty@?$ImVector@UImGuiGroupData@@@@QBE_NXZ": [
+  "it",
+  null
+ ],
+ "?reserve@?$ImVector@UImGuiTabBar@@@@QAEXH@Z": [
+  "new_capacity"
+ ],
+ "?reserve@?$ImVector@UImGuiPlatformMonitor@@@@QAEXH@Z": [
+  "new_capacity",
+  null
+ ],
+ "?reserve@?$ImVector@UImPlotPlot@@@@QAEXH@Z": [
+  "new_capacity",
+  "index"
+ ],
+ "?resize@?$ImVector@UImPlotPlot@@@@QAEXH@Z": [
+  "new_size",
+  null,
+  null
+ ],
+ "?_grow_capacity@?$ImVector@UImPlotPoint@@@@QBEHH@Z": [
+  "sz",
+  null
+ ],
+ "??Z?$Type@M$0A@$0A@@hook@@QAEMABM@Z": [
+  null,
+  null,
+  "rhs",
+  null,
+  null
+ ],
+ "??0?$initializer_list@Uinfo@cb@@@std@@QAE@PBUinfo@cb@@0@Z": [
+  "stream"
+ ],
+ "?_Grow_to@?$vector@Uvariant_info@@V?$allocator@Uvariant_info@@@std@@@std@@IBEII@Z": [
+  "_Count"
+ ],
+ "?Init@aiAmbientVehicleAudio@@QAEXPADPAVVector3@@@Z": [
+  "label_id",
+  "values"
+ ],
+ "?LoadEngine@aiAmbientVehicleAudio@@QAE_NPAD0@Z": [
+  "label_id",
+  "values"
+ ],
+ "?LoadHorn@aiAmbientVehicleAudio@@QAE_NPAD0@Z": [
+  "label_id",
+  "values"
+ ],
+ "?LoadVoices@aiAmbientVehicleAudio@@QAE_NPAD0_N@Z": [
+  "label_id",
+  "xs",
+  "ys"
+ ],
+ "?LoadImpacts@aiAmbientVehicleAudio@@QAE_NPAD0@Z": [
+  "label_id",
+  "xs"
+ ],
+ "?CurrentRoadIdx@aiBanger@@UAEHPAPAVaiPath@@QA_NPAH@Z": [
+  "P1",
+  "P2",
+  "weight"
+ ],
+ "?Init@aiCTFRacer@@QAEXHPAD@Z": [
+  null,
+  "arg4"
+ ],
+ "?UpdatePlay@aiCableCarAudioData@@QAEXMMM@Z": [
+  "id",
+  "text",
+  "offsetX"
+ ],
+ "?Draw@aiCableCarInstance@@UAEXH@Z": [
+  "DrawList"
+ ],
+ "??_EaiCableCar@@QAEPAXI@Z": [
+  "getter"
+ ],
+ "?DetermineNextLink@aiCableCar@@AAE_NPAVaiPath@@PAPAV2@FPAF@Z": [
+  "DrawList",
+  "cull_rect",
+  "uv",
+  "prim"
+ ],
+ "?CurrentRoadIdx@aiCableCar@@UAEHPAPAVaiPath@@QA_NPAH@Z": [
+  null,
+  null,
+  "DrawList",
+  "cull_rect",
+  "uv"
+ ],
+ "??0aiCityData@@QAE@PAD0@Z": [
+  "DrawList",
+  "__formal"
+ ],
+ "??_GaiCityData@@UAEPAXI@Z": [
+  "DrawList"
+ ],
+ "?Load@aiEngineAudio@@SAHPAPAV1@PAD1PAH@Z": [
+  "label_id",
+  "getter",
+  "asssetSection",
+  "valueOut"
+ ],
+ "?AddToHash@aiEngineAudio@@SAXPADH@Z": [
+  null,
+  "entry"
+ ],
+ "?ReadCSV@aiEngineAudio@@AAEHPAVStream@@@Z": [
+  "label_id"
+ ],
+ "?OkayToEnterIntersection@aiGoalRandomDrive@@AAEHM@Z": [
+  "damagePosition"
+ ],
+ "?AvoidCollision@aiGoalRandomDrive@@AAEXPAVaiVehicleSpline@@M@Z": [
+  "This",
+  "_Val2"
+ ],
+ "?SolvePosition@aiGoalRandomDrive@@QAEXAAVVector3@@M@Z": [
+  "This",
+  null
+ ],
+ "?AddRoad@aiIntersection@@QAEXPAVaiPath@@@Z": [
+  "road"
+ ],
+ "?Police@aiMap@@QAEPAVaiPoliceOfficer@@H@Z": [
+  "getter1"
+ ],
+ "?SaveBinary@aiMap@@QAEXPAD0@Z": [
+  "getter1",
+  "getter2"
+ ],
+ "?StopRoadTraffic@aiMap@@AAEX_N@Z": [
+  "getter1"
+ ],
+ "?FindPedAppRoad@aiMap@@QAEHH@Z": [
+  "getter1"
+ ],
+ "?ChooseNextLeftStraightLink@aiMap@@QAEHPAVaiRailSet@@@Z": [
+  "getter1"
+ ],
+ "?ChooseNextRightLink@aiMap@@QAEHPAVaiRailSet@@@Z": [
+  "getter1"
+ ],
+ "?ChooseNextRightStraightLink@aiMap@@QAEHPAVaiRailSet@@@Z": [
+  "getter1"
+ ],
+ "?ChooseNextStraightLink@aiMap@@QAEHPAVaiRailSet@@@Z": [
+  null,
+  null,
+  "getter"
+ ],
+ "?ChooseStraightLinkAt4Way@aiMap@@QAEHPAVaiRailSet@@@Z": [
+  "getter"
+ ],
+ "?ChooseNextFreewayLink@aiMap@@QAEHPAVaiRailSet@@@Z": [
+  "getter"
+ ],
+ "?ClearPeds@aiMap@@QAEXPAVaiPath@@@Z": [
+  "getter"
+ ],
+ "?RemoveAmbient@aiMap@@QAEXPAVaiVehicleSpline@@@Z": [
+  "getter"
+ ],
+ "?RemoveRoutingNode@aiMap@@QAEXH@Z": [
+  "getter"
+ ],
+ "?TestProbes@aiMap@@QAEXH@Z": [
+  "getter"
+ ],
+ "??0aiPath@@QAE@H@Z": [
+  "DrawList"
+ ],
+ "?ReadBinary@aiPath@@QAEXPAVStream@@@Z": [
+  "DrawList"
+ ],
+ "?CalcRoadTurns@aiPath@@QAEXAAVVector3@@_N@Z": [
+  "DrawList",
+  "__formal"
+ ],
+ "?RemPedPlayer@aiPath@@QAEDH@Z": [
+  "DrawList"
+ ],
+ "?IsPosOnRoad@aiPath@@QAEHABVVector3@@MPAM@Z": [
+  "DrawList",
+  "__formal",
+  "uv"
+ ],
+ "?RoadVertice@aiPath@@QAEHABVVector3@@HH@Z": [
+  "DrawList",
+  "__formal",
+  "uv"
+ ],
+ "?IntersectionEntryPt@aiPath@@QAEXAAVVector3@@HMH@Z": [
+  null,
+  null,
+  "arg8",
+  null
+ ],
+ "?IntersectionEntryVector@aiPath@@QAEXAAVVector3@@MH@Z": [
+  "DrawList",
+  "__formal",
+  "uv"
+ ],
+ "?PushAmbVehicle@aiPath@@QAEXPAVaiVehicleSpline@@HH@Z": [
+  "DrawList",
+  "__formal",
+  "uv"
+ ],
+ "?AddAmbVehicle@aiPath@@QAEXPAVaiVehicleSpline@@HMH@Z": [
+  "DrawList",
+  "__formal",
+  "uv",
+  "prim"
+ ],
+ "?LoadMaleVoices@aiPedAudio@@QAE_NPAD_N@Z": [
+  null,
+  "idx"
+ ],
+ "?Draw@aiPedestrianInstance@@UAEXH@Z": [
+  "obj"
+ ],
+ "?Avoid@aiPedestrian@@AAEXPAM@Z": [
+  "DrawList"
+ ],
+ "?DetectPedCollision@aiPedestrian@@AAEHMPAPAV1@PAM@Z": [
+  "DrawList",
+  "__formal",
+  "uv"
+ ],
+ "?AvoidObstacle@aiPedestrian@@AAEXABVVector3@@M@Z": [
+  "DrawList",
+  "__formal"
+ ],
+ "?CalcCurve@aiPedestrian@@AAEXHHM@Z": [
+  "DrawList",
+  "__formal",
+  "uv"
+ ],
+ "?UnRegisterCop@aiPoliceForce@@QAEHPAVvehCar@@0@Z": [
+  "DrawList",
+  "__formal"
+ ],
+ "??_EaiPoliceOfficer@@QAEPAXI@Z": [
+  "getter"
+ ],
+ "?PerpEscapes@aiPoliceOfficer@@QAEX_N@Z": [
+  "DrawList"
+ ],
+ "?CalcRailPosition@aiRailSet@@QAEXAAVVector3@@M@Z": [
+  "DrawList",
+  "__formal"
+ ],
+ "?CalcRailPosOrient@aiRailSet@@QAEXAAVVector3@@0M@Z": [
+  "DrawList",
+  "__formal",
+  "uv"
+ ],
+ "?SolveTurnType@aiRailSet@@QAEHPAVaiPath@@0@Z": [
+  "DrawList",
+  "__formal"
+ ],
+ "?SolveXZPosition@aiRailSet@@QAEXAAVVector3@@M@Z": [
+  "DrawList",
+  "__formal"
+ ],
+ "?setRoadDist@aiRailSet@MM2@@QAEXM@Z": [
+  "dist",
+  null
+ ],
+ "?Init@aiRouteRacer@@QAEXHPAD@Z": [
+  null,
+  "arg4"
+ ],
+ "?Disabled@aiRouteRacer@MM2@@QAEXXZ": [
+  "sparks",
+  "sparkCount"
+ ],
+ "?Update@aiSubway@@UAEXXZ": [
+  "ecx0"
+ ],
+ "?DetermineNextLink@aiSubway@@AAE_NPAVaiPath@@PAPAV2@@Z": [
+  "DrawList",
+  "cull_rect"
+ ],
+ "?OkayToEnterIntersection@aiSubway@@AAE_NM@Z": [
+  "DrawList"
+ ],
+ "?CurrentRoadIdx@aiSubway@@UAEHPAPAVaiPath@@QA_NPAH@Z": [
+  null,
+  null,
+  "DrawList",
+  "cull_rect",
+  "uv"
+ ],
+ "??0aiTrafficLightSet@@QAE@PAVaiIntersection@@@Z": [
+  "getter"
+ ],
+ "?Impact@aiVehicleActive@@SAXPAV1@PAUImpactCBData@@@Z": [
+  null,
+  null,
+  "DrawList"
+ ],
+ "?Attach@aiVehicleActive@@QAEXPAVaiVehicleInstance@@@Z": [
+  "DrawList"
+ ],
+ "?Init@aiVehicleAmbient@@QAEXPADH@Z": [
+  "DrawList",
+  "__formal"
+ ],
+ "?FileIO@aiVehicleData@@UAEXAAVdatParser@@@Z": [
+  "child"
+ ],
+ "?Draw@aiVehicleInstance@@UAEXH@Z": [
+  "DrawList"
+ ],
+ "?AddVehicleDataEntry@aiVehicleManager@@QAEHPAD@Z": [
+  "entryName"
+ ],
+ "?Init@aiVehiclePhysics@@QAEXHPADFH@Z": [
+  "DrawList",
+  "__formal",
+  "uv",
+  "prim"
+ ],
+ "?LocateWayPtFromInt@aiVehiclePhysics@@AAEHH@Z": [
+  "DrawList"
+ ],
+ "?LocateWayPtFromRoad@aiVehiclePhysics@@AAEHPAVaiPath@@@Z": [
+  "DrawList"
+ ],
+ "?CalcTurnIntersection@aiVehiclePhysics@@AAEMH@Z": [
+  "DrawList"
+ ],
+ "?CalcCurrentMaxWidthAdjustment@aiVehiclePhysics@@AAEMH@Z": [
+  "DrawList"
+ ],
+ "?CalcNextMaxWidthAdjustment@aiVehiclePhysics@@AAEMH@Z": [
+  "DrawList"
+ ],
+ "?CalcNextRdOffset@aiVehiclePhysics@@AAEMH@Z": [
+  "DrawList"
+ ],
+ "?InSharpTurn@aiVehiclePhysics@@AAEHH@Z": [
+  "DrawList"
+ ],
+ "?CalcDestinationTarget@aiVehiclePhysics@@AAEXHAAVVector3@@@Z": [
+  "DrawList",
+  "cull_rect"
+ ],
+ "?SetTargetPtToDestination@aiVehiclePhysics@@AAEXH@Z": [
+  "DrawList"
+ ],
+ "?CalcRoadTarget@aiVehiclePhysics@@AAEXHAAVVector3@@@Z": [
+  "DrawList",
+  "cull_rect"
+ ],
+ "?Init@aiVehicleSpline@@QAEXPADH@Z": [
+  "DrawList",
+  "cull_rect"
+ ],
+ "?DetectPlayerForwardCollision@aiVehicleSpline@@QAEHH@Z": [
+  "DrawList"
+ ],
+ "?DetectPlayerTargetPtCollision@aiVehicleSpline@@QAEHH@Z": [
+  "DrawList"
+ ],
+ "?DetectPlayerCollision@aiVehicleSpline@@QAEHH@Z": [
+  "DrawList"
+ ],
+ "?DetectPlayerZoneCollision@aiVehicleSpline@@QAEHH@Z": [
+  "DrawList"
+ ],
+ "?IsThePlayerInFrontOfMe@aiVehicleSpline@@QAEHH@Z": [
+  "DrawList"
+ ],
+ "?AvoidPlayerCollision@aiVehicleSpline@@QAEXH@Z": [
+  "DrawList"
+ ],
+ "?DistanceToVehicle@aiVehicleSpline@@QAEMPAV1@@Z": [
+  "DrawList"
+ ],
+ "?SolveYPositionAndOrientation@aiVehicleSpline@MM2@@QAEXXZ": [
+  "_Yx"
+ ],
+ "?IsBlockingTarget@aiVehicle@@UAEMABVVector3@@0MM@Z": [
+  "DrawList",
+  "__formal",
+  "uv",
+  "prim"
+ ],
+ "?Save@asBirthRule@@QAEXPAVdatBaseTokenizer@@H@Z": [
+  "out_pixels",
+  "out_width"
+ ],
+ "?SetLighting@asCamera@@QAEXH@Z": [
+  "lighting"
+ ],
+ "?SetWorld@asCamera@@QAEXAAVMatrix34@@@Z": [
+  "unused"
+ ],
+ "?GetNearClip@asCamera@@QAEXPAVVector3@@AAVMatrix34@@W4kNearClip@1@@Z": [
+  "y_min",
+  "x",
+  "y"
+ ],
+ "?SetView@asCamera@@QAEXMMMM@Z": [
+  null,
+  "arg4",
+  null,
+  null
+ ],
+ "?SetAmbient@asCamera@@QAEXABVVector3@@@Z": [
+  "unused"
+ ],
+ "?SetMonochrome@asCamera@@QAEXH@Z": [
+  "unused"
+ ],
+ "??0asCullManager@@QAE@HH@Z": [
+  "maxCullables",
+  "maxCullables2D"
+ ],
+ "?DeclareCamera@asCullManager@@UAEXPAVasCamera@@@Z": [
+  "camera"
+ ],
+ "?DeclareCullable@asCullManager@@UAEXPAVasCullable@@@Z": [
+  "newCullable"
+ ],
+ "?DeclareCullable2D@asCullManager@@UAEXPAVasCullable@@@Z": [
+  "newCullable"
+ ],
+ "?DeclareCullable2DFG@asCullManager@@UAEXPAVasCullable@@@Z": [
+  "newCullable"
+ ],
+ "?DeclareBitmap@asCullManager@@QAEXPAVasCullable@@PAVgfxBitmap@@@Z": [
+  "cullableBitmap"
+ ],
+ "?Init@asLineSparks@@QAEXHPAD@Z": [
+  null,
+  "textureName"
+ ],
+ "?Draw@asMeshCardInfo@@QAEXPBUasSparkPos@@H@Z": [
+  "sparks",
+  "sparkCount"
+ ],
+ "?Initialize@asNetwork@@QAEHHHH@Z": [
+  "maxPlayers",
+  null,
+  "gameVersion"
+ ],
+ "?InitializeLobby@asNetwork@@QAEHHH@Z": [
+  "maxPlayers",
+  null
+ ],
+ "?GetEnumPlayerData@asNetwork@@QAEHHPAXH@Z": [
+  "key",
+  "value",
+  "buf_len"
+ ],
+ "?GetEnumSession@asNetwork@@QAEPADH@Z": [
+  "sessionIndex"
+ ],
+ "?GetSessionData@asNetwork@@QAEXPAUNETSESSION_DESC@@@Z": [
+  "_Al"
+ ],
+ "?GetGameVersion@asNetwork@@QAEHH@Z": [
+  "sessionIndex"
+ ],
+ "?SetEnumSessionLock@asNetwork@@QAEXHH@Z": [
+  "sessionIndex",
+  null
+ ],
+ "?SetName@asNode@@QAEXPBD@Z": [
+  "name"
+ ],
+ "?ResChange@asNode@@UAEXHH@Z": [
+  "width",
+  "height"
+ ],
+ "?AddChild@asNode@@QAEHPAV1@@Z": [
+  "child"
+ ],
+ "?InsertChild@asNode@@QAEHHPAV1@@Z": [
+  "index",
+  "child"
+ ],
+ "?RemoveChild@asNode@@QAEHH@Z": [
+  "index"
+ ],
+ "?GetChild@asNode@@QAEPAV1@H@Z": [
+  "index"
+ ],
+ "?SwitchTo@asNode@@QAEXH@Z": [
+  "index"
+ ],
+ "?RemoveChild@asNode@MM2@@QAEHH@Z": [
+  "index"
+ ],
+ "?isActive@asNode@MM2@@QBE_NXZ": [
+  "address"
+ ],
+ "?SetTexture@asParticles@@QAEXPAVgfxTexture@@@Z": [
+  "gfxTexture"
+ ],
+ "?SetTexture@asParticles@@QAEXPBD@Z": [
+  "textureName"
+ ],
+ "?Init@asRoot@@QAEX_N@Z": [
+  "nanSignal"
+ ],
+ "?Get@asSparkLut@@SAPAV1@PAD@Z": [
+  "entryName"
+ ],
+ "?Init@asSparkLut@@QAEXPAD@Z": [
+  "textureName"
+ ],
+ "?GetCDEndPosition@audCDObject@@QAEHPAU_cd_position_@@@Z": [
+  "_Right"
+ ],
+ "?GetTrackInfo@audCDObject@@QAE_NH@Z": [
+  "_First"
+ ],
+ "?SetVolume@audControl@@QAEXMH@Z": [
+  "result",
+  null
+ ],
+ "?Create@audFileSystem@@QAEPAV1@PAVaudManager@@@Z": [
+  "id"
+ ],
+ "?FileOpenRead@audFileSystem@@QAE_NPAD0_N@Z": [
+  "row",
+  "value",
+  null
+ ],
+ "?Create@audHead@@QAEPAV1@PAVaudManager@@@Z": [
+  "amount"
+ ],
+ "?SetHeadFacingDir@audHead@@QAEXPAU_audvector3_@@_N@Z": [
+  "vec",
+  null
+ ],
+ "?GetHeadVolumePanPitch@audHead@@QAE_NPAU_audvector3_@@0PAM11@Z": [
+  "timer",
+  "index",
+  null,
+  null,
+  null
+ ],
+ "?FindObjectAt@audList@@QAEPAXH@Z": [
+  "name"
+ ],
+ "?FindObject@audList@@QAEPAV1@PAX@Z": [
+  "pos"
+ ],
+ "?Destroy@audObject@@QAEXXZ": [
+  null,
+  null,
+  "room"
+ ],
+ "?CreateDuplicate@audObject@@QAEPAV1@PAV1@@Z": [
+  "perpCar"
+ ],
+ "?Update@audObject@@QAE_NH@Z": [
+  "flags"
+ ],
+ "?SetDefaultVolume@audObject@@QAEXM@Z": [
+  "room"
+ ],
+ "?BytesRemoved@audSoundBuffer@@QAE_NH@Z": [
+  "icon"
+ ],
+ "?SetIndexes@audSoundBuffer@@QAEXHH@Z": [
+  "angle",
+  null
+ ],
+ "?CreateNodeList@audSoundHeap@@QAEPAV1@PAV1@HH@Z": [
+  "angle",
+  null,
+  null
+ ],
+ "?ReserveBuffer@audSoundHeap@@QAEPAVaudSoundBuffer@@H@Z": [
+  "speed"
+ ],
+ "?ReleaseBuffer@audSoundHeap@@QAE_NPAVaudSoundBuffer@@@Z": [
+  "instance"
+ ],
+ "?SetTopOfBottomStack@audSoundHeap@@QAE_NPAX@Z": [
+  "num"
+ ],
+ "?SetMatrix@camAICS@@QAEXPAVMatrix34@@@Z": [
+  "arg0"
+ ],
+ "?FileIO@camAppCS@@UAEXAAVdatParser@@@Z": [
+  "renderer"
+ ],
+ "??_GcamAppCS@@UAEPAXI@Z": [
+  "renderer"
+ ],
+ "?FileIO@camBaseCS@@UAEXAAVdatParser@@@Z": [
+  "renderer"
+ ],
+ "?Init@camCarCS@@QAEXPAVvehCar@@PAD@Z": [
+  "arg0",
+  null
+ ],
+ "?FileIO@camPolarCS@@UAEXAAVdatParser@@@Z": [
+  "renderer"
+ ],
+ "?FileIO@camPostCS@@UAEXAAVdatParser@@@Z": [
+  "renderer"
+ ],
+ "?Front@camTrackCS@@AAEXM@Z": [
+  "renderer"
+ ],
+ "?FileIO@camTrackCS@@UAEXAAVdatParser@@@Z": [
+  "renderer"
+ ],
+ "?SetCam@camViewCS@MM2@@QAEXPAVcamCarCS@2@@Z": [
+  "cam"
+ ],
+ "?LoadBitmap@ccStatus@@QAEXPADHHH@Z": [
+  "name",
+  null,
+  null,
+  null
+ ],
+ "??_GccStatus@@UAEPAXI@Z": [
+  "getter"
+ ],
+ "?SetObjectDetail@cityLevel@@UAEXH@Z": [
+  "lod"
+ ],
+ "?DecompressPvs@cityLevel@@IAEXH@Z": [
+  "index"
+ ],
+ "?Draw@cityLevel@@UAEXABVgfxViewport@@I@Z": [
+  "p_open",
+  null
+ ],
+ "?InitFullProbe@cityLevel@@IAEXHH@Z": [
+  "arg0",
+  null
+ ],
+ "?FullProbe@cityLevel@@IAEHABVVector3@@@Z": [
+  "p_open"
+ ],
+ "?GetTouchedNeighborsR@cityLevel@@QAEHPAHHHABVVector4@@H@Z": [
+  "p_open",
+  null,
+  null,
+  null,
+  null
+ ],
+ "?GetVisitList@cityLevel@@UAEHPAHHABVVector3@@1HH@Z": [
+  "__formal",
+  null,
+  null,
+  null,
+  null,
+  null
+ ],
+ "?Load@cityPropulator@@QAE_NPBD00@Z": [
+  "p2",
+  "p3",
+  "p4"
+ ],
+ "?Propulate@cityPropulator@@QAEXHHHP6AXHPBDABVMatrix34@@@Z@Z": [
+  "a",
+  "b",
+  "rounding",
+  "rounding_corners"
+ ],
+ "??4crAnimFrame@@QAEABV0@ABV0@@Z": [
+  "speed"
+ ],
+ "?Copy@crAnimFrame@@AAEXABV1@@Z": [
+  "value"
+ ],
+ "?LoadBin@crAnimFrame@@QAEXPAVStream@@H@Z": [
+  "sound",
+  null
+ ],
+ "?Mirror@crAnimFrame@@QAEXPBVcrSkeletonData@@@Z": [
+  "viewport"
+ ],
+ "?Pose@crAnimFrame@@QAEXAAVcrSkeleton@@_N@Z": [
+  "lod",
+  null
+ ],
+ "?GetChanAnimation@crAnimation@@SAPAV1@PBD_N@Z": [
+  "entryName",
+  "num"
+ ],
+ "?SaveAnim@crAnimation@@QAE_NPBD@Z": [
+  "volume"
+ ],
+ "?Init@crArmData@@UAEXAAVcrSkeletonData@@D@Z": [
+  null,
+  null,
+  "name",
+  null
+ ],
+ "?Load@crBoneData@@QAE_NAAVdatTokenizer@@PAPAV1@AAH@Z": [
+  "instance",
+  null,
+  null
+ ],
+ "??_GcrKinematics@@UAEPAXI@Z": [
+  "vKey"
+ ],
+ "?Load@crSkeletonData@@QAE_NPBD@Z": [
+  "rhs"
+ ],
+ "?HowMany@crSkeletonData@@QBEHPBDD@Z": [
+  null,
+  null,
+  "rhs",
+  null
+ ],
+ "?Attach@crSkeleton@@QBEXQAVMatrix34@@@Z": [
+  "size"
+ ],
+ "?Attach@crSkeleton@MM2@@QAEXPAVMatrix44@2@@Z": [
+  null,
+  "a1a",
+  null
+ ],
+ "?Init@crSpineData@@UAEXAAVcrSkeletonData@@@Z": [
+  null,
+  null,
+  "cmd"
+ ],
+ "?SolveIK@crSpineData@@UBEXAAVcrSkeleton@@AAVcrIKGoal@@@Z": [
+  "ecx0",
+  null,
+  null,
+  null
+ ],
+ "?Init@datArgParser@@SAXHPAPAD@Z": [
+  "argc",
+  "argv"
+ ],
+ "?RestoreFromArchive@datArgParser@@SAXPAD@Z": [
+  "archiveString"
+ ],
+ "?SaveToArchive@datArgParser@@SAHPAD@Z": [
+  "label_id"
+ ],
+ "?ReplaceArg@datArgParser@@SAXPBDPAD@Z": [
+  "key",
+  "value"
+ ],
+ "?Exists@datArgParser@@SA_NPBD@Z": [
+  "key"
+ ],
+ "?Get@datArgParser@@SA_NPBDIAAH@Z": [
+  "argName",
+  "index",
+  "lpIntOut"
+ ],
+ "?Get@datArgParser@@SA_NPBDIAAM@Z": [
+  "entryName",
+  "index",
+  "lpFloatOut"
+ ],
+ "?Get@datArgParser@@SA_NPBDIPAPBD@Z": [
+  "entryName",
+  "index",
+  "lpStringOut"
+ ],
+ "?GetWordCount@datArgParser@@SAHPBD@Z": [
+  "key"
+ ],
+ "?GetDelimiter@datAsciiTokenizer@@UAEXPBD@Z": [
+  "expected"
+ ],
+ "?MatchInt@datAsciiTokenizer@@UAEHPBD@Z": [
+  "expected"
+ ],
+ "?MatchFloat@datAsciiTokenizer@@UAEMPBD@Z": [
+  "expected"
+ ],
+ "?MatchVector@datAsciiTokenizer@@UAEXPBDAAVVector3@@@Z": [
+  "expected",
+  null
+ ],
+ "?MatchVector@datAsciiTokenizer@@UAEXPBDAAVVector4@@@Z": [
+  "expected",
+  null
+ ],
+ "?FullPath@datAssetManager@@SAXPADHPBD1@Z": [
+  "buffer",
+  "bufferLength",
+  "path",
+  "ext"
+ ],
+ "?Create@datAssetManager@@SAPAVStream@@PBD0_N@Z": [
+  "label_id",
+  "xs"
+ ],
+ "?Create@datAssetManager@@SAPAVStream@@PBD00_N@Z": [
+  "directory",
+  "filename",
+  "extension",
+  null
+ ],
+ "?Exists@datAssetManager@@SA_NPBD0@Z": [
+  "path",
+  "extension"
+ ],
+ "?FileName@datAssetManager@@SAPBDPBD@Z": [
+  "label_id"
+ ],
+ "?BaseName@datAssetManager@@SAXPBDPADH@Z": [
+  "label_id",
+  "xs",
+  "ys"
+ ],
+ "?Init@datBaseTokenizer@@QAEXPBDPAVStream@@@Z": [
+  "name",
+  "stream"
+ ],
+ "?MatchToken@datBaseTokenizer@@QAEXPBD@Z": [
+  "expected"
+ ],
+ "?GetVector@datBinTokenizer@@UAEXAAVVector4@@@Z": [
+  "stream"
+ ],
+ "?Put@datBinTokenizer@@UAE_NPBDI@Z": [
+  "lpData",
+  null
+ ],
+ "?Put@datBinTokenizer@@UAE_NM@Z": [
+  "Data"
+ ],
+ "?Put@datBinTokenizer@@UAE_NABVVector4@@@Z": [
+  "lpData"
+ ],
+ "??0datCallback@@QAE@P6AXPAX@Z0@Z": [
+  null,
+  "parameter"
+ ],
+ "?Call@datCallback@@QAEXPAX@Z": [
+  "parameter"
+ ],
+ "?OpenLog@datOutput@@SA_NPBD@Z": [
+  "fileName"
+ ],
+ "?AddValue@datParser@@QAEXPBDPAMPAVdatCallback@@@Z": [
+  null,
+  null,
+  "callback"
+ ],
+ "?AddValue@datParser@@QAEXPBDPAHPAVdatCallback@@@Z": [
+  null,
+  "pData",
+  "callback"
+ ],
+ "??0datParser@@QAE@PBD@Z": [
+  "filename"
+ ],
+ "?AddParser@datParser@@QAEPAV1@PBDPAVdatCallback@@@Z": [
+  "name",
+  "callback"
+ ],
+ "?Load@datParser@@QAE_NPBD0@Z": [
+  "path",
+  "extension"
+ ],
+ "?Load@datParser@@QAE_NPBD00@Z": [
+  "prefix",
+  "path",
+  "ext"
+ ],
+ "?Save@datParser@@QAE_NPAVStream@@PBD_N@Z": [
+  "stream",
+  "filename",
+  null
+ ],
+ "?Load@datParser@MM2@@QAE_NPBD00@Z": [
+  "directory"
+ ],
+ "?LookupAddress@datStack@@SAXPADH@Z": [
+  "buffer",
+  "address"
+ ],
+ "?DoTraceback@datStack@@SAXHPAHPAU_iobuf@@PBD@Z": [
+  "maxDepth",
+  "ebp_",
+  "fileOut",
+  "separator"
+ ],
+ "?Traceback@datStack@@SAXHPAU_iobuf@@@Z": [
+  "maxDepth",
+  "fileOut"
+ ],
+ "?LogTraceback@datStack@@SAHPAHH@Z": [
+  "label_id",
+  "getter"
+ ],
+ "?ExceptionFilter@datStack@@SAHPAU_EXCEPTION_POINTERS@@@Z": [
+  "exception"
+ ],
+ "?AddBangerDataEntry@dgBangerDataManager@@QAEHPBD0@Z": [
+  "name",
+  null
+ ],
+ "?Draw@dgBangerInstance@@UAEXH@Z": [
+  "lod"
+ ],
+ "?GetVariant@dgBangerInstance@MM2@@QBEHXZ": [
+  "vehicle",
+  null
+ ],
+ "?InitGlow@dgBangerManager@@QAEXPBD@Z": [
+  "textureName"
+ ],
+ "?Impact@dgGlassInstance@@UAEXPAVlvlInstance@@PAVVector3@@@Z": [
+  "arg0",
+  "arg4"
+ ],
+ "?Draw@dgGlassInstance@@UAEXH@Z": [
+  "lod"
+ ],
+ "?SetMatrix@dgHitBangerInstance@@UAEXABVMatrix34@@@Z": [
+  "new_capacity"
+ ],
+ "?CalcImpact@dgImpact@@SAHPAV1@MM@Z": [
+  null,
+  null,
+  "arg8"
+ ],
+ "?UpdateDamping@dgLink@@QAEXXZ": [
+  "ecx0"
+ ],
+ "?Load@dgPathSet@@QAE_NPBD0@Z": [
+  "buffer",
+  "path"
+ ],
+ "??0dgPath@@QAE@PBD@Z": [
+  "b"
+ ],
+ "?SetName@dgPath@@QAEXPBD@Z": [
+  "b"
+ ],
+ "?Load@dgPath@@SAPAV1@PAVStream@@@Z": [
+  "b"
+ ],
+ "??_GdgPhysEntity@@UAEPAXI@Z": [
+  "rect"
+ ],
+ "?DeclareMover@dgPhysManager@@QAEXPAVlvlInstance@@HH@Z": [
+  "info",
+  "glyph_index",
+  "pvertices"
+ ],
+ "?CollideProbe@dgPhysManager@@QAE_NAAVlvlSegment@@PAVlvlIntersection@@PAVlvlInstance@@@Z": [
+  null,
+  "arg4",
+  "arg8"
+ ],
+ "?CollideInstances@dgPhysManager@@QAE_NPAVlvlInstance@@0@Z": [
+  null,
+  "info"
+ ],
+ "?FileIO@dgRagdollData@@QAEXAAVdatParser@@@Z": [
+  "_Ptr"
+ ],
+ "?Init@dgRagdoll@@QAEXABVdgRagdollData@@AAVcrKinematics@@PAVMatrix34@@@Z": [
+  "arg0",
+  null,
+  null
+ ],
+ "?ComputeInvMassMatrix@dgTrailerJoint@@UBEXPAVphInertialCS@@AAVMatrix34@@ABVVector3@@@Z": [
+  "ecx0",
+  "edx0",
+  "player",
+  null,
+  null
+ ],
+ "?ComputeInvMassMatrix@dgTrailerJoint@@QAEXPAVphInertialCS@@0AAVMatrix34@@ABVVector3@@@Z": [
+  "ecx0",
+  "edx0",
+  "arg0",
+  "height",
+  null,
+  null
+ ],
+ "?Save@dgTrailerJoint@@UAE_NXZ": [
+  "result",
+  "name"
+ ],
+ "?InitBreakables@dgUnhitBangerInstance@@QAEXPBDPAVdgBangerData@@@Z": [
+  "new_capacity",
+  null
+ ],
+ "??0eqEventQ@@QAE@H@Z": [
+  "x"
+ ],
+ "?Keyboard@eqEventQ@@UAEXPAXHHHH@Z": [
+  "x",
+  null,
+  "y",
+  null,
+  "offset"
+ ],
+ "?Queue@eqEventQ@@AAEXAATeqEvent@@@Z": [
+  "x"
+ ],
+ "?Pop@eqEventQ@@QAEHPATeqEvent@@@Z": [
+  "id"
+ ],
+ "?Draw@fxShard@@QAEXPAVmodShader@@@Z": [
+  "c"
+ ],
+ "?Init@fxTexelDamage@@QAE_NPAVmodStatic@@PAVmodShader@@H@Z": [
+  "model",
+  "shaders",
+  "shaderCount"
+ ],
+ "?ApplyDamage@fxTexelDamage@@QAEXABVVector3@@M@Z": [
+  "damagePosition",
+  "maxDist"
+ ],
+ "??0gfxBitmap@@AAE@HH@Z": [
+  "width",
+  "height"
+ ],
+ "?SetName@gfxBitmap@@QAEXPBD@Z": [
+  "name"
+ ],
+ "?Create@gfxBitmap@@SAPAV1@PAVgfxImage@@_N@Z": [
+  "image",
+  "unused"
+ ],
+ "?Create@gfxBitmap@@SAPAV1@HH_N@Z": [
+  "width",
+  "height",
+  null
+ ],
+ "?Clear@gfxBitmap@@QAEXI@Z": [
+  "fillColor"
+ ],
+ "?Load@gfxBitmap@@QAE_NPAVgfxImage@@@Z": [
+  "image"
+ ],
+ "?GetFont@gfxImage@@SAPAV1@AAH0@Z": [
+  null,
+  "width",
+  "height"
+ ],
+ "?GenerateMipmaps@gfxImage@@QAEXXZ": [
+  "gfxImage"
+ ],
+ "?Scale@gfxImage@@QAEXHH@Z": [
+  "width",
+  "height"
+ ],
+ "?Reformat@gfxImage@@QAEXW4gfxImageFormat@1@0@Z": [
+  "newType",
+  null
+ ],
+ "?GetDominantColor@gfxImage@@QBEIXZ": [
+  "gfxImage"
+ ],
+ "?GetPosition@gfxPacket@@QBEXAAVVector3@@H@Z": [
+  null,
+  "index"
+ ],
+ "?SetPosition@gfxPacket@@QBEXABVVector3@@H@Z": [
+  "new_capacity",
+  null
+ ],
+ "?GetNormal@gfxPacket@@QBEXAAVVector3@@H@Z": [
+  "new_capacity",
+  null
+ ],
+ "?SetNormal@gfxPacket@@QBEXABVVector3@@H@Z": [
+  "normal",
+  "index"
+ ],
+ "?GetTri@gfxPacket@@QBEXQAHH@Z": [
+  "out",
+  "index"
+ ],
+ "?SetPacking@gfxPacket@@SAXMEEEME@Z": [
+  "new_size",
+  null,
+  null,
+  null,
+  null,
+  null
+ ],
+ "?ReserveVertexBuffer@gfxPacket@@SAXII@Z": [
+  "arg_0",
+  "arg_4"
+ ],
+ "?gfxWindowProc@gfxPipeline@@CGJPAUHWND__@@IIJ@Z": [
+  "hWnd",
+  "message",
+  "wParam",
+  "lParam"
+ ],
+ "?gfxWindowCreate@gfxPipeline@@CAXPBD@Z": [
+  "lpWindowName"
+ ],
+ "?SetWindow@gfxPipeline@@SAX_NHH@Z": [
+  "windowed",
+  "screenX",
+  "screenY"
+ ],
+ "?SetRes@gfxPipeline@@SAXHHHH_N@Z": [
+  "width",
+  "height",
+  "cdepth",
+  "zdepth",
+  "detectArgs"
+ ],
+ "?SetTitle@gfxPipeline@@SAXPBD@Z": [
+  "lpString"
+ ],
+ "?gfxEnumTexs@gfxPipeline@@CGJPAU_DDPIXELFORMAT@@PAX@Z": [
+  "lpDDPixFmt",
+  "lpContext"
+ ],
+ "?EnumDDAdapters@gfxPipeline@@SAXHP6GHPAU_GUID@@PADPADPAX@Z3@Z": [
+  "hModule",
+  "callback",
+  "context"
+ ],
+ "?Draw@gfxPipeline@@SAXW4gfxDrawMode@@IHPAX@Z": [
+  "dm",
+  "count",
+  "vflags",
+  "verts"
+ ],
+ "?Readback@gfxPipeline@@SAXPAVgfxImage@@HHHH@Z": [
+  "lpImage"
+ ],
+ "?Clear@gfxPipeline@@SAXHIMI@Z": [
+  "dwFlags",
+  "dwColor",
+  "dvZ",
+  "dwStencil"
+ ],
+ "?ClearRect@gfxPipeline@@SAXHHHHI@Z": [
+  "x",
+  "y",
+  "w",
+  "h",
+  "fillColor"
+ ],
+ "?SetRenderTarget@gfxPipeline@@SA_NPBVgfxTexture@@@Z": [
+  "gfxTexture"
+ ],
+ "?CreateVertexBuffer@gfxPipeline@@SAPAUgfxVertexBuffer@@II_N@Z": [
+  "arg_0",
+  "height",
+  null
+ ],
+ "?DoUnlockVertexBuffer@gfxPipeline@@CAXPAUgfxVertexBuffer@@@Z": [
+  "values"
+ ],
+ "?DrawVB@gfxPipeline@@SAXW4gfxDrawMode@@IIPAUgfxVertexBuffer@@@Z": [
+  null,
+  null,
+  null,
+  "vb"
+ ],
+ "?DrawIdxVB@gfxPipeline@@SAXW4gfxDrawMode@@IIPAUgfxVertexBuffer@@IPAG@Z": [
+  null,
+  "startOffset",
+  "vcount",
+  null,
+  "ic",
+  "idx"
+ ],
+ "?StartFade@gfxPipeline@@SAXIM@Z": [
+  "fade_color",
+  "speed"
+ ],
+ "?SetFade@gfxPipeline@@SAXI@Z": [
+  "idx"
+ ],
+ "?CopyClippedBitmap@gfxPipeline@@SA_NHHPAVgfxBitmap@@HHHH_N@Z": [
+  "idx",
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null
+ ],
+ "?ForceSetViewport@gfxPipeline@@CAXPAVgfxViewport@@@Z": [
+  "viewport"
+ ],
+ "?Render@gfxPipeline@@SAXW4gfxDrawMode@@IIPAX@Z": [
+  "draw_mode",
+  "vert_count",
+  "vert_format",
+  "verts"
+ ],
+ "?LightEnable@gfxRenderState@@QAEXH_N@Z": [
+  "idx",
+  "flag"
+ ],
+ "?SetLight@gfxRenderState@@QAEXHPBUgfxLight@@@Z": [
+  null,
+  "light"
+ ],
+ "?GetLight@gfxRenderState@@QAEXHPAUgfxLight@@@Z": [
+  null,
+  "light"
+ ],
+ "?SetTexSource@gfxRenderState@@QAEXHH@Z": [
+  "pStm",
+  null
+ ],
+ "?SetTexMatrix@gfxRenderState@@QAEXHABVMatrix44@@@Z": [
+  "stateType",
+  null
+ ],
+ "?SetCamera@gfxRenderState@@SAXABVMatrix34@@@Z": [
+  "matrix"
+ ],
+ "?SetCamera@gfxRenderState@@SAXABVMatrix44@@@Z": [
+  "cameraMatrix"
+ ],
+ "?DoFlush@gfxRenderState@@QAEXPAVgfxRenderStateData@@@Z": [
+  "prevState"
+ ],
+ "?Lease@gfxTextureCacheEntry@@QAEXPAVgfxTexture@@@Z": [
+  "texture"
+ ],
+ "?Init@gfxTextureCachePool@@QAEXPAVgfxTexture@@@Z": [
+  "gfxTexture"
+ ],
+ "?FindEntry@gfxTextureCachePool@@QAEXPAVgfxTexture@@@Z": [
+  "texture"
+ ],
+ "?UpdateAll@gfxTextureMovie@@SAXM@Z": [
+  "delta"
+ ],
+ "?Update@gfxTextureMovie@@QAEXM@Z": [
+  "elapsed"
+ ],
+ "?AddClient@gfxTextureMovie@@QAEXPAPAVgfxTexture@@@Z": [
+  "gfxTexture"
+ ],
+ "?Create@gfxTexture@@SAPAV1@PAVgfxImage@@_N@Z": [
+  "image",
+  "mipMap"
+ ],
+ "?Load@gfxTexture@@QAEXPAVgfxImage@@@Z": [
+  "image"
+ ],
+ "?GetDefaultMIPMapEnv@gfxTexture@@SAXAAIAAM@Z": [
+  "unk1",
+  "unk2"
+ ],
+ "?EnableCache@gfxTexture@@SAX_N@Z": [
+  "cacheEnabled"
+ ],
+ "?CreateRenderTarget@gfxTexture@@SAPAV1@HHII@Z": [
+  "width",
+  "height"
+ ],
+ "?CreateCubeMap@gfxTexture@@SAPAV1@HHQAPAV1@@Z": [
+  "width",
+  "height",
+  "textureArray"
+ ],
+ "?SetTexEnv@gfxTexture@@QAEXI@Z": [
+  "texEnv"
+ ],
+ "?SetName@gfxTexture@@QAEXPBD@Z": [
+  "newName"
+ ],
+ "??0gfxVertexBuffer@@QAE@II@Z": [
+  null,
+  "fvfFlags"
+ ],
+ "?SetWindow@gfxViewport@@QAEXHHHHMM@Z": [
+  "x",
+  "y",
+  "w",
+  "h",
+  null,
+  null
+ ],
+ "?Perspective@gfxViewport@@QAEXMMMM@Z": [
+  "fov",
+  "aspect",
+  null,
+  null
+ ],
+ "?ComputeVFOV@gfxViewport@@QBEMM@Z": [
+  "height"
+ ],
+ "?DoPerspective@gfxViewport@@SAXPAV1@@Z": [
+  "matrix"
+ ],
+ "?GetBridges@gizBridgeMgr@@QAEPAVgizBridge@@H@Z": [
+  "index"
+ ],
+ "?Cull@gizBridge@@QAEXH@Z": [
+  "cullMode"
+ ],
+ "?Init@gizFerry@@QAEXPADPAVdgPath@@@Z": [
+  "new_capacity",
+  null
+ ],
+ "?Cull@gizFerry@@QAEXH@Z": [
+  "lod"
+ ],
+ "?Solve@gizPathspline@@IAEXAAVVector3@@0M@Z": [
+  "name",
+  null,
+  null
+ ],
+ "?ComputePath@gizPathspline@@IAEXHHH@Z": [
+  null,
+  "name",
+  null
+ ],
+ "??_EgizSailboat@@QAEPAXI@Z": [
+  "maxSounds"
+ ],
+ "?Reset@gizTrainCar@@QAEXH@Z": [
+  "balance"
+ ],
+ "?Init@gizTrainCar@@QAEXPADPAVdgPath@@M@Z": [
+  "value",
+  null,
+  null
+ ],
+ "??_EgizTrain@@QAEPAXI@Z": [
+  "carsim"
+ ],
+ "?Peek@ioEventQueue@@SA_NAAUioEvent@@AAH@Z": [
+  "event",
+  "index"
+ ],
+ "?Queue@ioEventQueue@@SAXW4ioEventType@ioEvent@@HHH@Z": [
+  "type",
+  "x",
+  "y",
+  "modifiers"
+ ],
+ "?Command@ioEventQueue@@SAXPAX@Z": [
+  "modifiers"
+ ],
+ "?EnumDeviceProc@ioJoystick@@CGHPBUDIDEVICEINSTANCEA@@PAX@Z": [
+  "diDevInstance",
+  "lpContext"
+ ],
+ "??0ltLensFlare@@QAE@H@Z": [
+  "_Src"
+ ],
+ "?SetGfxLight@ltLight@@QAE_NAAUgfxLight@@ABVVector3@@@Z": [
+  "This",
+  null
+ ],
+ "?ComputeIntensity@ltLight@@QAEMABVVector3@@M@Z": [
+  "This",
+  null
+ ],
+ "?DrawGlow@ltLight@MM2@@QAEXABVVector3@2@@Z": [
+  "position",
+  "geomId"
+ ],
+ "??0ltProjection@@QAE@H@Z": [
+  "size"
+ ],
+ "?DrawMultiStageEnd@ltProjection@@QAEXH@Z": [
+  "p"
+ ],
+ "?GetNormal@lvlAiMap@@SA?AVVector3@@H@Z": [
+  "a",
+  "c"
+ ],
+ "?GetVertex@lvlAiMap@@SA?AVVector3@@HHH@Z": [
+  "fb_scale",
+  null,
+  "scale",
+  null
+ ],
+ "?GetVertexMulti@lvlAiMap@@SA?AVVector3@@HHH@Z": [
+  "text",
+  "text_end",
+  null,
+  null
+ ],
+ "?GetVertexSingle@lvlAiMap@@SA?AVVector3@@HHH@Z": [
+  "ranges",
+  null,
+  null,
+  null
+ ],
+ "?GetStopLightPos@lvlAiMap@@SAXHAAVVector3@@0_N@Z": [
+  "font_cfg",
+  "rhs",
+  null,
+  null
+ ],
+ "?GetStopLightName@lvlAiMap@@SAPADH@Z": [
+  "font_cfg_template"
+ ],
+ "?GetNumRoads@lvlAiMap@MM2@@SAHXZ": [
+  "num"
+ ],
+ "?LoadBinary@lvlAiRoad@@QAEXPAVStream@@@Z": [
+  "a"
+ ],
+ "?IsVisible@lvlFixedMatrix@@UAEHABVgfxViewport@@@Z": [
+  "viewport"
+ ],
+ "?IsVisible@lvlFixedRotY@@UAEHABVgfxViewport@@@Z": [
+  "viewport"
+ ],
+ "??2lvlInstance@@SAPAXI@Z": [
+  "size"
+ ],
+ "?GetGeomSet@lvlInstance@@KAHPBD0H@Z": [
+  null,
+  "arg4",
+  "flags"
+ ],
+ "?BeginGeom@lvlInstance@@QAE_NPBD0H@Z": [
+  "name",
+  null,
+  "flags"
+ ],
+ "?AddGeom@lvlInstance@@QAEHPBD0H@Z": [
+  null,
+  null,
+  "flags"
+ ],
+ "?InitGhostBound@lvlInstance@@QAE_NPAVphBound@@PBVVector3@@H@Z": [
+  "bound",
+  null,
+  null
+ ],
+ "?DrawPhysics@lvlInstance@@UAEXABVVector3@@@Z": [
+  "atlas"
+ ],
+ "?IsVisible@lvlInstance@@UAEHABVgfxViewport@@@Z": [
+  "viewport"
+ ],
+ "?RegisterDrawable@lvlLevel@@QAEXHVdatCallback@@@Z": [
+  "category",
+  "callback"
+ ],
+ "?CallCallbacks@lvlLevel@@IAEXH@Z": [
+  "type"
+ ],
+ "?LoadInstances@lvlLevel@@UAE_NPBD0@Z": [
+  "spc",
+  "info"
+ ],
+ "?Save@lvlMaterial@@UAEXAAVdatAsciiTokenizer@@@Z": [
+  "info"
+ ],
+ "?Copy@lvlMaterial@@QAEXABV1@@Z": [
+  "font"
+ ],
+ "?LoadBinary@lvlSDL@@QAE_NPBD@Z": [
+  "arg_0"
+ ],
+ "?GetVertex@lvlSDL@@UBEABVVector3@@H@Z": [
+  "index"
+ ],
+ "?Init@lvlSky@@QAEXPBDMMMH@Z": [
+  null,
+  "arg4",
+  null,
+  null,
+  null
+ ],
+ "?Update@lvlTrackManager@@QAEXABVVector3@@0PAVgfxTexture@@@Z": [
+  "info",
+  "unicode_codepoint",
+  "offset"
+ ],
+ "??_EmcHookman@@QAEPAXI@Z": [
+  "getter"
+ ],
+ "?Init@mcHookman@@QAEXHPAD@Z": [
+  "DrawList",
+  "arg4"
+ ],
+ "?FindHeap@memMemoryAllocator@@SAPAV1@PAX@Z": [
+  "lpAddress"
+ ],
+ "?Init@memMemoryAllocator@@QAEXPAXI_N1@Z": [
+  null,
+  "allocSize",
+  null,
+  "checkAlloc"
+ ],
+ "?Allocate@memMemoryAllocator@@QAEPAXI_N@Z": [
+  "size",
+  "is_array"
+ ],
+ "?Free@memMemoryAllocator@@QAEXPAX_N@Z": [
+  "lpAddress",
+  "isArray"
+ ],
+ "?Unlink@memMemoryAllocator@@AAEXPAUnode@1@@Z": [
+  "n"
+ ],
+ "?Reallocate@memMemoryAllocator@@QAEPAXPAXI@Z": [
+  "ptr",
+  "length"
+ ],
+ "??0mmAmbientAudio@@QAE@PAVmmPlayer@@@Z": [
+  "node"
+ ],
+ "?Init@mmBillInstance@@UAEXPADVVector3@@@Z": [
+  "sz",
+  null,
+  null,
+  null
+ ],
+ "?Draw@mmBillInstance@@UAEXH@Z": [
+  "sz"
+ ],
+ "?SetSubPath@mmCCSpeech@@QAE_NPAD@Z": [
+  "renderer"
+ ],
+ "?LoadGroup@mmCCSpeech@@QAE_NPADH@Z": [
+  "renderer",
+  "DrawList"
+ ],
+ "?LoadCheckPointIndexInfo@mmCCSpeech@@QAE_NPAD@Z": [
+  "renderer"
+ ],
+ "?SetReadState@mmCCSpeech@@AAE_NPADMPAH@Z": [
+  "renderer",
+  "DrawList",
+  "cull_rect"
+ ],
+ "?Init@mmCDPlayer@@QAEXPAVmmHUD@@@Z": [
+  "node"
+ ],
+ "?Play@mmCNRSpeech@@QAEXPAD@Z": [
+  "_First"
+ ],
+ "?SetReadState@mmCNRSpeech@@AAE_NPAD@Z": [
+  "_Count"
+ ],
+ "?Init@mmCRHUD@@QAEXPAVMatrix34@@PADW4mmCRGameClass@@@Z": [
+  "shared_data",
+  null,
+  "x"
+ ],
+ "?AddPlayer@mmCRHUD@@QAEXPBDKHI@Z": [
+  "shared_font_atlas",
+  "arg4",
+  null,
+  null
+ ],
+ "?SetName@mmCRHUD@@QAEXPADH@Z": [
+  null,
+  "arg4"
+ ],
+ "?SetFGVals@mmCarRoadFF@@QAEXMMM@Z": [
+  "ctx",
+  "window",
+  null
+ ],
+ "??_GmmCarRoadFF@@UAEPAXI@Z": [
+  "ctx"
+ ],
+ "?Init@mmCheckpointInstance@@UAEXPADVVector3@@@Z": [
+  "sz",
+  null,
+  null,
+  null
+ ],
+ "?Draw@mmCheckpointInstance@@UAEXH@Z": [
+  "sz"
+ ],
+ "?Load@mmCityInfo@@QAEHPAD@Z": [
+  "getter"
+ ],
+ "?Init@mmCollideFF@@UAEHPAUIDirectInputDevice2A@@@Z": [
+  "getter"
+ ],
+ "?SetValues@mmCollideFF@@UAEHMM@Z": [
+  "getter",
+  "transformer"
+ ],
+ "?Assign@mmCollideFF@@QAEHJJ@Z": [
+  "getter",
+  "transformer"
+ ],
+ "?Init@mmCollideHUD@@QAEXHPAH0H@Z": [
+  null,
+  null,
+  "outHeight",
+  "outWidth"
+ ],
+ "?SetPosition@mmCompCity@@UAEXPAVmmTextNode@@HM@Z": [
+  "arg0",
+  null,
+  null
+ ],
+ "?Highlight@mmCompCity@@UAEXPAVmmTextNode@@H@Z": [
+  null,
+  "index"
+ ],
+ "?Box@mmCompCity@@UAEXHPAVmmTextNode@@H@Z": [
+  null,
+  null,
+  "index"
+ ],
+ "?LoadBitmap@mmCompDRecord@@QAEXPAD@Z": [
+  "name"
+ ],
+ "?SetPosition@mmCompDRecord@@UAEXPAVmmTextNode@@HM@Z": [
+  "arg0",
+  null,
+  null
+ ],
+ "?LoadBitmap@mmCompRaceRecord@@QAEXPAD@Z": [
+  "name"
+ ],
+ "?SetPosition@mmCompRaceRecord@@UAEXPAVmmTextNode@@HM@Z": [
+  "arg0",
+  null,
+  null
+ ],
+ "?SetPosition@mmCompReplay@@UAEXPAVmmTextNode@@HM@Z": [
+  "arg0",
+  null,
+  null
+ ],
+ "?Highlight@mmCompReplay@@UAEXPAVmmTextNode@@H@Z": [
+  null,
+  "index"
+ ],
+ "?Box@mmCompReplay@@UAEXHPAVmmTextNode@@H@Z": [
+  null,
+  null,
+  "index"
+ ],
+ "??_GmmCompReplay@@UAEPAXI@Z": [
+  "segment"
+ ],
+ "?LoadBitmap@mmCompRoster@@QAEXPAD@Z": [
+  "name"
+ ],
+ "?LoadTeamBitmap@mmCompRoster@@QAEXPAD@Z": [
+  "name"
+ ],
+ "?SetReady@mmCompRoster@@QAEXH@Z": [
+  "readyStatus"
+ ],
+ "?SetPosition@mmCompRoster@@UAEXPAVmmTextNode@@HM@Z": [
+  "arg0",
+  null,
+  null
+ ],
+ "?Init@mmDashView@@QAEXPADPAVmmPlayer@@@Z": [
+  "node",
+  "window"
+ ],
+ "?LoadPkg@mmDashView@@AAEXPAD@Z": [
+  "shaderSets"
+ ],
+ "?LoadPivotInfo@mmDashView@@AAEXPAD@Z": [
+  "node"
+ ],
+ "?InitPrimarySoundBuffer@mmDirSnd@@UAEHKEPAD@Z": [
+  "sampleRate",
+  "allowStero",
+  "deviceName"
+ ],
+ "?InitString@mmDropDown@@QAEXVstring@@@Z": [
+  "transformer",
+  "DrawList"
+ ],
+ "?GetHit@mmDropDown@@QAEHMM@Z": [
+  "transformer",
+  "DrawList"
+ ],
+ "?Init@mmFrictionFF@@UAEHPAUIDirectInputDevice2A@@@Z": [
+  "getter"
+ ],
+ "?SetValues@mmFrictionFF@@UAEHMM@Z": [
+  "getter",
+  "transformer"
+ ],
+ "?Assign@mmFrictionFF@@QAEHJ@Z": [
+  "getter"
+ ],
+ "?SystemMessageCB@mmGameMulti@@QAEXPAX0@Z": [
+  null,
+  "arg4"
+ ],
+ "?GameMessageCB@mmGameMulti@@QAEXPAX0@Z": [
+  null,
+  "arg4"
+ ],
+ "?GetNetObject@mmGameMulti@@QAEPAVmmNetObject@@KH@Z": [
+  "i",
+  null
+ ],
+ "?SendTimeMsg@mmGameMulti@@QAEXK@Z": [
+  "idx"
+ ],
+ "?SendLobbyResults@mmGameMulti@@QAEXHIM@Z": [
+  null,
+  null,
+  "time"
+ ],
+ "?SendFinishAck@mmGameMulti@@IAEXKMH@Z": [
+  "r",
+  null,
+  null
+ ],
+ "?LoadAmbientSFX@mmGameMusicData@@AAE_NPAD@Z": [
+  "pos_old"
+ ],
+ "?LoadAmbientSFXSegments@mmGameMusicData@@AAE_NPAVStream@@F@Z": [
+  "stream",
+  null
+ ],
+ "?LoadAmbientSFX@mmGameMusicData@MM2@@QAE_NPBD@Z": [
+  "name",
+  null
+ ],
+ "?BeDone@mmGame@@UAEXH@Z": [
+  "button"
+ ],
+ "?CalculateRaceScore@mmGame@@IAEHHH@Z": [
+  "button",
+  null
+ ],
+ "?FindGroundPos@mmGame@@QAEXAAVVector3@@0@Z": [
+  null,
+  "arg4"
+ ],
+ "??_GmmGame@@UAEPAXI@Z": [
+  "button"
+ ],
+ "?Init@mmGearIndicator@@QAEXPAVmmExternalView@@PAVmmPlayer@@@Z": [
+  "sz",
+  null
+ ],
+ "?PostChatMessage@mmHUD@@QAEXPAD@Z": [
+  "c"
+ ],
+ "?ResChange@mmHUD@@UAEXHH@Z": [
+  "newWidth",
+  "newHeight"
+ ],
+ "?Init@mmHUD@@QAEXPADPAVmmPlayer@@H@Z": [
+  "window",
+  "scale",
+  null
+ ],
+ "?Disable@mmHUD@@QAEXH@Z": [
+  "v"
+ ],
+ "?SetMessage@mmHUD@@QAEXPAULocString@@MH@Z": [
+  null,
+  "window",
+  null
+ ],
+ "?GetTime@mmHUD@@QAEXPADM@Z": [
+  null,
+  "window"
+ ],
+ "?Init@mmHudMap@@QAEXPAVMatrix34@@PAVmmGame@@PAD@Z": [
+  "mouse_platform_pos",
+  "viewport",
+  null
+ ],
+ "?SetMapMode@mmHudMap@@IAEXH@Z": [
+  "ctx"
+ ],
+ "?DrawOpponents@mmHudMap@@AAEXXZ": [
+  "ctx",
+  "window"
+ ],
+ "?GetIconScale@mmHudMap@MM2@@QAEMXZ": [
+  "lod"
+ ],
+ "??_EmmIODev@@UAEPAXI@Z": [
+  "getter1"
+ ],
+ "??8mmIODev@@QAEHPATeqEvent@@@Z": [
+  "getter1"
+ ],
+ "?GetDescription@mmIODev@@QAEXPAD@Z": [
+  "getter1"
+ ],
+ "?GetComponentType@mmIODev@@QAEHHH@Z": [
+  "getter1",
+  "getter2"
+ ],
+ "?Print@mmIODev@@QAEXH@Z": [
+  "getter1"
+ ],
+ "?Write@mmIODev@@QAEHPAVStream@@@Z": [
+  "getter1"
+ ],
+ "?WriteBinary@mmIODev@@QAEHPAVStream@@@Z": [
+  "stream"
+ ],
+ "??_GmmIODev@@UAEPAXI@Z": [
+  "getter1"
+ ],
+ "??_EmmIO@@QAEPAXI@Z": [
+  "getter1"
+ ],
+ "?Init@mmIO@@QAEXPADHJ@Z": [
+  "getter1",
+  "getter2",
+  "transformer"
+ ],
+ "?Write@mmIO@@QAEHPAVStream@@@Z": [
+  "getter1"
+ ],
+ "?Read@mmIO@@QAEHPAVStream@@@Z": [
+  "getter1"
+ ],
+ "?CompareComponent@mmIO@@QAEHH@Z": [
+  "getter1"
+ ],
+ "?RegisterOpponents@mmIcons@@QAEXPAUOppIconInfo@@HPAX@Z": [
+  null,
+  null,
+  "h"
+ ],
+ "??_GmmInfoBase@@UAEPAXI@Z": [
+  "ptr"
+ ],
+ "?Load@mmInfoBase@@QAEHPAD@Z": [
+  "getter"
+ ],
+ "?SetDefaultConfig@mmInput@@QAEXH@Z": [
+  "getter"
+ ],
+ "?Init@mmInput@@QAEXH@Z": [
+  "getter"
+ ],
+ "?ScanState@mmInput@@AAE_JPAVmmIO@@@Z": [
+  "xs"
+ ],
+ "?ScanForEvent@mmInput@@AAE_JPATeqEvent@@@Z": [
+  "xs"
+ ],
+ "?PollContinuous@mmInput@@AAEXPAVmmIO@@@Z": [
+  "xs"
+ ],
+ "?FilterDiscreteSteering@mmInput@@AAEMM@Z": [
+  "xs"
+ ],
+ "?GetSteering@mmInput@@QAEMP6AMM@Z@Z": [
+  "ys"
+ ],
+ "?SetForceFeedbackScale@mmInput@@QAEXM@Z": [
+  "ys"
+ ],
+ "?SetRoadForceScale@mmInput@@QAEXM@Z": [
+  "ys"
+ ],
+ "?FFPlay@mmInput@@QAEHH@Z": [
+  "ys"
+ ],
+ "?PopEvent@mmInput@@QAEHPAH@Z": [
+  "getter1"
+ ],
+ "?LoadConfig@mmInput@@QAEHPAVStream@@@Z": [
+  "getter1"
+ ],
+ "?BinaryLoadConfig@mmInput@@QAEHPAVStream@@@Z": [
+  "getter1"
+ ],
+ "?SaveConfig@mmInput@@QAEHPAVStream@@@Z": [
+  "getter1"
+ ],
+ "?SaveCodeConfig@mmInput@@QAEHPAVStream@@@Z": [
+  "getter1"
+ ],
+ "?ShowMain@mmInterface@@QAEXH@Z": [
+  "firstLoad"
+ ],
+ "?GetRaceString@mmInterface@@AAEXHPAD@Z": [
+  "arg0",
+  null
+ ],
+ "?GetRaceName@mmInterface@@AAEPADW4dgGameMode@@HPAD@Z": [
+  "arg0",
+  null,
+  null
+ ],
+ "?GetHostPlayerData@mmInterface@@AAEHAAUmmPlayerInfo@@@Z": [
+  "indent_w"
+ ],
+ "?GetSessionData@mmInterface@@AAEXUNETSESSION_DESC@@@Z": [
+  "str_id"
+ ],
+ "?SetCapture@mmJoyMan@@QAEXH@Z": [
+  "getter1"
+ ],
+ "?GetOneButton@mmJoyMan@@QAEHJ@Z": [
+  "getter1"
+ ],
+ "?ToggleEnabled@mmJoyMan@@QAEHH@Z": [
+  "getter1"
+ ],
+ "?FFStop@mmJoyMan@@QAEHH@Z": [
+  "getter1"
+ ],
+ "?GetAxis@mmJoystick@@QAEMH@Z": [
+  "getter"
+ ],
+ "?GetFFEffect@mmJoystick@@QAEPAVmmEffectFF@@H@Z": [
+  "getter"
+ ],
+ "?Init@mmLinearGauge@@QAEXPADPAM1HPAVmmExternalView@@@Z": [
+  "capacity",
+  null,
+  null,
+  null,
+  null
+ ],
+ "?InitOverlay@mmLinearGauge@@QAEXPAD@Z": [
+  "name"
+ ],
+ "?SystemMessage@mmMultiBlitz@@UAEXPAUNETSYS_MSG@@@Z": [
+  "window"
+ ],
+ "?GameMessage@mmMultiBlitz@@UAEXPAUNET_RCXHEAD@@@Z": [
+  "root_id"
+ ],
+ "?LoadSets@mmMultiCR@@QAEHPAD@Z": [
+  "__formal"
+ ],
+ "?FondleCarMass@mmMultiCR@@QAEXPAVvehCar@@M@Z": [
+  "arg0",
+  null
+ ],
+ "?FindGround@mmMultiCR@@AAEXVVector3@@AAV2@@Z": [
+  null,
+  "arg4",
+  "arg8",
+  null
+ ],
+ "?SendTimeWarning@mmMultiCR@@AAEXH@Z": [
+  "result"
+ ],
+ "?SendLobbyResults@mmMultiCR@@QAEXKHH@Z": [
+  null,
+  "arg4",
+  null
+ ],
+ "?SystemMessage@mmMultiCircuit@@UAEXPAUNETSYS_MSG@@@Z": [
+  "bb"
+ ],
+ "?GameMessage@mmMultiCircuit@@UAEXPAUNET_RCXHEAD@@@Z": [
+  "ref_pos"
+ ],
+ "?GameMessage@mmMultiRace@@UAEXPAUNET_RCXHEAD@@@Z": [
+  "window"
+ ],
+ "?Solve@mmNetPath@@QAEXAAVVector3@@0M@Z": [
+  "node",
+  null,
+  null
+ ],
+ "?LoadFont@mmNumberFont@@QAEXPADHI@Z": [
+  "pszFaceName",
+  "cHeight",
+  null
+ ],
+ "?Open@mmPlayerCityRecord@@QAEHPADM@Z": [
+  "getter",
+  "transformer"
+ ],
+ "?GetRecord@mmPlayerCityRecord@@QAEHAAVmmPlayerRecord@@HH@Z": [
+  null,
+  null,
+  "position"
+ ],
+ "?GetNumPassed@mmPlayerCityRecord@@QAEHH@Z": [
+  "getter"
+ ],
+ "??4mmPlayerConfig@@QAEXAAV0@@Z": [
+  "copy"
+ ],
+ "?Load@mmPlayerConfig@@QAEHPAD@Z": [
+  "playerName"
+ ],
+ "?LoadBinary@mmPlayerConfig@@QAEHPAD@Z": [
+  "playerName"
+ ],
+ "?SaveBinary@mmPlayerConfig@@QAEHPAD@Z": [
+  "audioDeviceStrLen"
+ ],
+ "??4mmPlayerData@@QAEXAAV0@@Z": [
+  "getter"
+ ],
+ "?OpenCityRecord@mmPlayerData@@QAEHPAD@Z": [
+  "arg0"
+ ],
+ "?GetNumPassed@mmPlayerData@@QAEHPADH@Z": [
+  "arg0",
+  null
+ ],
+ "?GetScore@mmPlayerData@@QAEHPADH@Z": [
+  "getter",
+  "transformer"
+ ],
+ "?GetTotalScore@mmPlayerData@@QAEHPAD@Z": [
+  "getter"
+ ],
+ "?ResolveCrashProgress@mmPlayerData@@QAEHPAD@Z": [
+  "getter"
+ ],
+ "?SetNetName@mmPlayerData@@QAEXPAD@Z": [
+  "getter"
+ ],
+ "?LoadBinary@mmPlayerData@@QAEHPAD@Z": [
+  "getter"
+ ],
+ "?SaveBinary@mmPlayerData@@QAEHPAD@Z": [
+  "getter"
+ ],
+ "?NewDirectory@mmPlayerDirectory@@QAEXH@Z": [
+  "getter"
+ ],
+ "?AddPlayer@mmPlayerDirectory@@QAEHPAD@Z": [
+  "getter"
+ ],
+ "?CreatePlayer@mmPlayerDirectory@@AAEXPAD0@Z": [
+  "getter",
+  "transformer"
+ ],
+ "?LoadBinary@mmPlayerDirectory@@QAEHPAD@Z": [
+  "getter"
+ ],
+ "??8mmPlayerRecord@@QAEHABV0@@Z": [
+  "getter"
+ ],
+ "?SaveBinary@mmPlayerRecord@@QAEHPAVStream@@@Z": [
+  "Data"
+ ],
+ "?LoadBinary@mmPlayerRecord@@QAEHPAVStream@@@Z": [
+  "getter"
+ ],
+ "?SetCamInterest@mmPlayer@@QAEXPAVphInertialCS@@@Z": [
+  "This"
+ ],
+ "?FFImpactCallback@mmPlayer@@QAEXM@Z": [
+  "x"
+ ],
+ "?FileIO@mmPlayer@@UAEXAAVdatParser@@@Z": [
+  "value"
+ ],
+ "??0mmPopup@@QAE@PAVmmGame@@MMMM@Z": [
+  "window",
+  null,
+  null,
+  null,
+  null
+ ],
+ "?ProcessKeymap@mmPopup@@QAEXH@Z": [
+  "window"
+ ],
+ "?Load@mmPositions@@QAEHPAD@Z": [
+  "getter"
+ ],
+ "?Load@mmRaceData@@QAEHPAD0@Z": [
+  "getter",
+  "transformer"
+ ],
+ "?LoadCityInfo@mmRaceSpeech@@QAE_NPAD@Z": [
+  "renderer"
+ ],
+ "?LoadGroup@mmRaceSpeech@@QAE_NPADH@Z": [
+  "renderer",
+  "DrawList"
+ ],
+ "?SetReadState@mmRaceSpeech@@AAE_NPADMPAH@Z": [
+  "renderer",
+  "DrawList",
+  "cull_rect"
+ ],
+ "?SetInterior@mmRainAudio@@QAEXE@Z": [
+  "ctx"
+ ],
+ "??_GmmRecord@@UAEPAXI@Z": [
+  "getter"
+ ],
+ "??4mmRecord@@QAEXAAV0@@Z": [
+  "getter"
+ ],
+ "?SaveBinary@mmRecord@@QAEHPAVStream@@@Z": [
+  "Data"
+ ],
+ "?LoadBinary@mmRecord@@QAEHPAVStream@@@Z": [
+  "getter"
+ ],
+ "?LoadReplay@mmReplayManager@@QAEXPAD@Z": [
+  "path"
+ ],
+ "?SetData@mmReplayManager@@QAEXH_N@Z": [
+  "_Arg",
+  null
+ ],
+ "?ReadReplayInfo@mmReplayManager@@AAEXPAVStream@@@Z": [
+  "stream"
+ ],
+ "?Load@mmRewardList@@QAE_NPAD00@Z": [
+  "renderer",
+  "DrawList",
+  "cull_rect"
+ ],
+ "?UnlockPlayerRewards@mmRewardList@@SAXPAD@Z": [
+  "renderer"
+ ],
+ "?CheckReward@mmRewardList@@SA_NPADHPAVmmRewardRecord@@@Z": [
+  "renderer",
+  "DrawList",
+  "cull_rect"
+ ],
+ "?PlayTimerWarning@mmSingleBlitz@@QAEXM@Z": [
+  "window"
+ ],
+ "?FinishMessage@mmSingleCircuit@@AAEXHH@Z": [
+  "id",
+  null
+ ],
+ "??_EmmSingleCircuit@@UAEPAXI@Z": [
+  "window"
+ ],
+ "?LoadMusic@mmSingleRaceMusicData@@UAE_NPAD@Z": [
+  "host_window"
+ ],
+ "?LoadMusicSegments@mmSingleRaceMusicData@@AAE_NPAVStream@@F@Z": [
+  "stream",
+  null
+ ],
+ "?UpdateGameInput@mmSingleRace@@UAEXH@Z": [
+  "name"
+ ],
+ "?FinishMessage@mmSingleRace@@AAEXHH@Z": [
+  null,
+  "arg4"
+ ],
+ "??_GmmSingleRace@@UAEPAXI@Z": [
+  "move_dir"
+ ],
+ "?LoadMusic@mmSingleRoamMusicData@@UAE_NPAD@Z": [
+  "path"
+ ],
+ "?LoadMusicSegments@mmSingleRoamMusicData@@AAE_NPAVStream@@F@Z": [
+  "stream",
+  null
+ ],
+ "?LoadEventFile@mmSingleStunt@@AAE_NPAD@Z": [
+  "platform_render_arg"
+ ],
+ "?SetPosition@mmSlider@@QAEXMM@Z": [
+  "transformer",
+  "DrawList"
+ ],
+ "?InitCNR@mmSpeechContainer@@AAEXPAD@Z": [
+  "renderer"
+ ],
+ "?Init@mmSpeedIndicator@@QAEXPAVmmExternalView@@PAVvehCarSim@@@Z": [
+  "sz",
+  null
+ ],
+ "?Assign@mmSpringFF@@QAEHJ@Z": [
+  "getter"
+ ],
+ "?SetDefaults@mmStatePack@@QAEXPAD0@Z": [
+  "level",
+  "car"
+ ],
+ "?SetFGColor@mmTextNode@@QAEXAAVVector4@@@Z": [
+  "pColor"
+ ],
+ "?SetPosition@mmTextNode@@QAEXHMM@Z": [
+  "getter",
+  "transformer",
+  "col"
+ ],
+ "?CreateFont@mmText@@SAPAXPBDH@Z": [
+  "pszFaceName",
+  "cHeight"
+ ],
+ "?DeleteFont@mmText@@SAXPAX@Z": [
+  "ho"
+ ],
+ "?Draw@mmText@@QAEXPAVgfxBitmap@@MMPBDPBX@Z": [
+  "fontBitmap",
+  "x",
+  "y",
+  "lpString",
+  "h"
+ ],
+ "?LoadBitmap@mmToggle2@@AAEXPAD@Z": [
+  "name"
+ ],
+ "?SetPosition@mmToggle2@@QAEXMM@Z": [
+  "getter1",
+  "getter2"
+ ],
+ "?LoadBitmap@mmToggle@@AAEXPAD@Z": [
+  "name"
+ ],
+ "?Init@mmToolTip@@QAEXPAVUIMenu@@PAULocString@@@Z": [
+  "pParent",
+  "pText"
+ ],
+ "?Load@mmVehInfo@@QAEHPAD@Z": [
+  "getter"
+ ],
+ "?GetVehicleID@mmVehList@@QAEHPAD@Z": [
+  "renderer"
+ ],
+ "?SetViewSetting@mmViewMgr@@QAEXH@Z": [
+  "node"
+ ],
+ "?Init@mmWPHUD@@QAEXHPAH0H@Z": [
+  "lhs",
+  "rhs",
+  "outHeight",
+  null
+ ],
+ "?SetHeading@mmWaypointObject@@QAEXM@Z": [
+  "viewport"
+ ],
+ "?RadiusHit@mmWaypointObject@@QAEHVVector3@@@Z": [
+  "window",
+  "label",
+  null
+ ],
+ "?ReInit@mmWaypoints@@QAEXHPADI@Z": [
+  "ctx",
+  "parent_node",
+  "split_axis"
+ ],
+ "?LoadCSV@mmWaypoints@@QAEHPADH@Z": [
+  "node",
+  "pos"
+ ],
+ "?SetCurrentGoals@mmWaypoints@@IAEXH@Z": [
+  "node"
+ ],
+ "?ClearWaypoint@mmWaypoints@@IAEXH@Z": [
+  "ctx"
+ ],
+ "?ModelAlreadyLoaded@modModel@@SA_NPBD@Z": [
+  "entryName"
+ ],
+ "?Draw@modModel@@QBEXPBVMatrix44@@PAVmodShader@@I@Z": [
+  "arg0",
+  "name",
+  null
+ ],
+ "?GetBoundingBox@modModel@@QBEXAAVVector3@@0PAVMatrix34@@@Z": [
+  "arg0",
+  "name",
+  null
+ ],
+ "?GetPosition@modModel@@QBEAAVVector3@@AAV2@H@Z": [
+  null,
+  "name"
+ ],
+ "?LoadAscii@modModel@@AAE_NAAVdatTokenizer@@@Z": [
+  "arg0"
+ ],
+ "?LoadBinary@modModel@@AAE_NAAVdatBinTokenizer@@@Z": [
+  "reader"
+ ],
+ "?Open@modPackage@@QAE_NPBD0@Z": [
+  "asssetSection",
+  null
+ ],
+ "?SkipTo@modPackage@@QAEXPBD@Z": [
+  "name"
+ ],
+ "?LoadShaderSet@modShader@@SAPAPAV1@PAVStream@@PAH1_N@Z": [
+  "stream",
+  "shaderSets",
+  "shadersPerSet",
+  null
+ ],
+ "?BeginEnvMap@modShader@@SAXPAVgfxTexture@@ABVMatrix34@@@Z": [
+  "location",
+  "orientation"
+ ],
+ "?Draw@modStatic@@QBEXPAVmodShader@@@Z": [
+  "pShaders"
+ ],
+ "?Optimize@modStatic@@QAEXPAVmodShader@@@Z": [
+  "pShaders"
+ ],
+ "?DrawNoAlpha@modStatic@@QBEXPAVmodShader@@@Z": [
+  "pShaders"
+ ],
+ "?DrawOrthoMapped@modStatic@@QBEXPAVmodShader@@PAVgfxTexture@@MI@Z": [
+  "shaders",
+  "orthoMap",
+  null,
+  null
+ ],
+ "?Init@netZoneScore@@QAE_NU_GUID@@PAUIDirectPlayLobby3@@@Z": [
+  "_Al",
+  null
+ ],
+ "?Load@parCsvFile@@QAE_NPBD0_NH@Z": [
+  "prefix",
+  "path",
+  null,
+  null
+ ],
+ "??_EpedActiveData@@QAEPAXI@Z": [
+  "This"
+ ],
+ "?Init@pedActiveData@@QAEXPBD@Z": [
+  "This"
+ ],
+ "?Activate@pedActive@@UAEXPAVaiPedestrianInstance@@PAVpedActiveData@@@Z": [
+  "p",
+  "offset"
+ ],
+ "?Load@pedAnimationInstance@@AAEPAVpedAnimation@@PBD@Z": [
+  "ptr"
+ ],
+ "?PreUpdate@pedAnimationInstance@@QAEXM@Z": [
+  "ptr"
+ ],
+ "?Draw@pedAnimationInstance@@QAEX_N@Z": [
+  "drawModel"
+ ],
+ "?ScaleSize@phBoundBox@@QAEXABVVector3@@@Z": [
+  "arg0"
+ ],
+ "?AddEdgeChecks@phBoundBox@@CAXHH_N@Z": [
+  "c",
+  "lhs",
+  "rhs"
+ ],
+ "?AvoidEdgeChecks@phBoundBox@@CAXHH_N@Z": [
+  "lhs",
+  "rhs",
+  null
+ ],
+ "?FindFaceDots@phBoundBox@@CAXMPAH0@Z": [
+  "count",
+  "spacing",
+  "clear"
+ ],
+ "?UseThisImpact@phBoundBox@@CA_NABVVector3@@0MPBVMatrix34@@111@Z": [
+  "lhs",
+  "rhs",
+  null,
+  null,
+  null,
+  null,
+  null
+ ],
+ "?TestEdge@phBoundBox@@UBEHAAVphSegment@@PAVphIntersection@@H@Z": [
+  "label",
+  "size_arg",
+  "flags"
+ ],
+ "?TestProbePoint@phBoundBox@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@M@Z": [
+  "id",
+  "pos",
+  "dock_node"
+ ],
+ "?TestProbeSlave@phBoundBox@@IBE_NAAVphSegment@@PAVphIntersectionPoint@@PAJM@Z": [
+  "str_id",
+  "dir",
+  "size",
+  null
+ ],
+ "?Load@phBoundGeometry@@QAE_NPBDPBVVector3@@@Z": [
+  null,
+  "scale"
+ ],
+ "?CreateOffset@phBoundHotdog@@QAEXABVVector3@@@Z": [
+  "id"
+ ],
+ "?TestAIPoint@phBoundHotdog@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@@Z": [
+  "flags",
+  "window"
+ ],
+ "?Load@phBoundHotdog@@QAE_NPBD@Z": [
+  "label"
+ ],
+ "?BackupAbyPenetration@phBoundPolygonal@@SAXAAVphSegment@@@Z": [
+  "plot_type"
+ ],
+ "?RetryVertPolyCollide@phBoundPolygonal@@KAXPBVphBound@@PAVphColliderBase@@1PAVphIntersection@@HPAPAVphImpactBase@@PAH_N@Z": [
+  "v",
+  "mn",
+  "b",
+  null,
+  null,
+  null,
+  "mx",
+  null
+ ],
+ "?Load@phBoundSphere@@QAE_NPBD@Z": [
+  "path"
+ ],
+ "?Load@phBoundTerrain@@QAE_NPBD@Z": [
+  "state"
+ ],
+ "?Save@phBoundTerrain@@QAE_NPBD@Z": [
+  "str"
+ ],
+ "?InitPolyIterator@phBoundTerrain@@QBEXABVVector3@@M@Z": [
+  "v",
+  "mn"
+ ],
+ "?InitPolyIterator@phBoundTerrain@@QBEXABVphSegment@@@Z": [
+  "src"
+ ],
+ "?TestProbePoint@phBoundTerrain@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@M@Z": [
+  "src",
+  "output",
+  null
+ ],
+ "?CalculateBuckets@phBoundTerrain@@IBEXMMMM@Z": [
+  "data_type",
+  "v",
+  "v_speed",
+  "v_min"
+ ],
+ "?GetDisp@phColliderBase@@QBEXABVVector3@@PAV2@J@Z": [
+  "x",
+  null,
+  null
+ ],
+ "?Impact@phColliderBase@@UAEXPBVphImpactBase@@ABVVector3@@1@Z": [
+  null,
+  "rhs",
+  null
+ ],
+ "?Contact@phColliderBase@@UAEXPBVphImpactBase@@ABVVector3@@11ABVMatrix34@@@Z": [
+  "adler32",
+  "buffer",
+  "buflen",
+  null,
+  null
+ ],
+ "?ApplyAirResistance@phColliderBase@@QAEXMABVVector3@@PBVphBound@@@Z": [
+  "i",
+  "arg4",
+  null
+ ],
+ "?InitArray@phColliderJointed@@SAXQAV1@H@Z": [
+  "output",
+  "i"
+ ],
+ "?Impact@phColliderJointed@@UAEXPBVphImpactBase@@ABVVector3@@1@Z": [
+  null,
+  "rhs",
+  null
+ ],
+ "?InitArray@phCollider@@SAXQAV1@H@Z": [
+  "src",
+  "dst"
+ ],
+ "?Init@phCollider@@QAEXPAVMatrix34@@PBVphBound@@@Z": [
+  "atlas",
+  "rhs"
+ ],
+ "?SegmentToSphere@phCollisionPrim@@SA_NABVVector3@@MABVphSegment@@PAVphIntersectionPoint@@@Z": [
+  "data_type",
+  "t",
+  "v_min",
+  "v_max"
+ ],
+ "?SegmentSphereTest@phCollisionPrim@@SA_NABVVector3@@MABVphSegment@@@Z": [
+  "data_type",
+  "t",
+  "v_min"
+ ],
+ "?SphereApplyCenterForceToSphere@phCollision@@SAXPBVphForceSphere@@AAVphColliderBase@@PBVphBoundSphere@@1@Z": [
+  "label",
+  "v",
+  "step",
+  "step_fast"
+ ],
+ "?AllocNewContact@phContactMgr@@QAEJJ@Z": [
+  "new_size"
+ ],
+ "?SeekContact@phContactMgr@@QAEJJABVphImpact@@@Z": [
+  "new_size",
+  "n"
+ ],
+ "?CalcHeldContacts@phContactMgr@@QAEXPAVphColliderBase@@0H@Z": [
+  "_X",
+  "arg4",
+  null
+ ],
+ "?EstMaxMoved@phContactMgr@@CAMABVMatrix34@@PBVphColliderBase@@1@Z": [
+  "fmt",
+  null,
+  null
+ ],
+ "?AddHeldContact@phContactMgr@@AAEHPBVphColliderBase@@0@Z": [
+  "str_id",
+  "size_arg"
+ ],
+ "?FindNextContact@phContactMgr@@QAE_NJPAJ0@Z": [
+  "user_texture_id",
+  "size",
+  "uv0"
+ ],
+ "?CalcImpact@phContactMgr@@QAEXPAVphImpact@@M@Z": [
+  "label",
+  "v"
+ ],
+ "?CullImpactList@phContactMgr@@QAEXPAHPAVphImpact@@@Z": [
+  "label",
+  "active"
+ ],
+ "?Calc2ImpactsFixed@phContactMgr@@QAEXPAVphImpact@@_N@Z": [
+  "label",
+  "v_current_min"
+ ],
+ "?Calc3Impacts@phContactMgr@@QAEXHPAVphImpact@@@Z": [
+  "label",
+  "data_type"
+ ],
+ "?ApplyImpact@phContactMgr@@QAEXPAVphImpact@@ABVVector3@@@Z": [
+  "label",
+  "data_type"
+ ],
+ "?Init@phContact@@QAEXABVphImpact@@@Z": [
+  "idx"
+ ],
+ "?Set@phContact@@QAEXABV1@@Z": [
+  "n"
+ ],
+ "?SetContactForceLimit@phContact@@QAEXABVphImpact@@ABVVector3@@@Z": [
+  "sz",
+  null
+ ],
+ "?ConvexPolyIntersect@phConvexPoly@@SAHHPBVVector2@@H0PAUData@1@@Z": [
+  "bb",
+  "id",
+  "data_type",
+  "v",
+  "v_min"
+ ],
+ "?RecordInteriorCollides@phConvexPoly@@SAX_N@Z": [
+  "values"
+ ],
+ "?AddImpactSpherePlaneTest@phImpactBase@@SA_NPAV1@PAHABVVector3@@M@Z": [
+  "data_type",
+  "v"
+ ],
+ "?AddImpactShaftPlaneTest@phImpactBase@@SA_NPAV1@PAHABVVector3@@M2@Z": [
+  "data_type",
+  "v",
+  null,
+  null,
+  null
+ ],
+ "?CalcCollision@phImpact@@QAEXABVVector3@@MPAV2@11@Z": [
+  null,
+  "scale",
+  null,
+  null,
+  null
+ ],
+ "?InitBoxMass@phInertialCS@@QAEXMMMM@Z": [
+  "label",
+  "col",
+  "flags",
+  "argC"
+ ],
+ "?InitSphereDensity@phInertialCS@@QAEXMM@Z": [
+  "label",
+  "col"
+ ],
+ "?InitCylinderMass@phInertialCS@@QAEXMMMD@Z": [
+  null,
+  null,
+  null,
+  "argC"
+ ],
+ "?InitHotdogMass@phInertialCS@@QAEXMMMD@Z": [
+  null,
+  null,
+  null,
+  "argC"
+ ],
+ "?AddInertia@phInertialCS@@QAE?AVMatrix34@@MABVVector3@@0@Z": [
+  "arg0",
+  "arg4",
+  "arg8",
+  "argC"
+ ],
+ "?AddInertia@phInertialCS@@QAE?AVMatrix34@@MABVVector3@@ABV2@@Z": [
+  null,
+  "edx0",
+  "arg0",
+  "arg4",
+  "arg8",
+  null
+ ],
+ "?Update@phInertialCS@@AAEXM@Z": [
+  null,
+  null,
+  "desc_id"
+ ],
+ "?CalcNetPush@phInertialCS@@QAEXABVVector3@@@Z": [
+  "str_id"
+ ],
+ "?ApplyContactForce@phInertialCS@@QAEXABVVector3@@0ABVMatrix34@@@Z": [
+  "ptr_id",
+  "flags",
+  "fmt"
+ ],
+ "?GetInertiaMatrix@phInertialCS@@QBEXABVVector3@@PAVMatrix34@@@Z": [
+  "label",
+  "flags"
+ ],
+ "?GetInverseInertiaMatrix@phInertialCS@@QBEXPAVMatrix34@@@Z": [
+  "label"
+ ],
+ "?GetInvMassMatrix@phInertialCS@@QBEXABVVector3@@AAVMatrix34@@@Z": [
+  null,
+  null,
+  "is_open",
+  "cond"
+ ],
+ "?GetInvMassMatrix@phInertialCS@@QBEXABVVector3@@0AAVMatrix34@@@Z": [
+  null,
+  null,
+  "label",
+  "selected",
+  "flags"
+ ],
+ "?GetLocalAcceleration@phInertialCS@@QBEXABVVector3@@AAV2@@Z": [
+  "label",
+  "current_item"
+ ],
+ "?GetForce@phInertialCS@MM2@@QAE?AVVector3@2@XZ": [
+  "result"
+ ],
+ "??0phMaterialMgr@@IAE@PAVphMaterial@@H@Z": [
+  "entry",
+  null
+ ],
+ "?Find@phMaterialMgr@@QAEPAVphMaterial@@PBD@Z": [
+  "entryName"
+ ],
+ "?AddToTable@phMaterialMgr@@QAEXPAVphMaterial@@@Z": [
+  "entry"
+ ],
+ "?LoadTable@phMaterialMgr@@QAE_NPBD@Z": [
+  "path"
+ ],
+ "?Save@phMaterialMgr@@QAEXPAVphMaterial@@PAVdatAsciiTokenizer@@@Z": [
+  "entry",
+  null
+ ],
+ "?InitTriangle@phPolygon@@QAEXGGGPBVVector3@@@Z": [
+  null,
+  null,
+  null,
+  "scale"
+ ],
+ "?CalculateNormal@phPolygon@@QAEXPBVVector3@@@Z": [
+  "scale"
+ ],
+ "?TestSegmentDirected@phPolygon@@QBEHPBVVector3@@ABVphSegment@@PAVphIntersectionPoint@@M@Z": [
+  null,
+  null,
+  "data_type",
+  "t",
+  "v_min",
+  null
+ ],
+ "?Init@ptxGlass@@QAEXHHPAVgfxTexture@@@Z": [
+  null,
+  null,
+  "gfxTexture"
+ ],
+ "?Update@ptxGlass@@QAEXM@Z": [
+  "draw_list"
+ ],
+ "?DrawShards@ptxGlass@@QAEXH@Z": [
+  "draw_list"
+ ],
+ "?GetShadedColor@sdlPage16@@DAIIII@Z": [
+  "arg0",
+  null,
+  null
+ ],
+ "?GetDrawnSDLPrims@sdlPage16@@QBEHHPAHH@Z": [
+  "lod",
+  "pOutput",
+  "_1D4C"
+ ],
+ "??0sdlPage16@@QAE@HH@Z": [
+  "perimeterVertexCount",
+  "vertexIndicesCount"
+ ],
+ "?PointInPerimeter@sdlPage16@@QBE_NMM@Z": [
+  "x",
+  "z"
+ ],
+ "?GetCentroid@sdlPage16@@QBEXAAVVector3@@@Z": [
+  "out"
+ ],
+ "?ComputeBoundSphere@sdlPage16@@QBEXAAVVector4@@@Z": [
+  "font"
+ ],
+ "?LoadBinary@sdlPage16@@SAPAV1@PAVStream@@@Z": [
+  "stream"
+ ],
+ "?GetPerimeterVertexIndex@sdlPage16@@QBEHH@Z": [
+  "index"
+ ],
+ "?GetCodedVertex@sdlPage16@@QBEABVVector3@@H@Z": [
+  "index"
+ ],
+ "?GetFloat@sdlPage16@@QBEMH@Z": [
+  "index"
+ ],
+ "?SetFlatQuad@sdlPoly@@QAE_NHHHHHM@Z": [
+  null,
+  null,
+  null,
+  null,
+  null,
+  "arg14"
+ ],
+ "?SetQuad@sdlPoly@@QAE_NHABVVector3@@000@Z": [
+  null,
+  "arg4",
+  null,
+  null,
+  null
+ ],
+ "?SetTri@sdlPoly@@QAE_NHABVVector3@@00@Z": [
+  null,
+  "arg4",
+  null,
+  null
+ ],
+ "?SetFlatTri@sdlPoly@@QAE_NHHHHM@Z": [
+  null,
+  null,
+  null,
+  null,
+  "arg10"
+ ],
+ "?SetWall@sdlPoly@@QAE_NHHHMM@Z": [
+  null,
+  null,
+  null,
+  "argC",
+  null
+ ],
+ "?SetWall@sdlPoly@@QAE_NHABVVector3@@0MM@Z": [
+  null,
+  "arg4",
+  null,
+  null,
+  null
+ ],
+ "?SaveName@string@@QAEXABV1@H00@Z": [
+  "arg0",
+  null,
+  null,
+  null
+ ],
+ "?FindFile@string@@QAEHABV1@H00@Z": [
+  "arg0",
+  null,
+  null,
+  null
+ ],
+ "??0uiNavBar@@QAE@H@Z": [
+  "menuID"
+ ],
+ "?Eject@vehBreakableMgr@@QAEXPAVvehBreakable@@H@Z": [
+  "label_id",
+  "values"
+ ],
+ "?RegisterTypes@vehCarAudioContainer@@SAXPBD@Z": [
+  "fileName"
+ ],
+ "?RegisterSemiNames@vehCarAudioContainer@@CAXPAVStream@@PAD@Z": [
+  "stream",
+  "names"
+ ],
+ "?RegisterPoliceNames@vehCarAudioContainer@@CAXPAVStream@@PAD@Z": [
+  "stream",
+  "names"
+ ],
+ "?Set2DPan@vehCarAudioContainer@@QAEXM@Z": [
+  "label_id"
+ ],
+ "?IsSemiOrBus@vehCarAudioContainer@@SA_NPBD@Z": [
+  "label_id"
+ ],
+ "?IsSemiOrBus@vehCarAudioContainer@MM2@@SA_NPBD@Z": [
+  "name"
+ ],
+ "?SetSirenCSVName@vehCarAudioContainer@MM2@@SAXPBD@Z": [
+  "name",
+  null
+ ],
+ "?Load@vehCarAudio@@QAEHPBD_N@Z": [
+  "label_id",
+  "xs"
+ ],
+ "?Set2DPan@vehCarAudio@@QAEXM@Z": [
+  "label_id"
+ ],
+ "?LoadImpacts@vehCarAudio@@AAE_NPAD0@Z": [
+  "label_id",
+  "xs"
+ ],
+ "?Install@vehCarDamageHandler@@SAXXZ": [
+  "x",
+  "y"
+ ],
+ "?Init@vehCarDamage@@QAEXPAVvehCar@@PBD@Z": [
+  "arg0",
+  null
+ ],
+ "?SpewSmoke@vehCarDamage@@AAEXPAVasParticles@@PAMAAVVector3@@M@Z": [
+  "label_id",
+  "getter",
+  null,
+  null
+ ],
+ "??_GvehCarDamage@@UAEPAXI@Z": [
+  "label_id"
+ ],
+ "?GetSurfaceColor@vehCarModel@@IAE_NPAVmodStatic@@AAVVector3@@@Z": [
+  "arg_0",
+  "colorOut"
+ ],
+ "?Draw@vehCarModel@@UAEXH@Z": [
+  "lod"
+ ],
+ "?getExtraHeadlightPosition@vehCarModel@MM2@@QAE?AVVector3@2@H@Z": [
+  null,
+  null,
+  "num"
+ ],
+ "?AddWheel@vehDrivetrain@@QAEHPAVvehWheel@@@Z": [
+  "label_id"
+ ],
+ "?Attach@vehDrivetrain@MM2@@QAEXXZ": [
+  "tex"
+ ],
+ "?AssignSounds@vehEngineAudio@@QAEXH@Z": [
+  "label_id"
+ ],
+ "?Load@vehEngineAudio@@QAEHPAVStream@@@Z": [
+  "label_id"
+ ],
+ "?UpdateRPM@vehEngineSampleWrapper@@QAEXMMMM@Z": [
+  "label_id",
+  "getter1",
+  "getter2",
+  null
+ ],
+ "?ParseCSVBuffer@vehEngineSampleWrapper@@QAEXPAD@Z": [
+  "label_id"
+ ],
+ "?GetNextUnit@vehFeedback@@UAEMH@Z": [
+  "label_ids"
+ ],
+ "?Init@vehGyro@@QAEXPAVvehCarSim@@PBD@Z": [
+  "arg0",
+  null
+ ],
+ "?Update@vehHornAudioTiming@@QAEXPAVAudSoundBase@@@Z": [
+  "label_id"
+ ],
+ "?PlayImpact@vehHornAudio@@QAEXM@Z": [
+  "label_id"
+ ],
+ "?Load@vehHornAudio@@SAHPAPAV1@PAD1PAH@Z": [
+  null,
+  null,
+  null,
+  "valueOut"
+ ],
+ "?AddToHash@vehHornAudio@@SAXPADH@Z": [
+  null,
+  "entry"
+ ],
+ "?ReadCSV@vehHornAudio@@AAEHPAVStream@@@Z": [
+  "label_id"
+ ],
+ "?Load@vehNitroCarAudio@@QAEXPAD@Z": [
+  "label_id"
+ ],
+ "?Load@vehPoliceCarAudio@@AAEXPBD@Z": [
+  "path"
+ ],
+ "?StartSiren@vehPoliceCarAudio@@QAEXH@Z": [
+  "label_id"
+ ],
+ "?UpdateSiren@vehPoliceCarAudio@@QAEHMMM@Z": [
+  "label_id",
+  "getter",
+  null
+ ],
+ "?UnAssignSounds@vehSemiCarAudio@@UAEXH@Z": [
+  "label_id"
+ ],
+ "?Load@vehSemiCarAudio@@QAEXPAD@Z": [
+  "label_id"
+ ],
+ "?setReverseVolume@vehSemiCarAudio@MM2@@QAEXM@Z": [
+  "volume"
+ ],
+ "?Init@vehSplash@@QAEXPAVphInertialCS@@ABVVector3@@1@Z": [
+  null,
+  null,
+  "label_ids",
+  "values",
+  "count"
+ ],
+ "??_GvehSplash@@UAEPAXI@Z": [
+  "label_ids"
+ ],
+ "?Init@vehStuck@@QAEXPAVvehCarSim@@PBD@Z": [
+  "arg0",
+  null
+ ],
+ "?UpdateSkid@vehSurfaceAudioData@@QAEXMMM@Z": [
+  "label_id",
+  "getter1",
+  "getter2"
+ ],
+ "?UpdateSkid@vehSurfaceAudioData@@QAEXM@Z": [
+  "label_id"
+ ],
+ "?Update@vehSurfaceAudio@@QAEXPAVvehCarSim@@@Z": [
+  "label_id"
+ ],
+ "?UpdateSurface@vehSurfaceAudio@@QAEXMMM@Z": [
+  "label_id",
+  "getter1",
+  "getter2"
+ ],
+ "?UpdateSkid@vehSurfaceAudio@@QAEXMMM@Z": [
+  "label_id",
+  "getter1",
+  "getter2"
+ ],
+ "?LoadCSV@vehSurfaceAudio@@QAE_NPAD0@Z": [
+  "label_id",
+  "getter1"
+ ],
+ "?LoadSuspension@vehSurfaceAudio@@QAEHPAD0@Z": [
+  "label_id",
+  "getter1"
+ ],
+ "?AssignSounds@vehSurfaceAudio@@QAEXH@Z": [
+  "label_id"
+ ],
+ "?UpdateSuspension@vehSurfaceAudio@@QAEXMM@Z": [
+  "label_id",
+  "getter1"
+ ],
+ "?LoadTireWobble@vehSurfaceAudio@@QAEHPAD0@Z": [
+  "label_id",
+  "getter1"
+ ],
+ "?UpdateTireWobble@vehSurfaceAudio@@QAEXPAVvehCarSim@@MM@Z": [
+  "label_id",
+  "getter1",
+  "getter2"
+ ],
+ "?Init@vehTrailerInstance@@QAEXPBDABVVector3@@H@Z": [
+  "name",
+  null,
+  null
+ ],
+ "?Draw@vehTrailerInstance@@UAEXH@Z": [
+  "label_id"
+ ],
+ "?Init@vehWheelPtx@@QAEXPAVvehCarSim@@@Z": [
+  "label_id"
+ ],
+ "?CopyVars@vehWheel@@QAEXPAV1@@Z": [
+  "label_id"
+ ],
+ "??0winDispatchable@@QAE@I@Z": [
+  "id"
+ ],
+ "?zipOpen@zipFile@@SAHPBD_N@Z": [
+  "fileName",
+  "somethingBad"
+ ],
+ "?zipSize@zipFile@@SAHH@Z": [
+  "index"
+ ],
+ "?internalSeek@zipFile@@AAEHH@Z": [
+  "offset"
+ ],
+ "?internalRead@zipFile@@AAEHPAXH_N@Z": [
+  "_Right",
+  null,
+  null
+ ],
+ "?Open@zipFile@@QAEHPBD@Z": [
+  "fileName"
+ ]
+}

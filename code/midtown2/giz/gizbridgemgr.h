@@ -50,7 +50,7 @@ public:
     ARTS_IMPORT void AddProximityTrigger(Vector3* arg1);
 
     // ?GetBridges@gizBridgeMgr@@QAEPAVgizBridge@@H@Z
-    ARTS_IMPORT gizBridge* GetBridges(i32 arg1);
+    ARTS_IMPORT gizBridge* GetBridges(i32 index);
 
     // ?Init@gizBridgeMgr@@QAE_NPAD00@Z
     ARTS_IMPORT bool Init(char* arg1, char* arg2, char* arg3);

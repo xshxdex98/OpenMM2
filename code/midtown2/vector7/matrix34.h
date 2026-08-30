@@ -50,7 +50,7 @@ public:
     ARTS_EXPORT f32 Determinant3x3() const;
 
     // ?Dot@Matrix34@@QAEXABV1@0@Z
-    ARTS_EXPORT void Dot(const Matrix34& arg1, const Matrix34& arg2);
+    ARTS_EXPORT void Dot(const Matrix34& lhs, const Matrix34& rhs);
 
     // ?Dot@Matrix34@@QAEXABV1@@Z
     ARTS_EXPORT void Dot(const Matrix34& arg1);
@@ -137,10 +137,10 @@ public:
     ARTS_EXPORT void Inverse();
 
     // ?LookAt@Matrix34@@QAEXABVVector3@@0@Z
-    ARTS_EXPORT void LookAt(const Vector3& arg1, const Vector3& arg2);
+    ARTS_EXPORT void LookAt(const Vector3& id, const Vector3& values);
 
     // ?MakeRotate@Matrix34@@QAEXABVVector3@@M@Z
-    ARTS_IMPORT void MakeRotate(const Vector3& arg1, f32 arg2);
+    ARTS_IMPORT void MakeRotate(const Vector3& arg1, f32 rotation);
 
     // ?MakeRotateUnitAxis@Matrix34@@QAEXABVVector3@@M@Z
     ARTS_EXPORT void MakeRotateUnitAxis(const Vector3& arg1, f32 arg2);

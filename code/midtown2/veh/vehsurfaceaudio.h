@@ -40,7 +40,7 @@ public:
     ARTS_IMPORT virtual ~vehSurfaceAudio();
 
     // ?AssignSounds@vehSurfaceAudio@@QAEXH@Z
-    ARTS_IMPORT void AssignSounds(i32 arg1);
+    ARTS_IMPORT void AssignSounds(i32 label_id);
 
     // ?EchoOff@vehSurfaceAudio@@QAEXXZ
     ARTS_IMPORT void EchoOff();
@@ -52,13 +52,13 @@ public:
     ARTS_IMPORT bool IsBrakeing();
 
     // ?LoadCSV@vehSurfaceAudio@@QAE_NPAD0@Z
-    ARTS_IMPORT bool LoadCSV(char* arg1, char* arg2);
+    ARTS_IMPORT bool LoadCSV(char* label_id, char* getter1);
 
     // ?LoadSuspension@vehSurfaceAudio@@QAEHPAD0@Z
-    ARTS_IMPORT i32 LoadSuspension(char* arg1, char* arg2);
+    ARTS_IMPORT i32 LoadSuspension(char* label_id, char* getter1);
 
     // ?LoadTireWobble@vehSurfaceAudio@@QAEHPAD0@Z
-    ARTS_IMPORT i32 LoadTireWobble(char* arg1, char* arg2);
+    ARTS_IMPORT i32 LoadTireWobble(char* label_id, char* getter1);
 
     // ?SetDamagePtr@vehSurfaceAudio@@QAEXPAVvehCarDamage@@@Z
     ARTS_IMPORT void SetDamagePtr(vehCarDamage* arg1);
@@ -85,7 +85,7 @@ public:
     ARTS_IMPORT void UnAssignSounds();
 
     // ?Update@vehSurfaceAudio@@QAEXPAVvehCarSim@@@Z
-    ARTS_IMPORT void Update(vehCarSim* arg1);
+    ARTS_IMPORT void Update(vehCarSim* label_id);
 
     // ?Update@vehSurfaceAudio@@QAEXPAVvehCarSim@@MM@Z
     ARTS_IMPORT void Update(vehCarSim* arg1, f32 arg2, f32 arg3);
@@ -100,16 +100,16 @@ public:
     ARTS_IMPORT void UpdateSkid(f32 arg1);
 
     // ?UpdateSkid@vehSurfaceAudio@@QAEXMMM@Z
-    ARTS_IMPORT void UpdateSkid(f32 arg1, f32 arg2, f32 arg3);
+    ARTS_IMPORT void UpdateSkid(f32 label_id, f32 getter1, f32 getter2);
 
     // ?UpdateSurface@vehSurfaceAudio@@QAEXM@Z
     ARTS_IMPORT void UpdateSurface(f32 arg1);
 
     // ?UpdateSurface@vehSurfaceAudio@@QAEXMMM@Z
-    ARTS_IMPORT void UpdateSurface(f32 arg1, f32 arg2, f32 arg3);
+    ARTS_IMPORT void UpdateSurface(f32 label_id, f32 getter1, f32 getter2);
 
     // ?UpdateSuspension@vehSurfaceAudio@@QAEXMM@Z
-    ARTS_IMPORT void UpdateSuspension(f32 arg1, f32 arg2);
+    ARTS_IMPORT void UpdateSuspension(f32 label_id, f32 getter1);
 
     // ?UpdateSuspension@vehSurfaceAudio@@QAEXXZ
     ARTS_IMPORT void UpdateSuspension();
@@ -118,7 +118,7 @@ public:
     ARTS_IMPORT void UpdateTireWobble(vehCarSim* arg1);
 
     // ?UpdateTireWobble@vehSurfaceAudio@@QAEXPAVvehCarSim@@MM@Z
-    ARTS_IMPORT void UpdateTireWobble(vehCarSim* arg1, f32 arg2, f32 arg3);
+    ARTS_IMPORT void UpdateTireWobble(vehCarSim* label_id, f32 getter1, f32 getter2);
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

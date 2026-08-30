@@ -49,7 +49,7 @@ public:
     ARTS_IMPORT virtual void Impact(const phImpactBase* arg1, const Vector3& arg2);
 
     // ?Impact@phColliderBase@@UAEXPBVphImpactBase@@ABVVector3@@1@Z
-    ARTS_IMPORT virtual void Impact(const phImpactBase* arg1, const Vector3& arg2, const Vector3& arg3);
+    ARTS_IMPORT virtual void Impact(const phImpactBase* arg1, const Vector3& rhs, const Vector3& arg3);
 
     // ?Contact@phColliderBase@@UAEXABVVector3@@PBVphContact@@@Z
     ARTS_IMPORT virtual void Contact(const Vector3& arg1, const phContact* arg2);
@@ -58,10 +58,10 @@ public:
     ARTS_IMPORT virtual void Contact(const Vector3& arg1, const phContact* arg2, const Matrix34& arg3);
 
     // ?Contact@phColliderBase@@UAEXPBVphImpactBase@@ABVVector3@@11ABVMatrix34@@@Z
-    ARTS_IMPORT virtual void Contact(const phImpactBase* arg1, const Vector3& arg2, const Vector3& arg3, const Vector3& arg4, const Matrix34& arg5);
+    ARTS_IMPORT virtual void Contact(const phImpactBase* adler32, const Vector3& buffer, const Vector3& buflen, const Vector3& arg4, const Matrix34& arg5);
 
     // ?ApplyAirResistance@phColliderBase@@QAEXMABVVector3@@PBVphBound@@@Z
-    ARTS_IMPORT void ApplyAirResistance(f32 arg1, const Vector3& arg2, const phBound* arg3);
+    ARTS_IMPORT void ApplyAirResistance(f32 i, const Vector3& arg4, const phBound* arg3);
 
     // ?ApplyGravity@phColliderBase@@QAEXXZ
     ARTS_IMPORT void ApplyGravity();
@@ -88,7 +88,7 @@ public:
     ARTS_IMPORT void GetDisp(const Vector3& arg1, Vector3* arg2) const;
 
     // ?GetDisp@phColliderBase@@QBEXABVVector3@@PAV2@J@Z
-    ARTS_IMPORT void GetDisp(const Vector3& arg1, Vector3* arg2, ilong arg3) const;
+    ARTS_IMPORT void GetDisp(const Vector3& x, Vector3* arg2, ilong arg3) const;
 
     // ?GetLocalVelocity@phColliderBase@@QBEXABVVector3@@HHHAAV2@@Z
     ARTS_IMPORT void GetLocalVelocity(const Vector3& arg1, i32 arg2, i32 arg3, i32 arg4, Vector3& arg5) const;

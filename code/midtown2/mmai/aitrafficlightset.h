@@ -32,7 +32,7 @@ class aiTrafficLightSet : public asNode
 {
 public:
     // ??0aiTrafficLightSet@@QAE@PAVaiIntersection@@@Z
-    ARTS_IMPORT aiTrafficLightSet(aiIntersection* arg1);
+    ARTS_IMPORT aiTrafficLightSet(aiIntersection* getter);
 
     // ??1aiTrafficLightSet@@UAE@XZ
     ARTS_IMPORT virtual ~aiTrafficLightSet();

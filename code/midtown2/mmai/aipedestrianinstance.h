@@ -59,7 +59,7 @@ public:
     ARTS_IMPORT virtual void Detach();
 
     // ?Draw@aiPedestrianInstance@@UAEXH@Z
-    ARTS_IMPORT virtual void Draw(i32 arg1);
+    ARTS_IMPORT virtual void Draw(i32 obj);
 
     // ?DrawShadow@aiPedestrianInstance@@UAEXXZ
     ARTS_IMPORT virtual void DrawShadow();

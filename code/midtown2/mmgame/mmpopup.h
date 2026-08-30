@@ -31,7 +31,7 @@ class mmPopup : public asNode
 {
 public:
     // ??0mmPopup@@QAE@PAVmmGame@@MMMM@Z
-    ARTS_IMPORT mmPopup(mmGame* arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5);
+    ARTS_IMPORT mmPopup(mmGame* window, f32 arg2, f32 arg3, f32 arg4, f32 arg5);
 
     // ??1mmPopup@@UAE@XZ
     ARTS_IMPORT virtual ~mmPopup();
@@ -73,7 +73,7 @@ public:
     ARTS_IMPORT void ProcessEscape(i32 arg1);
 
     // ?ProcessKeymap@mmPopup@@QAEXH@Z
-    ARTS_IMPORT void ProcessKeymap(i32 arg1);
+    ARTS_IMPORT void ProcessKeymap(i32 window);
 
     // ?SaveReplay@mmPopup@@QAEXXZ
     ARTS_IMPORT void SaveReplay();

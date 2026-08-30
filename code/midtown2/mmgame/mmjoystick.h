@@ -40,13 +40,13 @@ public:
     ARTS_IMPORT i32 DisableAutoCenter();
 
     // ?GetAxis@mmJoystick@@QAEMH@Z
-    ARTS_IMPORT f32 GetAxis(i32 arg1);
+    ARTS_IMPORT f32 GetAxis(i32 getter);
 
     // ?GetButton@mmJoystick@@QAEMH@Z
     ARTS_IMPORT f32 GetButton(i32 arg1);
 
     // ?GetFFEffect@mmJoystick@@QAEPAVmmEffectFF@@H@Z
-    ARTS_IMPORT mmEffectFF* GetFFEffect(i32 arg1);
+    ARTS_IMPORT mmEffectFF* GetFFEffect(i32 getter);
 
     // ?GetNumButtons@mmJoystick@@QAEHXZ
     ARTS_IMPORT i32 GetNumButtons();

@@ -67,7 +67,7 @@ public:
     ARTS_IMPORT void Deactivate();
 
     // ?Init@mmDashView@@QAEXPADPAVmmPlayer@@@Z
-    ARTS_IMPORT void Init(char* arg1, mmPlayer* arg2);
+    ARTS_IMPORT void Init(char* node, mmPlayer* window);
 
     // ?TempDeactivate@mmDashView@@QAEXXZ
     ARTS_IMPORT void TempDeactivate();
@@ -77,10 +77,10 @@ private:
     ARTS_IMPORT virtual void FileIO(datParser& arg1);
 
     // ?LoadPivotInfo@mmDashView@@AAEXPAD@Z
-    ARTS_IMPORT void LoadPivotInfo(char* arg1);
+    ARTS_IMPORT void LoadPivotInfo(char* node);
 
     // ?LoadPkg@mmDashView@@AAEXPAD@Z
-    ARTS_IMPORT void LoadPkg(char* arg1);
+    ARTS_IMPORT void LoadPkg(char* shaderSets);
 
 public:
     // Members from 0x018; everything below that belongs to asNode.

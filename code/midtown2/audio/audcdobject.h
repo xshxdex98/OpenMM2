@@ -29,7 +29,7 @@ class audCDObject
 {
 public:
     // ?GetCDEndPosition@audCDObject@@QAEHPAU_cd_position_@@@Z
-    ARTS_IMPORT i32 GetCDEndPosition(_cd_position_* arg1);
+    ARTS_IMPORT i32 GetCDEndPosition(_cd_position_* _Right);
 
     // ?GetCDPosition@audCDObject@@QAEHPAU_cd_position_@@@Z
     ARTS_IMPORT i32 GetCDPosition(_cd_position_* arg1);
@@ -44,7 +44,7 @@ public:
     ARTS_IMPORT i32 GetNumCDTracks();
 
     // ?GetTrackInfo@audCDObject@@QAE_NH@Z
-    ARTS_IMPORT bool GetTrackInfo(i32 arg1);
+    ARTS_IMPORT bool GetTrackInfo(i32 _First);
 
     // ?GetTrackTime@audCDObject@@QAEHXZ
     ARTS_IMPORT i32 GetTrackTime();

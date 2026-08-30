@@ -89,7 +89,7 @@ public:
     ARTS_IMPORT virtual void GameMessage(NET_RCXHEAD* arg1);
 
     // ?FondleCarMass@mmMultiCR@@QAEXPAVvehCar@@M@Z
-    ARTS_IMPORT void FondleCarMass(vehCar* arg1, f32 arg2);
+    ARTS_IMPORT void FondleCarMass(vehCar* arg0, f32 arg2);
 
     // ?ImpactCallback@mmMultiCR@@QAEXPAX0@Z
     ARTS_IMPORT void ImpactCallback(void* arg1, void* arg2);
@@ -98,13 +98,13 @@ public:
     ARTS_IMPORT i32 LoadCSV(char* arg1);
 
     // ?LoadSets@mmMultiCR@@QAEHPAD@Z
-    ARTS_IMPORT i32 LoadSets(char* arg1);
+    ARTS_IMPORT i32 LoadSets(char* __formal);
 
     // ?ResetPositions@mmMultiCR@@QAEXH@Z
     ARTS_IMPORT void ResetPositions(i32 arg1);
 
     // ?SendLobbyResults@mmMultiCR@@QAEXKHH@Z
-    ARTS_IMPORT void SendLobbyResults(ulong arg1, i32 arg2, i32 arg3);
+    ARTS_IMPORT void SendLobbyResults(ulong arg1, i32 arg4, i32 arg3);
 
 private:
     // ?CycleInterest@mmMultiCR@@AAEXH@Z
@@ -162,7 +162,7 @@ private:
     ARTS_IMPORT void SendSetup(ulong arg1);
 
     // ?SendTimeWarning@mmMultiCR@@AAEXH@Z
-    ARTS_IMPORT void SendTimeWarning(i32 arg1);
+    ARTS_IMPORT void SendTimeWarning(i32 result);
 
     // ?StealGold@mmMultiCR@@AAEXPAVvehCar@@@Z
     ARTS_IMPORT void StealGold(vehCar* arg1);

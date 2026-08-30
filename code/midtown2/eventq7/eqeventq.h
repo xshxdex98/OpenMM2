@@ -31,7 +31,7 @@ class eqEventQ
 {
 public:
     // ??0eqEventQ@@QAE@H@Z
-    ARTS_IMPORT eqEventQ(i32 arg1);
+    ARTS_IMPORT eqEventQ(i32 x);
 
     // ??1eqEventQ@@UAE@XZ
     ARTS_IMPORT virtual ~eqEventQ();
@@ -40,14 +40,14 @@ public:
     ARTS_IMPORT virtual void Mouse(void* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5, i32 arg6, i32 arg7, i32 arg8);
 
     // ?Keyboard@eqEventQ@@UAEXPAXHHHH@Z
-    ARTS_IMPORT virtual void Keyboard(void* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5);
+    ARTS_IMPORT virtual void Keyboard(void* x, i32 arg2, i32 y, i32 arg4, i32 offset);
 
     // ?Pop@eqEventQ@@QAEHPATeqEvent@@@Z
-    ARTS_IMPORT i32 Pop(eqEvent* arg1);
+    ARTS_IMPORT i32 Pop(eqEvent* id);
 
 private:
     // ?Queue@eqEventQ@@AAEXAATeqEvent@@@Z
-    ARTS_IMPORT void Queue(eqEvent& arg1);
+    ARTS_IMPORT void Queue(eqEvent& x);
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

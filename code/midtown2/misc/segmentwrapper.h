@@ -48,7 +48,7 @@ public:
     ARTS_IMPORT bool LoadSegmentBands();
 
     // ?OpenSegmentFile@SegmentWrapper@@QAE_NPAD_N@Z
-    ARTS_IMPORT bool OpenSegmentFile(char* arg1, bool arg2);
+    ARTS_IMPORT bool OpenSegmentFile(char* lpMultiByteStr, bool DrawList);
 
     // ?Play@SegmentWrapper@@QAE_NKK@Z
     ARTS_IMPORT bool Play(ulong arg1, ulong arg2);

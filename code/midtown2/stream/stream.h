@@ -32,10 +32,10 @@ public:
     ARTS_IMPORT i32 Close();
 
     // ?Create@Stream@@SAPAV1@PBD@Z
-    ARTS_IMPORT static Stream* Create(const char* arg1);
+    ARTS_IMPORT static Stream* Create(const char* fileName);
 
     // ?Create@Stream@@SAPAV1@PBDPBUcoreFileMethods@@@Z
-    ARTS_IMPORT static Stream* Create(const char* arg1, const coreFileMethods* arg2);
+    ARTS_IMPORT static Stream* Create(const char* name, const coreFileMethods* arg2);
 
     // ?DumpOpenFiles@Stream@@SAXXZ
     ARTS_IMPORT static void DumpOpenFiles();
@@ -47,22 +47,22 @@ public:
     ARTS_IMPORT i32 GetCh();
 
     // ?Open@Stream@@SAPAV1@PBDPBUcoreFileMethods@@_N@Z
-    ARTS_IMPORT static Stream* Open(const char* arg1, const coreFileMethods* arg2, bool arg3);
+    ARTS_IMPORT static Stream* Open(const char* fileName, const coreFileMethods* fileMethods, bool method);
 
     // ?Open@Stream@@SAPAV1@PBD_N@Z
-    ARTS_IMPORT static Stream* Open(const char* arg1, bool arg2);
+    ARTS_IMPORT static Stream* Open(const char* fileName, bool readOnly);
 
     // ?PreLoad@Stream@@SAPAV1@PAV1@@Z
     ARTS_IMPORT static Stream* PreLoad(Stream* arg1);
 
     // ?PutCh@Stream@@QAEHE@Z
-    ARTS_IMPORT i32 PutCh(u8 arg1);
+    ARTS_IMPORT i32 PutCh(u8 character);
 
     // ?Read@Stream@@QAEHPAXH@Z
-    ARTS_IMPORT i32 Read(void* arg1, i32 arg2);
+    ARTS_IMPORT i32 Read(void* buffer, i32 size);
 
     // ?Seek@Stream@@QAEHH@Z
-    ARTS_IMPORT i32 Seek(i32 arg1);
+    ARTS_IMPORT i32 Seek(i32 offset);
 
     // ?Size@Stream@@QAEHXZ
     ARTS_IMPORT i32 Size();
@@ -71,7 +71,7 @@ public:
     ARTS_IMPORT i32 Tell();
 
     // ?Write@Stream@@QAEHPBXH@Z
-    ARTS_IMPORT i32 Write(const void* arg1, i32 arg2);
+    ARTS_IMPORT i32 Write(const void* source, i32 size);
 
 public:
     static const coreFileMethods*const& Access_sm_DefaultOpenMethods() { return sm_DefaultOpenMethods; }
@@ -80,7 +80,7 @@ public:
 
 private:
     // ?AllocStream@Stream@@CAPAV1@PBDHPBUcoreFileMethods@@@Z
-    ARTS_IMPORT static Stream* AllocStream(const char* arg1, i32 arg2, const coreFileMethods* arg3);
+    ARTS_IMPORT static Stream* AllocStream(const char* name, i32 handle, const coreFileMethods* fileMethods);
 
     // ?sm_DefaultOpenMethods@Stream@@0PBUcoreFileMethods@@B
     ARTS_IMPORT static const coreFileMethods*const sm_DefaultOpenMethods;

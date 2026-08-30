@@ -44,7 +44,7 @@ public:
     ARTS_IMPORT f32 ComputeDistance(const Vector3& arg1);
 
     // ?ComputeIntensity@ltLight@@QAEMABVVector3@@M@Z
-    ARTS_IMPORT f32 ComputeIntensity(const Vector3& arg1, f32 arg2);
+    ARTS_IMPORT f32 ComputeIntensity(const Vector3& This, f32 arg2);
 
     // ?Default@ltLight@@QAEXXZ
     ARTS_IMPORT void Default();
@@ -83,7 +83,7 @@ public:
     ARTS_IMPORT void Random();
 
     // ?SetGfxLight@ltLight@@QAE_NAAUgfxLight@@ABVVector3@@@Z
-    ARTS_IMPORT bool SetGfxLight(gfxLight& arg1, const Vector3& arg2);
+    ARTS_IMPORT bool SetGfxLight(gfxLight& This, const Vector3& arg2);
 
     // ?SetUpGfxLight@ltLight@@QAEXXZ
     ARTS_IMPORT void SetUpGfxLight();

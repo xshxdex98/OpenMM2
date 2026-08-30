@@ -90,13 +90,13 @@ public:
     ARTS_IMPORT void FreeFXNode(audFX* arg1);
 
     // ?FreeHeadNode@audManager@@QAEXPAVaudHead@@@Z
-    ARTS_IMPORT void FreeHeadNode(audHead* arg1);
+    ARTS_IMPORT void FreeHeadNode(audHead* lod);
 
     // ?FreeStreamNode@audManager@@QAEXPAVaudStream@@@Z
     ARTS_IMPORT void FreeStreamNode(audStream* arg1);
 
     // ?FreeTimeNode@audManager@@QAEXPAVaudTimeNode@@@Z
-    ARTS_IMPORT void FreeTimeNode(audTimeNode* arg1);
+    ARTS_IMPORT void FreeTimeNode(audTimeNode* lod);
 
     // ?GetActiveControlListPtr@audManager@@QAEPAVaudControl@@W4AUDTYPE@1@@Z
     ARTS_IMPORT audControl* GetActiveControlListPtr(audManager::AUDTYPE arg1);

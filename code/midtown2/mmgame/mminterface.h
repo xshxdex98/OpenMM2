@@ -92,7 +92,7 @@ public:
     ARTS_IMPORT void ShowLockedVehicleMessage();
 
     // ?ShowMain@mmInterface@@QAEXH@Z
-    ARTS_IMPORT void ShowMain(i32 arg1);
+    ARTS_IMPORT void ShowMain(i32 firstLoad);
 
     // ?Switch@mmInterface@@QAEXHH@Z
     ARTS_IMPORT void Switch(i32 arg1, i32 arg2);
@@ -120,13 +120,13 @@ private:
     ARTS_IMPORT i32 CreateSession();
 
     // ?GetHostPlayerData@mmInterface@@AAEHAAUmmPlayerInfo@@@Z
-    ARTS_IMPORT i32 GetHostPlayerData(mmPlayerInfo& arg1);
+    ARTS_IMPORT i32 GetHostPlayerData(mmPlayerInfo& indent_w);
 
     // ?GetRaceName@mmInterface@@AAEPADW4dgGameMode@@HPAD@Z
-    ARTS_IMPORT char* GetRaceName(dgGameMode arg1, i32 arg2, char* arg3);
+    ARTS_IMPORT char* GetRaceName(dgGameMode arg0, i32 arg2, char* arg3);
 
     // ?GetRaceString@mmInterface@@AAEXHPAD@Z
-    ARTS_IMPORT void GetRaceString(i32 arg1, char* arg2);
+    ARTS_IMPORT void GetRaceString(i32 arg0, char* arg2);
 
     // ?GetReplayDescCB@mmInterface@@AAEXXZ
     ARTS_IMPORT void GetReplayDescCB();
@@ -135,7 +135,7 @@ private:
     ARTS_IMPORT void GetScoreString(i32 arg1, char* arg2);
 
     // ?GetSessionData@mmInterface@@AAEXUNETSESSION_DESC@@@Z
-    ARTS_IMPORT void GetSessionData(NETSESSION_DESC arg1);
+    ARTS_IMPORT void GetSessionData(NETSESSION_DESC str_id);
 
     // ?GetTimeString@mmInterface@@AAEXMPAD@Z
     ARTS_IMPORT void GetTimeString(f32 arg1, char* arg2);

@@ -37,7 +37,7 @@ public:
     ARTS_IMPORT void Draw();
 
     // ?Init@mmGearIndicator@@QAEXPAVmmExternalView@@PAVmmPlayer@@@Z
-    ARTS_IMPORT void Init(mmExternalView* arg1, mmPlayer* arg2);
+    ARTS_IMPORT void Init(mmExternalView* sz, mmPlayer* arg2);
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

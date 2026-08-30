@@ -35,7 +35,7 @@ public:
     ARTS_IMPORT virtual ~mmVehList();
 
     // ?GetVehicleID@mmVehList@@QAEHPAD@Z
-    ARTS_IMPORT i32 GetVehicleID(char* arg1);
+    ARTS_IMPORT i32 GetVehicleID(char* renderer);
 
     // ?GetVehicleInfo@mmVehList@@QAEPAVmmVehInfo@@H@Z
     ARTS_IMPORT mmVehInfo* GetVehicleInfo(i32 arg1);

@@ -47,7 +47,7 @@ public:
     ARTS_IMPORT virtual void Reset();
 
     // ?FileIO@camTrackCS@@UAEXAAVdatParser@@@Z
-    ARTS_IMPORT virtual void FileIO(datParser& arg1);
+    ARTS_IMPORT virtual void FileIO(datParser& renderer);
 
     // ?AfterLoad@camTrackCS@@UAEXXZ
     ARTS_IMPORT virtual void AfterLoad();
@@ -69,7 +69,7 @@ private:
     ARTS_IMPORT void Collide(Vector3 arg1);
 
     // ?Front@camTrackCS@@AAEXM@Z
-    ARTS_IMPORT void Front(f32 arg1);
+    ARTS_IMPORT void Front(f32 renderer);
 
     // ?MinMax@camTrackCS@@AAEXVMatrix34@@@Z
     ARTS_IMPORT void MinMax(Matrix34 arg1);

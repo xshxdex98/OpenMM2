@@ -37,7 +37,7 @@ public:
     ARTS_IMPORT void Draw();
 
     // ?Init@mmSpeedIndicator@@QAEXPAVmmExternalView@@PAVvehCarSim@@@Z
-    ARTS_IMPORT void Init(mmExternalView* arg1, vehCarSim* arg2);
+    ARTS_IMPORT void Init(mmExternalView* sz, vehCarSim* arg2);
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

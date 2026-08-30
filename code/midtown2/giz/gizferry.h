@@ -46,10 +46,10 @@ public:
     ARTS_IMPORT virtual u32 SizeOf();
 
     // ?Cull@gizFerry@@QAEXH@Z
-    ARTS_IMPORT void Cull(i32 arg1);
+    ARTS_IMPORT void Cull(i32 lod);
 
     // ?Init@gizFerry@@QAEXPADPAVdgPath@@@Z
-    ARTS_IMPORT void Init(char* arg1, dgPath* arg2);
+    ARTS_IMPORT void Init(char* new_capacity, dgPath* arg2);
 
     // ?SetSpeed@gizFerry@@QAEXM@Z
     ARTS_IMPORT void SetSpeed(f32 arg1);

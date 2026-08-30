@@ -99,7 +99,7 @@ private:
     ARTS_IMPORT void HUDMessage(i32 arg1);
 
     // ?LoadEventFile@mmSingleStunt@@AAE_NPAD@Z
-    ARTS_IMPORT bool LoadEventFile(char* arg1);
+    ARTS_IMPORT bool LoadEventFile(char* platform_render_arg);
 
     // ?NextRaceAvailable@mmSingleStunt@@AAE_NXZ
     ARTS_IMPORT bool NextRaceAvailable();

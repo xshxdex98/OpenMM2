@@ -94,13 +94,13 @@ private:
     ARTS_IMPORT void ComputeXZCurve(Vector3& arg1, Vector3& arg2, Vector3& arg3, Vector3& arg4);
 
     // ?DetermineNextLink@aiSubway@@AAE_NPAVaiPath@@PAPAV2@@Z
-    ARTS_IMPORT bool DetermineNextLink(aiPath* arg1, aiPath** arg2);
+    ARTS_IMPORT bool DetermineNextLink(aiPath* DrawList, aiPath** cull_rect);
 
     // ?DistanceToIntersection@aiSubway@@AAEMXZ
     ARTS_IMPORT f32 DistanceToIntersection();
 
     // ?OkayToEnterIntersection@aiSubway@@AAE_NM@Z
-    ARTS_IMPORT bool OkayToEnterIntersection(f32 arg1);
+    ARTS_IMPORT bool OkayToEnterIntersection(f32 DrawList);
 
     // ?ReverseDirection@aiSubway@@AAEXXZ
     ARTS_IMPORT void ReverseDirection();

@@ -32,7 +32,7 @@ public:
     ARTS_IMPORT static void AdvanceV();
 
     // ?ConvexPolyIntersect@phConvexPoly@@SAHHPBVVector2@@H0PAUData@1@@Z
-    ARTS_IMPORT static i32 ConvexPolyIntersect(i32 arg1, const Vector2* arg2, i32 arg3, const Vector2* arg4, phConvexPoly::Data* arg5);
+    ARTS_IMPORT static i32 ConvexPolyIntersect(i32 bb, const Vector2* id, i32 data_type, const Vector2* v, phConvexPoly::Data* v_min);
 
     // ?GetuHeadOut@phConvexPoly@@SAXXZ
     ARTS_IMPORT static void GetuHeadOut();
@@ -50,7 +50,7 @@ public:
     ARTS_IMPORT static void RecordEE();
 
     // ?RecordInteriorCollides@phConvexPoly@@SAX_N@Z
-    ARTS_IMPORT static void RecordInteriorCollides(bool arg1);
+    ARTS_IMPORT static void RecordInteriorCollides(bool values);
 
     // ?RecordNoIsect@phConvexPoly@@SAXH@Z
     ARTS_IMPORT static void RecordNoIsect(i32 arg1);

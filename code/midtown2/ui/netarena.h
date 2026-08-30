@@ -36,7 +36,7 @@ class NetArena : public UIMenu
 {
 public:
     // ??0NetArena@@QAE@H@Z
-    ARTS_IMPORT NetArena(i32 arg1);
+    ARTS_IMPORT NetArena(i32 getter);
 
     // ??1NetArena@@UAE@XZ
     ARTS_IMPORT virtual ~NetArena();
@@ -48,7 +48,7 @@ public:
     ARTS_IMPORT void AddGameChatLine(char* arg1);
 
     // ?AddRosterName@NetArena@@QAEXPAD@Z
-    ARTS_IMPORT void AddRosterName(char* arg1);
+    ARTS_IMPORT void AddRosterName(char* TestChar);
 
     // ?AddRosterName@NetArena@@QAEXPAULocString@@00KHH@Z
     ARTS_IMPORT void AddRosterName(LocString* arg1, LocString* arg2, LocString* arg3, ulong arg4, i32 arg5, i32 arg6);
@@ -111,7 +111,7 @@ public:
     ARTS_IMPORT void SetMyStatus(i32 arg1);
 
     // ?SetStatus@NetArena@@QAEXKHH@Z
-    ARTS_IMPORT void SetStatus(ulong arg1, i32 arg2, i32 arg3);
+    ARTS_IMPORT void SetStatus(ulong arg1, i32 readyStatus, i32 arg3);
 
     // ?SetTeamWidgets@NetArena@@QAEXXZ
     ARTS_IMPORT void SetTeamWidgets();

@@ -29,7 +29,7 @@ class ltLensFlare
 {
 public:
     // ??0ltLensFlare@@QAE@H@Z
-    ARTS_IMPORT ltLensFlare(i32 arg1);
+    ARTS_IMPORT ltLensFlare(i32 _Src);
 
     // ??1ltLensFlare@@QAE@XZ
     ARTS_IMPORT ~ltLensFlare();

@@ -36,7 +36,7 @@ class sdlPage16
 {
 public:
     // ??0sdlPage16@@QAE@HH@Z
-    ARTS_IMPORT sdlPage16(i32 arg1, i32 arg2);
+    ARTS_IMPORT sdlPage16(i32 perimeterVertexCount, i32 vertexIndicesCount);
 
     // ?ArcMap@sdlPage16@@QBEXPAMPBGHHH@Z
     ARTS_IMPORT void ArcMap(f32* arg1, unsigned const i16* arg2, i32 arg3, i32 arg4, i32 arg5) const;
@@ -48,7 +48,7 @@ public:
     ARTS_IMPORT bool CollideSegment(const Vector4* arg1, lvlSegment& arg2, lvlIntersection& arg3, f32 arg4, f32 arg5) const;
 
     // ?ComputeBoundSphere@sdlPage16@@QBEXAAVVector4@@@Z
-    ARTS_IMPORT void ComputeBoundSphere(Vector4& arg1) const;
+    ARTS_IMPORT void ComputeBoundSphere(Vector4& font) const;
 
     // ?Draw@sdlPage16@@QBEXHI@Z
     ARTS_IMPORT void Draw(i32 arg1, u32 arg2) const;
@@ -57,31 +57,31 @@ public:
     ARTS_IMPORT static void FindBoundingIsoParams(const Vector4* arg1, const Vector3* arg2, unsigned const i16* arg3, i32 arg4, i32 arg5, i32& arg6, i32& arg7);
 
     // ?GetCentroid@sdlPage16@@QBEXAAVVector3@@@Z
-    ARTS_IMPORT void GetCentroid(Vector3& arg1) const;
+    ARTS_IMPORT void GetCentroid(Vector3& out) const;
 
     // ?GetCodedVertex@sdlPage16@@QBEABVVector3@@H@Z
-    ARTS_IMPORT const Vector3& GetCodedVertex(i32 arg1) const;
+    ARTS_IMPORT const Vector3& GetCodedVertex(i32 index) const;
 
     // ?GetDrawnSDLPrims@sdlPage16@@QBEHHPAHH@Z
-    ARTS_IMPORT i32 GetDrawnSDLPrims(i32 arg1, i32* arg2, i32 arg3) const;
+    ARTS_IMPORT i32 GetDrawnSDLPrims(i32 lod, i32* pOutput, i32 _1D4C) const;
 
     // ?GetFloat@sdlPage16@@QBEMH@Z
-    ARTS_IMPORT f32 GetFloat(i32 arg1) const;
+    ARTS_IMPORT f32 GetFloat(i32 index) const;
 
     // ?GetPerimeterCount@sdlPage16@@QBEHXZ
     ARTS_IMPORT i32 GetPerimeterCount() const;
 
     // ?GetPerimeterVertexIndex@sdlPage16@@QBEHH@Z
-    ARTS_IMPORT i32 GetPerimeterVertexIndex(i32 arg1) const;
+    ARTS_IMPORT i32 GetPerimeterVertexIndex(i32 index) const;
 
     // ?GetTexture@sdlPage16@@QBEPAVgfxTexture@@H@Z
     ARTS_IMPORT gfxTexture* GetTexture(i32 arg1) const;
 
     // ?LoadBinary@sdlPage16@@SAPAV1@PAVStream@@@Z
-    ARTS_IMPORT static sdlPage16* LoadBinary(Stream* arg1);
+    ARTS_IMPORT static sdlPage16* LoadBinary(Stream* stream);
 
     // ?PointInPerimeter@sdlPage16@@QBE_NMM@Z
-    ARTS_IMPORT bool PointInPerimeter(f32 arg1, f32 arg2) const;
+    ARTS_IMPORT bool PointInPerimeter(f32 x, f32 z) const;
 
     // ?WallMap@sdlPage16@@QBEXPAMPBGMHH@Z
     ARTS_IMPORT void WallMap(f32* arg1, unsigned const i16* arg2, f32 arg3, i32 arg4, i32 arg5) const;
@@ -91,7 +91,7 @@ private:
     ARTS_IMPORT static u32 GetShadedColor(u32 arg1, u32 arg2);
 
     // ?GetShadedColor@sdlPage16@@DAIIII@Z
-    ARTS_IMPORT static u32 GetShadedColor(u32 arg1, u32 arg2, u32 arg3);
+    ARTS_IMPORT static u32 GetShadedColor(u32 arg0, u32 arg2, u32 arg3);
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

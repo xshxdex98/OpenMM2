@@ -47,16 +47,16 @@ public:
     ARTS_IMPORT virtual void Reset();
 
     // ?Highlight@mmCompReplay@@UAEXPAVmmTextNode@@H@Z
-    ARTS_IMPORT virtual void Highlight(mmTextNode* arg1, i32 arg2);
+    ARTS_IMPORT virtual void Highlight(mmTextNode* arg1, i32 index);
 
     // ?Box@mmCompReplay@@UAEXHPAVmmTextNode@@H@Z
-    ARTS_IMPORT virtual void Box(i32 arg1, mmTextNode* arg2, i32 arg3);
+    ARTS_IMPORT virtual void Box(i32 arg1, mmTextNode* arg2, i32 index);
 
     // ?SetGeometry@mmCompReplay@@UAEXMMMM@Z
     ARTS_IMPORT virtual void SetGeometry(f32 arg1, f32 arg2, f32 arg3, f32 arg4);
 
     // ?SetPosition@mmCompReplay@@UAEXPAVmmTextNode@@HM@Z
-    ARTS_IMPORT virtual void SetPosition(mmTextNode* arg1, i32 arg2, f32 arg3);
+    ARTS_IMPORT virtual void SetPosition(mmTextNode* arg0, i32 arg2, f32 arg3);
 
     // ?Init@mmCompReplay@@QAEXPAD@Z
     ARTS_IMPORT void Init(char* arg1);

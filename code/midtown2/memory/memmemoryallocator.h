@@ -35,7 +35,7 @@ public:
     ARTS_IMPORT ~memMemoryAllocator();
 
     // ?Allocate@memMemoryAllocator@@QAEPAXI_N@Z
-    ARTS_IMPORT void* Allocate(u32 arg1, bool arg2);
+    ARTS_IMPORT void* Allocate(u32 size, bool is_array);
 
     // ?CheckPointer@memMemoryAllocator@@QAEXPAX@Z
     ARTS_IMPORT void CheckPointer(void* arg1);
@@ -50,16 +50,16 @@ public:
     ARTS_IMPORT static void DisplayUsed(const char* arg1);
 
     // ?FindHeap@memMemoryAllocator@@SAPAV1@PAX@Z
-    ARTS_IMPORT static memMemoryAllocator* FindHeap(void* arg1);
+    ARTS_IMPORT static memMemoryAllocator* FindHeap(void* lpAddress);
 
     // ?Free@memMemoryAllocator@@QAEXPAX_N@Z
-    ARTS_IMPORT void Free(void* arg1, bool arg2);
+    ARTS_IMPORT void Free(void* lpAddress, bool isArray);
 
     // ?GetStats@memMemoryAllocator@@QAEXPAUmemMemStats@@_N@Z
     ARTS_IMPORT void GetStats(memMemStats* arg1, bool arg2);
 
     // ?Init@memMemoryAllocator@@QAEXPAXI_N1@Z
-    ARTS_IMPORT void Init(void* arg1, u32 arg2, bool arg3, bool arg4);
+    ARTS_IMPORT void Init(void* arg1, u32 allocSize, bool arg3, bool checkAlloc);
 
     // ?Kill@memMemoryAllocator@@QAEXXZ
     ARTS_IMPORT void Kill();
@@ -68,7 +68,7 @@ public:
     ARTS_IMPORT static void LogAllocations(i32 arg1);
 
     // ?Reallocate@memMemoryAllocator@@QAEPAXPAXI@Z
-    ARTS_IMPORT void* Reallocate(void* arg1, u32 arg2);
+    ARTS_IMPORT void* Reallocate(void* ptr, u32 length);
 
     // ?SanityCheck@memMemoryAllocator@@QAEXXZ
     ARTS_IMPORT void SanityCheck();
@@ -82,7 +82,7 @@ private:
     ARTS_IMPORT void Link(memMemoryAllocator::node* arg1);
 
     // ?Unlink@memMemoryAllocator@@AAEXPAUnode@1@@Z
-    ARTS_IMPORT void Unlink(memMemoryAllocator::node* arg1);
+    ARTS_IMPORT void Unlink(memMemoryAllocator::node* n);
 
     // ?VerifyBlock@memMemoryAllocator@@AAEXPAX@Z
     ARTS_IMPORT void VerifyBlock(void* arg1);

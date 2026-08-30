@@ -63,13 +63,13 @@ public:
     ARTS_IMPORT void AddBrackets(UIIcon* arg1, UIIcon* arg2, uiWidget* arg3, f32 arg4, f32 arg5);
 
     // ?AddMenu2@MenuManager@@QAEHPAVUIMenu@@@Z
-    ARTS_IMPORT i32 AddMenu2(UIMenu* arg1);
+    ARTS_IMPORT i32 AddMenu2(UIMenu* label_id);
 
     // ?AddPointer@MenuManager@@QAEXXZ
     ARTS_IMPORT void AddPointer();
 
     // ?AdjustPopupCard@MenuManager@@QAEXPAVUIMenu@@@Z
-    ARTS_IMPORT void AdjustPopupCard(UIMenu* arg1);
+    ARTS_IMPORT void AdjustPopupCard(UIMenu* label_id);
 
     // ?AllocateMenuSwitchAudio@MenuManager@@QAEXXZ
     ARTS_IMPORT void AllocateMenuSwitchAudio();
@@ -93,7 +93,7 @@ public:
     ARTS_IMPORT void DeclareLastDrawn(asNode* arg1);
 
     // ?DeleteMenu@MenuManager@@QAEXPAVUIMenu@@@Z
-    ARTS_IMPORT void DeleteMenu(UIMenu* arg1);
+    ARTS_IMPORT void DeleteMenu(UIMenu* label_id);
 
     // ?Disable@MenuManager@@QAEXH@Z
     ARTS_IMPORT void Disable(i32 arg1);
@@ -132,7 +132,7 @@ public:
     ARTS_IMPORT Vector4& GetFGColor(i32 arg1);
 
     // ?GetFont@MenuManager@@QAEPAXH@Z
-    ARTS_IMPORT void* GetFont(i32 arg1);
+    ARTS_IMPORT void* GetFont(i32 label_id);
 
     // ?GetPreviousMenu@MenuManager@@QAEHXZ
     ARTS_IMPORT i32 GetPreviousMenu();
@@ -165,10 +165,10 @@ public:
     ARTS_IMPORT i32 MenuState(i32 arg1);
 
     // ?MouseAction@MenuManager@@QAEPAVuiWidget@@HMM@Z
-    ARTS_IMPORT uiWidget* MouseAction(i32 arg1, f32 arg2, f32 arg3);
+    ARTS_IMPORT uiWidget* MouseAction(i32 type, f32 x, f32 y);
 
     // ?NotifyMouseSelect@MenuManager@@QAEXPAVUIMenu@@@Z
-    ARTS_IMPORT void NotifyMouseSelect(UIMenu* arg1);
+    ARTS_IMPORT void NotifyMouseSelect(UIMenu* label_id);
 
     // ?OpenDialog@MenuManager@@QAEXH@Z
     ARTS_IMPORT void OpenDialog(i32 arg1);
@@ -201,7 +201,7 @@ public:
     ARTS_IMPORT void SetPreviousMenu(i32 arg1);
 
     // ?Switch@MenuManager@@QAEHH@Z
-    ARTS_IMPORT i32 Switch(i32 arg1);
+    ARTS_IMPORT i32 Switch(i32 label_id);
 
     // ?SwitchFocus@MenuManager@@QAEXPAVUIMenu@@@Z
     ARTS_IMPORT void SwitchFocus(UIMenu* arg1);

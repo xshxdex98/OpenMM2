@@ -40,7 +40,7 @@ public:
     ARTS_IMPORT virtual void PreAvoid(const Vector3& arg1, const Vector3& arg2, f32 arg3, Vector3& arg4, Vector3& arg5);
 
     // ?IsBlockingTarget@aiVehicle@@UAEMABVVector3@@0MM@Z
-    ARTS_IMPORT virtual f32 IsBlockingTarget(const Vector3& arg1, const Vector3& arg2, f32 arg3, f32 arg4);
+    ARTS_IMPORT virtual f32 IsBlockingTarget(const Vector3& DrawList, const Vector3& __formal, f32 uv, f32 prim);
 
     // ?Update@aiVehicle@@UAEXXZ
     ARTS_IMPORT virtual void Update();

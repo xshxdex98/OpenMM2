@@ -36,13 +36,13 @@ public:
     ARTS_IMPORT ~cityPropulator();
 
     // ?Load@cityPropulator@@QAE_NPBD00@Z
-    ARTS_IMPORT bool Load(const char* arg1, const char* arg2, const char* arg3);
+    ARTS_IMPORT bool Load(const char* p2, const char* p3, const char* p4);
 
     // ?LookupRule@cityPropulator@@QAEHPBD@Z
     ARTS_IMPORT i32 LookupRule(const char* arg1);
 
     // ?Propulate@cityPropulator@@QAEXHHHP6AXHPBDABVMatrix34@@@Z@Z
-    ARTS_IMPORT void Propulate(i32 arg1, i32 arg2, i32 arg3, void (__cdecl* arg4)(i32,const char*,const Matrix34&));
+    ARTS_IMPORT void Propulate(i32 a, i32 b, i32 rounding, void (__cdecl* rounding_corners)(i32,const char*,const Matrix34&));
 
 public:
     static lvlSDL*& Access_sm_SDL() { return sm_SDL; }

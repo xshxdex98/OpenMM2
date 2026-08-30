@@ -62,7 +62,7 @@ public:
     ARTS_IMPORT void Init(LocString* arg1, char* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, i32 arg7, i32 arg8, i32 arg9, i32 arg10, i32 arg11, datCallback arg12, UIMenu* arg13);
 
     // ?IsValidChar@UITextField@@QAEHG@Z
-    ARTS_IMPORT i32 IsValidChar(u16 arg1);
+    ARTS_IMPORT i32 IsValidChar(u16 label_id);
 
     // ?KeyAction@UITextField@@QAEXPATeqEvent@@@Z
     ARTS_IMPORT void KeyAction(eqEvent* arg1);
@@ -83,7 +83,7 @@ public:
     ARTS_IMPORT void ToggleField(i32 arg1);
 
     // ?WmCharHandler@UITextField@@QAEXE@Z
-    ARTS_IMPORT void WmCharHandler(u8 arg1);
+    ARTS_IMPORT void WmCharHandler(u8 TestChar);
 
 public:
     // Members from 0x06C; everything below that belongs to uiWidget.

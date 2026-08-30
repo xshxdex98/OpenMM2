@@ -58,7 +58,7 @@ public:
     ARTS_IMPORT void AddComponent(mmCompBase* arg1);
 
     // ?AddTitle@UICompositeScroll@@QAEXPAVmmCompBase@@@Z
-    ARTS_IMPORT void AddTitle(mmCompBase* arg1);
+    ARTS_IMPORT void AddTitle(mmCompBase* child);
 
     // ?Clear@UICompositeScroll@@QAEXXZ
     ARTS_IMPORT void Clear();
@@ -67,7 +67,7 @@ public:
     ARTS_IMPORT f32 GetHeight();
 
     // ?GetHit@UICompositeScroll@@QAEHMM@Z
-    ARTS_IMPORT i32 GetHit(f32 arg1, f32 arg2);
+    ARTS_IMPORT i32 GetHit(f32 transformer, f32 DrawList);
 
     // ?GetSelectedCount@UICompositeScroll@@QAEHXZ
     ARTS_IMPORT i32 GetSelectedCount();

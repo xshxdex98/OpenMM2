@@ -46,7 +46,7 @@ public:
     ARTS_IMPORT void Reset();
 
     // ?Update@lvlTrackManager@@QAEXABVVector3@@0PAVgfxTexture@@@Z
-    ARTS_IMPORT void Update(const Vector3& arg1, const Vector3& arg2, gfxTexture* arg3);
+    ARTS_IMPORT void Update(const Vector3& info, const Vector3& unicode_codepoint, gfxTexture* offset);
 
 private:
     // ?AddVertex@lvlTrackManager@@AAEXPAVgfxTexture@@MABVVector3@@1@Z

@@ -58,7 +58,7 @@ public:
     enum eSource : i32;
 
     // ??0UIMenu@@QAE@H@Z
-    ARTS_IMPORT UIMenu(i32 arg1);
+    ARTS_IMPORT UIMenu(i32 menuID);
 
     // ??1UIMenu@@UAE@XZ
     ARTS_IMPORT virtual ~UIMenu();
@@ -100,7 +100,7 @@ public:
     ARTS_IMPORT uiWidget* AddHotSpot(i32 arg1, char* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, datCallback arg7);
 
     // ?AddIcon@UIMenu@@QAEPAVUIIcon@@HPADMM@Z
-    ARTS_IMPORT UIIcon* AddIcon(i32 arg1, char* arg2, f32 arg3, f32 arg4);
+    ARTS_IMPORT UIIcon* AddIcon(i32 arg1, char* tooltip, f32 x, f32 y);
 
     // ?AddIconW@UIMenu@@QAEPAVUIIconW@@HPAULocString@@PADMMMMVdatCallback@@@Z
     ARTS_IMPORT UIIconW* AddIconW(i32 arg1, LocString* arg2, char* arg3, f32 arg4, f32 arg5, f32 arg6, f32 arg7, datCallback arg8);
@@ -205,7 +205,7 @@ public:
     ARTS_IMPORT uiWidget* MouseHitCheck(i32 arg1, f32 arg2, f32 arg3);
 
     // ?ScaleWidget@UIMenu@@QAEXAAM000@Z
-    ARTS_IMPORT void ScaleWidget(f32& arg1, f32& arg2, f32& arg3, f32& arg4);
+    ARTS_IMPORT void ScaleWidget(f32& x, f32& y, f32& w, f32& h);
 
     // ?ScanInput@UIMenu@@QAEHPATeqEvent@@@Z
     ARTS_IMPORT i32 ScanInput(eqEvent* arg1);

@@ -41,7 +41,7 @@ public:
     ARTS_IMPORT i32 HowMany(const char* arg1, char arg2) const;
 
     // ?Load@crSkeletonData@@QAE_NPBD@Z
-    ARTS_IMPORT bool Load(const char* arg1);
+    ARTS_IMPORT bool Load(const char* rhs);
 
 private:
     // ?InitMirror@crSkeletonData@@AAEXXZ

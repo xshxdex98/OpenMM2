@@ -56,7 +56,7 @@ public:
     ARTS_IMPORT void Impact();
 
     // ?Init@vehStuck@@QAEXPAVvehCarSim@@PBD@Z
-    ARTS_IMPORT void Init(vehCarSim* arg1, const char* arg2);
+    ARTS_IMPORT void Init(vehCarSim* arg0, const char* arg2);
 
     // ?Pegged@vehStuck@@QAEHXZ
     ARTS_IMPORT i32 Pegged();

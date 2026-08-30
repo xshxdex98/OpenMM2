@@ -36,7 +36,7 @@ class asCullManager : public asNode
 {
 public:
     // ??0asCullManager@@QAE@HH@Z
-    ARTS_IMPORT asCullManager(i32 arg1, i32 arg2);
+    ARTS_IMPORT asCullManager(i32 maxCullables, i32 maxCullables2D);
 
     // ??1asCullManager@@UAE@XZ
     ARTS_IMPORT virtual ~asCullManager();
@@ -48,16 +48,16 @@ public:
     ARTS_IMPORT virtual void Reset();
 
     // ?DeclareCamera@asCullManager@@UAEXPAVasCamera@@@Z
-    ARTS_IMPORT virtual void DeclareCamera(asCamera* arg1);
+    ARTS_IMPORT virtual void DeclareCamera(asCamera* camera);
 
     // ?DeclareCullable@asCullManager@@UAEXPAVasCullable@@@Z
-    ARTS_IMPORT virtual void DeclareCullable(asCullable* arg1);
+    ARTS_IMPORT virtual void DeclareCullable(asCullable* newCullable);
 
     // ?DeclareCullable2D@asCullManager@@UAEXPAVasCullable@@@Z
-    ARTS_IMPORT virtual void DeclareCullable2D(asCullable* arg1);
+    ARTS_IMPORT virtual void DeclareCullable2D(asCullable* newCullable);
 
     // ?DeclareCullable2DFG@asCullManager@@UAEXPAVasCullable@@@Z
-    ARTS_IMPORT virtual void DeclareCullable2DFG(asCullable* arg1);
+    ARTS_IMPORT virtual void DeclareCullable2DFG(asCullable* newCullable);
 
     // ?DeclareBitmap@asCullManager@@QAEXPAVasCullable@@PAVgfxBitmap@@@Z
     ARTS_IMPORT void DeclareBitmap(asCullable* arg1, gfxBitmap* arg2);

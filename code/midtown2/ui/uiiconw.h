@@ -48,7 +48,7 @@ public:
     ARTS_IMPORT virtual void Action(eqEvent arg1);
 
     // ?Switch@UIIconW@@UAEXH@Z
-    ARTS_IMPORT virtual void Switch(i32 arg1);
+    ARTS_IMPORT virtual void Switch(i32 transformer);
 
     // ?Init@UIIconW@@QAEXPAULocString@@PADMMMMVdatCallback@@@Z
     ARTS_IMPORT void Init(LocString* arg1, char* arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6, datCallback arg7);

@@ -32,7 +32,7 @@ public:
     ARTS_IMPORT datCallback(void (__cdecl* arg1)(void*,void*), void* arg2);
 
     // ??0datCallback@@QAE@P6AXPAX@Z0@Z
-    ARTS_IMPORT datCallback(void (__cdecl* arg1)(void*), void* arg2);
+    ARTS_IMPORT datCallback(void (__cdecl* arg1)(void*), void* parameter);
 
     // ??0datCallback@@QAE@P6AXXZ@Z
     ARTS_IMPORT datCallback(void (__cdecl* arg1)(void));
@@ -50,7 +50,7 @@ public:
     ARTS_IMPORT datCallback();
 
     // ?Call@datCallback@@QAEXPAX@Z
-    ARTS_IMPORT void Call(void* arg1);
+    ARTS_IMPORT void Call(void* parameter);
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

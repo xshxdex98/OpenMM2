@@ -27,7 +27,7 @@ class winDispatchable
 {
 public:
     // ??0winDispatchable@@QAE@I@Z
-    ARTS_IMPORT winDispatchable(u32 arg1);
+    ARTS_IMPORT winDispatchable(u32 id);
 
     // ??1winDispatchable@@UAE@XZ
     ARTS_IMPORT virtual ~winDispatchable();

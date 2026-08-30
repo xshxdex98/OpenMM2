@@ -52,7 +52,7 @@ public:
     ARTS_IMPORT void GetHitArea(f32& arg1, f32& arg2);
 
     // ?Init@UIIcon@@QAEXPADMM@Z
-    ARTS_IMPORT void Init(char* arg1, f32 arg2, f32 arg3);
+    ARTS_IMPORT void Init(char* imageName, f32 x, f32 y);
 
     // ?LoadBitchmap@UIIcon@@QAEXPAD@Z
     ARTS_IMPORT void LoadBitchmap(char* arg1);

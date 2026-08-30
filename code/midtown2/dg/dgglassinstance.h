@@ -40,7 +40,7 @@ public:
     ARTS_IMPORT virtual void Reset();
 
     // ?Draw@dgGlassInstance@@UAEXH@Z
-    ARTS_IMPORT virtual void Draw(i32 arg1);
+    ARTS_IMPORT virtual void Draw(i32 lod);
 
     // ?DrawGlow@dgGlassInstance@@UAEXXZ
     ARTS_IMPORT virtual void DrawGlow();
@@ -49,7 +49,7 @@ public:
     ARTS_IMPORT virtual u32 SizeOf();
 
     // ?Impact@dgGlassInstance@@UAEXPAVlvlInstance@@PAVVector3@@@Z
-    ARTS_IMPORT virtual void Impact(lvlInstance* arg1, Vector3* arg2);
+    ARTS_IMPORT virtual void Impact(lvlInstance* arg0, Vector3* arg4);
 
     // ?InitStaticSystems@dgGlassInstance@@SAXXZ
     ARTS_IMPORT static void InitStaticSystems();

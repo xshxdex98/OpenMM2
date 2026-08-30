@@ -90,7 +90,7 @@ public:
     ARTS_IMPORT static bool IsPolice(const char* arg1);
 
     // ?IsSemiOrBus@vehCarAudioContainer@@SA_NPBD@Z
-    ARTS_IMPORT static bool IsSemiOrBus(const char* arg1);
+    ARTS_IMPORT static bool IsSemiOrBus(const char* label_id);
 
     // ?PlayHorn@vehCarAudioContainer@@QAEXXZ
     ARTS_IMPORT void PlayHorn();
@@ -99,7 +99,7 @@ public:
     ARTS_IMPORT void PlayNitro();
 
     // ?RegisterTypes@vehCarAudioContainer@@SAXPBD@Z
-    ARTS_IMPORT static void RegisterTypes(const char* arg1);
+    ARTS_IMPORT static void RegisterTypes(const char* fileName);
 
     // ?RemoveNetVehicleAudio@vehCarAudioContainer@@QAEXXZ
     ARTS_IMPORT void RemoveNetVehicleAudio();
@@ -108,7 +108,7 @@ public:
     ARTS_IMPORT void Reset();
 
     // ?Set2DPan@vehCarAudioContainer@@QAEXM@Z
-    ARTS_IMPORT void Set2DPan(f32 arg1);
+    ARTS_IMPORT void Set2DPan(f32 label_id);
 
     // ?Set3D@vehCarAudioContainer@@QAEX_N@Z
     ARTS_IMPORT void Set3D(bool arg1);
@@ -145,10 +145,10 @@ public:
 
 private:
     // ?RegisterPoliceNames@vehCarAudioContainer@@CAXPAVStream@@PAD@Z
-    ARTS_IMPORT static void RegisterPoliceNames(Stream* arg1, char* arg2);
+    ARTS_IMPORT static void RegisterPoliceNames(Stream* stream, char* names);
 
     // ?RegisterSemiNames@vehCarAudioContainer@@CAXPAVStream@@PAD@Z
-    ARTS_IMPORT static void RegisterSemiNames(Stream* arg1, char* arg2);
+    ARTS_IMPORT static void RegisterSemiNames(Stream* stream, char* names);
 
     // ?s_iNumPoliceNames@vehCarAudioContainer@@0HA
     ARTS_IMPORT static i32 s_iNumPoliceNames;

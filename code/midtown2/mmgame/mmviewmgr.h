@@ -45,7 +45,7 @@ public:
     ARTS_IMPORT void Init(mmHUD* arg1, mmHudMap* arg2, mmPlayer* arg3);
 
     // ?SetViewSetting@mmViewMgr@@QAEXH@Z
-    ARTS_IMPORT void SetViewSetting(i32 arg1);
+    ARTS_IMPORT void SetViewSetting(i32 node);
 };
 
 // ??_7mmViewMgr@@6B@

@@ -77,9 +77,9 @@ void aiIntersection::AddBanger(aiObstacle* arg1)
 }
 
 // ?AddRoad@aiIntersection@@QAEXPAVaiPath@@@Z
-void aiIntersection::AddRoad(aiPath* arg1)
+void aiIntersection::AddRoad(aiPath* road)
 {
-    if (!arg1)
+    if (!road)
         return;
 
     // Grow by one every time, copy, then free. There is no null test on the result - the original
@@ -89,7 +89,7 @@ void aiIntersection::AddRoad(aiPath* arg1)
     for (i32 i = 0; i < RoadCount; ++i)
         roads[i] = Roads[i];
 
-    roads[RoadCount] = arg1;
+    roads[RoadCount] = road;
 
     if (RoadCount > 0)
         operator delete(Roads);

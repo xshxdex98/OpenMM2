@@ -43,7 +43,7 @@ public:
     ARTS_IMPORT virtual void Reset();
 
     // ?ResChange@asNode@@UAEXHH@Z
-    ARTS_IMPORT virtual void ResChange(i32 arg1, i32 arg2);
+    ARTS_IMPORT virtual void ResChange(i32 width, i32 height);
 
     // ?UpdatePaused@asNode@@UAEXXZ
     ARTS_IMPORT virtual void UpdatePaused();
@@ -73,10 +73,10 @@ public:
     ARTS_IMPORT virtual const char* GetDirName();
 
     // ?AddChild@asNode@@QAEHPAV1@@Z
-    ARTS_IMPORT i32 AddChild(asNode* arg1);
+    ARTS_IMPORT i32 AddChild(asNode* child);
 
     // ?GetChild@asNode@@QAEPAV1@H@Z
-    ARTS_IMPORT asNode* GetChild(i32 arg1);
+    ARTS_IMPORT asNode* GetChild(i32 index);
 
     // ?GetLastChild@asNode@@QAEPAV1@XZ
     ARTS_IMPORT asNode* GetLastChild();
@@ -85,7 +85,7 @@ public:
     ARTS_IMPORT asNode* GetNext();
 
     // ?InsertChild@asNode@@QAEHHPAV1@@Z
-    ARTS_IMPORT i32 InsertChild(i32 arg1, asNode* arg2);
+    ARTS_IMPORT i32 InsertChild(i32 index, asNode* child);
 
     // ?NumChildren@asNode@@QAEHXZ
     ARTS_IMPORT i32 NumChildren();
@@ -94,16 +94,16 @@ public:
     ARTS_IMPORT void RemoveAllChildren();
 
     // ?RemoveChild@asNode@@QAEHH@Z
-    ARTS_IMPORT i32 RemoveChild(i32 arg1);
+    ARTS_IMPORT i32 RemoveChild(i32 index);
 
     // ?RemoveChild@asNode@@QAEHPAV1@@Z
     ARTS_IMPORT i32 RemoveChild(asNode* arg1);
 
     // ?SetName@asNode@@QAEXPBD@Z
-    ARTS_IMPORT void SetName(const char* arg1);
+    ARTS_IMPORT void SetName(const char* name);
 
     // ?SwitchTo@asNode@@QAEXH@Z
-    ARTS_IMPORT void SwitchTo(i32 arg1);
+    ARTS_IMPORT void SwitchTo(i32 index);
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

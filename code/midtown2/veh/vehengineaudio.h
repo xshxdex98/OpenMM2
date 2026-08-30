@@ -37,7 +37,7 @@ public:
     ARTS_IMPORT virtual ~vehEngineAudio();
 
     // ?AssignSounds@vehEngineAudio@@QAEXH@Z
-    ARTS_IMPORT void AssignSounds(i32 arg1);
+    ARTS_IMPORT void AssignSounds(i32 label_id);
 
     // ?Disable3DMode@vehEngineAudio@@QAEXXZ
     ARTS_IMPORT void Disable3DMode();
@@ -55,7 +55,7 @@ public:
     ARTS_IMPORT i32 GetSoundIndex(i32 arg1);
 
     // ?Load@vehEngineAudio@@QAEHPAVStream@@@Z
-    ARTS_IMPORT i32 Load(Stream* arg1);
+    ARTS_IMPORT i32 Load(Stream* label_id);
 
     // ?SetPan@vehEngineAudio@@QAEXM@Z
     ARTS_IMPORT void SetPan(f32 arg1);

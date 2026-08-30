@@ -48,10 +48,10 @@ public:
     ARTS_IMPORT void IgnoreToken();
 
     // ?Init@datBaseTokenizer@@QAEXPBDPAVStream@@@Z
-    ARTS_IMPORT void Init(const char* arg1, Stream* arg2);
+    ARTS_IMPORT void Init(const char* name, Stream* stream);
 
     // ?MatchToken@datBaseTokenizer@@QAEXPBD@Z
-    ARTS_IMPORT void MatchToken(const char* arg1);
+    ARTS_IMPORT void MatchToken(const char* expected);
 
     // ?Pop@datBaseTokenizer@@QAEXXZ
     ARTS_IMPORT void Pop();

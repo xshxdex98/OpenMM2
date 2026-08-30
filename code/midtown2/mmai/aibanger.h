@@ -51,7 +51,7 @@ public:
     ARTS_IMPORT virtual i32 Drivable();
 
     // ?CurrentRoadIdx@aiBanger@@UAEHPAPAVaiPath@@QA_NPAH@Z
-    ARTS_IMPORT virtual i32 CurrentRoadIdx(aiPath** arg1, bool*const arg2, i32* arg3);
+    ARTS_IMPORT virtual i32 CurrentRoadIdx(aiPath** P1, bool*const P2, i32* weight);
 
     // ?CurrentRdVert@aiBanger@@UAEHXZ
     ARTS_IMPORT virtual i32 CurrentRdVert();

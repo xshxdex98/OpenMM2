@@ -47,7 +47,7 @@ public:
     ARTS_IMPORT virtual void PostUpdate();
 
     // ?Init@mmWPHUD@@QAEXHPAH0H@Z
-    ARTS_IMPORT void Init(i32 arg1, i32* arg2, i32* arg3, i32 arg4);
+    ARTS_IMPORT void Init(i32 lhs, i32* rhs, i32* outHeight, i32 arg4);
 
     // ?SetStandings@mmWPHUD@@QAEXHH@Z
     ARTS_IMPORT void SetStandings(i32 arg1, i32 arg2);

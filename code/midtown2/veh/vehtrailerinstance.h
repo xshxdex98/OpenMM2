@@ -53,7 +53,7 @@ public:
     ARTS_IMPORT virtual const Vector3& GetVelocity();
 
     // ?Draw@vehTrailerInstance@@UAEXH@Z
-    ARTS_IMPORT virtual void Draw(i32 arg1);
+    ARTS_IMPORT virtual void Draw(i32 label_id);
 
     // ?DrawShadow@vehTrailerInstance@@UAEXXZ
     ARTS_IMPORT virtual void DrawShadow();
@@ -68,7 +68,7 @@ public:
     ARTS_IMPORT bool GetTrailerHitch(Vector3* arg1);
 
     // ?Init@vehTrailerInstance@@QAEXPBDABVVector3@@H@Z
-    ARTS_IMPORT void Init(const char* arg1, const Vector3& arg2, i32 arg3);
+    ARTS_IMPORT void Init(const char* name, const Vector3& arg2, i32 arg3);
 
 public:
     // Members from 0x014; everything below that belongs to lvlInstance.

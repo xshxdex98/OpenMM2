@@ -31,11 +31,11 @@ class mmSingleRoamMusicData : public mmGameMusicData
 {
 public:
     // ?LoadMusic@mmSingleRoamMusicData@@UAE_NPAD@Z
-    ARTS_IMPORT virtual bool LoadMusic(char* arg1);
+    ARTS_IMPORT virtual bool LoadMusic(char* path);
 
 private:
     // ?LoadMusicSegments@mmSingleRoamMusicData@@AAE_NPAVStream@@F@Z
-    ARTS_IMPORT bool LoadMusicSegments(Stream* arg1, i16 arg2);
+    ARTS_IMPORT bool LoadMusicSegments(Stream* stream, i16 arg2);
 };
 
 // ??_7mmSingleRoamMusicData@@6B@

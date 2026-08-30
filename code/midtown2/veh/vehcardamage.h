@@ -74,7 +74,7 @@ public:
     ARTS_IMPORT static void Impact(vehCarDamage* arg1, ImpactCBData* arg2);
 
     // ?Init@vehCarDamage@@QAEXPAVvehCar@@PBD@Z
-    ARTS_IMPORT void Init(vehCar* arg1, const char* arg2);
+    ARTS_IMPORT void Init(vehCar* arg0, const char* arg2);
 
     // ?SetGameCallback@vehCarDamage@@QAEXVdatCallback@@@Z
     ARTS_IMPORT void SetGameCallback(datCallback arg1);
@@ -94,7 +94,7 @@ private:
     ARTS_IMPORT void InsertImpact(ImpactCBData* arg1, phCollider* arg2);
 
     // ?SpewSmoke@vehCarDamage@@AAEXPAVasParticles@@PAMAAVVector3@@M@Z
-    ARTS_IMPORT void SpewSmoke(asParticles* arg1, f32* arg2, Vector3& arg3, f32 arg4);
+    ARTS_IMPORT void SpewSmoke(asParticles* label_id, f32* getter, Vector3& arg3, f32 arg4);
 
     // ?RelaxTime@vehCarDamage@@0MA
     ARTS_IMPORT static f32 RelaxTime;

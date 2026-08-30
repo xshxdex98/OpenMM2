@@ -33,10 +33,10 @@ public:
     ARTS_IMPORT ~mmRaceSpeech();
 
     // ?LoadCityInfo@mmRaceSpeech@@QAE_NPAD@Z
-    ARTS_IMPORT bool LoadCityInfo(char* arg1);
+    ARTS_IMPORT bool LoadCityInfo(char* renderer);
 
     // ?LoadGroup@mmRaceSpeech@@QAE_NPADH@Z
-    ARTS_IMPORT bool LoadGroup(char* arg1, i32 arg2);
+    ARTS_IMPORT bool LoadGroup(char* renderer, i32 DrawList);
 
     // ?LoadPreRace@mmRaceSpeech@@QAE_NPAD@Z
     ARTS_IMPORT bool LoadPreRace(char* arg1);
@@ -94,7 +94,7 @@ private:
     ARTS_IMPORT i32 locstrnicmp(char* arg1, char* arg2);
 
     // ?SetReadState@mmRaceSpeech@@AAE_NPADMPAH@Z
-    ARTS_IMPORT bool SetReadState(char* arg1, f32 arg2, i32* arg3);
+    ARTS_IMPORT bool SetReadState(char* renderer, f32 DrawList, i32* cull_rect);
 };
 
 // check_size(mmRaceSpeech, 0x1); // size known, members are not - cannot verify

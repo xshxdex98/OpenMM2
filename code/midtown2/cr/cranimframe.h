@@ -65,19 +65,19 @@ public:
     ARTS_IMPORT void LoadAscii(datTokenizer& arg1, i32 arg2);
 
     // ?LoadBin@crAnimFrame@@QAEXPAVStream@@H@Z
-    ARTS_IMPORT void LoadBin(Stream* arg1, i32 arg2);
+    ARTS_IMPORT void LoadBin(Stream* sound, i32 arg2);
 
     // ?Merge@crAnimFrame@@QAEXABV1@M@Z
     ARTS_IMPORT void Merge(const crAnimFrame& arg1, f32 arg2);
 
     // ?Mirror@crAnimFrame@@QAEXPBVcrSkeletonData@@@Z
-    ARTS_IMPORT void Mirror(const crSkeletonData* arg1);
+    ARTS_IMPORT void Mirror(const crSkeletonData* viewport);
 
     // ??4crAnimFrame@@QAEABV0@ABV0@@Z
-    ARTS_IMPORT const crAnimFrame& operator=(const crAnimFrame& arg1);
+    ARTS_IMPORT const crAnimFrame& operator=(const crAnimFrame& speed);
 
     // ?Pose@crAnimFrame@@QAEXAAVcrSkeleton@@_N@Z
-    ARTS_IMPORT void Pose(crSkeleton& arg1, bool arg2);
+    ARTS_IMPORT void Pose(crSkeleton& lod, bool arg2);
 
     // ?Print@crAnimFrame@@QAEXXZ
     ARTS_IMPORT void Print();
@@ -90,7 +90,7 @@ public:
 
 private:
     // ?Copy@crAnimFrame@@AAEXABV1@@Z
-    ARTS_IMPORT void Copy(const crAnimFrame& arg1);
+    ARTS_IMPORT void Copy(const crAnimFrame& value);
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

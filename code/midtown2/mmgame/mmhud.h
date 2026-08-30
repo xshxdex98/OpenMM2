@@ -48,7 +48,7 @@ public:
     ARTS_IMPORT virtual void Reset();
 
     // ?ResChange@mmHUD@@UAEXHH@Z
-    ARTS_IMPORT virtual void ResChange(i32 arg1, i32 arg2);
+    ARTS_IMPORT virtual void ResChange(i32 newWidth, i32 newHeight);
 
     // ?UpdatePaused@mmHUD@@UAEXXZ
     ARTS_IMPORT virtual void UpdatePaused();
@@ -69,7 +69,7 @@ public:
     ARTS_IMPORT void DeactivateGold();
 
     // ?Disable@mmHUD@@QAEXH@Z
-    ARTS_IMPORT void Disable(i32 arg1);
+    ARTS_IMPORT void Disable(i32 v);
 
     // ?Enable@mmHUD@@QAEXXZ
     ARTS_IMPORT void Enable();
@@ -78,10 +78,10 @@ public:
     ARTS_IMPORT void GetPosHdg(Vector4& arg1);
 
     // ?GetTime@mmHUD@@QAEXPADM@Z
-    ARTS_IMPORT void GetTime(char* arg1, f32 arg2);
+    ARTS_IMPORT void GetTime(char* arg1, f32 window);
 
     // ?Init@mmHUD@@QAEXPADPAVmmPlayer@@H@Z
-    ARTS_IMPORT void Init(char* arg1, mmPlayer* arg2, i32 arg3);
+    ARTS_IMPORT void Init(char* window, mmPlayer* scale, i32 arg3);
 
     // ?IsDashActive@mmHUD@@QAEHXZ
     ARTS_IMPORT i32 IsDashActive();
@@ -90,7 +90,7 @@ public:
     ARTS_IMPORT void PlayNetAlert();
 
     // ?PostChatMessage@mmHUD@@QAEXPAD@Z
-    ARTS_IMPORT void PostChatMessage(char* arg1);
+    ARTS_IMPORT void PostChatMessage(char* c);
 
     // ?PostLapTime@mmHUD@@QAEX_N@Z
     ARTS_IMPORT void PostLapTime(bool arg1);
@@ -111,7 +111,7 @@ public:
     ARTS_IMPORT void SetLapTime(i32 arg1, i32 arg2, bool arg3);
 
     // ?SetMessage@mmHUD@@QAEXPAULocString@@MH@Z
-    ARTS_IMPORT void SetMessage(LocString* arg1, f32 arg2, i32 arg3);
+    ARTS_IMPORT void SetMessage(LocString* arg1, f32 window, i32 arg3);
 
     // ?SetMessage2@mmHUD@@QAEXPAULocString@@@Z
     ARTS_IMPORT void SetMessage2(LocString* arg1);

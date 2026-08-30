@@ -39,10 +39,10 @@ public:
     ARTS_IMPORT void Draw();
 
     // ?Init@mmLinearGauge@@QAEXPADPAM1HPAVmmExternalView@@@Z
-    ARTS_IMPORT void Init(char* arg1, f32* arg2, f32* arg3, i32 arg4, mmExternalView* arg5);
+    ARTS_IMPORT void Init(char* capacity, f32* arg2, f32* arg3, i32 arg4, mmExternalView* arg5);
 
     // ?InitOverlay@mmLinearGauge@@QAEXPAD@Z
-    ARTS_IMPORT void InitOverlay(char* arg1);
+    ARTS_IMPORT void InitOverlay(char* name);
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

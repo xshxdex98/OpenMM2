@@ -37,7 +37,7 @@ public:
     ARTS_IMPORT ~crSkeleton();
 
     // ?Attach@crSkeleton@@QBEXQAVMatrix34@@@Z
-    ARTS_IMPORT void Attach(Matrix34*const arg1) const;
+    ARTS_IMPORT void Attach(Matrix34*const size) const;
 
     // ?Attach@crSkeleton@@QBEXQAVMatrix44@@@Z
     ARTS_IMPORT void Attach(Matrix44*const arg1) const;

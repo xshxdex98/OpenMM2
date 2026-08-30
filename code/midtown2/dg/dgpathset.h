@@ -39,7 +39,7 @@ public:
     ARTS_IMPORT void Kill();
 
     // ?Load@dgPathSet@@QAE_NPBD0@Z
-    ARTS_IMPORT bool Load(const char* arg1, const char* arg2);
+    ARTS_IMPORT bool Load(const char* buffer, const char* path);
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

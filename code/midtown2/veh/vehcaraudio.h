@@ -92,7 +92,7 @@ public:
     ARTS_IMPORT bool IsBrakeing();
 
     // ?Load@vehCarAudio@@QAEHPBD_N@Z
-    ARTS_IMPORT i32 Load(const char* arg1, bool arg2);
+    ARTS_IMPORT i32 Load(const char* label_id, bool xs);
 
     // ?PlayHorn@vehCarAudio@@QAEXXZ
     ARTS_IMPORT void PlayHorn();
@@ -104,7 +104,7 @@ public:
     ARTS_IMPORT void Reset();
 
     // ?Set2DPan@vehCarAudio@@QAEXM@Z
-    ARTS_IMPORT void Set2DPan(f32 arg1);
+    ARTS_IMPORT void Set2DPan(f32 label_id);
 
     // ?SetMinAmpSpeed@vehCarAudio@@QAEXM@Z
     ARTS_IMPORT void SetMinAmpSpeed(f32 arg1);
@@ -129,7 +129,7 @@ public:
 
 private:
     // ?LoadImpacts@vehCarAudio@@AAE_NPAD0@Z
-    ARTS_IMPORT bool LoadImpacts(char* arg1, char* arg2);
+    ARTS_IMPORT bool LoadImpacts(char* label_id, char* xs);
 
 public:
     // Members from 0x060; everything below that belongs to Aud3DObject.

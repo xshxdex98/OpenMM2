@@ -41,7 +41,7 @@ public:
     ARTS_IMPORT void Reset();
 
     // ?Solve@mmNetPath@@QAEXAAVVector3@@0M@Z
-    ARTS_IMPORT void Solve(Vector3& arg1, Vector3& arg2, f32 arg3);
+    ARTS_IMPORT void Solve(Vector3& node, Vector3& arg2, f32 arg3);
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

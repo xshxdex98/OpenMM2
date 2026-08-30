@@ -64,7 +64,7 @@ public:
     ARTS_IMPORT virtual void Detach();
 
     // ?Draw@aiVehicleInstance@@UAEXH@Z
-    ARTS_IMPORT virtual void Draw(i32 arg1);
+    ARTS_IMPORT virtual void Draw(i32 DrawList);
 
     // ?DrawShadow@aiVehicleInstance@@UAEXXZ
     ARTS_IMPORT virtual void DrawShadow();

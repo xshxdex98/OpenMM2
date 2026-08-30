@@ -67,10 +67,10 @@ public:
     ARTS_IMPORT static void BlitText(const Vector4& arg1, u16* arg2, u8* arg3, i32 arg4, u32 arg5);
 
     // ?Clear@gfxPipeline@@SAXHIMI@Z
-    ARTS_IMPORT static void Clear(i32 arg1, u32 arg2, f32 arg3, u32 arg4);
+    ARTS_IMPORT static void Clear(i32 dwFlags, u32 dwColor, f32 dvZ, u32 dwStencil);
 
     // ?ClearRect@gfxPipeline@@SAXHHHHI@Z
-    ARTS_IMPORT static void ClearRect(i32 arg1, i32 arg2, i32 arg3, i32 arg4, u32 arg5);
+    ARTS_IMPORT static void ClearRect(i32 x, i32 y, i32 w, i32 h, u32 fillColor);
 
     // ?CopyBitmap@gfxPipeline@@SAXHHPAVgfxBitmap@@HHHH_N@Z
     ARTS_EXPORT static void CopyBitmap(i32 arg1, i32 arg2, gfxBitmap* arg3, i32 arg4, i32 arg5, i32 arg6, i32 arg7, bool arg8);
@@ -79,13 +79,13 @@ public:
     ARTS_IMPORT static bool CopyClippedBitmap(i32 arg1, i32 arg2, gfxBitmap* arg3, i32 arg4, i32 arg5, i32 arg6, i32 arg7, i32 arg8, i32 arg9, i32 arg10, i32 arg11, bool arg12);
 
     // ?CopyClippedBitmap@gfxPipeline@@SA_NHHPAVgfxBitmap@@HHHH_N@Z
-    ARTS_IMPORT static bool CopyClippedBitmap(i32 arg1, i32 arg2, gfxBitmap* arg3, i32 arg4, i32 arg5, i32 arg6, i32 arg7, bool arg8);
+    ARTS_IMPORT static bool CopyClippedBitmap(i32 idx, i32 arg2, gfxBitmap* arg3, i32 arg4, i32 arg5, i32 arg6, i32 arg7, bool arg8);
 
     // ?CreateReadbackImage@gfxPipeline@@SAPAVgfxImage@@XZ
     ARTS_IMPORT static gfxImage* CreateReadbackImage();
 
     // ?CreateVertexBuffer@gfxPipeline@@SAPAUgfxVertexBuffer@@II_N@Z
-    ARTS_IMPORT static gfxVertexBuffer* CreateVertexBuffer(u32 arg1, u32 arg2, bool arg3);
+    ARTS_IMPORT static gfxVertexBuffer* CreateVertexBuffer(u32 arg_0, u32 height, bool arg3);
 
     // ?CreateViewport@gfxPipeline@@SAPAVgfxViewport@@XZ
     ARTS_IMPORT static gfxViewport* CreateViewport();
@@ -100,7 +100,7 @@ public:
     ARTS_IMPORT static void Draw(gfxDrawMode arg1, u32 arg2, i32 arg3, const gfxStridedData& arg4);
 
     // ?Draw@gfxPipeline@@SAXW4gfxDrawMode@@IHPAX@Z
-    ARTS_IMPORT static void Draw(gfxDrawMode arg1, u32 arg2, i32 arg3, void* arg4);
+    ARTS_IMPORT static void Draw(gfxDrawMode dm, u32 count, i32 vflags, void* verts);
 
     // ?DrawIdx@gfxPipeline@@SAXW4gfxDrawMode@@IHABUgfxStridedData@@IPAG@Z
     ARTS_IMPORT static void DrawIdx(gfxDrawMode arg1, u32 arg2, i32 arg3, const gfxStridedData& arg4, u32 arg5, u16* arg6);
@@ -109,10 +109,10 @@ public:
     ARTS_IMPORT static void DrawIdx(gfxDrawMode arg1, u32 arg2, i32 arg3, void* arg4, u32 arg5, u16* arg6);
 
     // ?DrawIdxVB@gfxPipeline@@SAXW4gfxDrawMode@@IIPAUgfxVertexBuffer@@IPAG@Z
-    ARTS_IMPORT static void DrawIdxVB(gfxDrawMode arg1, u32 arg2, u32 arg3, gfxVertexBuffer* arg4, u32 arg5, u16* arg6);
+    ARTS_IMPORT static void DrawIdxVB(gfxDrawMode arg1, u32 startOffset, u32 vcount, gfxVertexBuffer* arg4, u32 ic, u16* idx);
 
     // ?DrawVB@gfxPipeline@@SAXW4gfxDrawMode@@IIPAUgfxVertexBuffer@@@Z
-    ARTS_IMPORT static void DrawVB(gfxDrawMode arg1, u32 arg2, u32 arg3, gfxVertexBuffer* arg4);
+    ARTS_IMPORT static void DrawVB(gfxDrawMode arg1, u32 arg2, u32 arg3, gfxVertexBuffer* vb);
 
     // ?EndFrame@gfxPipeline@@SAXXZ
     ARTS_EXPORT static void EndFrame();
@@ -136,7 +136,7 @@ public:
     ARTS_IMPORT static void EndScene();
 
     // ?EnumDDAdapters@gfxPipeline@@SAXHP6GHPAU_GUID@@PADPADPAX@Z3@Z
-    ARTS_IMPORT static void EnumDDAdapters(i32 arg1, i32 (__stdcall* arg2)(_GUID*,char*,char*,void*), void* arg3);
+    ARTS_IMPORT static void EnumDDAdapters(i32 hModule, i32 (__stdcall* callback)(_GUID*,char*,char*,void*), void* context);
 
     // ?FlushFrame@gfxPipeline@@SAXXZ
     ARTS_IMPORT static void FlushFrame();
@@ -157,7 +157,7 @@ public:
     ARTS_IMPORT static void RefreshFrame();
 
     // ?Render@gfxPipeline@@SAXW4gfxDrawMode@@IIPAX@Z
-    ARTS_IMPORT static void Render(gfxDrawMode arg1, u32 arg2, u32 arg3, void* arg4);
+    ARTS_IMPORT static void Render(gfxDrawMode draw_mode, u32 vert_count, u32 vert_format, void* verts);
 
     // ?RenderIdx@gfxPipeline@@SAXW4gfxDrawMode@@IIPAXIPAG@Z
     ARTS_IMPORT static void RenderIdx(gfxDrawMode arg1, u32 arg2, u32 arg3, void* arg4, u32 arg5, u16* arg6);
@@ -166,22 +166,22 @@ public:
     ARTS_IMPORT static void SafeBeginGfx();
 
     // ?SetFade@gfxPipeline@@SAXI@Z
-    ARTS_IMPORT static void SetFade(u32 arg1);
+    ARTS_IMPORT static void SetFade(u32 idx);
 
     // ?SetRenderTarget@gfxPipeline@@SA_NPBVgfxTexture@@@Z
-    ARTS_IMPORT static bool SetRenderTarget(const gfxTexture* arg1);
+    ARTS_IMPORT static bool SetRenderTarget(const gfxTexture* gfxTexture);
 
     // ?SetRes@gfxPipeline@@SAXHHHH_N@Z
-    ARTS_IMPORT static void SetRes(i32 arg1, i32 arg2, i32 arg3, i32 arg4, bool arg5);
+    ARTS_IMPORT static void SetRes(i32 width, i32 height, i32 cdepth, i32 zdepth, bool detectArgs);
 
     // ?SetTitle@gfxPipeline@@SAXPBD@Z
-    ARTS_IMPORT static void SetTitle(const char* arg1);
+    ARTS_IMPORT static void SetTitle(const char* lpString);
 
     // ?SetWindow@gfxPipeline@@SAX_NHH@Z
-    ARTS_IMPORT static void SetWindow(bool arg1, i32 arg2, i32 arg3);
+    ARTS_IMPORT static void SetWindow(bool windowed, i32 screenX, i32 screenY);
 
     // ?StartFade@gfxPipeline@@SAXIM@Z
-    ARTS_IMPORT static void StartFade(u32 arg1, f32 arg2);
+    ARTS_IMPORT static void StartFade(u32 fade_color, f32 speed);
 
     // ?VP@gfxPipeline@@2PAVgfxViewport@@A
     ARTS_IMPORT static gfxViewport* VP;
@@ -209,22 +209,22 @@ public:
 
 private:
     // ?DoUnlockVertexBuffer@gfxPipeline@@CAXPAUgfxVertexBuffer@@@Z
-    ARTS_IMPORT static void DoUnlockVertexBuffer(gfxVertexBuffer* arg1);
+    ARTS_IMPORT static void DoUnlockVertexBuffer(gfxVertexBuffer* values);
 
     // ?ForceSetViewport@gfxPipeline@@CAXPAVgfxViewport@@@Z
-    ARTS_IMPORT static void ForceSetViewport(gfxViewport* arg1);
+    ARTS_IMPORT static void ForceSetViewport(gfxViewport* viewport);
 
     // ?gfxEnumTexs@gfxPipeline@@CGJPAU_DDPIXELFORMAT@@PAX@Z
-    ARTS_IMPORT static ilong gfxEnumTexs(_DDPIXELFORMAT* arg1, void* arg2);
+    ARTS_IMPORT static ilong gfxEnumTexs(_DDPIXELFORMAT* lpDDPixFmt, void* lpContext);
 
     // ?gfxEnumZ@gfxPipeline@@CGJPAU_DDPIXELFORMAT@@PAX@Z
     ARTS_IMPORT static ilong gfxEnumZ(_DDPIXELFORMAT* arg1, void* arg2);
 
     // ?gfxWindowCreate@gfxPipeline@@CAXPBD@Z
-    ARTS_IMPORT static void gfxWindowCreate(const char* arg1);
+    ARTS_IMPORT static void gfxWindowCreate(const char* lpWindowName);
 
     // ?gfxWindowProc@gfxPipeline@@CGJPAUHWND__@@IIJ@Z
-    ARTS_IMPORT static ilong gfxWindowProc(HWND__* arg1, u32 arg2, u32 arg3, ilong arg4);
+    ARTS_IMPORT static ilong gfxWindowProc(HWND__* hWnd, u32 message, u32 wParam, ilong lParam);
 
     // ?OptimizeVertexBuffer@gfxPipeline@@CAXPAUgfxVertexBuffer@@@Z
     ARTS_IMPORT static void OptimizeVertexBuffer(gfxVertexBuffer* arg1);

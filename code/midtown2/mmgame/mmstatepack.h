@@ -39,7 +39,7 @@ public:
     ARTS_IMPORT bool ParseStateArgs();
 
     // ?SetDefaults@mmStatePack@@QAEXPAD0@Z
-    ARTS_IMPORT void SetDefaults(char* arg1, char* arg2);
+    ARTS_IMPORT void SetDefaults(char* level, char* car);
 
 public:
     // Members from 0x06C; everything below that belongs to dgStatePack.

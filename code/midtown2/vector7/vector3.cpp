@@ -224,14 +224,14 @@ f32 Vector3::Mag2() const
 }
 
 // ?Dist@Vector3@@QBEMABV1@@Z
-f32 Vector3::Dist(const Vector3& arg1) const
+f32 Vector3::Dist(const Vector3& pos) const
 {
     // The three differences are computed onto the x87 stack and never stored, so they stay wider
     // than f32. Squaring starts from z and works back to x - the reverse of Mag - which is why
     // Dist(a) and (this - a).Mag() are not bit-identical.
-    f64 dx = f64 {x} - arg1.x;
-    f64 dy = f64 {y} - arg1.y;
-    f64 dz = f64 {z} - arg1.z;
+    f64 dx = f64 {x} - pos.x;
+    f64 dy = f64 {y} - pos.y;
+    f64 dz = f64 {z} - pos.z;
 
     return static_cast<f32>(std::sqrt(dz * dz + dy * dy + dx * dx));
 }
@@ -760,13 +760,13 @@ void Vector3::RotateAboutAxis(f32 arg1, i32 arg2)
 }
 
 // ?RotateX@Vector3@@QAEXM@Z
-void Vector3::RotateX(f32 arg1)
+void Vector3::RotateX(f32 rotation)
 {
     // `fst dword ptr [ebp+8]` narrows the cosine into the argument slot and leaves the wide value
     // in st(0), so the FIRST cosine product uses the wide cosine and the second uses the f32 one.
     // Driving both from one variable is the plausible-looking wrong answer.
-    f64 sine = std::sin(f64 {arg1});
-    f64 cosine = std::cos(f64 {arg1});
+    f64 sine = std::sin(f64 {rotation});
+    f64 cosine = std::cos(f64 {rotation});
     f32 narrow_cosine = static_cast<f32>(cosine);
 
     f64 ny = cosine * y - sine * z;

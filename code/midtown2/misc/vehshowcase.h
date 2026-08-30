@@ -29,7 +29,7 @@ class VehShowcase : public UIMenu
 {
 public:
     // ??0VehShowcase@@QAE@H@Z
-    ARTS_IMPORT VehShowcase(i32 arg1);
+    ARTS_IMPORT VehShowcase(i32 renderer);
 
     // ??1VehShowcase@@UAE@XZ
     ARTS_IMPORT virtual ~VehShowcase();

@@ -52,7 +52,7 @@ public:
     ARTS_IMPORT virtual void Action(eqEvent arg1);
 
     // ?Switch@UIControlWidget@@UAEXH@Z
-    ARTS_IMPORT virtual void Switch(i32 arg1);
+    ARTS_IMPORT virtual void Switch(i32 transformer);
 
     // ?DisableField@UIControlWidget@@QAEXXZ
     ARTS_IMPORT void DisableField();

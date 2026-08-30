@@ -91,7 +91,7 @@ public:
     ARTS_IMPORT bool PastMaxDistance();
 
     // ?ReadVectorPoints@Aud3DObject@@QAE_NPAVStream@@@Z
-    ARTS_IMPORT bool ReadVectorPoints(Stream* arg1);
+    ARTS_IMPORT bool ReadVectorPoints(Stream* renderer);
 
     // ?RemoveFrom3DMgr@Aud3DObject@@QAEXXZ
     ARTS_IMPORT void RemoveFrom3DMgr();

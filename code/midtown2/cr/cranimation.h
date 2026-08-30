@@ -52,7 +52,7 @@ public:
     ARTS_IMPORT void GetBlendFrame(crAnimFrame& arg1, f32 arg2) const;
 
     // ?GetChanAnimation@crAnimation@@SAPAV1@PBD_N@Z
-    ARTS_IMPORT static crAnimation* GetChanAnimation(const char* arg1, bool arg2);
+    ARTS_IMPORT static crAnimation* GetChanAnimation(const char* entryName, bool num);
 
     // ?InitHashTables@crAnimation@@SAXXZ
     ARTS_IMPORT static void InitHashTables();
@@ -70,7 +70,7 @@ public:
     ARTS_IMPORT static void OutputAnimationList();
 
     // ?SaveAnim@crAnimation@@QAE_NPBD@Z
-    ARTS_IMPORT bool SaveAnim(const char* arg1);
+    ARTS_IMPORT bool SaveAnim(const char* volume);
 
     // ?Subtract@crAnimation@@QAEXAAVcrAnimFrame@@@Z
     ARTS_IMPORT void Subtract(crAnimFrame& arg1);

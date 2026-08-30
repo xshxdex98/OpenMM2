@@ -39,7 +39,7 @@ public:
     ARTS_IMPORT ~vehHornAudio();
 
     // ?AddToHash@vehHornAudio@@SAXPADH@Z
-    ARTS_IMPORT static void AddToHash(char* arg1, i32 arg2);
+    ARTS_IMPORT static void AddToHash(char* arg1, i32 entry);
 
     // ?AllocTiming@vehHornAudio@@QAEXXZ
     ARTS_IMPORT void AllocTiming();
@@ -63,13 +63,13 @@ public:
     ARTS_IMPORT bool IsPlaying();
 
     // ?Load@vehHornAudio@@SAHPAPAV1@PAD1PAH@Z
-    ARTS_IMPORT static i32 Load(vehHornAudio** arg1, char* arg2, char* arg3, i32* arg4);
+    ARTS_IMPORT static i32 Load(vehHornAudio** arg1, char* arg2, char* arg3, i32* valueOut);
 
     // ?PlayAvoidance@vehHornAudio@@QAE_NXZ
     ARTS_IMPORT bool PlayAvoidance();
 
     // ?PlayImpact@vehHornAudio@@QAEXM@Z
-    ARTS_IMPORT void PlayImpact(f32 arg1);
+    ARTS_IMPORT void PlayImpact(f32 label_id);
 
     // ?Reset@vehHornAudio@@QAEXXZ
     ARTS_IMPORT void Reset();
@@ -88,7 +88,7 @@ public:
 
 private:
     // ?ReadCSV@vehHornAudio@@AAEHPAVStream@@@Z
-    ARTS_IMPORT i32 ReadCSV(Stream* arg1);
+    ARTS_IMPORT i32 ReadCSV(Stream* label_id);
 };
 
 // check_size(vehHornAudio, 0x0); // TODO: no layout in the IDB type library

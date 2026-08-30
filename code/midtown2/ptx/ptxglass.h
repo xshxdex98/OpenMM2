@@ -38,16 +38,16 @@ public:
     ARTS_IMPORT void CreateShards(f32 arg1, f32 arg2, Vector2*const arg3, Matrix34& arg4, const Vector3& arg5, const Vector3& arg6);
 
     // ?DrawShards@ptxGlass@@QAEXH@Z
-    ARTS_IMPORT void DrawShards(i32 arg1);
+    ARTS_IMPORT void DrawShards(i32 draw_list);
 
     // ?Init@ptxGlass@@QAEXHHPAVgfxTexture@@@Z
-    ARTS_IMPORT void Init(i32 arg1, i32 arg2, gfxTexture* arg3);
+    ARTS_IMPORT void Init(i32 arg1, i32 arg2, gfxTexture* gfxTexture);
 
     // ?SetCentroidFromVerts@ptxShard@ptxGlass@@QAEXXZ
     ARTS_IMPORT void SetCentroidFromVerts();
 
     // ?Update@ptxGlass@@QAEXM@Z
-    ARTS_IMPORT void Update(f32 arg1);
+    ARTS_IMPORT void Update(f32 draw_list);
 };
 
 // check_size(ptxGlass, 0x0); // TODO: no layout in the IDB type library

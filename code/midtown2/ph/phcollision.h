@@ -47,7 +47,7 @@ public:
     ARTS_IMPORT static bool SphereApplyCenterForceToPoly(const phForceSphere* arg1, phColliderBase& arg2, const phBoundPolygonal* arg3, phColliderBase& arg4);
 
     // ?SphereApplyCenterForceToSphere@phCollision@@SAXPBVphForceSphere@@AAVphColliderBase@@PBVphBoundSphere@@1@Z
-    ARTS_IMPORT static void SphereApplyCenterForceToSphere(const phForceSphere* arg1, phColliderBase& arg2, const phBoundSphere* arg3, phColliderBase& arg4);
+    ARTS_IMPORT static void SphereApplyCenterForceToSphere(const phForceSphere* label, phColliderBase& v, const phBoundSphere* step, phColliderBase& step_fast);
 
     // ?TestBoundForce@phCollision@@SAXPBVphBound@@AAVphColliderBase@@01PAVphImpact@@HABVVector3@@@Z
     ARTS_IMPORT static void TestBoundForce(const phBound* arg1, phColliderBase& arg2, const phBound* arg3, phColliderBase& arg4, phImpact* arg5, i32 arg6, const Vector3& arg7);

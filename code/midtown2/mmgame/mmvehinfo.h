@@ -47,7 +47,7 @@ public:
     ARTS_IMPORT i32 IsValid();
 
     // ?Load@mmVehInfo@@QAEHPAD@Z
-    ARTS_IMPORT i32 Load(char* arg1);
+    ARTS_IMPORT i32 Load(char* getter);
 
     // ?Print@mmVehInfo@@QAEXXZ
     ARTS_IMPORT void Print();

@@ -35,7 +35,7 @@ class aiPath
 {
 public:
     // ??0aiPath@@QAE@H@Z
-    ARTS_IMPORT aiPath(i32 arg1);
+    ARTS_IMPORT aiPath(i32 DrawList);
 
     // ??1aiPath@@QAE@XZ
     ARTS_IMPORT ~aiPath();
@@ -44,7 +44,7 @@ public:
     ARTS_IMPORT char AddAmbPlayer(i32 arg1);
 
     // ?AddAmbVehicle@aiPath@@QAEXPAVaiVehicleSpline@@HMH@Z
-    ARTS_IMPORT void AddAmbVehicle(aiVehicleSpline* arg1, i32 arg2, f32 arg3, i32 arg4);
+    ARTS_IMPORT void AddAmbVehicle(aiVehicleSpline* DrawList, i32 __formal, f32 uv, i32 prim);
 
     // ?AddBanger@aiPath@@QAEXPAVaiObstacle@@HH@Z
     ARTS_IMPORT void AddBanger(aiObstacle* arg1, i32 arg2, i32 arg3);
@@ -71,7 +71,7 @@ public:
     ARTS_IMPORT void AllwaysStop(i32 arg1);
 
     // ?CalcRoadTurns@aiPath@@QAEXAAVVector3@@_N@Z
-    ARTS_IMPORT void CalcRoadTurns(Vector3& arg1, bool arg2);
+    ARTS_IMPORT void CalcRoadTurns(Vector3& DrawList, bool __formal);
 
     // ?CenterDist@aiPath@@QAEMABVVector3@@@Z
     ARTS_IMPORT f32 CenterDist(const Vector3& arg1);
@@ -119,16 +119,16 @@ public:
     ARTS_IMPORT void InitRoadTurns();
 
     // ?IntersectionEntryPt@aiPath@@QAEXAAVVector3@@HMH@Z
-    ARTS_IMPORT void IntersectionEntryPt(Vector3& arg1, i32 arg2, f32 arg3, i32 arg4);
+    ARTS_IMPORT void IntersectionEntryPt(Vector3& arg1, i32 arg2, f32 arg8, i32 arg4);
 
     // ?IntersectionEntryVector@aiPath@@QAEXAAVVector3@@MH@Z
-    ARTS_IMPORT void IntersectionEntryVector(Vector3& arg1, f32 arg2, i32 arg3);
+    ARTS_IMPORT void IntersectionEntryVector(Vector3& DrawList, f32 __formal, i32 uv);
 
     // ?IntersectionExitVector@aiPath@@QAEXAAVVector3@@MH@Z
     ARTS_IMPORT void IntersectionExitVector(Vector3& arg1, f32 arg2, i32 arg3);
 
     // ?IsPosOnRoad@aiPath@@QAEHABVVector3@@MPAM@Z
-    ARTS_IMPORT i32 IsPosOnRoad(const Vector3& arg1, f32 arg2, f32* arg3);
+    ARTS_IMPORT i32 IsPosOnRoad(const Vector3& DrawList, f32 __formal, f32* uv);
 
     // ?IsSharpTurn@aiPath@@QAEHH_N@Z
     ARTS_IMPORT i32 IsSharpTurn(i32 arg1, bool arg2);
@@ -146,10 +146,10 @@ public:
     ARTS_IMPORT void Position(f32 arg1, Vector3& arg2, i32 arg3, i32 arg4);
 
     // ?PushAmbVehicle@aiPath@@QAEXPAVaiVehicleSpline@@HH@Z
-    ARTS_IMPORT void PushAmbVehicle(aiVehicleSpline* arg1, i32 arg2, i32 arg3);
+    ARTS_IMPORT void PushAmbVehicle(aiVehicleSpline* DrawList, i32 __formal, i32 uv);
 
     // ?ReadBinary@aiPath@@QAEXPAVStream@@@Z
-    ARTS_IMPORT void ReadBinary(Stream* arg1);
+    ARTS_IMPORT void ReadBinary(Stream* DrawList);
 
     // ?ReadShortcut@aiPath@@QAEXPAVStream@@H@Z
     ARTS_IMPORT void ReadShortcut(Stream* arg1, i32 arg2);
@@ -173,7 +173,7 @@ public:
     ARTS_IMPORT void RemoveVehicle(aiObstacle* arg1, i32 arg2, i32 arg3);
 
     // ?RemPedPlayer@aiPath@@QAEDH@Z
-    ARTS_IMPORT char RemPedPlayer(i32 arg1);
+    ARTS_IMPORT char RemPedPlayer(i32 DrawList);
 
     // ?Reset@aiPath@@QAEXXZ
     ARTS_IMPORT void Reset();
@@ -197,7 +197,7 @@ public:
     ARTS_IMPORT i32 RoadVertice(const Vector3& arg1, i32 arg2);
 
     // ?RoadVertice@aiPath@@QAEHABVVector3@@HH@Z
-    ARTS_IMPORT i32 RoadVertice(const Vector3& arg1, i32 arg2, i32 arg3);
+    ARTS_IMPORT i32 RoadVertice(const Vector3& DrawList, i32 __formal, i32 uv);
 
     // ?SaveBinary@aiPath@@QAEXPAVStream@@@Z
     ARTS_IMPORT void SaveBinary(Stream* arg1);

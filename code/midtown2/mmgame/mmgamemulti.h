@@ -105,7 +105,7 @@ public:
     ARTS_IMPORT void FinishMessage(i32 arg1);
 
     // ?GameMessageCB@mmGameMulti@@QAEXPAX0@Z
-    ARTS_IMPORT void GameMessageCB(void* arg1, void* arg2);
+    ARTS_IMPORT void GameMessageCB(void* arg1, void* arg4);
 
     // ?GetInactiveNetObject@mmGameMulti@@QAEPAVmmNetObject@@XZ
     ARTS_IMPORT mmNetObject* GetInactiveNetObject();
@@ -114,7 +114,7 @@ public:
     ARTS_IMPORT i32 GetInactiveNetObjectIndex();
 
     // ?GetNetObject@mmGameMulti@@QAEPAVmmNetObject@@KH@Z
-    ARTS_IMPORT mmNetObject* GetNetObject(ulong arg1, i32 arg2);
+    ARTS_IMPORT mmNetObject* GetNetObject(ulong i, i32 arg2);
 
     // ?GetNetObjectIndex@mmGameMulti@@QAEHKH@Z
     ARTS_IMPORT i32 GetNetObjectIndex(ulong arg1, i32 arg2);
@@ -144,7 +144,7 @@ public:
     ARTS_IMPORT void SendHostCars(ulong arg1);
 
     // ?SendLobbyResults@mmGameMulti@@QAEXHIM@Z
-    ARTS_IMPORT void SendLobbyResults(i32 arg1, u32 arg2, f32 arg3);
+    ARTS_IMPORT void SendLobbyResults(i32 arg1, u32 arg2, f32 time);
 
     // ?SendMsg@mmGameMulti@@QAEXH@Z
     ARTS_IMPORT void SendMsg(i32 arg1);
@@ -153,7 +153,7 @@ public:
     ARTS_IMPORT void SendPosition();
 
     // ?SendTimeMsg@mmGameMulti@@QAEXK@Z
-    ARTS_IMPORT void SendTimeMsg(ulong arg1);
+    ARTS_IMPORT void SendTimeMsg(ulong idx);
 
     // ?SendToChatMessage@mmGameMulti@@QAEXPADK@Z
     ARTS_IMPORT void SendToChatMessage(char* arg1, ulong arg2);
@@ -162,7 +162,7 @@ public:
     ARTS_IMPORT void SetFinishCam();
 
     // ?SystemMessageCB@mmGameMulti@@QAEXPAX0@Z
-    ARTS_IMPORT void SystemMessageCB(void* arg1, void* arg2);
+    ARTS_IMPORT void SystemMessageCB(void* arg1, void* arg4);
 
     // ?UpdateNetWorkAudio@mmGameMulti@@QAEXXZ
     ARTS_IMPORT void UpdateNetWorkAudio();
@@ -184,7 +184,7 @@ protected:
     ARTS_IMPORT void SendCheater(ulong arg1);
 
     // ?SendFinishAck@mmGameMulti@@IAEXKMH@Z
-    ARTS_IMPORT void SendFinishAck(ulong arg1, f32 arg2, i32 arg3);
+    ARTS_IMPORT void SendFinishAck(ulong r, f32 arg2, i32 arg3);
 
     // ?SendFinishReq@mmGameMulti@@IAEXMH@Z
     ARTS_IMPORT void SendFinishReq(f32 arg1, i32 arg2);

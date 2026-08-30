@@ -33,10 +33,10 @@ public:
     ARTS_IMPORT virtual ~mmCCSpeech();
 
     // ?LoadCheckPointIndexInfo@mmCCSpeech@@QAE_NPAD@Z
-    ARTS_IMPORT bool LoadCheckPointIndexInfo(char* arg1);
+    ARTS_IMPORT bool LoadCheckPointIndexInfo(char* renderer);
 
     // ?LoadGroup@mmCCSpeech@@QAE_NPADH@Z
-    ARTS_IMPORT bool LoadGroup(char* arg1, i32 arg2);
+    ARTS_IMPORT bool LoadGroup(char* renderer, i32 DrawList);
 
     // ?LoadPreRace@mmCCSpeech@@QAE_NPAD@Z
     ARTS_IMPORT bool LoadPreRace(char* arg1);
@@ -66,7 +66,7 @@ public:
     ARTS_IMPORT void PlayUnlock();
 
     // ?SetSubPath@mmCCSpeech@@QAE_NPAD@Z
-    ARTS_IMPORT bool SetSubPath(char* arg1);
+    ARTS_IMPORT bool SetSubPath(char* renderer);
 
 private:
     // ?CheckRaceLoadSanity@mmCCSpeech@@AAEXMH@Z
@@ -76,7 +76,7 @@ private:
     ARTS_IMPORT i32 locstrnicmp(char* arg1, char* arg2);
 
     // ?SetReadState@mmCCSpeech@@AAE_NPADMPAH@Z
-    ARTS_IMPORT bool SetReadState(char* arg1, f32 arg2, i32* arg3);
+    ARTS_IMPORT bool SetReadState(char* renderer, f32 DrawList, i32* cull_rect);
 };
 
 // check_size(mmCCSpeech, 0x0); // TODO: no layout in the IDB type library

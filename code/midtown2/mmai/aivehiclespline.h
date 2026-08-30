@@ -105,37 +105,37 @@ public:
     ARTS_IMPORT virtual void StopVoice();
 
     // ?AvoidPlayerCollision@aiVehicleSpline@@QAEXH@Z
-    ARTS_IMPORT void AvoidPlayerCollision(i32 arg1);
+    ARTS_IMPORT void AvoidPlayerCollision(i32 DrawList);
 
     // ?DetectPlayerCollision@aiVehicleSpline@@QAEHH@Z
-    ARTS_IMPORT i32 DetectPlayerCollision(i32 arg1);
+    ARTS_IMPORT i32 DetectPlayerCollision(i32 DrawList);
 
     // ?DetectPlayerForwardCollision@aiVehicleSpline@@QAEHH@Z
-    ARTS_IMPORT i32 DetectPlayerForwardCollision(i32 arg1);
+    ARTS_IMPORT i32 DetectPlayerForwardCollision(i32 DrawList);
 
     // ?DetectPlayerTargetPtCollision@aiVehicleSpline@@QAEHH@Z
-    ARTS_IMPORT i32 DetectPlayerTargetPtCollision(i32 arg1);
+    ARTS_IMPORT i32 DetectPlayerTargetPtCollision(i32 DrawList);
 
     // ?DetectPlayerZoneCollision@aiVehicleSpline@@QAEHH@Z
-    ARTS_IMPORT i32 DetectPlayerZoneCollision(i32 arg1);
+    ARTS_IMPORT i32 DetectPlayerZoneCollision(i32 DrawList);
 
     // ?DistanceToIntersection@aiVehicleSpline@@QAEMXZ
     ARTS_IMPORT f32 DistanceToIntersection();
 
     // ?DistanceToVehicle@aiVehicleSpline@@QAEMPAV1@@Z
-    ARTS_IMPORT f32 DistanceToVehicle(aiVehicleSpline* arg1);
+    ARTS_IMPORT f32 DistanceToVehicle(aiVehicleSpline* DrawList);
 
     // ?Dump@aiVehicleSpline@@QAEXXZ
     ARTS_IMPORT void Dump();
 
     // ?Init@aiVehicleSpline@@QAEXPADH@Z
-    ARTS_IMPORT void Init(char* arg1, i32 arg2);
+    ARTS_IMPORT void Init(char* DrawList, i32 cull_rect);
 
     // ?IsAmbientBlockingPlayer@aiVehicleSpline@@QAEHH@Z
     ARTS_IMPORT i32 IsAmbientBlockingPlayer(i32 arg1);
 
     // ?IsThePlayerInFrontOfMe@aiVehicleSpline@@QAEHH@Z
-    ARTS_IMPORT i32 IsThePlayerInFrontOfMe(i32 arg1);
+    ARTS_IMPORT i32 IsThePlayerInFrontOfMe(i32 DrawList);
 
     // ?ResetReactTicks@aiVehicleSpline@@QAEXXZ
     ARTS_IMPORT void ResetReactTicks();

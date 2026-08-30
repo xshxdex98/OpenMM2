@@ -29,7 +29,7 @@ class aiCityData
 {
 public:
     // ??0aiCityData@@QAE@PAD0@Z
-    ARTS_IMPORT aiCityData(char* arg1, char* arg2);
+    ARTS_IMPORT aiCityData(char* DrawList, char* __formal);
 
     // ??1aiCityData@@UAE@XZ
     ARTS_IMPORT virtual ~aiCityData();

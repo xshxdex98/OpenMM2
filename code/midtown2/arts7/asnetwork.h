@@ -86,13 +86,13 @@ public:
     ARTS_IMPORT char* GetEnumPlayer(i32 arg1);
 
     // ?GetEnumPlayerData@asNetwork@@QAEHHPAXH@Z
-    ARTS_IMPORT i32 GetEnumPlayerData(i32 arg1, void* arg2, i32 arg3);
+    ARTS_IMPORT i32 GetEnumPlayerData(i32 key, void* value, i32 buf_len);
 
     // ?GetEnumProtocol@asNetwork@@QAEPADH@Z
     ARTS_IMPORT char* GetEnumProtocol(i32 arg1);
 
     // ?GetEnumSession@asNetwork@@QAEPADH@Z
-    ARTS_IMPORT char* GetEnumSession(i32 arg1);
+    ARTS_IMPORT char* GetEnumSession(i32 sessionIndex);
 
     // ?GetEnumSessionID@asNetwork@@QAEHH@Z
     ARTS_IMPORT i32 GetEnumSessionID(i32 arg1);
@@ -104,7 +104,7 @@ public:
     ARTS_IMPORT i32 GetEnumSessionStatus(i32 arg1);
 
     // ?GetGameVersion@asNetwork@@QAEHH@Z
-    ARTS_IMPORT i32 GetGameVersion(i32 arg1);
+    ARTS_IMPORT i32 GetGameVersion(i32 sessionIndex);
 
     // ?GetMessageQueue@asNetwork@@QAEXKKAAI0H@Z
     ARTS_IMPORT void GetMessageQueue(ulong arg1, ulong arg2, u32& arg3, u32& arg4, i32 arg5);
@@ -146,7 +146,7 @@ public:
     ARTS_IMPORT void GetProtocols();
 
     // ?GetSessionData@asNetwork@@QAEXPAUNETSESSION_DESC@@@Z
-    ARTS_IMPORT void GetSessionData(NETSESSION_DESC* arg1);
+    ARTS_IMPORT void GetSessionData(NETSESSION_DESC* _Al);
 
     // ?GetSessionsAsynch@asNetwork@@QAEXXZ
     ARTS_IMPORT void GetSessionsAsynch();
@@ -167,10 +167,10 @@ public:
     ARTS_IMPORT void HandleSysMessage(DPMSG_GENERIC* arg1);
 
     // ?Initialize@asNetwork@@QAEHHHH@Z
-    ARTS_IMPORT i32 Initialize(i32 arg1, i32 arg2, i32 arg3);
+    ARTS_IMPORT i32 Initialize(i32 maxPlayers, i32 arg2, i32 gameVersion);
 
     // ?InitializeLobby@asNetwork@@QAEHHH@Z
-    ARTS_IMPORT i32 InitializeLobby(i32 arg1, i32 arg2);
+    ARTS_IMPORT i32 InitializeLobby(i32 maxPlayers, i32 arg2);
 
     // ?JoinLobbySession@asNetwork@@QAEHXZ
     ARTS_IMPORT i32 JoinLobbySession();
@@ -203,7 +203,7 @@ public:
     ARTS_IMPORT void SendLobbyProperty(void* arg1, i32 arg2);
 
     // ?SetEnumSessionLock@asNetwork@@QAEXHH@Z
-    ARTS_IMPORT void SetEnumSessionLock(i32 arg1, i32 arg2);
+    ARTS_IMPORT void SetEnumSessionLock(i32 sessionIndex, i32 arg2);
 
     // ?SetPlayerData@asNetwork@@QAEXKPAXH@Z
     ARTS_IMPORT void SetPlayerData(ulong arg1, void* arg2, i32 arg3);

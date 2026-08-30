@@ -44,11 +44,11 @@ public:
     ARTS_IMPORT void Init(char* arg1, f32 arg2, f32 arg3, i32* arg4);
 
     // ?SetPosition@mmToggle2@@QAEXMM@Z
-    ARTS_IMPORT void SetPosition(f32 arg1, f32 arg2);
+    ARTS_IMPORT void SetPosition(f32 getter1, f32 getter2);
 
 private:
     // ?LoadBitmap@mmToggle2@@AAEXPAD@Z
-    ARTS_IMPORT void LoadBitmap(char* arg1);
+    ARTS_IMPORT void LoadBitmap(char* name);
 };
 
 // ??_7mmToggle2@@6B@

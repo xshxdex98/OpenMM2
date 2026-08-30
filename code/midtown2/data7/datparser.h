@@ -32,31 +32,31 @@ class datParser
 {
 public:
     // ??0datParser@@QAE@PBD@Z
-    ARTS_IMPORT datParser(const char* arg1);
+    ARTS_IMPORT datParser(const char* filename);
 
     // ??1datParser@@QAE@XZ
     ARTS_IMPORT ~datParser();
 
     // ?AddParser@datParser@@QAEPAV1@PBDPAVdatCallback@@@Z
-    ARTS_IMPORT datParser* AddParser(const char* arg1, datCallback* arg2);
+    ARTS_IMPORT datParser* AddParser(const char* name, datCallback* callback);
 
     // ?AddValue@datParser@@QAEXPBDPAHPAVdatCallback@@@Z
-    ARTS_IMPORT void AddValue(const char* arg1, i32* arg2, datCallback* arg3);
+    ARTS_IMPORT void AddValue(const char* arg1, i32* pData, datCallback* callback);
 
     // ?AddValue@datParser@@QAEXPBDPAMPAVdatCallback@@@Z
-    ARTS_IMPORT void AddValue(const char* arg1, f32* arg2, datCallback* arg3);
+    ARTS_IMPORT void AddValue(const char* arg1, f32* arg2, datCallback* callback);
 
     // ?Load@datParser@@QAE_NPAVStream@@PBD@Z
     ARTS_IMPORT bool Load(Stream* arg1, const char* arg2);
 
     // ?Load@datParser@@QAE_NPBD00@Z
-    ARTS_IMPORT bool Load(const char* arg1, const char* arg2, const char* arg3);
+    ARTS_IMPORT bool Load(const char* prefix, const char* path, const char* ext);
 
     // ?Load@datParser@@QAE_NPBD0@Z
-    ARTS_IMPORT bool Load(const char* arg1, const char* arg2);
+    ARTS_IMPORT bool Load(const char* path, const char* extension);
 
     // ?Save@datParser@@QAE_NPAVStream@@PBD_N@Z
-    ARTS_IMPORT bool Save(Stream* arg1, const char* arg2, bool arg3);
+    ARTS_IMPORT bool Save(Stream* stream, const char* filename, bool arg3);
 
     // ?Save@datParser@@QAE_NPBD00_N@Z
     ARTS_IMPORT bool Save(const char* arg1, const char* arg2, const char* arg3, bool arg4);

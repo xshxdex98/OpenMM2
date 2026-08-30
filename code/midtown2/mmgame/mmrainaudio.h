@@ -33,7 +33,7 @@ public:
     ARTS_IMPORT ~mmRainAudio();
 
     // ?SetInterior@mmRainAudio@@QAEXE@Z
-    ARTS_IMPORT void SetInterior(u8 arg1);
+    ARTS_IMPORT void SetInterior(u8 ctx);
 
     // ?ShelterOff@mmRainAudio@@QAEXXZ
     ARTS_IMPORT void ShelterOff();

@@ -96,7 +96,7 @@ private:
     ARTS_IMPORT bool CheckForObstacles(f32* arg1);
 
     // ?DetermineNextLink@aiCableCar@@AAE_NPAVaiPath@@PAPAV2@FPAF@Z
-    ARTS_IMPORT bool DetermineNextLink(aiPath* arg1, aiPath** arg2, i16 arg3, i16* arg4);
+    ARTS_IMPORT bool DetermineNextLink(aiPath* DrawList, aiPath** cull_rect, i16 uv, i16* prim);
 
     // ?DistanceToIntersection@aiCableCar@@AAEMXZ
     ARTS_IMPORT f32 DistanceToIntersection();

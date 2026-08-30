@@ -45,7 +45,7 @@ public:
     ARTS_IMPORT virtual const Vector3& GetVelocity();
 
     // ?Draw@aiCableCarInstance@@UAEXH@Z
-    ARTS_IMPORT virtual void Draw(i32 arg1);
+    ARTS_IMPORT virtual void Draw(i32 DrawList);
 
     // ?SizeOf@aiCableCarInstance@@UAEIXZ
     ARTS_IMPORT virtual u32 SizeOf();

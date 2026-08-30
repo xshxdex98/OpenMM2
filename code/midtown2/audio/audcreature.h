@@ -39,7 +39,7 @@ public:
     ARTS_IMPORT ~AudCreature();
 
     // ?AddToHash@AudCreature@@SAXPADH@Z
-    ARTS_IMPORT static void AddToHash(char* arg1, i32 arg2);
+    ARTS_IMPORT static void AddToHash(char* argName, i32 entry);
 
     // ?AssignSounds@AudCreature@@QAEXH@Z
     ARTS_IMPORT void AssignSounds(i32 arg1);
@@ -54,7 +54,7 @@ public:
     ARTS_IMPORT bool IsPlaying();
 
     // ?Load@AudCreature@@SAHPAPAV1@PAD1PAH@Z
-    ARTS_IMPORT static i32 Load(AudCreature** arg1, char* arg2, char* arg3, i32* arg4);
+    ARTS_IMPORT static i32 Load(AudCreature** valueOut, char* name, char* asssetSection, i32* arg4);
 
     // ?PlayAvoidance@AudCreature@@QAEXM@Z
     ARTS_IMPORT void PlayAvoidance(f32 arg1);
@@ -79,7 +79,7 @@ public:
 
 private:
     // ?ReadCSV@AudCreature@@AAEHPAVStream@@@Z
-    ARTS_IMPORT i32 ReadCSV(Stream* arg1);
+    ARTS_IMPORT i32 ReadCSV(Stream* renderer);
 };
 
 // check_size(AudCreature, 0x0); // TODO: no layout in the IDB type library

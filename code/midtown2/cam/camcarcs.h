@@ -41,7 +41,7 @@ public:
     ARTS_IMPORT virtual void FileIO(datParser& arg1);
 
     // ?Init@camCarCS@@QAEXPAVvehCar@@PAD@Z
-    ARTS_IMPORT void Init(vehCar* arg1, char* arg2);
+    ARTS_IMPORT void Init(vehCar* arg0, char* arg2);
 };
 
 // ??_7camCarCS@@6B@

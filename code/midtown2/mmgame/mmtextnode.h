@@ -79,13 +79,13 @@ public:
     ARTS_IMPORT void SetEffects(i32 arg1, i32 arg2);
 
     // ?SetFGColor@mmTextNode@@QAEXAAVVector4@@@Z
-    ARTS_IMPORT void SetFGColor(Vector4& arg1);
+    ARTS_IMPORT void SetFGColor(Vector4& pColor);
 
     // ?SetHlColor@mmTextNode@@QAEXAAVVector4@@@Z
     ARTS_IMPORT void SetHlColor(Vector4& arg1);
 
     // ?SetPosition@mmTextNode@@QAEXHMM@Z
-    ARTS_IMPORT void SetPosition(i32 arg1, f32 arg2, f32 arg3);
+    ARTS_IMPORT void SetPosition(i32 getter, f32 transformer, f32 col);
 
     // ?SetString@mmTextNode@@QAEXHPBULocString@@@Z
     ARTS_IMPORT void SetString(i32 arg1, const LocString* arg2);

@@ -30,10 +30,10 @@ public:
     ARTS_IMPORT i32 Count();
 
     // ?FindObject@audList@@QAEPAV1@PAX@Z
-    ARTS_IMPORT audList* FindObject(void* arg1);
+    ARTS_IMPORT audList* FindObject(void* pos);
 
     // ?FindObjectAt@audList@@QAEPAXH@Z
-    ARTS_IMPORT void* FindObjectAt(i32 arg1);
+    ARTS_IMPORT void* FindObjectAt(i32 name);
 
     // ?FindObjectPos@audList@@QAEHPAX@Z
     ARTS_IMPORT i32 FindObjectPos(void* arg1);

@@ -39,10 +39,10 @@ public:
     ARTS_IMPORT bool AddSlot();
 
     // ?FindEntry@gfxTextureCachePool@@QAEXPAVgfxTexture@@@Z
-    ARTS_IMPORT void FindEntry(gfxTexture* arg1);
+    ARTS_IMPORT void FindEntry(gfxTexture* texture);
 
     // ?Init@gfxTextureCachePool@@QAEXPAVgfxTexture@@@Z
-    ARTS_IMPORT void Init(gfxTexture* arg1);
+    ARTS_IMPORT void Init(gfxTexture* gfxTexture);
 
     // ?IsCompatibleWith@gfxTextureCachePool@@QAE_NPAVgfxTexture@@@Z
     ARTS_IMPORT bool IsCompatibleWith(gfxTexture* arg1);

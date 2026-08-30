@@ -45,9 +45,9 @@ define_dummy_symbol(gfx_gfxtexture);
 //
 // `ret 4` for one four-byte argument, which is what __thiscall with a single u32 wants - so the
 // name and the code agree.
-void gfxTexture::SetTexEnv(u32 arg1)
+void gfxTexture::SetTexEnv(u32 texEnv)
 {
-    TexEnv = arg1;
+    TexEnv = texEnv;
 }
 
 // ?MarkFirstUse@gfxTexture@@AAEXXZ
@@ -92,7 +92,7 @@ void gfxTexture::SetDefaultMIPMapEnv(u32 /*arg1*/, f32 /*arg2*/)
 {}
 
 // ?GetDefaultMIPMapEnv@gfxTexture@@SAXAAIAAM@Z
-void gfxTexture::GetDefaultMIPMapEnv(u32& /*arg1*/, f32& /*arg2*/)
+void gfxTexture::GetDefaultMIPMapEnv(u32& /*unk1*/, f32& /*unk2*/)
 {}
 
 // ?SetMIPMapEnv@gfxTexture@@QAEXIM@Z

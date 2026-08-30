@@ -71,7 +71,7 @@ public:
     ARTS_IMPORT void Init(i32 arg1, i32 arg2, i32 arg3, i32 arg4);
 
     // ?Load@phBoundGeometry@@QAE_NPBDPBVVector3@@@Z
-    ARTS_IMPORT bool Load(const char* arg1, const Vector3* arg2);
+    ARTS_IMPORT bool Load(const char* arg1, const Vector3* scale);
 
     // ?LoadBinary@phBoundGeometry@@QAE_NPBD@Z
     ARTS_IMPORT bool LoadBinary(const char* arg1);

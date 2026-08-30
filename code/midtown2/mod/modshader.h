@@ -35,7 +35,7 @@ public:
     ARTS_IMPORT static gfxMaterial* AddStaticMaterial(const gfxMaterial& arg1);
 
     // ?BeginEnvMap@modShader@@SAXPAVgfxTexture@@ABVMatrix34@@@Z
-    ARTS_IMPORT static void BeginEnvMap(gfxTexture* arg1, const Matrix34& arg2);
+    ARTS_IMPORT static void BeginEnvMap(gfxTexture* location, const Matrix34& orientation);
 
     // ?EndEnvMap@modShader@@SAXXZ
     ARTS_IMPORT static void EndEnvMap();
@@ -47,7 +47,7 @@ public:
     ARTS_IMPORT void Load(Stream* arg1, bool arg2);
 
     // ?LoadShaderSet@modShader@@SAPAPAV1@PAVStream@@PAH1_N@Z
-    ARTS_IMPORT static modShader** LoadShaderSet(Stream* arg1, i32* arg2, i32* arg3, bool arg4);
+    ARTS_IMPORT static modShader** LoadShaderSet(Stream* stream, i32* shaderSets, i32* shadersPerSet, bool arg4);
 
     // ?PreLoad@modShader@@QAEXXZ
     ARTS_IMPORT void PreLoad();

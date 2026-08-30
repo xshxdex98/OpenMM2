@@ -98,7 +98,7 @@ public:
     ARTS_IMPORT void Dump();
 
     // ?Init@aiVehiclePhysics@@QAEXHPADFH@Z
-    ARTS_IMPORT void Init(i32 arg1, char* arg2, i16 arg3, i32 arg4);
+    ARTS_IMPORT void Init(i32 DrawList, char* __formal, i16 uv, i32 prim);
 
     // ?Mirror@aiVehiclePhysics@@QAEXPAVvehCar@@@Z
     ARTS_IMPORT void Mirror(vehCar* arg1);
@@ -114,19 +114,19 @@ private:
     ARTS_IMPORT void Backup();
 
     // ?CalcCurrentMaxWidthAdjustment@aiVehiclePhysics@@AAEMH@Z
-    ARTS_IMPORT f32 CalcCurrentMaxWidthAdjustment(i32 arg1);
+    ARTS_IMPORT f32 CalcCurrentMaxWidthAdjustment(i32 DrawList);
 
     // ?CalcCurrentRdOffset@aiVehiclePhysics@@AAEMH@Z
     ARTS_IMPORT f32 CalcCurrentRdOffset(i32 arg1);
 
     // ?CalcDestinationTarget@aiVehiclePhysics@@AAEXHAAVVector3@@@Z
-    ARTS_IMPORT void CalcDestinationTarget(i32 arg1, Vector3& arg2);
+    ARTS_IMPORT void CalcDestinationTarget(i32 DrawList, Vector3& cull_rect);
 
     // ?CalcNextMaxWidthAdjustment@aiVehiclePhysics@@AAEMH@Z
-    ARTS_IMPORT f32 CalcNextMaxWidthAdjustment(i32 arg1);
+    ARTS_IMPORT f32 CalcNextMaxWidthAdjustment(i32 DrawList);
 
     // ?CalcNextRdOffset@aiVehiclePhysics@@AAEMH@Z
-    ARTS_IMPORT f32 CalcNextRdOffset(i32 arg1);
+    ARTS_IMPORT f32 CalcNextRdOffset(i32 DrawList);
 
     // ?CalcObstacleAvoidPoints@aiVehiclePhysics@@AAEHPAVaiObstacle@@HHPAVVector3@@PAPAV2@PAF3@Z
     ARTS_IMPORT i32 CalcObstacleAvoidPoints(aiObstacle* arg1, i32 arg2, i32 arg3, Vector3* arg4, aiObstacle** arg5, i16* arg6, i16* arg7);
@@ -135,7 +135,7 @@ private:
     ARTS_IMPORT void CalcRoadSpeed();
 
     // ?CalcRoadTarget@aiVehiclePhysics@@AAEXHAAVVector3@@@Z
-    ARTS_IMPORT void CalcRoadTarget(i32 arg1, Vector3& arg2);
+    ARTS_IMPORT void CalcRoadTarget(i32 DrawList, Vector3& cull_rect);
 
     // ?CalcRoadTurns@aiVehiclePhysics@@AAEXXZ
     ARTS_IMPORT void CalcRoadTurns();
@@ -150,7 +150,7 @@ private:
     ARTS_IMPORT void CalcSpeed();
 
     // ?CalcTurnIntersection@aiVehiclePhysics@@AAEMH@Z
-    ARTS_IMPORT f32 CalcTurnIntersection(i32 arg1);
+    ARTS_IMPORT f32 CalcTurnIntersection(i32 DrawList);
 
     // ?CheckDistance@aiVehiclePhysics@@AAEMH@Z
     ARTS_IMPORT f32 CheckDistance(i32 arg1);
@@ -192,16 +192,16 @@ private:
     ARTS_IMPORT void InitShortcut();
 
     // ?InSharpTurn@aiVehiclePhysics@@AAEHH@Z
-    ARTS_IMPORT i32 InSharpTurn(i32 arg1);
+    ARTS_IMPORT i32 InSharpTurn(i32 DrawList);
 
     // ?IsTargetBlocked@aiVehiclePhysics@@AAEPAVaiObstacle@@AAVVector3@@0HHHHMPAH@Z
     ARTS_IMPORT aiObstacle* IsTargetBlocked(Vector3& arg1, Vector3& arg2, i32 arg3, i32 arg4, i32 arg5, i32 arg6, f32 arg7, i32* arg8);
 
     // ?LocateWayPtFromInt@aiVehiclePhysics@@AAEHH@Z
-    ARTS_IMPORT i32 LocateWayPtFromInt(i32 arg1);
+    ARTS_IMPORT i32 LocateWayPtFromInt(i32 DrawList);
 
     // ?LocateWayPtFromRoad@aiVehiclePhysics@@AAEHPAVaiPath@@@Z
-    ARTS_IMPORT i32 LocateWayPtFromRoad(aiPath* arg1);
+    ARTS_IMPORT i32 LocateWayPtFromRoad(aiPath* DrawList);
 
     // ?PlanRoute@aiVehiclePhysics@@AAEHXZ
     ARTS_IMPORT i32 PlanRoute();
@@ -213,7 +213,7 @@ private:
     ARTS_IMPORT void SaveTurnTarget(i32 arg1, i32 arg2);
 
     // ?SetTargetPtToDestination@aiVehiclePhysics@@AAEXH@Z
-    ARTS_IMPORT void SetTargetPtToDestination(i32 arg1);
+    ARTS_IMPORT void SetTargetPtToDestination(i32 DrawList);
 
     // ?Shortcut@aiVehiclePhysics@@AAEXXZ
     ARTS_IMPORT void Shortcut();

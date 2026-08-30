@@ -35,7 +35,7 @@ public:
     ARTS_IMPORT virtual ~mmPlayerDirectory();
 
     // ?AddPlayer@mmPlayerDirectory@@QAEHPAD@Z
-    ARTS_IMPORT i32 AddPlayer(char* arg1);
+    ARTS_IMPORT i32 AddPlayer(char* getter);
 
     // ?FindPlayer@mmPlayerDirectory@@QAEHPAD@Z
     ARTS_IMPORT i32 FindPlayer(char* arg1);
@@ -62,10 +62,10 @@ public:
     ARTS_IMPORT i32 Load(char* arg1);
 
     // ?LoadBinary@mmPlayerDirectory@@QAEHPAD@Z
-    ARTS_IMPORT i32 LoadBinary(char* arg1);
+    ARTS_IMPORT i32 LoadBinary(char* getter);
 
     // ?NewDirectory@mmPlayerDirectory@@QAEXH@Z
-    ARTS_IMPORT void NewDirectory(i32 arg1);
+    ARTS_IMPORT void NewDirectory(i32 getter);
 
     // ?RemovePlayer@mmPlayerDirectory@@QAEHPAD@Z
     ARTS_IMPORT i32 RemovePlayer(char* arg1);
@@ -84,7 +84,7 @@ public:
 
 private:
     // ?CreatePlayer@mmPlayerDirectory@@AAEXPAD0@Z
-    ARTS_IMPORT void CreatePlayer(char* arg1, char* arg2);
+    ARTS_IMPORT void CreatePlayer(char* getter, char* transformer);
 
     // ?MakeFileName@mmPlayerDirectory@@AAEPADXZ
     ARTS_IMPORT char* MakeFileName();

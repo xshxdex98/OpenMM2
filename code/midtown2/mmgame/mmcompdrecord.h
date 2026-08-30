@@ -56,7 +56,7 @@ public:
     ARTS_IMPORT virtual void SetGeometry(f32 arg1, f32 arg2, f32 arg3, f32 arg4);
 
     // ?SetPosition@mmCompDRecord@@UAEXPAVmmTextNode@@HM@Z
-    ARTS_IMPORT virtual void SetPosition(mmTextNode* arg1, i32 arg2, f32 arg3);
+    ARTS_IMPORT virtual void SetPosition(mmTextNode* arg0, i32 arg2, f32 arg3);
 
     // ?Init@mmCompDRecord@@QAEXHPADM0HHH@Z
     ARTS_IMPORT void Init(i32 arg1, char* arg2, f32 arg3, char* arg4, i32 arg5, i32 arg6, i32 arg7);
@@ -65,7 +65,7 @@ public:
     ARTS_IMPORT void InitTitle(f32 arg1, f32 arg2, f32 arg3, f32 arg4, LocString* arg5, LocString* arg6, LocString* arg7, LocString* arg8, LocString* arg9, i32 arg10);
 
     // ?LoadBitmap@mmCompDRecord@@QAEXPAD@Z
-    ARTS_IMPORT void LoadBitmap(char* arg1);
+    ARTS_IMPORT void LoadBitmap(char* name);
 
     // ?SetSubwidgetGeometry@mmCompDRecord@@QAEXXZ
     ARTS_IMPORT void SetSubwidgetGeometry();

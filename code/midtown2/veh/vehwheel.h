@@ -62,7 +62,7 @@ public:
     ARTS_IMPORT void ComputeDwtdw(f32 arg1, f32* arg2, f32* arg3, f32* arg4);
 
     // ?CopyVars@vehWheel@@QAEXPAV1@@Z
-    ARTS_IMPORT void CopyVars(vehWheel* arg1);
+    ARTS_IMPORT void CopyVars(vehWheel* label_id);
 
     // ?GetSurfaceSound@vehWheel@@QAEHXZ
     ARTS_IMPORT i32 GetSurfaceSound();

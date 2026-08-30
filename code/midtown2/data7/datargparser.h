@@ -35,19 +35,19 @@ public:
     ARTS_IMPORT static bool Get(const char* arg1);
 
     // ?Get@datArgParser@@SA_NPBDIAAH@Z
-    ARTS_IMPORT static bool Get(const char* arg1, u32 arg2, i32& arg3);
+    ARTS_IMPORT static bool Get(const char* argName, u32 index, i32& lpIntOut);
 
     // ?Get@datArgParser@@SA_NPBDIAAM@Z
-    ARTS_IMPORT static bool Get(const char* arg1, u32 arg2, f32& arg3);
+    ARTS_IMPORT static bool Get(const char* entryName, u32 index, f32& lpFloatOut);
 
     // ?Get@datArgParser@@SA_NPBDIPAPBD@Z
-    ARTS_IMPORT static bool Get(const char* arg1, u32 arg2, const char** arg3);
+    ARTS_IMPORT static bool Get(const char* entryName, u32 index, const char** lpStringOut);
 
     // ?GetNum@datArgParser@@SAHPBD@Z
     ARTS_IMPORT static i32 GetNum(const char* arg1);
 
     // ?Init@datArgParser@@SAXHPAPAD@Z
-    ARTS_IMPORT static void Init(i32 arg1, char** arg2);
+    ARTS_IMPORT static void Init(i32 argc, char** argv);
 
     // ?Init@datArgParser@@SAXXZ
     ARTS_IMPORT static void Init();
@@ -56,10 +56,10 @@ public:
     ARTS_IMPORT static void Kill();
 
     // ?RestoreFromArchive@datArgParser@@SAXPAD@Z
-    ARTS_IMPORT static void RestoreFromArchive(char* arg1);
+    ARTS_IMPORT static void RestoreFromArchive(char* archiveString);
 
     // ?SaveToArchive@datArgParser@@SAHPAD@Z
-    ARTS_IMPORT static i32 SaveToArchive(char* arg1);
+    ARTS_IMPORT static i32 SaveToArchive(char* label_id);
 
     // ?Argv@datArgParser@@2PAPADA
     ARTS_IMPORT static char** Argv;

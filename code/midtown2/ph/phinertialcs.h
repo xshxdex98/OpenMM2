@@ -41,10 +41,10 @@ public:
     ARTS_IMPORT Matrix34 AddInertia(f32 arg1, const Vector3& arg2, const Matrix34& arg3);
 
     // ?ApplyContactForce@phInertialCS@@QAEXABVVector3@@0ABVMatrix34@@@Z
-    ARTS_IMPORT void ApplyContactForce(const Vector3& arg1, const Vector3& arg2, const Matrix34& arg3);
+    ARTS_IMPORT void ApplyContactForce(const Vector3& ptr_id, const Vector3& flags, const Matrix34& fmt);
 
     // ?CalcNetPush@phInertialCS@@QAEXABVVector3@@@Z
-    ARTS_IMPORT void CalcNetPush(const Vector3& arg1);
+    ARTS_IMPORT void CalcNetPush(const Vector3& str_id);
 
     // ?CalcNetTurn@phInertialCS@@QAEXABVVector3@@@Z
     ARTS_IMPORT void CalcNetTurn(const Vector3& arg1);
@@ -68,13 +68,13 @@ public:
     ARTS_IMPORT void GetForce(f32 arg1, Vector3* arg2);
 
     // ?GetInertiaMatrix@phInertialCS@@QBEXABVVector3@@PAVMatrix34@@@Z
-    ARTS_IMPORT void GetInertiaMatrix(const Vector3& arg1, Matrix34* arg2) const;
+    ARTS_IMPORT void GetInertiaMatrix(const Vector3& label, Matrix34* flags) const;
 
     // ?GetInertiaMatrix@phInertialCS@@QBEXPAVMatrix34@@@Z
     ARTS_IMPORT void GetInertiaMatrix(Matrix34* arg1) const;
 
     // ?GetInverseInertiaMatrix@phInertialCS@@QBEXPAVMatrix34@@@Z
-    ARTS_IMPORT void GetInverseInertiaMatrix(Matrix34* arg1) const;
+    ARTS_IMPORT void GetInverseInertiaMatrix(Matrix34* label) const;
 
     // ?GetInvMassMatrix@phInertialCS@@QBEXABVVector3@@0AAVMatrix34@@@Z
     ARTS_IMPORT void GetInvMassMatrix(const Vector3& arg1, const Vector3& arg2, Matrix34& arg3) const;
@@ -83,7 +83,7 @@ public:
     ARTS_IMPORT void GetInvMassMatrix(const Vector3& arg1, Matrix34& arg2) const;
 
     // ?GetLocalAcceleration@phInertialCS@@QBEXABVVector3@@AAV2@@Z
-    ARTS_IMPORT void GetLocalAcceleration(const Vector3& arg1, Vector3& arg2) const;
+    ARTS_IMPORT void GetLocalAcceleration(const Vector3& label, Vector3& current_item) const;
 
     // ?GetLocalDisp@phInertialCS@@QBEXABVVector3@@AAV2@@Z
     ARTS_IMPORT void GetLocalDisp(const Vector3& arg1, Vector3& arg2) const;
@@ -116,13 +116,13 @@ public:
     ARTS_IMPORT void InitBoxDensity(f32 arg1, f32 arg2, f32 arg3, f32 arg4);
 
     // ?InitBoxMass@phInertialCS@@QAEXMMMM@Z
-    ARTS_IMPORT void InitBoxMass(f32 arg1, f32 arg2, f32 arg3, f32 arg4);
+    ARTS_IMPORT void InitBoxMass(f32 label, f32 col, f32 flags, f32 argC);
 
     // ?InitCylinderDensity@phInertialCS@@QAEXMMMD@Z
     ARTS_IMPORT void InitCylinderDensity(f32 arg1, f32 arg2, f32 arg3, char arg4);
 
     // ?InitCylinderMass@phInertialCS@@QAEXMMMD@Z
-    ARTS_IMPORT void InitCylinderMass(f32 arg1, f32 arg2, f32 arg3, char arg4);
+    ARTS_IMPORT void InitCylinderMass(f32 arg1, f32 arg2, f32 arg3, char argC);
 
     // ?InitFromGeometry@phInertialCS@@QAEXMPBVVector3@@PBVphPolygon@@HPAVMatrix34@@@Z
     ARTS_IMPORT void InitFromGeometry(f32 arg1, const Vector3* arg2, const phPolygon* arg3, i32 arg4, Matrix34* arg5);
@@ -134,10 +134,10 @@ public:
     ARTS_IMPORT void InitHotdogDensity(f32 arg1, f32 arg2, f32 arg3, char arg4);
 
     // ?InitHotdogMass@phInertialCS@@QAEXMMMD@Z
-    ARTS_IMPORT void InitHotdogMass(f32 arg1, f32 arg2, f32 arg3, char arg4);
+    ARTS_IMPORT void InitHotdogMass(f32 arg1, f32 arg2, f32 arg3, char argC);
 
     // ?InitSphereDensity@phInertialCS@@QAEXMM@Z
-    ARTS_IMPORT void InitSphereDensity(f32 arg1, f32 arg2);
+    ARTS_IMPORT void InitSphereDensity(f32 label, f32 col);
 
     // ?InitSphereMass@phInertialCS@@QAEXMM@Z
     ARTS_IMPORT void InitSphereMass(f32 arg1, f32 arg2);

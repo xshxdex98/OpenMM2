@@ -29,7 +29,7 @@ class gfxVertexBuffer
 {
 public:
     // ??0gfxVertexBuffer@@QAE@II@Z
-    ARTS_IMPORT gfxVertexBuffer(u32 arg1, u32 arg2);
+    ARTS_IMPORT gfxVertexBuffer(u32 arg1, u32 fvfFlags);
 
     // ??0gfxVertexBuffer@@QAE@PAUIDirect3DVertexBuffer7@@@Z
     ARTS_IMPORT gfxVertexBuffer(IDirect3DVertexBuffer7* arg1);

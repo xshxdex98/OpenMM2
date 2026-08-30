@@ -55,16 +55,16 @@ public:
     ARTS_IMPORT f32 GetTime();
 
     // ?LoadBinary@mmRecord@@QAEHPAVStream@@@Z
-    ARTS_IMPORT i32 LoadBinary(Stream* arg1);
+    ARTS_IMPORT i32 LoadBinary(Stream* getter);
 
     // ??4mmRecord@@QAEXAAV0@@Z
-    ARTS_IMPORT void operator=(mmRecord& arg1);
+    ARTS_IMPORT void operator=(mmRecord& getter);
 
     // ?Reset@mmRecord@@QAEXXZ
     ARTS_IMPORT void Reset();
 
     // ?SaveBinary@mmRecord@@QAEHPAVStream@@@Z
-    ARTS_IMPORT i32 SaveBinary(Stream* arg1);
+    ARTS_IMPORT i32 SaveBinary(Stream* Data);
 
     // ?SetCarName@mmRecord@@QAEXPAD@Z
     ARTS_IMPORT void SetCarName(char* arg1);

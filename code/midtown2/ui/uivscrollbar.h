@@ -63,7 +63,7 @@ public:
     ARTS_IMPORT f32 Dec();
 
     // ?EvalMouseXY@UIVScrollBar@@QAEXMM@Z
-    ARTS_IMPORT void EvalMouseXY(f32 arg1, f32 arg2);
+    ARTS_IMPORT void EvalMouseXY(f32 transformer, f32 DrawList);
 
     // ?Inc@UIVScrollBar@@QAEMXZ
     ARTS_IMPORT f32 Inc();

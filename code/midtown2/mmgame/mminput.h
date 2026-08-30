@@ -55,7 +55,7 @@ public:
     ARTS_IMPORT void AutoSetup();
 
     // ?BinaryLoadConfig@mmInput@@QAEHPAVStream@@@Z
-    ARTS_IMPORT i32 BinaryLoadConfig(Stream* arg1);
+    ARTS_IMPORT i32 BinaryLoadConfig(Stream* getter1);
 
     // ?BinarySaveConfig@mmInput@@QAEHPAVStream@@@Z
     ARTS_IMPORT i32 BinarySaveConfig(Stream* arg1);
@@ -79,7 +79,7 @@ public:
     ARTS_IMPORT i32 FFIsPlaying(i32 arg1);
 
     // ?FFPlay@mmInput@@QAEHH@Z
-    ARTS_IMPORT i32 FFPlay(i32 arg1);
+    ARTS_IMPORT i32 FFPlay(i32 ys);
 
     // ?FFSetValues@mmInput@@QAEHHMM@Z
     ARTS_IMPORT i32 FFSetValues(i32 arg1, f32 arg2, f32 arg3);
@@ -115,7 +115,7 @@ public:
     ARTS_IMPORT f32 GetHandBrake();
 
     // ?GetSteering@mmInput@@QAEMP6AMM@Z@Z
-    ARTS_IMPORT f32 GetSteering(f32 (__cdecl* arg1)(f32));
+    ARTS_IMPORT f32 GetSteering(f32 (__cdecl* ys)(f32));
 
     // ?GetThrottle@mmInput@@QAEMXZ
     ARTS_IMPORT f32 GetThrottle();
@@ -124,7 +124,7 @@ public:
     ARTS_IMPORT f32 GetThrottleVal();
 
     // ?Init@mmInput@@QAEXH@Z
-    ARTS_IMPORT void Init(i32 arg1);
+    ARTS_IMPORT void Init(i32 getter);
 
     // ?IOInit@mmInput@@QAEXHPAULocString@@J@Z
     ARTS_IMPORT void IOInit(i32 arg1, LocString* arg2, ilong arg3);
@@ -142,7 +142,7 @@ public:
     ARTS_IMPORT i32 JoystickHasThrottle();
 
     // ?LoadConfig@mmInput@@QAEHPAVStream@@@Z
-    ARTS_IMPORT i32 LoadConfig(Stream* arg1);
+    ARTS_IMPORT i32 LoadConfig(Stream* getter1);
 
     // ?PollStates@mmInput@@QAEHXZ
     ARTS_IMPORT i32 PollStates();
@@ -151,7 +151,7 @@ public:
     ARTS_IMPORT i32 PollSuperQ();
 
     // ?PopEvent@mmInput@@QAEHPAH@Z
-    ARTS_IMPORT i32 PopEvent(i32* arg1);
+    ARTS_IMPORT i32 PopEvent(i32* getter1);
 
     // ?PrintIODev@mmInput@@QAEXXZ
     ARTS_IMPORT void PrintIODev();
@@ -169,22 +169,22 @@ public:
     ARTS_IMPORT void SaveCB();
 
     // ?SaveCodeConfig@mmInput@@QAEHPAVStream@@@Z
-    ARTS_IMPORT i32 SaveCodeConfig(Stream* arg1);
+    ARTS_IMPORT i32 SaveCodeConfig(Stream* getter1);
 
     // ?SaveConfig@mmInput@@QAEHPAVStream@@@Z
-    ARTS_IMPORT i32 SaveConfig(Stream* arg1);
+    ARTS_IMPORT i32 SaveConfig(Stream* getter1);
 
     // ?SetDeadZone@mmInput@@QAEXM@Z
     ARTS_IMPORT void SetDeadZone(f32 arg1);
 
     // ?SetDefaultConfig@mmInput@@QAEXH@Z
-    ARTS_IMPORT void SetDefaultConfig(i32 arg1);
+    ARTS_IMPORT void SetDefaultConfig(i32 getter);
 
     // ?SetForceFeedbackScale@mmInput@@QAEXM@Z
-    ARTS_IMPORT void SetForceFeedbackScale(f32 arg1);
+    ARTS_IMPORT void SetForceFeedbackScale(f32 ys);
 
     // ?SetRoadForceScale@mmInput@@QAEXM@Z
-    ARTS_IMPORT void SetRoadForceScale(f32 arg1);
+    ARTS_IMPORT void SetRoadForceScale(f32 ys);
 
     // ?StopAllFF@mmInput@@QAEXXZ
     ARTS_IMPORT void StopAllFF();
@@ -203,7 +203,7 @@ private:
     ARTS_IMPORT i32 EventToButton(i32 arg1);
 
     // ?FilterDiscreteSteering@mmInput@@AAEMM@Z
-    ARTS_IMPORT f32 FilterDiscreteSteering(f32 arg1);
+    ARTS_IMPORT f32 FilterDiscreteSteering(f32 xs);
 
     // ?GetBufferedKeyboardData@mmInput@@AAEXXZ
     ARTS_IMPORT void GetBufferedKeyboardData();
@@ -212,7 +212,7 @@ private:
     ARTS_IMPORT i32 GetNextKeyboardEvent(eqEvent* arg1);
 
     // ?PollContinuous@mmInput@@AAEXPAVmmIO@@@Z
-    ARTS_IMPORT void PollContinuous(mmIO* arg1);
+    ARTS_IMPORT void PollContinuous(mmIO* xs);
 
     // ?ProcessEvents@mmInput@@AAEXXZ
     ARTS_IMPORT void ProcessEvents();
@@ -233,10 +233,10 @@ private:
     ARTS_IMPORT void PutEventInQueue(i64 arg1);
 
     // ?ScanForEvent@mmInput@@AAE_JPATeqEvent@@@Z
-    ARTS_IMPORT i64 ScanForEvent(eqEvent* arg1);
+    ARTS_IMPORT i64 ScanForEvent(eqEvent* xs);
 
     // ?ScanState@mmInput@@AAE_JPAVmmIO@@@Z
-    ARTS_IMPORT i64 ScanState(mmIO* arg1);
+    ARTS_IMPORT i64 ScanState(mmIO* xs);
 
 public:
     // Members from 0x018; everything below that belongs to asNode.

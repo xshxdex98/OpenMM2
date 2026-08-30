@@ -46,7 +46,7 @@ public:
     ARTS_IMPORT virtual u32 SizeOf();
 
     // ?Cull@gizBridge@@QAEXH@Z
-    ARTS_IMPORT void Cull(i32 arg1);
+    ARTS_IMPORT void Cull(i32 cullMode);
 
     // ?Init@gizBridge@@QAEXPADABVMatrix34@@@Z
     ARTS_IMPORT void Init(char* arg1, const Matrix34& arg2);

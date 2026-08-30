@@ -47,7 +47,7 @@ public:
     ARTS_IMPORT void AddBangersToObsMap();
 
     // ?AddRoad@aiIntersection@@QAEXPAVaiPath@@@Z
-    ARTS_EXPORT void AddRoad(aiPath* arg1);
+    ARTS_EXPORT void AddRoad(aiPath* road);
 
     // ?AddToStopSignCntl@aiIntersection@@QAEXPAVaiVehicle@@@Z
     ARTS_EXPORT void AddToStopSignCntl(aiVehicle* arg1);

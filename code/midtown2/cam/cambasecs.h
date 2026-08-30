@@ -39,7 +39,7 @@ public:
     ARTS_IMPORT virtual ~camBaseCS();
 
     // ?FileIO@camBaseCS@@UAEXAAVdatParser@@@Z
-    ARTS_IMPORT virtual void FileIO(datParser& arg1);
+    ARTS_IMPORT virtual void FileIO(datParser& renderer);
 
     // ?AfterLoad@camBaseCS@@UAEXXZ
     ARTS_IMPORT virtual void AfterLoad();

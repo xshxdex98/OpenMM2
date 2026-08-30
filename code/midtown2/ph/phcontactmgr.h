@@ -39,19 +39,19 @@ public:
     ARTS_IMPORT ~phContactMgr();
 
     // ?AllocNewContact@phContactMgr@@QAEJJ@Z
-    ARTS_IMPORT ilong AllocNewContact(ilong arg1);
+    ARTS_IMPORT ilong AllocNewContact(ilong new_size);
 
     // ?ApplyImpact@phContactMgr@@QAEXPAVphImpact@@ABVVector3@@@Z
-    ARTS_IMPORT void ApplyImpact(phImpact* arg1, const Vector3& arg2);
+    ARTS_IMPORT void ApplyImpact(phImpact* label, const Vector3& data_type);
 
     // ?Calc2Impacts@phContactMgr@@QAEXPAVphImpact@@@Z
     ARTS_IMPORT void Calc2Impacts(phImpact* arg1);
 
     // ?Calc2ImpactsFixed@phContactMgr@@QAEXPAVphImpact@@_N@Z
-    ARTS_IMPORT void Calc2ImpactsFixed(phImpact* arg1, bool arg2);
+    ARTS_IMPORT void Calc2ImpactsFixed(phImpact* label, bool v_current_min);
 
     // ?Calc3Impacts@phContactMgr@@QAEXHPAVphImpact@@@Z
-    ARTS_IMPORT void Calc3Impacts(i32 arg1, phImpact* arg2);
+    ARTS_IMPORT void Calc3Impacts(i32 label, phImpact* data_type);
 
     // ?Calc3ImpactsFixed@phContactMgr@@QAEXHPAVphImpact@@_N@Z
     ARTS_IMPORT void Calc3ImpactsFixed(i32 arg1, phImpact* arg2, bool arg3);
@@ -66,19 +66,19 @@ public:
     ARTS_IMPORT void CalcHeldContact(i32 arg1, ilong& arg2, const Vector3& arg3, const Vector3& arg4, const Vector3& arg5, Vector3* arg6, Matrix34* arg7);
 
     // ?CalcHeldContacts@phContactMgr@@QAEXPAVphColliderBase@@0H@Z
-    ARTS_IMPORT void CalcHeldContacts(phColliderBase* arg1, phColliderBase* arg2, i32 arg3);
+    ARTS_IMPORT void CalcHeldContacts(phColliderBase* _X, phColliderBase* arg4, i32 arg3);
 
     // ?CalcImpact@phContactMgr@@QAEXPAVphImpact@@M@Z
-    ARTS_IMPORT void CalcImpact(phImpact* arg1, f32 arg2);
+    ARTS_IMPORT void CalcImpact(phImpact* label, f32 v);
 
     // ?CalcNextOverSamples@phContactMgr@@QAEXXZ
     ARTS_IMPORT void CalcNextOverSamples();
 
     // ?CullImpactList@phContactMgr@@QAEXPAHPAVphImpact@@@Z
-    ARTS_IMPORT void CullImpactList(i32* arg1, phImpact* arg2);
+    ARTS_IMPORT void CullImpactList(i32* label, phImpact* active);
 
     // ?FindNextContact@phContactMgr@@QAE_NJPAJ0@Z
-    ARTS_IMPORT bool FindNextContact(ilong arg1, ilong* arg2, ilong* arg3);
+    ARTS_IMPORT bool FindNextContact(ilong user_texture_id, ilong* size, ilong* uv0);
 
     // ?GetCMInvSeconds@phContactMgr@@QBEMXZ
     ARTS_IMPORT f32 GetCMInvSeconds() const;
@@ -102,7 +102,7 @@ public:
     ARTS_IMPORT bool SearchContact(ilong arg1, ilong* arg2);
 
     // ?SeekContact@phContactMgr@@QAEJJABVphImpact@@@Z
-    ARTS_IMPORT ilong SeekContact(ilong arg1, const phImpact& arg2);
+    ARTS_IMPORT ilong SeekContact(ilong new_size, const phImpact& n);
 
     // ?SeekHeldContact@phContactMgr@@QAEHJJH@Z
     ARTS_IMPORT i32 SeekHeldContact(ilong arg1, ilong arg2, i32 arg3);
@@ -121,7 +121,7 @@ private:
     ARTS_IMPORT bool AddHCEntry(i32 arg1, ilong arg2);
 
     // ?AddHeldContact@phContactMgr@@AAEHPBVphColliderBase@@0@Z
-    ARTS_IMPORT i32 AddHeldContact(const phColliderBase* arg1, const phColliderBase* arg2);
+    ARTS_IMPORT i32 AddHeldContact(const phColliderBase* str_id, const phColliderBase* size_arg);
 
     // ?ClearContactList@phContactMgr@@AAEXXZ
     ARTS_IMPORT void ClearContactList();
@@ -130,7 +130,7 @@ private:
     ARTS_IMPORT void ClearHeldContactTable();
 
     // ?EstMaxMoved@phContactMgr@@CAMABVMatrix34@@PBVphColliderBase@@1@Z
-    ARTS_IMPORT static f32 EstMaxMoved(const Matrix34& arg1, const phColliderBase* arg2, const phColliderBase* arg3);
+    ARTS_IMPORT static f32 EstMaxMoved(const Matrix34& fmt, const phColliderBase* arg2, const phColliderBase* arg3);
 
     // ?GetNextHeldContact@phContactMgr@@AAE_NHPAHPAJPA_N@Z
     ARTS_IMPORT bool GetNextHeldContact(i32 arg1, i32* arg2, ilong* arg3, bool* arg4);

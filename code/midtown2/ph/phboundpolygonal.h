@@ -69,7 +69,7 @@ public:
     ARTS_IMPORT virtual i32 TestBoundPolyPolyUseDotSmall(const phBoundPolygonal* arg1, phColliderBase* arg2, const Matrix34* arg3, const Matrix34* arg4, const Matrix34* arg5, const Matrix34* arg6, phIntersection* arg7, i32* arg8, f32 arg9, const Vector3& arg10, bool arg11) const;
 
     // ?BackupAbyPenetration@phBoundPolygonal@@SAXAAVphSegment@@@Z
-    ARTS_IMPORT static void BackupAbyPenetration(phSegment& arg1);
+    ARTS_IMPORT static void BackupAbyPenetration(phSegment& plot_type);
 
     // ?FindImpactsPolyToPoly@phBoundPolygonal@@QBEHPBV1@PBVMatrix34@@111PAVphColliderBase@@2PAVphIntersection@@3PAVphImpactBase@@HHPAH5@Z
     ARTS_IMPORT i32 FindImpactsPolyToPoly(const phBoundPolygonal* arg1, const Matrix34* arg2, const Matrix34* arg3, const Matrix34* arg4, const Matrix34* arg5, phColliderBase* arg6, phColliderBase* arg7, phIntersection* arg8, phIntersection* arg9, phImpactBase* arg10, i32 arg11, i32 arg12, i32* arg13, i32* arg14) const;
@@ -130,7 +130,7 @@ protected:
     ARTS_IMPORT static void ResetVertNeedsH(phIntersection* arg1, phIntersection* arg2, bool arg3, bool arg4, f32 arg5);
 
     // ?RetryVertPolyCollide@phBoundPolygonal@@KAXPBVphBound@@PAVphColliderBase@@1PAVphIntersection@@HPAPAVphImpactBase@@PAH_N@Z
-    ARTS_IMPORT static void RetryVertPolyCollide(const phBound* arg1, phColliderBase* arg2, phColliderBase* arg3, phIntersection* arg4, i32 arg5, phImpactBase** arg6, i32* arg7, bool arg8);
+    ARTS_IMPORT static void RetryVertPolyCollide(const phBound* v, phColliderBase* mn, phColliderBase* b, phIntersection* arg4, i32 arg5, phImpactBase** arg6, i32* mx, bool arg8);
 };
 
 // ??_7phBoundPolygonal@@6B@

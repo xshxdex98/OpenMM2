@@ -37,7 +37,7 @@ public:
     ARTS_IMPORT virtual ~AudStreamingMusic();
 
     // ?StreamingMusicInit@AudStreamingMusic@@QAEHPBD@Z
-    ARTS_IMPORT i32 StreamingMusicInit(const char* arg1);
+    ARTS_IMPORT i32 StreamingMusicInit(const char* renderer);
 
     // ?StreamingMusicPlay@AudStreamingMusic@@QAEHHH_N@Z
     ARTS_IMPORT i32 StreamingMusicPlay(i32 arg1, i32 arg2, bool arg3);

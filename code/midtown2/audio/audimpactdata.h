@@ -45,7 +45,7 @@ public:
     ARTS_IMPORT void Play(f32 arg1);
 
     // ?Play@AudImpactData@@QAEXMMM@Z
-    ARTS_IMPORT void Play(f32 arg1, f32 arg2, f32 arg3);
+    ARTS_IMPORT void Play(f32 renderer, f32 DrawList, f32 cull_rect);
 
     // ?ReadCSV@AudImpactData@@QAE_NPAVStream@@H@Z
     ARTS_IMPORT bool ReadCSV(Stream* arg1, i32 arg2);
@@ -57,7 +57,7 @@ public:
     ARTS_IMPORT void UnAssignSounds();
 
     // ?UpdateAttenuation@AudImpactData@@QAEXMM@Z
-    ARTS_IMPORT void UpdateAttenuation(f32 arg1, f32 arg2);
+    ARTS_IMPORT void UpdateAttenuation(f32 renderer, f32 DrawList);
 
 private:
     // ?PlaySample@AudImpactData@@AAEXPAUtagImpactSampleWrapper@@M@Z

@@ -64,7 +64,7 @@ protected:
     ARTS_IMPORT void Compute(Vector3& arg1, Vector3& arg2, Vector3& arg3, Vector3& arg4);
 
     // ?ComputePath@gizPathspline@@IAEXHHH@Z
-    ARTS_IMPORT void ComputePath(i32 arg1, i32 arg2, i32 arg3);
+    ARTS_IMPORT void ComputePath(i32 arg1, i32 name, i32 arg3);
 
     // ?DecrementPath@gizPathspline@@IAEXXZ
     ARTS_IMPORT void DecrementPath();
@@ -73,7 +73,7 @@ protected:
     ARTS_IMPORT void IncrementPath();
 
     // ?Solve@gizPathspline@@IAEXAAVVector3@@0M@Z
-    ARTS_IMPORT void Solve(Vector3& arg1, Vector3& arg2, f32 arg3);
+    ARTS_IMPORT void Solve(Vector3& name, Vector3& arg2, f32 arg3);
 };
 
 // check_size(gizPathspline, 0x0); // TODO: no layout in the IDB type library

@@ -42,10 +42,10 @@ public:
 
 private:
     // ?LoadAmbientSFX@mmGameMusicData@@AAE_NPAD@Z
-    ARTS_IMPORT bool LoadAmbientSFX(char* arg1);
+    ARTS_IMPORT bool LoadAmbientSFX(char* pos_old);
 
     // ?LoadAmbientSFXSegments@mmGameMusicData@@AAE_NPAVStream@@F@Z
-    ARTS_IMPORT bool LoadAmbientSFXSegments(Stream* arg1, i16 arg2);
+    ARTS_IMPORT bool LoadAmbientSFXSegments(Stream* stream, i16 arg2);
 };
 
 // ??_7mmGameMusicData@@6B@

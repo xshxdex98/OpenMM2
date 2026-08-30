@@ -51,7 +51,7 @@ public:
     ARTS_IMPORT virtual char* GetClassName();
 
     // ?AddWheel@vehDrivetrain@@QAEHPAVvehWheel@@@Z
-    ARTS_IMPORT i32 AddWheel(vehWheel* arg1);
+    ARTS_IMPORT i32 AddWheel(vehWheel* label_id);
 
     // ?Attach@vehDrivetrain@@QAEXXZ
     ARTS_IMPORT void Attach();

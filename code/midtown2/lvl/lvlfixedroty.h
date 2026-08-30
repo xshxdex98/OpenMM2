@@ -39,7 +39,7 @@ public:
     ARTS_IMPORT virtual const Vector3& GetPosition();
 
     // ?IsVisible@lvlFixedRotY@@UAEHABVgfxViewport@@@Z
-    ARTS_IMPORT virtual i32 IsVisible(const gfxViewport& arg1);
+    ARTS_IMPORT virtual i32 IsVisible(const gfxViewport& viewport);
 
     // ?GetMatrix@lvlFixedRotY@@UAEABVMatrix34@@AAV2@@Z
     ARTS_IMPORT virtual const Matrix34& GetMatrix(Matrix34& arg1);

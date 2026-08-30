@@ -42,7 +42,7 @@ public:
     ARTS_IMPORT virtual char* GetClassName();
 
     // ?AddBangerDataEntry@dgBangerDataManager@@QAEHPBD0@Z
-    ARTS_IMPORT i32 AddBangerDataEntry(const char* arg1, const char* arg2);
+    ARTS_IMPORT i32 AddBangerDataEntry(const char* name, const char* arg2);
 
     // ?ChangeData@dgBangerDataManager@@QAEXXZ
     ARTS_IMPORT void ChangeData();

@@ -61,7 +61,7 @@ public:
     ARTS_IMPORT virtual void PostDraw();
 
     // ?Draw@cityLevel@@UAEXABVgfxViewport@@I@Z
-    ARTS_IMPORT virtual void Draw(const gfxViewport& arg1, u32 arg2);
+    ARTS_IMPORT virtual void Draw(const gfxViewport& p_open, u32 arg2);
 
     // ?FindRoomId@cityLevel@@UAEHABVVector3@@H@Z
     ARTS_IMPORT virtual i32 FindRoomId(const Vector3& arg1, i32 arg2);
@@ -79,7 +79,7 @@ public:
     ARTS_IMPORT virtual i32 GetRoomPerimeter(i32 arg1, Vector3*const arg2, i32 arg3);
 
     // ?GetVisitList@cityLevel@@UAEHPAHHABVVector3@@1HH@Z
-    ARTS_IMPORT virtual i32 GetVisitList(i32* arg1, i32 arg2, const Vector3& arg3, const Vector3& arg4, i32 arg5, i32 arg6);
+    ARTS_IMPORT virtual i32 GetVisitList(i32* __formal, i32 arg2, const Vector3& arg3, const Vector3& arg4, i32 arg5, i32 arg6);
 
     // ?Collide@cityLevel@@UAE_NHAAVlvlSegment@@PAVlvlIntersection@@@Z
     ARTS_IMPORT virtual bool Collide(i32 arg1, lvlSegment& arg2, lvlIntersection* arg3);
@@ -91,7 +91,7 @@ public:
     ARTS_IMPORT virtual const lvlLevelBound* GetBound();
 
     // ?SetObjectDetail@cityLevel@@UAEXH@Z
-    ARTS_IMPORT virtual void SetObjectDetail(i32 arg1);
+    ARTS_IMPORT virtual void SetObjectDetail(i32 lod);
 
     // ?GetWaterLevel@cityLevel@@UBEMH@Z
     ARTS_IMPORT virtual f32 GetWaterLevel(i32 arg1) const;
@@ -115,7 +115,7 @@ public:
     ARTS_IMPORT i32 GetLastStartRoom();
 
     // ?GetTouchedNeighborsR@cityLevel@@QAEHPAHHHABVVector4@@H@Z
-    ARTS_IMPORT i32 GetTouchedNeighborsR(i32* arg1, i32 arg2, i32 arg3, const Vector4& arg4, i32 arg5);
+    ARTS_IMPORT i32 GetTouchedNeighborsR(i32* p_open, i32 arg2, i32 arg3, const Vector4& arg4, i32 arg5);
 
     // ?LoadPath@cityLevel@@SAXPBDABVMatrix34@@_N@Z
     ARTS_IMPORT static void LoadPath(const char* arg1, const Matrix34& arg2, bool arg3);
@@ -140,16 +140,16 @@ public:
 
 protected:
     // ?DecompressPvs@cityLevel@@IAEXH@Z
-    ARTS_IMPORT void DecompressPvs(i32 arg1);
+    ARTS_IMPORT void DecompressPvs(i32 index);
 
     // ?DrawRooms@cityLevel@@IAEXABVgfxViewport@@IPBUcityRoomRec@@H@Z
     ARTS_IMPORT void DrawRooms(const gfxViewport& arg1, u32 arg2, const cityRoomRec* arg3, i32 arg4);
 
     // ?FullProbe@cityLevel@@IAEHABVVector3@@@Z
-    ARTS_IMPORT i32 FullProbe(const Vector3& arg1);
+    ARTS_IMPORT i32 FullProbe(const Vector3& p_open);
 
     // ?InitFullProbe@cityLevel@@IAEXHH@Z
-    ARTS_IMPORT void InitFullProbe(i32 arg1, i32 arg2);
+    ARTS_IMPORT void InitFullProbe(i32 arg0, i32 arg2);
 
     // ?IsInRoomCheckWarps@cityLevel@@IAE_NABVVector3@@H@Z
     ARTS_IMPORT bool IsInRoomCheckWarps(const Vector3& arg1, i32 arg2);

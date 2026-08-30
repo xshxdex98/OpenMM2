@@ -32,7 +32,7 @@ public:
     ARTS_IMPORT audSoundHeap* Create(audSoundHeap* arg1, i32 arg2);
 
     // ?CreateNodeList@audSoundHeap@@QAEPAV1@PAV1@HH@Z
-    ARTS_IMPORT audSoundHeap* CreateNodeList(audSoundHeap* arg1, i32 arg2, i32 arg3);
+    ARTS_IMPORT audSoundHeap* CreateNodeList(audSoundHeap* angle, i32 arg2, i32 arg3);
 
     // ?Destroy@audSoundHeap@@QAEXXZ
     ARTS_IMPORT void Destroy();
@@ -53,16 +53,16 @@ public:
     ARTS_IMPORT void* GetTopOfBottomStack();
 
     // ?ReleaseBuffer@audSoundHeap@@QAE_NPAVaudSoundBuffer@@@Z
-    ARTS_IMPORT bool ReleaseBuffer(audSoundBuffer* arg1);
+    ARTS_IMPORT bool ReleaseBuffer(audSoundBuffer* instance);
 
     // ?ReserveBuffer@audSoundHeap@@QAEPAVaudSoundBuffer@@H@Z
-    ARTS_IMPORT audSoundBuffer* ReserveBuffer(i32 arg1);
+    ARTS_IMPORT audSoundBuffer* ReserveBuffer(i32 speed);
 
     // ?SetBottomOfTopStack@audSoundHeap@@QAE_NPAX@Z
     ARTS_IMPORT bool SetBottomOfTopStack(void* arg1);
 
     // ?SetTopOfBottomStack@audSoundHeap@@QAE_NPAX@Z
-    ARTS_IMPORT bool SetTopOfBottomStack(void* arg1);
+    ARTS_IMPORT bool SetTopOfBottomStack(void* num);
 };
 
 // check_size(audSoundHeap, 0x0); // TODO: no layout in the IDB type library

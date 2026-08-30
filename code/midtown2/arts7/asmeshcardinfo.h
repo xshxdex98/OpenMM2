@@ -31,7 +31,7 @@ class asMeshCardInfo
 {
 public:
     // ?Draw@asMeshCardInfo@@QAEXPBUasSparkPos@@H@Z
-    ARTS_IMPORT void Draw(const asSparkPos* arg1, i32 arg2);
+    ARTS_IMPORT void Draw(const asSparkPos* sparks, i32 sparkCount);
 
     // ?DrawShadows@asMeshCardInfo@@QAEXPBUasSparkPos@@H@Z
     ARTS_IMPORT void DrawShadows(const asSparkPos* arg1, i32 arg2);

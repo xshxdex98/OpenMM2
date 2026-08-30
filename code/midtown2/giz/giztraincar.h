@@ -40,7 +40,7 @@ public:
     ARTS_IMPORT virtual u32 SizeOf();
 
     // ?Init@gizTrainCar@@QAEXPADPAVdgPath@@M@Z
-    ARTS_IMPORT void Init(char* arg1, dgPath* arg2, f32 arg3);
+    ARTS_IMPORT void Init(char* value, dgPath* arg2, f32 arg3);
 
     // ?IsFirstStop@gizTrainCar@@QAE_NXZ
     ARTS_IMPORT bool IsFirstStop();
@@ -49,7 +49,7 @@ public:
     ARTS_IMPORT bool IsLastStop();
 
     // ?Reset@gizTrainCar@@QAEXH@Z
-    ARTS_IMPORT void Reset(i32 arg1);
+    ARTS_IMPORT void Reset(i32 balance);
 
     // ?Update@gizTrainCar@@QAEXM@Z
     ARTS_IMPORT void Update(f32 arg1);

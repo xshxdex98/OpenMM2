@@ -73,7 +73,7 @@ public:
     ARTS_IMPORT i32 RadiusHit(Vector3 arg1);
 
     // ?SetHeading@mmWaypointObject@@QAEXM@Z
-    ARTS_IMPORT void SetHeading(f32 arg1);
+    ARTS_IMPORT void SetHeading(f32 viewport);
 
     // ?SetHeadingType@mmWaypointObject@@QAEXH@Z
     ARTS_IMPORT void SetHeadingType(i32 arg1);

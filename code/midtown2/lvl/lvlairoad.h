@@ -29,7 +29,7 @@ class lvlAiRoad
 {
 public:
     // ?LoadBinary@lvlAiRoad@@QAEXPAVStream@@@Z
-    ARTS_IMPORT void LoadBinary(Stream* arg1);
+    ARTS_IMPORT void LoadBinary(Stream* a);
 };
 
 // check_size(lvlAiRoad, 0x1); // size known, members are not - cannot verify

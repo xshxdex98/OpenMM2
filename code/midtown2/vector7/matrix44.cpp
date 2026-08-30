@@ -244,7 +244,7 @@ Matrix44& Matrix44::Dot(const Matrix44& arg1, const Matrix44& arg2)
 }
 
 // ?FastInverse@Matrix44@@QAEXABV1@@Z
-void Matrix44::FastInverse(const Matrix44& arg1)
+void Matrix44::FastInverse(const Matrix44& rhs)
 {
     // The inverse of a rigid transform: transpose the 3x3 and negate the translation projected
     // onto each of its rows. Only valid when the 3x3 is orthonormal, which is why it is "fast".
@@ -255,47 +255,47 @@ void Matrix44::FastInverse(const Matrix44& arg1)
     // Each source element is read ONCE, into a local, because the original holds it in st(0)
     // across the store that overwrites the same offset - m22 in particular is stored to m22 and
     // then still used. Re-reading the member instead would change the result whenever `this`
-    // aliases arg1.
-    f32 tx = arg1.m30;
-    f32 ty = arg1.m31;
-    f32 tz = arg1.m32;
+    // aliases rhs.
+    f32 tx = rhs.m30;
+    f32 ty = rhs.m31;
+    f32 tz = rhs.m32;
 
     f32 acc;
     f32 e;
 
-    e = arg1.m00;
+    e = rhs.m00;
     acc = static_cast<f32>(f64 {e} * tx);
     m00 = e;
 
-    e = arg1.m01;
+    e = rhs.m01;
     acc = static_cast<f32>(f64 {e} * ty + acc);
     m10 = e;
 
-    e = arg1.m02;
+    e = rhs.m02;
     m20 = e;
     m30 = static_cast<f32>(-(f64 {e} * tz + acc));
 
-    e = arg1.m10;
+    e = rhs.m10;
     acc = static_cast<f32>(f64 {e} * tx);
     m01 = e;
 
-    e = arg1.m11;
+    e = rhs.m11;
     acc = static_cast<f32>(f64 {e} * ty + acc);
     m11 = e;
 
-    e = arg1.m12;
+    e = rhs.m12;
     m21 = e;
     m31 = static_cast<f32>(-(f64 {e} * tz + acc));
 
-    e = arg1.m20;
+    e = rhs.m20;
     acc = static_cast<f32>(f64 {e} * tx);
     m02 = e;
 
-    e = arg1.m21;
+    e = rhs.m21;
     acc = static_cast<f32>(f64 {e} * ty + acc);
     m12 = e;
 
-    e = arg1.m22;
+    e = rhs.m22;
     m33 = 1.0f;
     m22 = e;
     m23 = 0.0f;
@@ -467,29 +467,29 @@ Matrix44& Matrix44::MakeRotZ(f32 arg1)
 }
 
 // ?Set@Matrix44@@QAEXABV1@@Z
-void Matrix44::Set(const Matrix44& arg1)
+void Matrix44::Set(const Matrix44& x)
 {
     // Sixteen integer moves. Not memcpy and not an FPU copy - the bit patterns come across
     // untouched, which matters when the matrix is carrying a NaN or a denormal.
-    m00 = arg1.m00;
-    m01 = arg1.m01;
-    m02 = arg1.m02;
-    m03 = arg1.m03;
+    m00 = x.m00;
+    m01 = x.m01;
+    m02 = x.m02;
+    m03 = x.m03;
 
-    m10 = arg1.m10;
-    m11 = arg1.m11;
-    m12 = arg1.m12;
-    m13 = arg1.m13;
+    m10 = x.m10;
+    m11 = x.m11;
+    m12 = x.m12;
+    m13 = x.m13;
 
-    m20 = arg1.m20;
-    m21 = arg1.m21;
-    m22 = arg1.m22;
-    m23 = arg1.m23;
+    m20 = x.m20;
+    m21 = x.m21;
+    m22 = x.m22;
+    m23 = x.m23;
 
-    m30 = arg1.m30;
-    m31 = arg1.m31;
-    m32 = arg1.m32;
-    m33 = arg1.m33;
+    m30 = x.m30;
+    m31 = x.m31;
+    m32 = x.m32;
+    m33 = x.m33;
 }
 
 // ?Subtract@Matrix44@@QAEXABV1@0@Z

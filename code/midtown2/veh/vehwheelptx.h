@@ -55,7 +55,7 @@ public:
     ARTS_IMPORT static void DestroyClass();
 
     // ?Init@vehWheelPtx@@QAEXPAVvehCarSim@@@Z
-    ARTS_IMPORT void Init(vehCarSim* arg1);
+    ARTS_IMPORT void Init(vehCarSim* label_id);
 
     // ?UpdateWheel@vehWheelPtx@@QAEXPAVvehWheel@@@Z
     ARTS_IMPORT void UpdateWheel(vehWheel* arg1);

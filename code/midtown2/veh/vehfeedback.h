@@ -55,7 +55,7 @@ public:
     ARTS_IMPORT virtual i32 PlayFeedbackSampleID(i32 arg1);
 
     // ?GetNextUnit@vehFeedback@@UAEMH@Z
-    ARTS_IMPORT virtual f32 GetNextUnit(i32 arg1);
+    ARTS_IMPORT virtual f32 GetNextUnit(i32 label_ids);
 
     // ?Update@vehFeedback@@UAEHXZ
     ARTS_IMPORT virtual i32 Update();

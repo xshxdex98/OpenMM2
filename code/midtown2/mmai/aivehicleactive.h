@@ -63,7 +63,7 @@ public:
     ARTS_IMPORT virtual bool RequiresTerrainCollision();
 
     // ?Attach@aiVehicleActive@@QAEXPAVaiVehicleInstance@@@Z
-    ARTS_IMPORT void Attach(aiVehicleInstance* arg1);
+    ARTS_IMPORT void Attach(aiVehicleInstance* DrawList);
 
     // ?BottomedOut@aiVehicleActive@@QAEHXZ
     ARTS_IMPORT i32 BottomedOut();

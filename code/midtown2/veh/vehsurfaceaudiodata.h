@@ -73,10 +73,10 @@ public:
     ARTS_IMPORT void UnAssignSounds();
 
     // ?UpdateSkid@vehSurfaceAudioData@@QAEXM@Z
-    ARTS_IMPORT void UpdateSkid(f32 arg1);
+    ARTS_IMPORT void UpdateSkid(f32 label_id);
 
     // ?UpdateSkid@vehSurfaceAudioData@@QAEXMMM@Z
-    ARTS_IMPORT void UpdateSkid(f32 arg1, f32 arg2, f32 arg3);
+    ARTS_IMPORT void UpdateSkid(f32 label_id, f32 getter1, f32 getter2);
 
     // ?UpdateSurface@vehSurfaceAudioData@@QAEXM@Z
     ARTS_IMPORT void UpdateSurface(f32 arg1);

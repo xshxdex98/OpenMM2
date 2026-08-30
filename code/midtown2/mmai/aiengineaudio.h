@@ -38,7 +38,7 @@ public:
     ARTS_IMPORT ~aiEngineAudio();
 
     // ?AddToHash@aiEngineAudio@@SAXPADH@Z
-    ARTS_IMPORT static void AddToHash(char* arg1, i32 arg2);
+    ARTS_IMPORT static void AddToHash(char* arg1, i32 entry);
 
     // ?AssignSounds@aiEngineAudio@@QAEXH@Z
     ARTS_IMPORT void AssignSounds(i32 arg1);
@@ -53,7 +53,7 @@ public:
     ARTS_IMPORT void EchoOn(f32 arg1);
 
     // ?Load@aiEngineAudio@@SAHPAPAV1@PAD1PAH@Z
-    ARTS_IMPORT static i32 Load(aiEngineAudio** arg1, char* arg2, char* arg3, i32* arg4);
+    ARTS_IMPORT static i32 Load(aiEngineAudio** label_id, char* getter, char* asssetSection, i32* valueOut);
 
     // ?UnAssignSounds@aiEngineAudio@@QAEXXZ
     ARTS_IMPORT void UnAssignSounds();
@@ -66,7 +66,7 @@ public:
 
 private:
     // ?ReadCSV@aiEngineAudio@@AAEHPAVStream@@@Z
-    ARTS_IMPORT i32 ReadCSV(Stream* arg1);
+    ARTS_IMPORT i32 ReadCSV(Stream* label_id);
 };
 
 // check_size(aiEngineAudio, 0x0); // TODO: no layout in the IDB type library

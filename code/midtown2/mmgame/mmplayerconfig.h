@@ -64,13 +64,13 @@ public:
     ARTS_IMPORT void GetViewSettings();
 
     // ?Load@mmPlayerConfig@@QAEHPAD@Z
-    ARTS_IMPORT i32 Load(char* arg1);
+    ARTS_IMPORT i32 Load(char* playerName);
 
     // ?LoadBinary@mmPlayerConfig@@QAEHPAD@Z
-    ARTS_IMPORT i32 LoadBinary(char* arg1);
+    ARTS_IMPORT i32 LoadBinary(char* playerName);
 
     // ??4mmPlayerConfig@@QAEXAAV0@@Z
-    ARTS_IMPORT void operator=(mmPlayerConfig& arg1);
+    ARTS_IMPORT void operator=(mmPlayerConfig& copy);
 
     // ?Reset@mmPlayerConfig@@QAEXXZ
     ARTS_IMPORT void Reset();
@@ -79,7 +79,7 @@ public:
     ARTS_IMPORT i32 Save(char* arg1, i32 arg2);
 
     // ?SaveBinary@mmPlayerConfig@@QAEHPAD@Z
-    ARTS_IMPORT i32 SaveBinary(char* arg1);
+    ARTS_IMPORT i32 SaveBinary(char* audioDeviceStrLen);
 
     // ?SetAudio@mmPlayerConfig@@QAEXXZ
     ARTS_IMPORT void SetAudio();

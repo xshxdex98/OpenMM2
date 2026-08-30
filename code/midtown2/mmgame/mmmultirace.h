@@ -72,7 +72,7 @@ public:
     ARTS_IMPORT virtual void SystemMessage(NETSYS_MSG* arg1);
 
     // ?GameMessage@mmMultiRace@@UAEXPAUNET_RCXHEAD@@@Z
-    ARTS_IMPORT virtual void GameMessage(NET_RCXHEAD* arg1);
+    ARTS_IMPORT virtual void GameMessage(NET_RCXHEAD* window);
 
     // ?SetTimeoutOff@mmMultiRace@@QAEXXZ
     ARTS_IMPORT void SetTimeoutOff();

@@ -49,13 +49,13 @@ public:
     ARTS_EXPORT f32 Determinant() const;
 
     // ?Dot@Matrix44@@QAEAAV1@ABV1@0@Z
-    ARTS_EXPORT Matrix44& Dot(const Matrix44& arg1, const Matrix44& arg2);
+    ARTS_EXPORT Matrix44& Dot(const Matrix44& lhs, const Matrix44& rhs);
 
     // ?Dot@Matrix44@@QAEAAV1@ABV1@@Z
-    ARTS_EXPORT Matrix44& Dot(const Matrix44& arg1);
+    ARTS_EXPORT Matrix44& Dot(const Matrix44& rhs);
 
     // ?FastInverse@Matrix44@@QAEXABV1@@Z
-    ARTS_EXPORT void FastInverse(const Matrix44& arg1);
+    ARTS_EXPORT void FastInverse(const Matrix44& rhs);
 
     // ?FromMatrix34@Matrix44@@QAEXABVMatrix34@@@Z
     ARTS_EXPORT void FromMatrix34(const Matrix34& arg1);
@@ -82,7 +82,7 @@ public:
     ARTS_EXPORT void Print(const char* arg1) const;
 
     // ?Set@Matrix44@@QAEXABV1@@Z
-    ARTS_EXPORT void Set(const Matrix44& arg1);
+    ARTS_EXPORT void Set(const Matrix44& x);
 
     // ?Subtract@Matrix44@@QAEXABV1@0@Z
     ARTS_EXPORT void Subtract(const Matrix44& arg1, const Matrix44& arg2);

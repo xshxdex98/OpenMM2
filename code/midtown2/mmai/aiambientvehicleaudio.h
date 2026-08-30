@@ -63,25 +63,25 @@ public:
     ARTS_IMPORT AudImpact* GetAudImpactPtr();
 
     // ?Init@aiAmbientVehicleAudio@@QAEXPADPAVVector3@@@Z
-    ARTS_IMPORT void Init(char* arg1, Vector3* arg2);
+    ARTS_IMPORT void Init(char* label_id, Vector3* values);
 
     // ?InitStatics@aiAmbientVehicleAudio@@SAXXZ
     ARTS_IMPORT static void InitStatics();
 
     // ?LoadEngine@aiAmbientVehicleAudio@@QAE_NPAD0@Z
-    ARTS_IMPORT bool LoadEngine(char* arg1, char* arg2);
+    ARTS_IMPORT bool LoadEngine(char* label_id, char* values);
 
     // ?LoadHorn@aiAmbientVehicleAudio@@QAE_NPAD0@Z
-    ARTS_IMPORT bool LoadHorn(char* arg1, char* arg2);
+    ARTS_IMPORT bool LoadHorn(char* label_id, char* values);
 
     // ?LoadImpacts@aiAmbientVehicleAudio@@QAE_NPAD0@Z
-    ARTS_IMPORT bool LoadImpacts(char* arg1, char* arg2);
+    ARTS_IMPORT bool LoadImpacts(char* label_id, char* xs);
 
     // ?LoadNumVFileChoices@aiAmbientVehicleAudio@@SAXPAD@Z
     ARTS_IMPORT static void LoadNumVFileChoices(char* arg1);
 
     // ?LoadVoices@aiAmbientVehicleAudio@@QAE_NPAD0_N@Z
-    ARTS_IMPORT bool LoadVoices(char* arg1, char* arg2, bool arg3);
+    ARTS_IMPORT bool LoadVoices(char* label_id, char* xs, bool ys);
 
     // ?PlayAvoidanceHorn@aiAmbientVehicleAudio@@QAE_NXZ
     ARTS_IMPORT bool PlayAvoidanceHorn();

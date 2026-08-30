@@ -51,7 +51,7 @@ public:
     ARTS_IMPORT void Init(i32 arg1);
 
     // ?Load@mmPositions@@QAEHPAD@Z
-    ARTS_IMPORT i32 Load(char* arg1);
+    ARTS_IMPORT i32 Load(char* getter);
 
     // ?Recall@mmPositions@@QAEHHPAVMatrix34@@PAHPAD@Z
     ARTS_IMPORT i32 Recall(i32 arg1, Matrix34* arg2, i32* arg3, char* arg4);

@@ -50,7 +50,7 @@ public:
     ARTS_IMPORT virtual void SetGeometry(f32 arg1, f32 arg2, f32 arg3, f32 arg4);
 
     // ?SetPosition@mmCompRaceRecord@@UAEXPAVmmTextNode@@HM@Z
-    ARTS_IMPORT virtual void SetPosition(mmTextNode* arg1, i32 arg2, f32 arg3);
+    ARTS_IMPORT virtual void SetPosition(mmTextNode* arg0, i32 arg2, f32 arg3);
 
     // ?Init@mmCompRaceRecord@@QAEXHPAD0000HH@Z
     ARTS_IMPORT void Init(i32 arg1, char* arg2, char* arg3, char* arg4, char* arg5, char* arg6, i32 arg7, i32 arg8);
@@ -59,7 +59,7 @@ public:
     ARTS_IMPORT void InitTitle(f32 arg1, f32 arg2, f32 arg3, f32 arg4, LocString* arg5, LocString* arg6, LocString* arg7, LocString* arg8, LocString* arg9, LocString* arg10, i32 arg11);
 
     // ?LoadBitmap@mmCompRaceRecord@@QAEXPAD@Z
-    ARTS_IMPORT void LoadBitmap(char* arg1);
+    ARTS_IMPORT void LoadBitmap(char* name);
 
     // ?SelectIfRaceType@mmCompRaceRecord@@QAEXHH@Z
     ARTS_IMPORT void SelectIfRaceType(i32 arg1, i32 arg2);

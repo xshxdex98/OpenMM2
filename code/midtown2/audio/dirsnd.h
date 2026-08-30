@@ -40,7 +40,7 @@ public:
     ARTS_IMPORT ~DirSnd();
 
     // ?InitPrimarySoundBuffer@DirSnd@@UAEHKEPAD@Z
-    ARTS_IMPORT virtual i32 InitPrimarySoundBuffer(ulong arg1, u8 arg2, char* arg3);
+    ARTS_IMPORT virtual i32 InitPrimarySoundBuffer(ulong sampleRate, u8 arg2, char* lpString2);
 
     // ?ClearDSDeviceList@DirSnd@@QAEXXZ
     ARTS_IMPORT void ClearDSDeviceList();
@@ -58,32 +58,32 @@ public:
     ARTS_IMPORT u32 GetNum3DHallBufs();
 
     // ?Init@DirSnd@@SAPAV1@KE_NPAD@Z
-    ARTS_IMPORT static DirSnd* Init(ulong arg1, u8 arg2, bool arg3, char* arg4);
+    ARTS_IMPORT static DirSnd* Init(ulong samplesPerSec, u8 allowStero, bool enable3D, char* deviceName);
 
     // ?Init3DListener@DirSnd@@QAEHMMMMM@Z
     ARTS_IMPORT i32 Init3DListener(f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5);
 
     // ?IsDSDeviceInList@DirSnd@@QAEHPAU_GUID@@@Z
-    ARTS_IMPORT i32 IsDSDeviceInList(_GUID* arg1);
+    ARTS_IMPORT i32 IsDSDeviceInList(_GUID* guid);
 
     // ?ScanAvailableDSFormats@DirSnd@@QAEXXZ
     ARTS_IMPORT void ScanAvailableDSFormats();
 
     // ?SetBitDepth@DirSnd@@QAEXH@Z
-    ARTS_IMPORT void SetBitDepth(i32 arg1);
+    ARTS_IMPORT void SetBitDepth(i32 bitDepth);
 
     // ?SetDeviceRating@DirSnd@@QAEXPAUtag_dsdevdesc@@@Z
-    ARTS_IMPORT void SetDeviceRating(tag_dsdevdesc* arg1);
+    ARTS_IMPORT void SetDeviceRating(tag_dsdevdesc* deviceEntry);
 
     // ?SetPrimaryBufferFormat@DirSnd@@QAEXKE@Z
-    ARTS_IMPORT void SetPrimaryBufferFormat(ulong arg1, u8 arg2);
+    ARTS_IMPORT void SetPrimaryBufferFormat(ulong sampleRate, u8 allowStero);
 
     // ?TranslateDSError@DirSnd@@QAEPADJ@Z
-    ARTS_IMPORT char* TranslateDSError(ilong arg1);
+    ARTS_IMPORT char* TranslateDSError(ilong hResult);
 
 protected:
     // ?CreatePrimaryInterfaceAndBuffer@DirSnd@@IAEHPAU_DSBUFFERDESC@@@Z
-    ARTS_IMPORT i32 CreatePrimaryInterfaceAndBuffer(_DSBUFFERDESC* arg1);
+    ARTS_IMPORT i32 CreatePrimaryInterfaceAndBuffer(_DSBUFFERDESC* dsBufferDesc);
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

@@ -42,7 +42,7 @@ public:
     ARTS_IMPORT void Clear();
 
     // ?CompareComponent@mmIO@@QAEHH@Z
-    ARTS_IMPORT i32 CompareComponent(i32 arg1);
+    ARTS_IMPORT i32 CompareComponent(i32 getter1);
 
     // ?ForceSettingAcrossConfigs@mmIO@@QAEXH@Z
     ARTS_IMPORT void ForceSettingAcrossConfigs(i32 arg1);
@@ -51,7 +51,7 @@ public:
     ARTS_IMPORT void GetDescription(char* arg1);
 
     // ?Init@mmIO@@QAEXPADHJ@Z
-    ARTS_IMPORT void Init(char* arg1, i32 arg2, ilong arg3);
+    ARTS_IMPORT void Init(char* getter1, i32 getter2, ilong transformer);
 
     // ?InitDev@mmIO@@QAEXH_JHHH@Z
     ARTS_IMPORT void InitDev(i32 arg1, i64 arg2, i32 arg3, i32 arg4, i32 arg5);
@@ -60,10 +60,10 @@ public:
     ARTS_IMPORT i32 operator==(eqEvent* arg1);
 
     // ?Read@mmIO@@QAEHPAVStream@@@Z
-    ARTS_IMPORT i32 Read(Stream* arg1);
+    ARTS_IMPORT i32 Read(Stream* getter1);
 
     // ?Write@mmIO@@QAEHPAVStream@@@Z
-    ARTS_IMPORT i32 Write(Stream* arg1);
+    ARTS_IMPORT i32 Write(Stream* getter1);
 };
 
 // check_size(mmIO, 0x0); // TODO: no layout in the IDB type library

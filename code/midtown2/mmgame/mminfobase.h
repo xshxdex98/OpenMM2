@@ -38,7 +38,7 @@ public:
     ARTS_IMPORT virtual void FileIO(datParser& arg1);
 
     // ?Load@mmInfoBase@@QAEHPAD@Z
-    ARTS_IMPORT i32 Load(char* arg1);
+    ARTS_IMPORT i32 Load(char* getter);
 
     // ?Save@mmInfoBase@@QAEHPAD@Z
     ARTS_IMPORT i32 Save(char* arg1);

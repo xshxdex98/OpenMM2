@@ -41,7 +41,7 @@ public:
     ARTS_IMPORT void AddShard(Vector3 arg1, Vector3 arg2, Vector3 arg3, f32 arg4);
 
     // ?Draw@fxShard@@QAEXPAVmodShader@@@Z
-    ARTS_IMPORT void Draw(modShader* arg1);
+    ARTS_IMPORT void Draw(modShader* c);
 
     // ?Update@fxShard@@QAEXXZ
     ARTS_IMPORT void Update();

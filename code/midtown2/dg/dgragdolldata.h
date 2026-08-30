@@ -32,7 +32,7 @@ public:
     ARTS_IMPORT dgRagdollData();
 
     // ?FileIO@dgRagdollData@@QAEXAAVdatParser@@@Z
-    ARTS_IMPORT void FileIO(datParser& arg1);
+    ARTS_IMPORT void FileIO(datParser& _Ptr);
 };
 
 // check_size(dgRagdollData, 0x0); // TODO: no layout in the IDB type library

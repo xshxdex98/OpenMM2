@@ -40,7 +40,7 @@ public:
     ARTS_IMPORT virtual void Reset();
 
     // ?AddName@PURoster@@QAEXPBDKH@Z
-    ARTS_IMPORT void AddName(const char* arg1, ulong arg2, i32 arg3);
+    ARTS_IMPORT void AddName(const char* renderer, ulong DrawList, i32 cull_rect);
 
     // ?BootButtonCB@PURoster@@QAEXXZ
     ARTS_IMPORT void BootButtonCB();
@@ -61,7 +61,7 @@ public:
     ARTS_IMPORT void RemoveName(ulong arg1);
 
     // ?RemoveName@PURoster@@QAEXPBDK@Z
-    ARTS_IMPORT void RemoveName(const char* arg1, ulong arg2);
+    ARTS_IMPORT void RemoveName(const char* renderer, ulong DrawList);
 
     // ?SetBootCB@PURoster@@QAEXVdatCallback@@@Z
     ARTS_IMPORT void SetBootCB(datCallback arg1);

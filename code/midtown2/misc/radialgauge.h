@@ -46,7 +46,7 @@ public:
     ARTS_IMPORT virtual void Update();
 
     // ?Cull@RadialGauge@@QAEXPBVMatrix34@@@Z
-    ARTS_IMPORT void Cull(const Matrix34* arg1);
+    ARTS_IMPORT void Cull(const Matrix34* col);
 
     // ?Init@RadialGauge@@QAEXPAVmodStatic@@PAPAVmodShader@@VVector3@@PBM3M@Z
     ARTS_IMPORT void Init(modStatic* arg1, modShader** arg2, Vector3 arg3, const f32* arg4, const f32* arg5, f32 arg6);

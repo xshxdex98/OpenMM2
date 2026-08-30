@@ -45,7 +45,7 @@ public:
 
 private:
     // ?LoadBitmap@mmToggle@@AAEXPAD@Z
-    ARTS_IMPORT void LoadBitmap(char* arg1);
+    ARTS_IMPORT void LoadBitmap(char* name);
 
     // ?SetSize@mmToggle@@AAEXMM@Z
     ARTS_IMPORT void SetSize(f32 arg1, f32 arg2);

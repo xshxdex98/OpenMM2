@@ -33,7 +33,7 @@ public:
     ARTS_IMPORT ~pedActiveData();
 
     // ?Init@pedActiveData@@QAEXPBD@Z
-    ARTS_IMPORT void Init(const char* arg1);
+    ARTS_IMPORT void Init(const char* This);
 };
 
 // check_size(pedActiveData, 0x0); // TODO: no layout in the IDB type library

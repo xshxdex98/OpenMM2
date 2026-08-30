@@ -47,7 +47,7 @@ public:
     ARTS_IMPORT i32 IsPlaying();
 
     // ?SetFGVals@mmCarRoadFF@@QAEXMMM@Z
-    ARTS_IMPORT void SetFGVals(f32 arg1, f32 arg2, f32 arg3);
+    ARTS_IMPORT void SetFGVals(f32 ctx, f32 window, f32 arg3);
 
     // ?Start@mmCarRoadFF@@QAEXXZ
     ARTS_IMPORT void Start();

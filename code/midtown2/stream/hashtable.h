@@ -31,40 +31,40 @@ class HashTable
 {
 public:
     // ??0HashTable@@QAE@H_NH@Z
-    ARTS_IMPORT HashTable(i32 arg1, bool arg2, i32 arg3);
+    ARTS_IMPORT HashTable(i32 entryCount, bool fixedSize, i32 fixedCount);
 
     // ??1HashTable@@QAE@XZ
     ARTS_IMPORT ~HashTable();
 
     // ?Access@HashTable@@QAEPAXPBD@Z
-    ARTS_IMPORT void* Access(const char* arg1);
+    ARTS_IMPORT void* Access(const char* name);
 
     // ?Access@HashTable@@QAE_NPBDPAPBX@Z
-    ARTS_IMPORT bool Access(const char* arg1, const void** arg2);
+    ARTS_IMPORT bool Access(const char* entryName, const void** entryOut);
 
     // ?AccessData@HashTable@@QAEPAXH@Z
-    ARTS_IMPORT void* AccessData(i32 arg1);
+    ARTS_IMPORT void* AccessData(i32 index);
 
     // ?AccessName@HashTable@@QAEPBDH@Z
-    ARTS_IMPORT const char* AccessName(i32 arg1);
+    ARTS_IMPORT const char* AccessName(i32 index);
 
     // ?Change@HashTable@@QAE_NPBD0@Z
-    ARTS_IMPORT bool Change(const char* arg1, const char* arg2);
+    ARTS_IMPORT bool Change(const char* oldName, const char* newName);
 
     // ?Delete@HashTable@@QAE_NPBD@Z
-    ARTS_IMPORT bool Delete(const char* arg1);
+    ARTS_IMPORT bool Delete(const char* string);
 
     // ?GetEmptySlot@HashTable@@QAEAAVHashEntry@@PBDPAXPAV2@@Z
     ARTS_IMPORT HashEntry& GetEmptySlot(const char* arg1, void* arg2, HashEntry* arg3);
 
     // ?GetFirstEntry@HashTable@@QAE_NAAVHashPosition@@@Z
-    ARTS_IMPORT bool GetFirstEntry(HashPosition& arg1);
+    ARTS_IMPORT bool GetFirstEntry(HashPosition& hashPosition);
 
     // ?GetNextEntry@HashTable@@QAE_NAAVHashPosition@@@Z
-    ARTS_IMPORT bool GetNextEntry(HashPosition& arg1);
+    ARTS_IMPORT bool GetNextEntry(HashPosition& position);
 
     // ?Insert@HashTable@@QAE_NPBDPAX@Z
-    ARTS_IMPORT bool Insert(const char* arg1, void* arg2);
+    ARTS_IMPORT bool Insert(const char* argName, void* entry);
 
     // ?Kill@HashTable@@QAEXXZ
     ARTS_IMPORT void Kill();
@@ -79,29 +79,29 @@ public:
     ARTS_IMPORT void MakePermanent();
 
     // ??4HashTable@@QAEXABV0@@Z
-    ARTS_IMPORT void operator=(const HashTable& arg1);
+    ARTS_IMPORT void operator=(const HashTable& copy);
 
 public:
     static HashTable*& Access_First() { return First; }
 
 private:
     // ?ComputePrime@HashTable@@AAEHH@Z
-    ARTS_IMPORT i32 ComputePrime(i32 arg1);
+    ARTS_IMPORT i32 ComputePrime(i32 prime);
 
     // ?GetEntry@HashTable@@AAEPAVHashEntry@@H@Z
-    ARTS_IMPORT HashEntry* GetEntry(i32 arg1);
+    ARTS_IMPORT HashEntry* GetEntry(i32 index);
 
     // ?Hash@HashTable@@AAEHPBD@Z
-    ARTS_IMPORT i32 Hash(const char* arg1);
+    ARTS_IMPORT i32 Hash(const char* string);
 
     // ?InitCommon@HashTable@@AAEXH@Z
-    ARTS_IMPORT void InitCommon(i32 arg1);
+    ARTS_IMPORT void InitCommon(i32 entryCount);
 
     // ?InitFixed@HashTable@@AAEXHH@Z
-    ARTS_IMPORT void InitFixed(i32 arg1, i32 arg2);
+    ARTS_IMPORT void InitFixed(i32 entryCount, i32 arg2);
 
     // ?Recompute@HashTable@@AAEXH@Z
-    ARTS_IMPORT void Recompute(i32 arg1);
+    ARTS_IMPORT void Recompute(i32 arraySize);
 
     // ?First@HashTable@@0PAV1@A
     ARTS_IMPORT static HashTable* First;

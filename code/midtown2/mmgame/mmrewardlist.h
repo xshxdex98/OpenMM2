@@ -35,7 +35,7 @@ public:
     ARTS_IMPORT ~mmRewardList();
 
     // ?CheckReward@mmRewardList@@SA_NPADHPAVmmRewardRecord@@@Z
-    ARTS_IMPORT static bool CheckReward(char* arg1, i32 arg2, mmRewardRecord* arg3);
+    ARTS_IMPORT static bool CheckReward(char* renderer, i32 DrawList, mmRewardRecord* cull_rect);
 
     // ?GetRecord@mmRewardList@@QAEPAVmmRewardRecord@@H@Z
     ARTS_IMPORT mmRewardRecord* GetRecord(i32 arg1);
@@ -44,10 +44,10 @@ public:
     ARTS_IMPORT void Init(i32 arg1);
 
     // ?Load@mmRewardList@@QAE_NPAD00@Z
-    ARTS_IMPORT bool Load(char* arg1, char* arg2, char* arg3);
+    ARTS_IMPORT bool Load(char* renderer, char* DrawList, char* cull_rect);
 
     // ?UnlockPlayerRewards@mmRewardList@@SAXPAD@Z
-    ARTS_IMPORT static void UnlockPlayerRewards(char* arg1);
+    ARTS_IMPORT static void UnlockPlayerRewards(char* renderer);
 };
 
 // check_size(mmRewardList, 0x0); // TODO: no layout in the IDB type library

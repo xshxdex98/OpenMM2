@@ -46,7 +46,7 @@ public:
     ARTS_IMPORT void Init(i32 arg1);
 
     // ?InitGlow@dgBangerManager@@QAEXPBD@Z
-    ARTS_IMPORT void InitGlow(const char* arg1);
+    ARTS_IMPORT void InitGlow(const char* textureName);
 
 public:
     static dgBangerManager*& Access_Instance() { return Instance; }

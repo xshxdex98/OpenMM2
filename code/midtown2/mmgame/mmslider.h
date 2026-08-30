@@ -69,7 +69,7 @@ public:
     ARTS_IMPORT void LoadBitmap(char* arg1);
 
     // ?SetPosition@mmSlider@@QAEXMM@Z
-    ARTS_IMPORT void SetPosition(f32 arg1, f32 arg2);
+    ARTS_IMPORT void SetPosition(f32 transformer, f32 DrawList);
 
     // ?SetRange@mmSlider@@QAEXMM@Z
     ARTS_IMPORT void SetRange(f32 arg1, f32 arg2);

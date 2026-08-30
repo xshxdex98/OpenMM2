@@ -99,13 +99,13 @@ public:
     ARTS_IMPORT bool IsPlaying();
 
     // ?Load@AudSoundBase@@QAEHPADH_N@Z
-    ARTS_IMPORT i32 Load(char* arg1, i32 arg2, bool arg3);
+    ARTS_IMPORT i32 Load(char* renderer, i32 DrawList, bool cull_rect);
 
     // ?PauseResume@AudSoundBase@@QAEX_N@Z
     ARTS_IMPORT void PauseResume(bool arg1);
 
     // ?PlayLoop@AudSoundBase@@QAEXMM@Z
-    ARTS_IMPORT void PlayLoop(f32 arg1, f32 arg2);
+    ARTS_IMPORT void PlayLoop(f32 renderer, f32 DrawList);
 
     // ?PlayOnce@AudSoundBase@@QAEXMM@Z
     ARTS_IMPORT void PlayOnce(f32 arg1, f32 arg2);
@@ -144,7 +144,7 @@ public:
     ARTS_IMPORT void SetEffect(i32 arg1);
 
     // ?SetExtension@AudSoundBase@@QAEXPAD@Z
-    ARTS_IMPORT void SetExtension(char* arg1);
+    ARTS_IMPORT void SetExtension(char* renderer);
 
     // ?SetFrequency@AudSoundBase@@QAEXM@Z
     ARTS_IMPORT void SetFrequency(f32 arg1);
@@ -174,7 +174,7 @@ public:
     ARTS_IMPORT void SetupOneShotLayerBuffers(i32 arg1, f32 arg2, i32 arg3);
 
     // ?SetVolume@AudSoundBase@@QAEXM@Z
-    ARTS_IMPORT void SetVolume(f32 arg1);
+    ARTS_IMPORT void SetVolume(f32 renderer);
 
     // ?Stop@AudSoundBase@@QAEXXZ
     ARTS_IMPORT void Stop();

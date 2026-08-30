@@ -72,7 +72,7 @@ public:
     ARTS_IMPORT void SetText();
 
     // ?SetValue@UITextRoller@@QAEHH@Z
-    ARTS_IMPORT i32 SetValue(i32 arg1);
+    ARTS_IMPORT i32 SetValue(i32 label_id);
 };
 
 // ??_7UITextRoller@@6B@

@@ -44,7 +44,7 @@ public:
     ARTS_IMPORT virtual void Reset();
 
     // ?FileIO@camPostCS@@UAEXAAVdatParser@@@Z
-    ARTS_IMPORT virtual void FileIO(datParser& arg1);
+    ARTS_IMPORT virtual void FileIO(datParser& renderer);
 
     // ?GetClassName@camPostCS@@UAEPADXZ
     ARTS_IMPORT virtual char* GetClassName();

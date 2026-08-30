@@ -65,7 +65,7 @@ public:
     ARTS_IMPORT f32 GetThrottle();
 
     // ?LoadReplay@mmReplayManager@@QAEXPAD@Z
-    ARTS_IMPORT void LoadReplay(char* arg1);
+    ARTS_IMPORT void LoadReplay(char* path);
 
     // ?LoadReplayDesc@mmReplayManager@@QAEHPAD@Z
     ARTS_IMPORT i32 LoadReplayDesc(char* arg1);
@@ -77,7 +77,7 @@ public:
     ARTS_IMPORT void SaveReplayDesc(char* arg1);
 
     // ?SetData@mmReplayManager@@QAEXH_N@Z
-    ARTS_IMPORT void SetData(i32 arg1, bool arg2);
+    ARTS_IMPORT void SetData(i32 _Arg, bool arg2);
 
     // ?SetReplayDesc@mmReplayManager@@QAEXPAD@Z
     ARTS_IMPORT void SetReplayDesc(char* arg1);
@@ -93,7 +93,7 @@ private:
     ARTS_IMPORT void ProcessCam();
 
     // ?ReadReplayInfo@mmReplayManager@@AAEXPAVStream@@@Z
-    ARTS_IMPORT void ReadReplayInfo(Stream* arg1);
+    ARTS_IMPORT void ReadReplayInfo(Stream* stream);
 
     // ?SetReplayInfo@mmReplayManager@@AAEXXZ
     ARTS_IMPORT void SetReplayInfo();

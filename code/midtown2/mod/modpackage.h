@@ -41,7 +41,7 @@ public:
     ARTS_IMPORT void CloseFile();
 
     // ?Open@modPackage@@QAE_NPBD0@Z
-    ARTS_IMPORT bool Open(const char* arg1, const char* arg2);
+    ARTS_IMPORT bool Open(const char* asssetSection, const char* arg2);
 
     // ?OpenFile@modPackage@@QAEPAVStream@@PBD@Z
     ARTS_IMPORT Stream* OpenFile(const char* arg1);
@@ -50,7 +50,7 @@ public:
     ARTS_IMPORT void Skip();
 
     // ?SkipTo@modPackage@@QAEXPBD@Z
-    ARTS_IMPORT void SkipTo(const char* arg1);
+    ARTS_IMPORT void SkipTo(const char* name);
 
 private:
     // ?NextItem@modPackage@@AAEXXZ

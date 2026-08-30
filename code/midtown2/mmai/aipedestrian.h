@@ -74,13 +74,13 @@ private:
     ARTS_IMPORT void Anticipate();
 
     // ?Avoid@aiPedestrian@@AAEXPAM@Z
-    ARTS_IMPORT void Avoid(f32* arg1);
+    ARTS_IMPORT void Avoid(f32* DrawList);
 
     // ?AvoidBanger@aiPedestrian@@AAEXPAVlvlInstance@@M@Z
     ARTS_IMPORT void AvoidBanger(lvlInstance* arg1, f32 arg2);
 
     // ?AvoidObstacle@aiPedestrian@@AAEXABVVector3@@M@Z
-    ARTS_IMPORT void AvoidObstacle(const Vector3& arg1, f32 arg2);
+    ARTS_IMPORT void AvoidObstacle(const Vector3& DrawList, f32 __formal);
 
     // ?AvoidPedCollision@aiPedestrian@@AAEXPAV1@M@Z
     ARTS_IMPORT void AvoidPedCollision(aiPedestrian* arg1, f32 arg2);
@@ -89,7 +89,7 @@ private:
     ARTS_IMPORT void AvoidPlayer(Vector3& arg1, f32 arg2);
 
     // ?CalcCurve@aiPedestrian@@AAEXHHM@Z
-    ARTS_IMPORT void CalcCurve(i32 arg1, i32 arg2, f32 arg3);
+    ARTS_IMPORT void CalcCurve(i32 DrawList, i32 __formal, f32 uv);
 
     // ?ComputeCurve@aiPedestrian@@AAEXAAVVector3@@000@Z
     ARTS_IMPORT void ComputeCurve(Vector3& arg1, Vector3& arg2, Vector3& arg3, Vector3& arg4);
@@ -101,7 +101,7 @@ private:
     ARTS_IMPORT i32 DetectBangerCollision(lvlInstance** arg1, f32* arg2);
 
     // ?DetectPedCollision@aiPedestrian@@AAEHMPAPAV1@PAM@Z
-    ARTS_IMPORT i32 DetectPedCollision(f32 arg1, aiPedestrian** arg2, f32* arg3);
+    ARTS_IMPORT i32 DetectPedCollision(f32 DrawList, aiPedestrian** __formal, f32* uv);
 
     // ?DetectPlayerAnticipate@aiPedestrian@@AAEHPAM0@Z
     ARTS_IMPORT i32 DetectPlayerAnticipate(f32* arg1, f32* arg2);

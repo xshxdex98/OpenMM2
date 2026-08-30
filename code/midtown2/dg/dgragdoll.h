@@ -47,7 +47,7 @@ public:
     ARTS_IMPORT Matrix34& GetMatrix();
 
     // ?Init@dgRagdoll@@QAEXABVdgRagdollData@@AAVcrKinematics@@PAVMatrix34@@@Z
-    ARTS_IMPORT void Init(const dgRagdollData& arg1, crKinematics& arg2, Matrix34* arg3);
+    ARTS_IMPORT void Init(const dgRagdollData& arg0, crKinematics& arg2, Matrix34* arg3);
 
     // ?Reset@dgRagdoll@@QAEXXZ
     ARTS_IMPORT void Reset();

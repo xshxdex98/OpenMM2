@@ -76,7 +76,7 @@ public:
     ARTS_IMPORT bool FindImpactSphereToSphere(const phBoundSphere* arg1, const Matrix34* arg2, const Matrix34* arg3, phColliderBase* arg4, phColliderBase* arg5, phImpactBase* arg6, const Vector3& arg7) const;
 
     // ?Load@phBoundSphere@@QAE_NPBD@Z
-    ARTS_IMPORT bool Load(const char* arg1);
+    ARTS_IMPORT bool Load(const char* path);
 
     // ?ScaleRadius@phBoundSphere@@QAEXM@Z
     ARTS_IMPORT void ScaleRadius(f32 arg1);

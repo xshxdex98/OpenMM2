@@ -59,7 +59,7 @@ public:
     ARTS_IMPORT i32 Dec();
 
     // ?EvalMouseXY@UITextRoller2@@QAEXMM@Z
-    ARTS_IMPORT void EvalMouseXY(f32 arg1, f32 arg2);
+    ARTS_IMPORT void EvalMouseXY(f32 MousePosX, f32 MousePosY);
 
     // ?Inc@UITextRoller2@@QAEHXZ
     ARTS_IMPORT i32 Inc();
@@ -77,7 +77,7 @@ public:
     ARTS_IMPORT void SetText();
 
     // ?SetValue@UITextRoller2@@QAEHH@Z
-    ARTS_IMPORT i32 SetValue(i32 arg1);
+    ARTS_IMPORT i32 SetValue(i32 newValue);
 
 public:
     // Members from 0x06C; everything below that belongs to uiWidget.

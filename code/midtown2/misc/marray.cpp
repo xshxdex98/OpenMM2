@@ -49,13 +49,13 @@ ARTS_IMPORT i32 fgets(char* arg1, i32 arg2, Stream* arg3);
 // inside it.
 
 // ?Read@MArray@@QAEXPAD@Z
-void MArray::Read(char* arg1)
+void MArray::Read(char* file_name)
 {
-    Stream* stream = datAssetManager::Open("tune", arg1, "csv", false, true);
+    Stream* stream = datAssetManager::Open("tune", file_name, "csv", false, true);
 
     if (!stream)
     {
-        Errorf("Can't open menu data file '%s'", arg1);
+        Errorf("Can't open menu data file '%s'", file_name);
 
         return;
     }

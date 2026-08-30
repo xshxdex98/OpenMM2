@@ -29,7 +29,7 @@ class CrashCourse : public UIMenu
 {
 public:
     // ??0CrashCourse@@QAE@H@Z
-    ARTS_IMPORT CrashCourse(i32 arg1);
+    ARTS_IMPORT CrashCourse(i32 getter);
 
     // ??1CrashCourse@@UAE@XZ
     ARTS_IMPORT virtual ~CrashCourse();

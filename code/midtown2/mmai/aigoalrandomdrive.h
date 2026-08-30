@@ -60,20 +60,20 @@ public:
     ARTS_IMPORT void ReplayDebug();
 
     // ?SolvePosition@aiGoalRandomDrive@@QAEXAAVVector3@@M@Z
-    ARTS_IMPORT void SolvePosition(Vector3& arg1, f32 arg2);
+    ARTS_IMPORT void SolvePosition(Vector3& This, f32 arg2);
 
 private:
     // ?AnyVehiclesComingThisWay@aiGoalRandomDrive@@AAEHXZ
     ARTS_IMPORT i32 AnyVehiclesComingThisWay();
 
     // ?AvoidCollision@aiGoalRandomDrive@@AAEXPAVaiVehicleSpline@@M@Z
-    ARTS_IMPORT void AvoidCollision(aiVehicleSpline* arg1, f32 arg2);
+    ARTS_IMPORT void AvoidCollision(aiVehicleSpline* This, f32 _Val2);
 
     // ?ChangeLanes@aiGoalRandomDrive@@AAEXXZ
     ARTS_IMPORT void ChangeLanes();
 
     // ?OkayToEnterIntersection@aiGoalRandomDrive@@AAEHM@Z
-    ARTS_IMPORT i32 OkayToEnterIntersection(f32 arg1);
+    ARTS_IMPORT i32 OkayToEnterIntersection(f32 damagePosition);
 
     // ?SolveLane@aiGoalRandomDrive@@AAEXXZ
     ARTS_IMPORT void SolveLane();

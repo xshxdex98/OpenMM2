@@ -47,7 +47,7 @@ public:
     ARTS_IMPORT i32 InPersuit();
 
     // ?PerpEscapes@aiPoliceOfficer@@QAEX_N@Z
-    ARTS_IMPORT void PerpEscapes(bool arg1);
+    ARTS_IMPORT void PerpEscapes(bool DrawList);
 
     // ?Reset@aiPoliceOfficer@@QAEXXZ
     ARTS_IMPORT void Reset();

@@ -61,7 +61,7 @@ public:
     ARTS_IMPORT virtual bool ClampToWorld(Vector3& arg1);
 
     // ?LoadInstances@lvlLevel@@UAE_NPBD0@Z
-    ARTS_IMPORT virtual bool LoadInstances(const char* arg1, const char* arg2);
+    ARTS_IMPORT virtual bool LoadInstances(const char* spc, const char* info);
 
     // ?GetEnvMap@lvlLevel@@UAEPAVgfxTexture@@HABVVector3@@AAM@Z
     ARTS_IMPORT virtual gfxTexture* GetEnvMap(i32 arg1, const Vector3& arg2, f32& arg3);
@@ -70,7 +70,7 @@ public:
     ARTS_IMPORT void MoveToRoom(lvlInstance* arg1, i32 arg2);
 
     // ?RegisterDrawable@lvlLevel@@QAEXHVdatCallback@@@Z
-    ARTS_IMPORT void RegisterDrawable(i32 arg1, datCallback arg2);
+    ARTS_IMPORT void RegisterDrawable(i32 category, datCallback callback);
 
     // ?ResetCallbacks@lvlLevel@@QAEXXZ
     ARTS_IMPORT void ResetCallbacks();
@@ -84,7 +84,7 @@ public:
 
 protected:
     // ?CallCallbacks@lvlLevel@@IAEXH@Z
-    ARTS_IMPORT void CallCallbacks(i32 arg1);
+    ARTS_IMPORT void CallCallbacks(i32 type);
 
     // ?sm_Singleton@lvlLevel@@1PAV1@A
     ARTS_IMPORT static lvlLevel* sm_Singleton;

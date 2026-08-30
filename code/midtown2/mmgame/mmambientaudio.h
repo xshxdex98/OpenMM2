@@ -29,7 +29,7 @@ class mmAmbientAudio
 {
 public:
     // ??0mmAmbientAudio@@QAE@PAVmmPlayer@@@Z
-    ARTS_IMPORT mmAmbientAudio(mmPlayer* arg1);
+    ARTS_IMPORT mmAmbientAudio(mmPlayer* node);
 
     // ??1mmAmbientAudio@@QAE@XZ
     ARTS_IMPORT ~mmAmbientAudio();

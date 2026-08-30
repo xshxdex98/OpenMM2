@@ -56,7 +56,7 @@ public:
     ARTS_IMPORT void QueueVolume(f32 arg1);
 
     // ?SetDelayTime@EchoEffect@@QAEXM@Z
-    ARTS_IMPORT void SetDelayTime(f32 arg1);
+    ARTS_IMPORT void SetDelayTime(f32 player);
 
     // ?SetFrequency@EchoEffect@@QAEXM@Z
     ARTS_IMPORT void SetFrequency(f32 arg1);

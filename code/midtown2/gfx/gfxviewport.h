@@ -33,10 +33,10 @@ class gfxViewport
 {
 public:
     // ?ComputeVFOV@gfxViewport@@QBEMM@Z
-    ARTS_IMPORT f32 ComputeVFOV(f32 arg1) const;
+    ARTS_IMPORT f32 ComputeVFOV(f32 height) const;
 
     // ?DoPerspective@gfxViewport@@SAXPAV1@@Z
-    ARTS_IMPORT static void DoPerspective(gfxViewport* arg1);
+    ARTS_IMPORT static void DoPerspective(gfxViewport* matrix);
 
     // ?IsSphereVisible@gfxViewport@@QBE?AW4gfxCullStatus@@MMMMPAM@Z
     ARTS_IMPORT gfxCullStatus IsSphereVisible(f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32* arg5) const;
@@ -45,7 +45,7 @@ public:
     ARTS_IMPORT void Ortho(f32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, f32 arg6);
 
     // ?Perspective@gfxViewport@@QAEXMMMM@Z
-    ARTS_EXPORT void Perspective(f32 arg1, f32 arg2, f32 arg3, f32 arg4);
+    ARTS_EXPORT void Perspective(f32 fov, f32 aspect, f32 arg3, f32 arg4);
 
     // ?Project@gfxViewport@@QAEXAAVVector4@@0@Z
     ARTS_IMPORT void Project(Vector4& arg1, Vector4& arg2);
@@ -54,7 +54,7 @@ public:
     ARTS_IMPORT void ResetWindow();
 
     // ?SetWindow@gfxViewport@@QAEXHHHHMM@Z
-    ARTS_IMPORT void SetWindow(i32 arg1, i32 arg2, i32 arg3, i32 arg4, f32 arg5, f32 arg6);
+    ARTS_IMPORT void SetWindow(i32 x, i32 y, i32 w, i32 h, f32 arg5, f32 arg6);
 
 private:
     // ??0gfxViewport@@AAE@XZ

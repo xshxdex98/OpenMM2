@@ -29,10 +29,10 @@ class datAssetManager
 {
 public:
     // ?BaseName@datAssetManager@@SAXPBDPADH@Z
-    ARTS_IMPORT static void BaseName(const char* arg1, char* arg2, i32 arg3);
+    ARTS_IMPORT static void BaseName(const char* label_id, char* xs, i32 ys);
 
     // ?Create@datAssetManager@@SAPAVStream@@PBD00_N@Z
-    ARTS_IMPORT static Stream* Create(const char* arg1, const char* arg2, const char* arg3, bool arg4);
+    ARTS_IMPORT static Stream* Create(const char* directory, const char* filename, const char* extension, bool arg4);
 
     // ?Create@datAssetManager@@SAPAVStream@@PBD0_N@Z
     ARTS_IMPORT static Stream* Create(const char* arg1, const char* arg2, bool arg3);
@@ -44,16 +44,16 @@ public:
     ARTS_IMPORT static bool Exists(const char* arg1, const char* arg2, const char* arg3);
 
     // ?Exists@datAssetManager@@SA_NPBD0@Z
-    ARTS_IMPORT static bool Exists(const char* arg1, const char* arg2);
+    ARTS_IMPORT static bool Exists(const char* path, const char* extension);
 
     // ?FileName@datAssetManager@@SAPBDPBD@Z
-    ARTS_IMPORT static const char* FileName(const char* arg1);
+    ARTS_IMPORT static const char* FileName(const char* label_id);
 
     // ?FullPath@datAssetManager@@SAXPADHPBD11@Z
     ARTS_IMPORT static void FullPath(char* arg1, i32 arg2, const char* arg3, const char* arg4, const char* arg5);
 
     // ?FullPath@datAssetManager@@SAXPADHPBD1@Z
-    ARTS_IMPORT static void FullPath(char* arg1, i32 arg2, const char* arg3, const char* arg4);
+    ARTS_IMPORT static void FullPath(char* buffer, i32 bufferLength, const char* path, const char* ext);
 
     // ?Open@datAssetManager@@SAPAVStream@@PBD00_N1@Z
     ARTS_IMPORT static Stream* Open(const char* arg1, const char* arg2, const char* arg3, bool arg4, bool arg5);

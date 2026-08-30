@@ -49,10 +49,10 @@ public:
     ARTS_IMPORT void AddName(i32 arg1, const char* arg2, i32 arg3);
 
     // ?AddName@PUResults@@QAEXHPBDM@Z
-    ARTS_IMPORT void AddName(i32 arg1, const char* arg2, f32 arg3);
+    ARTS_IMPORT void AddName(i32 arg1, const char* arg4, f32 arg3);
 
     // ?AddTitle@PUResults@@QAEXPAULocString@@0@Z
-    ARTS_IMPORT void AddTitle(LocString* arg1, LocString* arg2);
+    ARTS_IMPORT void AddTitle(LocString* renderer, LocString* DrawList);
 
     // ?ClearNames@PUResults@@QAEXXZ
     ARTS_IMPORT void ClearNames();

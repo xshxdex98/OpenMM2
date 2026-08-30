@@ -36,7 +36,7 @@ public:
     ARTS_IMPORT static bool SegmentSphereTest(const Vector3& arg1, f32 arg2, const Vector3& arg3, const Vector3& arg4);
 
     // ?SegmentSphereTest@phCollisionPrim@@SA_NABVVector3@@MABVphSegment@@@Z
-    ARTS_IMPORT static bool SegmentSphereTest(const Vector3& arg1, f32 arg2, const phSegment& arg3);
+    ARTS_IMPORT static bool SegmentSphereTest(const Vector3& data_type, f32 t, const phSegment& v_min);
 
     // ?SegmentSphereTest@phCollisionPrim@@SA_NMABVVector3@@0@Z
     ARTS_IMPORT static bool SegmentSphereTest(f32 arg1, const Vector3& arg2, const Vector3& arg3);
@@ -45,7 +45,7 @@ public:
     ARTS_IMPORT static bool SegmentSphereTest(f32 arg1, const phSegment& arg2);
 
     // ?SegmentToSphere@phCollisionPrim@@SA_NABVVector3@@MABVphSegment@@PAVphIntersectionPoint@@@Z
-    ARTS_IMPORT static bool SegmentToSphere(const Vector3& arg1, f32 arg2, const phSegment& arg3, phIntersectionPoint* arg4);
+    ARTS_IMPORT static bool SegmentToSphere(const Vector3& data_type, f32 t, const phSegment& v_min, phIntersectionPoint* v_max);
 
     // ?SphereToPolygonal@phCollisionPrim@@SA_NABVVector3@@MPBVphBoundPolygonal@@AAV2@2AAM@Z
     ARTS_IMPORT static bool SphereToPolygonal(const Vector3& arg1, f32 arg2, const phBoundPolygonal* arg3, Vector3& arg4, Vector3& arg5, f32& arg6);

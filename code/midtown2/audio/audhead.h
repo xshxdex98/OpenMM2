@@ -30,7 +30,7 @@ class audHead
 {
 public:
     // ?Create@audHead@@QAEPAV1@PAVaudManager@@@Z
-    ARTS_IMPORT audHead* Create(audManager* arg1);
+    ARTS_IMPORT audHead* Create(audManager* amount);
 
     // ?Destroy@audHead@@QAEXXZ
     ARTS_IMPORT void Destroy();
@@ -48,7 +48,7 @@ public:
     ARTS_IMPORT _audvector3_* GetHeadVelocity();
 
     // ?GetHeadVolumePanPitch@audHead@@QAE_NPAU_audvector3_@@0PAM11@Z
-    ARTS_IMPORT bool GetHeadVolumePanPitch(_audvector3_* arg1, _audvector3_* arg2, f32* arg3, f32* arg4, f32* arg5);
+    ARTS_IMPORT bool GetHeadVolumePanPitch(_audvector3_* timer, _audvector3_* index, f32* arg3, f32* arg4, f32* arg5);
 
     // ?Init@audHead@@QAEXXZ
     ARTS_IMPORT void Init();
@@ -57,7 +57,7 @@ public:
     ARTS_IMPORT void SetHandle(i32 arg1);
 
     // ?SetHeadFacingDir@audHead@@QAEXPAU_audvector3_@@_N@Z
-    ARTS_IMPORT void SetHeadFacingDir(_audvector3_* arg1, bool arg2);
+    ARTS_IMPORT void SetHeadFacingDir(_audvector3_* vec, bool arg2);
 
     // ?SetHeadLimits@audHead@@QAEXPAU_audvector3_@@0@Z
     ARTS_IMPORT void SetHeadLimits(_audvector3_* arg1, _audvector3_* arg2);

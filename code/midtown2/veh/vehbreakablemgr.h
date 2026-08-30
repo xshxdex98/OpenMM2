@@ -51,7 +51,7 @@ public:
     ARTS_IMPORT void DrawCityLit(const Matrix34& arg1, modShader* arg2, i32 arg3);
 
     // ?Eject@vehBreakableMgr@@QAEXPAVvehBreakable@@H@Z
-    ARTS_IMPORT void Eject(vehBreakable* arg1, i32 arg2);
+    ARTS_IMPORT void Eject(vehBreakable* label_id, i32 values);
 
     // ?EjectAll@vehBreakableMgr@@QAEXH@Z
     ARTS_IMPORT void EjectAll(i32 arg1);

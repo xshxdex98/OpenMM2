@@ -37,10 +37,10 @@ public:
     ARTS_IMPORT ~aiRailSet();
 
     // ?CalcRailPosition@aiRailSet@@QAEXAAVVector3@@M@Z
-    ARTS_IMPORT void CalcRailPosition(Vector3& arg1, f32 arg2);
+    ARTS_IMPORT void CalcRailPosition(Vector3& DrawList, f32 __formal);
 
     // ?CalcRailPosOrient@aiRailSet@@QAEXAAVVector3@@0M@Z
-    ARTS_IMPORT void CalcRailPosOrient(Vector3& arg1, Vector3& arg2, f32 arg3);
+    ARTS_IMPORT void CalcRailPosOrient(Vector3& DrawList, Vector3& __formal, f32 uv);
 
     // ?CalcXZDirection@aiRailSet@@QAEXAAVVector3@@0000M@Z
     ARTS_IMPORT void CalcXZDirection(Vector3& arg1, Vector3& arg2, Vector3& arg3, Vector3& arg4, Vector3& arg5, f32 arg6);
@@ -67,13 +67,13 @@ public:
     ARTS_IMPORT void Reset();
 
     // ?SolveTurnType@aiRailSet@@QAEHPAVaiPath@@0@Z
-    ARTS_IMPORT i32 SolveTurnType(aiPath* arg1, aiPath* arg2);
+    ARTS_IMPORT i32 SolveTurnType(aiPath* DrawList, aiPath* __formal);
 
     // ?SolveXZCurve@aiRailSet@@QAEXAAVVector3@@0M@Z
     ARTS_IMPORT void SolveXZCurve(Vector3& arg1, Vector3& arg2, f32 arg3);
 
     // ?SolveXZPosition@aiRailSet@@QAEXAAVVector3@@M@Z
-    ARTS_IMPORT void SolveXZPosition(Vector3& arg1, f32 arg2);
+    ARTS_IMPORT void SolveXZPosition(Vector3& DrawList, f32 __formal);
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

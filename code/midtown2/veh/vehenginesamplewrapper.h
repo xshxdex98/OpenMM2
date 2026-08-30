@@ -53,7 +53,7 @@ public:
     ARTS_IMPORT void EchoOn(f32 arg1);
 
     // ?ParseCSVBuffer@vehEngineSampleWrapper@@QAEXPAD@Z
-    ARTS_IMPORT void ParseCSVBuffer(char* arg1);
+    ARTS_IMPORT void ParseCSVBuffer(char* label_id);
 
     // ?ParseCSVBufferOld@vehEngineSampleWrapper@@QAEXPAD@Z
     ARTS_IMPORT void ParseCSVBufferOld(char* arg1);
@@ -77,7 +77,7 @@ public:
     ARTS_IMPORT void UpdateRPM(f32 arg1);
 
     // ?UpdateRPM@vehEngineSampleWrapper@@QAEXMMMM@Z
-    ARTS_IMPORT void UpdateRPM(f32 arg1, f32 arg2, f32 arg3, f32 arg4);
+    ARTS_IMPORT void UpdateRPM(f32 label_id, f32 getter1, f32 getter2, f32 arg4);
 };
 
 // check_size(vehEngineSampleWrapper, 0x0); // TODO: no layout in the IDB type library

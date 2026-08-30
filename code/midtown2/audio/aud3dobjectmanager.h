@@ -46,7 +46,7 @@ public:
     ARTS_IMPORT i32 AllocateSample(char* arg1, i32 arg2, ulong arg3);
 
     // ?AllocateSample@Aud3DObjectManager@@QAEHPADK@Z
-    ARTS_IMPORT i32 AllocateSample(char* arg1, ulong arg2);
+    ARTS_IMPORT i32 AllocateSample(char* renderer, ulong DrawList);
 
     // ?EchoOff@Aud3DObjectManager@@QAEXXZ
     ARTS_IMPORT void EchoOff();

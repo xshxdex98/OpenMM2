@@ -32,7 +32,7 @@ class phImpactBase
 {
 public:
     // ?AddImpactShaftPlaneTest@phImpactBase@@SA_NPAV1@PAHABVVector3@@M2@Z
-    ARTS_IMPORT static bool AddImpactShaftPlaneTest(phImpactBase* arg1, i32* arg2, const Vector3& arg3, f32 arg4, const Vector3& arg5);
+    ARTS_IMPORT static bool AddImpactShaftPlaneTest(phImpactBase* data_type, i32* v, const Vector3& arg3, f32 arg4, const Vector3& arg5);
 
     // ?AddImpactSpherePlaneTest@phImpactBase@@SA_NPAV1@PAHABVVector3@@M@Z
     ARTS_IMPORT static bool AddImpactSpherePlaneTest(phImpactBase* arg1, i32* arg2, const Vector3& arg3, f32 arg4);

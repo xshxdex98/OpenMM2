@@ -83,7 +83,7 @@ public:
     ARTS_IMPORT i32 SetValue(i32 arg1);
 
     // ?Switch@TextDropWidget@@QAEXHAAVVector4@@@Z
-    ARTS_IMPORT void Switch(i32 arg1, Vector4& arg2);
+    ARTS_IMPORT void Switch(i32 arg1, Vector4& pColor);
 };
 
 // ??_7TextDropWidget@@6B@

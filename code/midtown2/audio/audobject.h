@@ -41,7 +41,7 @@ public:
     enum AUD_OBJECTSTATUS : i32;
 
     // ?CreateDuplicate@audObject@@QAEPAV1@PAV1@@Z
-    ARTS_IMPORT audObject* CreateDuplicate(audObject* arg1);
+    ARTS_IMPORT audObject* CreateDuplicate(audObject* perpCar);
 
     // ?CreateEmptyObject@audObject@@QAEPAV1@W4AUDTYPE@audManager@@PAV3@@Z
     ARTS_IMPORT audObject* CreateEmptyObject(audManager::AUDTYPE arg1, audManager* arg2);
@@ -188,7 +188,7 @@ public:
     ARTS_IMPORT void SetDefaults(_soundattribs_* arg1);
 
     // ?SetDefaultVolume@audObject@@QAEXM@Z
-    ARTS_IMPORT void SetDefaultVolume(f32 arg1);
+    ARTS_IMPORT void SetDefaultVolume(f32 room);
 
     // ?SetFlags@audObject@@QAEXW4AUD_OBJECTFLAGS@1@0@Z
     ARTS_IMPORT void SetFlags(audObject::AUD_OBJECTFLAGS arg1, audObject::AUD_OBJECTFLAGS arg2);
@@ -230,7 +230,7 @@ public:
     ARTS_IMPORT void StopPCEchoBuffer();
 
     // ?Update@audObject@@QAE_NH@Z
-    ARTS_IMPORT bool Update(i32 arg1);
+    ARTS_IMPORT bool Update(i32 flags);
 };
 
 // check_size(audObject, 0x0); // TODO: no layout in the IDB type library

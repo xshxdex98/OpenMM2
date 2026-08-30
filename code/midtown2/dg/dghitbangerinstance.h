@@ -47,7 +47,7 @@ public:
     ARTS_IMPORT virtual const Matrix34& GetMatrix(Matrix34& arg1);
 
     // ?SetMatrix@dgHitBangerInstance@@UAEXABVMatrix34@@@Z
-    ARTS_IMPORT virtual void SetMatrix(const Matrix34& arg1);
+    ARTS_IMPORT virtual void SetMatrix(const Matrix34& new_capacity);
 
     // ?Detach@dgHitBangerInstance@@UAEXXZ
     ARTS_IMPORT virtual void Detach();

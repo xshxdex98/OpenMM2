@@ -41,7 +41,7 @@ public:
     ARTS_IMPORT virtual void Update();
 
     // ?Init@UIBMLabel@@QAEXPAVstring@@MMPAH@Z
-    ARTS_IMPORT void Init(string* arg1, f32 arg2, f32 arg3, i32* arg4);
+    ARTS_IMPORT void Init(string* transformer, f32 DrawList, f32 values, i32* rows);
 
     // ?SetBitmapName@UIBMLabel@@QAEXPAVstring@@@Z
     ARTS_IMPORT void SetBitmapName(string* arg1);

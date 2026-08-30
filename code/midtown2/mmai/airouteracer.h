@@ -41,7 +41,7 @@ public:
     ARTS_IMPORT i32 Finished();
 
     // ?Init@aiRouteRacer@@QAEXHPAD@Z
-    ARTS_IMPORT void Init(i32 arg1, char* arg2);
+    ARTS_IMPORT void Init(i32 arg1, char* arg4);
 
     // ?Reset@aiRouteRacer@@QAEXXZ
     ARTS_IMPORT void Reset();

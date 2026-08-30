@@ -41,7 +41,7 @@ public:
     ARTS_IMPORT virtual void Update();
 
     // ?LoadBitmap@ccStatus@@QAEXPADHHH@Z
-    ARTS_IMPORT void LoadBitmap(char* arg1, i32 arg2, i32 arg3, i32 arg4);
+    ARTS_IMPORT void LoadBitmap(char* name, i32 arg2, i32 arg3, i32 arg4);
 
     // ?SetStatus@ccStatus@@QAEXF@Z
     ARTS_IMPORT void SetStatus(i16 arg1);

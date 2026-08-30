@@ -96,10 +96,10 @@ public:
     ARTS_IMPORT void InitStatic(mmPlayer* arg1, i32 arg2, u32 arg3);
 
     // ?LoadCSV@mmWaypoints@@QAEHPADH@Z
-    ARTS_IMPORT i32 LoadCSV(char* arg1, i32 arg2);
+    ARTS_IMPORT i32 LoadCSV(char* node, i32 pos);
 
     // ?ReInit@mmWaypoints@@QAEXHPADI@Z
-    ARTS_IMPORT void ReInit(i32 arg1, char* arg2, u32 arg3);
+    ARTS_IMPORT void ReInit(i32 ctx, char* parent_node, u32 split_axis);
 
     // ?ResetAllTags@mmWaypoints@@QAEXXZ
     ARTS_IMPORT void ResetAllTags();
@@ -112,7 +112,7 @@ public:
 
 protected:
     // ?ClearWaypoint@mmWaypoints@@IAEXH@Z
-    ARTS_IMPORT void ClearWaypoint(i32 arg1);
+    ARTS_IMPORT void ClearWaypoint(i32 ctx);
 
     // ?CycleCurrentWaypoint@mmWaypoints@@IAEXH@Z
     ARTS_IMPORT void CycleCurrentWaypoint(i32 arg1);
@@ -121,7 +121,7 @@ protected:
     ARTS_IMPORT void GenerateHitRooms();
 
     // ?SetCurrentGoals@mmWaypoints@@IAEXH@Z
-    ARTS_IMPORT void SetCurrentGoals(i32 arg1);
+    ARTS_IMPORT void SetCurrentGoals(i32 node);
 
 public:
     // Members from 0x018; everything below that belongs to asNode.

@@ -48,7 +48,7 @@ public:
     ARTS_IMPORT f32 GetH();
 
     // ?GetHit@mmDropDown@@QAEHMM@Z
-    ARTS_IMPORT i32 GetHit(f32 arg1, f32 arg2);
+    ARTS_IMPORT i32 GetHit(f32 transformer, f32 DrawList);
 
     // ?GetW@mmDropDown@@QAEMXZ
     ARTS_IMPORT f32 GetW();

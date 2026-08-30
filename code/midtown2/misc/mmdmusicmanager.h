@@ -41,7 +41,7 @@ public:
     ARTS_IMPORT void EchoOff();
 
     // ?EchoOn@MMDMusicManager@@QAEXMM@Z
-    ARTS_IMPORT void EchoOn(f32 arg1, f32 arg2);
+    ARTS_IMPORT void EchoOn(f32 renderer, f32 DrawList);
 
     // ?Init@MMDMusicManager@@QAEXHK@Z
     ARTS_IMPORT void Init(i32 arg1, ulong arg2);
@@ -62,7 +62,7 @@ public:
     ARTS_IMPORT void UpdateAmbientSFX();
 
     // ?UpdateMusic@MMDMusicManager@@QAEXMH_N@Z
-    ARTS_IMPORT void UpdateMusic(f32 arg1, i32 arg2, bool arg3);
+    ARTS_IMPORT void UpdateMusic(f32 renderer, i32 DrawList, bool cull_rect);
 
     // ?UpdateSeconds@MMDMusicManager@@QAEXXZ
     ARTS_IMPORT void UpdateSeconds();

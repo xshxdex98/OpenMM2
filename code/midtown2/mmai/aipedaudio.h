@@ -38,7 +38,7 @@ public:
     ARTS_IMPORT bool LoadFemaleVoices(char* arg1, bool arg2);
 
     // ?LoadMaleVoices@aiPedAudio@@QAE_NPAD_N@Z
-    ARTS_IMPORT bool LoadMaleVoices(char* arg1, bool arg2);
+    ARTS_IMPORT bool LoadMaleVoices(char* arg1, bool idx);
 
     // ?LoadNumFemaleChoices@aiPedAudio@@SAXPAD@Z
     ARTS_IMPORT static void LoadNumFemaleChoices(char* arg1);

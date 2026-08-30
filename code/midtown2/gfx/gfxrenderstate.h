@@ -44,16 +44,16 @@ public:
     ARTS_IMPORT void DisableAllLights();
 
     // ?DoFlush@gfxRenderState@@QAEXPAVgfxRenderStateData@@@Z
-    ARTS_IMPORT void DoFlush(gfxRenderStateData* arg1);
+    ARTS_IMPORT void DoFlush(gfxRenderStateData* prevState);
 
     // ?GetLight@gfxRenderState@@QAEXHPAUgfxLight@@@Z
-    ARTS_IMPORT void GetLight(i32 arg1, gfxLight* arg2);
+    ARTS_IMPORT void GetLight(i32 arg1, gfxLight* light);
 
     // ?LerpRGBA@gfxRenderState@@QAEIIIM@Z
     ARTS_IMPORT u32 LerpRGBA(u32 arg1, u32 arg2, f32 arg3);
 
     // ?LightEnable@gfxRenderState@@QAEXH_N@Z
-    ARTS_IMPORT void LightEnable(i32 arg1, bool arg2);
+    ARTS_IMPORT void LightEnable(i32 idx, bool flag);
 
     // ?SetBlendMatrix@gfxRenderState@@QAEXHABVMatrix44@@@Z
     ARTS_IMPORT void SetBlendMatrix(i32 arg1, const Matrix44& arg2);
@@ -62,10 +62,10 @@ public:
     ARTS_IMPORT void SetBlendSet(gfxBlendSet arg1, u8 arg2);
 
     // ?SetCamera@gfxRenderState@@SAXABVMatrix34@@@Z
-    ARTS_IMPORT static void SetCamera(const Matrix34& arg1);
+    ARTS_IMPORT static void SetCamera(const Matrix34& matrix);
 
     // ?SetCamera@gfxRenderState@@SAXABVMatrix44@@@Z
-    ARTS_EXPORT static void SetCamera(const Matrix44& arg1);
+    ARTS_EXPORT static void SetCamera(const Matrix44& cameraMatrix);
 
     // ?SetCameraFull@gfxRenderState@@SAXABVMatrix34@@@Z
     ARTS_IMPORT static void SetCameraFull(const Matrix34& arg1);
@@ -77,16 +77,16 @@ public:
     ARTS_IMPORT static void SetCard(const Vector4& arg1);
 
     // ?SetLight@gfxRenderState@@QAEXHPBUgfxLight@@@Z
-    ARTS_IMPORT void SetLight(i32 arg1, const gfxLight* arg2);
+    ARTS_IMPORT void SetLight(i32 arg1, const gfxLight* light);
 
     // ?SetTexMatrix@gfxRenderState@@QAEXHABVMatrix44@@@Z
-    ARTS_IMPORT void SetTexMatrix(i32 arg1, const Matrix44& arg2);
+    ARTS_IMPORT void SetTexMatrix(i32 stateType, const Matrix44& arg2);
 
     // ?SetTexMipmapBias@gfxRenderState@@QAEXHM@Z
     ARTS_IMPORT void SetTexMipmapBias(i32 arg1, f32 arg2);
 
     // ?SetTexSource@gfxRenderState@@QAEXHH@Z
-    ARTS_IMPORT void SetTexSource(i32 arg1, i32 arg2);
+    ARTS_IMPORT void SetTexSource(i32 pStm, i32 arg2);
 
     // ?SetTexTransform@gfxRenderState@@QAEXHH_N@Z
     ARTS_IMPORT void SetTexTransform(i32 arg1, i32 arg2, bool arg3);

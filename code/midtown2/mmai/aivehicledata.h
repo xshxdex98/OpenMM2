@@ -37,7 +37,7 @@ public:
     ARTS_IMPORT virtual ~aiVehicleData();
 
     // ?FileIO@aiVehicleData@@UAEXAAVdatParser@@@Z
-    ARTS_IMPORT virtual void FileIO(datParser& arg1);
+    ARTS_IMPORT virtual void FileIO(datParser& child);
 
     // ?GetClassName@aiVehicleData@@UAEPADXZ
     ARTS_IMPORT virtual char* GetClassName();

@@ -39,10 +39,10 @@ public:
     ARTS_IMPORT void AssignCDVolume(f32 arg1);
 
     // ?AssignMixerBalance@MixerCTL@@QAEKMK@Z
-    ARTS_IMPORT ulong AssignMixerBalance(f32 arg1, ulong arg2);
+    ARTS_IMPORT ulong AssignMixerBalance(f32 renderer, ulong DrawList);
 
     // ?AssignMixerVolume@MixerCTL@@QAEKMK@Z
-    ARTS_IMPORT ulong AssignMixerVolume(f32 arg1, ulong arg2);
+    ARTS_IMPORT ulong AssignMixerVolume(f32 renderer, ulong DrawList);
 
     // ?AssignWaveBalance@MixerCTL@@QAEXM@Z
     ARTS_IMPORT void AssignWaveBalance(f32 arg1);

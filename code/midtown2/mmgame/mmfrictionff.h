@@ -29,7 +29,7 @@ class mmFrictionFF
 {
 public:
     // ?Init@mmFrictionFF@@UAEHPAUIDirectInputDevice2A@@@Z
-    ARTS_IMPORT virtual i32 Init(IDirectInputDevice2A* arg1);
+    ARTS_IMPORT virtual i32 Init(IDirectInputDevice2A* getter);
 
     // ?Play@mmFrictionFF@@UAEHXZ
     ARTS_IMPORT virtual i32 Play();
@@ -38,10 +38,10 @@ public:
     ARTS_IMPORT virtual i32 Stop();
 
     // ?SetValues@mmFrictionFF@@UAEHMM@Z
-    ARTS_IMPORT virtual i32 SetValues(f32 arg1, f32 arg2);
+    ARTS_IMPORT virtual i32 SetValues(f32 getter, f32 transformer);
 
     // ?Assign@mmFrictionFF@@QAEHJ@Z
-    ARTS_IMPORT i32 Assign(ilong arg1);
+    ARTS_IMPORT i32 Assign(ilong getter);
 };
 
 // ??_7mmFrictionFF@@6B@

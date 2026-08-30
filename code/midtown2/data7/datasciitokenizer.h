@@ -48,19 +48,19 @@ public:
     ARTS_IMPORT virtual void GetVector(Vector2& arg1);
 
     // ?GetDelimiter@datAsciiTokenizer@@UAEXPBD@Z
-    ARTS_IMPORT virtual void GetDelimiter(const char* arg1);
+    ARTS_IMPORT virtual void GetDelimiter(const char* expected);
 
     // ?MatchInt@datAsciiTokenizer@@UAEHPBD@Z
-    ARTS_IMPORT virtual i32 MatchInt(const char* arg1);
+    ARTS_IMPORT virtual i32 MatchInt(const char* expected);
 
     // ?MatchFloat@datAsciiTokenizer@@UAEMPBD@Z
-    ARTS_IMPORT virtual f32 MatchFloat(const char* arg1);
+    ARTS_IMPORT virtual f32 MatchFloat(const char* expected);
 
     // ?MatchVector@datAsciiTokenizer@@UAEXPBDAAVVector4@@@Z
-    ARTS_IMPORT virtual void MatchVector(const char* arg1, Vector4& arg2);
+    ARTS_IMPORT virtual void MatchVector(const char* expected, Vector4& arg2);
 
     // ?MatchVector@datAsciiTokenizer@@UAEXPBDAAVVector3@@@Z
-    ARTS_IMPORT virtual void MatchVector(const char* arg1, Vector3& arg2);
+    ARTS_IMPORT virtual void MatchVector(const char* expected, Vector3& arg2);
 
     // ?MatchVector@datAsciiTokenizer@@UAEXPBDAAVVector2@@@Z
     ARTS_IMPORT virtual void MatchVector(const char* arg1, Vector2& arg2);

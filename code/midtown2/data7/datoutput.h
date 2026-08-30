@@ -36,7 +36,7 @@ public:
     ARTS_IMPORT static void CloseLog();
 
     // ?OpenLog@datOutput@@SA_NPBD@Z
-    ARTS_IMPORT static bool OpenLog(const char* arg1);
+    ARTS_IMPORT static bool OpenLog(const char* fileName);
 
     // ?SetAfterMsgBoxFunction@datOutput@@SAXP6AXXZ@Z
     ARTS_IMPORT static void SetAfterMsgBoxFunction(void (__cdecl* arg1)(void));

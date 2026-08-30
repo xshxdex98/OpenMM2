@@ -37,7 +37,7 @@ public:
     ARTS_IMPORT virtual ~camAppCS();
 
     // ?FileIO@camAppCS@@UAEXAAVdatParser@@@Z
-    ARTS_IMPORT virtual void FileIO(datParser& arg1);
+    ARTS_IMPORT virtual void FileIO(datParser& renderer);
 
 protected:
     // ?ApproachIt@camAppCS@@IAEXXZ

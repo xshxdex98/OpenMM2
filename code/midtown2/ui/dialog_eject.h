@@ -61,10 +61,10 @@ public:
     ARTS_IMPORT void PostNames();
 
     // ?RemoveName@Dialog_Eject@@QAEXK@Z
-    ARTS_IMPORT void RemoveName(ulong arg1);
+    ARTS_IMPORT void RemoveName(ulong getter1);
 
     // ?RemoveName@Dialog_Eject@@QAEXPBDK@Z
-    ARTS_IMPORT void RemoveName(const char* arg1, ulong arg2);
+    ARTS_IMPORT void RemoveName(const char* getter1, ulong getter2);
 
     // ?SetBootCB@Dialog_Eject@@QAEXVdatCallback@@@Z
     ARTS_IMPORT void SetBootCB(datCallback arg1);

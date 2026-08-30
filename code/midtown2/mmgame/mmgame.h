@@ -65,7 +65,7 @@ public:
     ARTS_IMPORT virtual void SendChatMessage(char* arg1);
 
     // ?BeDone@mmGame@@UAEXH@Z
-    ARTS_IMPORT virtual void BeDone(i32 arg1);
+    ARTS_IMPORT virtual void BeDone(i32 button);
 
     // ?CollideAIOpponents@mmGame@@QAEXXZ
     ARTS_IMPORT void CollideAIOpponents();
@@ -77,7 +77,7 @@ public:
     ARTS_IMPORT void FarClipCB();
 
     // ?FindGroundPos@mmGame@@QAEXAAVVector3@@0@Z
-    ARTS_IMPORT void FindGroundPos(Vector3& arg1, Vector3& arg2);
+    ARTS_IMPORT void FindGroundPos(Vector3& arg1, Vector3& arg4);
 
     // ?IsPopupEnabled@mmGame@@QAEHXZ
     ARTS_IMPORT i32 IsPopupEnabled();
@@ -114,7 +114,7 @@ public:
 
 protected:
     // ?CalculateRaceScore@mmGame@@IAEHHH@Z
-    ARTS_IMPORT i32 CalculateRaceScore(i32 arg1, i32 arg2);
+    ARTS_IMPORT i32 CalculateRaceScore(i32 button, i32 arg2);
 
     // ?InitGizmos@mmGame@@IAEXXZ
     ARTS_IMPORT void InitGizmos();

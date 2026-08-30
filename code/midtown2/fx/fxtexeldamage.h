@@ -40,10 +40,10 @@ public:
     ARTS_IMPORT ~fxTexelDamage();
 
     // ?ApplyDamage@fxTexelDamage@@QAEXABVVector3@@M@Z
-    ARTS_IMPORT void ApplyDamage(const Vector3& arg1, f32 arg2);
+    ARTS_IMPORT void ApplyDamage(const Vector3& damagePosition, f32 maxDist);
 
     // ?Init@fxTexelDamage@@QAE_NPAVmodStatic@@PAVmodShader@@H@Z
-    ARTS_IMPORT bool Init(modStatic* arg1, modShader* arg2, i32 arg3);
+    ARTS_IMPORT bool Init(modStatic* model, modShader* shaders, i32 shaderCount);
 
     // ?Reset@fxTexelDamage@@QAEXXZ
     ARTS_IMPORT void Reset();

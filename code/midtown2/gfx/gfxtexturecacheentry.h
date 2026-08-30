@@ -36,7 +36,7 @@ public:
     ARTS_IMPORT void Evict();
 
     // ?Lease@gfxTextureCacheEntry@@QAEXPAVgfxTexture@@@Z
-    ARTS_IMPORT void Lease(gfxTexture* arg1);
+    ARTS_IMPORT void Lease(gfxTexture* texture);
 
 public:
     static u32& Access_sm_CurrentTime() { return sm_CurrentTime; }

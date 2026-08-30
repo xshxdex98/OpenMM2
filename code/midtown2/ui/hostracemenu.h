@@ -42,7 +42,7 @@ public:
     ARTS_IMPORT virtual void PreSetup();
 
     // ?SetCRWidgets@HostRaceMenu@@UAEXH@Z
-    ARTS_IMPORT virtual void SetCRWidgets(i32 arg1);
+    ARTS_IMPORT virtual void SetCRWidgets(i32 getter);
 
     // ?InitCRWidgets@HostRaceMenu@@UAEXXZ
     ARTS_IMPORT virtual void InitCRWidgets();
@@ -60,7 +60,7 @@ public:
     ARTS_IMPORT i32 GetGoldMassVal();
 
     // ?GetLimit@HostRaceMenu@@QAEXAAH0@Z
-    ARTS_IMPORT void GetLimit(i32& arg1, i32& arg2);
+    ARTS_IMPORT void GetLimit(i32& getter, i32& arg2);
 
     // ?GetLimitVal@HostRaceMenu@@QAEHAAH@Z
     ARTS_IMPORT i32 GetLimitVal(i32& arg1);
@@ -84,7 +84,7 @@ public:
     ARTS_IMPORT void SetGoldMass(i32 arg1);
 
     // ?SetLimit@HostRaceMenu@@QAEXAAH0@Z
-    ARTS_IMPORT void SetLimit(i32& arg1, i32& arg2);
+    ARTS_IMPORT void SetLimit(i32& getter, i32& arg2);
 
     // ?SetLimitControl@HostRaceMenu@@QAEXXZ
     ARTS_IMPORT void SetLimitControl();

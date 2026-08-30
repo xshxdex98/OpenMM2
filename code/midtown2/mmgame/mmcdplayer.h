@@ -46,7 +46,7 @@ public:
     ARTS_IMPORT virtual void Reset();
 
     // ?Init@mmCDPlayer@@QAEXPAVmmHUD@@@Z
-    ARTS_IMPORT void Init(mmHUD* arg1);
+    ARTS_IMPORT void Init(mmHUD* node);
 
     // ?NextTrack@mmCDPlayer@@QAEXXZ
     ARTS_IMPORT void NextTrack();

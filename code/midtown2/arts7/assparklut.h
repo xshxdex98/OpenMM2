@@ -27,10 +27,10 @@ class asSparkLut
 {
 public:
     // ?Get@asSparkLut@@SAPAV1@PAD@Z
-    ARTS_IMPORT static asSparkLut* Get(char* arg1);
+    ARTS_IMPORT static asSparkLut* Get(char* entryName);
 
     // ?Init@asSparkLut@@QAEXPAD@Z
-    ARTS_IMPORT void Init(char* arg1);
+    ARTS_IMPORT void Init(char* textureName);
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

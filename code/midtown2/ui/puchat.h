@@ -29,7 +29,7 @@ class PUChat : public PUMenuBase
 {
 public:
     // ??0PUChat@@QAE@HMMMMPAD@Z
-    ARTS_IMPORT PUChat(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 arg5, char* arg6);
+    ARTS_IMPORT PUChat(i32 arg1, f32 arg2, f32 arg3, f32 arg4, f32 callback, char* callback_4);
 
     // ??1PUChat@@UAE@XZ
     ARTS_IMPORT virtual ~PUChat();

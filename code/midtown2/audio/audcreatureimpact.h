@@ -48,7 +48,7 @@ public:
     ARTS_IMPORT void EchoOn(f32 arg1);
 
     // ?ParseCSVBuffer@AudCreatureImpact@@QAEHPAVStream@@@Z
-    ARTS_IMPORT i32 ParseCSVBuffer(Stream* arg1);
+    ARTS_IMPORT i32 ParseCSVBuffer(Stream* renderer);
 
     // ?QueuePlay@AudCreatureImpact@@QAEXM@Z
     ARTS_IMPORT void QueuePlay(f32 arg1);

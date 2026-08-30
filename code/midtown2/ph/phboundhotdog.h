@@ -57,7 +57,7 @@ public:
     ARTS_IMPORT virtual bool TestProbePoint(phSegment& arg1, phIntersectionPoint* arg2, f32 arg3) const;
 
     // ?TestAIPoint@phBoundHotdog@@UBE_NAAVphSegment@@PAVphIntersectionPoint@@@Z
-    ARTS_IMPORT virtual bool TestAIPoint(phSegment& arg1, phIntersectionPoint* arg2) const;
+    ARTS_IMPORT virtual bool TestAIPoint(phSegment& flags, phIntersectionPoint* window) const;
 
     // ?TestEdge@phBoundHotdog@@UBEHAAVphSegment@@PAVphIntersection@@H@Z
     ARTS_IMPORT virtual i32 TestEdge(phSegment& arg1, phIntersection* arg2, i32 arg3) const;
@@ -72,7 +72,7 @@ public:
     ARTS_IMPORT void CalculateBoundingBox();
 
     // ?CreateOffset@phBoundHotdog@@QAEXABVVector3@@@Z
-    ARTS_IMPORT void CreateOffset(const Vector3& arg1);
+    ARTS_IMPORT void CreateOffset(const Vector3& id);
 
     // ?FindHotdogIsectNormal@phBoundHotdog@@QBE?AVVector3@@ABV2@H@Z
     ARTS_IMPORT Vector3 FindHotdogIsectNormal(const Vector3& arg1, i32 arg2) const;
@@ -90,7 +90,7 @@ public:
     ARTS_IMPORT bool IsInsideHotdog(const Vector3& arg1) const;
 
     // ?Load@phBoundHotdog@@QAE_NPBD@Z
-    ARTS_IMPORT bool Load(const char* arg1);
+    ARTS_IMPORT bool Load(const char* label);
 
     // ?ScaleBoundingBox@phBoundHotdog@@QAEXMM@Z
     ARTS_IMPORT void ScaleBoundingBox(f32 arg1, f32 arg2);

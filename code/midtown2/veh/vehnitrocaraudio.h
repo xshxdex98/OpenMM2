@@ -69,7 +69,7 @@ public:
     ARTS_IMPORT void Init(vehCarSim* arg1, vehCarDamage* arg2, char* arg3, bool arg4, bool arg5, bool arg6);
 
     // ?Load@vehNitroCarAudio@@QAEXPAD@Z
-    ARTS_IMPORT void Load(char* arg1);
+    ARTS_IMPORT void Load(char* label_id);
 
     // ?PlayNitro@vehNitroCarAudio@@QAEXXZ
     ARTS_IMPORT void PlayNitro();

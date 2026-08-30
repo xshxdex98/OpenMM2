@@ -38,16 +38,16 @@ public:
     ARTS_IMPORT void CopyFrom(const modStatic* arg1);
 
     // ?Draw@modStatic@@QBEXPAVmodShader@@@Z
-    ARTS_IMPORT void Draw(modShader* arg1) const;
+    ARTS_IMPORT void Draw(modShader* pShaders) const;
 
     // ?DrawEnvMapped@modStatic@@QBEXPAVmodShader@@PAVgfxTexture@@M@Z
     ARTS_IMPORT void DrawEnvMapped(modShader* arg1, gfxTexture* arg2, f32 arg3) const;
 
     // ?DrawNoAlpha@modStatic@@QBEXPAVmodShader@@@Z
-    ARTS_IMPORT void DrawNoAlpha(modShader* arg1) const;
+    ARTS_IMPORT void DrawNoAlpha(modShader* pShaders) const;
 
     // ?DrawOrthoMapped@modStatic@@QBEXPAVmodShader@@PAVgfxTexture@@MI@Z
-    ARTS_IMPORT void DrawOrthoMapped(modShader* arg1, gfxTexture* arg2, f32 arg3, u32 arg4) const;
+    ARTS_IMPORT void DrawOrthoMapped(modShader* shaders, gfxTexture* orthoMap, f32 arg3, u32 arg4) const;
 
     // ?DrawWithTexGenAndTexMatrix@modStatic@@QBEXXZ
     ARTS_IMPORT void DrawWithTexGenAndTexMatrix() const;
@@ -59,7 +59,7 @@ public:
     ARTS_EXPORT i32 GetTriCount() const;
 
     // ?Optimize@modStatic@@QAEXPAVmodShader@@@Z
-    ARTS_IMPORT void Optimize(modShader* arg1);
+    ARTS_IMPORT void Optimize(modShader* pShaders);
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

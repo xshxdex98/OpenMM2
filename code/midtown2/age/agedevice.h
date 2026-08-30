@@ -59,7 +59,7 @@ public:
     ARTS_IMPORT virtual ulong Release();
 
     // ?GetCaps@AgeDevice@@UAGJPAU_D3DDeviceDesc7@@@Z
-    ARTS_IMPORT virtual ilong GetCaps(_D3DDeviceDesc7* arg1);
+    ARTS_IMPORT virtual ilong GetCaps(_D3DDeviceDesc7* d3dDeviceDesc);
 
     // ?EnumTextureFormats@AgeDevice@@UAGJP6GJPAU_DDPIXELFORMAT@@PAX@Z1@Z
     ARTS_IMPORT virtual ilong EnumTextureFormats(ilong (__stdcall* arg1)(_DDPIXELFORMAT*,void*), void* arg2);

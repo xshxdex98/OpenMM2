@@ -94,37 +94,37 @@ public:
     ARTS_IMPORT void CalcRoute(const Matrix34& arg1, const Vector3& arg2, const Vector3& arg3, i16* arg4, i16* arg5, i16 arg6, i16 arg7, bool arg8);
 
     // ?ChooseNextFreewayLink@aiMap@@QAEHPAVaiRailSet@@@Z
-    ARTS_IMPORT i32 ChooseNextFreewayLink(aiRailSet* arg1);
+    ARTS_IMPORT i32 ChooseNextFreewayLink(aiRailSet* getter);
 
     // ?ChooseNextLaneLink@aiMap@@QAEHPAVaiRailSet@@@Z
     ARTS_IMPORT i32 ChooseNextLaneLink(aiRailSet* arg1);
 
     // ?ChooseNextLeftStraightLink@aiMap@@QAEHPAVaiRailSet@@@Z
-    ARTS_IMPORT i32 ChooseNextLeftStraightLink(aiRailSet* arg1);
+    ARTS_IMPORT i32 ChooseNextLeftStraightLink(aiRailSet* getter1);
 
     // ?ChooseNextRandomLink@aiMap@@QAEHPAVaiRailSet@@@Z
     ARTS_IMPORT i32 ChooseNextRandomLink(aiRailSet* arg1);
 
     // ?ChooseNextRightLink@aiMap@@QAEHPAVaiRailSet@@@Z
-    ARTS_IMPORT i32 ChooseNextRightLink(aiRailSet* arg1);
+    ARTS_IMPORT i32 ChooseNextRightLink(aiRailSet* getter1);
 
     // ?ChooseNextRightStraightFreewayLink@aiMap@@QAEHPAVaiRailSet@@@Z
     ARTS_IMPORT i32 ChooseNextRightStraightFreewayLink(aiRailSet* arg1);
 
     // ?ChooseNextRightStraightLink@aiMap@@QAEHPAVaiRailSet@@@Z
-    ARTS_IMPORT i32 ChooseNextRightStraightLink(aiRailSet* arg1);
+    ARTS_IMPORT i32 ChooseNextRightStraightLink(aiRailSet* getter1);
 
     // ?ChooseNextStraightLink@aiMap@@QAEHPAVaiRailSet@@@Z
     ARTS_IMPORT i32 ChooseNextStraightLink(aiRailSet* arg1);
 
     // ?ChooseStraightLinkAt4Way@aiMap@@QAEHPAVaiRailSet@@@Z
-    ARTS_IMPORT i32 ChooseStraightLinkAt4Way(aiRailSet* arg1);
+    ARTS_IMPORT i32 ChooseStraightLinkAt4Way(aiRailSet* getter);
 
     // ?Clean@aiMap@@QAEXXZ
     ARTS_IMPORT void Clean();
 
     // ?ClearPeds@aiMap@@QAEXPAVaiPath@@@Z
-    ARTS_IMPORT void ClearPeds(aiPath* arg1);
+    ARTS_IMPORT void ClearPeds(aiPath* getter);
 
     // ?CoreMapComponent@aiMap@@QAEHABVVector3@@PAF1FF@Z
     ARTS_IMPORT i32 CoreMapComponent(const Vector3& arg1, i16* arg2, i16* arg3, i16 arg4, i16 arg5);
@@ -166,7 +166,7 @@ public:
     ARTS_IMPORT i32 FindAmbAppRoad(i32 arg1);
 
     // ?FindPedAppRoad@aiMap@@QAEHH@Z
-    ARTS_IMPORT i32 FindPedAppRoad(i32 arg1);
+    ARTS_IMPORT i32 FindPedAppRoad(i32 getter1);
 
     // ?GetPathFromID@aiMap@@QAEPAVaiPath@@H@Z
     ARTS_IMPORT aiPath* GetPathFromID(i32 arg1);
@@ -208,7 +208,7 @@ public:
     ARTS_IMPORT aiVehiclePlayer* Player(i32 arg1);
 
     // ?Police@aiMap@@QAEPAVaiPoliceOfficer@@H@Z
-    ARTS_IMPORT aiPoliceOfficer* Police(i32 arg1);
+    ARTS_IMPORT aiPoliceOfficer* Police(i32 getter1);
 
     // ?PositionToAIMapComp@aiMap@@QAEHABVVector3@@PAF11F@Z
     ARTS_IMPORT i32 PositionToAIMapComp(const Vector3& arg1, i16* arg2, i16* arg3, i16* arg4, i16 arg5);
@@ -226,7 +226,7 @@ public:
     ARTS_IMPORT void ReadBinary(char* arg1, char* arg2);
 
     // ?RemoveAmbient@aiMap@@QAEXPAVaiVehicleSpline@@@Z
-    ARTS_IMPORT void RemoveAmbient(aiVehicleSpline* arg1);
+    ARTS_IMPORT void RemoveAmbient(aiVehicleSpline* getter);
 
     // ?RemovePedestrian@aiMap@@QAEXPAVaiPedestrian@@@Z
     ARTS_IMPORT void RemovePedestrian(aiPedestrian* arg1);
@@ -235,10 +235,10 @@ public:
     ARTS_IMPORT i32 RemovePlayer(vehCar* arg1);
 
     // ?RemoveRoutingNode@aiMap@@QAEXH@Z
-    ARTS_IMPORT void RemoveRoutingNode(i32 arg1);
+    ARTS_IMPORT void RemoveRoutingNode(i32 getter);
 
     // ?SaveBinary@aiMap@@QAEXPAD0@Z
-    ARTS_IMPORT void SaveBinary(char* arg1, char* arg2);
+    ARTS_IMPORT void SaveBinary(char* getter1, char* getter2);
 
     // ?SetWaypoints@aiMap@@QAEXPAVVector4@@HH@Z
     ARTS_IMPORT void SetWaypoints(Vector4* arg1, i32 arg2, i32 arg3);
@@ -247,7 +247,7 @@ public:
     ARTS_IMPORT aiSubway* Subway(i32 arg1);
 
     // ?TestProbes@aiMap@@QAEXH@Z
-    ARTS_IMPORT void TestProbes(i32 arg1);
+    ARTS_IMPORT void TestProbes(i32 getter);
 
     // ?Vehicle@aiMap@@QAEPAVaiVehicleAmbient@@H@Z
     ARTS_IMPORT aiVehicleAmbient* Vehicle(i32 arg1);
@@ -272,7 +272,7 @@ private:
     ARTS_IMPORT i32 NumCars(i32 arg1, f32 arg2, f32 arg3);
 
     // ?StopRoadTraffic@aiMap@@AAEX_N@Z
-    ARTS_IMPORT void StopRoadTraffic(bool arg1);
+    ARTS_IMPORT void StopRoadTraffic(bool getter1);
 
 public:
     // Members from 0x018; everything below that belongs to asNode.

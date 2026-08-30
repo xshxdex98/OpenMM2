@@ -57,13 +57,13 @@ public:
     ARTS_IMPORT tagAud3DAmbientSoundData* GetSoundDataPtr(i32 arg1);
 
     // ?GetSoundIndex@Aud3DAmbientObject@@QAEHPAD@Z
-    ARTS_IMPORT i32 GetSoundIndex(char* arg1);
+    ARTS_IMPORT i32 GetSoundIndex(char* renderer);
 
     // ?Init@Aud3DAmbientObject@@QAEXPAVVector3@@PAD@Z
     ARTS_IMPORT void Init(Vector3* arg1, char* arg2);
 
     // ?Load@Aud3DAmbientObject@@QAEXPAD@Z
-    ARTS_IMPORT void Load(char* arg1);
+    ARTS_IMPORT void Load(char* renderer);
 
     // ?PlayOneShot@Aud3DAmbientObject@@QAEXH@Z
     ARTS_IMPORT void PlayOneShot(i32 arg1);
@@ -100,10 +100,10 @@ private:
     ARTS_IMPORT void PendOneShot(tagAud3DAmbientSoundData* arg1);
 
     // ?PlayOneShot@Aud3DAmbientObject@@AAEXPAUtagAud3DAmbientSoundData@@@Z
-    ARTS_IMPORT void PlayOneShot(tagAud3DAmbientSoundData* arg1);
+    ARTS_IMPORT void PlayOneShot(tagAud3DAmbientSoundData* renderer);
 
     // ?ReadSoundData@Aud3DAmbientObject@@AAE_NPAVStream@@@Z
-    ARTS_IMPORT bool ReadSoundData(Stream* arg1);
+    ARTS_IMPORT bool ReadSoundData(Stream* renderer);
 
     // ?SetSoundData@Aud3DAmbientObject@@AAEXPAUtagAud3DAmbientSoundData@@0PAD@Z
     ARTS_IMPORT void SetSoundData(tagAud3DAmbientSoundData* arg1, tagAud3DAmbientSoundData* arg2, char* arg3);

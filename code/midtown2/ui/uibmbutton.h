@@ -62,7 +62,7 @@ public:
     ARTS_IMPORT virtual char* ReturnDescription();
 
     // ?SetPosition@UIBMButton@@UAEXMM@Z
-    ARTS_IMPORT virtual void SetPosition(f32 arg1, f32 arg2);
+    ARTS_IMPORT virtual void SetPosition(f32 transformer, f32 DrawList);
 
     // ?GetScreenHeight@UIBMButton@@UAEMXZ
     ARTS_IMPORT virtual f32 GetScreenHeight();

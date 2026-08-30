@@ -30,25 +30,25 @@ class datStack
 {
 public:
     // ?DoTraceback@datStack@@SAXHPAHPAU_iobuf@@PBD@Z
-    ARTS_IMPORT static void DoTraceback(i32 arg1, i32* arg2, _iobuf* arg3, const char* arg4);
+    ARTS_IMPORT static void DoTraceback(i32 maxDepth, i32* ebp_, _iobuf* fileOut, const char* separator);
 
     // ?DumpTraceback@datStack@@SAXPAHHPAU_iobuf@@@Z
     ARTS_IMPORT static void DumpTraceback(i32* arg1, i32 arg2, _iobuf* arg3);
 
     // ?ExceptionFilter@datStack@@SAHPAU_EXCEPTION_POINTERS@@@Z
-    ARTS_IMPORT static i32 ExceptionFilter(_EXCEPTION_POINTERS* arg1);
+    ARTS_IMPORT static i32 ExceptionFilter(_EXCEPTION_POINTERS* exception);
 
     // ?GetTimestamp@datStack@@SAPBDXZ
     ARTS_IMPORT static const char* GetTimestamp();
 
     // ?LogTraceback@datStack@@SAHPAHH@Z
-    ARTS_IMPORT static i32 LogTraceback(i32* arg1, i32 arg2);
+    ARTS_IMPORT static i32 LogTraceback(i32* label_id, i32 getter);
 
     // ?LookupAddress@datStack@@SAXPADH@Z
-    ARTS_IMPORT static void LookupAddress(char* arg1, i32 arg2);
+    ARTS_IMPORT static void LookupAddress(char* buffer, i32 address);
 
     // ?Traceback@datStack@@SAXHPAU_iobuf@@@Z
-    ARTS_IMPORT static void Traceback(i32 arg1, _iobuf* arg2);
+    ARTS_IMPORT static void Traceback(i32 maxDepth, _iobuf* fileOut);
 };
 
 // check_size(datStack, 0x1); // size known, members are not - cannot verify

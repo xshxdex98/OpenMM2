@@ -83,7 +83,7 @@ public:
     ARTS_IMPORT void SetReverbFlags(i32 arg1, i32 arg2);
 
     // ?SetStereoFlag@AudManagerBase@@QAEXH@Z
-    ARTS_IMPORT void SetStereoFlag(i32 arg1);
+    ARTS_IMPORT void SetStereoFlag(i32 stereo);
 
     // ?ShutDownAudio@AudManagerBase@@QAEXXZ
     ARTS_IMPORT void ShutDownAudio();

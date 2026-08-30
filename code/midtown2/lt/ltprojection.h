@@ -32,7 +32,7 @@ class ltProjection
 {
 public:
     // ??0ltProjection@@QAE@H@Z
-    ARTS_IMPORT ltProjection(i32 arg1);
+    ARTS_IMPORT ltProjection(i32 size);
 
     // ??1ltProjection@@QAE@XZ
     ARTS_IMPORT ~ltProjection();
@@ -53,7 +53,7 @@ public:
     ARTS_IMPORT void DrawMultiStageBegin(i32 arg1, const Matrix34& arg2);
 
     // ?DrawMultiStageEnd@ltProjection@@QAEXH@Z
-    ARTS_IMPORT void DrawMultiStageEnd(i32 arg1);
+    ARTS_IMPORT void DrawMultiStageEnd(i32 p);
 
     // ?MakeOrthoMatrix@ltProjection@@QAEXABVVector3@@00M@Z
     ARTS_IMPORT void MakeOrthoMatrix(const Vector3& arg1, const Vector3& arg2, const Vector3& arg3, f32 arg4);

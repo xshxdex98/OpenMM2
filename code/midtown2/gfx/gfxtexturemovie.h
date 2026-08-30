@@ -30,16 +30,16 @@ class gfxTextureMovie
 {
 public:
     // ?AddClient@gfxTextureMovie@@QAEXPAPAVgfxTexture@@@Z
-    ARTS_IMPORT void AddClient(gfxTexture** arg1);
+    ARTS_IMPORT void AddClient(gfxTexture** gfxTexture);
 
     // ?KillAll@gfxTextureMovie@@SAXXZ
     ARTS_IMPORT static void KillAll();
 
     // ?Update@gfxTextureMovie@@QAEXM@Z
-    ARTS_IMPORT void Update(f32 arg1);
+    ARTS_IMPORT void Update(f32 elapsed);
 
     // ?UpdateAll@gfxTextureMovie@@SAXM@Z
-    ARTS_IMPORT static void UpdateAll(f32 arg1);
+    ARTS_IMPORT static void UpdateAll(f32 delta);
 
 public:
     static gfxTextureMovie*& Access_sm_First() { return sm_First; }

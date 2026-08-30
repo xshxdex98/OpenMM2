@@ -31,7 +31,7 @@ class ControlSetup : public OptionsBase
 {
 public:
     // ??0ControlSetup@@QAE@H@Z
-    ARTS_IMPORT ControlSetup(i32 arg1);
+    ARTS_IMPORT ControlSetup(i32 getter);
 
     // ??1ControlSetup@@UAE@XZ
     ARTS_IMPORT virtual ~ControlSetup();
@@ -67,7 +67,7 @@ public:
     ARTS_IMPORT void DeactivateAllDeviceOptions();
 
     // ?FocusDescription@ControlSetup@@QAEXPAX0@Z
-    ARTS_IMPORT void FocusDescription(void* arg1, void* arg2);
+    ARTS_IMPORT void FocusDescription(void* getter, void* arg2);
 
     // ?InitCustomControls@ControlSetup@@QAEXXZ
     ARTS_IMPORT void InitCustomControls();

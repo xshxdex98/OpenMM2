@@ -47,7 +47,7 @@ public:
     ARTS_IMPORT virtual const Vector3& GetVelocity();
 
     // ?Draw@dgBangerInstance@@UAEXH@Z
-    ARTS_IMPORT virtual void Draw(i32 arg1);
+    ARTS_IMPORT virtual void Draw(i32 lod);
 
     // ?DrawShadow@dgBangerInstance@@UAEXXZ
     ARTS_IMPORT virtual void DrawShadow();

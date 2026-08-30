@@ -31,7 +31,7 @@ class uiNavBar : public UIMenu
 {
 public:
     // ??0uiNavBar@@QAE@H@Z
-    ARTS_IMPORT uiNavBar(i32 arg1);
+    ARTS_IMPORT uiNavBar(i32 menuID);
 
     // ??1uiNavBar@@UAE@XZ
     ARTS_IMPORT virtual ~uiNavBar();

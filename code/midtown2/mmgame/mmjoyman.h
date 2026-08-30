@@ -49,7 +49,7 @@ public:
     ARTS_IMPORT i32 FFSetValues(i32 arg1, f32 arg2, f32 arg3);
 
     // ?FFStop@mmJoyMan@@QAEHH@Z
-    ARTS_IMPORT i32 FFStop(i32 arg1);
+    ARTS_IMPORT i32 FFStop(i32 getter1);
 
     // ?GetFFEffect@mmJoyMan@@QAEPAVmmEffectFF@@H@Z
     ARTS_IMPORT mmEffectFF* GetFFEffect(i32 arg1);
@@ -61,7 +61,7 @@ public:
     ARTS_IMPORT i32 GetJoyButton(i32 arg1, i32 arg2);
 
     // ?GetOneButton@mmJoyMan@@QAEHJ@Z
-    ARTS_IMPORT i32 GetOneButton(ilong arg1);
+    ARTS_IMPORT i32 GetOneButton(ilong getter1);
 
     // ?HasCoolie@mmJoyMan@@QAEHXZ
     ARTS_IMPORT i32 HasCoolie();
@@ -82,13 +82,13 @@ public:
     ARTS_IMPORT i32 QJoystick();
 
     // ?SetCapture@mmJoyMan@@QAEXH@Z
-    ARTS_IMPORT void SetCapture(i32 arg1);
+    ARTS_IMPORT void SetCapture(i32 getter1);
 
     // ?StopAllFF@mmJoyMan@@QAEXXZ
     ARTS_IMPORT void StopAllFF();
 
     // ?ToggleEnabled@mmJoyMan@@QAEHH@Z
-    ARTS_IMPORT i32 ToggleEnabled(i32 arg1);
+    ARTS_IMPORT i32 ToggleEnabled(i32 getter1);
 
     // ?Update@mmJoyMan@@QAEXXZ
     ARTS_IMPORT void Update();

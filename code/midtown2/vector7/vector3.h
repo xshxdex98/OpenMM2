@@ -37,7 +37,7 @@ public:
     ARTS_IMPORT void Add(const Vector3& arg1);
 
     // ?AddScaled@Vector3@@QAEXABV1@0M@Z
-    ARTS_IMPORT void AddScaled(const Vector3& arg1, const Vector3& arg2, f32 arg3);
+    ARTS_IMPORT void AddScaled(const Vector3& unused, const Vector3& vec, f32 scale);
 
     // ?Angle@Vector3@@QBEMABV1@@Z
     ARTS_EXPORT f32 Angle(const Vector3& arg1) const;
@@ -46,16 +46,16 @@ public:
     ARTS_EXPORT bool Approach(const Vector3& arg1, f32 arg2, f32 arg3);
 
     // ?Cross@Vector3@@QAEXABV1@0@Z
-    ARTS_EXPORT void Cross(const Vector3& arg1, const Vector3& arg2);
+    ARTS_EXPORT void Cross(const Vector3& lhs, const Vector3& rhs);
 
     // ?Cross@Vector3@@QAEXABV1@@Z
     ARTS_EXPORT void Cross(const Vector3& arg1);
 
     // ?Dist@Vector3@@QBEMABV1@@Z
-    ARTS_EXPORT f32 Dist(const Vector3& arg1) const;
+    ARTS_EXPORT f32 Dist(const Vector3& pos) const;
 
     // ?Dot@Vector3@@QAEXABV1@ABVMatrix34@@@Z
-    ARTS_EXPORT void Dot(const Vector3& arg1, const Matrix34& arg2);
+    ARTS_EXPORT void Dot(const Vector3& lhs, const Matrix34& rhs);
 
     // ?Dot@Vector3@@QBEMABV1@@Z
     ARTS_EXPORT f32 Dot(const Vector3& arg1) const;
@@ -148,7 +148,7 @@ public:
     ARTS_EXPORT void RotateAboutAxis(f32 arg1, i32 arg2);
 
     // ?RotateX@Vector3@@QAEXM@Z
-    ARTS_EXPORT void RotateX(f32 arg1);
+    ARTS_EXPORT void RotateX(f32 rotation);
 
     // ?RotateY@Vector3@@QAEXM@Z
     ARTS_EXPORT void RotateY(f32 arg1);
@@ -157,16 +157,16 @@ public:
     ARTS_EXPORT void RotateZ(f32 arg1);
 
     // ?Scale@Vector3@@QAEXABV1@M@Z
-    ARTS_EXPORT void Scale(const Vector3& arg1, f32 arg2);
+    ARTS_EXPORT void Scale(const Vector3& lhs, f32 scale);
 
     // ?Scale@Vector3@@QAEXM@Z
-    ARTS_EXPORT void Scale(f32 arg1);
+    ARTS_EXPORT void Scale(f32 scale);
 
     // ?Set@Vector3@@QAEXABV1@@Z
-    ARTS_EXPORT void Set(const Vector3& arg1);
+    ARTS_EXPORT void Set(const Vector3& in);
 
     // ?Set@Vector3@@QAEXMMM@Z
-    ARTS_EXPORT void Set(f32 arg1, f32 arg2, f32 arg3);
+    ARTS_EXPORT void Set(f32 x, f32 y, f32 z);
 
     // ?Subtract@Vector3@@QAEXABV1@@Z
     ARTS_IMPORT void Subtract(const Vector3& arg1);

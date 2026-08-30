@@ -89,7 +89,7 @@ public:
     ARTS_IMPORT virtual ilong GetLoader(IDirectMusicLoader** arg1);
 
     // ?Open@CMemStream@@QAEJPAE_J@Z
-    ARTS_IMPORT ilong Open(u8* arg1, i64 arg2);
+    ARTS_IMPORT ilong Open(u8* lp, i64 ucb);
 };
 
 // ??_7CMemStream@@6BIDirectMusicGetLoader@@@

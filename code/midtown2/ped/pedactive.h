@@ -58,7 +58,7 @@ public:
     ARTS_IMPORT virtual void Reset();
 
     // ?Activate@pedActive@@UAEXPAVaiPedestrianInstance@@PAVpedActiveData@@@Z
-    ARTS_IMPORT virtual void Activate(aiPedestrianInstance* arg1, pedActiveData* arg2);
+    ARTS_IMPORT virtual void Activate(aiPedestrianInstance* p, pedActiveData* offset);
 
     // ?Deactivate@pedActive@@UAEXXZ
     ARTS_IMPORT virtual void Deactivate();

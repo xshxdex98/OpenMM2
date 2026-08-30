@@ -29,7 +29,7 @@ class audFileSystem
 {
 public:
     // ?Create@audFileSystem@@QAEPAV1@PAVaudManager@@@Z
-    ARTS_IMPORT audFileSystem* Create(audManager* arg1);
+    ARTS_IMPORT audFileSystem* Create(audManager* id);
 
     // ?Destroy@audFileSystem@@QAEXXZ
     ARTS_IMPORT void Destroy();
@@ -38,7 +38,7 @@ public:
     ARTS_IMPORT void FileClose();
 
     // ?FileOpenRead@audFileSystem@@QAE_NPAD0_N@Z
-    ARTS_IMPORT bool FileOpenRead(char* arg1, char* arg2, bool arg3);
+    ARTS_IMPORT bool FileOpenRead(char* row, char* value, bool arg3);
 
     // ?FileRead@audFileSystem@@QAEHPAXH@Z
     ARTS_IMPORT i32 FileRead(void* arg1, i32 arg2);

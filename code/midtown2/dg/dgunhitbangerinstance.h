@@ -56,7 +56,7 @@ public:
     ARTS_IMPORT bool InitBound(const char* arg1, const char* arg2, dgBangerData* arg3, i32 arg4);
 
     // ?InitBreakables@dgUnhitBangerInstance@@QAEXPBDPAVdgBangerData@@@Z
-    ARTS_IMPORT void InitBreakables(const char* arg1, dgBangerData* arg2);
+    ARTS_IMPORT void InitBreakables(const char* new_capacity, dgBangerData* arg2);
 
     // ?RequestBanger@dgUnhitBangerInstance@@SAPAV1@PBDH@Z
     ARTS_IMPORT static dgUnhitBangerInstance* RequestBanger(const char* arg1, i32 arg2);

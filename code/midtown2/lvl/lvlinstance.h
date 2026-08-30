@@ -45,7 +45,7 @@ public:
     ARTS_IMPORT virtual void Reset();
 
     // ?IsVisible@lvlInstance@@UAEHABVgfxViewport@@@Z
-    ARTS_IMPORT virtual i32 IsVisible(const gfxViewport& arg1);
+    ARTS_IMPORT virtual i32 IsVisible(const gfxViewport& viewport);
 
     // ?SetVariant@lvlInstance@@UAEXH@Z
     ARTS_IMPORT virtual void SetVariant(i32 arg1);
@@ -105,16 +105,16 @@ public:
     ARTS_IMPORT virtual const phBound* GetBound(i32 arg1);
 
     // ?AddGeom@lvlInstance@@QAEHPBD0H@Z
-    ARTS_IMPORT i32 AddGeom(const char* arg1, const char* arg2, i32 arg3);
+    ARTS_IMPORT i32 AddGeom(const char* arg1, const char* arg2, i32 flags);
 
     // ?AddSphere@lvlInstance@@SAHM@Z
     ARTS_IMPORT static i32 AddSphere(f32 arg1);
 
     // ?BeginGeom@lvlInstance@@QAE_NPBD0H@Z
-    ARTS_IMPORT bool BeginGeom(const char* arg1, const char* arg2, i32 arg3);
+    ARTS_IMPORT bool BeginGeom(const char* name, const char* arg2, i32 flags);
 
     // ?DrawPhysics@lvlInstance@@UAEXABVVector3@@@Z
-    ARTS_IMPORT virtual void DrawPhysics(const Vector3& arg1);
+    ARTS_IMPORT virtual void DrawPhysics(const Vector3& atlas);
 
     // ?EndGeom@lvlInstance@@QAEXXZ
     ARTS_IMPORT void EndGeom();
@@ -132,7 +132,7 @@ public:
     ARTS_IMPORT i32 InitGhost(const char* arg1, const Matrix34& arg2);
 
     // ?InitGhostBound@lvlInstance@@QAE_NPAVphBound@@PBVVector3@@H@Z
-    ARTS_IMPORT bool InitGhostBound(phBound* arg1, const Vector3* arg2, i32 arg3);
+    ARTS_IMPORT bool InitGhostBound(phBound* bound, const Vector3* arg2, i32 arg3);
 
     // ?LoadBoundOnLastEntry@lvlInstance@@QAE_NPBD@Z
     ARTS_IMPORT bool LoadBoundOnLastEntry(const char* arg1);
@@ -144,7 +144,7 @@ public:
     ARTS_IMPORT static void operator delete(void* arg1);
 
     // ??2lvlInstance@@SAPAXI@Z
-    ARTS_IMPORT static void* operator new(u32 arg1);
+    ARTS_IMPORT static void* operator new(u32 size);
 
     // ?Optimize@lvlInstance@@QAEXH@Z
     ARTS_IMPORT void Optimize(i32 arg1);
@@ -184,7 +184,7 @@ protected:
     ARTS_IMPORT static void DeleteTempBounds();
 
     // ?GetGeomSet@lvlInstance@@KAHPBD0H@Z
-    ARTS_IMPORT static i32 GetGeomSet(const char* arg1, const char* arg2, i32 arg3);
+    ARTS_IMPORT static i32 GetGeomSet(const char* arg1, const char* arg4, i32 flags);
 
 public:
     static bool& Access_sm_EnableShadows() { return sm_EnableShadows; }

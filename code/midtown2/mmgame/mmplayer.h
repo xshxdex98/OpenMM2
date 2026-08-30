@@ -48,7 +48,7 @@ public:
     ARTS_IMPORT virtual void Reset();
 
     // ?FileIO@mmPlayer@@UAEXAAVdatParser@@@Z
-    ARTS_IMPORT virtual void FileIO(datParser& arg1);
+    ARTS_IMPORT virtual void FileIO(datParser& value);
 
     // ?AfterLoad@mmPlayer@@UAEXXZ
     ARTS_IMPORT virtual void AfterLoad();
@@ -60,7 +60,7 @@ public:
     ARTS_IMPORT void EnableRegen(i32 arg1);
 
     // ?FFImpactCallback@mmPlayer@@QAEXM@Z
-    ARTS_IMPORT void FFImpactCallback(f32 arg1);
+    ARTS_IMPORT void FFImpactCallback(f32 x);
 
     // ?FilterSteering@mmPlayer@@QAEMM@Z
     ARTS_IMPORT f32 FilterSteering(f32 arg1);
@@ -87,7 +87,7 @@ public:
     ARTS_IMPORT void ResetFF();
 
     // ?SetCamInterest@mmPlayer@@QAEXPAVphInertialCS@@@Z
-    ARTS_IMPORT void SetCamInterest(phInertialCS* arg1);
+    ARTS_IMPORT void SetCamInterest(phInertialCS* This);
 
     // ?SetGameCallback@mmPlayer@@QAEXVdatCallback@@@Z
     ARTS_IMPORT void SetGameCallback(datCallback arg1);

@@ -74,7 +74,7 @@ public:
     ARTS_IMPORT void ForceCapture();
 
     // ?Init@UICWArray@@QAEXMMMMHVdatCallback@@@Z
-    ARTS_IMPORT void Init(f32 arg1, f32 arg2, f32 arg3, f32 arg4, i32 arg5, datCallback arg6);
+    ARTS_IMPORT void Init(f32 arg1, f32 arg2, f32 arg3, f32 argC, i32 arg5, datCallback arg6);
 
     // ?LoadCFG@UICWArray@@QAEXXZ
     ARTS_IMPORT void LoadCFG();

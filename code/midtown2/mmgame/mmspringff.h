@@ -41,7 +41,7 @@ public:
     ARTS_IMPORT virtual i32 SetValues(f32 arg1, f32 arg2);
 
     // ?Assign@mmSpringFF@@QAEHJ@Z
-    ARTS_IMPORT i32 Assign(ilong arg1);
+    ARTS_IMPORT i32 Assign(ilong getter);
 };
 
 // ??_7mmSpringFF@@6B@

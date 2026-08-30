@@ -29,6 +29,7 @@ HIERARCHY = os.path.join(ROOT, "data", "hierarchy.json")
 LAYOUTS = os.path.join(ROOT, "data", "layouts.json")
 PORTED = os.path.join(ROOT, "data", "ported.json")
 MM2TYPES = os.path.join(ROOT, "data", "mm2types.json")
+PARAM_NAMES = os.path.join(ROOT, "data", "param_names.json")
 OUTDIR = os.path.join(ROOT, "code", "midtown2")
 
 GPL = """/*
@@ -314,6 +315,29 @@ def sort_key(sym):
     return (3, 0, (sym.get("name") or "").lower(), sym.get("mangled") or "")
 
 
+PARAMS = {}
+
+
+def param_name(sym, index, arity):
+    """The recovered name for parameter `index`, or argN.
+
+    Parameter names are not in the linker map - it encodes types, not names - so these come from
+    the kit's own signatures via tools/kit_paramnames.py. Where none was recovered the old argN is
+    used, so a header is never left with an unnamed parameter.
+
+    THE ARITY MUST AGREE. The mangled name is the authority on how many parameters a function
+    takes, and a recovered signature can disagree - usually where Hex-Rays inferred a different
+    calling convention. Names from a signature of a different length would land on the wrong types
+    and read as though someone had checked them, so the whole entry is ignored instead.
+    """
+    names = PARAMS.get(sym.get("mangled"))
+    if names and len(names) == arity:
+        picked = names[index]
+        if picked:
+            return picked
+    return "arg%d" % (index + 1)
+
+
 def declare(sym):
     """One declaration, with its mangled-symbol comment above it."""
     lines = ["    // %s" % sym["mangled"]]
@@ -354,10 +378,11 @@ def declare(sym):
         # datcallback.h did not compile, and neither did anything that included it.
         m = re.match(
             r"^(.*\(\s*(?:__stdcall|__cdecl|__fastcall|__thiscall)?\s*(?:[A-Za-z_]\w*::)*\*)(\)\(.*)$", ty)
+        pname = param_name(sym, i, len(sym.get("params") or []))
         if m:
-            args.append("%s arg%d%s" % (m.group(1), i + 1, m.group(2)))
+            args.append("%s %s%s" % (m.group(1), pname, m.group(2)))
         else:
-            args.append("%s arg%d" % (ty, i + 1))
+            args.append("%s %s" % (ty, pname))
 
     name = sym.get("name") or "UNKNOWN"
 
@@ -861,6 +886,11 @@ def main():
     if os.path.exists(MM2TYPES):
         with open(MM2TYPES, encoding="utf-8") as f:
             MM2T = json.load(f)
+
+    if os.path.exists(PARAM_NAMES):
+        with open(PARAM_NAMES, encoding="utf-8") as f:
+            PARAMS.update(json.load(f))
+        print("%d functions have a recovered parameter name" % len(PARAMS))
 
     classes = {}
     for s in syms:

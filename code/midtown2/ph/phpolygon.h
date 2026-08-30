@@ -36,7 +36,7 @@ public:
     ARTS_IMPORT phPolygon();
 
     // ?CalculateNormal@phPolygon@@QAEXPBVVector3@@@Z
-    ARTS_IMPORT void CalculateNormal(const Vector3* arg1);
+    ARTS_IMPORT void CalculateNormal(const Vector3* scale);
 
     // ?DetectSegmentDirected@phPolygon@@QBEHPBVVector3@@ABV2@1@Z
     ARTS_IMPORT i32 DetectSegmentDirected(const Vector3* arg1, const Vector3& arg2, const Vector3& arg3) const;
@@ -48,7 +48,7 @@ public:
     ARTS_IMPORT void InitQuad(u16 arg1, u16 arg2, u16 arg3, u16 arg4, const Vector3* arg5);
 
     // ?InitTriangle@phPolygon@@QAEXGGGPBVVector3@@@Z
-    ARTS_IMPORT void InitTriangle(u16 arg1, u16 arg2, u16 arg3, const Vector3* arg4);
+    ARTS_IMPORT void InitTriangle(u16 arg1, u16 arg2, u16 arg3, const Vector3* scale);
 
     // ?Rotate@phPolygon@@QAEXXZ
     ARTS_IMPORT void Rotate();

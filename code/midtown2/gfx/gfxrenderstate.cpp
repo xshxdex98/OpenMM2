@@ -44,12 +44,12 @@ define_dummy_symbol(gfx_gfxrenderstate);
 // fast inverse composed with sm_FullComposite, and m_Touched's bit 7 is what tells the state
 // flusher the view changed. Leaving any of it out would leave the globals disagreeing with what
 // was actually loaded.
-void gfxRenderState::SetCamera(const Matrix44& arg1)
+void gfxRenderState::SetCamera(const Matrix44& cameraMatrix)
 {
 #ifdef ARTS_AGIGL
     if (agiGLEnabled())
     {
-        sm_Camera = arg1;
+        sm_Camera = cameraMatrix;
 
         sm_View.FastInverse(sm_Camera);
         sm_View.Dot(sm_FullComposite);
@@ -62,5 +62,5 @@ void gfxRenderState::SetCamera(const Matrix44& arg1)
     }
 #endif
 
-    ArtsOrigSetCamera44(arg1);
+    ArtsOrigSetCamera44(cameraMatrix);
 }
