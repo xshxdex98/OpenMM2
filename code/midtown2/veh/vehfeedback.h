@@ -34,16 +34,16 @@ public:
     ARTS_IMPORT vehFeedback();
 
     // ??1vehFeedback@@UAE@XZ
-    ARTS_IMPORT virtual ~vehFeedback();
+    ARTS_EXPORT virtual ~vehFeedback();
 
     // ?SetFeedback@vehFeedback@@UAEH_N@Z
-    ARTS_IMPORT virtual i32 SetFeedback(bool arg1);
+    ARTS_EXPORT virtual i32 SetFeedback(bool arg1);
 
     // ?SetTimingUnit@vehFeedback@@UAEHM@Z
-    ARTS_IMPORT virtual i32 SetTimingUnit(f32 arg1);
+    ARTS_EXPORT virtual i32 SetTimingUnit(f32 arg1);
 
     // ?GetNumActuators@vehFeedback@@UAEHXZ
-    ARTS_IMPORT virtual i32 GetNumActuators();
+    ARTS_EXPORT virtual i32 GetNumActuators();
 
     // ?SetActuatorValue@vehFeedback@@UAEHHM@Z
     ARTS_IMPORT virtual i32 SetActuatorValue(i32 arg1, f32 arg2);

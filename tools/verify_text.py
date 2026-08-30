@@ -191,6 +191,40 @@ def main():
         if s["mangled"] in ported and s.get("code"):
             ported_at.add(s["rva"])
 
+    # VFTABLES HANDED OVER TO THE C++ SIDE.
+    #
+    # tools/asm_vtables.py moves a class's vftable when a constructor or destructor of that class
+    # is ported, because MSVC emits its own ??_7C@@6B@ the moment it sees one. Every constructor
+    # that is STILL assembly then stores a vptr that the linker resolves to the C++ table instead
+    # of the .rdata one, so a dword inside that constructor legitimately changes.
+    #
+    # That is not the "relocated address" case below: the value does not move by a section delta,
+    # it moves to an entirely different table. vehFeedback is the first class where it could show
+    # up at all - mmCityInfo had its constructor ported too, so its vptr store went with it - and
+    # it surfaced as three unexplained bytes at 0x004D56E1, inside ??0vehFeedback@@QAE@XZ.
+    #
+    # Derived the same way asm_vtables derives it, from ported.json rather than a second list, so
+    # the two cannot disagree about which tables moved.
+    handed_over = set()
+    vt_path = os.path.join(ROOT, "data", "vtable_order.json")
+    if os.path.exists(vt_path):
+        with open(vt_path, encoding="utf-8") as f:
+            for cls, entry in json.load(f).items():
+                rva = entry.get("vftable_rva")
+                if not rva:
+                    continue
+                if any(m.startswith(("??0" + cls + "@@", "??1" + cls + "@@")) for m in ported):
+                    handed_over.add(rva)
+
+    def is_handed_over_vftable(off):
+        """Is the dword covering this byte the address of a vftable that moved to the C++ side?"""
+        for base in range(max(0, off - 3), off + 1):
+            if base + 4 > limit:
+                continue
+            if struct.unpack_from("<I", retail, base)[0] in handed_over:
+                return True
+        return False
+
     def is_call_to_ported(off):
         """Is this a relative call whose retail target was a function we have since ported?"""
         for base in range(max(0, off - 3), off + 1):
@@ -327,6 +361,11 @@ def main():
             continue
 
         if all(is_address_of_ported(off) for off in range(start, i)):
+            retargeted += run
+            continue
+
+        # A vptr store in a constructor that is still assembly, now naming the C++ table.
+        if all(is_handed_over_vftable(off) for off in range(start, i)):
             retargeted += run
             continue
 

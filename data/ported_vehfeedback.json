@@ -1,0 +1,24 @@
+{
+  "_comment": [
+    "vehFeedback: the first vftable handover where slot ORDER could be wrong. Ten slots, and the",
+    "order the binary requires is nothing like alphabetical - so this is what actually exercises",
+    "the vtable-order fix in tools/genheaders.py. Check with:",
+    "    py tools/asm_vtables.py --check vehFeedback",
+    "",
+    "The destructor is listed because porting it is what makes MSVC emit ??_7vehFeedback@@6B@ and",
+    "so triggers the handover. ??_GvehFeedback@@UAEPAXI@Z is NOT listed: asm.py picks the deleting",
+    "destructor up from handover.strip_procs, since MSVC generates it from the class definition",
+    "alone and it is declared in no header.",
+    "",
+    "Five of the ten virtuals stay in the assembly on purpose - the C++ table then points partly",
+    "here and partly at 1999 code, which is what makes a ten-slot class portable a few functions at",
+    "a time. SetActuatorValue is among them until the fields at 0x18 and 0x1C are typed f32; see the",
+    "note at the top of vehfeedback.cpp."
+  ],
+  "ported": [
+    "??1vehFeedback@@UAE@XZ",
+    "?GetNumActuators@vehFeedback@@UAEHXZ",
+    "?SetFeedback@vehFeedback@@UAEH_N@Z",
+    "?SetTimingUnit@vehFeedback@@UAEHM@Z"
+  ]
+}

@@ -189,6 +189,7 @@ def main():
     patched = patched_addresses()
 
     ported_starts = set()
+    handed_over = set()
 
     try:
         with open(os.path.join(ROOT, "data", "ported.json"), encoding="utf-8") as f:
@@ -197,6 +198,21 @@ def main():
         for sym in symbols:
             if sym["mangled"] in done:
                 ported_starts.add(sym["rva"])
+
+        # HANDED-OVER VFTABLES. tools/asm_vtables.py moves a class's vftable when a constructor or
+        # destructor of that class is ported. Any constructor of that class still in assembly then
+        # stores a vptr the linker resolves to the C++ table, so the immediate moves to a wholly
+        # different address rather than by a section delta - the same reason a reference to a ported
+        # function does. Derived from ported.json, exactly as asm_vtables derives it, so the two
+        # cannot disagree about which tables moved.
+        vt_path = os.path.join(ROOT, "data", "vtable_order.json")
+        if os.path.exists(vt_path):
+            with open(vt_path, encoding="utf-8") as f:
+                for cls, entry in json.load(f).items():
+                    rva = entry.get("vftable_rva")
+                    if rva and any(m.startswith(("??0" + cls + "@@", "??1" + cls + "@@"))
+                                   for m in done):
+                        handed_over.add(rva)
     except Exception:
         pass
 
@@ -222,7 +238,7 @@ def main():
         # linker merges them and two different retail addresses end up pointing at one built address.
         # Behaviourally identical - but it does mean function-pointer identity is not preserved, and
         # if that ever matters the fix is /OPT:NOICF in tools/link.py.
-        if r in ported_starts:
+        if r in ported_starts or r in handed_over:
             continue
         findings.append((rva_r + off + IMAGE_BASE, kind, r, b, b - r))
 
