@@ -51,7 +51,7 @@ tools/vtables.py      midtown2.exe  -> data/hierarchy.json  (inheritance from vf
 tools/pe.py           PE section reader, shared
 tools/progress.py     measures the port, writes docs/PROGRESS.md, records history
 tools/inventory.py    data/symbols.json -> docs/inventory.md
-code/midtown2/        534 generated class headers, 7,787 declarations
+code/midtown2/        554 headers, 7,188 declarations, 48 translation units
 docs/inventory.md     what the binary contains, and the porting order
 docs/vtables.md       how a polymorphic class is ported, and what can still go wrong
 docs/vtable_order.md  the recovered slot order, and how it was checked
@@ -69,10 +69,11 @@ py tools/symbols.py && py tools/vtables.py && py tools/genheaders.py && py tools
 py tools/build.py
 ```
 
-That is the whole pipeline: merge ported lists, regenerate headers, compile, **verify symbols**,
-strip the ported functions out of `game.asm`, assemble, link, **verify layout**, record progress.
+That is the whole pipeline: merge ported lists, regenerate headers, compile, strip the ported
+functions out of `game.asm`, assemble, link - and **seventeen gates**, most of which exist because
+a specific class of silent corruption got through once. `docs/ARCHITECTURE.md` lists them all.
 
-The two verification steps are the point, because both failures they catch are silent:
+Two are worth stating here, because both failures they catch are silent:
 
 - **Symbols.** A reimplementation only replaces the original if its mangled name matches exactly.
   If it does not, the object just contributes an unreferenced symbol, the assembly's version stays
