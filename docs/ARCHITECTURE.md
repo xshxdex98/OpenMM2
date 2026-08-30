@@ -214,8 +214,9 @@ Stated plainly, because this is the honest answer to "is it maintainable".
 - **335 classes have a vftable the assembly declares PUBLIC.** Defining a constructor for one is a
   duplicate-symbol error, and `asm.py` can strip PROCs but not data. About 66 portable classes have
   no vtable; that is the current safe runway.
-- **The build depends on absolute paths** to a Ghidra output directory and a game install. It does
-  not move to another machine without editing.
+- **Paths default to the author's install.** The Ghidra output directory and the game binary are
+  read from `MM2_ASM_DIR`, `MM2_EXE` and friends, so they are overridable rather than truly
+  hard-coded - but the defaults are absolute paths on one machine, and nothing prompts for them.
 - **Comment density is deliberately high.** Much of this code encodes a fact that took a day to
   establish and is invisible in the code itself. That is a considered trade, not an accident, but it
   is a fair thing to dislike.

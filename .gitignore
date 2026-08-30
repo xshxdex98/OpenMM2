@@ -22,3 +22,7 @@ __pycache__/
 
 # Scratch
 wip/scratch/
+
+# Transient OutputDebugString captures from test runs, not documentation.
+play_session.txt
+play_capture.txt

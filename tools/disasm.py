@@ -1,8 +1,9 @@
-import sys, json, capstone
+import sys, json, os, capstone
 sys.path.insert(0,'tools')
 from pe import IMAGE_BASE
 from verify_data import sections
-RETAIL="C:/Users/xshxd/OneDrive/Desktop/PC Games/MM2/midtown2.exe"
+RETAIL = os.environ.get(
+    "MM2_EXE", "C:/Users/xshxd/OneDrive/Desktop/PC Games/MM2/midtown2.exe")
 _,S=sections(RETAIL)
 SYM={x['rva']+IMAGE_BASE:x['mangled'] for x in json.load(open('data/symbols.json',encoding='utf-8'))}
 def sec_for(va):
