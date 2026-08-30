@@ -24,6 +24,7 @@ The two verify steps are the point. Both failures they catch are silent:
 Fail fast: a failing gate stops the build rather than producing an executable nobody should trust.
 """
 import glob
+import hashlib
 import json
 import os
 import shutil
@@ -44,6 +45,7 @@ GAME_OBJ = os.path.join(ASM_DIR, "game.obj")
 OBJ_DIR = os.path.join(ROOT, "build", "obj")
 CODE = os.path.join(ROOT, "code", "midtown2")
 PORTED = os.path.join(ROOT, "data", "ported.json")
+EXPORT_STAMP = os.path.join(ROOT, "data", "export_stamp.json")
 
 RETAIL = os.environ.get("MM2_EXE", r"C:\Users\xshxd\OneDrive\Desktop\PC Games\MM2\midtown2.exe")
 OUT_EXE = os.path.join(ROOT, "build", "OpenMM2.exe")
@@ -361,7 +363,40 @@ def verify_layout():
     return ok
 
 
+def generator_path():
+    return os.path.join(HERE, "ghidra", "ExportAsm.java")
+
+
+def generator_digest():
+    """SHA-256 of the exporter, or None if it is not present."""
+    g = generator_path()
+    if not os.path.exists(g):
+        return None
+    return hashlib.sha256(open(g, "rb").read()).hexdigest()
+
+
+def stamp_export():
+    """Record the exporter that produced the current game.asm.pristine.
+
+    Run this immediately after re-running ExportAsm.java. It is the only thing that tells a
+    later build the export is current, and it asserts something this script cannot verify on
+    its own, so it is a deliberate action rather than something a build does for you.
+    """
+    digest = generator_digest()
+    if digest is None:
+        sys.exit("no ExportAsm.java at %s" % generator_path())
+    json.dump({
+        "generator_sha256": digest,
+        "note": "SHA-256 of tools/ghidra/ExportAsm.java that produced the current "
+                "game.asm.pristine. Re-record with: py tools/build.py --stamp-export",
+    }, open(EXPORT_STAMP, "w", encoding="utf-8"), indent=1)
+    print("recorded exporter %s..%s -> %s" % (digest[:8], digest[-8:], EXPORT_STAMP))
+    return 0
+
+
 def main():
+    if "--stamp-export" in sys.argv:
+        return stamp_export()
     cl = tool("cl.exe")
     ml = tool("ml.exe")
 
@@ -375,15 +410,33 @@ def main():
     # this catches is the other half of the same mistake: editing the generator and then building
     # without re-exporting. Every fix would verify correctly in the generator and silently not be
     # in the binary, which is exactly how a whole evening's work got thrown away once already.
-    # NOTE: this is an mtime comparison, so a VCS operation that rewrites the working tree - a
-    # checkout, a rebase, a line-ending normalisation - will trip it even though the generator's
-    # CONTENT is unchanged. Confirm with `git status tools/ghidra/ExportAsm.java` before re-running
-    # a twenty-minute export: if git reports it unmodified, the export really is current and the
-    # right fix is to restore the file's timestamp.
-    generator = os.path.join(HERE, "ghidra", "ExportAsm.java")
-    if os.path.exists(generator) and os.path.getmtime(generator) > os.path.getmtime(ASM_PRISTINE):
-        sys.exit("FAILED: ExportAsm.java is newer than the exported assembly - "
-                 "re-run ExportAsm.java, or the build will use the previous export.")
+    #
+    # WHETHER THE EXPORT IS CURRENT IS A QUESTION ABOUT THE GENERATOR'S CONTENT, NOT ITS TIMESTAMP.
+    # mtime was the original test and it is wrong in the direction that costs you an afternoon: any
+    # operation that rewrites the working tree - a clone, a checkout, a rebase, a line-ending
+    # normalisation - moves every mtime to now, and the generator then looks newer than an export
+    # produced from exactly these bytes. That fired the first time this tree was put under git, and
+    # it will fire on every fresh clone.
+    #
+    # data/export_stamp.json records the SHA-256 of the exporter that produced the current
+    # game.asm.pristine; write it with `py tools/build.py --stamp-export` right after re-exporting.
+    # With no stamp the old mtime test still applies, so an unstamped tree is no worse off.
+    digest = generator_digest()
+    if digest is not None:
+        recorded = None
+        if os.path.exists(EXPORT_STAMP):
+            recorded = json.load(open(EXPORT_STAMP, encoding="utf-8")).get("generator_sha256")
+
+        if recorded is not None:
+            if recorded != digest:
+                sys.exit("FAILED: ExportAsm.java has changed since the export that produced "
+                         "game.asm.pristine - re-run ExportAsm.java, then "
+                         "`py tools/build.py --stamp-export`.")
+        elif os.path.getmtime(generator_path()) > os.path.getmtime(ASM_PRISTINE):
+            sys.exit("FAILED: ExportAsm.java is newer than the exported assembly - re-run "
+                     "ExportAsm.java, or the build will use the previous export. (If git reports "
+                     "the file unmodified this is only a timestamp; record a stamp with "
+                     "`py tools/build.py --stamp-export`.)")
 
     step(1, "merging ported lists")
     merge_ported()

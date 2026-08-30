@@ -229,7 +229,14 @@ Stated plainly, because this is the honest answer to "is it maintainable".
 Requires Visual Studio (x86 toolchain), Python 3, and a copy of Midtown Madness 2. Paths are
 currently hard-coded; see the constants at the top of `tools/build.py` and `tools/link.py`.
 
-    py tools/build.py        # 17 steps; prints BUILD OK and the ported percentage
+    py tools/build.py                  # 17 steps; prints BUILD OK and the ported percentage
+    py tools/build.py --stamp-export   # after re-running ExportAsm.java, and only then
+
+The second command records the SHA-256 of the exporter that produced the current
+`game.asm.pristine`, in `data/export_stamp.json`. The build refuses to run if the exporter has
+changed since the export, because a fix made in the generator and not re-exported verifies
+correctly and is silently absent from the binary. The check is on content rather than timestamp:
+mtime cannot distinguish an edited generator from one a `git clone` merely touched.
 
 The game must run with the MM2 install as its working directory, because it opens `EBUeula.dll` and
 its `.ar` archives by relative path.
