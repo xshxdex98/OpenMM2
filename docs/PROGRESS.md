@@ -18,22 +18,22 @@ Two numbers matter and they are different:
 
 | | | |
 |---|--:|---|
-| Ported | 2.01% | `#...........................` |
+| Ported | 2.02% | `#...........................` |
 | Ready to port | 66.9% | `###################.........` |
 | Size known, members not | 16.9% | `#####.......................` |
 
 | Metric | Value |
 |---|--:|
 | Functions | 9307 |
-| Functions ported | 274 |
+| Functions ported | 279 |
 | Machine code | 1.7 MB |
-| Code ported | 34.6 KB |
+| Code ported | 34.7 KB |
 | Classes | 535 |
 | Classes with a member layout | 262 (49%) |
 | Classes with only a size | 81 |
 | Virtual methods | 1938 |
 | Vftables | 340 |
-| `game.asm` remaining | 23.2 MB, 10902 PROCs |
+| `game.asm` remaining | 23.2 MB, 10897 PROCs |
 
 The size of `game.asm` *is* the progress bar: it starts holding the whole game and
 shrinks with every function ported.
@@ -133,7 +133,6 @@ Layout known, so these can be started today.
 
 | Date | Ported | Code ported | game.asm |
 |---|--:|--:|--:|
-| 2026-08-29 | 1.98% | 34.1 KB | 23.4 MB |
 | 2026-08-29 | 2.00% | 34.4 KB | 23.4 MB |
 | 2026-08-29 | 2.00% | 34.4 KB | 23.4 MB |
 | 2026-08-29 | 2.01% | 34.6 KB | 23.4 MB |
@@ -141,6 +140,7 @@ Layout known, so these can be started today.
 | 2026-08-29 | 2.01% | 34.6 KB | 23.4 MB |
 | 2026-08-29 | 2.01% | 34.6 KB | 23.4 MB |
 | 2026-08-29 | 2.01% | 34.6 KB | 23.4 MB |
+| 2026-08-30 | 2.01% | 34.6 KB | 23.2 MB |
 | 2026-08-30 | 2.01% | 34.6 KB | 23.2 MB |
 | 2026-08-30 | 2.01% | 34.6 KB | 23.2 MB |
 | 2026-08-30 | 2.01% | 34.6 KB | 23.2 MB |

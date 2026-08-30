@@ -37,22 +37,22 @@ public:
     ARTS_IMPORT virtual ~Aud3DObject();
 
     // ?AssignSounds@Aud3DObject@@UAEXXZ
-    ARTS_IMPORT virtual void AssignSounds();
+    ARTS_EXPORT virtual void AssignSounds();
 
     // ?UnAssignSounds@Aud3DObject@@UAEXH@Z
-    ARTS_IMPORT virtual void UnAssignSounds(i32 arg1);
+    ARTS_EXPORT virtual void UnAssignSounds(i32 arg1);
 
     // ?UpdateAudio@Aud3DObject@@UAEXXZ
-    ARTS_IMPORT virtual void UpdateAudio();
+    ARTS_EXPORT virtual void UpdateAudio();
 
     // ?Update@Aud3DObject@@UAEXXZ
     ARTS_IMPORT virtual void Update();
 
     // ?SetNon3DParams@Aud3DObject@@UAEXXZ
-    ARTS_IMPORT virtual void SetNon3DParams();
+    ARTS_EXPORT virtual void SetNon3DParams();
 
     // ?Set3DParams@Aud3DObject@@UAEXXZ
-    ARTS_IMPORT virtual void Set3DParams();
+    ARTS_EXPORT virtual void Set3DParams();
 
     // ?AddTo3DMgr@Aud3DObject@@QAEXXZ
     ARTS_IMPORT void AddTo3DMgr();
