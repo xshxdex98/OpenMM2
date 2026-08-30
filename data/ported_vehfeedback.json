@@ -25,6 +25,7 @@
     "?PlayFeedbackSample@vehFeedback@@UAEHHHPAMPAH@Z",
     "?SetActuatorValue@vehFeedback@@UAEHHM@Z",
     "?SetFeedback@vehFeedback@@UAEH_N@Z",
-    "?SetTimingUnit@vehFeedback@@UAEHM@Z"
+    "?SetTimingUnit@vehFeedback@@UAEHM@Z",
+    "?Update@vehFeedback@@UAEHXZ"
   ]
 }

@@ -58,7 +58,7 @@ public:
     ARTS_EXPORT virtual f32 GetNextUnit(i32 arg1);
 
     // ?Update@vehFeedback@@UAEHXZ
-    ARTS_IMPORT virtual i32 Update();
+    ARTS_EXPORT virtual i32 Update();
 
     // ?ClearAllSamples@vehFeedback@@UAEH_N@Z
     ARTS_EXPORT virtual i32 ClearAllSamples(bool arg1);

@@ -287,3 +287,62 @@ f32 vehFeedback::GetNextUnit(i32 arg1)
 
     return result;
 }
+
+// ?Update@vehFeedback@@UAEHXZ - 0x004D5A80
+//
+// Drives each actuator from its sample queue, no more often than TimingUnit. For every actuator:
+// if nothing is queued, release it back to zero if it is not already there; otherwise take the
+// next unit and write it only when it differs from what the actuator already holds.
+//
+// The original reaches its own methods through the vtable - slot 3 for GetNumActuators, 4 for
+// SetActuatorValue, 7 for GetNextUnit - which is what calling them directly does here, since all
+// three are virtual and it is the same object. A derived class overriding any of them is dispatched
+// to either way.
+//
+// The offsets decode as: this+2 is Pad, this+6 is ActuatorValues, (_DWORD *)v3 - 2 is
+// Timers[i].StartTime, this[8] is TimingUnit, and v7 walks the two SampleCounts 33 ints - one
+// 132-byte channel block - apart.
+//
+// THE ELAPSED TEST IS DONE IN DOUBLE, and written that way rather than in f32:
+//
+//     (double)(Timer::Ticks() - Timers[i].StartTime) * Timer::TicksToSeconds > TimingUnit
+//
+// TicksToSeconds is an f32 and so is TimingUnit, but the left side is widened first and the
+// comparison follows in double - which is what x87 does under /arch:IA32 and is the behaviour, not
+// a decompiler artifact. SetActuatorValue restamps Timers[i], which is what makes this a rate
+// limit rather than a check that always passes.
+//
+// NOTHING HAPPENS IN THE BASE CLASS. GetNumActuators returns 0 here, so the loop never runs; this
+// only does work once a derived class reports hardware. That is also why the same unbounded-index
+// pattern as PlayFeedbackSample is unreachable: an actuator count above 2 would walk past both
+// two-element arrays and both channel blocks, in the original as much as here.
+i32 vehFeedback::Update()
+{
+    if (!Pad)
+        return 0;
+
+    i32 actuators = GetNumActuators();
+
+    for (i32 i = 0; i < actuators; ++i)
+    {
+        f64 elapsed = static_cast<f64>(Timer::Ticks() - Timers[i].StartTime) * Timer::TicksToSeconds;
+
+        if (!(elapsed > static_cast<f64>(TimingUnit)))
+            continue;
+
+        if ((i ? Ch1SampleCount : Ch0SampleCount) <= 0)
+        {
+            if (ActuatorValues[i] > 0.0f)
+                SetActuatorValue(i, 0.0f);
+        }
+        else
+        {
+            f32 next = GetNextUnit(i);
+
+            if (ActuatorValues[i] != next)
+                SetActuatorValue(i, next);
+        }
+    }
+
+    return 1;
+}
