@@ -27,6 +27,8 @@
 #include "data7/datcallback.h"
 #include "vector7/vector3.h"
 
+#include "vehdamageimpactinfo.h"
+
 struct ImpactCBData;
 class asBirthRule;
 class asLineSparks;
@@ -35,7 +37,6 @@ class datParser;
 class fxShardManager;
 class phCollider;
 class vehCar;
-struct vehDamageImpactInfo;
 
 class vehCarDamage : public asNode
 {

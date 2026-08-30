@@ -23,6 +23,8 @@
 
 #include "core/arts.h"
 
+#include "misc/z_stream.h"
+
 enum seekWhence : i32;
 
 class zipEntry;

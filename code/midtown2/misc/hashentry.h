@@ -23,22 +23,15 @@
 
 #include "core/arts.h"
 
-#include "hashentry.h"
-
-class FixedHashEntry
+class HashEntry
 {
 public:
-    // ??1FixedHashEntry@@QAE@XZ
-    ARTS_IMPORT ~FixedHashEntry();
-
-private:
-    // ??0FixedHashEntry@@AAE@XZ
-    ARTS_IMPORT FixedHashEntry();
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    HashEntry field_0; // 0x000
-    u8 IsFixed; // 0x00C
+    char* Name; // 0x000
+    void* Value; // 0x004
+    HashEntry* Next; // 0x008
 };
 
-check_size(FixedHashEntry, 0x10);
+check_size(HashEntry, 0xC);

@@ -240,6 +240,48 @@ def base_classes():
     return out
 
 
+# HAND-WRITTEN HEADERS THIS GENERATOR CANNOT PRODUCE, BUT MUST STILL BE ABLE TO INCLUDE.
+#
+# A type used BY VALUE needs its definition, not a forward declaration. Include resolution only
+# knows about classes this generator writes itself, so a by-value member whose type is hand-written
+# fell through to a forward declaration and the header then failed to compile with "uses undefined
+# class".
+#
+# gfxRenderState is the case in point: it holds `gfxRenderStateData State;` by value at offset 0,
+# gfxRenderStateData has no methods so no symbols and therefore no generated header, and the result
+# was that gfxrenderstate.h could not be compiled at all - which is why nothing had ever defined a
+# gfxRenderState member function, and why agigl/glpacket.cpp reaches RSTATE through an incomplete
+# type and a hand-computed byte offset instead of naming a member.
+#
+# Module scope because the data-only backfill runs before main() builds the include index and has
+# to know not to generate a second, competing copy of one of these.
+HANDWRITTEN = {
+    "gfxRenderStateData": "gfx/gfxrenderstatedata.h",
+}
+
+
+# Types that must never get a generated header, however complete their recovered layout is.
+#
+# core/arts.h already defines GUID, D3DCOLORVALUE and D3DVECTOR (as the _GUID, _D3DCOLORVALUE and
+# _D3DVECTOR tags), and every generated header includes it - so writing a second definition is a
+# redefinition, not a fix. The rest of the D3D and DirectDraw surface belongs to the platform
+# headers: synthesising a DDPIXELFORMAT from a recovered layout would be guessing at a struct whose
+# real definition is published, and getting it subtly wrong would be worse than leaving it out.
+PLATFORM_TYPE = re.compile(r"^_?(?:D3D|DD|IDirect|LP[A-Z])")
+
+
+def backfillable(name):
+    """Whether a data-only class may have a header generated for it."""
+    if name in BUILTIN or name.lstrip("_") in BUILTIN:
+        return False
+    if PLATFORM_TYPE.match(name):
+        return False
+    # A hand-written header already declares these, at a path this generator does not own. Writing
+    # another copy would also overwrite the HANDWRITTEN entry in `index` and send every include for
+    # it to the wrong file.
+    return name not in HANDWRITTEN
+
+
 def usable_members(cls, info):
     """The members of `cls` that can actually be declared, in recorded order.
 
@@ -1024,6 +1066,18 @@ def directory(cls, subsystem):
         return DIRS[subsystem]
 
     leaf = cls.split("::")[0]
+
+    # A DATA-ONLY CLASS HAS NO SYMBOL AND SO NO SUBSYSTEM, but its name still carries one. The keys
+    # above are the very prefixes the original code used, so phSegment belongs beside the other ph
+    # classes and vehDamageImpactInfo beside the veh ones - not in misc, where they landed when the
+    # only fallback was the PascalCase table below. Longest prefix wins, and it must be followed by
+    # a capital, so `ph` claims phSegment without claiming a name that merely starts with those
+    # letters.
+    for prefix in sorted(DIRS, key=len, reverse=True):
+        if (leaf.startswith(prefix) and len(leaf) > len(prefix)
+                and leaf[len(prefix)].isupper()):
+            return DIRS[prefix]
+
     for pattern, d in PASCAL_DIRS:
         if pattern.match(leaf):
             return d
@@ -1148,14 +1202,40 @@ def main():
     if nested_skipped:
         print("%d symbols belong to nested classes and are not emitted" % nested_skipped)
 
-    # A class that owns no functions still needs a header if something inherits from it. phSegment
-    # is pure data, owns no symbols, and so was never written - leaving lvlSegment with an
-    # undefined base even though phSegment's layout is complete and CONFIRMED.
-    for cls in list(classes):
-        base = base_of(cls)
-        while base and base not in classes and LAYOUT.get(base):
-            classes[base] = []
-            base = base_of(base)
+    # A CLASS THAT OWNS NO FUNCTIONS STILL NEEDS A HEADER when something inherits from it or holds
+    # it BY VALUE. Both need the complete type, and a forward declaration is not one: inheriting
+    # gives C2504 and a by-value member gives C2079, after which MSVC's error recovery drops the
+    # declaration and the outer class comes out short by that member's whole width.
+    #
+    # These classes are pure data - phSegment, z_stream, vehDamageImpactInfo, HashEntry, ioEvent,
+    # lvlIntersectionPoint - so they own no symbols and never entered `classes`, which is seeded
+    # from the symbol table. Every one of them has a complete layout already; nothing was missing
+    # but the file. vehDamageImpactInfo alone cost vehCarDamage 764 bytes.
+    #
+    # Run to a fixpoint, because a backfilled class can itself embed another one.
+    data_only = set()
+    pending = list(classes)
+    while pending:
+        cur = pending.pop()
+        info = LAYOUT.get(cur)
+
+        wanted = []
+        base = base_of(cur)
+        if base:
+            wanted.append(base)
+        if info:
+            for m in usable_members(cur, info):
+                held = map_type(m.get("type") or "").strip()
+                # By value only. A pointer or a reference is happy with a forward declaration, and
+                # emitting headers for those too would pull in most of the binary.
+                if held and not held.endswith("*") and not held.endswith("&"):
+                    wanted.append(held.split("::")[0])
+
+        for name in wanted:
+            if name and name not in classes and LAYOUT.get(name) and backfillable(name):
+                classes[name] = []
+                data_only.add(name)
+                pending.append(name)
 
     for cls, group in classes.items():
         METHOD_NAMES[cls] = {g.get("name") for g in group
@@ -1184,41 +1264,30 @@ def main():
             for m2 in info2.get("members") or []:
                 note_nested(m2.get("type"))
 
-    # HAND-WRITTEN HEADERS THIS GENERATOR CANNOT PRODUCE, BUT MUST STILL BE ABLE TO INCLUDE.
-    #
-    # A type used BY VALUE needs its definition, not a forward declaration. The resolution below
-    # only knows about classes this generator writes itself, so a by-value member whose type is
-    # hand-written fell through to a forward declaration and the header then failed to compile with
-    # "uses undefined class".
-    #
-    # gfxRenderState is the case in point: it holds `gfxRenderStateData State;` by value at offset
-    # 0, gfxRenderStateData has no methods so no symbols and therefore no generated header, and the
-    # result was that gfxrenderstate.h could not be compiled at all - which is why nothing had ever
-    # defined a gfxRenderState member function, and why agigl/glpacket.cpp reaches RSTATE through
-    # an incomplete type and a hand-computed byte offset instead of naming a member.
-    HANDWRITTEN = {
-        "gfxRenderStateData": "gfx/gfxrenderstatedata.h",
-    }
-
     # class -> "dir/file.h", so an include can be resolved before anything is written
     index = dict(HANDWRITTEN)
     for cls, group in classes.items():
-        if any(s["code"] for s in group):
-            index[cls] = "%s/%s" % (directory(cls, group[0]["subsystem"]), filename(cls))
+        # A backfilled class has no symbols at all, so `any(code)` is False for it. Both this and
+        # the write loop below used that test alone, which is why the backfill above never actually
+        # produced a file: it added the class and the next two loops dropped it again.
+        if any(s["code"] for s in group) or cls in data_only:
+            subsys = group[0]["subsystem"] if group else None
+            index[cls] = "%s/%s" % (directory(cls, subsys), filename(cls))
 
     written = 0
     per_dir = {}
 
     for cls, group in sorted(classes.items()):
-        if not any(s["code"] for s in group):
-            continue  # data-only: nothing to declare yet
+        if not any(s["code"] for s in group) and cls not in data_only:
+            continue  # data-only and nothing depends on it: nothing to declare yet
 
-        d = directory(cls, group[0]["subsystem"])
+        subsys = group[0]["subsystem"] if group else None
+        d = directory(cls, subsys)
         path = os.path.join(OUTDIR, d, filename(cls))
         os.makedirs(os.path.dirname(path), exist_ok=True)
 
         with open(path, "w", encoding="utf-8", newline="\n") as f:
-            f.write(emit_class(cls, group, index, group[0]["subsystem"]))
+            f.write(emit_class(cls, group, index, subsys))
 
         written += 1
         per_dir[d] = per_dir.get(d, 0) + 1

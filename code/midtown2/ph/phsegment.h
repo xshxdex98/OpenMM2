@@ -23,22 +23,17 @@
 
 #include "core/arts.h"
 
-#include "hashentry.h"
+#include "vector7/vector3.h"
 
-class FixedHashEntry
+class phSegment
 {
 public:
-    // ??1FixedHashEntry@@QAE@XZ
-    ARTS_IMPORT ~FixedHashEntry();
-
-private:
-    // ??0FixedHashEntry@@AAE@XZ
-    ARTS_IMPORT FixedHashEntry();
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    HashEntry field_0; // 0x000
-    u8 IsFixed; // 0x00C
+    i32 Flag; // 0x000
+    Vector3 StartPos; // 0x004
+    Vector3 EndPos; // 0x010
 };
 
-check_size(FixedHashEntry, 0x10);
+check_size(phSegment, 0x1C);

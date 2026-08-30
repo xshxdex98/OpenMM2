@@ -23,10 +23,10 @@
 
 #include "core/arts.h"
 
+#include "ph/phsegment.h"
 #include "vector7/vector3.h"
 
 class lvlSegmentInfo;
-class phSegment;
 
 class lvlSegment : public phSegment
 {

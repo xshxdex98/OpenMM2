@@ -23,22 +23,24 @@
 
 #include "core/arts.h"
 
-#include "hashentry.h"
+#include "vector7/vector3.h"
 
-class FixedHashEntry
+class phCollider;
+
+class vehDamageImpactInfo
 {
 public:
-    // ??1FixedHashEntry@@QAE@XZ
-    ARTS_IMPORT ~FixedHashEntry();
-
-private:
-    // ??0FixedHashEntry@@AAE@XZ
-    ARTS_IMPORT FixedHashEntry();
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    HashEntry field_0; // 0x000
-    u8 IsFixed; // 0x00C
+    phCollider* pCollider; // 0x000
+    Vector3 MaybeLastImpactPos; // 0x004
+    Vector3 field_10; // 0x010
+    Vector3 field_1C; // 0x01C
+    Vector3 field_28; // 0x028
+    f32 field_34; // 0x034
+    f32 field_38; // 0x038
+    f32 SomeTimer; // 0x03C
 };
 
-check_size(FixedHashEntry, 0x10);
+check_size(vehDamageImpactInfo, 0x40);
