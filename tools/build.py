@@ -375,6 +375,11 @@ def main():
     # this catches is the other half of the same mistake: editing the generator and then building
     # without re-exporting. Every fix would verify correctly in the generator and silently not be
     # in the binary, which is exactly how a whole evening's work got thrown away once already.
+    # NOTE: this is an mtime comparison, so a VCS operation that rewrites the working tree - a
+    # checkout, a rebase, a line-ending normalisation - will trip it even though the generator's
+    # CONTENT is unchanged. Confirm with `git status tools/ghidra/ExportAsm.java` before re-running
+    # a twenty-minute export: if git reports it unmodified, the export really is current and the
+    # right fix is to restore the file's timestamp.
     generator = os.path.join(HERE, "ghidra", "ExportAsm.java")
     if os.path.exists(generator) and os.path.getmtime(generator) > os.path.getmtime(ASM_PRISTINE):
         sys.exit("FAILED: ExportAsm.java is newer than the exported assembly - "

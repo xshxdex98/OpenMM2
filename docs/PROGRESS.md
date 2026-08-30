@@ -145,9 +145,9 @@ Layout known, so these can be started today.
 | 2026-08-29 | 1.98% | 34.1 KB | 23.4 MB |
 | 2026-08-29 | 1.98% | 34.1 KB | 23.4 MB |
 | 2026-08-29 | 1.98% | 34.1 KB | 23.4 MB |
-| 2026-08-29 | 1.98% | 34.1 KB | 23.4 MB |
 | 2026-08-29 | 2.00% | 34.4 KB | 23.4 MB |
 | 2026-08-29 | 2.00% | 34.4 KB | 23.4 MB |
+| 2026-08-29 | 2.01% | 34.6 KB | 23.4 MB |
 
 Each run of `tools/progress.py` appends a snapshot to
 `data/progress_history.jsonl`; pass `--no-record` to print without recording.
