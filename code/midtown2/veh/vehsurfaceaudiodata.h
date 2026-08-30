@@ -86,7 +86,6 @@ public:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    AudSoundBase* SurfaceSound; // 0x000
     vehSurfaceAudioSubData* SkidWaveData; // 0x004
     i32 SampleIndex; // 0x008
     i32 NumSkidSamples; // 0x00C

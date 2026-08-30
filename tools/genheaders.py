@@ -271,8 +271,23 @@ def emit_members(cls, is_polymorphic):
 
     if base_info:
         skip_to = base_info["size"]
-    elif is_polymorphic and members and members[0]["offset"] == 0             and (members[0]["name"] or "").lower() in VPTR_NAMES:
-        skip_to = 4  # the compiler emits the vptr itself
+    elif (is_polymorphic and members and members[0]["offset"] == 0
+            and (members[0].get("width") or 0) == 4 and not members[0].get("count")):
+        # THE FIRST FOUR BYTES OF A POLYMORPHIC CLASS ARE THE VPTR, whatever the recovery called
+        # them. The compiler emits one itself, so those bytes must be skipped or the class comes
+        # out four bytes too large and every member sits four bytes late.
+        #
+        # This used to require the member to be NAMED like a vptr - vtable, vfptr, vtbl - which is
+        # the spelling only some sources use. Where a recovery had called it field_0 or unk_0x00 it
+        # was emitted as a real field on top of the compiler's own pointer, and DirSnd, dgPhysEntity,
+        # eqEventQ and the four aiGoal classes were each exactly +4. Their names were the only thing
+        # wrong with them.
+        #
+        # THE WIDTH TEST IS NOT OPTIONAL. Dropping any offset-0 member took 116 bytes off
+        # dgPhysEntity, whose first member is a flattened base struct, not a pointer - it went from
+        # four bytes too large to a hundred and twelve too small. A vptr is exactly one pointer, so
+        # only a four-byte scalar at offset 0 can be one.
+        skip_to = 4
 
     lines = []
     for m in members:

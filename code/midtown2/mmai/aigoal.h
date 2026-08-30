@@ -31,7 +31,6 @@ public:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i32 field_0; // 0x000
     i32 UpdateCount; // 0x004
 };
 

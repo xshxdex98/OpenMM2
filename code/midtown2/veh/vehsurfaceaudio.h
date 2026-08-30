@@ -122,7 +122,6 @@ public:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i32 LastSurfaceSound; // 0x000
     i32 field_4; // 0x004
     i32 IsPlayingSkidSound; // 0x008
     i32 SurfaceDataCount; // 0x00C

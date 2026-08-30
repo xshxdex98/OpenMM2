@@ -77,7 +77,6 @@ public:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i32 SampleCount; // 0x000
     vehEngineSampleWrapper** Samples; // 0x004
 };
 

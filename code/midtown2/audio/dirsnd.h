@@ -89,7 +89,6 @@ protected:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    mmDirSndVTable* lpVTbl; // 0x000
     IDirectSoundBuffer* lpDSBuffer; // 0x004
     IDirectSound* lpDS; // 0x008
     HWND hWnd; // 0x00C
