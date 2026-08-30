@@ -133,7 +133,7 @@ Layout known, so these can be started today.
 
 | Date | Ported | Code ported | game.asm |
 |---|--:|--:|--:|
-| 2026-08-30 | 2.09% | 36.0 KB | 23.2 MB |
+| 2026-08-30 | 2.11% | 36.2 KB | 23.2 MB |
 | 2026-08-30 | 2.11% | 36.2 KB | 23.2 MB |
 | 2026-08-30 | 2.11% | 36.2 KB | 23.2 MB |
 | 2026-08-30 | 2.11% | 36.2 KB | 23.2 MB |

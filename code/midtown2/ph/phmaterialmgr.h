@@ -75,7 +75,7 @@ public:
     i32 NameCount; // 0x00C
     u32 MaterialCount; // 0x010
     u32 MaxCount; // 0x014
-    char (*) Names[32]; // 0x018
+    char (*Names)[32]; // 0x018
 };
 
 // ??_7phMaterialMgr@@6B@

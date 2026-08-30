@@ -73,6 +73,7 @@ PRIMITIVES = OrderedDict([
     # Handles and void pointers. Both are pointer-width and neither has any structure this
     # code needs, so void* is the honest spelling.
     ("LPVOID", "void*"),
+    ("byte", "u8"),
     # gfx/ddrawshim.h defines this one already, with every offset read out of the binary
     # (gfxBitmap::Create writes dwSize = 0x20 at 0x004AE4FD). gfxTextureCachePool holds it BY
     # VALUE at 0x14 and 0x14 + 0x20 = 0x34, the class size, so a forward declaration cannot
@@ -468,6 +469,9 @@ VPTR_NAMES = {"vtable", "vfptr", "__vftable", "vtbl", "vptr"}
 
 IDENTIFIER = re.compile(r"^[A-Za-z_]\w*$")
 
+# IDA's pointer-to-array spelling, `char (*)`, whose recorded count is the POINTEE's extent.
+PTR_TO_ARRAY = re.compile(r"^(.*?)\s*\(\s*\*\s*\)$")
+
 
 def emit_members(cls, is_polymorphic):
     """Member declarations, in memory-offset order, plus the check_size value.
@@ -593,12 +597,25 @@ def emit_members(cls, is_polymorphic):
         # same shape and were emitted flat, so asBirthRule had never compiled.
         fp = re.match(r"^(.*\(\s*(?:__stdcall|__cdecl|__fastcall|__thiscall)?\s*"
                       r"(?:[A-Za-z_]\w*::)*\*)(\)\(.*)$", mtype)
+        # `char (*)[32] Names` is IDA's spelling for ONE pointer to a 32-byte array, not for 32 of
+        # anything. The extent belongs to the POINTEE, so appending it after the name the ordinary
+        # way produced `char (*) Names[32];`, which is not a declaration at all - MSVC dropped the
+        # member and phMaterialMgr lost its last four bytes.
+        #
+        # The extent is kept rather than flattened to a plain pointer, because the original code
+        # relies on the stride: phMaterialMgr::AddMaterial does
+        #     this->Names = (char (*)[32])operator new(32 * n);
+        #     strncpy(this->Names[NameCount], name, 0x20u);
+        pa = PTR_TO_ARRAY.match(mtype)
+
         if fp:
             decl = "%s%s%s" % (fp.group(1), m["name"], fp.group(2))
+        elif pa and m.get("count"):
+            decl = "%s (*%s)[%d]" % (pa.group(1), m["name"], m["count"])
         else:
             decl = "%s %s" % (mtype, m["name"])
-        if m.get("count"):
-            decl += "[%d]" % m["count"]
+            if m.get("count"):
+                decl += "[%d]" % m["count"]
 
         # The 1999 spelling, where it was not a legal identifier, is kept beside the offset - the
         # binary really does call datParser::AddRecord("Approach Rate", ...), and that name is the

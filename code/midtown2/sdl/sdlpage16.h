@@ -95,10 +95,10 @@ private:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    byte bool0; // 0x000
-    byte PerimeterVerticesCount; // 0x001
-    byte bool2; // 0x002
-    byte bool3; // 0x003
+    u8 bool0; // 0x000
+    u8 PerimeterVerticesCount; // 0x001
+    u8 bool2; // 0x002
+    u8 bool3; // 0x003
     Vector3* CodedVertices; // 0x004
     f32* Floats; // 0x008
     u32 field_C; // 0x00C
