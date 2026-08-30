@@ -76,15 +76,10 @@ public:
     phInertialCS* ICS1; // 0x004
     phInertialCS* ICS2; // 0x008
     Vector3 Offset1; // 0x00C
-    u8 pad_10[8]; // 0x010
     Vector3 Offset2; // 0x018
-    u8 pad_1C[8]; // 0x01C
     Vector3 PremultipliedOffset; // 0x024
-    u8 pad_28[8]; // 0x028
     Vector3 PremultipliedOffset1; // 0x030
-    u8 pad_34[8]; // 0x034
     Matrix34 InvMassMatrix; // 0x03C
-    u8 pad_40[44]; // 0x040
 };
 
 // ??_7phJoint@@6B@

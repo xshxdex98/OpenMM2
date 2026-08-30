@@ -427,22 +427,6 @@
   "lhs",
   "rhs"
  ],
- "?RotateFullY@Matrix34@@QAEXM@Z": [
-  null,
-  null,
-  "arg0"
- ],
- "?RotateFullZ@Matrix34@@QAEXM@Z": [
-  null,
-  null,
-  "arg0"
- ],
- "?RotateFullUnitAxis@Matrix34@@QAEXABVVector3@@M@Z": [
-  null,
-  null,
-  "arg0",
-  null
- ],
  "?MakeRotate@Matrix34@@QAEXABVVector3@@M@Z": [
   null,
   "rotation"
@@ -557,11 +541,6 @@
  "?AddTitle@PUResults@@QAEXPAULocString@@0@Z": [
   "renderer",
   "DrawList"
- ],
- "?AddName@PUResults@@QAEXHPBDM@Z": [
-  null,
-  "arg4",
-  null
  ],
  "?AddName@PURoster@@QAEXPBDKH@Z": [
   "renderer",
@@ -689,14 +668,6 @@
   "tooltip",
   "x",
   "y"
- ],
- "?SetPosition@UISlider@@UAEXMM@Z": [
-  "arg0",
-  null
- ],
- "?EvalMouseXY@UISlider@@QAEXMM@Z": [
-  "arg0",
-  null
  ],
  "?IsValidChar@UITextField@@QAEHG@Z": [
   "label_id"
@@ -861,9 +832,6 @@
  "?_grow_capacity@?$ImVector@UImGuiDockNodeSettings@@@@QBEHH@Z": [
   "sz"
  ],
- "?clear@?$ImVector@H@@QAEXXZ": [
-  "arg0"
- ],
  "?contains@?$ImVector@PAUImGuiViewport@@@@QBE_NABQAUImGuiViewport@@@Z": [
   "v"
  ],
@@ -956,10 +924,6 @@
   "P1",
   "P2",
   "weight"
- ],
- "?Init@aiCTFRacer@@QAEXHPAD@Z": [
-  null,
-  "arg4"
  ],
  "?UpdatePlay@aiCableCarAudioData@@QAEXMMM@Z": [
   "id",
@@ -1087,12 +1051,6 @@
   "__formal",
   "uv"
  ],
- "?IntersectionEntryPt@aiPath@@QAEXAAVVector3@@HMH@Z": [
-  null,
-  null,
-  "arg8",
-  null
- ],
  "?IntersectionEntryVector@aiPath@@QAEXAAVVector3@@MH@Z": [
   "DrawList",
   "__formal",
@@ -1163,10 +1121,6 @@
  "?setRoadDist@aiRailSet@MM2@@QAEXM@Z": [
   "dist",
   null
- ],
- "?Init@aiRouteRacer@@QAEXHPAD@Z": [
-  null,
-  "arg4"
  ],
  "?Disabled@aiRouteRacer@MM2@@QAEXXZ": [
   "sparks",
@@ -1299,12 +1253,6 @@
   "y_min",
   "x",
   "y"
- ],
- "?SetView@asCamera@@QAEXMMMM@Z": [
-  null,
-  "arg4",
-  null,
-  null
  ],
  "?SetAmbient@asCamera@@QAEXABVVector3@@@Z": [
   "unused"
@@ -1483,9 +1431,6 @@
  "?SetTopOfBottomStack@audSoundHeap@@QAE_NPAX@Z": [
   "num"
  ],
- "?SetMatrix@camAICS@@QAEXPAVMatrix34@@@Z": [
-  "arg0"
- ],
  "?FileIO@camAppCS@@UAEXAAVdatParser@@@Z": [
   "renderer"
  ],
@@ -1494,10 +1439,6 @@
  ],
  "?FileIO@camBaseCS@@UAEXAAVdatParser@@@Z": [
   "renderer"
- ],
- "?Init@camCarCS@@QAEXPAVvehCar@@PAD@Z": [
-  "arg0",
-  null
  ],
  "?FileIO@camPolarCS@@UAEXAAVdatParser@@@Z": [
   "renderer"
@@ -1531,10 +1472,6 @@
  ],
  "?Draw@cityLevel@@UAEXABVgfxViewport@@I@Z": [
   "p_open",
-  null
- ],
- "?InitFullProbe@cityLevel@@IAEXHH@Z": [
-  "arg0",
   null
  ],
  "?FullProbe@cityLevel@@IAEHABVVector3@@@Z": [
@@ -1811,20 +1748,11 @@
  "?InitGlow@dgBangerManager@@QAEXPBD@Z": [
   "textureName"
  ],
- "?Impact@dgGlassInstance@@UAEXPAVlvlInstance@@PAVVector3@@@Z": [
-  "arg0",
-  "arg4"
- ],
  "?Draw@dgGlassInstance@@UAEXH@Z": [
   "lod"
  ],
  "?SetMatrix@dgHitBangerInstance@@UAEXABVMatrix34@@@Z": [
   "new_capacity"
- ],
- "?CalcImpact@dgImpact@@SAHPAV1@MM@Z": [
-  null,
-  null,
-  "arg8"
  ],
  "?UpdateDamping@dgLink@@QAEXXZ": [
   "ecx0"
@@ -1850,22 +1778,12 @@
   "glyph_index",
   "pvertices"
  ],
- "?CollideProbe@dgPhysManager@@QAE_NAAVlvlSegment@@PAVlvlIntersection@@PAVlvlInstance@@@Z": [
-  null,
-  "arg4",
-  "arg8"
- ],
  "?CollideInstances@dgPhysManager@@QAE_NPAVlvlInstance@@0@Z": [
   null,
   "info"
  ],
  "?FileIO@dgRagdollData@@QAEXAAVdatParser@@@Z": [
   "_Ptr"
- ],
- "?Init@dgRagdoll@@QAEXABVdgRagdollData@@AAVcrKinematics@@PAVMatrix34@@@Z": [
-  "arg0",
-  null,
-  null
  ],
  "?ComputeInvMassMatrix@dgTrailerJoint@@UBEXPAVphInertialCS@@AAVMatrix34@@ABVVector3@@@Z": [
   "ecx0",
@@ -1877,7 +1795,7 @@
  "?ComputeInvMassMatrix@dgTrailerJoint@@QAEXPAVphInertialCS@@0AAVMatrix34@@ABVVector3@@@Z": [
   "ecx0",
   "edx0",
-  "arg0",
+  null,
   "height",
   null,
   null
@@ -2320,7 +2238,7 @@
  ],
  "?GetGeomSet@lvlInstance@@KAHPBD0H@Z": [
   null,
-  "arg4",
+  null,
   "flags"
  ],
  "?BeginGeom@lvlInstance@@QAE_NPBD0H@Z": [
@@ -2367,13 +2285,6 @@
  "?GetVertex@lvlSDL@@UBEABVVector3@@H@Z": [
   "index"
  ],
- "?Init@lvlSky@@QAEXPBDMMMH@Z": [
-  null,
-  "arg4",
-  null,
-  null,
-  null
- ],
  "?Update@lvlTrackManager@@QAEXABVVector3@@0PAVgfxTexture@@@Z": [
   "info",
   "unicode_codepoint",
@@ -2384,7 +2295,7 @@
  ],
  "?Init@mcHookman@@QAEXHPAD@Z": [
   "DrawList",
-  "arg4"
+  null
  ],
  "?FindHeap@memMemoryAllocator@@SAPAV1@PAX@Z": [
   "lpAddress"
@@ -2453,13 +2364,9 @@
  ],
  "?AddPlayer@mmCRHUD@@QAEXPBDKHI@Z": [
   "shared_font_atlas",
-  "arg4",
+  null,
   null,
   null
- ],
- "?SetName@mmCRHUD@@QAEXPADH@Z": [
-  null,
-  "arg4"
  ],
  "?SetFGVals@mmCarRoadFF@@QAEXMMM@Z": [
   "ctx",
@@ -2498,11 +2405,6 @@
   "outHeight",
   "outWidth"
  ],
- "?SetPosition@mmCompCity@@UAEXPAVmmTextNode@@HM@Z": [
-  "arg0",
-  null,
-  null
- ],
  "?Highlight@mmCompCity@@UAEXPAVmmTextNode@@H@Z": [
   null,
   "index"
@@ -2515,23 +2417,8 @@
  "?LoadBitmap@mmCompDRecord@@QAEXPAD@Z": [
   "name"
  ],
- "?SetPosition@mmCompDRecord@@UAEXPAVmmTextNode@@HM@Z": [
-  "arg0",
-  null,
-  null
- ],
  "?LoadBitmap@mmCompRaceRecord@@QAEXPAD@Z": [
   "name"
- ],
- "?SetPosition@mmCompRaceRecord@@UAEXPAVmmTextNode@@HM@Z": [
-  "arg0",
-  null,
-  null
- ],
- "?SetPosition@mmCompReplay@@UAEXPAVmmTextNode@@HM@Z": [
-  "arg0",
-  null,
-  null
  ],
  "?Highlight@mmCompReplay@@UAEXPAVmmTextNode@@H@Z": [
   null,
@@ -2553,11 +2440,6 @@
  ],
  "?SetReady@mmCompRoster@@QAEXH@Z": [
   "readyStatus"
- ],
- "?SetPosition@mmCompRoster@@UAEXPAVmmTextNode@@HM@Z": [
-  "arg0",
-  null,
-  null
  ],
  "?Init@mmDashView@@QAEXPADPAVmmPlayer@@@Z": [
   "node",
@@ -2591,14 +2473,6 @@
  ],
  "?Assign@mmFrictionFF@@QAEHJ@Z": [
   "getter"
- ],
- "?SystemMessageCB@mmGameMulti@@QAEXPAX0@Z": [
-  null,
-  "arg4"
- ],
- "?GameMessageCB@mmGameMulti@@QAEXPAX0@Z": [
-  null,
-  "arg4"
  ],
  "?GetNetObject@mmGameMulti@@QAEPAVmmNetObject@@KH@Z": [
   "i",
@@ -2634,10 +2508,6 @@
  "?CalculateRaceScore@mmGame@@IAEHHH@Z": [
   "button",
   null
- ],
- "?FindGroundPos@mmGame@@QAEXAAVVector3@@0@Z": [
-  null,
-  "arg4"
  ],
  "??_GmmGame@@UAEPAXI@Z": [
   "button"
@@ -2786,15 +2656,6 @@
  "?ShowMain@mmInterface@@QAEXH@Z": [
   "firstLoad"
  ],
- "?GetRaceString@mmInterface@@AAEXHPAD@Z": [
-  "arg0",
-  null
- ],
- "?GetRaceName@mmInterface@@AAEPADW4dgGameMode@@HPAD@Z": [
-  "arg0",
-  null,
-  null
- ],
  "?GetHostPlayerData@mmInterface@@AAEHAAUmmPlayerInfo@@@Z": [
   "indent_w"
  ],
@@ -2838,23 +2699,8 @@
  "?LoadSets@mmMultiCR@@QAEHPAD@Z": [
   "__formal"
  ],
- "?FondleCarMass@mmMultiCR@@QAEXPAVvehCar@@M@Z": [
-  "arg0",
-  null
- ],
- "?FindGround@mmMultiCR@@AAEXVVector3@@AAV2@@Z": [
-  null,
-  "arg4",
-  "arg8",
-  null
- ],
  "?SendTimeWarning@mmMultiCR@@AAEXH@Z": [
   "result"
- ],
- "?SendLobbyResults@mmMultiCR@@QAEXKHH@Z": [
-  null,
-  "arg4",
-  null
  ],
  "?SystemMessage@mmMultiCircuit@@UAEXPAUNETSYS_MSG@@@Z": [
   "bb"
@@ -2901,13 +2747,6 @@
  ],
  "??4mmPlayerData@@QAEXAAV0@@Z": [
   "getter"
- ],
- "?OpenCityRecord@mmPlayerData@@QAEHPAD@Z": [
-  "arg0"
- ],
- "?GetNumPassed@mmPlayerData@@QAEHPADH@Z": [
-  "arg0",
-  null
  ],
  "?GetScore@mmPlayerData@@QAEHPADH@Z": [
   "getter",
@@ -3046,10 +2885,6 @@
  "?UpdateGameInput@mmSingleRace@@UAEXH@Z": [
   "name"
  ],
- "?FinishMessage@mmSingleRace@@AAEXHH@Z": [
-  null,
-  "arg4"
- ],
  "??_GmmSingleRace@@UAEPAXI@Z": [
   "move_dir"
  ],
@@ -3159,21 +2994,18 @@
   "entryName"
  ],
  "?Draw@modModel@@QBEXPBVMatrix44@@PAVmodShader@@I@Z": [
-  "arg0",
+  null,
   "name",
   null
  ],
  "?GetBoundingBox@modModel@@QBEXAAVVector3@@0PAVMatrix34@@@Z": [
-  "arg0",
+  null,
   "name",
   null
  ],
  "?GetPosition@modModel@@QBEAAVVector3@@AAV2@H@Z": [
   null,
   "name"
- ],
- "?LoadAscii@modModel@@AAE_NAAVdatTokenizer@@@Z": [
-  "arg0"
  ],
  "?LoadBinary@modModel@@AAE_NAAVdatBinTokenizer@@@Z": [
   "reader"
@@ -3238,9 +3070,6 @@
  ],
  "?Draw@pedAnimationInstance@@QAEX_N@Z": [
   "drawModel"
- ],
- "?ScaleSize@phBoundBox@@QAEXABVVector3@@@Z": [
-  "arg0"
  ],
  "?AddEdgeChecks@phBoundBox@@CAXHH_N@Z": [
   "c",
@@ -3355,7 +3184,7 @@
  ],
  "?ApplyAirResistance@phColliderBase@@QAEXMABVVector3@@PBVphBound@@@Z": [
   "i",
-  "arg4",
+  null,
   null
  ],
  "?InitArray@phColliderJointed@@SAXQAV1@H@Z": [
@@ -3401,7 +3230,7 @@
  ],
  "?CalcHeldContacts@phContactMgr@@QAEXPAVphColliderBase@@0H@Z": [
   "_X",
-  "arg4",
+  null,
   null
  ],
  "?EstMaxMoved@phContactMgr@@CAMABVMatrix34@@PBVphColliderBase@@1@Z": [
@@ -3499,17 +3328,17 @@
   "argC"
  ],
  "?AddInertia@phInertialCS@@QAE?AVMatrix34@@MABVVector3@@0@Z": [
-  "arg0",
-  "arg4",
-  "arg8",
+  null,
+  null,
+  null,
   "argC"
  ],
  "?AddInertia@phInertialCS@@QAE?AVMatrix34@@MABVVector3@@ABV2@@Z": [
   null,
   "edx0",
-  "arg0",
-  "arg4",
-  "arg8",
+  null,
+  null,
+  null,
   null
  ],
  "?Update@phInertialCS@@AAEXM@Z": [
@@ -3597,11 +3426,6 @@
  "?DrawShards@ptxGlass@@QAEXH@Z": [
   "draw_list"
  ],
- "?GetShadedColor@sdlPage16@@DAIIII@Z": [
-  "arg0",
-  null,
-  null
- ],
  "?GetDrawnSDLPrims@sdlPage16@@QBEHHPAHH@Z": [
   "lod",
   "pOutput",
@@ -3633,58 +3457,11 @@
  "?GetFloat@sdlPage16@@QBEMH@Z": [
   "index"
  ],
- "?SetFlatQuad@sdlPoly@@QAE_NHHHHHM@Z": [
-  null,
-  null,
-  null,
-  null,
-  null,
-  "arg14"
- ],
- "?SetQuad@sdlPoly@@QAE_NHABVVector3@@000@Z": [
-  null,
-  "arg4",
-  null,
-  null,
-  null
- ],
- "?SetTri@sdlPoly@@QAE_NHABVVector3@@00@Z": [
-  null,
-  "arg4",
-  null,
-  null
- ],
- "?SetFlatTri@sdlPoly@@QAE_NHHHHM@Z": [
-  null,
-  null,
-  null,
-  null,
-  "arg10"
- ],
  "?SetWall@sdlPoly@@QAE_NHHHMM@Z": [
   null,
   null,
   null,
   "argC",
-  null
- ],
- "?SetWall@sdlPoly@@QAE_NHABVVector3@@0MM@Z": [
-  null,
-  "arg4",
-  null,
-  null,
-  null
- ],
- "?SaveName@string@@QAEXABV1@H00@Z": [
-  "arg0",
-  null,
-  null,
-  null
- ],
- "?FindFile@string@@QAEHABV1@H00@Z": [
-  "arg0",
-  null,
-  null,
   null
  ],
  "??0uiNavBar@@QAE@H@Z": [
@@ -3733,10 +3510,6 @@
   "x",
   "y"
  ],
- "?Init@vehCarDamage@@QAEXPAVvehCar@@PBD@Z": [
-  "arg0",
-  null
- ],
  "?SpewSmoke@vehCarDamage@@AAEXPAVasParticles@@PAMAAVVector3@@M@Z": [
   "label_id",
   "getter",
@@ -3778,10 +3551,6 @@
  ],
  "?ParseCSVBuffer@vehEngineSampleWrapper@@QAEXPAD@Z": [
   "label_id"
- ],
- "?Init@vehGyro@@QAEXPAVvehCarSim@@PBD@Z": [
-  "arg0",
-  null
  ],
  "?Update@vehHornAudioTiming@@QAEXPAVAudSoundBase@@@Z": [
   "label_id"
@@ -3834,10 +3603,6 @@
  ],
  "??_GvehSplash@@UAEPAXI@Z": [
   "label_ids"
- ],
- "?Init@vehStuck@@QAEXPAVvehCarSim@@PBD@Z": [
-  "arg0",
-  null
  ],
  "?UpdateSkid@vehSurfaceAudioData@@QAEXMMM@Z": [
   "label_id",

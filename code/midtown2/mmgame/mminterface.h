@@ -123,10 +123,10 @@ private:
     ARTS_IMPORT i32 GetHostPlayerData(mmPlayerInfo& indent_w);
 
     // ?GetRaceName@mmInterface@@AAEPADW4dgGameMode@@HPAD@Z
-    ARTS_IMPORT char* GetRaceName(dgGameMode arg0, i32 arg2, char* arg3);
+    ARTS_IMPORT char* GetRaceName(dgGameMode arg1, i32 arg2, char* arg3);
 
     // ?GetRaceString@mmInterface@@AAEXHPAD@Z
-    ARTS_IMPORT void GetRaceString(i32 arg0, char* arg2);
+    ARTS_IMPORT void GetRaceString(i32 arg1, char* arg2);
 
     // ?GetReplayDescCB@mmInterface@@AAEXXZ
     ARTS_IMPORT void GetReplayDescCB();

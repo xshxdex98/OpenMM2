@@ -60,7 +60,6 @@ public:
     aiRailSet* RailSet; // 0x008
     aiVehicleAmbient* VehicleAmbient; // 0x00C
     Vector3 StartPos; // 0x010
-    u8 pad_14[8]; // 0x014
     f32 RoadDist; // 0x01C
     f32 RegainDist; // 0x020
 };

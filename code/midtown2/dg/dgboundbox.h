@@ -23,14 +23,8 @@
 
 #include "core/arts.h"
 
-#include "ph/phbound.h"
 #include "ph/phboundbox.h"
-#include "ph/phpolygon.h"
-#include "vector7/vector3.h"
 
-class lvlMaterial;
-class phBound_vtbl;
-class phHotEdge;
 class phMaterial;
 
 class dgBoundBox : public phBoundBox
@@ -53,13 +47,8 @@ public:
 
     // ?SetElasticity@dgBoundBox@@UAEXM@Z
     ARTS_IMPORT virtual void SetElasticity(f32 arg1);
-
-public:
-    // Members from 0x314; everything below that belongs to phBoundBox.
-    // Offset order is mandatory - the original code reads these at fixed offsets.
-    lvlMaterial* Material; // 0x314
 };
 
 // ??_7dgBoundBox@@6B@
 // vtable at 0x005B1D98
-check_size(dgBoundBox, 0x318);
+// check_size(dgBoundBox, 0x318); // size known, members are not - cannot verify

@@ -76,7 +76,7 @@ public:
     ARTS_IMPORT bool CollideInstances(lvlInstance* arg1, lvlInstance* info);
 
     // ?CollideProbe@dgPhysManager@@QAE_NAAVlvlSegment@@PAVlvlIntersection@@PAVlvlInstance@@@Z
-    ARTS_IMPORT bool CollideProbe(lvlSegment& arg1, lvlIntersection* arg4, lvlInstance* arg8);
+    ARTS_IMPORT bool CollideProbe(lvlSegment& arg1, lvlIntersection* arg2, lvlInstance* arg3);
 
     // ?CollideTerrain@dgPhysManager@@QAE_NPAUCollisionTableEntry@1@@Z
     ARTS_IMPORT bool CollideTerrain(dgPhysManager::CollisionTableEntry* arg1);

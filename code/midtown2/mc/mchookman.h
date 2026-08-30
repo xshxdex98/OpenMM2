@@ -38,7 +38,7 @@ public:
     ARTS_IMPORT void DrawRouteThroughTraffic();
 
     // ?Init@mcHookman@@QAEXHPAD@Z
-    ARTS_IMPORT void Init(i32 DrawList, char* arg4);
+    ARTS_IMPORT void Init(i32 DrawList, char* arg2);
 
     // ?Reset@mcHookman@@QAEXXZ
     ARTS_IMPORT void Reset();

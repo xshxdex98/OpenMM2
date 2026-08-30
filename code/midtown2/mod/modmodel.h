@@ -43,7 +43,7 @@ public:
     ARTS_IMPORT static void DeleteModelHash(const char* arg1);
 
     // ?Draw@modModel@@QBEXPBVMatrix44@@PAVmodShader@@I@Z
-    ARTS_IMPORT void Draw(const Matrix44* arg0, modShader* name, u32 arg3) const;
+    ARTS_IMPORT void Draw(const Matrix44* arg1, modShader* name, u32 arg3) const;
 
     // ?DrawPlain@modModel@@QBEXPBVMatrix44@@I@Z
     ARTS_IMPORT void DrawPlain(const Matrix44* arg1, u32 arg2) const;
@@ -55,7 +55,7 @@ public:
     ARTS_IMPORT i32 GetAdjunctCount() const;
 
     // ?GetBoundingBox@modModel@@QBEXAAVVector3@@0PAVMatrix34@@@Z
-    ARTS_IMPORT void GetBoundingBox(Vector3& arg0, Vector3& name, Matrix34* arg3) const;
+    ARTS_IMPORT void GetBoundingBox(Vector3& arg1, Vector3& name, Matrix34* arg3) const;
 
     // ?GetPosition@modModel@@QBEAAVVector3@@AAV2@H@Z
     ARTS_IMPORT Vector3& GetPosition(Vector3& arg1, i32 name) const;
@@ -68,7 +68,7 @@ public:
 
 private:
     // ?LoadAscii@modModel@@AAE_NAAVdatTokenizer@@@Z
-    ARTS_IMPORT bool LoadAscii(datTokenizer& arg0);
+    ARTS_IMPORT bool LoadAscii(datTokenizer& arg1);
 
     // ?LoadBinary@modModel@@AAE_NAAVdatBinTokenizer@@@Z
     ARTS_IMPORT bool LoadBinary(datBinTokenizer& reader);

@@ -184,7 +184,7 @@ protected:
     ARTS_IMPORT static void DeleteTempBounds();
 
     // ?GetGeomSet@lvlInstance@@KAHPBD0H@Z
-    ARTS_IMPORT static i32 GetGeomSet(const char* arg1, const char* arg4, i32 flags);
+    ARTS_IMPORT static i32 GetGeomSet(const char* arg1, const char* arg2, i32 flags);
 
 public:
     static bool& Access_sm_EnableShadows() { return sm_EnableShadows; }

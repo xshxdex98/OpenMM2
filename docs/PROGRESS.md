@@ -19,8 +19,8 @@ Two numbers matter and they are different:
 | | | |
 |---|--:|---|
 | Ported | 2.11% | `#...........................` |
-| Ready to port | 69.2% | `###################.........` |
-| Size known, members not | 14.6% | `####........................` |
+| Ready to port | 69.1% | `###################.........` |
+| Size known, members not | 14.7% | `####........................` |
 
 | Metric | Value |
 |---|--:|
@@ -29,8 +29,8 @@ Two numbers matter and they are different:
 | Machine code | 1.7 MB |
 | Code ported | 36.2 KB |
 | Classes | 535 |
-| Classes with a member layout | 277 (52%) |
-| Classes with only a size | 66 |
+| Classes with a member layout | 273 (51%) |
+| Classes with only a size | 70 |
 | Virtual methods | 1938 |
 | Vftables | 340 |
 | `game.asm` remaining | 23.2 MB, 10879 PROCs |
@@ -52,7 +52,7 @@ layout is known.
 | `veh` | 34 | 585 | 91.5 KB | 5.3% | 1.0% | 84% |
 | `gfx` | 13 | 189 | 46.6 KB | 2.7% | 13.3% | 55% |
 | `sdl` | 4 | 37 | 46.5 KB | 2.7% | 0.0% | 99% |
-| `dg` | 28 | 263 | 44.3 KB | 2.6% | 0.0% | 56% |
+| `dg` | 28 | 263 | 44.3 KB | 2.6% | 0.0% | 53% |
 | `lvl` | 18 | 221 | 36.3 KB | 2.1% | 0.0% | 58% |
 | `as` | 18 | 246 | 34.9 KB | 2.0% | 0.0% | 84% |
 | `aud` | 19 | 322 | 23.9 KB | 1.4% | 0.0% | 0% |
@@ -88,7 +88,7 @@ layout is known.
 - **1938 virtual methods across 340 vftables.** Constructors must be ported together
   with every virtual of their class, or the vtable the compiler emits will not link.
 - Largest class not yet ported: **`aiVehiclePhysics`** at 58.7 KB.
-- **258 classes (530.6 KB, 31% of code) have no known layout** and are blocked: their
+- **262 classes (531.9 KB, 31% of code) have no known layout** and are blocked: their
   member offsets would have to be guessed, which is how you get silent corruption.
 
 ### Biggest blocked classes
@@ -135,8 +135,6 @@ Layout known, so these can be started today.
 |---|--:|--:|--:|
 | 2026-08-30 | 2.01% | 34.6 KB | 23.2 MB |
 | 2026-08-30 | 2.01% | 34.6 KB | 23.2 MB |
-| 2026-08-30 | 2.01% | 34.6 KB | 23.2 MB |
-| 2026-08-30 | 2.01% | 34.6 KB | 23.2 MB |
 | 2026-08-30 | 2.02% | 34.7 KB | 23.2 MB |
 | 2026-08-30 | 2.02% | 34.7 KB | 23.2 MB |
 | 2026-08-30 | 2.02% | 34.7 KB | 23.2 MB |
@@ -148,6 +146,8 @@ Layout known, so these can be started today.
 | 2026-08-30 | 2.07% | 35.5 KB | 23.2 MB |
 | 2026-08-30 | 2.07% | 35.6 KB | 23.2 MB |
 | 2026-08-30 | 2.09% | 36.0 KB | 23.2 MB |
+| 2026-08-30 | 2.11% | 36.2 KB | 23.2 MB |
+| 2026-08-30 | 2.11% | 36.2 KB | 23.2 MB |
 
 Each run of `tools/progress.py` appends a snapshot to
 `data/progress_history.jsonl`; pass `--no-record` to print without recording.

@@ -105,7 +105,7 @@ public:
     ARTS_IMPORT void FinishMessage(i32 arg1);
 
     // ?GameMessageCB@mmGameMulti@@QAEXPAX0@Z
-    ARTS_IMPORT void GameMessageCB(void* arg1, void* arg4);
+    ARTS_IMPORT void GameMessageCB(void* arg1, void* arg2);
 
     // ?GetInactiveNetObject@mmGameMulti@@QAEPAVmmNetObject@@XZ
     ARTS_IMPORT mmNetObject* GetInactiveNetObject();
@@ -162,7 +162,7 @@ public:
     ARTS_IMPORT void SetFinishCam();
 
     // ?SystemMessageCB@mmGameMulti@@QAEXPAX0@Z
-    ARTS_IMPORT void SystemMessageCB(void* arg1, void* arg4);
+    ARTS_IMPORT void SystemMessageCB(void* arg1, void* arg2);
 
     // ?UpdateNetWorkAudio@mmGameMulti@@QAEXXZ
     ARTS_IMPORT void UpdateNetWorkAudio();

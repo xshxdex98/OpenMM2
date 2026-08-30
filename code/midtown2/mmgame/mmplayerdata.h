@@ -57,7 +57,7 @@ public:
     ARTS_IMPORT char* GetNetName();
 
     // ?GetNumPassed@mmPlayerData@@QAEHPADH@Z
-    ARTS_IMPORT i32 GetNumPassed(char* arg0, i32 arg2);
+    ARTS_IMPORT i32 GetNumPassed(char* arg1, i32 arg2);
 
     // ?GetPassedMask@mmPlayerData@@QAEHPADH@Z
     ARTS_IMPORT i32 GetPassedMask(char* arg1, i32 arg2);
@@ -84,7 +84,7 @@ public:
     ARTS_IMPORT i32 LoadBinary(char* getter);
 
     // ?OpenCityRecord@mmPlayerData@@QAEHPAD@Z
-    ARTS_IMPORT i32 OpenCityRecord(char* arg0);
+    ARTS_IMPORT i32 OpenCityRecord(char* arg1);
 
     // ??4mmPlayerData@@QAEXAAV0@@Z
     ARTS_IMPORT void operator=(mmPlayerData& getter);

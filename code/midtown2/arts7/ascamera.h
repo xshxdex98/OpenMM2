@@ -88,7 +88,7 @@ public:
     ARTS_IMPORT void SetUnderlayCB(gfxBitmap* arg1, datCallback* arg2);
 
     // ?SetView@asCamera@@QAEXMMMM@Z
-    ARTS_IMPORT void SetView(f32 arg1, f32 arg4, f32 arg3, f32 arg4);
+    ARTS_IMPORT void SetView(f32 arg1, f32 arg2, f32 arg3, f32 arg4);
 
     // ?SetViewport@asCamera@@QAEXMMMMH@Z
     ARTS_IMPORT void SetViewport(f32 arg1, f32 arg2, f32 arg3, f32 arg4, i32 arg5);

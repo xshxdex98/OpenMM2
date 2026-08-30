@@ -89,7 +89,7 @@ public:
     ARTS_IMPORT virtual void GameMessage(NET_RCXHEAD* arg1);
 
     // ?FondleCarMass@mmMultiCR@@QAEXPAVvehCar@@M@Z
-    ARTS_IMPORT void FondleCarMass(vehCar* arg0, f32 arg2);
+    ARTS_IMPORT void FondleCarMass(vehCar* arg1, f32 arg2);
 
     // ?ImpactCallback@mmMultiCR@@QAEXPAX0@Z
     ARTS_IMPORT void ImpactCallback(void* arg1, void* arg2);
@@ -104,7 +104,7 @@ public:
     ARTS_IMPORT void ResetPositions(i32 arg1);
 
     // ?SendLobbyResults@mmMultiCR@@QAEXKHH@Z
-    ARTS_IMPORT void SendLobbyResults(ulong arg1, i32 arg4, i32 arg3);
+    ARTS_IMPORT void SendLobbyResults(ulong arg1, i32 arg2, i32 arg3);
 
 private:
     // ?CycleInterest@mmMultiCR@@AAEXH@Z

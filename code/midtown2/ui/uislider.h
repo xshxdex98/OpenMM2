@@ -50,13 +50,13 @@ public:
     ARTS_IMPORT virtual void Switch(i32 arg1);
 
     // ?SetPosition@UISlider@@UAEXMM@Z
-    ARTS_IMPORT virtual void SetPosition(f32 arg0, f32 arg2);
+    ARTS_IMPORT virtual void SetPosition(f32 arg1, f32 arg2);
 
     // ?GetScreenHeight@UISlider@@UAEMXZ
     ARTS_IMPORT virtual f32 GetScreenHeight();
 
     // ?EvalMouseXY@UISlider@@QAEXMM@Z
-    ARTS_IMPORT void EvalMouseXY(f32 arg0, f32 arg2);
+    ARTS_IMPORT void EvalMouseXY(f32 arg1, f32 arg2);
 
     // ?GetFudgeWidth@UISlider@@QAEMXZ
     ARTS_IMPORT f32 GetFudgeWidth();

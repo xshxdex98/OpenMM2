@@ -91,7 +91,7 @@ private:
     ARTS_IMPORT static u32 GetShadedColor(u32 arg1, u32 arg2);
 
     // ?GetShadedColor@sdlPage16@@DAIIII@Z
-    ARTS_IMPORT static u32 GetShadedColor(u32 arg0, u32 arg2, u32 arg3);
+    ARTS_IMPORT static u32 GetShadedColor(u32 arg1, u32 arg2, u32 arg3);
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

@@ -119,7 +119,7 @@ public:
     ARTS_IMPORT void InitRoadTurns();
 
     // ?IntersectionEntryPt@aiPath@@QAEXAAVVector3@@HMH@Z
-    ARTS_IMPORT void IntersectionEntryPt(Vector3& arg1, i32 arg2, f32 arg8, i32 arg4);
+    ARTS_IMPORT void IntersectionEntryPt(Vector3& arg1, i32 arg2, f32 arg3, i32 arg4);
 
     // ?IntersectionEntryVector@aiPath@@QAEXAAVVector3@@MH@Z
     ARTS_IMPORT void IntersectionEntryVector(Vector3& DrawList, f32 __formal, i32 uv);

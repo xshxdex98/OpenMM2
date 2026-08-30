@@ -66,7 +66,7 @@ public:
     ARTS_IMPORT void CalcHeldContact(i32 arg1, ilong& arg2, const Vector3& arg3, const Vector3& arg4, const Vector3& arg5, Vector3* arg6, Matrix34* arg7);
 
     // ?CalcHeldContacts@phContactMgr@@QAEXPAVphColliderBase@@0H@Z
-    ARTS_IMPORT void CalcHeldContacts(phColliderBase* _X, phColliderBase* arg4, i32 arg3);
+    ARTS_IMPORT void CalcHeldContacts(phColliderBase* _X, phColliderBase* arg2, i32 arg3);
 
     // ?CalcImpact@phContactMgr@@QAEXPAVphImpact@@M@Z
     ARTS_IMPORT void CalcImpact(phImpact* label, f32 v);

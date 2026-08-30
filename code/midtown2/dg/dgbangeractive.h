@@ -67,10 +67,8 @@ public:
     // Members from 0x258; everything below that belongs to dgPhysEntity.
     // Offset order is mandatory - the original code reads these at fixed offsets.
     phSleep Sleep; // 0x26C
-    u8 pad_270[76]; // 0x270
     lvlInstance* Instance; // 0x2BC
     asParticles Particles; // 0x2C0
-    u8 pad_2C4[80]; // 0x2C4
     f32 Timer; // 0x314
 };
 

@@ -143,9 +143,7 @@ public:
     f32 HornVolume; // 0x078
     f32 Pan; // 0x07C
     vehSurfaceAudio SurfaceAudio; // 0x080
-    u8 pad_84[128]; // 0x084
     vehEngineAudio EngineAudio; // 0x104
-    u8 pad_108[4]; // 0x108
     AudSoundBase* HornSound; // 0x10C
     AudSoundBase* ClutchSound; // 0x110
     f32 ClutchSampleVolume; // 0x114

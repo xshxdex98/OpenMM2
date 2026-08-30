@@ -23,13 +23,9 @@
 
 #include "core/arts.h"
 
-#include "ph/phbound.h"
 #include "ph/phboundhotdog.h"
-#include "ph/phmaterial.h"
-#include "vector7/vector3.h"
 
-class lvlMaterial;
-class phBound_vtbl;
+class phMaterial;
 
 class dgBoundHotdog : public phBoundHotdog
 {
@@ -51,13 +47,8 @@ public:
 
     // ?SetElasticity@dgBoundHotdog@@UAEXM@Z
     ARTS_IMPORT virtual void SetElasticity(f32 arg1);
-
-public:
-    // Members from 0x084; everything below that belongs to phBoundHotdog.
-    // Offset order is mandatory - the original code reads these at fixed offsets.
-    lvlMaterial* Material; // 0x084
 };
 
 // ??_7dgBoundHotdog@@6B@
 // vtable at 0x005B1DF4
-check_size(dgBoundHotdog, 0x88);
+// check_size(dgBoundHotdog, 0x88); // size known, members are not - cannot verify

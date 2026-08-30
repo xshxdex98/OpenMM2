@@ -23,13 +23,11 @@
 
 #include "core/arts.h"
 
-#include "vector7/vector3.h"
-
 #include "phbound.h"
 #include "phmaterial.h"
 
 class Matrix34;
-class phBound_vtbl;
+class Vector3;
 class phColliderBase;
 class phImpactBase;
 class phIntersection;
@@ -90,9 +88,8 @@ public:
 public:
     // Members from 0x04C; everything below that belongs to phBound.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    f32 Radius; // 0x04C
-    phMaterial Material; // 0x050
-    u8 pad_54[44]; // 0x054
+    f32 field_4C; // 0x04C
+    phMaterial field_50; // 0x050
 };
 
 // ??_7phBoundSphere@@6B@

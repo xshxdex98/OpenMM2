@@ -41,7 +41,6 @@ public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
     i32 unk_0x00; // 0x000
     Vector3 Position; // 0x004
-    u8 pad_8[8]; // 0x008
     f32 Angle; // 0x010
     i32 unk_14; // 0x014
     i16 unk_18; // 0x018

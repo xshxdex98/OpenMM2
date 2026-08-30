@@ -149,7 +149,7 @@ protected:
     ARTS_IMPORT i32 FullProbe(const Vector3& p_open);
 
     // ?InitFullProbe@cityLevel@@IAEXHH@Z
-    ARTS_IMPORT void InitFullProbe(i32 arg0, i32 arg2);
+    ARTS_IMPORT void InitFullProbe(i32 arg1, i32 arg2);
 
     // ?IsInRoomCheckWarps@cityLevel@@IAE_NABVVector3@@H@Z
     ARTS_IMPORT bool IsInRoomCheckWarps(const Vector3& arg1, i32 arg2);

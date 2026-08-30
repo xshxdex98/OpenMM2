@@ -60,7 +60,6 @@ public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
     i8 gap[16]; // 0x018
     Matrix34 Matrix; // 0x028
-    u8 pad_2C[44]; // 0x02C
 };
 
 // ??_7dgHitBangerInstance@@6B@

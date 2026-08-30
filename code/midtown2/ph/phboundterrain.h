@@ -23,24 +23,18 @@
 
 #include "core/arts.h"
 
-#include "vector7/vector3.h"
-
-#include "phbound.h"
 #include "phboundgeometry.h"
 
 class Matrix34;
+class Vector3;
 class Vector4;
 class phBoundHotdog;
 class phBoundPolygonal;
 class phBoundSphere;
-class phBound_vtbl;
 class phColliderBase;
-class phHotEdge;
 class phImpactBase;
 class phIntersection;
 class phIntersectionPoint;
-class phMaterial;
-class phPolygon;
 class phSegment;
 
 class phBoundTerrain : public phBoundGeometry
@@ -116,25 +110,23 @@ protected:
 public:
     // Members from 0x07C; everything below that belongs to phBoundGeometry.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    bool UseHotEdges; // 0x07C
-    u8 pad_7D[3]; // 0x07D
-    Vector3 Size; // 0x080
-    u8 pad_84[8]; // 0x084
-    i32 WidthSectionCount; // 0x08C
-    i32 HeightSectionCount; // 0x090
-    i32 DepthSectionCount; // 0x094
-    i32 TotalSectionCount; // 0x098
-    i32 TotalReferencedFacesCount; // 0x09C
-    u16* SectionIndexOffsets; // 0x0A0
-    u16* SectionIndexCounts; // 0x0A4
-    u16* SectionIndices; // 0x0A8
-    i32 dword_ac; // 0x0AC
-    i32 dword_b0; // 0x0B0
-    Vector3 SectionSizeFactors; // 0x0B4
-    u8 pad_B8[8]; // 0x0B8
-    i32 dword_c0; // 0x0C0
-    i32 dword_c4; // 0x0C4
-    i32 dword_c8; // 0x0C8
+    u8 field_7C; // 0x07C
+    u8 field_7D[15]; // 0x07D
+    i32 field_8C; // 0x08C
+    i32 field_90; // 0x090
+    i32 field_94; // 0x094
+    u8 field_98[8]; // 0x098
+    i32 field_A0; // 0x0A0
+    i32 field_A4; // 0x0A4
+    i32 field_A8; // 0x0A8
+    i32 field_AC; // 0x0AC
+    i32 field_B0; // 0x0B0
+    i32 field_B4; // 0x0B4
+    i32 field_B8; // 0x0B8
+    i32 field_BC; // 0x0BC
+    i32 field_C0; // 0x0C0
+    u8 field_C4[4]; // 0x0C4
+    i32 field_C8; // 0x0C8
 };
 
 // ??_7phBoundTerrain@@6B@

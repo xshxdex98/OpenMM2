@@ -74,7 +74,7 @@ public:
     ARTS_IMPORT static void Impact(vehCarDamage* arg1, ImpactCBData* arg2);
 
     // ?Init@vehCarDamage@@QAEXPAVvehCar@@PBD@Z
-    ARTS_IMPORT void Init(vehCar* arg0, const char* arg2);
+    ARTS_IMPORT void Init(vehCar* arg1, const char* arg2);
 
     // ?SetGameCallback@vehCarDamage@@QAEXVdatCallback@@@Z
     ARTS_IMPORT void SetGameCallback(datCallback arg1);

@@ -60,9 +60,7 @@ public:
     // Members from 0x014; everything below that belongs to lvlInstance.
     // Offset order is mandatory - the original code reads these at fixed offsets.
     Vector3 Scale; // 0x014
-    u8 pad_18[8]; // 0x018
     Matrix34 Matrix; // 0x020
-    u8 pad_24[44]; // 0x024
     i32 HasBeenDrawn; // 0x050
     bool Visible; // 0x054
     u8 pad_55[3]; // 0x055

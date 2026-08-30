@@ -42,9 +42,7 @@ public:
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
     Vector3 Point; // 0x000
-    u8 pad_4[8]; // 0x004
     Vector3 Normal; // 0x00C
-    u8 pad_10[8]; // 0x010
     f32 NormalizedDistance; // 0x018
     f32 Penetration; // 0x01C
     u8 IntersectResult; // 0x020

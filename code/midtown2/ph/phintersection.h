@@ -38,17 +38,13 @@ public:
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
     lvlIntersectionPoint IntersectionPoint; // 0x000
-    u8 pad_4[32]; // 0x004
     i32 PolyIndex; // 0x024
     i32 field_28; // 0x028
     i32 field_2C; // 0x02C
     i32 field_30; // 0x030
     Vector3 StartPos; // 0x034
-    u8 pad_38[8]; // 0x038
     Vector3 EndPos; // 0x040
-    u8 pad_44[8]; // 0x044
     Vector3 field_4C; // 0x04C
-    u8 pad_50[8]; // 0x050
     phPolygon* Poly; // 0x058
     i32 MaterialIndex; // 0x05C
     i32 field_60; // 0x060
@@ -59,9 +55,7 @@ public:
     i32 field_74; // 0x074
     f32 field_78; // 0x078
     Vector3 field_7C; // 0x07C
-    u8 pad_80[8]; // 0x080
     Vector3 field_88; // 0x088
-    u8 pad_8C[8]; // 0x08C
     f32 field_94; // 0x094
     i16 Flags; // 0x098
     u8 pad_9A[2]; // 0x09A

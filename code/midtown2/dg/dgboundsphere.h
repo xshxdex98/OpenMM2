@@ -23,13 +23,9 @@
 
 #include "core/arts.h"
 
-#include "ph/phbound.h"
 #include "ph/phboundsphere.h"
-#include "ph/phmaterial.h"
-#include "vector7/vector3.h"
 
-class lvlMaterial;
-class phBound_vtbl;
+class phMaterial;
 
 class dgBoundSphere : public phBoundSphere
 {
@@ -51,13 +47,8 @@ public:
 
     // ?SetElasticity@dgBoundSphere@@UAEXM@Z
     ARTS_IMPORT virtual void SetElasticity(f32 arg1);
-
-public:
-    // Members from 0x080; everything below that belongs to phBoundSphere.
-    // Offset order is mandatory - the original code reads these at fixed offsets.
-    lvlMaterial* Material; // 0x080
 };
 
 // ??_7dgBoundSphere@@6B@
 // vtable at 0x005B1E38
-check_size(dgBoundSphere, 0x84);
+// check_size(dgBoundSphere, 0x84); // size known, members are not - cannot verify

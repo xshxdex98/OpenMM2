@@ -50,7 +50,7 @@ public:
     ARTS_IMPORT virtual const char* GetDirName();
 
     // ?Init@vehGyro@@QAEXPAVvehCarSim@@PBD@Z
-    ARTS_IMPORT void Init(vehCarSim* arg0, const char* arg2);
+    ARTS_IMPORT void Init(vehCarSim* arg1, const char* arg2);
 
 public:
     // Members from 0x018; everything below that belongs to asNode.

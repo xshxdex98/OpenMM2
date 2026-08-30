@@ -51,7 +51,7 @@ public:
     ARTS_IMPORT void Init(vehCar* arg1);
 
     // ?SetMatrix@camAICS@@QAEXPAVMatrix34@@@Z
-    ARTS_IMPORT void SetMatrix(Matrix34* arg0);
+    ARTS_IMPORT void SetMatrix(Matrix34* arg1);
 
     // ?SetPosition@camAICS@@QAEXAAVVector3@@@Z
     ARTS_IMPORT void SetPosition(Vector3& arg1);

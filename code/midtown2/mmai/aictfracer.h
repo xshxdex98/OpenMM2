@@ -41,7 +41,7 @@ public:
     ARTS_IMPORT void DropFlag(i32 arg1, const f32* arg2);
 
     // ?Init@aiCTFRacer@@QAEXHPAD@Z
-    ARTS_IMPORT void Init(i32 arg1, char* arg4);
+    ARTS_IMPORT void Init(i32 arg1, char* arg2);
 
     // ?PickupFlag@aiCTFRacer@@QAEXXZ
     ARTS_IMPORT void PickupFlag();

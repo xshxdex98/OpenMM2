@@ -31,22 +31,22 @@ class sdlPoly : public phPolygon
 {
 public:
     // ?SetFlatQuad@sdlPoly@@QAE_NHHHHHM@Z
-    ARTS_IMPORT bool SetFlatQuad(i32 arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5, f32 arg14);
+    ARTS_IMPORT bool SetFlatQuad(i32 arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5, f32 arg6);
 
     // ?SetFlatTri@sdlPoly@@QAE_NHHHHM@Z
-    ARTS_IMPORT bool SetFlatTri(i32 arg1, i32 arg2, i32 arg3, i32 arg4, f32 arg10);
+    ARTS_IMPORT bool SetFlatTri(i32 arg1, i32 arg2, i32 arg3, i32 arg4, f32 arg5);
 
     // ?SetQuad@sdlPoly@@QAE_NHABVVector3@@000@Z
-    ARTS_IMPORT bool SetQuad(i32 arg1, const Vector3& arg4, const Vector3& arg3, const Vector3& arg4, const Vector3& arg5);
+    ARTS_IMPORT bool SetQuad(i32 arg1, const Vector3& arg2, const Vector3& arg3, const Vector3& arg4, const Vector3& arg5);
 
     // ?SetQuad@sdlPoly@@QAE_NHHMHMHMHM@Z
     ARTS_IMPORT bool SetQuad(i32 arg1, i32 arg2, f32 arg3, i32 arg4, f32 arg5, i32 arg6, f32 arg7, i32 arg8, f32 arg9);
 
     // ?SetTri@sdlPoly@@QAE_NHABVVector3@@00@Z
-    ARTS_IMPORT bool SetTri(i32 arg1, const Vector3& arg4, const Vector3& arg3, const Vector3& arg4);
+    ARTS_IMPORT bool SetTri(i32 arg1, const Vector3& arg2, const Vector3& arg3, const Vector3& arg4);
 
     // ?SetWall@sdlPoly@@QAE_NHABVVector3@@0MM@Z
-    ARTS_IMPORT bool SetWall(i32 arg1, const Vector3& arg4, const Vector3& arg3, f32 arg4, f32 arg5);
+    ARTS_IMPORT bool SetWall(i32 arg1, const Vector3& arg2, const Vector3& arg3, f32 arg4, f32 arg5);
 
     // ?SetWall@sdlPoly@@QAE_NHHHMM@Z
     ARTS_IMPORT bool SetWall(i32 arg1, i32 arg2, i32 arg3, f32 argC, f32 arg5);

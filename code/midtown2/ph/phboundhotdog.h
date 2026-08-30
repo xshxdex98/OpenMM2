@@ -31,7 +31,6 @@
 class Matrix34;
 class phBoundPolygonal;
 class phBoundSphere;
-class phBound_vtbl;
 class phColliderBase;
 class phImpactBase;
 class phIntersection;
@@ -110,10 +109,9 @@ public:
 public:
     // Members from 0x04C; everything below that belongs to phBound.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    f32 Radius; // 0x04C
-    f32 Height; // 0x050
-    phMaterial Material; // 0x054
-    u8 pad_58[44]; // 0x058
+    i32 field_4C; // 0x04C
+    i32 field_50; // 0x050
+    phMaterial field_54; // 0x054
 };
 
 // ??_7phBoundHotdog@@6B@

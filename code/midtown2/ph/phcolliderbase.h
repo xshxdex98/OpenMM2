@@ -61,7 +61,7 @@ public:
     ARTS_IMPORT virtual void Contact(const phImpactBase* adler32, const Vector3& buffer, const Vector3& buflen, const Vector3& arg4, const Matrix34& arg5);
 
     // ?ApplyAirResistance@phColliderBase@@QAEXMABVVector3@@PBVphBound@@@Z
-    ARTS_IMPORT void ApplyAirResistance(f32 i, const Vector3& arg4, const phBound* arg3);
+    ARTS_IMPORT void ApplyAirResistance(f32 i, const Vector3& arg2, const phBound* arg3);
 
     // ?ApplyGravity@phColliderBase@@QAEXXZ
     ARTS_IMPORT void ApplyGravity();

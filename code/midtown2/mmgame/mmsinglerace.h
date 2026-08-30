@@ -86,7 +86,7 @@ public:
 
 private:
     // ?FinishMessage@mmSingleRace@@AAEXHH@Z
-    ARTS_IMPORT void FinishMessage(i32 arg1, i32 arg4);
+    ARTS_IMPORT void FinishMessage(i32 arg1, i32 arg2);
 
     // ?NextRaceAvailable@mmSingleRace@@AAEHXZ
     ARTS_IMPORT i32 NextRaceAvailable();

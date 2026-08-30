@@ -55,7 +55,7 @@ public:
     ARTS_IMPORT void ActivateRosterGold(ulong arg1);
 
     // ?AddPlayer@mmCRHUD@@QAEXPBDKHI@Z
-    ARTS_IMPORT void AddPlayer(const char* shared_font_atlas, ulong arg4, i32 arg3, u32 arg4);
+    ARTS_IMPORT void AddPlayer(const char* shared_font_atlas, ulong arg2, i32 arg3, u32 arg4);
 
     // ?DeactivateGold@mmCRHUD@@QAEXXZ
     ARTS_IMPORT void DeactivateGold();
@@ -73,7 +73,7 @@ public:
     ARTS_IMPORT void SetBlueScore(i32 arg1);
 
     // ?SetName@mmCRHUD@@QAEXPADH@Z
-    ARTS_IMPORT void SetName(char* arg1, i32 arg4);
+    ARTS_IMPORT void SetName(char* arg1, i32 arg2);
 
     // ?SetRedScore@mmCRHUD@@QAEXH@Z
     ARTS_IMPORT void SetRedScore(i32 arg1);

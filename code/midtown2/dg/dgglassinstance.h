@@ -49,7 +49,7 @@ public:
     ARTS_IMPORT virtual u32 SizeOf();
 
     // ?Impact@dgGlassInstance@@UAEXPAVlvlInstance@@PAVVector3@@@Z
-    ARTS_IMPORT virtual void Impact(lvlInstance* arg0, Vector3* arg4);
+    ARTS_IMPORT virtual void Impact(lvlInstance* arg1, Vector3* arg2);
 
     // ?InitStaticSystems@dgGlassInstance@@SAXXZ
     ARTS_IMPORT static void InitStaticSystems();

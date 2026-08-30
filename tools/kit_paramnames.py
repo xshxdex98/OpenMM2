@@ -41,7 +41,11 @@ OUT = os.path.join(ROOT, "data", "param_names.json")
 MANGLED = re.compile(r"^// (\?\??[^\s]+)$")
 SIGNATURE = re.compile(
     r"^[A-Za-z_].*?\b__(?:thiscall|cdecl|stdcall|fastcall|usercall)\s+.*?\((.*)\)\s*$")
-PLACEHOLDER = re.compile(r"^a\d+$")
+# Hex-Rays placeholders. `arg0`/`arg4` matter as much as `a1`: a recovered name shaped like
+# the generated one COLLIDES with it, and asCamera::SetView came out as
+# `SetView(f32 arg1, f32 arg4, f32 arg3, f32 arg4)` - which is not a declaration. Caught by
+# tools/verify_headers.py; 59 functions carried such a name.
+PLACEHOLDER = re.compile(r"^(?:a|arg|param)\d+$")
 
 # C++ keywords and arts type names a parameter must not be called, in case a signature is parsed
 # badly enough that the type ends up in the name position.

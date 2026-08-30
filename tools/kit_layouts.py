@@ -139,7 +139,26 @@ def with_base(cls, fields, sizes, bases, seen=None):
     return inherited + own, None
 
 
-def convert(cls, members, size):
+def type_size(ctype, sizes, known):
+    """Bytes one element of `ctype` occupies, or None if nothing records it.
+
+    A pointer is four bytes and a primitive is in WIDTH; anything else is a struct or class, and
+    its size has to come from the kit's own sizeof or from data/layouts.json. Defaulting an unknown
+    type to four is what mis-sized Vector3 members, so there is no default.
+    """
+    if ctype.endswith("*"):
+        return 4
+    if ctype in WIDTH:
+        return WIDTH[ctype]
+    if ctype in sizes:
+        return sizes[ctype]
+    entry = known.get(ctype)
+    if isinstance(entry, dict) and entry.get("size"):
+        return entry["size"]
+    return None
+
+
+def convert(cls, members, size, sizes, known):
     """One class's member list, or (None, reason) if it cannot be trusted."""
     if not members:
         return None, "no members"
@@ -179,7 +198,12 @@ def convert(cls, members, size):
         if off == 0 and name.upper() in ("VTBL", "VFTABLE", "VTABLE"):
             name, ctype = "vtable", "void*"
 
-        element = 4 if ctype.endswith("*") else WIDTH.get(ctype, 4)
+        element = type_size(ctype, sizes, known)
+        if element is None:
+            # A struct-typed member whose size nothing records. Assuming 4 is what produced
+            # `Vector3 Position` at width 4 followed by eight bytes of invented padding - a header
+            # that cannot satisfy its own check_size. Refuse the class instead.
+            return None, "%s has type %s and nothing records its size" % (name, ctype)
         natural = element * count if count else element
 
         if natural > space:
@@ -228,6 +252,14 @@ def main():
     else:
         print("WARNING: no data/measured_sizes.json - kit sizes will not be cross-checked")
 
+    # data/layouts.json is consulted for the size of a struct-typed member the kit does not size
+    # itself. Read if present; this tool also runs before it exists.
+    known_layouts = {}
+    lay_path = os.path.join(ROOT, "data", "layouts.json")
+    if os.path.exists(lay_path):
+        with open(lay_path, encoding="utf-8") as f:
+            known_layouts = json.load(f)
+
     layouts, rejected = OrderedDict(), []
     for cls in sorted(fields):
         size = sizes.get(cls)
@@ -246,7 +278,7 @@ def main():
             rejected.append((cls, why))
             continue
 
-        members, why = convert(cls, flat, size)
+        members, why = convert(cls, flat, size, sizes, known_layouts)
         if members is None:
             rejected.append((cls, why))
             continue

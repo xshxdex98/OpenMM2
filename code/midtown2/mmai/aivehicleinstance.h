@@ -108,9 +108,7 @@ public:
     i16 Variant; // 0x01E
     vehBreakableMgr* BreakableMgr; // 0x020
     Vector3 HeadlightPosition; // 0x024
-    u8 pad_28[8]; // 0x028
     Vector3 VehiclePosition; // 0x030
-    u8 pad_34[8]; // 0x034
 };
 
 // ??_7aiVehicleInstance@@6B@

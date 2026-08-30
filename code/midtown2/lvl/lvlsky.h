@@ -56,7 +56,7 @@ public:
     ARTS_IMPORT void AutoInit(const char* arg1, const char* arg2, i32 arg3);
 
     // ?Init@lvlSky@@QAEXPBDMMMH@Z
-    ARTS_IMPORT void Init(const char* arg1, f32 arg4, f32 arg3, f32 arg4, i32 arg5);
+    ARTS_IMPORT void Init(const char* arg1, f32 arg2, f32 arg3, f32 arg4, i32 arg5);
 
     // ?SetupFog@lvlSky@@QAEXM@Z
     ARTS_IMPORT void SetupFog(f32 arg1);

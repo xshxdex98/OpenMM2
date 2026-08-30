@@ -89,7 +89,7 @@ public:
     ARTS_IMPORT static bool ProbeVsBox(const Vector3& arg1, phSegment& arg2, phIntersectionPoint* arg3, ilong* arg4, f32 arg5);
 
     // ?ScaleSize@phBoundBox@@QAEXABVVector3@@@Z
-    ARTS_IMPORT void ScaleSize(const Vector3& arg0);
+    ARTS_IMPORT void ScaleSize(const Vector3& arg1);
 
     // ?SetQuickTestInfo@phBoundBox@@QAEXXZ
     ARTS_IMPORT void SetQuickTestInfo();

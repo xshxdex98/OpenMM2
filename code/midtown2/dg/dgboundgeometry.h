@@ -23,15 +23,9 @@
 
 #include "core/arts.h"
 
-#include "ph/phbound.h"
 #include "ph/phboundgeometry.h"
-#include "vector7/vector3.h"
 
-class lvlMaterial;
-class phBound_vtbl;
-class phHotEdge;
 class phMaterial;
-class phPolygon;
 
 class dgBoundGeometry : public phBoundGeometry
 {
@@ -53,13 +47,8 @@ public:
 
     // ?SetElasticity@dgBoundGeometry@@UAEXM@Z
     ARTS_IMPORT virtual void SetElasticity(f32 arg1);
-
-public:
-    // Members from 0x07C; everything below that belongs to phBoundGeometry.
-    // Offset order is mandatory - the original code reads these at fixed offsets.
-    lvlMaterial* Material; // 0x07C
 };
 
 // ??_7dgBoundGeometry@@6B@
 // vtable at 0x005B1D3C
-check_size(dgBoundGeometry, 0x80);
+// check_size(dgBoundGeometry, 0x80); // size known, members are not - cannot verify

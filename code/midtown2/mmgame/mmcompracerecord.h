@@ -50,7 +50,7 @@ public:
     ARTS_IMPORT virtual void SetGeometry(f32 arg1, f32 arg2, f32 arg3, f32 arg4);
 
     // ?SetPosition@mmCompRaceRecord@@UAEXPAVmmTextNode@@HM@Z
-    ARTS_IMPORT virtual void SetPosition(mmTextNode* arg0, i32 arg2, f32 arg3);
+    ARTS_IMPORT virtual void SetPosition(mmTextNode* arg1, i32 arg2, f32 arg3);
 
     // ?Init@mmCompRaceRecord@@QAEXHPAD0000HH@Z
     ARTS_IMPORT void Init(i32 arg1, char* arg2, char* arg3, char* arg4, char* arg5, char* arg6, i32 arg7, i32 arg8);
