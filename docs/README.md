@@ -27,6 +27,7 @@ Thirty-odd files accumulated in the order the work happened. This is what each o
 | [vtable_order.md](vtable_order.md) | Why declaration order matters: a compiler assigns slots in declaration order, and the generated headers sort alphabetically. |
 | [inventory.md](inventory.md) | What is in `midtown2.exe`, counted. |
 | [mm1_counterparts.md](mm1_counterparts.md) | MM2 class → the Open1560 class that already solved it. |
+| [ported_freefuncs.md](ported_freefuncs.md) | Free functions, and the three CRT symbols (`_memset`, `_strlen`, `_strcpy`) that do not exist in the binary and so cannot be linked against. |
 | [mislabeled.md](mislabeled.md) | 349 functions the kit names wrongly, re-identified against the map. |
 | [harness_audit.md](harness_audit.md) | Deliberately hunting for a sixth class of silent corruption the gates could not see. |
 
