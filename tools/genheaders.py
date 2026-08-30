@@ -73,6 +73,17 @@ PRIMITIVES = OrderedDict([
     # Handles and void pointers. Both are pointer-width and neither has any structure this
     # code needs, so void* is the honest spelling.
     ("LPVOID", "void*"),
+    # gfx/ddrawshim.h defines this one already, with every offset read out of the binary
+    # (gfxBitmap::Create writes dwSize = 0x20 at 0x004AE4FD). gfxTextureCachePool holds it BY
+    # VALUE at 0x14 and 0x14 + 0x20 = 0x34, the class size, so a forward declaration cannot
+    # serve. The bare spelling is what the recovery produces; \b cannot match _DDPIXELFORMAT,
+    # so the existing pointer uses in agedevice.h and gfxpipeline.h are untouched.
+    ("DDPIXELFORMAT", "gfxDDPixelFormat"),
+    # zlib typedefs nothing in this build declares. The signatures are read off the calls the
+    # binary actually makes, not off a remembered zlib.h: _FREE_FUNCTIONS.c has
+    #   zalloc(opaque, 1, 24)   and   zfree(opaque, state)
+    ("alloc_func", "void* (__cdecl*)(void*, u32, u32)"),
+    ("free_func", "void (__cdecl*)(void*, void*)"),
     ("HIMC", "void*"),
     ("LPSTR", "char*"),
     ("HFONT", "void*"),
@@ -258,7 +269,15 @@ def base_classes():
 # to know not to generate a second, competing copy of one of these.
 HANDWRITTEN = {
     "gfxRenderStateData": "gfx/gfxrenderstatedata.h",
+    "gfxDDPixelFormat": "gfx/ddrawshim.h",
 }
+
+# A TYPE WITH A HAND-WRITTEN HEADER IS NOT A BUILTIN. BUILTIN is derived from PRIMITIVES.values()
+# and its members are never included nor forward-declared, on the assumption that they need no
+# declaration. True for u32; false for gfxDDPixelFormat. Mapping D3DVECTOR to Vector3 caused this
+# exact failure once before - every header holding one by value quietly stopped including
+# vector3.h - so the exclusion is applied generally rather than case by case.
+BUILTIN -= set(HANDWRITTEN)
 
 
 # Types that must never get a generated header, however complete their recovered layout is.
@@ -447,6 +466,8 @@ METHOD_NAMES = {}
 
 VPTR_NAMES = {"vtable", "vfptr", "__vftable", "vtbl", "vptr"}
 
+IDENTIFIER = re.compile(r"^[A-Za-z_]\w*$")
+
 
 def emit_members(cls, is_polymorphic):
     """Member declarations, in memory-offset order, plus the check_size value.
@@ -479,6 +500,15 @@ def emit_members(cls, is_polymorphic):
 
     if base_size:
         skip_to = base_size
+
+        # AN EMPTY BASE OCCUPIES NO BYTES IN THE DERIVED OBJECT. A class with no members still has
+        # a sizeof of 1 standing alone, because no two objects may share an address, but as a base
+        # subobject the compiler collapses it to nothing. Treating that 1 as occupied space made
+        # MMDMusicManager's u8 _buffer[88] straddle the boundary and come out pad_1[87] - one byte
+        # short, 0x57 against the 0x58 the binary allocates.
+        base_layout = LAYOUT.get(base)
+        if base_size == 1 and not (base_layout and usable_members(base, base_layout)):
+            skip_to = 0
     elif (is_polymorphic and members and members[0]["offset"] == 0
             and (members[0].get("width") or 0) == 4 and not members[0].get("count")):
         # THE FIRST FOUR BYTES OF A POLYMORPHIC CLASS ARE THE VPTR, whatever the recovery called
@@ -531,6 +561,19 @@ def emit_members(cls, is_polymorphic):
         if m["name"] in METHOD_NAMES.get(cls, ()):
             m = dict(m, name=m["name"] + "_")
 
+        # A RECOVERED NAME IS NOT ALWAYS AN IDENTIFIER. mmHudMap carries `Approach Rate` and
+        # `Ocean Color`, which are the genuine 1999 datParser field names - the binary really does
+        # call AddRecord("Approach Rate", ...) - but as a declaration MSVC reads `Approach` as the
+        # member and `Rate` as an override specifier, and reports C3646. The 1999 spelling is worth
+        # keeping, so it moves to the trailing comment and the declaration gets a legal name.
+        #
+        # Done here rather than in apply_names.py because this is the one point every layout source
+        # passes through, and because apply_names only ever overwrites field_XX placeholders - the
+        # bad names are no longer placeholders, so fixing it there would not repair what is already
+        # in data/layouts.json.
+        if not IDENTIFIER.match(m["name"]):
+            m = dict(m, name=re.sub(r"\W", "", m["name"]), spelled=m["name"])
+
         # A repeated name is silently fatal: the compiler keeps the first declaration, drops the
         # second, and the class is short by exactly that member's width. Suffixing with the offset
         # keeps both fields and says where the survivor came from.
@@ -557,7 +600,12 @@ def emit_members(cls, is_polymorphic):
         if m.get("count"):
             decl += "[%d]" % m["count"]
 
-        lines.append("    %s; // 0x%03X" % (decl, m["offset"]))
+        # The 1999 spelling, where it was not a legal identifier, is kept beside the offset - the
+        # binary really does call datParser::AddRecord("Approach Rate", ...), and that name is the
+        # only way to match this field back to the data files it is parsed from.
+        spelled = m.get("spelled")
+        lines.append("    %s; // 0x%03X%s"
+                     % (decl, m["offset"], '  "%s"' % spelled if spelled else ""))
 
     kept = [m for m in members if m["offset"] >= skip_to]
     ok = not kept or kept[-1]["offset"] < size

@@ -142,7 +142,7 @@ public:
     i32 field_40; // 0x040
     i32 field_44; // 0x044
     u8 field_48[4]; // 0x048
-    f32 Approach Rate; // 0x04C
+    f32 ApproachRate; // 0x04C  "Approach Rate"
     f32 field_50; // 0x050
     f32 ZoomInDist; // 0x054
     f32 ZoomOutDist; // 0x058
@@ -153,7 +153,7 @@ public:
     f32 IconScaleMax; // 0x06C
     f32 IconScaleMinFS; // 0x070
     f32 IconScaleMaxFS; // 0x074
-    f32 Ocean Color; // 0x078
+    f32 OceanColor; // 0x078  "Ocean Color"
     f32 field_7C; // 0x07C
     f32 field_80; // 0x080
     f32 Size; // 0x084

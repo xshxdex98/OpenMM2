@@ -37,8 +37,8 @@ public:
     u32 total_out; // 0x014
     i8* msg; // 0x018
     internal_state* state; // 0x01C
-    alloc_func zalloc; // 0x020
-    free_func zfree; // 0x024
+    void*(__cdecl*zalloc)(void*, u32, u32); // 0x020
+    void (__cdecl*zfree)(void*, void*); // 0x024
     void* opaque; // 0x028
     i32 data_type; // 0x02C
     u32 adler; // 0x030

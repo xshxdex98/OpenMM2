@@ -72,7 +72,7 @@ public:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    u8 pad_1[87]; // 0x001
+    u8 _buffer[88]; // 0x000
 };
 
 check_size(MMDMusicManager, 0x58);

@@ -23,6 +23,8 @@
 
 #include "core/arts.h"
 
+#include "ddrawshim.h"
+
 class gfxTexture;
 class gfxTextureCacheEntry;
 
@@ -57,7 +59,7 @@ public:
     u16 HasNoSurface; // 0x00A
     gfxTextureCacheEntry* FirstEntry; // 0x00C
     gfxTextureCachePool* PrevPool; // 0x010
-    DDPIXELFORMAT PixelFormat; // 0x014
+    gfxDDPixelFormat PixelFormat; // 0x014
 };
 
 check_size(gfxTextureCachePool, 0x34);
