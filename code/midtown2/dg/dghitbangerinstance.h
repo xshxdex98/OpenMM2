@@ -58,9 +58,9 @@ public:
 public:
     // Members from 0x018; everything below that belongs to dgBangerInstance.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    char[16] gap; // 0x018
+    i8 gap[16]; // 0x018
     Matrix34 Matrix; // 0x028
-    u8[44] pad_2C; // 0x02C
+    u8 pad_2C[44]; // 0x02C
 };
 
 // ??_7dgHitBangerInstance@@6B@

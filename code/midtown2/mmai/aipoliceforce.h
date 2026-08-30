@@ -58,11 +58,10 @@ public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
     Timer timer; // 0x000
     i16 NumPerps; // 0x004
-    __int16[3] NumChasers; // 0x006
-    vehCar [3]* PlayerCars; // 0x00C
-    u8[8] pad_10; // 0x010
-    vehCar [3][3]* CopCars; // 0x018
-    u8[32] pad_1C; // 0x01C
+    i16 NumChasers[3]; // 0x006
+    vehCar* PlayerCars[3]; // 0x00C
+    vehCar [3]* CopCars[3]; // 0x018
+    u8 pad_24[24]; // 0x024
 };
 
 check_size(aiPoliceForce, 0x3C);

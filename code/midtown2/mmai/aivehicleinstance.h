@@ -103,14 +103,14 @@ public:
     aiVehicleSpline* Spline; // 0x014
     i16 SignalFrequency; // 0x018
     u8 SignalState; // 0x01A
-    u8[1] pad_1B; // 0x01B
+    u8 pad_1B[1]; // 0x01B
     i16 LOD; // 0x01C
     i16 Variant; // 0x01E
     vehBreakableMgr* BreakableMgr; // 0x020
     Vector3 HeadlightPosition; // 0x024
-    u8[8] pad_28; // 0x028
+    u8 pad_28[8]; // 0x028
     Vector3 VehiclePosition; // 0x030
-    u8[8] pad_34; // 0x034
+    u8 pad_34[8]; // 0x034
 };
 
 // ??_7aiVehicleInstance@@6B@

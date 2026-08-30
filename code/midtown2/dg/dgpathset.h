@@ -43,8 +43,7 @@ public:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    dgPath [192]* Paths; // 0x004
-    u8[764] pad_8; // 0x008
+    dgPath* Paths[192]; // 0x004
     i32 PathCount; // 0x304
     i32 unk0; // 0x308
     i32 unk1; // 0x30C

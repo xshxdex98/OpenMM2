@@ -115,8 +115,11 @@ def main():
                     continue
 
                 from_kit = (info.get("source") == "MM2_RE_KIT")
+                # layouts_kit.json is included so a corrected converter can refresh what it
+                # merged before - without it, a bug in kit_layouts.py is permanent the moment its
+                # output lands once.
                 inferred = (existing.get("source") or "").startswith(
-                    ("layouts_from_", "inferred_"))
+                    ("layouts_from_", "inferred_", "layouts_kit"))
                 if not (from_kit and inferred):
                     rejected.append((cls, name, "already in the IDA type library"))
                     continue

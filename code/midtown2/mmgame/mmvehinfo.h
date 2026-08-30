@@ -54,9 +54,9 @@ public:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    char[40] baseName; // 0x004
-    char[80] description; // 0x02C
-    char[100] colors; // 0x07C
+    i8 baseName[40]; // 0x004
+    i8 description[80]; // 0x02C
+    i8 colors[100]; // 0x07C
     i32 flags; // 0x0E0
     i32 order; // 0x0E4
     i32 isValid; // 0x0E8

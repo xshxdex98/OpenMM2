@@ -23,6 +23,8 @@
 
 #include "core/arts.h"
 
+class gfxBitmap;
+
 // The free functions - the ones that belong to no class at all.
 //
 // midtown2.exe has 1,368 of them, about 224 KB, and they are the cheapest code in the binary to
@@ -121,6 +123,13 @@ ARTS_EXPORT f32 Max(f32 arg1, f32 arg2);
 
 // ?min@@YAMMM@Z
 ARTS_EXPORT f32 min(f32 arg1, f32 arg2);
+
+// ?nodeGetBitmap@@YAPAVgfxBitmap@@PBD_N1@Z
+//
+// Declared, not ported: mmLinearGauge needs to CALL it, and an ARTS_IMPORT declaration is what
+// lets the linker resolve that against the PROC still in game.asm. Returns a bitmap from the UI
+// node cache, refcounted - see the release path in mmLinearGauge::Init.
+ARTS_IMPORT gfxBitmap* nodeGetBitmap(const char* arg1, bool arg2, bool arg3);
 
 // ?OrderIntersections@@YAXPAM000PAH1@Z
 ARTS_EXPORT void OrderIntersections(f32* arg1, f32* arg2, f32* arg3, f32* arg4, i32* arg5, i32* arg6);

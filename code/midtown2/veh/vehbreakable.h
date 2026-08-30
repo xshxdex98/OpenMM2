@@ -40,10 +40,10 @@ public:
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
     bool IsAttached; // 0x000
-    u8[3] pad_1; // 0x001
+    u8 pad_1[3]; // 0x001
     i32 Flags; // 0x004
     Matrix34 Matrix; // 0x008
-    u8[44] pad_C; // 0x00C
+    u8 pad_C[44]; // 0x00C
     lvlInstance::GeomTableEntry* Model; // 0x038
     i32 BangerDataIndex; // 0x03C
     i32 GeometryIndex; // 0x040

@@ -41,7 +41,7 @@ public:
     // Members from 0x01C; everything below that belongs to phSegment.
     // Offset order is mandatory - the original code reads these at fixed offsets.
     bool IsVertical; // 0x01C
-    u8[3] pad_1D; // 0x01D
+    u8 pad_1D[3]; // 0x01D
     f32 InvLength; // 0x020
     lvlSegmentInfo* SegmentInfo; // 0x024
 };

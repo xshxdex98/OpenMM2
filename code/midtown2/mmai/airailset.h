@@ -82,7 +82,7 @@ public:
     f32 LSideDist; // 0x008
     f32 RSideDist; // 0x00C
     i16 EnterInt; // 0x010
-    u8[2] pad_12; // 0x012
+    u8 pad_12[2]; // 0x012
     f32 RoadDist; // 0x014
     f32 ResumeDist; // 0x018
     f32 SubSectionDist; // 0x01C
@@ -93,7 +93,7 @@ public:
     i16 CurLane; // 0x02C
     i16 NextLane; // 0x02E
     i16 TargetLane; // 0x030
-    u8[2] pad_32; // 0x032
+    u8 pad_32[2]; // 0x032
     i32 RailType; // 0x034
     aiPath* NextLink; // 0x038
     aiPath* CurLink; // 0x03C

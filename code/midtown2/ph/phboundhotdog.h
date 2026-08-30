@@ -113,7 +113,7 @@ public:
     f32 Radius; // 0x04C
     f32 Height; // 0x050
     phMaterial Material; // 0x054
-    u8[44] pad_58; // 0x058
+    u8 pad_58[44]; // 0x058
 };
 
 // ??_7phBoundHotdog@@6B@

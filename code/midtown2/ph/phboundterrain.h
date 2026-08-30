@@ -117,9 +117,9 @@ public:
     // Members from 0x07C; everything below that belongs to phBoundGeometry.
     // Offset order is mandatory - the original code reads these at fixed offsets.
     bool UseHotEdges; // 0x07C
-    u8[3] pad_7D; // 0x07D
+    u8 pad_7D[3]; // 0x07D
     Vector3 Size; // 0x080
-    u8[8] pad_84; // 0x084
+    u8 pad_84[8]; // 0x084
     i32 WidthSectionCount; // 0x08C
     i32 HeightSectionCount; // 0x090
     i32 DepthSectionCount; // 0x094
@@ -131,7 +131,7 @@ public:
     i32 dword_ac; // 0x0AC
     i32 dword_b0; // 0x0B0
     Vector3 SectionSizeFactors; // 0x0B4
-    u8[8] pad_B8; // 0x0B8
+    u8 pad_B8[8]; // 0x0B8
     i32 dword_c0; // 0x0C0
     i32 dword_c4; // 0x0C4
     i32 dword_c8; // 0x0C8

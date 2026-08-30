@@ -152,7 +152,7 @@ private:
 public:
     // Members from 0x130; everything below that belongs to vehCarAudio.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    unsigned __int8[280] _buffer; // 0x130
+    u8 _buffer[280]; // 0x130
 };
 
 // ??_7vehPoliceCarAudio@@6B@

@@ -76,7 +76,7 @@ public:
     vehTrailer* Trailer; // 0x014
     i32 Variant; // 0x018
     Vector3 TrailerHitchPosition; // 0x01C
-    u8[8] pad_20; // 0x020
+    u8 pad_20[8]; // 0x020
 };
 
 // ??_7vehTrailerInstance@@6B@

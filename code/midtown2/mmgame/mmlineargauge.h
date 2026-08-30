@@ -30,19 +30,19 @@ class mmLinearGauge
 {
 public:
     // ??0mmLinearGauge@@QAE@XZ
-    ARTS_IMPORT mmLinearGauge();
+    ARTS_EXPORT mmLinearGauge();
 
     // ??1mmLinearGauge@@QAE@XZ
-    ARTS_IMPORT ~mmLinearGauge();
+    ARTS_EXPORT ~mmLinearGauge();
 
     // ?Draw@mmLinearGauge@@QAEXXZ
-    ARTS_IMPORT void Draw();
+    ARTS_EXPORT void Draw();
 
     // ?Init@mmLinearGauge@@QAEXPADPAM1HPAVmmExternalView@@@Z
-    ARTS_IMPORT void Init(char* capacity, f32* arg2, f32* arg3, i32 arg4, mmExternalView* arg5);
+    ARTS_EXPORT void Init(char* capacity, f32* arg2, f32* arg3, i32 arg4, mmExternalView* arg5);
 
     // ?InitOverlay@mmLinearGauge@@QAEXPAD@Z
-    ARTS_IMPORT void InitOverlay(char* name);
+    ARTS_EXPORT void InitOverlay(char* name);
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.

@@ -168,29 +168,34 @@ def convert(cls, members, size):
             return None, "member at 0x%X has no space" % off
 
         name = f["name"]
-        ctype = map_type(f["type"])
+
+        raw = (f["type"] or "").strip()
+        m_arr = ARRAY.match(raw)
+        count = int(m_arr.group(2)) if m_arr else 0
+        ctype = map_type(m_arr.group(1) if m_arr else raw)
 
         # The vtable pointer is spelled the way the rest of data/layouts.json spells it, so a
         # reader does not meet two conventions for the same thing.
         if off == 0 and name.upper() in ("VTBL", "VFTABLE", "VTABLE"):
             name, ctype = "vtable", "void*"
 
-        m = ARRAY.match(ctype)
-        if m:
-            base, count = map_type(m.group(1)), int(m.group(2))
-            natural = WIDTH.get(base, 4) * count
-        else:
-            natural = 4 if ctype.endswith("*") else WIDTH.get(ctype, 4)
+        element = 4 if ctype.endswith("*") else WIDTH.get(ctype, 4)
+        natural = element * count if count else element
 
         if natural > space:
             return None, "%s is %d bytes but only %d are free at 0x%X" % (name, natural, space, off)
 
-        out.append(OrderedDict(name=name, offset=off, type=ctype, width=natural, src="kit"))
+        # An array member is spelled with `count` and an ELEMENT width, the way the rest of
+        # layouts.json spells one, so genheaders emits `f32 Name[4]`. Leaving the [N] in the type
+        # string produced `f32[4] Name;`, which is not C++ - and it went unnoticed because no .cpp
+        # included those headers until one did.
+        out.append(OrderedDict(name=name, offset=off, type=ctype, count=count,
+                               width=element, src="kit"))
 
         # Trailing padding, so the list tiles. A hole is what merge_layouts refuses, and rightly.
         if natural < space:
             out.append(OrderedDict(name="pad_%X" % (off + natural), offset=off + natural,
-                                   type="u8[%d]" % (space - natural), width=space - natural,
+                                   type="u8", count=space - natural, width=1,
                                    src="kit-padding"))
 
     return out, None

@@ -50,8 +50,8 @@ public:
     f32 Width; // 0x034
     f32 Height; // 0x038
     f32 Depth; // 0x03C
-    __int16[2] PtxIndex; // 0x040
-    f32[2] PtxThreshold; // 0x044
+    i16 PtxIndex[2]; // 0x040
+    f32 PtxThreshold[2]; // 0x044
 };
 
 // ??_7lvlMaterial@@6B@

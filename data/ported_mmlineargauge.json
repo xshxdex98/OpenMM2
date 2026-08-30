@@ -1,0 +1,17 @@
+{
+  "_comment": [
+    "mmLinearGauge in full - all five functions, so nothing of the class stays in game.asm.",
+    "Not polymorphic: the destructor mangles ??1mmLinearGauge@@QAE@XZ, `Q` for public non-virtual,",
+    "and there is no vftable, so none of the handover machinery is involved.",
+    "",
+    "?nodeGetBitmap@@YAPAVgfxBitmap@@PBD_N1@Z is NOT listed. Init only CALLS it; it is declared",
+    "ARTS_IMPORT in misc/freefuncs.h so the linker resolves it against the PROC still in game.asm."
+  ],
+  "ported": [
+    "??0mmLinearGauge@@QAE@XZ",
+    "??1mmLinearGauge@@QAE@XZ",
+    "?Draw@mmLinearGauge@@QAEXXZ",
+    "?InitOverlay@mmLinearGauge@@QAEXPAD@Z",
+    "?Init@mmLinearGauge@@QAEXPADPAM1HPAVmmExternalView@@@Z"
+  ]
+}

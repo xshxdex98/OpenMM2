@@ -71,9 +71,9 @@ public:
     i32 dword_04; // 0x004
     i32 dword_08; // 0x008
     Vector3 dword_0c; // 0x00C
-    u8[8] pad_10; // 0x010
+    u8 pad_10[8]; // 0x010
     Vector3 LastAcceleration; // 0x018
-    u8[8] pad_1C; // 0x01C
+    u8 pad_1C[8]; // 0x01C
     phInertialCS* ICS; // 0x024
     i32 Collider; // 0x028
     i32 dword_2c; // 0x02C

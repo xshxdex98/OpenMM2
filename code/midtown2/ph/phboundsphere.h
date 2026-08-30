@@ -92,7 +92,7 @@ public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
     f32 Radius; // 0x04C
     phMaterial Material; // 0x050
-    u8[44] pad_54; // 0x054
+    u8 pad_54[44]; // 0x054
 };
 
 // ??_7phBoundSphere@@6B@

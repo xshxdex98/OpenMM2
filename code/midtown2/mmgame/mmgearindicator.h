@@ -41,8 +41,7 @@ public:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    gfxBitmap [12]* BitmapGears; // 0x000
-    u8[44] pad_4; // 0x004
+    gfxBitmap* BitmapGears[12]; // 0x000
     i32 DestX; // 0x030
     i32 DestY; // 0x034
     mmExternalView* ExternalView; // 0x038

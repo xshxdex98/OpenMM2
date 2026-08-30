@@ -66,7 +66,7 @@ public:
     // Members from 0x008; everything below that belongs to aiGoal.
     // Offset order is mandatory - the original code reads these at fixed offsets.
     u8 field_8; // 0x008
-    u8[3] pad_9; // 0x009
+    u8 pad_9[3]; // 0x009
     f32 Side; // 0x00C
     f32 Heading; // 0x010
     f32 PlayerSideReactDist; // 0x014

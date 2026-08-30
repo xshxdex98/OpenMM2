@@ -88,17 +88,17 @@ public:
     i32 field_2D0; // 0x2D0
     lvlInstance* Instance; // 0x2D4
     phInertialCS ICS; // 0x2D8
-    u8[432] pad_2DC; // 0x2DC
+    u8 pad_2DC[432]; // 0x2DC
     phSleep Sleep; // 0x48C
-    u8[76] pad_490; // 0x490
+    u8 pad_490[76]; // 0x490
     vehWeelCheap WheelFrontLeft; // 0x4DC
-    u8[388] pad_4E0; // 0x4E0
+    u8 pad_4E0[388]; // 0x4E0
     vehWeelCheap WheelFrontRight; // 0x664
-    u8[388] pad_668; // 0x668
+    u8 pad_668[388]; // 0x668
     vehWeelCheap WheelBackLeft; // 0x7EC
-    u8[388] pad_7F0; // 0x7F0
+    u8 pad_7F0[388]; // 0x7F0
     vehWeelCheap WheelBackRight; // 0x974
-    u8[388] pad_978; // 0x978
+    u8 pad_978[388]; // 0x978
 };
 
 // ??_7aiVehicleActive@@6B@

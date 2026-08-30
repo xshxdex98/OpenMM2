@@ -36,7 +36,7 @@ public:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    unsigned __int8[48] _buffer; // 0x004
+    u8 _buffer[48]; // 0x004
 };
 
 // ??_7aiCityData@@6B@

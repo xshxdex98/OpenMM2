@@ -303541,6 +303541,7 @@
     "name": "vtable",
     "offset": 0,
     "type": "void*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -303548,6 +303549,7 @@
     "name": "Pan",
     "offset": 4,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -303555,6 +303557,7 @@
     "name": "field_8",
     "offset": 8,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -303562,6 +303565,7 @@
     "name": "Attenuation",
     "offset": 12,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -303569,6 +303573,7 @@
     "name": "LastDoppler",
     "offset": 16,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -303576,6 +303581,7 @@
     "name": "MinDropOffSqr",
     "offset": 20,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -303583,6 +303589,7 @@
     "name": "MaxDropOffSqr",
     "offset": 24,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -303590,6 +303597,7 @@
     "name": "field_1c",
     "offset": 28,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -303597,6 +303605,7 @@
     "name": "PositionPtrPseudoDistChangeRate",
     "offset": 32,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -303604,6 +303613,7 @@
     "name": "PositionPtrPseudoDist",
     "offset": 36,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -303611,6 +303621,7 @@
     "name": "PositionPtrLastPseudoDist",
     "offset": 40,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -303618,6 +303629,7 @@
     "name": "LeftPositionPtrDistSqr",
     "offset": 44,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -303625,6 +303637,7 @@
     "name": "RightPositionPtrDistSqr",
     "offset": 48,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -303632,6 +303645,7 @@
     "name": "DropOffDivisor",
     "offset": 52,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -303639,6 +303653,7 @@
     "name": "LeftPercentToMaxDist",
     "offset": 56,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -303646,6 +303661,7 @@
     "name": "RightPercentToMaxDist",
     "offset": 60,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -303653,6 +303669,7 @@
     "name": "Priority",
     "offset": 64,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -303660,6 +303677,7 @@
     "name": "ObjectId3D",
     "offset": 68,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -303667,6 +303685,7 @@
     "name": "Is3D",
     "offset": 72,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -303674,6 +303693,7 @@
     "name": "field_49",
     "offset": 73,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -303681,6 +303701,7 @@
     "name": "field_4a",
     "offset": 74,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -303688,6 +303709,7 @@
     "name": "field_4b",
     "offset": 75,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -303695,6 +303717,7 @@
     "name": "LeftPositionPtr",
     "offset": 76,
     "type": "Vector3*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -303702,6 +303725,7 @@
     "name": "RightPositionPtr",
     "offset": 80,
     "type": "Vector3*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -303709,6 +303733,7 @@
     "name": "VectorPoints",
     "offset": 84,
     "type": "Vector3**",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -303716,6 +303741,7 @@
     "name": "VectorPointMode",
     "offset": 88,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -303723,6 +303749,7 @@
     "name": "NumVectorPoints",
     "offset": 92,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -303737,8 +303764,9 @@
    {
     "name": "_buffer",
     "offset": 0,
-    "type": "unsigned __int8[56]",
-    "width": 56,
+    "type": "u8",
+    "count": 56,
+    "width": 1,
     "src": "kit"
    }
   ],
@@ -303752,8 +303780,9 @@
    {
     "name": "_buffer",
     "offset": 0,
-    "type": "unsigned __int8[88]",
-    "width": 88,
+    "type": "u8",
+    "count": 88,
+    "width": 1,
     "src": "kit"
    }
   ],
@@ -303926,14 +303955,16 @@
     "name": "__vftable",
     "offset": 0,
     "type": "aiCityData_vtbl*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "_buffer",
     "offset": 4,
-    "type": "unsigned __int8[48]",
-    "width": 48,
+    "type": "u8",
+    "count": 48,
+    "width": 1,
     "src": "kit"
    }
   ],
@@ -303948,6 +303979,7 @@
     "name": "field_0",
     "offset": 0,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -303955,6 +303987,7 @@
     "name": "UpdateCount",
     "offset": 4,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -303962,20 +303995,23 @@
     "name": "field_8",
     "offset": 8,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
    {
     "name": "pad_9",
     "offset": 9,
-    "type": "u8[3]",
-    "width": 3,
+    "type": "u8",
+    "count": 3,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Side",
     "offset": 12,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -303983,6 +304019,7 @@
     "name": "Heading",
     "offset": 16,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -303990,6 +304027,7 @@
     "name": "PlayerSideReactDist",
     "offset": 20,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -303997,6 +304035,7 @@
     "name": "RailSet",
     "offset": 24,
     "type": "aiRailSet*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -304004,6 +304043,7 @@
     "name": "VehicleAmbient",
     "offset": 28,
     "type": "aiVehicleAmbient*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -304019,6 +304059,7 @@
     "name": "field_0",
     "offset": 0,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -304026,6 +304067,7 @@
     "name": "UpdateCount",
     "offset": 4,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -304033,6 +304075,7 @@
     "name": "VehicleSpline",
     "offset": 8,
     "type": "aiVehicleSpline*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -304040,6 +304083,7 @@
     "name": "RailSet",
     "offset": 12,
     "type": "aiRailSet*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -304444,20 +304488,23 @@
     "name": "__vftable",
     "offset": 0,
     "type": "Base_vtbl*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "buffer",
     "offset": 4,
-    "type": "unsigned __int8[176]",
-    "width": 176,
+    "type": "u8",
+    "count": 176,
+    "width": 1,
     "src": "kit"
    },
    {
     "name": "CallBack",
     "offset": 180,
     "type": "datCallback*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -304465,62 +304512,71 @@
     "name": "Particles",
     "offset": 184,
     "type": "asParticles",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_BC",
     "offset": 188,
-    "type": "u8[80]",
-    "width": 80,
+    "type": "u8",
+    "count": 80,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Particles2",
     "offset": 268,
     "type": "asParticles",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_110",
     "offset": 272,
-    "type": "u8[80]",
-    "width": 80,
+    "type": "u8",
+    "count": 80,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "BirthRule",
     "offset": 352,
     "type": "asBirthRule",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_164",
     "offset": 356,
-    "type": "u8[176]",
-    "width": 176,
+    "type": "u8",
+    "count": 176,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "BirthRule2",
     "offset": 532,
     "type": "asBirthRule",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_218",
     "offset": 536,
-    "type": "u8[176]",
-    "width": 176,
+    "type": "u8",
+    "count": 176,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "CurDamage",
     "offset": 712,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -304528,6 +304584,7 @@
     "name": "MaxDamage",
     "offset": 716,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -304535,6 +304592,7 @@
     "name": "field_2D0",
     "offset": 720,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -304542,6 +304600,7 @@
     "name": "Instance",
     "offset": 724,
     "type": "lvlInstance*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -304549,84 +304608,96 @@
     "name": "ICS",
     "offset": 728,
     "type": "phInertialCS",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_2DC",
     "offset": 732,
-    "type": "u8[432]",
-    "width": 432,
+    "type": "u8",
+    "count": 432,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Sleep",
     "offset": 1164,
     "type": "phSleep",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_490",
     "offset": 1168,
-    "type": "u8[76]",
-    "width": 76,
+    "type": "u8",
+    "count": 76,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "WheelFrontLeft",
     "offset": 1244,
     "type": "vehWeelCheap",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_4E0",
     "offset": 1248,
-    "type": "u8[388]",
-    "width": 388,
+    "type": "u8",
+    "count": 388,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "WheelFrontRight",
     "offset": 1636,
     "type": "vehWeelCheap",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_668",
     "offset": 1640,
-    "type": "u8[388]",
-    "width": 388,
+    "type": "u8",
+    "count": 388,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "WheelBackLeft",
     "offset": 2028,
     "type": "vehWeelCheap",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_7F0",
     "offset": 2032,
-    "type": "u8[388]",
-    "width": 388,
+    "type": "u8",
+    "count": 388,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "WheelBackRight",
     "offset": 2420,
     "type": "vehWeelCheap",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_978",
     "offset": 2424,
-    "type": "u8[388]",
-    "width": 388,
+    "type": "u8",
+    "count": 388,
+    "width": 1,
     "src": "kit-padding"
    }
   ],
@@ -307457,6 +307528,7 @@
     "name": "__vftable",
     "offset": 0,
     "type": "lvlInstance_vtbl*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -307464,6 +307536,7 @@
     "name": "Owner",
     "offset": 4,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -307471,6 +307544,7 @@
     "name": "Subtype",
     "offset": 5,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -307478,6 +307552,7 @@
     "name": "room",
     "offset": 6,
     "type": "i16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -307485,6 +307560,7 @@
     "name": "Flags",
     "offset": 8,
     "type": "u16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -307492,6 +307568,7 @@
     "name": "GeomIndex",
     "offset": 10,
     "type": "u16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -307499,6 +307576,7 @@
     "name": "Previous",
     "offset": 12,
     "type": "lvlInstance*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -307506,6 +307584,7 @@
     "name": "Next",
     "offset": 16,
     "type": "lvlInstance*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -307513,35 +307592,40 @@
     "name": "DataPack",
     "offset": 20,
     "type": "u16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
    {
     "name": "pad_16",
     "offset": 22,
-    "type": "u8[2]",
-    "width": 2,
+    "type": "u8",
+    "count": 2,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "gap",
     "offset": 24,
-    "type": "char[16]",
-    "width": 16,
+    "type": "i8",
+    "count": 16,
+    "width": 1,
     "src": "kit"
    },
    {
     "name": "Matrix",
     "offset": 40,
     "type": "Matrix34",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_2C",
     "offset": 44,
-    "type": "u8[44]",
-    "width": 44,
+    "type": "u8",
+    "count": 44,
+    "width": 1,
     "src": "kit-padding"
    }
   ],
@@ -307720,8 +307804,9 @@
    {
     "name": "_buffer",
     "offset": 0,
-    "type": "unsigned __int8[32]",
-    "width": 32,
+    "type": "u8",
+    "count": 32,
+    "width": 1,
     "src": "kit"
    }
   ],
@@ -307736,20 +307821,23 @@
     "name": "__vftable",
     "offset": 0,
     "type": "phMaterial_vtbl*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "Name",
     "offset": 4,
-    "type": "char[20]",
-    "width": 20,
+    "type": "i8",
+    "count": 20,
+    "width": 1,
     "src": "kit"
    },
    {
     "name": "unknown24",
     "offset": 24,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -307757,6 +307845,7 @@
     "name": "unknown28",
     "offset": 28,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -307764,6 +307853,7 @@
     "name": "unknown32",
     "offset": 32,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -307771,6 +307861,7 @@
     "name": "EffectIndex",
     "offset": 36,
     "type": "i16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -307778,6 +307869,7 @@
     "name": "SoundIndex",
     "offset": 38,
     "type": "i16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -307785,6 +307877,7 @@
     "name": "Elasticity",
     "offset": 40,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -307792,6 +307885,7 @@
     "name": "Friction",
     "offset": 44,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -307799,6 +307893,7 @@
     "name": "Drag",
     "offset": 48,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -307806,6 +307901,7 @@
     "name": "Width",
     "offset": 52,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -307813,6 +307909,7 @@
     "name": "Height",
     "offset": 56,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -307820,21 +307917,24 @@
     "name": "Depth",
     "offset": 60,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "PtxIndex",
     "offset": 64,
-    "type": "__int16[2]",
-    "width": 4,
+    "type": "i16",
+    "count": 2,
+    "width": 2,
     "src": "kit"
    },
    {
     "name": "PtxThreshold",
     "offset": 68,
-    "type": "float[2]",
-    "width": 8,
+    "type": "f32",
+    "count": 2,
+    "width": 4,
     "src": "kit"
    }
   ],
@@ -307849,6 +307949,7 @@
     "name": "__vftable",
     "offset": 0,
     "type": "mmCityList_vtbl*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -307856,6 +307957,7 @@
     "name": "cityInfos",
     "offset": 4,
     "type": "mmCityInfo**",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -307863,6 +307965,7 @@
     "name": "numCities",
     "offset": 8,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -307870,6 +307973,7 @@
     "name": "curCity",
     "offset": 12,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -310327,6 +310431,7 @@
     "name": "__vftable",
     "offset": 0,
     "type": "lvlInstance_vtbl*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -310334,6 +310439,7 @@
     "name": "Owner",
     "offset": 4,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -310341,6 +310447,7 @@
     "name": "Subtype",
     "offset": 5,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -310348,6 +310455,7 @@
     "name": "room",
     "offset": 6,
     "type": "i16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -310355,6 +310463,7 @@
     "name": "Flags",
     "offset": 8,
     "type": "u16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -310362,6 +310471,7 @@
     "name": "GeomIndex",
     "offset": 10,
     "type": "u16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -310369,6 +310479,7 @@
     "name": "Previous",
     "offset": 12,
     "type": "lvlInstance*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -310376,6 +310487,7 @@
     "name": "Next",
     "offset": 16,
     "type": "lvlInstance*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -310383,34 +310495,39 @@
     "name": "Scale",
     "offset": 20,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_18",
     "offset": 24,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Matrix",
     "offset": 32,
     "type": "Matrix34",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_24",
     "offset": 36,
-    "type": "u8[44]",
-    "width": 44,
+    "type": "u8",
+    "count": 44,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "HasBeenDrawn",
     "offset": 80,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -310418,20 +310535,23 @@
     "name": "Visible",
     "offset": 84,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
    {
     "name": "pad_55",
     "offset": 85,
-    "type": "u8[3]",
-    "width": 3,
+    "type": "u8",
+    "count": 3,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "ShaderSet",
     "offset": 88,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -310923,6 +311043,7 @@
     "name": "__vftable",
     "offset": 0,
     "type": "phBound_vtbl*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -310930,6 +311051,7 @@
     "name": "MaterialCount",
     "offset": 4,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -310937,6 +311059,7 @@
     "name": "Type",
     "offset": 8,
     "type": "phBound::BoundType",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -310944,62 +311067,71 @@
     "name": "Min",
     "offset": 12,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_10",
     "offset": 16,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Max",
     "offset": 24,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_1C",
     "offset": 28,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "IsOffset",
     "offset": 36,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
    {
     "name": "pad_25",
     "offset": 37,
-    "type": "u8[3]",
-    "width": 3,
+    "type": "u8",
+    "count": 3,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Offset",
     "offset": 40,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_2C",
     "offset": 44,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Radius",
     "offset": 52,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311007,6 +311139,7 @@
     "name": "Flexibility",
     "offset": 56,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311014,20 +311147,23 @@
     "name": "IsFlexible",
     "offset": 60,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
    {
     "name": "pad_3D",
     "offset": 61,
-    "type": "u8[3]",
-    "width": 3,
+    "type": "u8",
+    "count": 3,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "o16",
     "offset": 64,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311035,6 +311171,7 @@
     "name": "Penetration",
     "offset": 68,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311042,6 +311179,7 @@
     "name": "PenetrationBarelyMoved",
     "offset": 72,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311049,6 +311187,7 @@
     "name": "Radius",
     "offset": 76,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311056,6 +311195,7 @@
     "name": "Height",
     "offset": 80,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311063,14 +311203,16 @@
     "name": "Material",
     "offset": 84,
     "type": "phMaterial",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_58",
     "offset": 88,
-    "type": "u8[44]",
-    "width": 44,
+    "type": "u8",
+    "count": 44,
+    "width": 1,
     "src": "kit-padding"
    }
   ],
@@ -311085,6 +311227,7 @@
     "name": "__vftable",
     "offset": 0,
     "type": "phBound_vtbl*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311092,6 +311235,7 @@
     "name": "MaterialCount",
     "offset": 4,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311099,6 +311243,7 @@
     "name": "Type",
     "offset": 8,
     "type": "phBound::BoundType",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311106,62 +311251,71 @@
     "name": "Min",
     "offset": 12,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_10",
     "offset": 16,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Max",
     "offset": 24,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_1C",
     "offset": 28,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "IsOffset",
     "offset": 36,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
    {
     "name": "pad_25",
     "offset": 37,
-    "type": "u8[3]",
-    "width": 3,
+    "type": "u8",
+    "count": 3,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Offset",
     "offset": 40,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_2C",
     "offset": 44,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Radius",
     "offset": 52,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311169,6 +311323,7 @@
     "name": "Flexibility",
     "offset": 56,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311176,20 +311331,23 @@
     "name": "IsFlexible",
     "offset": 60,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
    {
     "name": "pad_3D",
     "offset": 61,
-    "type": "u8[3]",
-    "width": 3,
+    "type": "u8",
+    "count": 3,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "o16",
     "offset": 64,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311197,6 +311355,7 @@
     "name": "Penetration",
     "offset": 68,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311204,6 +311363,7 @@
     "name": "PenetrationBarelyMoved",
     "offset": 72,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311211,6 +311371,7 @@
     "name": "Radius",
     "offset": 76,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311218,14 +311379,16 @@
     "name": "Material",
     "offset": 80,
     "type": "phMaterial",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_54",
     "offset": 84,
-    "type": "u8[44]",
-    "width": 44,
+    "type": "u8",
+    "count": 44,
+    "width": 1,
     "src": "kit-padding"
    }
   ],
@@ -311240,6 +311403,7 @@
     "name": "__vftable",
     "offset": 0,
     "type": "phBound_vtbl*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311247,6 +311411,7 @@
     "name": "MaterialCount",
     "offset": 4,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311254,6 +311419,7 @@
     "name": "Type",
     "offset": 8,
     "type": "phBound::BoundType",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311261,62 +311427,71 @@
     "name": "Min",
     "offset": 12,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_10",
     "offset": 16,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Max",
     "offset": 24,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_1C",
     "offset": 28,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "IsOffset",
     "offset": 36,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
    {
     "name": "pad_25",
     "offset": 37,
-    "type": "u8[3]",
-    "width": 3,
+    "type": "u8",
+    "count": 3,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Offset",
     "offset": 40,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_2C",
     "offset": 44,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Radius",
     "offset": 52,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311324,6 +311499,7 @@
     "name": "Flexibility",
     "offset": 56,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311331,20 +311507,23 @@
     "name": "IsFlexible",
     "offset": 60,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
    {
     "name": "pad_3D",
     "offset": 61,
-    "type": "u8[3]",
-    "width": 3,
+    "type": "u8",
+    "count": 3,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "o16",
     "offset": 64,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311352,6 +311531,7 @@
     "name": "Penetration",
     "offset": 68,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311359,6 +311539,7 @@
     "name": "PenetrationBarelyMoved",
     "offset": 72,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311366,6 +311547,7 @@
     "name": "VertexCount",
     "offset": 76,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311373,6 +311555,7 @@
     "name": "PolygonCount",
     "offset": 80,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311380,6 +311563,7 @@
     "name": "EdgeCount",
     "offset": 84,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311387,6 +311571,7 @@
     "name": "VertexPtr",
     "offset": 88,
     "type": "Vector3*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311394,6 +311579,7 @@
     "name": "PolygonsPtr",
     "offset": 92,
     "type": "phPolygon*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311401,6 +311587,7 @@
     "name": "HotEdgePtr",
     "offset": 96,
     "type": "phHotEdge*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311408,6 +311595,7 @@
     "name": "Vertices",
     "offset": 100,
     "type": "Vector3*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311415,6 +311603,7 @@
     "name": "Materials",
     "offset": 104,
     "type": "phMaterial*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311422,6 +311611,7 @@
     "name": "HotEdges",
     "offset": 108,
     "type": "phHotEdge*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311429,6 +311619,7 @@
     "name": "EdgeNormals",
     "offset": 112,
     "type": "Vector3*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311436,6 +311627,7 @@
     "name": "EdgeCosines",
     "offset": 116,
     "type": "f32*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311443,48 +311635,55 @@
     "name": "KeepMemory",
     "offset": 120,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
    {
     "name": "pad_79",
     "offset": 121,
-    "type": "u8[3]",
-    "width": 3,
+    "type": "u8",
+    "count": 3,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "UseHotEdges",
     "offset": 124,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
    {
     "name": "pad_7D",
     "offset": 125,
-    "type": "u8[3]",
-    "width": 3,
+    "type": "u8",
+    "count": 3,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Size",
     "offset": 128,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_84",
     "offset": 132,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "WidthSectionCount",
     "offset": 140,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311492,6 +311691,7 @@
     "name": "HeightSectionCount",
     "offset": 144,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311499,6 +311699,7 @@
     "name": "DepthSectionCount",
     "offset": 148,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311506,6 +311707,7 @@
     "name": "TotalSectionCount",
     "offset": 152,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311513,6 +311715,7 @@
     "name": "TotalReferencedFacesCount",
     "offset": 156,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311520,6 +311723,7 @@
     "name": "SectionIndexOffsets",
     "offset": 160,
     "type": "u16*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311527,6 +311731,7 @@
     "name": "SectionIndexCounts",
     "offset": 164,
     "type": "u16*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311534,6 +311739,7 @@
     "name": "SectionIndices",
     "offset": 168,
     "type": "u16*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311541,6 +311747,7 @@
     "name": "dword_ac",
     "offset": 172,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311548,6 +311755,7 @@
     "name": "dword_b0",
     "offset": 176,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311555,20 +311763,23 @@
     "name": "SectionSizeFactors",
     "offset": 180,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_B8",
     "offset": 184,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "dword_c0",
     "offset": 192,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311576,6 +311787,7 @@
     "name": "dword_c4",
     "offset": 196,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311583,6 +311795,7 @@
     "name": "dword_c8",
     "offset": 200,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -311598,6 +311811,7 @@
     "name": "__vftable",
     "offset": 0,
     "type": "phJoint_vtbl*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311605,6 +311819,7 @@
     "name": "ICS1",
     "offset": 4,
     "type": "phInertialCS*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311612,6 +311827,7 @@
     "name": "ICS2",
     "offset": 8,
     "type": "phInertialCS*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311619,70 +311835,80 @@
     "name": "Offset1",
     "offset": 12,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_10",
     "offset": 16,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Offset2",
     "offset": 24,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_1C",
     "offset": 28,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "PremultipliedOffset",
     "offset": 36,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_28",
     "offset": 40,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "PremultipliedOffset1",
     "offset": 48,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_34",
     "offset": 52,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "InvMassMatrix",
     "offset": 60,
     "type": "Matrix34",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_40",
     "offset": 64,
-    "type": "u8[44]",
-    "width": 44,
+    "type": "u8",
+    "count": 44,
+    "width": 1,
     "src": "kit-padding"
    }
   ],
@@ -311697,6 +311923,7 @@
     "name": "dword_00",
     "offset": 0,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311704,6 +311931,7 @@
     "name": "dword_04",
     "offset": 4,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311711,6 +311939,7 @@
     "name": "dword_08",
     "offset": 8,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311718,34 +311947,39 @@
     "name": "dword_0c",
     "offset": 12,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_10",
     "offset": 16,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "LastAcceleration",
     "offset": 24,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_1C",
     "offset": 28,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "ICS",
     "offset": 36,
     "type": "phInertialCS*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311753,6 +311987,7 @@
     "name": "Collider",
     "offset": 40,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311760,6 +311995,7 @@
     "name": "dword_2c",
     "offset": 44,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311767,6 +312003,7 @@
     "name": "dword_30",
     "offset": 48,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311774,6 +312011,7 @@
     "name": "AwakeFrameCount",
     "offset": 52,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311781,6 +312019,7 @@
     "name": "MaxAwakeFrames",
     "offset": 56,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311788,6 +312027,7 @@
     "name": "SomeMagTrigger",
     "offset": 60,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311795,6 +312035,7 @@
     "name": "AccelMagThreshold",
     "offset": 64,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311802,6 +312043,7 @@
     "name": "NextAwakeTime",
     "offset": 68,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311809,6 +312051,7 @@
     "name": "State",
     "offset": 72,
     "type": "phSleepState",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -311816,6 +312059,7 @@
     "name": "AsleepCB",
     "offset": 76,
     "type": "datCallback*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -312137,20 +312381,23 @@
     "name": "IsAttached",
     "offset": 0,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
    {
     "name": "pad_1",
     "offset": 1,
-    "type": "u8[3]",
-    "width": 3,
+    "type": "u8",
+    "count": 3,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Flags",
     "offset": 4,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -312158,20 +312405,23 @@
     "name": "Matrix",
     "offset": 8,
     "type": "Matrix34",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_C",
     "offset": 12,
-    "type": "u8[44]",
-    "width": 44,
+    "type": "u8",
+    "count": 44,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Model",
     "offset": 56,
     "type": "lvlInstance::GeomTableEntry*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -312179,6 +312429,7 @@
     "name": "BangerDataIndex",
     "offset": 60,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -312186,6 +312437,7 @@
     "name": "GeometryIndex",
     "offset": 64,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -312193,6 +312445,7 @@
     "name": "Instance",
     "offset": 68,
     "type": "lvlInstance*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -312200,6 +312453,7 @@
     "name": "Next",
     "offset": 72,
     "type": "vehBreakable*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -312447,6 +312701,7 @@
     "name": "SurfaceSound",
     "offset": 0,
     "type": "AudSoundBase*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -312454,6 +312709,7 @@
     "name": "SkidWaveData",
     "offset": 4,
     "type": "vehSurfaceAudioSubData*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -312461,6 +312717,7 @@
     "name": "SampleIndex",
     "offset": 8,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -312468,6 +312725,7 @@
     "name": "NumSkidSamples",
     "offset": 12,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -312475,6 +312733,7 @@
     "name": "MaxSpeed",
     "offset": 16,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -312482,6 +312741,7 @@
     "name": "MinSurfaceVolume",
     "offset": 20,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -312489,6 +312749,7 @@
     "name": "MaxSurfaceVolume",
     "offset": 24,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -312496,6 +312757,7 @@
     "name": "field_1c",
     "offset": 28,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -312503,6 +312765,7 @@
     "name": "MinSkidVolume",
     "offset": 32,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -312510,6 +312773,7 @@
     "name": "MaxSkidVolume",
     "offset": 36,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -312517,6 +312781,7 @@
     "name": "field_28",
     "offset": 40,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -312524,6 +312789,7 @@
     "name": "MinSurfacePitch",
     "offset": 44,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -312531,6 +312797,7 @@
     "name": "MaxSurfacePitch",
     "offset": 48,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -312538,6 +312805,7 @@
     "name": "field_34",
     "offset": 52,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -313381,6 +313649,7 @@
     "name": "__vftable",
     "offset": 0,
     "type": "Base_vtbl*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -313396,6 +313665,7 @@
     "name": "segment",
     "offset": 0,
     "type": "lvlSegment*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313403,6 +313673,7 @@
     "name": "isect",
     "offset": 4,
     "type": "lvlIntersection*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -313418,6 +313689,7 @@
     "name": "Color",
     "offset": 0,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313425,20 +313697,23 @@
     "name": "Enabled",
     "offset": 4,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
    {
     "name": "pad_5",
     "offset": 5,
-    "type": "u8[3]",
-    "width": 3,
+    "type": "u8",
+    "count": 3,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Matrix",
     "offset": 8,
     "type": "Matrix34*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313446,20 +313721,23 @@
     "name": "Place",
     "offset": 12,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "Text",
     "offset": 16,
-    "type": "char[16]",
-    "width": 16,
+    "type": "i8",
+    "count": 16,
+    "width": 1,
     "src": "kit"
    },
    {
     "name": "Bitmap",
     "offset": 32,
     "type": "gfxBitmap*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313467,6 +313745,7 @@
     "name": "Scale",
     "offset": 36,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -313482,6 +313761,7 @@
     "name": "TotalUpdateTime",
     "offset": 0,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313489,6 +313769,7 @@
     "name": "ObjPairCollectingTime",
     "offset": 4,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313496,6 +313777,7 @@
     "name": "TotalCollisionTime",
     "offset": 8,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313503,6 +313785,7 @@
     "name": "MoverUpdateTime",
     "offset": 12,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313510,6 +313793,7 @@
     "name": "MoverGatherTime",
     "offset": 16,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313517,6 +313801,7 @@
     "name": "ObjToObjCollisionTime",
     "offset": 20,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313524,6 +313809,7 @@
     "name": "ObjToObjImpactTime",
     "offset": 24,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313531,6 +313817,7 @@
     "name": "CarImpactTime",
     "offset": 28,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313538,6 +313825,7 @@
     "name": "ObjTerrainCollisionTime",
     "offset": 32,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313545,6 +313833,7 @@
     "name": "ObjTerrainImpactTime",
     "offset": 36,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313552,6 +313841,7 @@
     "name": "PostCollisionTime",
     "offset": 40,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313559,6 +313849,7 @@
     "name": "CollisionsTime",
     "offset": 44,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313566,6 +313857,7 @@
     "name": "MoverVsMover",
     "offset": 48,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313573,6 +313865,7 @@
     "name": "MoverVsCollidable",
     "offset": 52,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313580,6 +313873,7 @@
     "name": "TotalProbes",
     "offset": 56,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313587,6 +313881,7 @@
     "name": "TotalProbeTime",
     "offset": 60,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313594,6 +313889,7 @@
     "name": "ExternalProbes",
     "offset": 64,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313601,6 +313897,7 @@
     "name": "ExternalProbeTime",
     "offset": 68,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -313616,6 +313913,7 @@
     "name": "field_0",
     "offset": 0,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313623,6 +313921,7 @@
     "name": "UpdateCount",
     "offset": 4,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -313638,20 +313937,23 @@
     "name": "Count",
     "offset": 0,
     "type": "u16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
    {
     "name": "pad_2",
     "offset": 2,
-    "type": "u8[2]",
-    "width": 2,
+    "type": "u8",
+    "count": 2,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Components",
     "offset": 4,
     "type": "aiMapComponentListEntry**",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -313667,6 +313969,7 @@
     "name": "_fSubwayUpdate",
     "offset": 0,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313674,6 +313977,7 @@
     "name": "_fCableCarUpdate",
     "offset": 4,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313681,6 +313985,7 @@
     "name": "_fCTFOppUpdate",
     "offset": 8,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313688,6 +313993,7 @@
     "name": "_fPedUpdate",
     "offset": 12,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313695,6 +314001,7 @@
     "name": "_fAmbientUpdate",
     "offset": 16,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313702,6 +314009,7 @@
     "name": "_fCopUpdate",
     "offset": 20,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313709,6 +314017,7 @@
     "name": "_nPedQty",
     "offset": 24,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313716,6 +314025,7 @@
     "name": "_fOppUpdate",
     "offset": 28,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313723,6 +314033,7 @@
     "name": "_nAmbientQty",
     "offset": 32,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313730,6 +314041,7 @@
     "name": "_fTotUpdate",
     "offset": 36,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -313745,6 +314057,7 @@
     "name": "timer",
     "offset": 0,
     "type": "Timer",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313752,42 +314065,40 @@
     "name": "NumPerps",
     "offset": 4,
     "type": "i16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
    {
     "name": "NumChasers",
     "offset": 6,
-    "type": "__int16[3]",
-    "width": 6,
+    "type": "i16",
+    "count": 3,
+    "width": 2,
     "src": "kit"
    },
    {
     "name": "PlayerCars",
     "offset": 12,
-    "type": "vehCar [3]*",
+    "type": "vehCar*",
+    "count": 3,
     "width": 4,
     "src": "kit"
-   },
-   {
-    "name": "pad_10",
-    "offset": 16,
-    "type": "u8[8]",
-    "width": 8,
-    "src": "kit-padding"
    },
    {
     "name": "CopCars",
     "offset": 24,
-    "type": "vehCar [3][3]*",
+    "type": "vehCar [3]*",
+    "count": 3,
     "width": 4,
     "src": "kit"
    },
    {
-    "name": "pad_1C",
-    "offset": 28,
-    "type": "u8[32]",
-    "width": 32,
+    "name": "pad_24",
+    "offset": 36,
+    "type": "u8",
+    "count": 24,
+    "width": 1,
     "src": "kit-padding"
    }
   ],
@@ -313802,6 +314113,7 @@
     "name": "BackBumperDist",
     "offset": 0,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313809,6 +314121,7 @@
     "name": "FrontBumperDist",
     "offset": 4,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313816,6 +314129,7 @@
     "name": "LSideDist",
     "offset": 8,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313823,6 +314137,7 @@
     "name": "RSideDist",
     "offset": 12,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313830,20 +314145,23 @@
     "name": "EnterInt",
     "offset": 16,
     "type": "i16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
    {
     "name": "pad_12",
     "offset": 18,
-    "type": "u8[2]",
-    "width": 2,
+    "type": "u8",
+    "count": 2,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "RoadDist",
     "offset": 20,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313851,6 +314169,7 @@
     "name": "ResumeDist",
     "offset": 24,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313858,6 +314177,7 @@
     "name": "SubSectionDist",
     "offset": 28,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313865,6 +314185,7 @@
     "name": "TurnDist",
     "offset": 32,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313872,6 +314193,7 @@
     "name": "LaneRandomness",
     "offset": 36,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313879,6 +314201,7 @@
     "name": "WaitCount",
     "offset": 40,
     "type": "i16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -313886,6 +314209,7 @@
     "name": "SSIdx",
     "offset": 42,
     "type": "i16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -313893,6 +314217,7 @@
     "name": "CurLane",
     "offset": 44,
     "type": "i16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -313900,6 +314225,7 @@
     "name": "NextLane",
     "offset": 46,
     "type": "i16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -313907,20 +314233,23 @@
     "name": "TargetLane",
     "offset": 48,
     "type": "i16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
    {
     "name": "pad_32",
     "offset": 50,
-    "type": "u8[2]",
-    "width": 2,
+    "type": "u8",
+    "count": 2,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "RailType",
     "offset": 52,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313928,6 +314257,7 @@
     "name": "NextLink",
     "offset": 56,
     "type": "aiPath*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313935,6 +314265,7 @@
     "name": "CurLink",
     "offset": 60,
     "type": "aiPath*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313942,6 +314273,7 @@
     "name": "field_40",
     "offset": 64,
     "type": "i16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -313949,6 +314281,7 @@
     "name": "field_42",
     "offset": 66,
     "type": "i16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -313956,6 +314289,7 @@
     "name": "CurAccelFactor",
     "offset": 68,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313963,6 +314297,7 @@
     "name": "ExheedLimit",
     "offset": 72,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313970,6 +314305,7 @@
     "name": "TargetVelocity",
     "offset": 76,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313977,6 +314313,7 @@
     "name": "CarReactDist",
     "offset": 80,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313984,6 +314321,7 @@
     "name": "VehicleAccelFactor",
     "offset": 84,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313991,6 +314329,7 @@
     "name": "SeparationDist",
     "offset": 88,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -313998,6 +314337,7 @@
     "name": "IntersectionReactDist",
     "offset": 92,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314005,6 +314345,7 @@
     "name": "field_60",
     "offset": 96,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314012,6 +314353,7 @@
     "name": "field_64",
     "offset": 100,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314019,6 +314361,7 @@
     "name": "field_68",
     "offset": 104,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314026,6 +314369,7 @@
     "name": "field_6C",
     "offset": 108,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314033,6 +314377,7 @@
     "name": "field_70",
     "offset": 112,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314040,6 +314385,7 @@
     "name": "field_74",
     "offset": 116,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314047,6 +314393,7 @@
     "name": "field_78",
     "offset": 120,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314054,6 +314401,7 @@
     "name": "field_7C",
     "offset": 124,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -314069,6 +314417,7 @@
     "name": "unk_0x00",
     "offset": 0,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314076,20 +314425,23 @@
     "name": "Position",
     "offset": 4,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_8",
     "offset": 8,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Angle",
     "offset": 16,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314097,6 +314449,7 @@
     "name": "unk_14",
     "offset": 20,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314104,6 +314457,7 @@
     "name": "unk_18",
     "offset": 24,
     "type": "i16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -314111,6 +314465,7 @@
     "name": "RoadVertexIndex",
     "offset": 26,
     "type": "i16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -314118,6 +314473,7 @@
     "name": "unk_1C",
     "offset": 28,
     "type": "i16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -314125,6 +314481,7 @@
     "name": "unk_1E",
     "offset": 30,
     "type": "i16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -314132,6 +314489,7 @@
     "name": "unk_20",
     "offset": 32,
     "type": "i16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -314139,6 +314497,7 @@
     "name": "unk_22",
     "offset": 34,
     "type": "i16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    }
@@ -314154,6 +314513,7 @@
     "name": "x",
     "offset": 0,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314161,6 +314521,7 @@
     "name": "y",
     "offset": 4,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314168,6 +314529,7 @@
     "name": "z",
     "offset": 8,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314175,6 +314537,7 @@
     "name": "unk",
     "offset": 12,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -314190,27 +314553,23 @@
     "name": "__vftable",
     "offset": 0,
     "type": "dgPathSet_vtbl*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "Paths",
     "offset": 4,
-    "type": "dgPath [192]*",
+    "type": "dgPath*",
+    "count": 192,
     "width": 4,
     "src": "kit"
-   },
-   {
-    "name": "pad_8",
-    "offset": 8,
-    "type": "u8[764]",
-    "width": 764,
-    "src": "kit-padding"
    },
    {
     "name": "PathCount",
     "offset": 772,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314218,6 +314577,7 @@
     "name": "unk0",
     "offset": 776,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314225,6 +314585,7 @@
     "name": "unk1",
     "offset": 780,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -314240,34 +314601,39 @@
     "name": "Velocity",
     "offset": 0,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_4",
     "offset": 4,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "RotationAxis",
     "offset": 12,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_10",
     "offset": 16,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "AliveTime",
     "offset": 24,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314275,6 +314641,7 @@
     "name": "RotationSpeed",
     "offset": 28,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314282,20 +314649,23 @@
     "name": "Matrix",
     "offset": 32,
     "type": "Matrix34",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_24",
     "offset": 36,
-    "type": "u8[44]",
-    "width": 44,
+    "type": "u8",
+    "count": 44,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "TexUCoord",
     "offset": 80,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314303,6 +314673,7 @@
     "name": "TexVCoord",
     "offset": 84,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314310,6 +314681,7 @@
     "name": "dword_58",
     "offset": 88,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -314325,6 +314697,7 @@
     "name": "Flags",
     "offset": 0,
     "type": "u16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -314332,6 +314705,7 @@
     "name": "InstanceFlags",
     "offset": 2,
     "type": "u16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -314339,6 +314713,7 @@
     "name": "FirstInstance",
     "offset": 4,
     "type": "lvlInstance*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314346,6 +314721,7 @@
     "name": "StaticInstance",
     "offset": 8,
     "type": "lvlInstance*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314353,20 +314729,23 @@
     "name": "BoundSphere",
     "offset": 12,
     "type": "Vector4",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_10",
     "offset": 16,
-    "type": "u8[12]",
-    "width": 12,
+    "type": "u8",
+    "count": 12,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Color",
     "offset": 28,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314374,6 +314753,7 @@
     "name": "MinY",
     "offset": 32,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314381,6 +314761,7 @@
     "name": "MaxY",
     "offset": 36,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -314396,6 +314777,7 @@
     "name": "StartRoomId",
     "offset": 0,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314403,6 +314785,7 @@
     "name": "EndRoomId",
     "offset": 4,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314410,6 +314793,7 @@
     "name": "Polygon",
     "offset": 8,
     "type": "sdlPolyCached*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -314424,21 +314808,16 @@
    {
     "name": "BitmapGears",
     "offset": 0,
-    "type": "gfxBitmap [12]*",
+    "type": "gfxBitmap*",
+    "count": 12,
     "width": 4,
     "src": "kit"
-   },
-   {
-    "name": "pad_4",
-    "offset": 4,
-    "type": "u8[44]",
-    "width": 44,
-    "src": "kit-padding"
    },
    {
     "name": "DestX",
     "offset": 48,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314446,6 +314825,7 @@
     "name": "DestY",
     "offset": 52,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314453,6 +314833,7 @@
     "name": "ExternalView",
     "offset": 56,
     "type": "mmExternalView*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314460,6 +314841,7 @@
     "name": "Player",
     "offset": 60,
     "type": "mmPlayer*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -314475,6 +314857,7 @@
     "name": "MinValue",
     "offset": 0,
     "type": "f32*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314482,6 +314865,7 @@
     "name": "MaxValue",
     "offset": 4,
     "type": "f32*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314489,6 +314873,7 @@
     "name": "DestX",
     "offset": 8,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314496,6 +314881,7 @@
     "name": "DestY",
     "offset": 12,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314503,6 +314889,7 @@
     "name": "BitmapGauge",
     "offset": 16,
     "type": "gfxBitmap*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314510,6 +314897,7 @@
     "name": "BitmapLabel",
     "offset": 20,
     "type": "gfxBitmap*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314517,6 +314905,7 @@
     "name": "DimensionType",
     "offset": 24,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314524,6 +314913,7 @@
     "name": "ExternalView",
     "offset": 28,
     "type": "mmExternalView*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -314538,21 +314928,16 @@
    {
     "name": "BitmapSpeeds",
     "offset": 0,
-    "type": "gfxBitmap [10]*",
+    "type": "gfxBitmap*",
+    "count": 10,
     "width": 4,
     "src": "kit"
-   },
-   {
-    "name": "pad_4",
-    "offset": 4,
-    "type": "u8[36]",
-    "width": 36,
-    "src": "kit-padding"
    },
    {
     "name": "DestX",
     "offset": 40,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314560,6 +314945,7 @@
     "name": "DestY",
     "offset": 44,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314567,6 +314953,7 @@
     "name": "ExternalView",
     "offset": 48,
     "type": "mmExternalView*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314574,6 +314961,7 @@
     "name": "CarSim",
     "offset": 52,
     "type": "vehCarSim*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -314589,34 +314977,39 @@
     "name": "__vftable",
     "offset": 0,
     "type": "mmVehInfo_vtbl*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "baseName",
     "offset": 4,
-    "type": "char[40]",
-    "width": 40,
+    "type": "i8",
+    "count": 40,
+    "width": 1,
     "src": "kit"
    },
    {
     "name": "description",
     "offset": 44,
-    "type": "char[80]",
-    "width": 80,
+    "type": "i8",
+    "count": 80,
+    "width": 1,
     "src": "kit"
    },
    {
     "name": "colors",
     "offset": 124,
-    "type": "char[100]",
-    "width": 100,
+    "type": "i8",
+    "count": 100,
+    "width": 1,
     "src": "kit"
    },
    {
     "name": "flags",
     "offset": 224,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314624,6 +315017,7 @@
     "name": "order",
     "offset": 228,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314631,6 +315025,7 @@
     "name": "isValid",
     "offset": 232,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314638,6 +315033,7 @@
     "name": "unlockScore",
     "offset": 236,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314645,6 +315041,7 @@
     "name": "unlockFlags",
     "offset": 240,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314652,6 +315049,7 @@
     "name": "isLocked",
     "offset": 244,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314659,6 +315057,7 @@
     "name": "horsepower",
     "offset": 248,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314666,6 +315065,7 @@
     "name": "topSpeed",
     "offset": 252,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314673,6 +315073,7 @@
     "name": "durability",
     "offset": 256,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314680,6 +315081,7 @@
     "name": "mass",
     "offset": 260,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314687,6 +315089,7 @@
     "name": "rewardFlags",
     "offset": 264,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314694,6 +315097,7 @@
     "name": "unk_10C",
     "offset": 268,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314701,6 +315105,7 @@
     "name": "scoringBias",
     "offset": 272,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314708,6 +315113,7 @@
     "name": "uiDist",
     "offset": 276,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314715,6 +315121,7 @@
     "name": "unk_118",
     "offset": 280,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314722,6 +315129,7 @@
     "name": "unk_11C",
     "offset": 284,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314729,6 +315137,7 @@
     "name": "tuningCrc",
     "offset": 288,
     "type": "u32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -314743,14 +315152,16 @@
    {
     "name": "unknown",
     "offset": 0,
-    "type": "unsigned __int8[48]",
-    "width": 48,
+    "type": "u8",
+    "count": 48,
+    "width": 1,
     "src": "kit"
    },
    {
     "name": "colliderId",
     "offset": 48,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -314765,8 +315176,9 @@
    {
     "name": "Indices",
     "offset": 0,
-    "type": "unsigned __int16[2]",
-    "width": 4,
+    "type": "u16",
+    "count": 2,
+    "width": 2,
     "src": "kit"
    }
   ],
@@ -314781,20 +315193,23 @@
     "name": "IntersectionPoint",
     "offset": 0,
     "type": "lvlIntersectionPoint",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_4",
     "offset": 4,
-    "type": "u8[32]",
-    "width": 32,
+    "type": "u8",
+    "count": 32,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "PolyIndex",
     "offset": 36,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314802,6 +315217,7 @@
     "name": "field_28",
     "offset": 40,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314809,6 +315225,7 @@
     "name": "field_2C",
     "offset": 44,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314816,6 +315233,7 @@
     "name": "field_30",
     "offset": 48,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314823,48 +315241,55 @@
     "name": "StartPos",
     "offset": 52,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_38",
     "offset": 56,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "EndPos",
     "offset": 64,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_44",
     "offset": 68,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "field_4C",
     "offset": 76,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_50",
     "offset": 80,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Poly",
     "offset": 88,
     "type": "phPolygon*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314872,6 +315297,7 @@
     "name": "MaterialIndex",
     "offset": 92,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314879,6 +315305,7 @@
     "name": "field_60",
     "offset": 96,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314886,6 +315313,7 @@
     "name": "field_64",
     "offset": 100,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314893,6 +315321,7 @@
     "name": "field_68",
     "offset": 104,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314900,6 +315329,7 @@
     "name": "Bound",
     "offset": 108,
     "type": "phBound*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314907,6 +315337,7 @@
     "name": "field_70",
     "offset": 112,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314914,6 +315345,7 @@
     "name": "field_74",
     "offset": 116,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314921,6 +315353,7 @@
     "name": "field_78",
     "offset": 120,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314928,34 +315361,39 @@
     "name": "field_7C",
     "offset": 124,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_80",
     "offset": 128,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "field_88",
     "offset": 136,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_8C",
     "offset": 140,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "field_94",
     "offset": 148,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -314963,14 +315401,16 @@
     "name": "Flags",
     "offset": 152,
     "type": "i16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
    {
     "name": "pad_9A",
     "offset": 154,
-    "type": "u8[2]",
-    "width": 2,
+    "type": "u8",
+    "count": 2,
+    "width": 1,
     "src": "kit-padding"
    }
   ],
@@ -314985,34 +315425,39 @@
     "name": "Point",
     "offset": 0,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_4",
     "offset": 4,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Normal",
     "offset": 12,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_10",
     "offset": 16,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "NormalizedDistance",
     "offset": 24,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315020,6 +315465,7 @@
     "name": "Penetration",
     "offset": 28,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315027,14 +315473,16 @@
     "name": "IntersectResult",
     "offset": 32,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
    {
     "name": "pad_21",
     "offset": 33,
-    "type": "u8[3]",
-    "width": 3,
+    "type": "u8",
+    "count": 3,
+    "width": 1,
     "src": "kit-padding"
    }
   ],
@@ -315049,6 +315497,7 @@
     "name": "__vftable",
     "offset": 0,
     "type": "phPhysicsManager_vtbl*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -315064,6 +315513,7 @@
     "name": "Flag",
     "offset": 0,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315071,28 +315521,32 @@
     "name": "StartPos",
     "offset": 4,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_8",
     "offset": 8,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "EndPos",
     "offset": 16,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_14",
     "offset": 20,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    }
   ],
@@ -315107,6 +315561,7 @@
     "name": "SampleCount",
     "offset": 0,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315114,6 +315569,7 @@
     "name": "Samples",
     "offset": 4,
     "type": "vehEngineSampleWrapper**",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -315129,6 +315585,7 @@
     "name": "LastSurfaceSound",
     "offset": 0,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315136,6 +315593,7 @@
     "name": "field_4",
     "offset": 4,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315143,6 +315601,7 @@
     "name": "IsPlayingSkidSound",
     "offset": 8,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315150,6 +315609,7 @@
     "name": "SurfaceDataCount",
     "offset": 12,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315157,6 +315617,7 @@
     "name": "field_10",
     "offset": 16,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315164,6 +315625,7 @@
     "name": "TireWobbleSampleIndex",
     "offset": 20,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315171,6 +315633,7 @@
     "name": "field_18",
     "offset": 24,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315178,6 +315641,7 @@
     "name": "field_1c",
     "offset": 28,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315185,6 +315649,7 @@
     "name": "MaxSuspensionVolume",
     "offset": 32,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315192,6 +315657,7 @@
     "name": "MinSuspensionVolume",
     "offset": 36,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315199,6 +315665,7 @@
     "name": "VolumeMultiplier",
     "offset": 40,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315206,6 +315673,7 @@
     "name": "MinSuspensionVelocity",
     "offset": 44,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315213,6 +315681,7 @@
     "name": "MaxSuspensionVelocity",
     "offset": 48,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315220,6 +315689,7 @@
     "name": "field_34",
     "offset": 52,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315227,6 +315697,7 @@
     "name": "TireWobbleMinVolume",
     "offset": 56,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315234,6 +315705,7 @@
     "name": "TireWobbleMaxVolume",
     "offset": 60,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315241,6 +315713,7 @@
     "name": "TireWobbleMinPitch",
     "offset": 64,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315248,6 +315721,7 @@
     "name": "TireWobbleMaxPitch",
     "offset": 68,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315255,6 +315729,7 @@
     "name": "TireWobblePitchDivisor",
     "offset": 72,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315262,6 +315737,7 @@
     "name": "field_4c",
     "offset": 76,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315269,6 +315745,7 @@
     "name": "field_50",
     "offset": 80,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315276,6 +315753,7 @@
     "name": "field_54",
     "offset": 84,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315283,6 +315761,7 @@
     "name": "field_58",
     "offset": 88,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315290,6 +315769,7 @@
     "name": "SurfaceDatas",
     "offset": 92,
     "type": "vehSurfaceAudioData**",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315297,6 +315777,7 @@
     "name": "SuspensionSound",
     "offset": 96,
     "type": "AudSoundBase*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315304,6 +315785,7 @@
     "name": "WobbleSoundPtr",
     "offset": 100,
     "type": "AudSoundBase*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315311,6 +315793,7 @@
     "name": "WHL0",
     "offset": 104,
     "type": "vehWheel*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315318,6 +315801,7 @@
     "name": "WHL1",
     "offset": 108,
     "type": "vehWheel*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315325,6 +315809,7 @@
     "name": "WHL2",
     "offset": 112,
     "type": "vehWheel*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315332,6 +315817,7 @@
     "name": "WHL3",
     "offset": 116,
     "type": "vehWheel*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315339,6 +315825,7 @@
     "name": "PositionPtr",
     "offset": 120,
     "type": "Vector3*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315346,6 +315833,7 @@
     "name": "CarDamage",
     "offset": 124,
     "type": "vehCarDamage*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315353,6 +315841,7 @@
     "name": "field_80",
     "offset": 128,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -315368,6 +315857,7 @@
     "name": "MinSlippage",
     "offset": 0,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315375,6 +315865,7 @@
     "name": "MaxSlippage",
     "offset": 4,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315382,6 +315873,7 @@
     "name": "SkidSound",
     "offset": 8,
     "type": "AudSoundBase*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315389,6 +315881,7 @@
     "name": "SampleIndex",
     "offset": 12,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -315404,6 +315897,7 @@
     "name": "field_0",
     "offset": 0,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315411,6 +315905,7 @@
     "name": "UpdateCount",
     "offset": 4,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315418,6 +315913,7 @@
     "name": "RailSet",
     "offset": 8,
     "type": "aiRailSet*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315425,6 +315921,7 @@
     "name": "VehicleSpline",
     "offset": 12,
     "type": "aiVehicleSpline*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315432,6 +315929,7 @@
     "name": "CalcLane",
     "offset": 16,
     "type": "i16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -315439,6 +315937,7 @@
     "name": "Stopped",
     "offset": 18,
     "type": "i16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    }
@@ -315454,6 +315953,7 @@
     "name": "field_0",
     "offset": 0,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315461,6 +315961,7 @@
     "name": "UpdateCount",
     "offset": 4,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315468,6 +315969,7 @@
     "name": "RailSet",
     "offset": 8,
     "type": "aiRailSet*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315475,6 +315977,7 @@
     "name": "VehicleAmbient",
     "offset": 12,
     "type": "aiVehicleAmbient*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315482,20 +315985,23 @@
     "name": "StartPos",
     "offset": 16,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_14",
     "offset": 20,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "RoadDist",
     "offset": 28,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315503,6 +316009,7 @@
     "name": "RegainDist",
     "offset": 32,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -315518,6 +316025,7 @@
     "name": "__vftable",
     "offset": 0,
     "type": "lvlInstance_vtbl*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315525,6 +316033,7 @@
     "name": "Owner",
     "offset": 4,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -315532,6 +316041,7 @@
     "name": "Subtype",
     "offset": 5,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -315539,6 +316049,7 @@
     "name": "room",
     "offset": 6,
     "type": "i16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -315546,6 +316057,7 @@
     "name": "Flags",
     "offset": 8,
     "type": "u16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -315553,6 +316065,7 @@
     "name": "GeomIndex",
     "offset": 10,
     "type": "u16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -315560,6 +316073,7 @@
     "name": "Previous",
     "offset": 12,
     "type": "lvlInstance*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315567,6 +316081,7 @@
     "name": "Next",
     "offset": 16,
     "type": "lvlInstance*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315574,6 +316089,7 @@
     "name": "Spline",
     "offset": 20,
     "type": "aiVehicleSpline*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315581,6 +316097,7 @@
     "name": "SignalFrequency",
     "offset": 24,
     "type": "i16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -315588,13 +316105,15 @@
     "name": "SignalState",
     "offset": 26,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
    {
     "name": "pad_1B",
     "offset": 27,
-    "type": "u8[1]",
+    "type": "u8",
+    "count": 1,
     "width": 1,
     "src": "kit-padding"
    },
@@ -315602,6 +316121,7 @@
     "name": "LOD",
     "offset": 28,
     "type": "i16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -315609,6 +316129,7 @@
     "name": "Variant",
     "offset": 30,
     "type": "i16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -315616,6 +316137,7 @@
     "name": "BreakableMgr",
     "offset": 32,
     "type": "vehBreakableMgr*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315623,28 +316145,32 @@
     "name": "HeadlightPosition",
     "offset": 36,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_28",
     "offset": 40,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "VehiclePosition",
     "offset": 48,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_34",
     "offset": 52,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    }
   ],
@@ -315659,20 +316185,23 @@
     "name": "__vftable",
     "offset": 0,
     "type": "Base_vtbl*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "buffer",
     "offset": 4,
-    "type": "unsigned __int8[176]",
-    "width": 176,
+    "type": "u8",
+    "count": 176,
+    "width": 1,
     "src": "kit"
    },
    {
     "name": "ID",
     "offset": 180,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315680,34 +316209,39 @@
     "name": "ICS",
     "offset": 184,
     "type": "phInertialCS",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_BC",
     "offset": 188,
-    "type": "u8[432]",
-    "width": 432,
+    "type": "u8",
+    "count": 432,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Sleep",
     "offset": 620,
     "type": "phSleep",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_270",
     "offset": 624,
-    "type": "u8[76]",
-    "width": 76,
+    "type": "u8",
+    "count": 76,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Instance",
     "offset": 700,
     "type": "lvlInstance*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315715,20 +316249,23 @@
     "name": "Particles",
     "offset": 704,
     "type": "asParticles",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_2C4",
     "offset": 708,
-    "type": "u8[80]",
-    "width": 80,
+    "type": "u8",
+    "count": 80,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Timer",
     "offset": 788,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -315744,6 +316281,7 @@
     "name": "__vftable",
     "offset": 0,
     "type": "phBound_vtbl*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315751,6 +316289,7 @@
     "name": "MaterialCount",
     "offset": 4,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315758,6 +316297,7 @@
     "name": "Type",
     "offset": 8,
     "type": "phBound::BoundType",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315765,62 +316305,71 @@
     "name": "Min",
     "offset": 12,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_10",
     "offset": 16,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Max",
     "offset": 24,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_1C",
     "offset": 28,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "IsOffset",
     "offset": 36,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
    {
     "name": "pad_25",
     "offset": 37,
-    "type": "u8[3]",
-    "width": 3,
+    "type": "u8",
+    "count": 3,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Offset",
     "offset": 40,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_2C",
     "offset": 44,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Radius",
     "offset": 52,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315828,6 +316377,7 @@
     "name": "Flexibility",
     "offset": 56,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315835,20 +316385,23 @@
     "name": "IsFlexible",
     "offset": 60,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
    {
     "name": "pad_3D",
     "offset": 61,
-    "type": "u8[3]",
-    "width": 3,
+    "type": "u8",
+    "count": 3,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "o16",
     "offset": 64,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315856,6 +316409,7 @@
     "name": "Penetration",
     "offset": 68,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315863,6 +316417,7 @@
     "name": "PenetrationBarelyMoved",
     "offset": 72,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315870,6 +316425,7 @@
     "name": "VertexCount",
     "offset": 76,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315877,6 +316433,7 @@
     "name": "PolygonCount",
     "offset": 80,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315884,6 +316441,7 @@
     "name": "EdgeCount",
     "offset": 84,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315891,6 +316449,7 @@
     "name": "VertexPtr",
     "offset": 88,
     "type": "Vector3*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315898,6 +316457,7 @@
     "name": "PolygonsPtr",
     "offset": 92,
     "type": "phPolygon*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315905,6 +316465,7 @@
     "name": "HotEdgePtr",
     "offset": 96,
     "type": "phHotEdge*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315912,48 +316473,55 @@
     "name": "Size",
     "offset": 100,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_68",
     "offset": 104,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Vertices",
     "offset": 112,
-    "type": "Vector3[8]",
-    "width": 32,
+    "type": "Vector3",
+    "count": 8,
+    "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_90",
     "offset": 144,
-    "type": "u8[64]",
-    "width": 64,
+    "type": "u8",
+    "count": 64,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Polygons",
     "offset": 208,
-    "type": "phPolygon[6]",
-    "width": 24,
+    "type": "phPolygon",
+    "count": 6,
+    "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_E8",
     "offset": 232,
-    "type": "u8[552]",
-    "width": 552,
+    "type": "u8",
+    "count": 552,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Materials",
     "offset": 784,
     "type": "phMaterial**",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315961,6 +316529,7 @@
     "name": "Material",
     "offset": 788,
     "type": "lvlMaterial*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -315976,6 +316545,7 @@
     "name": "__vftable",
     "offset": 0,
     "type": "phBound_vtbl*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315983,6 +316553,7 @@
     "name": "MaterialCount",
     "offset": 4,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315990,6 +316561,7 @@
     "name": "Type",
     "offset": 8,
     "type": "phBound::BoundType",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -315997,62 +316569,71 @@
     "name": "Min",
     "offset": 12,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_10",
     "offset": 16,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Max",
     "offset": 24,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_1C",
     "offset": 28,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "IsOffset",
     "offset": 36,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
    {
     "name": "pad_25",
     "offset": 37,
-    "type": "u8[3]",
-    "width": 3,
+    "type": "u8",
+    "count": 3,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Offset",
     "offset": 40,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_2C",
     "offset": 44,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Radius",
     "offset": 52,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316060,6 +316641,7 @@
     "name": "Flexibility",
     "offset": 56,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316067,20 +316649,23 @@
     "name": "IsFlexible",
     "offset": 60,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
    {
     "name": "pad_3D",
     "offset": 61,
-    "type": "u8[3]",
-    "width": 3,
+    "type": "u8",
+    "count": 3,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "o16",
     "offset": 64,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316088,6 +316673,7 @@
     "name": "Penetration",
     "offset": 68,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316095,6 +316681,7 @@
     "name": "PenetrationBarelyMoved",
     "offset": 72,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316102,6 +316689,7 @@
     "name": "VertexCount",
     "offset": 76,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316109,6 +316697,7 @@
     "name": "PolygonCount",
     "offset": 80,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316116,6 +316705,7 @@
     "name": "EdgeCount",
     "offset": 84,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316123,6 +316713,7 @@
     "name": "VertexPtr",
     "offset": 88,
     "type": "Vector3*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316130,6 +316721,7 @@
     "name": "PolygonsPtr",
     "offset": 92,
     "type": "phPolygon*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316137,6 +316729,7 @@
     "name": "HotEdgePtr",
     "offset": 96,
     "type": "phHotEdge*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316144,6 +316737,7 @@
     "name": "Vertices",
     "offset": 100,
     "type": "Vector3*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316151,6 +316745,7 @@
     "name": "Materials",
     "offset": 104,
     "type": "phMaterial*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316158,6 +316753,7 @@
     "name": "HotEdges",
     "offset": 108,
     "type": "phHotEdge*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316165,6 +316761,7 @@
     "name": "EdgeNormals",
     "offset": 112,
     "type": "Vector3*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316172,6 +316769,7 @@
     "name": "EdgeCosines",
     "offset": 116,
     "type": "f32*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316179,20 +316777,23 @@
     "name": "KeepMemory",
     "offset": 120,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
    {
     "name": "pad_79",
     "offset": 121,
-    "type": "u8[3]",
-    "width": 3,
+    "type": "u8",
+    "count": 3,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Material",
     "offset": 124,
     "type": "lvlMaterial*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -316208,6 +316809,7 @@
     "name": "__vftable",
     "offset": 0,
     "type": "phBound_vtbl*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316215,6 +316817,7 @@
     "name": "MaterialCount",
     "offset": 4,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316222,6 +316825,7 @@
     "name": "Type",
     "offset": 8,
     "type": "phBound::BoundType",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316229,62 +316833,71 @@
     "name": "Min",
     "offset": 12,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_10",
     "offset": 16,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Max",
     "offset": 24,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_1C",
     "offset": 28,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "IsOffset",
     "offset": 36,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
    {
     "name": "pad_25",
     "offset": 37,
-    "type": "u8[3]",
-    "width": 3,
+    "type": "u8",
+    "count": 3,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Offset",
     "offset": 40,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_2C",
     "offset": 44,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Radius",
     "offset": 52,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316292,6 +316905,7 @@
     "name": "Flexibility",
     "offset": 56,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316299,20 +316913,23 @@
     "name": "IsFlexible",
     "offset": 60,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
    {
     "name": "pad_3D",
     "offset": 61,
-    "type": "u8[3]",
-    "width": 3,
+    "type": "u8",
+    "count": 3,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "o16",
     "offset": 64,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316320,6 +316937,7 @@
     "name": "Penetration",
     "offset": 68,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316327,6 +316945,7 @@
     "name": "PenetrationBarelyMoved",
     "offset": 72,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316334,6 +316953,7 @@
     "name": "Radius",
     "offset": 76,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316341,6 +316961,7 @@
     "name": "Height",
     "offset": 80,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316348,20 +316969,23 @@
     "name": "Material",
     "offset": 84,
     "type": "phMaterial",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_58",
     "offset": 88,
-    "type": "u8[44]",
-    "width": 44,
+    "type": "u8",
+    "count": 44,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Material",
     "offset": 132,
     "type": "lvlMaterial*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -316377,6 +317001,7 @@
     "name": "__vftable",
     "offset": 0,
     "type": "phBound_vtbl*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316384,6 +317009,7 @@
     "name": "MaterialCount",
     "offset": 4,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316391,6 +317017,7 @@
     "name": "Type",
     "offset": 8,
     "type": "phBound::BoundType",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316398,62 +317025,71 @@
     "name": "Min",
     "offset": 12,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_10",
     "offset": 16,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Max",
     "offset": 24,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_1C",
     "offset": 28,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "IsOffset",
     "offset": 36,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
    {
     "name": "pad_25",
     "offset": 37,
-    "type": "u8[3]",
-    "width": 3,
+    "type": "u8",
+    "count": 3,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Offset",
     "offset": 40,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_2C",
     "offset": 44,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Radius",
     "offset": 52,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316461,6 +317097,7 @@
     "name": "Flexibility",
     "offset": 56,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316468,20 +317105,23 @@
     "name": "IsFlexible",
     "offset": 60,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
    {
     "name": "pad_3D",
     "offset": 61,
-    "type": "u8[3]",
-    "width": 3,
+    "type": "u8",
+    "count": 3,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "o16",
     "offset": 64,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316489,6 +317129,7 @@
     "name": "Penetration",
     "offset": 68,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316496,6 +317137,7 @@
     "name": "PenetrationBarelyMoved",
     "offset": 72,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316503,6 +317145,7 @@
     "name": "Radius",
     "offset": 76,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316510,20 +317153,23 @@
     "name": "Material",
     "offset": 80,
     "type": "phMaterial",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_54",
     "offset": 84,
-    "type": "u8[44]",
-    "width": 44,
+    "type": "u8",
+    "count": 44,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "Material",
     "offset": 128,
     "type": "lvlMaterial*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -316539,6 +317185,7 @@
     "name": "Flag",
     "offset": 0,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316546,48 +317193,55 @@
     "name": "StartPos",
     "offset": 4,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_8",
     "offset": 8,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "EndPos",
     "offset": 16,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_14",
     "offset": 20,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "IsVertical",
     "offset": 28,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
    {
     "name": "pad_1D",
     "offset": 29,
-    "type": "u8[3]",
-    "width": 3,
+    "type": "u8",
+    "count": 3,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "InvLength",
     "offset": 32,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316595,6 +317249,7 @@
     "name": "SegmentInfo",
     "offset": 36,
     "type": "lvlSegmentInfo*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -316610,6 +317265,7 @@
     "name": "MinValue",
     "offset": 0,
     "type": "f32*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316617,6 +317273,7 @@
     "name": "MaxValue",
     "offset": 4,
     "type": "f32*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316624,6 +317281,7 @@
     "name": "DestX",
     "offset": 8,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316631,6 +317289,7 @@
     "name": "DestY",
     "offset": 12,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316638,6 +317297,7 @@
     "name": "BitmapGauge",
     "offset": 16,
     "type": "gfxBitmap*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316645,6 +317305,7 @@
     "name": "BitmapLabel",
     "offset": 20,
     "type": "gfxBitmap*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316652,6 +317313,7 @@
     "name": "DimensionType",
     "offset": 24,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316659,6 +317321,7 @@
     "name": "ExternalView",
     "offset": 28,
     "type": "mmExternalView*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316666,6 +317329,7 @@
     "name": "BitmapDimension",
     "offset": 32,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -316681,6 +317345,7 @@
     "name": "vtable",
     "offset": 0,
     "type": "void*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316688,6 +317353,7 @@
     "name": "Pan",
     "offset": 4,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316695,6 +317361,7 @@
     "name": "field_8",
     "offset": 8,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316702,6 +317369,7 @@
     "name": "Attenuation",
     "offset": 12,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316709,6 +317377,7 @@
     "name": "LastDoppler",
     "offset": 16,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316716,6 +317385,7 @@
     "name": "MinDropOffSqr",
     "offset": 20,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316723,6 +317393,7 @@
     "name": "MaxDropOffSqr",
     "offset": 24,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316730,6 +317401,7 @@
     "name": "field_1c",
     "offset": 28,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316737,6 +317409,7 @@
     "name": "PositionPtrPseudoDistChangeRate",
     "offset": 32,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316744,6 +317417,7 @@
     "name": "PositionPtrPseudoDist",
     "offset": 36,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316751,6 +317425,7 @@
     "name": "PositionPtrLastPseudoDist",
     "offset": 40,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316758,6 +317433,7 @@
     "name": "LeftPositionPtrDistSqr",
     "offset": 44,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316765,6 +317441,7 @@
     "name": "RightPositionPtrDistSqr",
     "offset": 48,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316772,6 +317449,7 @@
     "name": "DropOffDivisor",
     "offset": 52,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316779,6 +317457,7 @@
     "name": "LeftPercentToMaxDist",
     "offset": 56,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316786,6 +317465,7 @@
     "name": "RightPercentToMaxDist",
     "offset": 60,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316793,6 +317473,7 @@
     "name": "Priority",
     "offset": 64,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316800,6 +317481,7 @@
     "name": "ObjectId3D",
     "offset": 68,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316807,6 +317489,7 @@
     "name": "Is3D",
     "offset": 72,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -316814,6 +317497,7 @@
     "name": "field_49",
     "offset": 73,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -316821,6 +317505,7 @@
     "name": "field_4a",
     "offset": 74,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -316828,6 +317513,7 @@
     "name": "field_4b",
     "offset": 75,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -316835,6 +317521,7 @@
     "name": "LeftPositionPtr",
     "offset": 76,
     "type": "Vector3*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316842,6 +317529,7 @@
     "name": "RightPositionPtr",
     "offset": 80,
     "type": "Vector3*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316849,6 +317537,7 @@
     "name": "VectorPoints",
     "offset": 84,
     "type": "Vector3**",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316856,6 +317545,7 @@
     "name": "VectorPointMode",
     "offset": 88,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316863,6 +317553,7 @@
     "name": "NumVectorPoints",
     "offset": 92,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316870,6 +317561,7 @@
     "name": "field_60",
     "offset": 96,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316877,6 +317569,7 @@
     "name": "field_64",
     "offset": 100,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316884,6 +317577,7 @@
     "name": "field_68",
     "offset": 104,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316891,6 +317585,7 @@
     "name": "field_6c",
     "offset": 108,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316898,6 +317593,7 @@
     "name": "MinAmpSpeed",
     "offset": 112,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316905,6 +317601,7 @@
     "name": "field_74",
     "offset": 116,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316912,6 +317609,7 @@
     "name": "HornVolume",
     "offset": 120,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316919,6 +317617,7 @@
     "name": "Pan",
     "offset": 124,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316926,34 +317625,39 @@
     "name": "SurfaceAudio",
     "offset": 128,
     "type": "vehSurfaceAudio",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_84",
     "offset": 132,
-    "type": "u8[128]",
-    "width": 128,
+    "type": "u8",
+    "count": 128,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "EngineAudio",
     "offset": 260,
     "type": "vehEngineAudio",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_108",
     "offset": 264,
-    "type": "u8[4]",
-    "width": 4,
+    "type": "u8",
+    "count": 4,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "HornSound",
     "offset": 268,
     "type": "AudSoundBase*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316961,6 +317665,7 @@
     "name": "ClutchSound",
     "offset": 272,
     "type": "AudSoundBase*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316968,6 +317673,7 @@
     "name": "ClutchSampleVolume",
     "offset": 276,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316975,6 +317681,7 @@
     "name": "CarSim",
     "offset": 280,
     "type": "vehCarSim*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316982,6 +317689,7 @@
     "name": "HornSampleIndex",
     "offset": 284,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316989,6 +317697,7 @@
     "name": "ClutchSampleIndex",
     "offset": 288,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -316996,6 +317705,7 @@
     "name": "LastGear",
     "offset": 292,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317003,6 +317713,7 @@
     "name": "field_128",
     "offset": 296,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317010,6 +317721,7 @@
     "name": "field_12c",
     "offset": 300,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -317017,6 +317729,7 @@
     "name": "EchoOn",
     "offset": 301,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -317024,6 +317737,7 @@
     "name": "field_12e",
     "offset": 302,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -317031,6 +317745,7 @@
     "name": "field_12f",
     "offset": 303,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    }
@@ -317046,6 +317761,7 @@
     "name": "vtable",
     "offset": 0,
     "type": "void*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317053,6 +317769,7 @@
     "name": "Pan",
     "offset": 4,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317060,6 +317777,7 @@
     "name": "field_8",
     "offset": 8,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317067,6 +317785,7 @@
     "name": "Attenuation",
     "offset": 12,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317074,6 +317793,7 @@
     "name": "LastDoppler",
     "offset": 16,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317081,6 +317801,7 @@
     "name": "MinDropOffSqr",
     "offset": 20,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317088,6 +317809,7 @@
     "name": "MaxDropOffSqr",
     "offset": 24,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317095,6 +317817,7 @@
     "name": "field_1c",
     "offset": 28,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317102,6 +317825,7 @@
     "name": "PositionPtrPseudoDistChangeRate",
     "offset": 32,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317109,6 +317833,7 @@
     "name": "PositionPtrPseudoDist",
     "offset": 36,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317116,6 +317841,7 @@
     "name": "PositionPtrLastPseudoDist",
     "offset": 40,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317123,6 +317849,7 @@
     "name": "LeftPositionPtrDistSqr",
     "offset": 44,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317130,6 +317857,7 @@
     "name": "RightPositionPtrDistSqr",
     "offset": 48,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317137,6 +317865,7 @@
     "name": "DropOffDivisor",
     "offset": 52,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317144,6 +317873,7 @@
     "name": "LeftPercentToMaxDist",
     "offset": 56,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317151,6 +317881,7 @@
     "name": "RightPercentToMaxDist",
     "offset": 60,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317158,6 +317889,7 @@
     "name": "Priority",
     "offset": 64,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317165,6 +317897,7 @@
     "name": "ObjectId3D",
     "offset": 68,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317172,6 +317905,7 @@
     "name": "Is3D",
     "offset": 72,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -317179,6 +317913,7 @@
     "name": "field_49",
     "offset": 73,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -317186,6 +317921,7 @@
     "name": "field_4a",
     "offset": 74,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -317193,6 +317929,7 @@
     "name": "field_4b",
     "offset": 75,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -317200,6 +317937,7 @@
     "name": "LeftPositionPtr",
     "offset": 76,
     "type": "Vector3*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317207,6 +317945,7 @@
     "name": "RightPositionPtr",
     "offset": 80,
     "type": "Vector3*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317214,6 +317953,7 @@
     "name": "VectorPoints",
     "offset": 84,
     "type": "Vector3**",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317221,6 +317961,7 @@
     "name": "VectorPointMode",
     "offset": 88,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317228,6 +317969,7 @@
     "name": "NumVectorPoints",
     "offset": 92,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317235,6 +317977,7 @@
     "name": "field_60",
     "offset": 96,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317242,6 +317985,7 @@
     "name": "field_64",
     "offset": 100,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317249,6 +317993,7 @@
     "name": "field_68",
     "offset": 104,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317256,6 +318001,7 @@
     "name": "field_6c",
     "offset": 108,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317263,6 +318009,7 @@
     "name": "MinAmpSpeed",
     "offset": 112,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317270,6 +318017,7 @@
     "name": "field_74",
     "offset": 116,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317277,6 +318025,7 @@
     "name": "HornVolume",
     "offset": 120,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317284,6 +318033,7 @@
     "name": "Pan",
     "offset": 124,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317291,34 +318041,39 @@
     "name": "SurfaceAudio",
     "offset": 128,
     "type": "vehSurfaceAudio",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_84",
     "offset": 132,
-    "type": "u8[128]",
-    "width": 128,
+    "type": "u8",
+    "count": 128,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "EngineAudio",
     "offset": 260,
     "type": "vehEngineAudio",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_108",
     "offset": 264,
-    "type": "u8[4]",
-    "width": 4,
+    "type": "u8",
+    "count": 4,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "HornSound",
     "offset": 268,
     "type": "AudSoundBase*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317326,6 +318081,7 @@
     "name": "ClutchSound",
     "offset": 272,
     "type": "AudSoundBase*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317333,6 +318089,7 @@
     "name": "ClutchSampleVolume",
     "offset": 276,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317340,6 +318097,7 @@
     "name": "CarSim",
     "offset": 280,
     "type": "vehCarSim*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317347,6 +318105,7 @@
     "name": "HornSampleIndex",
     "offset": 284,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317354,6 +318113,7 @@
     "name": "ClutchSampleIndex",
     "offset": 288,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317361,6 +318121,7 @@
     "name": "LastGear",
     "offset": 292,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317368,6 +318129,7 @@
     "name": "field_128",
     "offset": 296,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317375,6 +318137,7 @@
     "name": "field_12c",
     "offset": 300,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -317382,6 +318145,7 @@
     "name": "EchoOn",
     "offset": 301,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -317389,6 +318153,7 @@
     "name": "field_12e",
     "offset": 302,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -317396,6 +318161,7 @@
     "name": "field_12f",
     "offset": 303,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -317403,6 +318169,7 @@
     "name": "NitroVolume",
     "offset": 304,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317410,6 +318177,7 @@
     "name": "field_134",
     "offset": 308,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317417,6 +318185,7 @@
     "name": "NitroSound",
     "offset": 312,
     "type": "AudSoundBase*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -317432,6 +318201,7 @@
     "name": "vtable",
     "offset": 0,
     "type": "void*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317439,6 +318209,7 @@
     "name": "Pan",
     "offset": 4,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317446,6 +318217,7 @@
     "name": "field_8",
     "offset": 8,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317453,6 +318225,7 @@
     "name": "Attenuation",
     "offset": 12,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317460,6 +318233,7 @@
     "name": "LastDoppler",
     "offset": 16,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317467,6 +318241,7 @@
     "name": "MinDropOffSqr",
     "offset": 20,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317474,6 +318249,7 @@
     "name": "MaxDropOffSqr",
     "offset": 24,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317481,6 +318257,7 @@
     "name": "field_1c",
     "offset": 28,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317488,6 +318265,7 @@
     "name": "PositionPtrPseudoDistChangeRate",
     "offset": 32,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317495,6 +318273,7 @@
     "name": "PositionPtrPseudoDist",
     "offset": 36,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317502,6 +318281,7 @@
     "name": "PositionPtrLastPseudoDist",
     "offset": 40,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317509,6 +318289,7 @@
     "name": "LeftPositionPtrDistSqr",
     "offset": 44,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317516,6 +318297,7 @@
     "name": "RightPositionPtrDistSqr",
     "offset": 48,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317523,6 +318305,7 @@
     "name": "DropOffDivisor",
     "offset": 52,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317530,6 +318313,7 @@
     "name": "LeftPercentToMaxDist",
     "offset": 56,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317537,6 +318321,7 @@
     "name": "RightPercentToMaxDist",
     "offset": 60,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317544,6 +318329,7 @@
     "name": "Priority",
     "offset": 64,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317551,6 +318337,7 @@
     "name": "ObjectId3D",
     "offset": 68,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317558,6 +318345,7 @@
     "name": "Is3D",
     "offset": 72,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -317565,6 +318353,7 @@
     "name": "field_49",
     "offset": 73,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -317572,6 +318361,7 @@
     "name": "field_4a",
     "offset": 74,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -317579,6 +318369,7 @@
     "name": "field_4b",
     "offset": 75,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -317586,6 +318377,7 @@
     "name": "LeftPositionPtr",
     "offset": 76,
     "type": "Vector3*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317593,6 +318385,7 @@
     "name": "RightPositionPtr",
     "offset": 80,
     "type": "Vector3*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317600,6 +318393,7 @@
     "name": "VectorPoints",
     "offset": 84,
     "type": "Vector3**",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317607,6 +318401,7 @@
     "name": "VectorPointMode",
     "offset": 88,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317614,6 +318409,7 @@
     "name": "NumVectorPoints",
     "offset": 92,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317621,6 +318417,7 @@
     "name": "field_60",
     "offset": 96,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317628,6 +318425,7 @@
     "name": "field_64",
     "offset": 100,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317635,6 +318433,7 @@
     "name": "field_68",
     "offset": 104,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317642,6 +318441,7 @@
     "name": "field_6c",
     "offset": 108,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317649,6 +318449,7 @@
     "name": "MinAmpSpeed",
     "offset": 112,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317656,6 +318457,7 @@
     "name": "field_74",
     "offset": 116,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317663,6 +318465,7 @@
     "name": "HornVolume",
     "offset": 120,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317670,6 +318473,7 @@
     "name": "Pan",
     "offset": 124,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317677,34 +318481,39 @@
     "name": "SurfaceAudio",
     "offset": 128,
     "type": "vehSurfaceAudio",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_84",
     "offset": 132,
-    "type": "u8[128]",
-    "width": 128,
+    "type": "u8",
+    "count": 128,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "EngineAudio",
     "offset": 260,
     "type": "vehEngineAudio",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_108",
     "offset": 264,
-    "type": "u8[4]",
-    "width": 4,
+    "type": "u8",
+    "count": 4,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "HornSound",
     "offset": 268,
     "type": "AudSoundBase*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317712,6 +318521,7 @@
     "name": "ClutchSound",
     "offset": 272,
     "type": "AudSoundBase*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317719,6 +318529,7 @@
     "name": "ClutchSampleVolume",
     "offset": 276,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317726,6 +318537,7 @@
     "name": "CarSim",
     "offset": 280,
     "type": "vehCarSim*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317733,6 +318545,7 @@
     "name": "HornSampleIndex",
     "offset": 284,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317740,6 +318553,7 @@
     "name": "ClutchSampleIndex",
     "offset": 288,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317747,6 +318561,7 @@
     "name": "LastGear",
     "offset": 292,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317754,6 +318569,7 @@
     "name": "field_128",
     "offset": 296,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317761,6 +318577,7 @@
     "name": "field_12c",
     "offset": 300,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -317768,6 +318585,7 @@
     "name": "EchoOn",
     "offset": 301,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -317775,6 +318593,7 @@
     "name": "field_12e",
     "offset": 302,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -317782,14 +318601,16 @@
     "name": "field_12f",
     "offset": 303,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
    {
     "name": "_buffer",
     "offset": 304,
-    "type": "unsigned __int8[280]",
-    "width": 280,
+    "type": "u8",
+    "count": 280,
+    "width": 1,
     "src": "kit"
    }
   ],
@@ -317804,6 +318625,7 @@
     "name": "vtable",
     "offset": 0,
     "type": "void*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317811,6 +318633,7 @@
     "name": "Pan",
     "offset": 4,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317818,6 +318641,7 @@
     "name": "field_8",
     "offset": 8,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317825,6 +318649,7 @@
     "name": "Attenuation",
     "offset": 12,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317832,6 +318657,7 @@
     "name": "LastDoppler",
     "offset": 16,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317839,6 +318665,7 @@
     "name": "MinDropOffSqr",
     "offset": 20,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317846,6 +318673,7 @@
     "name": "MaxDropOffSqr",
     "offset": 24,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317853,6 +318681,7 @@
     "name": "field_1c",
     "offset": 28,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317860,6 +318689,7 @@
     "name": "PositionPtrPseudoDistChangeRate",
     "offset": 32,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317867,6 +318697,7 @@
     "name": "PositionPtrPseudoDist",
     "offset": 36,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317874,6 +318705,7 @@
     "name": "PositionPtrLastPseudoDist",
     "offset": 40,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317881,6 +318713,7 @@
     "name": "LeftPositionPtrDistSqr",
     "offset": 44,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317888,6 +318721,7 @@
     "name": "RightPositionPtrDistSqr",
     "offset": 48,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317895,6 +318729,7 @@
     "name": "DropOffDivisor",
     "offset": 52,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317902,6 +318737,7 @@
     "name": "LeftPercentToMaxDist",
     "offset": 56,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317909,6 +318745,7 @@
     "name": "RightPercentToMaxDist",
     "offset": 60,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317916,6 +318753,7 @@
     "name": "Priority",
     "offset": 64,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317923,6 +318761,7 @@
     "name": "ObjectId3D",
     "offset": 68,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317930,6 +318769,7 @@
     "name": "Is3D",
     "offset": 72,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -317937,6 +318777,7 @@
     "name": "field_49",
     "offset": 73,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -317944,6 +318785,7 @@
     "name": "field_4a",
     "offset": 74,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -317951,6 +318793,7 @@
     "name": "field_4b",
     "offset": 75,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -317958,6 +318801,7 @@
     "name": "LeftPositionPtr",
     "offset": 76,
     "type": "Vector3*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317965,6 +318809,7 @@
     "name": "RightPositionPtr",
     "offset": 80,
     "type": "Vector3*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317972,6 +318817,7 @@
     "name": "VectorPoints",
     "offset": 84,
     "type": "Vector3**",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317979,6 +318825,7 @@
     "name": "VectorPointMode",
     "offset": 88,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317986,6 +318833,7 @@
     "name": "NumVectorPoints",
     "offset": 92,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -317993,6 +318841,7 @@
     "name": "field_60",
     "offset": 96,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -318000,6 +318849,7 @@
     "name": "field_64",
     "offset": 100,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -318007,6 +318857,7 @@
     "name": "field_68",
     "offset": 104,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -318014,6 +318865,7 @@
     "name": "field_6c",
     "offset": 108,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -318021,6 +318873,7 @@
     "name": "MinAmpSpeed",
     "offset": 112,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -318028,6 +318881,7 @@
     "name": "field_74",
     "offset": 116,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -318035,6 +318889,7 @@
     "name": "HornVolume",
     "offset": 120,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -318042,6 +318897,7 @@
     "name": "Pan",
     "offset": 124,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -318049,34 +318905,39 @@
     "name": "SurfaceAudio",
     "offset": 128,
     "type": "vehSurfaceAudio",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_84",
     "offset": 132,
-    "type": "u8[128]",
-    "width": 128,
+    "type": "u8",
+    "count": 128,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "EngineAudio",
     "offset": 260,
     "type": "vehEngineAudio",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_108",
     "offset": 264,
-    "type": "u8[4]",
-    "width": 4,
+    "type": "u8",
+    "count": 4,
+    "width": 1,
     "src": "kit-padding"
    },
    {
     "name": "HornSound",
     "offset": 268,
     "type": "AudSoundBase*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -318084,6 +318945,7 @@
     "name": "ClutchSound",
     "offset": 272,
     "type": "AudSoundBase*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -318091,6 +318953,7 @@
     "name": "ClutchSampleVolume",
     "offset": 276,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -318098,6 +318961,7 @@
     "name": "CarSim",
     "offset": 280,
     "type": "vehCarSim*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -318105,6 +318969,7 @@
     "name": "HornSampleIndex",
     "offset": 284,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -318112,6 +318977,7 @@
     "name": "ClutchSampleIndex",
     "offset": 288,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -318119,6 +318985,7 @@
     "name": "LastGear",
     "offset": 292,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -318126,6 +318993,7 @@
     "name": "field_128",
     "offset": 296,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -318133,6 +319001,7 @@
     "name": "field_12c",
     "offset": 300,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -318140,6 +319009,7 @@
     "name": "EchoOn",
     "offset": 301,
     "type": "bool",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -318147,6 +319017,7 @@
     "name": "field_12e",
     "offset": 302,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -318154,6 +319025,7 @@
     "name": "field_12f",
     "offset": 303,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -318161,6 +319033,7 @@
     "name": "ReverseVolume",
     "offset": 304,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -318168,6 +319041,7 @@
     "name": "AirBrakeVolume",
     "offset": 308,
     "type": "f32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -318175,6 +319049,7 @@
     "name": "ReverseSound",
     "offset": 312,
     "type": "AudSoundBase*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -318182,6 +319057,7 @@
     "name": "AirBrakeSound",
     "offset": 316,
     "type": "AudSoundBase*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -318189,6 +319065,7 @@
     "name": "field_140",
     "offset": 320,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -318196,6 +319073,7 @@
     "name": "field_144",
     "offset": 324,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    }
@@ -318211,6 +319089,7 @@
     "name": "__vftable",
     "offset": 0,
     "type": "lvlInstance_vtbl*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -318218,6 +319097,7 @@
     "name": "Owner",
     "offset": 4,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -318225,6 +319105,7 @@
     "name": "Subtype",
     "offset": 5,
     "type": "u8",
+    "count": 0,
     "width": 1,
     "src": "kit"
    },
@@ -318232,6 +319113,7 @@
     "name": "room",
     "offset": 6,
     "type": "i16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -318239,6 +319121,7 @@
     "name": "Flags",
     "offset": 8,
     "type": "u16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -318246,6 +319129,7 @@
     "name": "GeomIndex",
     "offset": 10,
     "type": "u16",
+    "count": 0,
     "width": 2,
     "src": "kit"
    },
@@ -318253,6 +319137,7 @@
     "name": "Previous",
     "offset": 12,
     "type": "lvlInstance*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -318260,6 +319145,7 @@
     "name": "Next",
     "offset": 16,
     "type": "lvlInstance*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -318267,6 +319153,7 @@
     "name": "Trailer",
     "offset": 20,
     "type": "vehTrailer*",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -318274,6 +319161,7 @@
     "name": "Variant",
     "offset": 24,
     "type": "i32",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
@@ -318281,14 +319169,16 @@
     "name": "TrailerHitchPosition",
     "offset": 28,
     "type": "Vector3",
+    "count": 0,
     "width": 4,
     "src": "kit"
    },
    {
     "name": "pad_20",
     "offset": 32,
-    "type": "u8[8]",
-    "width": 8,
+    "type": "u8",
+    "count": 8,
+    "width": 1,
     "src": "kit-padding"
    }
   ],
