@@ -52,7 +52,7 @@ public:
     ARTS_EXPORT virtual i32 PlayFeedbackSample(i32 arg1, i32 arg2, f32* arg3, i32* arg4);
 
     // ?PlayFeedbackSampleID@vehFeedback@@UAEHH@Z
-    ARTS_IMPORT virtual i32 PlayFeedbackSampleID(i32 arg1);
+    ARTS_EXPORT virtual i32 PlayFeedbackSampleID(i32 arg1);
 
     // ?GetNextUnit@vehFeedback@@UAEMH@Z
     ARTS_EXPORT virtual f32 GetNextUnit(i32 arg1);

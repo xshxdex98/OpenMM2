@@ -346,3 +346,50 @@ i32 vehFeedback::Update()
 
     return 1;
 }
+
+// THE CANNED EFFECT PlayFeedbackSampleID PLAYS.
+//
+// The original passes three .rdata addresses, read out of an argument table at 0x005B2E40:
+//
+//     005B2E40: 00000004  005CF874  005CF894      channel 0: length, values, labels
+//     005B2E50: 00000004  005CF884  005CF894      channel 1: length, values, labels
+//
+// and the bytes at those three addresses are, verified against midtown2.exe:
+//
+//     005CF874  1.0  0.0  1.0  0.0     a double pulse
+//     005CF884  1.0  0.9  0.7  0.4     a decaying rumble
+//     005CF894  1    1    1    1       every unit at priority 1
+//
+// DEFINED HERE RATHER THAN REFERENCED, which is a deliberate trade. None of the three carries a
+// name in midtown2.map - they are unnamed constants - so there is no symbol to link against. The
+// exporter reaches them as `?PtxName@vehWheelPtx@@2PAPADA + 620`, its nearest-symbol fallback,
+// which relocates correctly but is not something C++ should depend on: it ties this function to an
+// unrelated class's address by a magic offset. Exporting a generated label instead would mean
+// growing LINKABLE_GLOBALS, which is deliberately not grown.
+//
+// The cost is that the original 48 bytes stay in .rdata unreferenced by our code. Nothing else in
+// the binary reads them - the table at 0x005B2E40 is used by this function alone - and both the
+// function that stores these pointers and the one that reads back through them are now C++, so the
+// duplication is invisible outside this file.
+static f32 SampleValuesPulse[4] = {1.0f, 0.0f, 1.0f, 0.0f};
+static f32 SampleValuesDecay[4] = {1.0f, 0.9f, 0.7f, 0.4f};
+static i32 SampleLabelsUnit[4] = {1, 1, 1, 1};
+
+// ?PlayFeedbackSampleID@vehFeedback@@UAEHH@Z - 0x004D58B0
+//
+// Queues the one canned effect this class knows: a double pulse on the first actuator and a
+// decaying rumble on the second. Effect 0 is the only one - any other id returns 0 without
+// touching anything, which is what `!a2 &&` does at the top of the original.
+//
+// The two calls are chained with && in the original, so the second is skipped when the first finds
+// no free slot. Reproduced with an early return rather than by evaluating both.
+i32 vehFeedback::PlayFeedbackSampleID(i32 arg1)
+{
+    if (arg1 != 0)
+        return 0;
+
+    if (!PlayFeedbackSample(0, 4, SampleValuesPulse, SampleLabelsUnit))
+        return 0;
+
+    return PlayFeedbackSample(1, 4, SampleValuesDecay, SampleLabelsUnit);
+}

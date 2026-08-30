@@ -23,6 +23,7 @@
     "?GetNextUnit@vehFeedback@@UAEMH@Z",
     "?GetNumActuators@vehFeedback@@UAEHXZ",
     "?PlayFeedbackSample@vehFeedback@@UAEHHHPAMPAH@Z",
+    "?PlayFeedbackSampleID@vehFeedback@@UAEHH@Z",
     "?SetActuatorValue@vehFeedback@@UAEHHM@Z",
     "?SetFeedback@vehFeedback@@UAEH_N@Z",
     "?SetTimingUnit@vehFeedback@@UAEHM@Z",

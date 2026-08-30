@@ -186,6 +186,7 @@
   "?Path@aiIntersection@@QAEPAVaiPath@@H@Z",
   "?Perspective@gfxViewport@@QAEXMMMM@Z",
   "?PlayFeedbackSample@vehFeedback@@UAEHHHPAMPAH@Z",
+  "?PlayFeedbackSampleID@vehFeedback@@UAEHH@Z",
   "?PolarView@Matrix34@@QAEXMMMM@Z",
   "?Print@Matrix44@@QBEXPBD@Z",
   "?Print@Vector3@@QBEXPBD@Z",
