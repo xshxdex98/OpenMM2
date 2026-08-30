@@ -40,4 +40,4 @@ public:
 
 // ??_7mmMouseSteerBar@@6B@
 // vtable at 0x005B53C0
-// check_size(mmMouseSteerBar, 0x0); // TODO: no layout in the IDB type library
+// check_size(mmMouseSteerBar, 0x18); // size known, members are not - cannot verify

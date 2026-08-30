@@ -129,4 +129,4 @@ private:
 
 // ??_7Aud3DAmbientObject@@6B@
 // vtable at 0x005B4D18
-// check_size(Aud3DAmbientObject, 0x0); // TODO: no layout in the IDB type library
+// check_size(Aud3DAmbientObject, 0x60); // size known, members are not - cannot verify

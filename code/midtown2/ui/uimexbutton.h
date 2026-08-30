@@ -61,4 +61,4 @@ private:
 
 // ??_7UIMexButton@@6B@
 // vtable at 0x005B3988
-// check_size(UIMexButton, 0x0); // TODO: no layout in the IDB type library
+// check_size(UIMexButton, 0xA4); // size known, members are not - cannot verify

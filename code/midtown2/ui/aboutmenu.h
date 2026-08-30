@@ -46,4 +46,4 @@ public:
 
 // ??_7AboutMenu@@6B@
 // vtable at 0x005B4584
-// check_size(AboutMenu, 0x0); // TODO: no layout in the IDB type library
+// check_size(AboutMenu, 0x8C); // size known, members are not - cannot verify

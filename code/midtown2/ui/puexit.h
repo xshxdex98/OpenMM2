@@ -37,4 +37,4 @@ public:
 
 // ??_7PUExit@@6B@
 // vtable at 0x005B4A44
-// check_size(PUExit, 0x0); // TODO: no layout in the IDB type library
+// check_size(PUExit, 0xBC); // size known, members are not - cannot verify

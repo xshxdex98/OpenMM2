@@ -49,4 +49,4 @@ public:
 
 // ??_7ccStatus@@6B@
 // vtable at 0x005B43DC
-// check_size(ccStatus, 0x0); // TODO: no layout in the IDB type library
+// check_size(ccStatus, 0x18); // size known, members are not - cannot verify

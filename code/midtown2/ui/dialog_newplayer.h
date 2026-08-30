@@ -43,4 +43,4 @@ public:
 
 // ??_7Dialog_NewPlayer@@6B@
 // vtable at 0x005B40DC
-// check_size(Dialog_NewPlayer, 0x0); // TODO: no layout in the IDB type library
+// check_size(Dialog_NewPlayer, 0xBC); // size known, members are not - cannot verify

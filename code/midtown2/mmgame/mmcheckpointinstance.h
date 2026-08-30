@@ -48,4 +48,4 @@ public:
 
 // ??_7mmCheckpointInstance@@6B@
 // vtable at 0x005B1254
-// check_size(mmCheckpointInstance, 0x0); // TODO: no layout in the IDB type library
+// check_size(mmCheckpointInstance, 0x5C); // size known, members are not - cannot verify

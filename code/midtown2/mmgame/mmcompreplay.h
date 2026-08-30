@@ -73,4 +73,4 @@ public:
 
 // ??_7mmCompReplay@@6B@
 // vtable at 0x005B8894
-// check_size(mmCompReplay, 0x0); // TODO: no layout in the IDB type library
+// check_size(mmCompReplay, 0x18); // size known, members are not - cannot verify

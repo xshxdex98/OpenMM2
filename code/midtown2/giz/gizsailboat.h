@@ -54,4 +54,4 @@ public:
 
 // ??_7gizSailboat@@6B@
 // vtable at 0x005B6038
-// check_size(gizSailboat, 0x0); // TODO: no layout in the IDB type library
+// check_size(gizSailboat, 0x4C); // size known, members are not - cannot verify

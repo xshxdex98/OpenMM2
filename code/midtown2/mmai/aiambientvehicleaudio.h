@@ -162,4 +162,4 @@ private:
 
 // ??_7aiAmbientVehicleAudio@@6B@
 // vtable at 0x005B2D74
-// check_size(aiAmbientVehicleAudio, 0x0); // TODO: no layout in the IDB type library
+// check_size(aiAmbientVehicleAudio, 0x60); // size known, members are not - cannot verify

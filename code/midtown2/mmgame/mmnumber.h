@@ -54,4 +54,4 @@ public:
 
 // ??_7mmNumber@@6B@
 // vtable at 0x005B5324
-// check_size(mmNumber, 0x0); // TODO: no layout in the IDB type library
+// check_size(mmNumber, 0x18); // size known, members are not - cannot verify

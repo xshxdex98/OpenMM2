@@ -89,4 +89,4 @@ public:
 
 // ??_7UIVScrollBar@@6B@
 // vtable at 0x005B3ACC
-// check_size(UIVScrollBar, 0x0); // TODO: no layout in the IDB type library
+// check_size(UIVScrollBar, 0x6C); // size known, members are not - cannot verify

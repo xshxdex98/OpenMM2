@@ -101,4 +101,4 @@ private:
 
 // ??_7UITextScroll@@6B@
 // vtable at 0x005B3518
-// check_size(UITextScroll, 0x0); // TODO: no layout in the IDB type library
+// check_size(UITextScroll, 0x6C); // size known, members are not - cannot verify

@@ -58,4 +58,4 @@ public:
 
 // ??_7phCollider@@6B@
 // vtable at 0x005B1CB0
-// check_size(phCollider, 0x34); // size known, members are not - cannot verify
+// check_size(phCollider, 0x74); // size known, members are not - cannot verify

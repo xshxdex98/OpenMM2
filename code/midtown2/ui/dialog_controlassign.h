@@ -40,4 +40,4 @@ public:
 
 // ??_7Dialog_ControlAssign@@6B@
 // vtable at 0x005B416C
-// check_size(Dialog_ControlAssign, 0x0); // TODO: no layout in the IDB type library
+// check_size(Dialog_ControlAssign, 0xBC); // size known, members are not - cannot verify

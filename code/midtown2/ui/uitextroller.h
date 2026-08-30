@@ -77,4 +77,4 @@ public:
 
 // ??_7UITextRoller@@6B@
 // vtable at 0x005B344C
-// check_size(UITextRoller, 0x0); // TODO: no layout in the IDB type library
+// check_size(UITextRoller, 0x6C); // size known, members are not - cannot verify

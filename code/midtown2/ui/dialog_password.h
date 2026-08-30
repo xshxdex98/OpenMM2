@@ -43,4 +43,4 @@ public:
 
 // ??_7Dialog_Password@@6B@
 // vtable at 0x005B3F6C
-// check_size(Dialog_Password, 0x0); // TODO: no layout in the IDB type library
+// check_size(Dialog_Password, 0xBC); // size known, members are not - cannot verify

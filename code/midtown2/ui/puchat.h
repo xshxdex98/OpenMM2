@@ -43,4 +43,4 @@ public:
 
 // ??_7PUChat@@6B@
 // vtable at 0x005B48D0
-// check_size(PUChat, 0x0); // TODO: no layout in the IDB type library
+// check_size(PUChat, 0xBC); // size known, members are not - cannot verify

@@ -73,6 +73,7 @@ PRIMITIVES = OrderedDict([
     # Handles and void pointers. Both are pointer-width and neither has any structure this
     # code needs, so void* is the honest spelling.
     ("LPVOID", "void*"),
+    ("HIMC", "void*"),
     ("LPSTR", "char*"),
     ("HFONT", "void*"),
     ("D3DCOLORVALUE", "D3DCOLORVALUE"),
@@ -348,13 +349,30 @@ def ancestors_of(cls):
     return out
 
 
-def size_of(cls):
-    """Instance size, for check_size. The IDB's own layouts first, MM2Hook's sizeof second."""
-    info = LAYOUT.get(cls)
-    if info:
-        return info["size"]
+def size_of(cls, _guard=None):
+    """Instance size, for check_size. The IDB's own layouts first, MM2Hook's sizeof second.
 
-    return (MM2T.get("sizes") or {}).get(cls)
+    A CLASS IS NEVER SMALLER THAN ITS BASE, and the flat sizes table does not know that. It records
+    mmGameSingle as 0x1C when the class derives from mmGame, whose recovered layout is 0x278. Used
+    as-is that number became mmSingleStunt's skip_to, so the 604 bytes between the two -- bytes
+    that belong to mmGame and are already laid down by inheritance -- were emitted a second time as
+    if they were mmSingleStunt's own, and the class came out exactly 604 too large.
+
+    Taking the larger of the two is not a preference for one source over the other; it is the only
+    value that can be right when they disagree this way.
+    """
+    info = LAYOUT.get(cls)
+    size = info["size"] if info else (MM2T.get("sizes") or {}).get(cls)
+
+    seen = _guard or {cls}
+    base = base_of(cls)
+    if base and base not in seen:
+        seen.add(base)
+        base_size = size_of(base, seen)
+        if base_size and (not size or base_size > size):
+            return base_size
+
+    return size
 
 
 # Every spelling a recovery might produce for the vtable pointer. Matched case-insensitively

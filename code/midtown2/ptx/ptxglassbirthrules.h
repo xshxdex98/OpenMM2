@@ -42,4 +42,4 @@ public:
 
 // ??_7ptxGlassBirthRules@@6B@
 // vtable at 0x005B142C
-// check_size(ptxGlassBirthRules, 0x0); // TODO: no layout in the IDB type library
+// check_size(ptxGlassBirthRules, 0x18); // size known, members are not - cannot verify

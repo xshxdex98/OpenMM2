@@ -48,4 +48,4 @@ public:
 
 // ??_7mmBillInstance@@6B@
 // vtable at 0x005B12C0
-// check_size(mmBillInstance, 0x0); // TODO: no layout in the IDB type library
+// check_size(mmBillInstance, 0x5C); // size known, members are not - cannot verify

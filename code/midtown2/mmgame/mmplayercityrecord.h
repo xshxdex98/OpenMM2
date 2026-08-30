@@ -72,4 +72,4 @@ private:
 
 // ??_7mmPlayerCityRecord@@6B@
 // vtable at 0x005B5234
-// check_size(mmPlayerCityRecord, 0x0); // TODO: no layout in the IDB type library
+// check_size(mmPlayerCityRecord, 0x88); // size known, members are not - cannot verify

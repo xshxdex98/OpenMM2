@@ -73,4 +73,4 @@ protected:
 
 // ??_7UIToggleButton2@@6B@
 // vtable at 0x005B3914
-// check_size(UIToggleButton2, 0x0); // TODO: no layout in the IDB type library
+// check_size(UIToggleButton2, 0xA4); // size known, members are not - cannot verify

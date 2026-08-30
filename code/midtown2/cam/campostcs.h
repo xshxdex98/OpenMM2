@@ -58,4 +58,4 @@ public:
 
 // ??_7camPostCS@@6B@
 // vtable at 0x005B4F4C
-// check_size(camPostCS, 0x0); // TODO: no layout in the IDB type library
+// check_size(camPostCS, 0x90); // size known, members are not - cannot verify

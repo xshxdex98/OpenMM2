@@ -53,4 +53,4 @@ private:
 
 // ??_7mmToggle2@@6B@
 // vtable at 0x005B3CA0
-// check_size(mmToggle2, 0x0); // TODO: no layout in the IDB type library
+// check_size(mmToggle2, 0x18); // size known, members are not - cannot verify

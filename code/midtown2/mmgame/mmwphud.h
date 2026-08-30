@@ -58,4 +58,4 @@ public:
 
 // ??_7mmWPHUD@@6B@
 // vtable at 0x005B0F74
-// check_size(mmWPHUD, 0x0); // TODO: no layout in the IDB type library
+// check_size(mmWPHUD, 0x18); // size known, members are not - cannot verify

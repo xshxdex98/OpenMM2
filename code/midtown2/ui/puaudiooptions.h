@@ -52,4 +52,4 @@ public:
 
 // ??_7PUAudioOptions@@6B@
 // vtable at 0x005B49FC
-// check_size(PUAudioOptions, 0x0); // TODO: no layout in the IDB type library
+// check_size(PUAudioOptions, 0xBC); // size known, members are not - cannot verify

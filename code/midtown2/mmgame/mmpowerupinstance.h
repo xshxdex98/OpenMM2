@@ -48,4 +48,4 @@ public:
 
 // ??_7mmPowerupInstance@@6B@
 // vtable at 0x005B132C
-// check_size(mmPowerupInstance, 0x0); // TODO: no layout in the IDB type library
+// check_size(mmPowerupInstance, 0x5C); // size known, members are not - cannot verify

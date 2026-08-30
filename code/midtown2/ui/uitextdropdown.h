@@ -91,4 +91,4 @@ public:
 
 // ??_7UITextDropdown@@6B@
 // vtable at 0x005B33E0
-// check_size(UITextDropdown, 0x0); // TODO: no layout in the IDB type library
+// check_size(UITextDropdown, 0x6C); // size known, members are not - cannot verify

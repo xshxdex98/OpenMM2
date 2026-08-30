@@ -72,4 +72,4 @@ public:
 
 // ??_7UIControlWidget@@6B@
 // vtable at 0x005B35E8
-// check_size(UIControlWidget, 0x0); // TODO: no layout in the IDB type library
+// check_size(UIControlWidget, 0x6C); // size known, members are not - cannot verify

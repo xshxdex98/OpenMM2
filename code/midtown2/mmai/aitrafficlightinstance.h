@@ -45,4 +45,4 @@ public:
 
 // ??_7aiTrafficLightInstance@@6B@
 // vtable at 0x005B54AC
-// check_size(aiTrafficLightInstance, 0x0); // TODO: no layout in the IDB type library
+// check_size(aiTrafficLightInstance, 0x3C); // size known, members are not - cannot verify

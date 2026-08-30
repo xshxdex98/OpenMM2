@@ -80,4 +80,4 @@ private:
 
 // ??_7lvlMultiRoomInstance@@6B@
 // vtable at 0x005B1C48
-// check_size(lvlMultiRoomInstance, 0x0); // TODO: no layout in the IDB type library
+// check_size(lvlMultiRoomInstance, 0x14); // size known, members are not - cannot verify

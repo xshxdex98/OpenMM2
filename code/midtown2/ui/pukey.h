@@ -44,4 +44,4 @@ private:
 
 // ??_7PUKey@@6B@
 // vtable at 0x005B4840
-// check_size(PUKey, 0x0); // TODO: no layout in the IDB type library
+// check_size(PUKey, 0xBC); // size known, members are not - cannot verify

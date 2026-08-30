@@ -72,4 +72,4 @@ public:
 
 // ??_7PURoster@@6B@
 // vtable at 0x005B4768
-// check_size(PURoster, 0x0); // TODO: no layout in the IDB type library
+// check_size(PURoster, 0xBC); // size known, members are not - cannot verify

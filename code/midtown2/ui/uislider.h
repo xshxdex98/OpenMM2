@@ -91,4 +91,4 @@ public:
 
 // ??_7UISlider@@6B@
 // vtable at 0x005B364C
-// check_size(UISlider, 0x0); // TODO: no layout in the IDB type library
+// check_size(UISlider, 0x6C); // size known, members are not - cannot verify

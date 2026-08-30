@@ -52,4 +52,4 @@ public:
 
 // ??_7PUGraphics@@6B@
 // vtable at 0x005B46D8
-// check_size(PUGraphics, 0x0); // TODO: no layout in the IDB type library
+// check_size(PUGraphics, 0xBC); // size known, members are not - cannot verify

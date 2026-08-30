@@ -46,4 +46,4 @@ public:
 
 // ??_7vehBound@@6B@
 // vtable at 0x005B3110
-// check_size(vehBound, 0x0); // TODO: no layout in the IDB type library
+// check_size(vehBound, 0x7C); // size known, members are not - cannot verify

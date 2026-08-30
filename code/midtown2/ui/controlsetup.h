@@ -90,4 +90,4 @@ public:
 
 // ??_7ControlSetup@@6B@
 // vtable at 0x005B429C
-// check_size(ControlSetup, 0x0); // TODO: no layout in the IDB type library
+// check_size(ControlSetup, 0x8C); // size known, members are not - cannot verify

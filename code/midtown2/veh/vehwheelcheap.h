@@ -50,4 +50,4 @@ public:
 
 // ??_7vehWheelCheap@@6B@
 // vtable at 0x005B8790
-// check_size(vehWheelCheap, 0x0); // TODO: no layout in the IDB type library
+// check_size(vehWheelCheap, 0x18); // size known, members are not - cannot verify

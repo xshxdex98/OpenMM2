@@ -43,4 +43,4 @@ public:
 
 // ??_7mmBridgeAudio@@6B@
 // vtable at 0x005B6260
-// check_size(mmBridgeAudio, 0x0); // TODO: no layout in the IDB type library
+// check_size(mmBridgeAudio, 0x60); // size known, members are not - cannot verify

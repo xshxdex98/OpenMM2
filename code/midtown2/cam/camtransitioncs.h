@@ -67,4 +67,4 @@ public:
 
 // ??_7camTransitionCS@@6B@
 // vtable at 0x005B50EC
-// check_size(camTransitionCS, 0x0); // TODO: no layout in the IDB type library
+// check_size(camTransitionCS, 0x110); // size known, members are not - cannot verify

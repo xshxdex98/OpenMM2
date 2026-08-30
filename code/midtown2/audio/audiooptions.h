@@ -121,4 +121,4 @@ public:
 
 // ??_7AudioOptions@@6B@
 // vtable at 0x005B3D9C
-// check_size(AudioOptions, 0x0); // TODO: no layout in the IDB type library
+// check_size(AudioOptions, 0x8C); // size known, members are not - cannot verify

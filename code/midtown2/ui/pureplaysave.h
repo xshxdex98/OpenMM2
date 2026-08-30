@@ -37,4 +37,4 @@ public:
 
 // ??_7PUReplaySave@@6B@
 // vtable at 0x005B4888
-// check_size(PUReplaySave, 0x0); // TODO: no layout in the IDB type library
+// check_size(PUReplaySave, 0xBC); // size known, members are not - cannot verify

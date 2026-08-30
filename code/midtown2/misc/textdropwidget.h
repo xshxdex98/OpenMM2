@@ -88,4 +88,4 @@ public:
 
 // ??_7TextDropWidget@@6B@
 // vtable at 0x005B3B98
-// check_size(TextDropWidget, 0x0); // TODO: no layout in the IDB type library
+// check_size(TextDropWidget, 0x18); // size known, members are not - cannot verify

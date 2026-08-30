@@ -136,9 +136,7 @@ private:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    u8 field_1C[112]; // 0x01C
-    void* field_8C; // 0x08C
-    u8 field_90[888]; // 0x090
+    u8 pad_278[400]; // 0x278
     i32 field_408; // 0x408
     u8 field_40C[29308]; // 0x40C
     i32 field_7688; // 0x7688

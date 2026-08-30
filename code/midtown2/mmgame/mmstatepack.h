@@ -109,7 +109,7 @@ public:
     u8 IsHost; // 0x3AA
     u8 UseDialup; // 0x3AB
     i32 UseIME; // 0x3AC
-    HIMC IMEContext; // 0x3B0
+    void* IMEContext; // 0x3B0
     u8 InCrashCourse; // 0x3B4
     NetStartArray NetStartArray; // 0x3B8
 };

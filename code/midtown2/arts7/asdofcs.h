@@ -54,4 +54,4 @@ public:
 
 // ??_7asDofCS@@6B@
 // vtable at 0x005B86E8
-// check_size(asDofCS, 0x0); // TODO: no layout in the IDB type library
+// check_size(asDofCS, 0x80); // size known, members are not - cannot verify

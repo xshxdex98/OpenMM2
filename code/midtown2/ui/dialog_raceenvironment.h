@@ -52,4 +52,4 @@ public:
 
 // ??_7Dialog_RaceEnvironment@@6B@
 // vtable at 0x005B3FB8
-// check_size(Dialog_RaceEnvironment, 0x0); // TODO: no layout in the IDB type library
+// check_size(Dialog_RaceEnvironment, 0xBC); // size known, members are not - cannot verify

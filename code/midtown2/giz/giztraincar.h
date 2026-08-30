@@ -57,4 +57,4 @@ public:
 
 // ??_7gizTrainCar@@6B@
 // vtable at 0x005B60D4
-// check_size(gizTrainCar, 0x0); // TODO: no layout in the IDB type library
+// check_size(gizTrainCar, 0x58); // size known, members are not - cannot verify

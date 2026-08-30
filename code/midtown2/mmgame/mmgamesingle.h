@@ -76,4 +76,4 @@ protected:
 
 // ??_7mmGameSingle@@6B@
 // vtable at 0x005B0EB0
-// check_size(mmGameSingle, 0x1C); // size known, members are not - cannot verify
+// check_size(mmGameSingle, 0x278); // size known, members are not - cannot verify
