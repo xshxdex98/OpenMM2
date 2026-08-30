@@ -23,6 +23,8 @@
 
 #include "core/arts.h"
 
+#include "ph/phphysicsmanager.h"
+
 class Vector3;
 class lvlInstance;
 class lvlIntersection;

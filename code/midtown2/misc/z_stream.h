@@ -28,8 +28,6 @@ class internal_state;
 class z_stream
 {
 public:
-
-public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
     u8* next_in; // 0x000
     u32 avail_in; // 0x004

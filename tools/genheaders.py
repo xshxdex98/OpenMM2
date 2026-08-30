@@ -286,6 +286,36 @@ def backfillable(name):
 TEMPLATE_USE = re.compile(r"\b([A-Za-z_]\w*)\s*<([^<>]*)>")
 
 
+ACCESS_LABEL = ("public:", "private:", "protected:")
+
+
+def drop_empty_sections(lines):
+    """Remove an access label that declares nothing.
+
+    The class body opens with an unconditional `public:` for the methods, and the member block
+    emits its own. A class with no methods at all - every data-only class the backfill writes, such
+    as phSegment and phPhysicsManager - therefore got two in a row with nothing between them.
+    Deciding it up front would mean predicting what the sections below are going to emit; reading
+    it back off the finished list is exact.
+    """
+    out = []
+    for i, line in enumerate(lines):
+        if line in ACCESS_LABEL:
+            nxt = next((n for n in lines[i + 1:] if n.strip()), None)
+            if nxt in ACCESS_LABEL or nxt == "};":
+                while out and not out[-1].strip():
+                    out.pop()
+                continue
+
+        # The section that follows leads with its own blank line, which would otherwise be left
+        # stranded directly under the opening brace.
+        if not line.strip() and out and out[-1] == "{":
+            continue
+
+        out.append(line)
+    return out
+
+
 def template_prefix(name):
     """`template <typename T> ` for a class template, empty for everything else."""
     arity = TEMPLATES.get(name)
@@ -1078,7 +1108,7 @@ def emit_class(cls, syms, index, subsys):
             out.append("// check_size(%s, 0x0); // TODO: no layout in the IDB type library" % leaf)
     out.append("")
 
-    return "\n".join(out)
+    return "\n".join(drop_empty_sections(out))
 
 
 # Class prefix -> directory. Midtown Madness 2 renamed most of the Midtown Madness 1 subsystems
@@ -1294,10 +1324,26 @@ def main():
                     wanted.append(held.split("::")[0])
 
         for name in wanted:
-            if name and name not in classes and LAYOUT.get(name) and backfillable(name):
+            if not name or name in data_only:
+                continue
+            if not LAYOUT.get(name) or not backfillable(name):
+                continue
+
+            # "NOT IN classes" IS THE WRONG TEST, because a class can be in it and still own no
+            # code. phPhysicsManager has exactly one symbol, its vftable ??_7phPhysicsManager@@6B@,
+            # which is data - enough to put it in `classes` and so skip the backfill, but not
+            # enough to pass the `any(code)` test in the write loop, which then dropped it again.
+            # dgPhysManager inherits from it and reported C2504 with a complete 4-byte layout
+            # sitting unused. What matters is whether the class owns any CODE, not whether the
+            # symbol table mentions it at all.
+            group = classes.get(name)
+            if group is None:
                 classes[name] = []
-                data_only.add(name)
-                pending.append(name)
+            elif any(sym.get("code") for sym in group):
+                continue  # owns real functions: written by the normal path
+
+            data_only.add(name)
+            pending.append(name)
 
     for cls, group in classes.items():
         METHOD_NAMES[cls] = {g.get("name") for g in group

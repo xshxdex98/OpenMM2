@@ -26,8 +26,6 @@
 class HashEntry
 {
 public:
-
-public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
     char* Name; // 0x000
     void* Value; // 0x004

@@ -28,8 +28,6 @@
 class phSegment
 {
 public:
-
-public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
     i32 Flag; // 0x000
     Vector3 StartPos; // 0x004

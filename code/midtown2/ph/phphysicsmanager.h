@@ -23,22 +23,15 @@
 
 #include "core/arts.h"
 
-#include "vector7/vector3.h"
+class phPhysicsManager_vtbl;
 
-class phCollider;
-
-class vehDamageImpactInfo
+class phPhysicsManager
 {
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    phCollider* pCollider; // 0x000
-    Vector3 MaybeLastImpactPos; // 0x004
-    Vector3 field_10; // 0x010
-    Vector3 field_1C; // 0x01C
-    Vector3 field_28; // 0x028
-    f32 field_34; // 0x034
-    f32 field_38; // 0x038
-    f32 SomeTimer; // 0x03C
+    phPhysicsManager_vtbl* __vftable; // 0x000
 };
 
-check_size(vehDamageImpactInfo, 0x40);
+// ??_7phPhysicsManager@@6B@
+// vtable at 0x005B1D14
+check_size(phPhysicsManager, 0x4);
