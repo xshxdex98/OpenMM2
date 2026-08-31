@@ -23,10 +23,11 @@
 
 #include "core/arts.h"
 
+#include "eventq7/eqevent.h"
+
 #include "uiwidget.h"
 
 struct LocString;
-union eqEvent;
 class mmTextNode;
 
 class UILabel : public uiWidget

@@ -24,10 +24,10 @@
 #include "core/arts.h"
 
 #include "arts7/asnode.h"
+#include "eventq7/eqevent.h"
 
 struct LocString;
 class Stream;
-union eqEvent;
 class mmIO;
 
 class mmInput : public asNode

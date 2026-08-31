@@ -24,14 +24,27 @@
 //
 // Only the empty defaults are ported. Everything of uiWidget that actually does something - the
 // layout, the hit testing, the draw - is still in game.asm.
-//
-// Action and CaptureAction are NOT ported, though their bodies are equally empty. Both take an
-// eqEvent BY VALUE - `T` in the mangled name is a union passed by value - and eqEvent has no
-// recovered layout: it is forward-declared in six headers and defined in none. A by-value
-// parameter needs the complete type, so those two are blocked on recovering that union rather than
-// on anything about uiWidget.
 
 #include "uiwidget.h"
+
+#include "eventq7/eqevent.h"
+
+// ?Action@uiWidget@@UAEXTeqEvent@@@Z - 0x004E73A0
+//
+// The event is taken BY VALUE - `T` in the mangled name is MSVC's tag for a union passed by value,
+// where a pointer would mangle PAT - so the signature has to match or the symbol does not.
+void uiWidget::Action(eqEvent arg1)
+{
+    (void) arg1;
+}
+
+// ?CaptureAction@uiWidget@@UAEXTeqEvent@@@Z - 0x004E73B0
+//
+// The variant called while this widget holds the input capture. Same default: ignore it.
+void uiWidget::CaptureAction(eqEvent arg1)
+{
+    (void) arg1;
+}
 
 // ?EvalMouseX@uiWidget@@UAEXM@Z - 0x004E73C0
 //

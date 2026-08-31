@@ -24,10 +24,9 @@
 #include "core/arts.h"
 
 #include "data7/datcallback.h"
+#include "eventq7/eqevent.h"
 
 #include "uiwidget.h"
-
-union eqEvent;
 
 class UIVScrollBar : public uiWidget
 {

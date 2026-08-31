@@ -24,6 +24,7 @@
 #include "core/arts.h"
 
 #include "data7/datcallback.h"
+#include "eventq7/eqevent.h"
 #include "vector7/vector2.h"
 
 #include "uiwidget.h"
@@ -31,7 +32,6 @@
 class Card2D;
 struct LocString;
 class UIMenu;
-union eqEvent;
 class mmTextNode;
 
 class UITextField : public uiWidget

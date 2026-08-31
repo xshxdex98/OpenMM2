@@ -24,12 +24,12 @@
 #include "core/arts.h"
 
 #include "data7/datcallback.h"
+#include "eventq7/eqevent.h"
 #include "vector7/vector3.h"
 
 #include "uiwidget.h"
 
 struct LocString;
-union eqEvent;
 
 class UIBMButton : public uiWidget
 {

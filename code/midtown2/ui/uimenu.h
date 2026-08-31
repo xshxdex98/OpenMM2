@@ -25,6 +25,7 @@
 
 #include "arts7/asnode.h"
 #include "data7/datcallback.h"
+#include "eventq7/eqevent.h"
 #include "stream/string.h"
 #include "vector7/vector2.h"
 
@@ -48,7 +49,6 @@ class UITextScroll;
 class UIToggleButton;
 class UIToggleButton2;
 class UIVScrollBar;
-union eqEvent;
 class mmIO;
 class uiWidget;
 

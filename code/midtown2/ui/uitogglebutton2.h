@@ -24,11 +24,11 @@
 #include "core/arts.h"
 
 #include "data7/datcallback.h"
+#include "eventq7/eqevent.h"
 
 #include "uibutton.h"
 
 struct LocString;
-union eqEvent;
 
 class UIToggleButton2 : public UIButton
 {

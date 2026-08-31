@@ -25,7 +25,7 @@
 
 #include "vector7/vector4.h"
 
-class gfxMaterial
+struct gfxMaterial
 {
 public:
     // ?Reset@gfxMaterial@@QAEXXZ

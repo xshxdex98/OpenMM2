@@ -49,13 +49,13 @@ public:
     ARTS_IMPORT virtual void UpdatePaused();
 
     // ?FileIO@asNode@@UAEXAAVdatParser@@@Z
-    ARTS_IMPORT virtual void FileIO(datParser& arg1);
+    ARTS_EXPORT virtual void FileIO(datParser& arg1);
 
     // ?AfterLoad@asNode@@UAEXXZ
-    ARTS_IMPORT virtual void AfterLoad();
+    ARTS_EXPORT virtual void AfterLoad();
 
     // ?BeforeSave@asNode@@UAEXXZ
-    ARTS_IMPORT virtual void BeforeSave();
+    ARTS_EXPORT virtual void BeforeSave();
 
     // ?Save@asNode@@UAE_NXZ
     ARTS_IMPORT virtual bool Save();

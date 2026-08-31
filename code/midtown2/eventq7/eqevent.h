@@ -23,36 +23,11 @@
 
 #include "core/arts.h"
 
-struct IDirect3DVertexBuffer7;
-
-struct gfxVertexBuffer
+union eqEvent
 {
 public:
-    // ??0gfxVertexBuffer@@QAE@II@Z
-    ARTS_IMPORT gfxVertexBuffer(u32 arg1, u32 fvfFlags);
-
-    // ??0gfxVertexBuffer@@QAE@PAUIDirect3DVertexBuffer7@@@Z
-    ARTS_IMPORT gfxVertexBuffer(IDirect3DVertexBuffer7* arg1);
-
-    // ??1gfxVertexBuffer@@QAE@XZ
-    ARTS_IMPORT ~gfxVertexBuffer();
-
-    // ?KillAll@gfxVertexBuffer@@SAXXZ
-    ARTS_IMPORT static void KillAll();
-
-    // ?RestoreAll@gfxVertexBuffer@@SAXXZ
-    ARTS_IMPORT static void RestoreAll();
-
-    // ?sm_First@gfxVertexBuffer@@2PAU1@A
-    ARTS_IMPORT static gfxVertexBuffer* sm_First;
-
-public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    gfxVertexBuffer* Prev; // 0x000
-    void* m_Verts; // 0x004
-    u16 VertCount; // 0x008
-    u16 m_ElementSize; // 0x00A
-    u32 m_FVF; // 0x00C
+    i32 p[9]; // 0x000
 };
 
-check_size(gfxVertexBuffer, 0x10);
+check_size(eqEvent, 0x24);

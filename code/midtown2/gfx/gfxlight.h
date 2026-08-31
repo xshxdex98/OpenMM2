@@ -23,7 +23,7 @@
 
 #include "core/arts.h"
 
-class gfxLight
+struct gfxLight
 {
 public:
     // ?Reset@gfxLight@@QAEXXZ

@@ -24,12 +24,12 @@
 #include "core/arts.h"
 
 #include "arts7/asnode.h"
+#include "eventq7/eqevent.h"
 #include "vector7/vector2.h"
 #include "vector7/vector4.h"
 
 struct LocString;
 class UIMenu;
-union eqEvent;
 class mmToolTip;
 
 class uiWidget : public asNode
@@ -57,10 +57,10 @@ public:
     ARTS_IMPORT virtual void SetReadOnly(i32 arg1);
 
     // ?Action@uiWidget@@UAEXTeqEvent@@@Z
-    ARTS_IMPORT virtual void Action(eqEvent arg1);
+    ARTS_EXPORT virtual void Action(eqEvent arg1);
 
     // ?CaptureAction@uiWidget@@UAEXTeqEvent@@@Z
-    ARTS_IMPORT virtual void CaptureAction(eqEvent arg1);
+    ARTS_EXPORT virtual void CaptureAction(eqEvent arg1);
 
     // ?Switch@uiWidget@@UAEXH@Z
     ARTS_IMPORT virtual void Switch(i32 arg1);

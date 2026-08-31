@@ -24,13 +24,13 @@
 #include "core/arts.h"
 
 #include "data7/datcallback.h"
+#include "eventq7/eqevent.h"
 #include "stream/string.h"
 
 #include "uiwidget.h"
 
 struct LocString;
 class UIMenu;
-union eqEvent;
 class gfxBitmap;
 class mmTextNode;
 

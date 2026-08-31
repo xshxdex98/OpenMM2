@@ -24,12 +24,12 @@
 #include "core/arts.h"
 
 #include "data7/datcallback.h"
+#include "eventq7/eqevent.h"
 
 #include "uiwidget.h"
 
 class Card2D;
 struct LocString;
-union eqEvent;
 class mmTextNode;
 
 class UIButton : public uiWidget

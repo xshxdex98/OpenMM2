@@ -24,12 +24,12 @@
 #include "core/arts.h"
 
 #include "data7/datcallback.h"
+#include "eventq7/eqevent.h"
 
 #include "uiwidget.h"
 
 struct LocString;
 class UIMenu;
-union eqEvent;
 
 class UISlider : public uiWidget
 {

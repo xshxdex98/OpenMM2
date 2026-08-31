@@ -24,8 +24,8 @@
 #include "core/arts.h"
 
 #include "arts7/asnode.h"
+#include "eventq7/eqevent.h"
 
-union eqEvent;
 class mmTextNode;
 
 class mmCompBase : public asNode

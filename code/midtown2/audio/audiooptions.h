@@ -25,7 +25,7 @@
 
 #include "ui/optionsbase.h"
 
-class AudioOptions : public OptionsBase
+struct AudioOptions : public OptionsBase
 {
 public:
     // ??0AudioOptions@@QAE@H@Z

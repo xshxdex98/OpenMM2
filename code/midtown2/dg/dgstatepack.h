@@ -26,7 +26,7 @@
 enum dgGameMode : i32;
 enum dgSkillLevel : i32;
 
-class dgStatePack
+struct dgStatePack
 {
 public:
     // ??0dgStatePack@@QAE@XZ

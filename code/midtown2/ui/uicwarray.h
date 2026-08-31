@@ -24,12 +24,12 @@
 #include "core/arts.h"
 
 #include "data7/datcallback.h"
+#include "eventq7/eqevent.h"
 
 #include "uiwidget.h"
 
 class Card2D;
 class VSWidget;
-union eqEvent;
 
 class UICWArray : public uiWidget
 {

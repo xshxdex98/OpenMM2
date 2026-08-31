@@ -64,15 +64,30 @@ def find_alignment(retail_bytes, built_bytes):
     Measured, not assumed: take a distinctive run from the middle of retail's data and find it in
     the built section. The middle avoids the import table at the front and any BSS tail.
     """
-    # Try several positions, not just the midpoint. A single probe fails whenever it happens to
-    # land on a region that legitimately differs - a run of relocated pointers, or a table the
-    # linker rebuilt - and .rdata is full of both. Take the shift that the most probes agree on,
-    # which also guards against a lucky match on a short repetitive run.
+    # THE ANCHOR MUST BE POINTER-FREE, OR IT STOPS WORKING AS PORTING SCALES.
+    #
+    # A probe is matched verbatim, so any relocated pointer inside it breaks the match. .rdata is
+    # full of pointers and every ported function relocates more of them, so fixed probe positions
+    # survive early on and then quietly stop: at 342 functions .rdata had grown from retail's
+    # 73,728 bytes to 109,056 and not one of the eight fixed probes still matched, which reads as
+    # "could not locate retail's content" - indistinguishable from real corruption.
+    #
+    # Skipping any window containing a dword that looks like an image address makes the anchor
+    # immune to that, because the only bytes it relies on are ones relocation cannot touch.
     votes = Counter()
     n = len(retail_bytes)
 
-    for frac in (0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9):
-        probe_at = int(n * frac)
+    def has_pointer(buf):
+        for off in range(0, len(buf) - 4, 4):
+            v = struct.unpack_from("<I", buf, off)[0]
+            if IMAGE_BASE <= v <= IMAGE_BASE + 0x400000:
+                return True
+        return False
+
+    # Many more positions than before, because a pointer-free run of useful length is not evenly
+    # distributed - .rdata's vtables and string tables cluster.
+    for step in range(1, 64):
+        probe_at = int(n * step / 64.0)
 
         for size in (512, 256, 128, 64):
             probe = retail_bytes[probe_at:probe_at + size]
@@ -81,6 +96,8 @@ def find_alignment(retail_bytes, built_bytes):
                 continue
             if probe.count(probe[:1]) == len(probe):
                 continue  # a constant run matches anywhere; useless as an anchor
+            if has_pointer(probe):
+                continue  # relocation would rewrite it and the match would fail
 
             at = built_bytes.find(probe)
             if at >= 0 and built_bytes.find(probe, at + 1) < 0:

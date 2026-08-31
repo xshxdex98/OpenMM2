@@ -23,7 +23,7 @@
 
 #include "core/arts.h"
 
-class ioEvent
+struct ioEvent
 {
 public:
     enum ioEventType : i32;

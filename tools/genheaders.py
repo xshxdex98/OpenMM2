@@ -332,7 +332,11 @@ BUILTIN -= set(HANDWRITTEN)
 # redefinition, not a fix. The rest of the D3D and DirectDraw surface belongs to the platform
 # headers: synthesising a DDPIXELFORMAT from a recovered layout would be guessing at a struct whose
 # real definition is published, and getting it subtly wrong would be worse than leaving it out.
-PLATFORM_TYPE = re.compile(r"^_?(?:D3D|DD|IDirect|LP[A-Z])")
+# LARGE_INTEGER and ULARGE_INTEGER are winnt.h unions, and they arrive the same way the D3D
+# types do - named by value in a signature. Synthesising either from a recovered layout would
+# be guessing at a published definition, and the guess showed: the recovery types their
+# members as anonymous structs that cannot be spelled at all.
+PLATFORM_TYPE = re.compile(r"^_?(?:D3D|DD|IDirect|LP[A-Z]|U?LARGE_INTEGER)")
 
 
 def backfillable(name):
@@ -1114,9 +1118,9 @@ def emit_class(cls, syms, index, subsys):
     base = base_of(cls)
 
     if base:
-        out.append("class %s : public %s" % (leaf, base))
+        out.append("%s %s : public %s" % (class_key(leaf), leaf, base))
     else:
-        out.append("class %s" % leaf)
+        out.append("%s %s" % (class_key(leaf), leaf))
     out.append("{")
     out.append("public:")
 
@@ -1501,6 +1505,17 @@ def main():
     nested_owners = set()
     for sym in syms:
         for m in re.finditer(r"W4[A-Za-z_]\w*@([A-Za-z_]\w*)@", sym.get("mangled") or ""):
+            nested_owners.add(m.group(1))
+
+        # A UNION PASSED BY VALUE NEEDS ITS DEFINITION, like any other by-value type - but it
+        # arrives through a SIGNATURE rather than through a member, which is a fourth way to depend
+        # on a type and the one the backfill did not cover.
+        #
+        # `T` is MSVC's tag for a union, so ?Action@uiWidget@@UAEXTeqEvent@@@Z takes one by value
+        # while ?Pop@eqEventQ@@QAEHPATeqEvent@@@Z takes a POINTER to one - PA before the T - and a
+        # pointer is happy with a forward declaration. The lookbehind is what separates them, and
+        # it is why this cannot simply match every T in a mangled name.
+        for m in re.finditer(r"(?<![AB])T([A-Za-z_]\w*)@@", sym.get("mangled") or ""):
             nested_owners.add(m.group(1))
 
     pending = list(classes) + sorted(nested_owners)

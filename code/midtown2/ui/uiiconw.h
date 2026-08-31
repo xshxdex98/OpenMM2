@@ -24,12 +24,12 @@
 #include "core/arts.h"
 
 #include "data7/datcallback.h"
+#include "eventq7/eqevent.h"
 #include "vector7/vector2.h"
 
 #include "uiwidget.h"
 
 struct LocString;
-union eqEvent;
 class mmTextNode;
 
 class UIIconW : public uiWidget

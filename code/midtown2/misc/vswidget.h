@@ -25,8 +25,8 @@
 
 #include "arts7/asnode.h"
 #include "data7/datcallback.h"
+#include "eventq7/eqevent.h"
 
-union eqEvent;
 class gfxBitmap;
 
 class VSWidget : public asNode

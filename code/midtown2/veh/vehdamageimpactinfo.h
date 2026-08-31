@@ -27,7 +27,7 @@
 
 class phCollider;
 
-class vehDamageImpactInfo
+struct vehDamageImpactInfo
 {
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
