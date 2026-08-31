@@ -23,6 +23,8 @@
 
 #include "core/arts.h"
 
+#include "vector7/vector4.h"
+
 class gfxMaterial
 {
 public:
@@ -31,7 +33,12 @@ public:
 
 public:
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i32 field_44; // 0x044
+    Vector4 Diffuse; // 0x000
+    Vector4 Ambient; // 0x010
+    Vector4 Specular; // 0x020
+    Vector4 Emissive; // 0x030
+    f32 Shininess; // 0x040
+    u32 Color; // 0x044
 };
 
 check_size(gfxMaterial, 0x48);

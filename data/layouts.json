@@ -33336,51 +33336,85 @@
  "gfxMaterial": {
   "kind": "struct",
   "size": 72,
+  "confidence": "CONFIRMED",
+  "source": "hand-analysis",
+  "evidence": [
+   "The recovered entry is _D3DMATERIAL7 wearing gfxMaterial's name: five anonymous unions",
+   "IDA spells `union _D3DMATERIAL7::$F37024B6...`, which is not a C++ type, so only field_44",
+   "survived and the class compiled to 4 bytes against a required 0x48.",
+   "",
+   "?Reset@gfxMaterial@@QAEXXZ at 0x004B1BB0 writes every byte of the class and fixes the whole",
+   "layout. It stores 0x3F800000 - 1.0f - to 0x00 through 0x1C, eight consecutive dwords, then",
+   "zero to 0x20 through 0x40, then:",
+   "    *(undefined4 *)(this + 0x44) = 0xffffffff;",
+   "an INTEGER immediate, not a float, so 0x44 is a packed colour and not a fifth vector",
+   "component. 0xFFFFFFFF is opaque white, the identity for a modulated vertex colour.",
+   "",
+   "sizeof is 0x48 and not the 0x44 of D3DMATERIAL7:",
+   "?AddStaticMaterial@modShader@@SAPAUgfxMaterial@@ABU2@@Z at 0x004A3930 does",
+   "    pgVar2 = operator_new(DAT_005c9d98 * 0x48);",
+   "and strides the array by 0x48. A D3DMATERIAL7 is 0x44 - four D3DCOLORVALUE at 16 plus a",
+   "4-byte power - so gfxMaterial is that struct plus the colour word at 0x44, which is exactly",
+   "why the alias was close enough to be recorded and still wrong.",
+   "",
+   "The four vector members and Shininess take their names from the D3DMATERIAL7 fields the",
+   "class mirrors and passes to SetMaterial - diffuse, ambient, specular, emissive, power - and",
+   "MM2Hook's own header agrees on all five. Color is named for its use, not from a symbol.",
+   "",
+   "Spelled u32 rather than a ColorARGB type: the recovery of ColorARGB carries an IDA",
+   "anonymous-union member typed `$0457258C...` that cannot be declared, and the packed word is",
+   "fully described by its width here."
+  ],
   "members": [
    {
     "offset": 0,
-    "type": null,
-    "name": null,
+    "type": "Vector4",
+    "name": "Diffuse",
     "count": 0,
-    "raw": "union _D3DMATERIAL7::$F37024B6A2A7DA8F8161E452127F778F"
+    "width": 16,
+    "src": "Reset 0x004B1BB0 writes 1.0f to 0x00-0x0C"
    },
    {
     "offset": 16,
-    "type": null,
-    "name": null,
+    "type": "Vector4",
+    "name": "Ambient",
     "count": 0,
-    "raw": "union _D3DMATERIAL7::$B545799AB1B094EA7448ADA6B118C0D5"
+    "width": 16,
+    "src": "Reset 0x004B1BB0 writes 1.0f to 0x10-0x1C"
    },
    {
     "offset": 32,
-    "type": null,
-    "name": null,
+    "type": "Vector4",
+    "name": "Specular",
     "count": 0,
-    "raw": "union _D3DMATERIAL7::$48A7D73869B8DD97079A7DB0052C867A"
+    "width": 16,
+    "src": "Reset 0x004B1BB0 zeroes 0x20-0x2C"
    },
    {
     "offset": 48,
-    "type": null,
-    "name": null,
+    "type": "Vector4",
+    "name": "Emissive",
     "count": 0,
-    "raw": "union _D3DMATERIAL7::$4E89CE7B3871A99DAB3B73BC63770FCE"
+    "width": 16,
+    "src": "Reset 0x004B1BB0 zeroes 0x30-0x3C"
    },
    {
     "offset": 64,
-    "type": null,
-    "name": null,
+    "type": "f32",
+    "name": "Shininess",
     "count": 0,
-    "raw": "union _D3DMATERIAL7::$0E29CCD1ABCFA56B0343B217BB93547E"
+    "width": 4,
+    "src": "Reset 0x004B1BB0 zeroes 0x40"
    },
    {
     "offset": 68,
-    "type": "i32",
-    "name": "field_44",
+    "type": "u32",
+    "name": "Color",
     "count": 0,
-    "raw": "int field_44"
+    "width": 4,
+    "src": "Reset 0x004B1BB0 stores the integer 0xFFFFFFFF to 0x44"
    }
-  ],
-  "_note": "size corrected 0x44 -> 0x48 from `mov dword ptr [ecx+0x44], -1` in gfxMaterial::Reset (0x4B1BB0); see docs/gfx_layouts.md"
+  ]
  },
  "gfxPacket": {
   "kind": "struct",
