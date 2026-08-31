@@ -472,6 +472,22 @@ def main():
     run([sys.executable, os.path.join(HERE, "genheaders.py")], "genheaders")
     print("  headers regenerated")
 
+    # EVERY GENERATED HEADER MUST COMPILE, AND EVERY check_size MUST HOLD.
+    #
+    # Nothing else in this build reaches most of them. Only a header that some ported .cpp happens
+    # to include is ever fed to the compiler, so a class whose members do not add up to the size
+    # the binary allocates stays wrong until someone ports a function that touches it - and then
+    # it reads the wrong field at a fixed offset, which is the one failure this project cannot
+    # tolerate. dgPhysEntity carried vehCar's member list for exactly that reason and nothing
+    # caught it.
+    #
+    # verify_headers.py compiles all of them in a single translation unit and asserts every size,
+    # so a bad layout surfaces when it is introduced rather than when it is first used.
+    res = run([sys.executable, os.path.join(HERE, "verify_headers.py")], "verifying headers")
+    tail = [ln for ln in (res.stdout or "").splitlines() if ln.strip()]
+    if tail:
+        print("  " + tail[-1].strip())
+
     step(4, "compiling")
     n = compile_sources(cl)
     print("  %d objects" % n)

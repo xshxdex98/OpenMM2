@@ -31,7 +31,7 @@ class phContact;
 class phImpactBase;
 class phJoint;
 
-class phColliderJointed
+class phColliderJointed : public phColliderBase
 {
 public:
     // ??0phColliderJointed@@QAE@XZ
@@ -65,8 +65,8 @@ public:
     ARTS_IMPORT static void InitArray(phColliderJointed*const output, i32 i);
 
 public:
+    // Members from 0x074; everything below that belongs to phColliderBase.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    phColliderBase Base; // 0x000
     u8 field_74[56]; // 0x074
     u32 field_AC; // 0x0AC
 };

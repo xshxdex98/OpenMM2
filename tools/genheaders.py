@@ -217,6 +217,36 @@ def COMPILER_GENERATED(sym):
     return "`" in (sym.get("demangled") or "") or "`" in (sym.get("name") or "")
 
 
+def vptr_only_base(base, cls):
+    """Whether inheriting `base` would give `cls` a SECOND vtable pointer.
+
+    phPhysicsManager's entire layout is the vtable pointer, and it declares no virtual method -
+    every one is pure virtual with no mangled symbol, so nothing can be emitted for it and MSVC
+    sees a plain four-byte struct rather than a polymorphic class. dgPhysManager then declares
+    virtuals of its own, gets its own vptr, and lands on 0x12B4 against the 0x12B0 the binary
+    allocates. Flattening is exact: the base contributes nothing but the pointer the derived
+    class already has, and at the same offset.
+
+    THE "DECLARES NO VIRTUAL" TEST IS WHAT KEEPS THIS HONEST. Base and asCullable are also nothing
+    but a vptr, but both declare real recovered virtuals - ~asCullable and Cull among them - so
+    they own that pointer legitimately and asNode inherits it exactly once. Dropping the test
+    would break the whole Base -> asCullable -> asNode chain to fix one class. Scoped this way it
+    fires on dgPhysManager and nothing else.
+    """
+    if cls not in POLYMORPHIC or base in DECLARES_VIRTUAL:
+        return False
+
+    info = LAYOUT.get(base)
+    if not info or info.get("size") != 4:
+        return False
+
+    members = info.get("members") or []
+    if len(members) != 1 or members[0].get("offset") != 0:
+        return False
+
+    return (members[0].get("name") or "").lower() in VPTR_NAMES
+
+
 def base_of(cls):
     """The immediate base class.
 
@@ -227,10 +257,24 @@ def base_of(cls):
     """
     stated = (MM2T.get("bases") or {}).get(cls)
     if stated and stated != cls:
-        return stated
+        return stated if not vptr_only_base(stated, cls) else None
 
     inferred = (HIER.get(cls) or {}).get("base")
-    return inferred if inferred and inferred != cls else None
+    if inferred and inferred != cls:
+        return inferred if not vptr_only_base(inferred, cls) else None
+
+    # Last resort: a base the recovery wrote down as an offset-0 member. See implied_base().
+    #
+    # Check membership BEFORE claiming it. Adding cls first and then asking implied_base, which
+    # refuses anything already being resolved, means every call refuses itself.
+    if cls in _RESOLVING:
+        return None
+
+    _RESOLVING.add(cls)
+    try:
+        return implied_base(cls)
+    finally:
+        _RESOLVING.discard(cls)
 
 
 @functools.lru_cache(maxsize=1)
@@ -423,6 +467,66 @@ def ancestors_of(cls):
                 out.append(base)
                 queue.append(base)
     return out
+
+
+# Re-entrancy guard: base_of -> implied_base -> ... -> size_of -> base_of is a real cycle.
+_RESOLVING = set()
+
+
+def implied_base(cls):
+    """A base the recovery recorded as a member instead of as inheritance.
+
+    phColliderJointed holds `phColliderBase Base;` at offset 0 and declares no base at all. Written
+    that way the class carries its own vtable pointer AND the embedded one, so it comes out four
+    bytes too large -- and dgPhysEntity, which holds a phColliderJointed by value, inherits the
+    error, as do dgBangerActive and vehTrailer below it. Declared as inheritance the two vtable
+    pointers become one and the arithmetic closes exactly: 116 + 56 + 4 = 176, the recorded size.
+
+    FOUR GUARDS, ALL LOAD-BEARING:
+
+      - the class must have no stated or inferred base. gizBridge is the cautionary case: its
+        offset-0 member is a dgBangerInstance while its real base is dgUnhitMtxBangerInstance, so a
+        rule that read the base off the member would have picked the wrong one.
+      - the member must be held BY VALUE. A pointer to a class is a pointer, not a base.
+      - that member's own offset-0 must be a literal vtable pointer. This is what distinguishes a
+        flattened base from ordinary composition: a class embedded as a plain member does not put
+        its vptr at the outer class's offset 0.
+      - the outer class must itself be polymorphic, or there are no two vtable pointers to merge.
+
+    Scoped this way the rule fires on exactly two classes in the binary, phColliderJointed and
+    eqEventQ, and on none of the classes that currently pass.
+
+    Reads info["members"] directly rather than through usable_members(): that route reaches
+    size_of(), which calls back into base_of(), and the offset-0 entry this looks at is a fully
+    typed member that the revival rule would never have touched anyway. _RESOLVING guards the
+    remaining path for the same reason.
+    """
+    if cls not in POLYMORPHIC:
+        return None
+
+    info = LAYOUT.get(cls)
+    members = (info.get("members") or []) if info else []
+    first_member = members[0] if members else None
+    if not first_member or first_member.get("offset") != 0:
+        return None
+    if not first_member.get("name") or not first_member.get("type"):
+        return None
+
+    held = map_type(first_member["type"]).strip()
+    if not held or held.endswith("*") or held.endswith("&"):
+        return None
+
+    held = held.split("::")[0]
+    inner = LAYOUT.get(held)
+    if not inner or held == cls:
+        return None
+
+    first = (inner.get("members") or [None])[0]
+    if not first or first.get("offset") != 0:
+        return None
+
+    name = (first.get("name") or "").lower()
+    return held if name in VPTR_NAMES else None
 
 
 def size_of(cls, _guard=None):
@@ -1250,6 +1354,12 @@ HIER = {}
 LAYOUT = {}
 MM2T = {}
 DONE = set()
+POLYMORPHIC = set()
+
+# Classes that declare a virtual METHOD we hold a mangled symbol for. Distinct from POLYMORPHIC:
+# phPhysicsManager has a vftable in the binary and a nine-slot vtbl in the kit, but every one of
+# its methods is pure virtual with no symbol of its own, so nothing can be declared for it.
+DECLARES_VIRTUAL = set()
 
 
 # Type names the retail mangling spells `U` (struct) rather than `V` (class).
@@ -1313,6 +1423,10 @@ def main():
 
     with open(SYMBOLS, encoding="utf-8") as f:
         syms = json.load(f)
+
+    POLYMORPHIC.update(s["class"] for s in syms if s.get("virtual") and s.get("class"))
+    DECLARES_VIRTUAL.update(s["class"] for s in syms
+                            if s.get("virtual") and s.get("code") and s.get("class"))
 
     learn_struct_tags(syms)
     learn_templates(syms)

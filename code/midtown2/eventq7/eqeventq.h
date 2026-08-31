@@ -27,7 +27,7 @@
 
 union eqEvent;
 
-class eqEventQ
+class eqEventQ : public eqEventMonitor
 {
 public:
     // ??0eqEventQ@@QAE@H@Z
@@ -50,8 +50,8 @@ private:
     ARTS_IMPORT void Queue(eqEvent& x);
 
 public:
+    // Members from 0x00C; everything below that belongs to eqEventMonitor.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    eqEventMonitor eqeventmonitor0; // 0x000
     u32 Values; // 0x00C
     i32 field_10; // 0x010
     u32 ValueCount; // 0x014

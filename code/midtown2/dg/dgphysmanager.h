@@ -23,8 +23,6 @@
 
 #include "core/arts.h"
 
-#include "ph/phphysicsmanager.h"
-
 class Vector3;
 class lvlInstance;
 class lvlIntersection;
@@ -35,7 +33,7 @@ class phInstance;
 class phIntersection;
 class phSegment;
 
-class dgPhysManager : public phPhysicsManager
+class dgPhysManager
 {
 public:
     struct CollisionTableEntry;
@@ -125,7 +123,6 @@ public:
     ARTS_IMPORT static lvlInstance* PlayerInst;
 
 public:
-    // Members from 0x004; everything below that belongs to phPhysicsManager.
     // Offset order is mandatory - the original code reads these at fixed offsets.
     i32 field_4; // 0x004
     u8 field_8[148]; // 0x008
