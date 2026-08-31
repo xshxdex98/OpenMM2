@@ -59,7 +59,7 @@ public:
     ARTS_IMPORT virtual void InitHUD();
 
     // ?UpdateGameInput@mmMultiCR@@UAEXH@Z
-    ARTS_IMPORT virtual void UpdateGameInput(i32 arg1);
+    ARTS_EXPORT virtual void UpdateGameInput(i32 arg1);
 
     // ?UpdateDebugKeyInput@mmMultiCR@@UAEXH@Z
     ARTS_IMPORT virtual void UpdateDebugKeyInput(i32 arg1);
@@ -77,7 +77,7 @@ public:
     ARTS_IMPORT virtual void SwitchState(i32 arg1);
 
     // ?GetWaypoints@mmMultiCR@@UAEPAVmmWaypoints@@XZ
-    ARTS_IMPORT virtual mmWaypoints* GetWaypoints();
+    ARTS_EXPORT virtual mmWaypoints* GetWaypoints();
 
     // ?InitNetworkPlayers@mmMultiCR@@UAEXXZ
     ARTS_IMPORT virtual void InitNetworkPlayers();
@@ -138,7 +138,7 @@ private:
     ARTS_IMPORT void Score(i32 arg1);
 
     // ?SelectTeams@mmMultiCR@@AAEHXZ
-    ARTS_IMPORT i32 SelectTeams();
+    ARTS_EXPORT i32 SelectTeams();
 
     // ?SendChangeSet@mmMultiCR@@AAEXH@Z
     ARTS_IMPORT void SendChangeSet(i32 arg1);
@@ -159,7 +159,7 @@ private:
     ARTS_IMPORT void SendLimitReached(i32 arg1);
 
     // ?SendSetup@mmMultiCR@@AAEXK@Z
-    ARTS_IMPORT void SendSetup(ulong arg1);
+    ARTS_EXPORT void SendSetup(ulong arg1);
 
     // ?SendTimeWarning@mmMultiCR@@AAEXH@Z
     ARTS_IMPORT void SendTimeWarning(i32 result);

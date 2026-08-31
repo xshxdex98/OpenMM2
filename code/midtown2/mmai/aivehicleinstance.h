@@ -70,16 +70,16 @@ public:
     ARTS_IMPORT virtual void DrawShadow();
 
     // ?DrawShadowMap@aiVehicleInstance@@UAEXXZ
-    ARTS_IMPORT virtual void DrawShadowMap();
+    ARTS_EXPORT virtual void DrawShadowMap();
 
     // ?DrawGlow@aiVehicleInstance@@UAEXXZ
     ARTS_IMPORT virtual void DrawGlow();
 
     // ?DrawReflected@aiVehicleInstance@@UAEXM@Z
-    ARTS_IMPORT virtual void DrawReflected(f32 arg1);
+    ARTS_EXPORT virtual void DrawReflected(f32 arg1);
 
     // ?SizeOf@aiVehicleInstance@@UAEIXZ
-    ARTS_IMPORT virtual u32 SizeOf();
+    ARTS_EXPORT virtual u32 SizeOf();
 
     // ?GetBound@aiVehicleInstance@@UAEPBVphBound@@H@Z
     ARTS_IMPORT virtual const phBound* GetBound(i32 arg1);

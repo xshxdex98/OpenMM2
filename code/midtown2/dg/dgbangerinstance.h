@@ -50,7 +50,7 @@ public:
     ARTS_IMPORT virtual void Draw(i32 lod);
 
     // ?DrawShadow@dgBangerInstance@@UAEXXZ
-    ARTS_IMPORT virtual void DrawShadow();
+    ARTS_EXPORT virtual void DrawShadow();
 
     // ?DrawShadowMap@dgBangerInstance@@UAEXXZ
     ARTS_IMPORT virtual void DrawShadowMap();
@@ -59,7 +59,7 @@ public:
     ARTS_IMPORT virtual void DrawGlow();
 
     // ?DrawReflected@dgBangerInstance@@UAEXM@Z
-    ARTS_IMPORT virtual void DrawReflected(f32 arg1);
+    ARTS_EXPORT virtual void DrawReflected(f32 arg1);
 
     // ?GetBound@dgBangerInstance@@UAEPBVphBound@@H@Z
     ARTS_IMPORT virtual const phBound* GetBound(i32 arg1);
@@ -68,7 +68,7 @@ public:
     ARTS_IMPORT virtual i32 ComputeLod(f32 arg1, f32 arg2);
 
     // ?SetupGfxLights@dgBangerInstance@@UBEHABVMatrix34@@@Z
-    ARTS_IMPORT virtual i32 SetupGfxLights(const Matrix34& arg1) const;
+    ARTS_EXPORT virtual i32 SetupGfxLights(const Matrix34& arg1) const;
 
     // ?DrawTree@dgBangerInstance@@QAEXH@Z
     ARTS_IMPORT void DrawTree(i32 arg1);

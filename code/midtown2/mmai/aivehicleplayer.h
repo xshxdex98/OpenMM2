@@ -59,7 +59,7 @@ public:
     ARTS_IMPORT virtual void Reset();
 
     // ?Type@aiVehiclePlayer@@UAEHXZ
-    ARTS_IMPORT virtual i32 Type();
+    ARTS_EXPORT virtual i32 Type();
 
     // ?GetMatrix@aiVehiclePlayer@@UAEAAVMatrix34@@XZ
     ARTS_IMPORT virtual Matrix34& GetMatrix();
@@ -77,13 +77,13 @@ public:
     ARTS_IMPORT virtual f32 RSideDistance();
 
     // ?CurrentLane@aiVehiclePlayer@@UAEHXZ
-    ARTS_IMPORT virtual i32 CurrentLane();
+    ARTS_EXPORT virtual i32 CurrentLane();
 
     // ?CurrentRoadId@aiVehiclePlayer@@UAEHXZ
     ARTS_IMPORT virtual i32 CurrentRoadId();
 
     // ?DrawId@aiVehiclePlayer@@UAEXXZ
-    ARTS_IMPORT virtual void DrawId();
+    ARTS_EXPORT virtual void DrawId();
 
     // ?Attach@aiVehiclePlayer@@QAEXPAVvehCar@@@Z
     ARTS_IMPORT void Attach(vehCar* arg1);

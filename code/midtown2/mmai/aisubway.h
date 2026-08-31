@@ -58,7 +58,7 @@ public:
     ARTS_IMPORT virtual void Reset();
 
     // ?Type@aiSubway@@UAEHXZ
-    ARTS_IMPORT virtual i32 Type();
+    ARTS_EXPORT virtual i32 Type();
 
     // ?GetMatrix@aiSubway@@UAEAAVMatrix34@@XZ
     ARTS_IMPORT virtual Matrix34& GetMatrix();
@@ -76,13 +76,13 @@ public:
     ARTS_IMPORT virtual f32 RSideDistance();
 
     // ?CurrentLane@aiSubway@@UAEHXZ
-    ARTS_IMPORT virtual i32 CurrentLane();
+    ARTS_EXPORT virtual i32 CurrentLane();
 
     // ?CurrentRoadId@aiSubway@@UAEHXZ
     ARTS_IMPORT virtual i32 CurrentRoadId();
 
     // ?DrawId@aiSubway@@UAEXXZ
-    ARTS_IMPORT virtual void DrawId();
+    ARTS_EXPORT virtual void DrawId();
 
     // ?Init@aiSubway@@QAEXPADHHHHHPAV1@1@Z
     ARTS_IMPORT void Init(char* arg1, i32 arg2, i32 arg3, i32 arg4, i32 arg5, i32 arg6, aiSubway* arg7, aiSubway* arg8);

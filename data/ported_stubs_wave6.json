@@ -1,0 +1,33 @@
+{
+ "_comment": [
+  "Wave 6. Bodies matched on the full signature in MM2_RE_KIT/GHIDRA_DECOMP.",
+  "",
+  "The aiVehicle Type() enum, recovered as a set: 0 ambient, 4 player, 6 subway. CurrentLane",
+  "reads alongside it - the player returns -1 (not on the rail network) where a subway returns 0",
+  "(one rail) and an ambient car returns its real lane.",
+  "",
+  "Excluded: mmMultiCR::SwitchState writes offset 0x270, which is inside a byte blob rather than",
+  "a named field; mmMultiCR::SendGoldDeliver calls asNetwork::Send and is not a stub;",
+  "dgBangerInstance::ComputeLod writes the unsymbolised global at 0x00627674."
+ ],
+ "ported": [
+  "?DrawId@aiVehicleAmbient@@UAEXXZ",
+  "?DrawBBox@aiVehicleAmbient@@QAEXF@Z",
+  "?Type@aiVehiclePlayer@@UAEHXZ",
+  "?CurrentLane@aiVehiclePlayer@@UAEHXZ",
+  "?DrawId@aiVehiclePlayer@@UAEXXZ",
+  "?Type@aiSubway@@UAEHXZ",
+  "?CurrentLane@aiSubway@@UAEHXZ",
+  "?DrawId@aiSubway@@UAEXXZ",
+  "?DrawShadowMap@aiVehicleInstance@@UAEXXZ",
+  "?DrawReflected@aiVehicleInstance@@UAEXM@Z",
+  "?SizeOf@aiVehicleInstance@@UAEIXZ",
+  "?DrawShadow@dgBangerInstance@@UAEXXZ",
+  "?DrawReflected@dgBangerInstance@@UAEXM@Z",
+  "?SetupGfxLights@dgBangerInstance@@UBEHABVMatrix34@@@Z",
+  "?UpdateGameInput@mmMultiCR@@UAEXH@Z",
+  "?GetWaypoints@mmMultiCR@@UAEPAVmmWaypoints@@XZ",
+  "?SelectTeams@mmMultiCR@@AAEHXZ",
+  "?SendSetup@mmMultiCR@@AAEXK@Z"
+ ]
+}

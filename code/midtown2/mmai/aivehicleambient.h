@@ -44,7 +44,7 @@ public:
     ARTS_IMPORT virtual i32 Type();
 
     // ?DrawId@aiVehicleAmbient@@UAEXXZ
-    ARTS_IMPORT virtual void DrawId();
+    ARTS_EXPORT virtual void DrawId();
 
     // ?ReplayDebug@aiVehicleAmbient@@UAEXXZ
     ARTS_IMPORT virtual void ReplayDebug();
@@ -53,7 +53,7 @@ public:
     ARTS_IMPORT virtual void Impact(i32 arg1);
 
     // ?DrawBBox@aiVehicleAmbient@@QAEXF@Z
-    ARTS_IMPORT void DrawBBox(i16 arg1);
+    ARTS_EXPORT void DrawBBox(i16 arg1);
 
     // ?Dump@aiVehicleAmbient@@QAEXXZ
     ARTS_IMPORT void Dump();
