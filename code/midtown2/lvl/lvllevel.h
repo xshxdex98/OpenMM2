@@ -31,6 +31,7 @@ class Vector4;
 class gfxTexture;
 class lvlInstance;
 class lvlIntersection;
+class lvlRoomInfo;
 class lvlSegment;
 
 class lvlLevel : public asCullable
@@ -91,8 +92,18 @@ protected:
 
     // ?sm_PhysicsMode@lvlLevel@@1_NA
     ARTS_IMPORT static bool sm_PhysicsMode;
+
+public:
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    u16 field_4; // 0x004
+    u8 field_6[2]; // 0x006
+    lvlRoomInfo** RoomInfo; // 0x008
+    i32 RoomCount; // 0x00C
+    i32 field_10; // 0x010
+    i32 InstanceCount; // 0x014
+    i8* Name; // 0x018
 };
 
 // ??_7lvlLevel@@6B@
 // vtable at 0x005B1A1C
-// check_size(lvlLevel, 0x1C); // size known, members are not - cannot verify
+check_size(lvlLevel, 0x1C);

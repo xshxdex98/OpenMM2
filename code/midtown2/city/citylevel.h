@@ -187,6 +187,7 @@ private:
     ARTS_IMPORT static u8* sm_PvsBuffer;
 
 public:
+    // Members from 0x01C; everything below that belongs to lvlLevel.
     // Offset order is mandatory - the original code reads these at fixed offsets.
     u8 field_1C; // 0x01C
 };

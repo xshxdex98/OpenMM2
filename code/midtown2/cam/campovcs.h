@@ -62,6 +62,7 @@ private:
     ARTS_IMPORT void UpdatePOV();
 
 public:
+    // Members from 0x110; everything below that belongs to camCarCS.
     // Offset order is mandatory - the original code reads these at fixed offsets.
     i32 field_110; // 0x110
     i32 Offset; // 0x114

@@ -60,8 +60,33 @@ public:
 
     // ?Solve@Spline@@QAEXM@Z
     ARTS_IMPORT void Solve(f32 arg1);
+
+public:
+    // Members from 0x018; everything below that belongs to asNode.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    i32 Count; // 0x018
+    f32* field_1C; // 0x01C
+    f32* field_20; // 0x020
+    f32* field_24; // 0x024
+    f32* field_28; // 0x028
+    f32* field_2C; // 0x02C
+    f32* field_30; // 0x030
+    f32* field_34; // 0x034
+    f32* field_38; // 0x038
+    f32* field_3C; // 0x03C
+    f32* field_40; // 0x040
+    f32* field_44; // 0x044
+    f32 field_48; // 0x048
+    f32 field_4C; // 0x04C
+    f32 field_50; // 0x050
+    f32 field_54; // 0x054
+    f32 field_58; // 0x058
+    f32 field_5C; // 0x05C
+    f32 field_60; // 0x060
+    f32 field_64; // 0x064
+    i32 field_68; // 0x068
 };
 
 // ??_7Spline@@6B@
 // vtable at 0x005B51B8
-// check_size(Spline, 0x18); // size known, members are not - cannot verify
+check_size(Spline, 0x6C);

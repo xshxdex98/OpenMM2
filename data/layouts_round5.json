@@ -1,0 +1,1113 @@
+{
+ "RadialGauge": {
+  "kind": "class",
+  "size": 276,
+  "confidence": "CONFIRMED",
+  "source": "hand-analysis",
+  "evidence": [
+   "sizeof 0x114 = 276, three ways:",
+   "  (1) MM2Hook records sizeof=0x114 (data/mm2types.json).",
+   "  (2) mmDashView embeds three RadialGauge BY VALUE at 0x090, 0x1A4 and 0x2B8.",
+   "      0x1A4 - 0x090 = 0x114 and 0x2B8 - 0x1A4 = 0x114 - an exact stride, and",
+   "      ??0mmDashView@@QAE@XZ (0x00430610) runs RadialGauge::RadialGauge on all three in order.",
+   "  (3) The highest byte any function touches is the store to this+0x110 in",
+   "      ?Cull@RadialGauge@@QAEXPBVMatrix34@@@Z (0x0043E9F0). 0x110 + 4 = 0x114.",
+   "",
+   "BASE AND EMBEDDED SUBOBJECT. ??0RadialGauge@@QAE@XZ (0x0043E710) calls",
+   "asNode::asNode(this+0), then asLinearCS::asLinearCS(this+0x18), then",
+   "asNode::AddChild(this, this+0x18). So [0x00,0x18) is the asNode base and [0x18,0x98)",
+   "is an asLinearCS embedded BY VALUE - it is a child node, not a base.",
+   "Confirmed from the other side: asLinearCS (0x80, CONFIRMED in layouts.json) holds a",
+   "Matrix34 at its own 0x18 and another at 0x48. ?Update@ calls",
+   "Matrix34::RotateZ(this+0x30) = 0x18+0x18, and ?Cull@RadialGauge@@UAEXXZ (0x0043E940)",
+   "reads twelve consecutive floats at 0x60..0x8C = 0x18+0x48. Both land exactly where an",
+   "asLinearCS at 0x18 puts them; neither would land there if RadialGauge derived from it.",
+   "",
+   "0x9C IS A POINTER, not the float MM2Hook calls MaxValue. ?Update@ (0x0043E820) and",
+   "?GetArrowAngle@ (0x0043ED50) both compute value / **(float **)(this+0x9C), and",
+   "?Init@ stores a 'float const *' parameter there. The name is kept, the type is fixed.",
+   "",
+   "TILING: 0x18 (asNode) + 0x80 (asLinearCS) = 0x98; +4+4+4+4+4 = 0xAC; +12 = 0xB8;",
+   "+4+4 = 0xC0; +12 = 0xCC; +12 = 0xD8; +12 = 0xE4; +48 = 0x114 = 276.",
+   "",
+   "NAMES at 0x98, 0x9C, 0xA0, 0xA4, 0xA8, 0xB8, 0xBC, 0xC0 and 0xCC are MM2Hook's",
+   "(data/mm2types.json), each corroborated by the use cited in that member's src.",
+   "0xAC, 0xD8 and 0xE4 keep field_<OFFSET>: their extent and element type are proven,",
+   "their purpose is not."
+  ],
+  "members": [
+   {
+    "offset": 0,
+    "type": "void**",
+    "name": "vTable",
+    "count": 0,
+    "width": 4,
+    "from_base": true
+   },
+   {
+    "offset": 4,
+    "type": "asNode*",
+    "name": "Next",
+    "count": 0,
+    "width": 4,
+    "from_base": true
+   },
+   {
+    "offset": 8,
+    "type": "asNode*",
+    "name": "Children",
+    "count": 0,
+    "width": 4,
+    "from_base": true
+   },
+   {
+    "offset": 12,
+    "type": "asNode*",
+    "name": "Parent",
+    "count": 0,
+    "width": 4,
+    "from_base": true
+   },
+   {
+    "offset": 16,
+    "type": "u32",
+    "name": "Flags",
+    "count": 0,
+    "width": 4,
+    "from_base": true
+   },
+   {
+    "offset": 20,
+    "type": "i8*",
+    "name": "pName",
+    "count": 0,
+    "width": 4,
+    "from_base": true
+   },
+   {
+    "offset": 24,
+    "offset_hex": "0x18",
+    "type": "asLinearCS",
+    "name": "LinearCS",
+    "count": 0,
+    "width": 128,
+    "src": "??0RadialGauge@@QAE@XZ @0x0043E710: asLinearCS::asLinearCS(this+0x18)"
+   },
+   {
+    "offset": 152,
+    "offset_hex": "0x98",
+    "type": "f32*",
+    "name": "ValuePtr",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@RadialGauge@@QAEXPAVmodStatic@@PAPAVmodShader@@VVector3@@PBM3M@Z @0x0043E7A0: mov [ecx+0x98],eax (a 'float const *' parameter); ?Update@RadialGauge@@UAEXXZ @0x0043E820 evaluates **(float **)(this+0x98)"
+   },
+   {
+    "offset": 156,
+    "offset_hex": "0x9C",
+    "type": "f32*",
+    "name": "MaxValuePtr",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@RadialGauge@@... @0x0043E7A0: mov [ecx+0x9C],edx (the second 'float const *'); ?Update@ @0x0043E820 and ?GetArrowAngle@RadialGauge@@AAEMXZ @0x0043ED50 both divide by **(float **)(this+0x9C)"
+   },
+   {
+    "offset": 160,
+    "offset_hex": "0xA0",
+    "type": "f32",
+    "name": "RotMin",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@RadialGauge@@... @0x0043E7A0: mov dword ptr [ecx+0xA0],0xBF683127 (-0.9069f); ?Update@ uses it as the low end of the arrow sweep fed to Matrix34::RotateZ"
+   },
+   {
+    "offset": 164,
+    "offset_hex": "0xA4",
+    "type": "f32",
+    "name": "RotMax",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@RadialGauge@@... @0x0043E7A0: mov dword ptr [ecx+0xA4],0x40E00000 (7.0f); ?Update@ uses it as the high end of the same sweep"
+   },
+   {
+    "offset": 168,
+    "offset_hex": "0xA8",
+    "type": "f32",
+    "name": "MinValue",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@RadialGauge@@... @0x0043E7A0: mov [ecx+0xA8],eax (the trailing 'float' parameter; mmDashView passes 0x44480000 = 800.0f for the RPM gauge); ?Update@ clamps *ValuePtr up to it"
+   },
+   {
+    "offset": 172,
+    "offset_hex": "0xAC",
+    "type": "Vector3",
+    "name": "field_AC",
+    "count": 0,
+    "width": 12,
+    "src": "??0RadialGauge@@QAE@XZ @0x0043E710 zeroes 0xAC/0xB0/0xB4; ?Update@ @0x0043E820 copies all three into 0x54/0x58/0x5C, which is row 3 of the Matrix34 at 0x30 - so they are floats"
+   },
+   {
+    "offset": 184,
+    "offset_hex": "0xB8",
+    "type": "modShader**",
+    "name": "ShaderSet",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@RadialGauge@@... @0x0043E7A0: mov [ecx+0xB8],edx; the mangled name types that parameter PAPAVmodShader@@ (modShader **), and ?Cull@RadialGauge@@QAEXPBVMatrix34@@@Z @0x0043E9F0 passes **(modShader ***)(this+0xB8) to modStatic::Draw"
+   },
+   {
+    "offset": 188,
+    "offset_hex": "0xBC",
+    "type": "modStatic*",
+    "name": "ModStatic",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@RadialGauge@@... @0x0043E7A0: mov [ecx+0xBC],eax; typed PAVmodStatic@@ by the mangled name, and ?Cull@..@0x0043E9F0 calls modStatic::Draw on it"
+   },
+   {
+    "offset": 192,
+    "offset_hex": "0xC0",
+    "type": "Vector3",
+    "name": "Pivot",
+    "count": 0,
+    "width": 12,
+    "src": "?Init@RadialGauge@@... @0x0043E7A0: lea edx,[ecx+0xC0] then stores at +0, +4 and +8 - the by-value Vector3 parameter (VVector3@@ in the mangled name)"
+   },
+   {
+    "offset": 204,
+    "offset_hex": "0xCC",
+    "type": "Vector3",
+    "name": "Offset",
+    "count": 0,
+    "width": 12,
+    "src": "?Cull@mmDashView@@UAEXXZ @0x00430FB0 writes 0x15C/0x160/0x164, 0x270/0x274/0x278 and 0x384/0x388/0x38C - gauge+0xCC..0xD4 for the gauges at 0x090, 0x1A4 and 0x2B8; ?Cull@RadialGauge@@QAEXPBVMatrix34@@@Z multiplies them into the view matrix"
+   },
+   {
+    "offset": 216,
+    "offset_hex": "0xD8",
+    "type": "Vector3",
+    "name": "field_D8",
+    "count": 0,
+    "width": 12,
+    "src": "??0RadialGauge@@QAE@XZ @0x0043E710 zeroes 0xD8/0xDC/0xE0; ?Cull@mmDashView@@ writes gauge+0xD8..0xE0 for all three gauges; ?Cull@RadialGauge@@QAEXPBVMatrix34@@@Z adds them componentwise to Pivot"
+   },
+   {
+    "offset": 228,
+    "offset_hex": "0xE4",
+    "type": "Matrix34",
+    "name": "field_E4",
+    "count": 0,
+    "width": 48,
+    "src": "?Cull@RadialGauge@@QAEXPBVMatrix34@@@Z @0x0043E9F0: Matrix34::Identity(this+0xE4), Matrix34::Rotate(this+0xE4,..), reads 0xE8..0x104 and writes 0x108/0x10C/0x110, which is the fourth row - a full Matrix34, ending at 0x114"
+   }
+  ]
+ },
+ "Spline": {
+  "kind": "class",
+  "size": 108,
+  "confidence": "CONFIRMED",
+  "source": "hand-analysis",
+  "evidence": [
+   "MM2Hook has NO sizeof for Spline. 108 = 0x6C is proved by squeezing from both sides:",
+   "  FROM BELOW - the highest byte any Spline method touches is this+0x68, read and",
+   "  written as a dword by ?InRange@Spline@@QAEHXZ (0x00522D00). 0x68 + 4 = 0x6C, so",
+   "  sizeof >= 0x6C.",
+   "  FROM ABOVE - ??0camTrackCS@@QAE@XZ (0x0051D770) constructs a Spline in place at",
+   "  this+0x1BC and, in the same constructor, writes its own fields at this+0x1B8 (below)",
+   "  and this+0x228 (above). 0x228 - 0x1BC = 0x6C, so the subobject is at most 0x6C.",
+   "  Alignment is 4 and 0x6C is already 4-aligned, so no padding can hide in between.",
+   "  Therefore sizeof is exactly 0x6C.",
+   "data/layouts.json already carries camTrackCS at 0x298 CONFIRMED with a 108-byte Spline",
+   "at 0x1BC and its next member at 0x228, so this is the size that entry already assumes.",
+   "",
+   "BASE. ??0Spline@@QAE@XZ (0x00522BC0) calls asNode::asNode(this+0) and stores the Spline",
+   "vftable 0x005B51B8; ?Update@Spline@@UAEXXZ ends with asNode::Update(this). [0x00,0x18)",
+   "is the asNode base.",
+   "",
+   "NO UNATTESTED BYTE. Every dword from 0x18 to 0x64 is written by ?Init@Spline@@QAEXPAMH@Z",
+   "(0x00522BF0); 0x68 is owned by ?InRange@. Nine functions in the class agree on the map.",
+   "",
+   "0x1C..0x38 plus 0x40 and 0x44 are eleven parallel arrays, each operator_new(Count*4),",
+   "each indexed [0..Count) with float elements. 0x2C/0x30/0x34/0x38 are the cubic",
+   "coefficients in Horner order: ?Solve@ evaluates ((t*a38 + a34)*t + a30)*t + a2C.",
+   "0x3C is different in kind - it is the caller's array, stored straight from Init's",
+   "param_1 and never allocated, and it is where Solve writes its result.",
+   "",
+   "TILING: 0x18 + 4 = 0x1C; eleven 4-byte pointers 0x1C..0x44 -> 0x48; nine 4-byte scalars",
+   "0x48..0x68 -> 0x6C = 108. No gap, no overlap.",
+   "",
+   "NAMES: only Count is named, from its use as the bound of every loop and the length of",
+   "every array. Nothing in the binary names the rest - Spline has no FileIO and no",
+   "getters - so they keep field_<OFFSET> with the width and element type that is proven."
+  ],
+  "members": [
+   {
+    "offset": 0,
+    "type": "void**",
+    "name": "vTable",
+    "count": 0,
+    "width": 4,
+    "from_base": true
+   },
+   {
+    "offset": 4,
+    "type": "asNode*",
+    "name": "Next",
+    "count": 0,
+    "width": 4,
+    "from_base": true
+   },
+   {
+    "offset": 8,
+    "type": "asNode*",
+    "name": "Children",
+    "count": 0,
+    "width": 4,
+    "from_base": true
+   },
+   {
+    "offset": 12,
+    "type": "asNode*",
+    "name": "Parent",
+    "count": 0,
+    "width": 4,
+    "from_base": true
+   },
+   {
+    "offset": 16,
+    "type": "u32",
+    "name": "Flags",
+    "count": 0,
+    "width": 4,
+    "from_base": true
+   },
+   {
+    "offset": 20,
+    "type": "i8*",
+    "name": "pName",
+    "count": 0,
+    "width": 4,
+    "from_base": true
+   },
+   {
+    "offset": 24,
+    "offset_hex": "0x18",
+    "type": "i32",
+    "name": "Count",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: mov [this+0x18],param_2 (the 'int' of PAMH); every loop in the class is bounded by it and every array below is operator_new(Count*4)"
+   },
+   {
+    "offset": 28,
+    "offset_hex": "0x1C",
+    "type": "f32*",
+    "name": "field_1C",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: *(void **)(this+0x1C) = operator_new(Count*4); ?CalcCoeff@Spline@@QAEXXZ @0x00522D50 and ?Solve@Spline@@QAEXM@Z @0x00522FB0 index it [0..Count) with float elements"
+   },
+   {
+    "offset": 32,
+    "offset_hex": "0x20",
+    "type": "f32*",
+    "name": "field_20",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: *(void **)(this+0x20) = operator_new(Count*4); ?CalcCoeff@Spline@@QAEXXZ @0x00522D50 and ?Solve@Spline@@QAEXM@Z @0x00522FB0 index it [0..Count) with float elements"
+   },
+   {
+    "offset": 36,
+    "offset_hex": "0x24",
+    "type": "f32*",
+    "name": "field_24",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: *(void **)(this+0x24) = operator_new(Count*4); ?CalcCoeff@Spline@@QAEXXZ @0x00522D50 and ?Solve@Spline@@QAEXM@Z @0x00522FB0 index it [0..Count) with float elements"
+   },
+   {
+    "offset": 40,
+    "offset_hex": "0x28",
+    "type": "f32*",
+    "name": "field_28",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: *(void **)(this+0x28) = operator_new(Count*4); ?CalcCoeff@Spline@@QAEXXZ @0x00522D50 and ?Solve@Spline@@QAEXM@Z @0x00522FB0 index it [0..Count) with float elements"
+   },
+   {
+    "offset": 44,
+    "offset_hex": "0x2C",
+    "type": "f32*",
+    "name": "field_2C",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: *(void **)(this+0x2C) = operator_new(Count*4); ?CalcCoeff@Spline@@QAEXXZ @0x00522D50 and ?Solve@Spline@@QAEXM@Z @0x00522FB0 index it [0..Count) with float elements"
+   },
+   {
+    "offset": 48,
+    "offset_hex": "0x30",
+    "type": "f32*",
+    "name": "field_30",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: *(void **)(this+0x30) = operator_new(Count*4); ?CalcCoeff@Spline@@QAEXXZ @0x00522D50 and ?Solve@Spline@@QAEXM@Z @0x00522FB0 index it [0..Count) with float elements"
+   },
+   {
+    "offset": 52,
+    "offset_hex": "0x34",
+    "type": "f32*",
+    "name": "field_34",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: *(void **)(this+0x34) = operator_new(Count*4); ?CalcCoeff@Spline@@QAEXXZ @0x00522D50 and ?Solve@Spline@@QAEXM@Z @0x00522FB0 index it [0..Count) with float elements"
+   },
+   {
+    "offset": 56,
+    "offset_hex": "0x38",
+    "type": "f32*",
+    "name": "field_38",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: *(void **)(this+0x38) = operator_new(Count*4); ?CalcCoeff@Spline@@QAEXXZ @0x00522D50 and ?Solve@Spline@@QAEXM@Z @0x00522FB0 index it [0..Count) with float elements"
+   },
+   {
+    "offset": 60,
+    "offset_hex": "0x3C",
+    "type": "f32*",
+    "name": "field_3C",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: *(float **)(this+0x3C) = param_1 - the CALLER's array, not allocated here; ?SetValue@Spline@@QAEXPAM@Z @0x00522E60 and ?Solve@ write floats through it"
+   },
+   {
+    "offset": 64,
+    "offset_hex": "0x40",
+    "type": "f32*",
+    "name": "field_40",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: *(void **)(this+0x40) = operator_new(Count*4)"
+   },
+   {
+    "offset": 68,
+    "offset_hex": "0x44",
+    "type": "f32*",
+    "name": "field_44",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: *(void **)(this+0x44) = operator_new(Count*4)"
+   },
+   {
+    "offset": 72,
+    "offset_hex": "0x48",
+    "type": "f32",
+    "name": "field_48",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0 stores 0; ?CalcCoeff@ @0x00522D50 computes ABS(this[0x4C] - this[0x48]) as a float; ?Print@Spline@@QAEXH@Z @0x005230E0 passes it to Displayf as %f"
+   },
+   {
+    "offset": 76,
+    "offset_hex": "0x4C",
+    "type": "f32",
+    "name": "field_4C",
+    "count": 0,
+    "width": 4,
+    "src": "?InRange@Spline@@QAEHXZ @0x00522D00 compares datTimeManager::ElapsedTime against it as a float; ?Print@ @0x005230E0 prints it as %f"
+   },
+   {
+    "offset": 80,
+    "offset_hex": "0x50",
+    "type": "f32",
+    "name": "field_50",
+    "count": 0,
+    "width": 4,
+    "src": "?SetValue@Spline@@QAEXPAM@Z @0x00522E60 stores datTimeManager::ElapsedTime into it; ?InRange@ compares against it as a float"
+   },
+   {
+    "offset": 84,
+    "offset_hex": "0x54",
+    "type": "f32",
+    "name": "field_54",
+    "count": 0,
+    "width": 4,
+    "src": "?SetValue@ @0x00522E60 stores datTimeManager::ElapsedTime; ?CalcCoeff@ uses ABS(this[0x54] - this[0x50])"
+   },
+   {
+    "offset": 88,
+    "offset_hex": "0x58",
+    "type": "f32",
+    "name": "field_58",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: mov dword ptr [this+0x58],0x3F800000 (1.0f); ?Solve@ @0x00522FB0 tests it against 0.0f and 1.0f and blends with (1.0f - this[0x58])"
+   },
+   {
+    "offset": 92,
+    "offset_hex": "0x5C",
+    "type": "f32",
+    "name": "field_5C",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: mov dword ptr [this+0x5C],0x3F800000 (1.0f); ?SetGoal@Spline@@QAEXPAMM@Z @0x00522ED0 substitutes it when the caller passes 0.0f for the duration"
+   },
+   {
+    "offset": 96,
+    "offset_hex": "0x60",
+    "type": "f32",
+    "name": "field_60",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: mov dword ptr [this+0x60],0x3C23D70A (0.01f); ?FixTimeStop@Spline@@QAEXXZ @0x005231E0 compares ElapsedTime - this[0x60] against 0.3f"
+   },
+   {
+    "offset": 100,
+    "offset_hex": "0x64",
+    "type": "f32",
+    "name": "field_64",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0 stores 0; ?FixTimeStop@ @0x005231E0 stores ElapsedTime - datTimeManager::Seconds; ?Update@Spline@@UAEXXZ @0x00523210 copies this[0x60] into it"
+   },
+   {
+    "offset": 104,
+    "offset_hex": "0x68",
+    "type": "i32",
+    "name": "field_68",
+    "count": 0,
+    "width": 4,
+    "src": "?InRange@Spline@@QAEHXZ @0x00522D00 uses it as a 0/1 latch - reads it, then stores 0 or 1; ??0Spline@@QAE@XZ @0x00522BC0 zeroes it"
+   }
+  ]
+ },
+ "camCarCS": {
+  "kind": "class",
+  "size": 272,
+  "confidence": "CONFIRMED",
+  "source": "hand-analysis",
+  "evidence": [
+   "sizeof 0x110 = 272. MM2Hook records sizeof=0x110, and BOTH derived classes start their",
+   "own data at exactly 0x110: ??0camTrackCS@@QAE@XZ (0x0051D770) stores 1 to this+0x110 as",
+   "its first own field, and camPovCS's recorded layout begins at 0x110.",
+   "",
+   "BASE. ??0camCarCS@@QAE@XZ (0x00521470) calls camAppCS::camAppCS(this+0), stores its own",
+   "vftable (0x005B50A8) and then writes exactly one field, this+0x108 = 0. camAppCS is",
+   "0x108 and CONFIRMED in data/layouts.json, so camCarCS owns [0x108,0x110) - two dwords.",
+   "",
+   "0x108: ?Init@camCarCS@@QAEXPAVvehCar@@PAD@Z (0x005214A0) stores its first parameter",
+   "there and the mangled name types that parameter vehCar *.",
+   "",
+   "0x10C IS camCarCS's, NOT camTrackCS's. Two SIBLING classes read it with the same",
+   "tri-state meaning through their own this pointer:",
+   "  camPovCS   - ?UpdatePOV@camPovCS@@AAEXXZ (0x0051D5A0) tests *(int *)(this+0x10C) == -1",
+   "  camTrackCS - ?UpdateCar@ (0x0051DC70), ?UpdateTrack@ (0x0051E400) and ?PreApproach@",
+   "               (0x0051EB40) test the same dword against 1, -1 and 0",
+   "camPovCS and camTrackCS are both direct children of camCarCS, so a field they share must",
+   "live in camCarCS; and 0x10C >= camAppCS's 0x108, so it cannot be in the grandparent.",
+   "The NAME comes from the binary itself: camTrackCS::FileIO binds the literal \"ReverseOn\"",
+   "to this+0x10C with datParser record type 4 (int), count 1 - a derived FileIO registering",
+   "an inherited field, which is why data/layouts_from_datparser.json filed it under",
+   "camTrackCS. Nothing in the recovered corpus WRITES 0x10C outside that parser binding.",
+   "",
+   "TILING: camAppCS's recorded 0x108 bytes + 4 + 4 = 0x110 = 272. No gap, no overlap."
+  ],
+  "members": [
+   {
+    "offset": 0,
+    "offset_hex": "0x0",
+    "type": "void*",
+    "name": "vtable",
+    "count": 0,
+    "width": 4,
+    "init": "0x5B5174",
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 4,
+    "offset_hex": "0x4",
+    "type": "u8",
+    "name": "field_4",
+    "count": 140,
+    "width": 1,
+    "unknown": true,
+    "from_base": true
+   },
+   {
+    "offset": 144,
+    "offset_hex": "0x90",
+    "type": "i32",
+    "name": "field_90",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 148,
+    "offset_hex": "0x94",
+    "type": "i32",
+    "name": "TrackTo",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 152,
+    "offset_hex": "0x98",
+    "type": "f32",
+    "name": "field_98",
+    "count": 0,
+    "width": 4,
+    "init": "0x3F4CCCCD",
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 156,
+    "offset_hex": "0x9C",
+    "type": "i32",
+    "name": "field_9C",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 160,
+    "offset_hex": "0xA0",
+    "type": "i32",
+    "name": "ApproachOn",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 164,
+    "offset_hex": "0xA4",
+    "type": "i32",
+    "name": "AppAppOn",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 168,
+    "offset_hex": "0xA8",
+    "type": "i32",
+    "name": "AppRot",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 172,
+    "offset_hex": "0xAC",
+    "type": "i32",
+    "name": "AppXRot",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 176,
+    "offset_hex": "0xB0",
+    "type": "i32",
+    "name": "AppYPos",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 180,
+    "offset_hex": "0xB4",
+    "type": "i32",
+    "name": "AppXZPos",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 184,
+    "offset_hex": "0xB8",
+    "type": "f32",
+    "name": "AppApp",
+    "count": 0,
+    "width": 4,
+    "init": "0x3DCCCCCD",
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 188,
+    "offset_hex": "0xBC",
+    "type": "i32",
+    "name": "AppRotMin",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 192,
+    "offset_hex": "0xC0",
+    "type": "i32",
+    "name": "AppPosMin",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 196,
+    "offset_hex": "0xC4",
+    "type": "i32",
+    "name": "LookAbove",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 200,
+    "offset_hex": "0xC8",
+    "type": "i32",
+    "name": "field_C8",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 204,
+    "offset_hex": "0xCC",
+    "type": "i32",
+    "name": "MaxDist",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 208,
+    "offset_hex": "0xD0",
+    "type": "i32",
+    "name": "MinDist",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 212,
+    "offset_hex": "0xD4",
+    "type": "f32",
+    "name": "LookAt",
+    "count": 0,
+    "width": 4,
+    "init": "0x3C23D70A",
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 216,
+    "offset_hex": "0xD8",
+    "type": "i32",
+    "name": "field_D8",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 220,
+    "offset_hex": "0xDC",
+    "type": "i32",
+    "name": "field_DC",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 224,
+    "offset_hex": "0xE0",
+    "type": "i32",
+    "name": "field_E0",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 228,
+    "offset_hex": "0xE4",
+    "type": "u8",
+    "name": "field_E4",
+    "count": 12,
+    "width": 1,
+    "unknown": true,
+    "from_base": true
+   },
+   {
+    "offset": 240,
+    "offset_hex": "0xF0",
+    "type": "i32",
+    "name": "field_F0",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 244,
+    "offset_hex": "0xF4",
+    "type": "i32",
+    "name": "field_F4",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 248,
+    "offset_hex": "0xF8",
+    "type": "i32",
+    "name": "field_F8",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 252,
+    "offset_hex": "0xFC",
+    "type": "i32",
+    "name": "field_FC",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 256,
+    "offset_hex": "0x100",
+    "type": "i32",
+    "name": "field_100",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 260,
+    "offset_hex": "0x104",
+    "type": "i32",
+    "name": "field_104",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 264,
+    "offset_hex": "0x108",
+    "type": "vehCar*",
+    "name": "Car",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@camCarCS@@QAEXPAVvehCar@@PAD@Z @0x005214A0: *(vehCar **)(this+0x108) = param_1, whose type is fixed by the mangled name (PAVvehCar@@); ??0camCarCS@@QAE@XZ @0x00521470 zeroes it; camTrackCS and camPointCS both dereference it as a vehCar"
+   },
+   {
+    "offset": 268,
+    "offset_hex": "0x10C",
+    "type": "i32",
+    "name": "ReverseOn",
+    "count": 0,
+    "width": 4,
+    "src": "?FileIO@camTrackCS@@UAEXAAVdatParser@@@Z @0x0051FA80: datParser::AddRecord(parser, 4 /* int */, \"ReverseOn\", this+0x10C, 1, NULL)"
+   }
+  ]
+ },
+ "lvlLevel": {
+  "kind": "class",
+  "size": 28,
+  "confidence": "CONFIRMED",
+  "source": "hand-analysis",
+  "evidence": [
+   "sizeof 0x1C = 28, two ways. MM2Hook records sizeof=0x1C, and the derived cityLevel",
+   "starts its own data at exactly 0x1C: ??0cityLevel@@QAE@XZ (0x00443860) ends with a",
+   "BYTE store of 1 to this+0x1C and ?Load@cityLevel@@UAEXPBD@Z (0x00443F30) reads that same byte. cityLevel's own",
+   "allocation size is 32, independently measured in data/measured_sizes.json, which is",
+   "0x1C + 1 byte + 3 bytes of tail padding.",
+   "",
+   "BASE. asCullable, 4 bytes (vptr only). lvlLevel's constructor stores its vftable",
+   "directly at this+0 and ~lvlLevel (0x00465400) ends in Base::~Base. [0x00,0x04) is the",
+   "base vptr.",
+   "",
+   "ONLY TWO BYTES ARE UNATTESTED, at 0x6. 0x4 is a two-byte store (mov word ptr [esi+4],0),",
+   "0x8 is a pointer, and 0x6 is what lies between them. Declaring it u8[2] asserts nothing",
+   "about content and cannot move any other member. Every other byte of the class is",
+   "written or read by a named function. MM2Hook spells 0x4 as one int, which is the same",
+   "eight bytes either way.",
+   "",
+   "TILING: 4 + 2 + 2 + 4 + 4 + 4 + 4 + 4 = 0x1C = 28. No gap, no overlap.",
+   "",
+   "NAMES RoomInfo, RoomCount, InstanceCount and Name are MM2Hook's, each corroborated by",
+   "the use cited in its src; the lvlRoomInfo type at 0x8 is confirmed by the callee-side",
+   "offsets MoveToRoom touches (+2/+4/+8) matching lvlRoomInfo's recorded layout exactly.",
+   "field_4 and field_10 are written and never read anywhere in the corpus, so they keep",
+   "field_<OFFSET> and the honest default width (MM2Hook calls 0x10 'lvlInstance *",
+   "FirstInstance'; nothing in the binary proves that)."
+  ],
+  "members": [
+   {
+    "offset": 0,
+    "offset_hex": "0x0",
+    "type": "void*",
+    "name": "vtable",
+    "count": 0,
+    "width": 4,
+    "src": "??0lvlLevel@@QAE@XZ @0x004653A0: mov dword ptr [esi],0x005B1A1C",
+    "from_base": true
+   },
+   {
+    "offset": 4,
+    "offset_hex": "0x4",
+    "type": "u16",
+    "name": "field_4",
+    "count": 0,
+    "width": 2,
+    "src": "??0lvlLevel@@QAE@XZ @0x004653A0: mov word ptr [esi+4],0 at 0x004653DF - a TWO-byte store, read off the disassembly, not the decompiler"
+   },
+   {
+    "offset": 6,
+    "offset_hex": "0x6",
+    "type": "u8",
+    "name": "field_6",
+    "count": 2,
+    "width": 1,
+    "src": "NOT ATTESTED - the two bytes between the u16 at 0x4 and the pointer at 0x8; declared as opaque filler, asserts nothing about content"
+   },
+   {
+    "offset": 8,
+    "offset_hex": "0x8",
+    "type": "lvlRoomInfo**",
+    "name": "RoomInfo",
+    "count": 0,
+    "width": 4,
+    "src": "?MoveToRoom@lvlLevel@@QAEXPAVlvlInstance@@H@Z @0x00465480 indexes it as *(int *)(*(int *)(this+8) + room*4) and then touches +2 (u16), +4 and +8 of the result - exactly lvlRoomInfo::InstanceFlags / FirstInstance / StaticInstance"
+   },
+   {
+    "offset": 12,
+    "offset_hex": "0xC",
+    "type": "i32",
+    "name": "RoomCount",
+    "count": 0,
+    "width": 4,
+    "src": "?Load@cityLevel@@UAEXPBD@Z @0x00443F30 stores the room count to this+0xC and then does operator_new(count*4) and stores that array to this+8; ?SaveBinary@aiMap@@ and ?ReadBinary@aiMap@@ read *(int *)(lvlLevel::sm_Singleton+0xC) as a plain int"
+   },
+   {
+    "offset": 16,
+    "offset_hex": "0x10",
+    "type": "i32",
+    "name": "field_10",
+    "count": 0,
+    "width": 4,
+    "src": "?LoadInstances@lvlLevel@@UAE_NPBD0@Z @0x004656F0: mov dword ptr [ebx+0x10],esi (esi = 0) at 0x0046575A - width read off the disassembly. Nothing else in the recovered corpus touches it"
+   },
+   {
+    "offset": 20,
+    "offset_hex": "0x14",
+    "type": "i32",
+    "name": "InstanceCount",
+    "count": 0,
+    "width": 4,
+    "src": "?LoadInstances@lvlLevel@@UAE_NPBD0@Z @0x004656F0: zeroed by a dword store at 0x0046575D, then *(int *)(this+0x14) += 1 once per instance loaded"
+   },
+   {
+    "offset": 24,
+    "offset_hex": "0x18",
+    "type": "i8*",
+    "name": "Name",
+    "count": 0,
+    "width": 4,
+    "src": "?Load@cityLevel@@UAEXPBD@Z @0x00443F30: *(char **)(this+0x18) = param_1, the city name; LoadCityTimeWeatherLighting passes *(char **)(lvlLevel::sm_Singleton+0x18) to datParser::Load as the asset path"
+   }
+  ]
+ },
+ "dgUnhitMtxBangerInstance": {
+  "kind": "class",
+  "size": 88,
+  "confidence": "PARTIAL",
+  "source": "hand-analysis",
+  "evidence": [
+   "THE 16 BYTES AT 0x18 ARE STILL NOT PROVEN. An exhaustive sweep of MM2_RE_KIT finds no",
+   "instruction anywhere that reads or writes [0x18,0x28) of this class, of its base, or of",
+   "any sibling or descendant - including through lvlInstance * base pointers. All 30 slots",
+   "of ??_7dgUnhitMtxBangerInstance@@6B@ (0x005B1494) resolve to named, recovered functions",
+   "and none of them touches the range.",
+   "",
+   "EVERYTHING ELSE IS CERTAIN.",
+   "  sizeof = 0x58, four ways: ?SizeOf@dgUnhitMtxBangerInstance@@UAEIXZ (0x00442AF0)",
+   "  returns 0x58; ?RequestBanger@dgUnhitBangerInstance@@SAPAV1@PBDH@Z (0x00441D80) calls",
+   "  lvlInstance::operator_new(0x58) and then stores this class's vftable; and the derived",
+   "  gizBridge and gizTrainCar both begin their own data at exactly 0x58 (gizBridge touches",
+   "  only 0x10/0x14 - inherited - and then 0x58, 0x5C, 0x60, 0x88..0x9C).",
+   "  The Matrix34 at 0x28 is proven three ways - see that member's src.",
+   "  [0x00,0x18) is the dgUnhitBangerInstance base, CONFIRMED at 0x18 in layouts.json.",
+   "",
+   "NEW CORROBORATION the previous round did not have. The sibling dgUnhitYBangerInstance",
+   "also skips [0x18,0x28) and starts its own data at 0x28:",
+   "  ?SetMatrix@dgUnhitYBangerInstance@@UAEXABVMatrix34@@@Z (0x00441F40) writes 0x28..0x3C",
+   "  ?GetPosition@dgUnhitYBangerInstance@@UAEABVVector3@@XZ (0x00441FC0) returns this+0x28",
+   "  ?SizeOf@dgUnhitYBangerInstance@@UAEIXZ (0x00442AE0) returns 0x3C = 0x28 + 12 + 4 + 4",
+   "and dgHitBangerInstance does the same on the OTHER branch of the tree - its constructor",
+   "(0x00442A60) calls Matrix34::Identity(this+0x28). Three classes, two branches, the same",
+   "16 bytes skipped; and their descendants (aiCableCarInstance 0x44, aiTrafficLightInstance,",
+   "gizFerry, aiSubwayInstance all start at 0x3C; dgGlassInstance 0x5C, gizBridge and",
+   "gizTrainCar start at 0x58) close the arithmetic in every case.",
+   "",
+   "TILING: 0x18 (base) + 16 + 48 = 0x58 = 88. No gap, no overlap. The hole's EXTENT is",
+   "forced by arithmetic; only its CONTENT is unknown.",
+   "",
+   "Graded PARTIAL for the same reason as last round. merge_layouts is right to reject it."
+  ],
+  "members": [
+   {
+    "offset": 0,
+    "offset_hex": "0x0",
+    "type": "void*",
+    "name": "vtable",
+    "count": 0,
+    "width": 4,
+    "init": "0x5B56D4",
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 4,
+    "offset_hex": "0x4",
+    "type": "u8",
+    "name": "field_4",
+    "count": 4,
+    "width": 1,
+    "unknown": true,
+    "from_base": true
+   },
+   {
+    "offset": 8,
+    "offset_hex": "0x8",
+    "type": "u8",
+    "name": "field_8",
+    "count": 0,
+    "width": 1,
+    "init": "0x12",
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 9,
+    "offset_hex": "0x9",
+    "type": "u8",
+    "name": "field_9",
+    "count": 11,
+    "width": 1,
+    "unknown": true,
+    "from_base": true
+   },
+   {
+    "offset": 20,
+    "offset_hex": "0x14",
+    "type": "u16",
+    "name": "field_14",
+    "count": 0,
+    "width": 2,
+    "init": "0x0",
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 22,
+    "offset_hex": "0x16",
+    "type": "u8",
+    "name": "field_16",
+    "count": 2,
+    "width": 1,
+    "unknown": true,
+    "from_base": true
+   },
+   {
+    "offset": 24,
+    "offset_hex": "0x18",
+    "type": "u8",
+    "name": "gap",
+    "count": 16,
+    "width": 1,
+    "src": "NOT ATTESTED - no recovered function reads or writes any byte of [0x18,0x28)"
+   },
+   {
+    "offset": 40,
+    "offset_hex": "0x28",
+    "type": "Matrix34",
+    "name": "Matrix",
+    "count": 0,
+    "width": 48,
+    "src": "?SetMatrix@dgUnhitMtxBangerInstance@@UAEXABVMatrix34@@@Z @0x00441FD0 copies twelve dwords to this+0x28; ?GetMatrix@ @0x00441FF0 returns (Matrix34 *)(this+0x28); ?GetPosition@ @0x00442000 returns (Vector3 *)(this+0x4C) = 0x28 + 0x24, the matrix's fourth row - which fixes it as a Matrix34 and not an opaque 48-byte blob"
+   }
+  ]
+ }
+}

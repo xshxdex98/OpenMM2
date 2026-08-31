@@ -42,8 +42,14 @@ public:
 
     // ?Init@camCarCS@@QAEXPAVvehCar@@PAD@Z
     ARTS_IMPORT void Init(vehCar* arg1, char* arg2);
+
+public:
+    // Members from 0x108; everything below that belongs to camAppCS.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    vehCar* Car; // 0x108
+    i32 ReverseOn; // 0x10C
 };
 
 // ??_7camCarCS@@6B@
 // vtable at 0x005B50A8
-// check_size(camCarCS, 0x110); // size known, members are not - cannot verify
+check_size(camCarCS, 0x110);

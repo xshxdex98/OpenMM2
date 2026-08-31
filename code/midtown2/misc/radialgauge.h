@@ -23,10 +23,11 @@
 
 #include "core/arts.h"
 
+#include "arts7/aslinearcs.h"
 #include "arts7/asnode.h"
+#include "vector7/matrix34.h"
 #include "vector7/vector3.h"
 
-class Matrix34;
 class modShader;
 class modStatic;
 
@@ -60,8 +61,25 @@ private:
 
     // ?bDebugPivot@RadialGauge@@0_NA
     ARTS_IMPORT static bool bDebugPivot;
+
+public:
+    // Members from 0x018; everything below that belongs to asNode.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    asLinearCS LinearCS; // 0x018
+    f32* ValuePtr; // 0x098
+    f32* MaxValuePtr; // 0x09C
+    f32 RotMin; // 0x0A0
+    f32 RotMax; // 0x0A4
+    f32 MinValue; // 0x0A8
+    Vector3 field_AC; // 0x0AC
+    modShader** ShaderSet; // 0x0B8
+    modStatic* ModStatic; // 0x0BC
+    Vector3 Pivot; // 0x0C0
+    Vector3 Offset; // 0x0CC
+    Vector3 field_D8; // 0x0D8
+    Matrix34 field_E4; // 0x0E4
 };
 
 // ??_7RadialGauge@@6B@
 // vtable at 0x005B11B4
-// check_size(RadialGauge, 0x114); // size known, members are not - cannot verify
+check_size(RadialGauge, 0x114);

@@ -317470,6 +317470,28 @@
  "mmPositions": {
   "kind": "class",
   "size": 12,
+  "confidence": "CONFIRMED",
+  "source": "hand-analysis",
+  "evidence": [
+   "ctor ??0mmPositions@@QAE@XZ at 0x0052A0B0 is 0xD bytes and writes exactly three slots,",
+   "0x0, 0x4 and 0x8, all to zero. Nothing in the class touches anything above 0xB.",
+   "",
+   "0x0 is a heap pointer: the dtor at 0x0052A0C0 is `operator delete(*this); *this = 0;`",
+   "and ?Init@mmPositions@@QAEXH@Z at 0x0052A0E0 is",
+   "    pvVar1 = operator_new(param_1 * 4);  *(int *)(this + 8) = param_1;",
+   "    *(void **)this = pvVar1;",
+   "so 0x0 is an allocated array of 4-byte elements and 0x8 is the requested count.",
+   "?GetVector4@ at 0x0052A310 indexes it as *(int *)(*(int *)this + param_1 * 4), i.e. an",
+   "array of pointers.",
+   "",
+   "0x4 is the live count: ?GetCount@mmPositions@@QAEHXZ at 0x0052A300 is exactly",
+   "`return *(int *)(this + 4);` - the name is the mangled name of its own getter, not a",
+   "guess - and ?Register@ at 0x0052A410 does",
+   "    if (*(int *)(this + 4) == *(int *)(this + 8)) return -1;",
+   "then post-increments 0x4, which is what fixes 0x8 as the capacity.",
+   "",
+   "0x8 + 4 = 12, and data/measured_sizes.json independently measures 12."
+  ],
   "members": [
    {
     "offset": 0,
@@ -317495,13 +317517,35 @@
     "width": 4,
     "src": "Init 0x0052A0E0 + Register 0x0052A410"
    }
-  ],
-  "source": "layouts_corrections.json",
-  "confidence": "CONFIRMED"
+  ]
  },
  "Aud3DAmbientObject": {
   "kind": "class",
   "size": 128,
+  "confidence": "CONFIRMED",
+  "source": "hand-analysis",
+  "evidence": [
+   "ctor ??0Aud3DAmbientObject@@QAE@XZ at 0x005150A0 calls Aud3DObject::Aud3DObject(this)",
+   "first, so [0x0, 0x60) is the base - Aud3DObject is 0x60 and already check_size-verified.",
+   "It then writes 0x60, 0x64, 0x6C, 0x70, 0x74, 0x78 and 0x7C as dwords and 0x68, 0x69 as",
+   "BYTES, with 0x70 set to 1065353216 = 1.0f.",
+   "",
+   "0x60 is the element count and 0x7C the array it counts: the dtor at 0x005150E0 is",
+   "    for (i = 0; i < *(_DWORD *)(this + 96); ++i)",
+   "        operator delete(*(void **)(*(_DWORD *)(this + 124) + 4 * i));",
+   "then deletes the array itself, so 0x7C is an owned array of pointers.",
+   "?GetSoundDataPtr@Aud3DAmbientObject@@QAEPAUtagAud3DAmbientSoundData@@H@Z returns",
+   "*(tagAud3DAmbientSoundData **)(*(int *)(this + 0x7c) + param_1 * 4) - the mangled return",
+   "type names the element type outright.",
+   "",
+   "0x6C, 0x70, 0x74 and 0x78 are floats by use: 0x6C multiplies into AudSoundBase::SetVolume,",
+   "and 0x78 appears in a float range test against param_1+0x14 and param_1+0x18.",
+   "0x68 and 0x69 are byte flags, written as bytes and tested as `this[0x68] == 0`.",
+   "",
+   "The highest offset referenced by any of the class's 30 recovered functions is 0x7C, so",
+   "0x7C + 4 = 0x80. aiSubwayAudio, which derives from this class, starts its own field at",
+   "0x80 - the two agree."
+  ],
   "members": [
    {
     "name": "vtable",
@@ -317799,13 +317843,31 @@
     "width": 4,
     "src": "ctor + dtor; GetSoundDataPtr return type"
    }
-  ],
-  "source": "layouts_corrections.json",
-  "confidence": "CONFIRMED"
+  ]
  },
  "aiSubwayAudio": {
   "kind": "class",
   "size": 132,
+  "confidence": "CONFIRMED",
+  "source": "hand-analysis",
+  "evidence": [
+   "THE BASE IS Aud3DAmbientObject (0x80), NOT Aud3DObject (0x60). The ctor",
+   "??0aiSubwayAudio@@QAE@XZ at 0x0059D660 calls Aud3DAmbientObject::Aud3DAmbientObject at",
+   "this+0; the dtor at 0x0059D680 calls Aud3DAmbientObject::~Aud3DAmbientObject; and",
+   "?Activate@ / ?Deactivate@ at 0x0059D690 / 0x0059D6D0 call",
+   "Aud3DAmbientObject::ActivateSound((Aud3DAmbientObject *)this, i).",
+   "",
+   "The ctor is 0x20 bytes and writes only the vptr and *(int *)(this + 0x80) = 0.",
+   "?Update@aiSubwayAudio@@QAEXM@Z at 0x0059D710 reads and writes that slot as a two-state",
+   "selector:",
+   "    if (*(int *)(this + 0x80) == 1) { Deactivate(1); Activate(0); ... = 0; }",
+   "    else if (*(int *)(this + 0x80) == 0) { ... = 1; }",
+   "a 4-byte compare and store. Nothing references anything above 0x83.",
+   "",
+   "0x80 + 4 = 0x84, and aiSubway (0x14C) records this class embedded at 0xC8 with width 132:",
+   "0xC8 + 0x84 = 0x14C exactly. This entry is useless without Aud3DAmbientObject, since",
+   "without it the base collapses to 0x60 and the class comes out 0x64."
+  ],
   "members": [
    {
     "name": "vtable",
@@ -318111,13 +318173,35 @@
     "width": 4,
     "src": "ctor 0x0059D660 + Update 0x0059D710"
    }
-  ],
-  "source": "layouts_corrections.json",
-  "confidence": "CONFIRMED"
+  ]
  },
  "aiCableCarAudioData": {
   "kind": "class",
   "size": 52,
+  "confidence": "CONFIRMED",
+  "source": "hand-analysis",
+  "evidence": [
+   "ctor ??0aiCableCarAudioData@@QAE@XZ at 0x0059E2B0 writes DWORD indices 0 through 12,",
+   "i.e. offsets 0x00 to 0x30 inclusive, and nothing beyond. 0x30 + 4 = 0x34.",
+   "",
+   "The first five slots are named by their own getters' mangled names, so these are recovered",
+   "names rather than invented ones: ?GetGoPtr@ at 0x0059E380 returns *(AudSoundBase **)this,",
+   "?GetStopPtr@ at 0x0059E390 returns this+4, ?GetLoopPtr@ at 0x0059E3A0 returns this+8,",
+   "?GetGetSpeedPtr@ at 0x0059E3B0 returns this+0xC and ?GetCrossIntersectionPtr@ at",
+   "0x0059E3C0 returns this+0x10. Each mangled return type is PAVAudSoundBase.",
+   "",
+   "?AssignSounds@ at 0x0059E630 pairs the sample ids at 0x18/0x1C/0x20/0x24/0x28 into the",
+   "pointers at 0x00/0x04/0x08/0x0C/0x14 via GetSample, and ?UnAssignSounds@ at 0x0059E6A0",
+   "clears 0x14 alongside 0x00-0x0C. 0x10 is zeroed by the ctor and never assigned - the",
+   "CrossIntersection slot is dead in retail.",
+   "",
+   "The ids at 0x18-0x28 are Aud3DObjectManager::AllocateSample results for the named samples",
+   "CABLECARGOBELL, CABLECARSTOP, CABLECAR, CABLECARSTART and STREETCABLE. Which sound a slot",
+   "holds is not a field name, so those keep field_ names.",
+   "",
+   "0x2C is a state: ?UpdateState@ at 0x0059E580 assigns 0..3 and ?UpdatePlay@ at 0x0059E3D0",
+   "switches on it, then mirrors it into 0x30 as the previous state."
+  ],
   "members": [
    {
     "offset": 0,
@@ -318223,13 +318307,32 @@
     "width": 4,
     "src": "UpdatePlay 0x0059E3D0 previous state"
    }
-  ],
-  "source": "layouts_corrections.json",
-  "confidence": "CONFIRMED"
+  ]
  },
  "aiCableCarAudio": {
   "kind": "class",
   "size": 156,
+  "confidence": "CONFIRMED",
+  "source": "hand-analysis",
+  "evidence": [
+   "ctor ??0aiCableCarAudio@@QAE@XZ at 0x0059D350 calls Aud3DObject::Aud3DObject(this), so",
+   "[0x0, 0x60) is the base, then constructs aiCableCarAudioData in place at this+104 (0x68).",
+   "",
+   "The base is confirmed by use rather than merely asserted: ?Init@ at 0x0059D400 writes",
+   "*(undefined4 *)(this + 0x40) = 8, which is Aud3DObject::Priority at 0x40, and the inlined",
+   "Reset at 0x0059D440 touches 0x4, 0x8, 0xC, 0x10, 0x20, 0x24, 0x28, 0x2C, 0x30, 0x44 and",
+   "0x48 - every one a named Aud3DObject field at its recorded offset.",
+   "",
+   "?Init@aiCableCarAudio@@QAEXPAVVector3@@PAM@Z at 0x0059D400 does",
+   "    *(float **)(this + 0x60) = param_2;   *(float *)(this + 100) = *param_2;",
+   "so 0x60 holds the float* (PAM in the mangled name) and 0x64 a cached copy of its pointee.",
+   "?UpdateAudio@ at 0x0059D460 confirms both:",
+   "    *(undefined4 *)(this + 100) = **(undefined4 **)(this + 0x60);",
+   "and 0x0059D490 passes them to UpdateState as the current and previous value.",
+   "",
+   "0x68 + sizeof(aiCableCarAudioData) = 0x68 + 0x34 = 0x9C = 156, and aiCableCar (0x184)",
+   "already records this class embedded at 0xE8 with width 156: 0xE8 + 0x9C = 0x184 exactly."
+  ],
   "members": [
    {
     "name": "vtable",
@@ -318471,13 +318574,40 @@
     "width": 52,
     "src": "ctor constructs in place at this+104"
    }
-  ],
-  "source": "layouts_corrections.json",
-  "confidence": "CONFIRMED"
+  ]
  },
  "aiAmbientVehicleAudio": {
   "kind": "class",
   "size": 140,
+  "confidence": "CONFIRMED",
+  "source": "hand-analysis",
+  "evidence": [
+   "ctor ??0aiAmbientVehicleAudio@@QAE@XZ at 0x004CF890 calls Aud3DObject::Aud3DObject(this),",
+   "so [0x0, 0x60) is the base, then writes exactly thirteen slots: 0x60, 0x64, 0x68 and 0x6C",
+   "to -1; 0x70, 0x74, 0x78, 0x7C, 0x80 and 0x84 to 0 as dwords; and 0x88, 0x89 to 0 as BYTES.",
+   "",
+   "The four -1 slots are container indices, each filled by its own loader through an int*",
+   "out-param and then used to index a manager array - ?LoadHorn@ at 0x004D0300 takes",
+   "this+0x60, ?LoadEngine@ at 0x004D00D0 takes this+100, ?LoadVoices@ at 0x004D0530 takes",
+   "this+0x68 and ?LoadImpacts@ at 0x004D07B0 takes this+0x6C; AssignSounds at 0x004CF9D0 then",
+   "reads s_ppHornAudioContainer[*(int *)(this + 0x60)] and its three counterparts, the",
+   "AudCreature one guarded by != -1 against the ctor's sentinel.",
+   "",
+   "The four pointer slots are typed by the callee class in the machine code, not inferred:",
+   "?GetAudImpactPtr@...@@QAEPAVAudImpact@@XZ at 0x004CFB10 is literally",
+   "`return *(AudImpact **)(this + 0x70);`; 0x74 is passed to vehHornAudio::Update; 0x78 to",
+   "AudCreature::UpdateAttenuation/EchoOn/EchoOff; 0x7C to aiEngineAudio::UpdateDoppler and",
+   "CalculatePitch.",
+   "",
+   "0x80 and 0x84 are floats - UpdateAudio at 0x004CFB90 evaluates",
+   "*(float *)(this + 0x84) - *(float *)(this + 0x80) <= 4.0 and *(float *)(this + 0x84) *= 0.95.",
+   "0x88 is a one-shot load latch (?Init@ at 0x004CF8F0 tests it then sets it to 1) and 0x89 an",
+   "echo flag (?EchoOn@ 0x004CFFE0 sets it, ?EchoOff@ 0x004D0030 clears it).",
+   "",
+   "No recovered function of the class references any offset above 0x89, so the extent is 0x8A",
+   "and pads to 0x8C at align 4. aiVehicleSpline (0x18C) independently records this class",
+   "embedded at 0x100 with width 140: 0x100 + 0x8C = 0x18C. Two derivations, one answer."
+  ],
   "members": [
    {
     "name": "vtable",
@@ -318799,8 +318929,877 @@
     "width": 1,
     "src": "tail padding to align 4"
    }
+  ]
+ },
+ "RadialGauge": {
+  "kind": "class",
+  "size": 276,
+  "members": [
+   {
+    "offset": 0,
+    "type": "void**",
+    "name": "vTable",
+    "count": 0,
+    "width": 4,
+    "from_base": true
+   },
+   {
+    "offset": 4,
+    "type": "asNode*",
+    "name": "Next",
+    "count": 0,
+    "width": 4,
+    "from_base": true
+   },
+   {
+    "offset": 8,
+    "type": "asNode*",
+    "name": "Children",
+    "count": 0,
+    "width": 4,
+    "from_base": true
+   },
+   {
+    "offset": 12,
+    "type": "asNode*",
+    "name": "Parent",
+    "count": 0,
+    "width": 4,
+    "from_base": true
+   },
+   {
+    "offset": 16,
+    "type": "u32",
+    "name": "Flags",
+    "count": 0,
+    "width": 4,
+    "from_base": true
+   },
+   {
+    "offset": 20,
+    "type": "i8*",
+    "name": "pName",
+    "count": 0,
+    "width": 4,
+    "from_base": true
+   },
+   {
+    "offset": 24,
+    "offset_hex": "0x18",
+    "type": "asLinearCS",
+    "name": "LinearCS",
+    "count": 0,
+    "width": 128,
+    "src": "??0RadialGauge@@QAE@XZ @0x0043E710: asLinearCS::asLinearCS(this+0x18)"
+   },
+   {
+    "offset": 152,
+    "offset_hex": "0x98",
+    "type": "f32*",
+    "name": "ValuePtr",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@RadialGauge@@QAEXPAVmodStatic@@PAPAVmodShader@@VVector3@@PBM3M@Z @0x0043E7A0: mov [ecx+0x98],eax (a 'float const *' parameter); ?Update@RadialGauge@@UAEXXZ @0x0043E820 evaluates **(float **)(this+0x98)"
+   },
+   {
+    "offset": 156,
+    "offset_hex": "0x9C",
+    "type": "f32*",
+    "name": "MaxValuePtr",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@RadialGauge@@... @0x0043E7A0: mov [ecx+0x9C],edx (the second 'float const *'); ?Update@ @0x0043E820 and ?GetArrowAngle@RadialGauge@@AAEMXZ @0x0043ED50 both divide by **(float **)(this+0x9C)"
+   },
+   {
+    "offset": 160,
+    "offset_hex": "0xA0",
+    "type": "f32",
+    "name": "RotMin",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@RadialGauge@@... @0x0043E7A0: mov dword ptr [ecx+0xA0],0xBF683127 (-0.9069f); ?Update@ uses it as the low end of the arrow sweep fed to Matrix34::RotateZ"
+   },
+   {
+    "offset": 164,
+    "offset_hex": "0xA4",
+    "type": "f32",
+    "name": "RotMax",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@RadialGauge@@... @0x0043E7A0: mov dword ptr [ecx+0xA4],0x40E00000 (7.0f); ?Update@ uses it as the high end of the same sweep"
+   },
+   {
+    "offset": 168,
+    "offset_hex": "0xA8",
+    "type": "f32",
+    "name": "MinValue",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@RadialGauge@@... @0x0043E7A0: mov [ecx+0xA8],eax (the trailing 'float' parameter; mmDashView passes 0x44480000 = 800.0f for the RPM gauge); ?Update@ clamps *ValuePtr up to it"
+   },
+   {
+    "offset": 172,
+    "offset_hex": "0xAC",
+    "type": "Vector3",
+    "name": "field_AC",
+    "count": 0,
+    "width": 12,
+    "src": "??0RadialGauge@@QAE@XZ @0x0043E710 zeroes 0xAC/0xB0/0xB4; ?Update@ @0x0043E820 copies all three into 0x54/0x58/0x5C, which is row 3 of the Matrix34 at 0x30 - so they are floats"
+   },
+   {
+    "offset": 184,
+    "offset_hex": "0xB8",
+    "type": "modShader**",
+    "name": "ShaderSet",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@RadialGauge@@... @0x0043E7A0: mov [ecx+0xB8],edx; the mangled name types that parameter PAPAVmodShader@@ (modShader **), and ?Cull@RadialGauge@@QAEXPBVMatrix34@@@Z @0x0043E9F0 passes **(modShader ***)(this+0xB8) to modStatic::Draw"
+   },
+   {
+    "offset": 188,
+    "offset_hex": "0xBC",
+    "type": "modStatic*",
+    "name": "ModStatic",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@RadialGauge@@... @0x0043E7A0: mov [ecx+0xBC],eax; typed PAVmodStatic@@ by the mangled name, and ?Cull@..@0x0043E9F0 calls modStatic::Draw on it"
+   },
+   {
+    "offset": 192,
+    "offset_hex": "0xC0",
+    "type": "Vector3",
+    "name": "Pivot",
+    "count": 0,
+    "width": 12,
+    "src": "?Init@RadialGauge@@... @0x0043E7A0: lea edx,[ecx+0xC0] then stores at +0, +4 and +8 - the by-value Vector3 parameter (VVector3@@ in the mangled name)"
+   },
+   {
+    "offset": 204,
+    "offset_hex": "0xCC",
+    "type": "Vector3",
+    "name": "Offset",
+    "count": 0,
+    "width": 12,
+    "src": "?Cull@mmDashView@@UAEXXZ @0x00430FB0 writes 0x15C/0x160/0x164, 0x270/0x274/0x278 and 0x384/0x388/0x38C - gauge+0xCC..0xD4 for the gauges at 0x090, 0x1A4 and 0x2B8; ?Cull@RadialGauge@@QAEXPBVMatrix34@@@Z multiplies them into the view matrix"
+   },
+   {
+    "offset": 216,
+    "offset_hex": "0xD8",
+    "type": "Vector3",
+    "name": "field_D8",
+    "count": 0,
+    "width": 12,
+    "src": "??0RadialGauge@@QAE@XZ @0x0043E710 zeroes 0xD8/0xDC/0xE0; ?Cull@mmDashView@@ writes gauge+0xD8..0xE0 for all three gauges; ?Cull@RadialGauge@@QAEXPBVMatrix34@@@Z adds them componentwise to Pivot"
+   },
+   {
+    "offset": 228,
+    "offset_hex": "0xE4",
+    "type": "Matrix34",
+    "name": "field_E4",
+    "count": 0,
+    "width": 48,
+    "src": "?Cull@RadialGauge@@QAEXPBVMatrix34@@@Z @0x0043E9F0: Matrix34::Identity(this+0xE4), Matrix34::Rotate(this+0xE4,..), reads 0xE8..0x104 and writes 0x108/0x10C/0x110, which is the fourth row - a full Matrix34, ending at 0x114"
+   }
   ],
-  "source": "layouts_corrections.json",
+  "source": "layouts_round5.json",
+  "confidence": "CONFIRMED"
+ },
+ "Spline": {
+  "kind": "class",
+  "size": 108,
+  "members": [
+   {
+    "offset": 0,
+    "type": "void**",
+    "name": "vTable",
+    "count": 0,
+    "width": 4,
+    "from_base": true
+   },
+   {
+    "offset": 4,
+    "type": "asNode*",
+    "name": "Next",
+    "count": 0,
+    "width": 4,
+    "from_base": true
+   },
+   {
+    "offset": 8,
+    "type": "asNode*",
+    "name": "Children",
+    "count": 0,
+    "width": 4,
+    "from_base": true
+   },
+   {
+    "offset": 12,
+    "type": "asNode*",
+    "name": "Parent",
+    "count": 0,
+    "width": 4,
+    "from_base": true
+   },
+   {
+    "offset": 16,
+    "type": "u32",
+    "name": "Flags",
+    "count": 0,
+    "width": 4,
+    "from_base": true
+   },
+   {
+    "offset": 20,
+    "type": "i8*",
+    "name": "pName",
+    "count": 0,
+    "width": 4,
+    "from_base": true
+   },
+   {
+    "offset": 24,
+    "offset_hex": "0x18",
+    "type": "i32",
+    "name": "Count",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: mov [this+0x18],param_2 (the 'int' of PAMH); every loop in the class is bounded by it and every array below is operator_new(Count*4)"
+   },
+   {
+    "offset": 28,
+    "offset_hex": "0x1C",
+    "type": "f32*",
+    "name": "field_1C",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: *(void **)(this+0x1C) = operator_new(Count*4); ?CalcCoeff@Spline@@QAEXXZ @0x00522D50 and ?Solve@Spline@@QAEXM@Z @0x00522FB0 index it [0..Count) with float elements"
+   },
+   {
+    "offset": 32,
+    "offset_hex": "0x20",
+    "type": "f32*",
+    "name": "field_20",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: *(void **)(this+0x20) = operator_new(Count*4); ?CalcCoeff@Spline@@QAEXXZ @0x00522D50 and ?Solve@Spline@@QAEXM@Z @0x00522FB0 index it [0..Count) with float elements"
+   },
+   {
+    "offset": 36,
+    "offset_hex": "0x24",
+    "type": "f32*",
+    "name": "field_24",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: *(void **)(this+0x24) = operator_new(Count*4); ?CalcCoeff@Spline@@QAEXXZ @0x00522D50 and ?Solve@Spline@@QAEXM@Z @0x00522FB0 index it [0..Count) with float elements"
+   },
+   {
+    "offset": 40,
+    "offset_hex": "0x28",
+    "type": "f32*",
+    "name": "field_28",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: *(void **)(this+0x28) = operator_new(Count*4); ?CalcCoeff@Spline@@QAEXXZ @0x00522D50 and ?Solve@Spline@@QAEXM@Z @0x00522FB0 index it [0..Count) with float elements"
+   },
+   {
+    "offset": 44,
+    "offset_hex": "0x2C",
+    "type": "f32*",
+    "name": "field_2C",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: *(void **)(this+0x2C) = operator_new(Count*4); ?CalcCoeff@Spline@@QAEXXZ @0x00522D50 and ?Solve@Spline@@QAEXM@Z @0x00522FB0 index it [0..Count) with float elements"
+   },
+   {
+    "offset": 48,
+    "offset_hex": "0x30",
+    "type": "f32*",
+    "name": "field_30",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: *(void **)(this+0x30) = operator_new(Count*4); ?CalcCoeff@Spline@@QAEXXZ @0x00522D50 and ?Solve@Spline@@QAEXM@Z @0x00522FB0 index it [0..Count) with float elements"
+   },
+   {
+    "offset": 52,
+    "offset_hex": "0x34",
+    "type": "f32*",
+    "name": "field_34",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: *(void **)(this+0x34) = operator_new(Count*4); ?CalcCoeff@Spline@@QAEXXZ @0x00522D50 and ?Solve@Spline@@QAEXM@Z @0x00522FB0 index it [0..Count) with float elements"
+   },
+   {
+    "offset": 56,
+    "offset_hex": "0x38",
+    "type": "f32*",
+    "name": "field_38",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: *(void **)(this+0x38) = operator_new(Count*4); ?CalcCoeff@Spline@@QAEXXZ @0x00522D50 and ?Solve@Spline@@QAEXM@Z @0x00522FB0 index it [0..Count) with float elements"
+   },
+   {
+    "offset": 60,
+    "offset_hex": "0x3C",
+    "type": "f32*",
+    "name": "field_3C",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: *(float **)(this+0x3C) = param_1 - the CALLER's array, not allocated here; ?SetValue@Spline@@QAEXPAM@Z @0x00522E60 and ?Solve@ write floats through it"
+   },
+   {
+    "offset": 64,
+    "offset_hex": "0x40",
+    "type": "f32*",
+    "name": "field_40",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: *(void **)(this+0x40) = operator_new(Count*4)"
+   },
+   {
+    "offset": 68,
+    "offset_hex": "0x44",
+    "type": "f32*",
+    "name": "field_44",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: *(void **)(this+0x44) = operator_new(Count*4)"
+   },
+   {
+    "offset": 72,
+    "offset_hex": "0x48",
+    "type": "f32",
+    "name": "field_48",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0 stores 0; ?CalcCoeff@ @0x00522D50 computes ABS(this[0x4C] - this[0x48]) as a float; ?Print@Spline@@QAEXH@Z @0x005230E0 passes it to Displayf as %f"
+   },
+   {
+    "offset": 76,
+    "offset_hex": "0x4C",
+    "type": "f32",
+    "name": "field_4C",
+    "count": 0,
+    "width": 4,
+    "src": "?InRange@Spline@@QAEHXZ @0x00522D00 compares datTimeManager::ElapsedTime against it as a float; ?Print@ @0x005230E0 prints it as %f"
+   },
+   {
+    "offset": 80,
+    "offset_hex": "0x50",
+    "type": "f32",
+    "name": "field_50",
+    "count": 0,
+    "width": 4,
+    "src": "?SetValue@Spline@@QAEXPAM@Z @0x00522E60 stores datTimeManager::ElapsedTime into it; ?InRange@ compares against it as a float"
+   },
+   {
+    "offset": 84,
+    "offset_hex": "0x54",
+    "type": "f32",
+    "name": "field_54",
+    "count": 0,
+    "width": 4,
+    "src": "?SetValue@ @0x00522E60 stores datTimeManager::ElapsedTime; ?CalcCoeff@ uses ABS(this[0x54] - this[0x50])"
+   },
+   {
+    "offset": 88,
+    "offset_hex": "0x58",
+    "type": "f32",
+    "name": "field_58",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: mov dword ptr [this+0x58],0x3F800000 (1.0f); ?Solve@ @0x00522FB0 tests it against 0.0f and 1.0f and blends with (1.0f - this[0x58])"
+   },
+   {
+    "offset": 92,
+    "offset_hex": "0x5C",
+    "type": "f32",
+    "name": "field_5C",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: mov dword ptr [this+0x5C],0x3F800000 (1.0f); ?SetGoal@Spline@@QAEXPAMM@Z @0x00522ED0 substitutes it when the caller passes 0.0f for the duration"
+   },
+   {
+    "offset": 96,
+    "offset_hex": "0x60",
+    "type": "f32",
+    "name": "field_60",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0: mov dword ptr [this+0x60],0x3C23D70A (0.01f); ?FixTimeStop@Spline@@QAEXXZ @0x005231E0 compares ElapsedTime - this[0x60] against 0.3f"
+   },
+   {
+    "offset": 100,
+    "offset_hex": "0x64",
+    "type": "f32",
+    "name": "field_64",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@Spline@@QAEXPAMH@Z @0x00522BF0 stores 0; ?FixTimeStop@ @0x005231E0 stores ElapsedTime - datTimeManager::Seconds; ?Update@Spline@@UAEXXZ @0x00523210 copies this[0x60] into it"
+   },
+   {
+    "offset": 104,
+    "offset_hex": "0x68",
+    "type": "i32",
+    "name": "field_68",
+    "count": 0,
+    "width": 4,
+    "src": "?InRange@Spline@@QAEHXZ @0x00522D00 uses it as a 0/1 latch - reads it, then stores 0 or 1; ??0Spline@@QAE@XZ @0x00522BC0 zeroes it"
+   }
+  ],
+  "source": "layouts_round5.json",
+  "confidence": "CONFIRMED"
+ },
+ "camCarCS": {
+  "kind": "class",
+  "size": 272,
+  "members": [
+   {
+    "offset": 0,
+    "offset_hex": "0x0",
+    "type": "void*",
+    "name": "vtable",
+    "count": 0,
+    "width": 4,
+    "init": "0x5B5174",
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 4,
+    "offset_hex": "0x4",
+    "type": "u8",
+    "name": "field_4",
+    "count": 140,
+    "width": 1,
+    "unknown": true,
+    "from_base": true
+   },
+   {
+    "offset": 144,
+    "offset_hex": "0x90",
+    "type": "i32",
+    "name": "field_90",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 148,
+    "offset_hex": "0x94",
+    "type": "i32",
+    "name": "TrackTo",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 152,
+    "offset_hex": "0x98",
+    "type": "f32",
+    "name": "field_98",
+    "count": 0,
+    "width": 4,
+    "init": "0x3F4CCCCD",
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 156,
+    "offset_hex": "0x9C",
+    "type": "i32",
+    "name": "field_9C",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 160,
+    "offset_hex": "0xA0",
+    "type": "i32",
+    "name": "ApproachOn",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 164,
+    "offset_hex": "0xA4",
+    "type": "i32",
+    "name": "AppAppOn",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 168,
+    "offset_hex": "0xA8",
+    "type": "i32",
+    "name": "AppRot",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 172,
+    "offset_hex": "0xAC",
+    "type": "i32",
+    "name": "AppXRot",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 176,
+    "offset_hex": "0xB0",
+    "type": "i32",
+    "name": "AppYPos",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 180,
+    "offset_hex": "0xB4",
+    "type": "i32",
+    "name": "AppXZPos",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 184,
+    "offset_hex": "0xB8",
+    "type": "f32",
+    "name": "AppApp",
+    "count": 0,
+    "width": 4,
+    "init": "0x3DCCCCCD",
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 188,
+    "offset_hex": "0xBC",
+    "type": "i32",
+    "name": "AppRotMin",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 192,
+    "offset_hex": "0xC0",
+    "type": "i32",
+    "name": "AppPosMin",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 196,
+    "offset_hex": "0xC4",
+    "type": "i32",
+    "name": "LookAbove",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 200,
+    "offset_hex": "0xC8",
+    "type": "i32",
+    "name": "field_C8",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 204,
+    "offset_hex": "0xCC",
+    "type": "i32",
+    "name": "MaxDist",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 208,
+    "offset_hex": "0xD0",
+    "type": "i32",
+    "name": "MinDist",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 212,
+    "offset_hex": "0xD4",
+    "type": "f32",
+    "name": "LookAt",
+    "count": 0,
+    "width": 4,
+    "init": "0x3C23D70A",
+    "src": "ctor",
+    "ctor_sites": 1,
+    "name_source": "layouts_from_datparser.json",
+    "from_base": true
+   },
+   {
+    "offset": 216,
+    "offset_hex": "0xD8",
+    "type": "i32",
+    "name": "field_D8",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 220,
+    "offset_hex": "0xDC",
+    "type": "i32",
+    "name": "field_DC",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 224,
+    "offset_hex": "0xE0",
+    "type": "i32",
+    "name": "field_E0",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 228,
+    "offset_hex": "0xE4",
+    "type": "u8",
+    "name": "field_E4",
+    "count": 12,
+    "width": 1,
+    "unknown": true,
+    "from_base": true
+   },
+   {
+    "offset": 240,
+    "offset_hex": "0xF0",
+    "type": "i32",
+    "name": "field_F0",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 244,
+    "offset_hex": "0xF4",
+    "type": "i32",
+    "name": "field_F4",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 248,
+    "offset_hex": "0xF8",
+    "type": "i32",
+    "name": "field_F8",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 252,
+    "offset_hex": "0xFC",
+    "type": "i32",
+    "name": "field_FC",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 256,
+    "offset_hex": "0x100",
+    "type": "i32",
+    "name": "field_100",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 260,
+    "offset_hex": "0x104",
+    "type": "i32",
+    "name": "field_104",
+    "count": 0,
+    "width": 4,
+    "src": "ctor",
+    "ctor_sites": 1,
+    "from_base": true
+   },
+   {
+    "offset": 264,
+    "offset_hex": "0x108",
+    "type": "vehCar*",
+    "name": "Car",
+    "count": 0,
+    "width": 4,
+    "src": "?Init@camCarCS@@QAEXPAVvehCar@@PAD@Z @0x005214A0: *(vehCar **)(this+0x108) = param_1, whose type is fixed by the mangled name (PAVvehCar@@); ??0camCarCS@@QAE@XZ @0x00521470 zeroes it; camTrackCS and camPointCS both dereference it as a vehCar"
+   },
+   {
+    "offset": 268,
+    "offset_hex": "0x10C",
+    "type": "i32",
+    "name": "ReverseOn",
+    "count": 0,
+    "width": 4,
+    "src": "?FileIO@camTrackCS@@UAEXAAVdatParser@@@Z @0x0051FA80: datParser::AddRecord(parser, 4 /* int */, \"ReverseOn\", this+0x10C, 1, NULL)"
+   }
+  ],
+  "source": "layouts_round5.json",
+  "confidence": "CONFIRMED"
+ },
+ "lvlLevel": {
+  "kind": "class",
+  "size": 28,
+  "members": [
+   {
+    "offset": 0,
+    "offset_hex": "0x0",
+    "type": "void*",
+    "name": "vtable",
+    "count": 0,
+    "width": 4,
+    "src": "??0lvlLevel@@QAE@XZ @0x004653A0: mov dword ptr [esi],0x005B1A1C",
+    "from_base": true
+   },
+   {
+    "offset": 4,
+    "offset_hex": "0x4",
+    "type": "u16",
+    "name": "field_4",
+    "count": 0,
+    "width": 2,
+    "src": "??0lvlLevel@@QAE@XZ @0x004653A0: mov word ptr [esi+4],0 at 0x004653DF - a TWO-byte store, read off the disassembly, not the decompiler"
+   },
+   {
+    "offset": 6,
+    "offset_hex": "0x6",
+    "type": "u8",
+    "name": "field_6",
+    "count": 2,
+    "width": 1,
+    "src": "NOT ATTESTED - the two bytes between the u16 at 0x4 and the pointer at 0x8; declared as opaque filler, asserts nothing about content"
+   },
+   {
+    "offset": 8,
+    "offset_hex": "0x8",
+    "type": "lvlRoomInfo**",
+    "name": "RoomInfo",
+    "count": 0,
+    "width": 4,
+    "src": "?MoveToRoom@lvlLevel@@QAEXPAVlvlInstance@@H@Z @0x00465480 indexes it as *(int *)(*(int *)(this+8) + room*4) and then touches +2 (u16), +4 and +8 of the result - exactly lvlRoomInfo::InstanceFlags / FirstInstance / StaticInstance"
+   },
+   {
+    "offset": 12,
+    "offset_hex": "0xC",
+    "type": "i32",
+    "name": "RoomCount",
+    "count": 0,
+    "width": 4,
+    "src": "?Load@cityLevel@@UAEXPBD@Z @0x00443F30 stores the room count to this+0xC and then does operator_new(count*4) and stores that array to this+8; ?SaveBinary@aiMap@@ and ?ReadBinary@aiMap@@ read *(int *)(lvlLevel::sm_Singleton+0xC) as a plain int"
+   },
+   {
+    "offset": 16,
+    "offset_hex": "0x10",
+    "type": "i32",
+    "name": "field_10",
+    "count": 0,
+    "width": 4,
+    "src": "?LoadInstances@lvlLevel@@UAE_NPBD0@Z @0x004656F0: mov dword ptr [ebx+0x10],esi (esi = 0) at 0x0046575A - width read off the disassembly. Nothing else in the recovered corpus touches it"
+   },
+   {
+    "offset": 20,
+    "offset_hex": "0x14",
+    "type": "i32",
+    "name": "InstanceCount",
+    "count": 0,
+    "width": 4,
+    "src": "?LoadInstances@lvlLevel@@UAE_NPBD0@Z @0x004656F0: zeroed by a dword store at 0x0046575D, then *(int *)(this+0x14) += 1 once per instance loaded"
+   },
+   {
+    "offset": 24,
+    "offset_hex": "0x18",
+    "type": "i8*",
+    "name": "Name",
+    "count": 0,
+    "width": 4,
+    "src": "?Load@cityLevel@@UAEXPBD@Z @0x00443F30: *(char **)(this+0x18) = param_1, the city name; LoadCityTimeWeatherLighting passes *(char **)(lvlLevel::sm_Singleton+0x18) to datParser::Load as the asset path"
+   }
+  ],
+  "source": "layouts_round5.json",
   "confidence": "CONFIRMED"
  }
 }
