@@ -27,14 +27,16 @@
 // city every frame, and their addresses sit in ??_7lvlInstance@@6B@ for the classes that do not
 // override them.
 //
-// Only the trivial ones are ported here. Init, Reset's siblings that touch the room list, and the
-// two that read global tables - GetVelocity returns a static Vector3 at 0x006A3B08, GetRadius
-// indexes a 0x20-stride table at 0x006316D0 by GeomSet - are left in assembly until those globals
-// are symbolised, because porting them now would bake in a hard-coded address.
+// Only the trivial ones are ported here. Init and Reset's siblings that touch the room list stay
+// in assembly. GetRadius indexes a 0x20-stride table at 0x006316D0 by GeomSet and waits on that
+// table being symbolised; GetVelocity no longer waits, because the zero vector it returns now has
+// a name - see data/globals.json.
 
 #include "lvlinstance.h"
 
+#include "misc/freefuncs.h"
 #include "vector7/matrix34.h"
+#include "vector7/vector3.h"
 
 // ?Detach@lvlInstance@@UAEXXZ - 0x0043FC30
 //
@@ -101,6 +103,16 @@ dgPhysEntity* lvlInstance::GetEntity()
 dgPhysEntity* lvlInstance::AttachEntity()
 {
     return nullptr;
+}
+
+// ?GetVelocity@lvlInstance@@UAEABVVector3@@XZ - 0x004643A0
+//
+// A static instance does not move, so it reports the zero vector - and specifically THE zero
+// vector at 0x006A3B08, not a fresh one. Six other classes return the same address, and assembly
+// that has not been ported compares the pointer rather than the value.
+const Vector3& lvlInstance::GetVelocity()
+{
+    return ARTS_ZERO_VECTOR3;
 }
 
 // ?SetVariant@lvlInstance@@UAEXH@Z - 0x004643D0

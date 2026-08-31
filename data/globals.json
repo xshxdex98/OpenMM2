@@ -1,0 +1,50 @@
+{
+ "_comment": [
+  "GLOBALS GIVEN A LINKABLE NAME, so ported C++ can reference them instead of a hard-coded address.",
+  "",
+  "ExportAsm.java already emits a label at every data slot - `D_6A3B08 LABEL BYTE` - but they are",
+  "not PUBLIC, so nothing outside the assembly can link to one. tools/asm.py injects a second,",
+  "MANGLED label and a PUBLIC directive immediately above the D_ label for every entry here, which",
+  "MASM permits: two labels at one address are two names for the same bytes.",
+  "",
+  "This is what unblocks a whole class of ports. A function that returns `(Vector3 *)&DAT_006a3b08`",
+  "cannot be written in C++ without either naming that address or inventing a different object -",
+  "and inventing one is wrong, because unported assembly still compares the POINTER.",
+  "",
+  "EVERY ENTRY NEEDS EVIDENCE. `name` is ours, not the binary's: none of these has a symbol in",
+  "data/symbols.json or in MM2_RE_KIT/inventory, because they are compiler-emitted anonymous",
+  "constants. So the name says what the bytes ARE, and `evidence` records how that was established.",
+  "The `mangled` field is the MSVC spelling for a global: ?<name>@@3<type>A, where 3 marks a",
+  "variable, the type follows, and A is non-const (B would be const).",
+  "",
+  "Do not add an entry without reading the bytes AND at least two independent uses."
+ ],
+ "globals": {
+  "0x006A3B08": {
+   "name": "ARTS_ZERO_VECTOR3",
+   "type": "Vector3",
+   "mangled": "?ARTS_ZERO_VECTOR3@@3VVector3@@A",
+   "header": "misc/freefuncs.h",
+   "confidence": "CONFIRMED",
+   "evidence": [
+    "Twelve bytes of zero. game.asm emits 0x6A3B08, 0x6A3B0C and 0x6A3B10 each as",
+    "`db 000h, 000h, 000h, 000h`, and the slot at 0x6A3B14 begins a separate label.",
+    "",
+    "Used as a Vector3 by seven classes, which is what fixes the type rather than the size:",
+    "lvlInstance::GetVelocity (0x004643A0), phBound::GetVertex (0x00487730), camAppCS, dgLink,",
+    "dgBangerInstance, aiPedestrianInstance and vehCarSim all either return",
+    "`(Vector3 *)&DAT_006a3b08` or pass it where a Vector3* is expected -",
+    "`Bounce(this, &local_e0, (Vector3 *)&DAT_006a3b08)` and",
+    "`SetResetPos(this, (Vector3 *)&DAT_006a3b08)`.",
+    "",
+    "THE NAME IS OURS. No symbol covers this address in data/symbols.json or in the kit's",
+    "inventory, so 1999 did not name it - the compiler emitted it as an anonymous constant for",
+    "`Vector3(0,0,0)`. The ARTS_ prefix marks it as the harness's name rather than a recovered one,",
+    "the way a trailing underscore marks an introduced member in the code standard.",
+    "",
+    "It must be the ADDRESS and not a fresh zero vector: the functions return a pointer into the",
+    "image, and assembly that has not been ported yet compares those pointers."
+   ]
+  }
+ }
+}

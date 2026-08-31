@@ -23,6 +23,8 @@
 
 #include "core/arts.h"
 
+#include "vector7/vector3.h"
+
 class gfxBitmap;
 
 // The free functions - the ones that belong to no class at all.
@@ -185,6 +187,17 @@ ARTS_EXPORT bool gfxAutoDetect(bool* successOut);
 // With -gl absent the else arm is an exact transcription, so the game must behave identically. That
 // is the only test this port has, and it is a good one: every run exercises it.
 ARTS_EXPORT void BeginPhase(bool arg1);
+
+// ?ARTS_ZERO_VECTOR3@@3VVector3@@A - 0x006A3B08
+//
+// Twelve bytes of zero that the 1999 compiler emitted for Vector3(0,0,0) and never named. Seven
+// classes return its ADDRESS or pass it where a Vector3* is expected, so it has to be this object
+// and not a fresh zero vector - assembly that is still unported compares the pointer.
+//
+// The name is ours, which the ARTS_ prefix says out loud: no symbol covers this address in the
+// linker map or in the kit's inventory. tools/asm.py publishes it from data/globals.json, where
+// the evidence is recorded.
+extern Vector3 ARTS_ZERO_VECTOR3;
 
 // ?gRandSeed@@3HA
 extern i32 gRandSeed;

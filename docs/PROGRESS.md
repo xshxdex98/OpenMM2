@@ -25,7 +25,7 @@ Two numbers matter and they are different:
 | Metric | Value |
 |---|--:|
 | Functions | 9307 |
-| Functions ported | 430 |
+| Functions ported | 431 |
 | Machine code | 1.7 MB |
 | Code ported | 38.4 KB |
 | Classes | 535 |
@@ -33,7 +33,7 @@ Two numbers matter and they are different:
 | Classes with only a size | 46 |
 | Virtual methods | 1938 |
 | Vftables | 340 |
-| `game.asm` remaining | 23.2 MB, 10746 PROCs |
+| `game.asm` remaining | 23.2 MB, 10745 PROCs |
 
 The size of `game.asm` *is* the progress bar: it starts holding the whole game and
 shrinks with every function ported.
@@ -135,8 +135,6 @@ Layout known, so these can be started today.
 |---|--:|--:|--:|
 | 2026-08-30 | 2.15% | 37.0 KB | 23.2 MB |
 | 2026-08-30 | 2.15% | 37.0 KB | 23.2 MB |
-| 2026-08-30 | 2.15% | 37.0 KB | 23.2 MB |
-| 2026-08-30 | 2.15% | 37.0 KB | 23.2 MB |
 | 2026-08-30 | 2.17% | 37.3 KB | 23.2 MB |
 | 2026-08-30 | 2.17% | 37.3 KB | 23.2 MB |
 | 2026-08-30 | 2.19% | 37.6 KB | 23.2 MB |
@@ -147,6 +145,8 @@ Layout known, so these can be started today.
 | 2026-08-30 | 2.21% | 38.0 KB | 23.2 MB |
 | 2026-08-30 | 2.22% | 38.1 KB | 23.2 MB |
 | 2026-08-30 | 2.22% | 38.1 KB | 23.2 MB |
+| 2026-08-30 | 2.23% | 38.4 KB | 23.2 MB |
+| 2026-08-30 | 2.23% | 38.4 KB | 23.2 MB |
 | 2026-08-30 | 2.23% | 38.4 KB | 23.2 MB |
 
 Each run of `tools/progress.py` appends a snapshot to

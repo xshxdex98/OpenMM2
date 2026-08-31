@@ -30,6 +30,11 @@
 // The rest say "no contact" and "change nothing", which is the safe answer for a volume with no
 // geometry: TestSphere reports a miss, ModifyInvMassMatrix leaves the mass matrix alone, and
 // EffectiveMass hands back the mass it was given.
+//
+// GetVertex is NOT ported, even though the zero vector it returns now has a name. Its extent is
+// recorded as 48 bytes and data still points at 0x00487740, sixteen bytes in, so stripping it
+// would delete something else that is referenced - build gate 6 catches it. The blocker is the
+// recorded extent, not the global.
 
 #include "phbound.h"
 

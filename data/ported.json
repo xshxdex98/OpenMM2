@@ -201,6 +201,7 @@
   "?GetScreenHeight@uiWidget@@UAEMXZ",
   "?GetTriCount@modStatic@@QBEHXZ",
   "?GetVector2@Vector3@@QBEXHAAVVector2@@@Z",
+  "?GetVelocity@lvlInstance@@UAEABVVector3@@XZ",
   "?GetWaveVolume@MixerCTL@@QAEMXZ",
   "?GetWaypoints@mmMultiCR@@UAEPAVmmWaypoints@@XZ",
   "?GetWidgetID@UIMenu@@QAEHXZ",

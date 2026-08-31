@@ -1,0 +1,10 @@
+{
+ "_comment": [
+  "The first two ports unblocked by data symbolisation. Both return the zero Vector3 at",
+  "0x006A3B08, which had no name until data/globals.json gave it one - see that file for the",
+  "evidence, and tools/asm.py's publish_globals() for how the name reaches the linker."
+ ],
+ "ported": [
+  "?GetVelocity@lvlInstance@@UAEABVVector3@@XZ"
+ ]
+}

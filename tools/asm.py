@@ -127,6 +127,61 @@ def emitted_bytes(block):
     return total
 
 
+GLOBALS = os.path.join(ROOT, "data", "globals.json")
+
+DATA_LABEL = re.compile(r"^D_([0-9A-Fa-f]{6,8}) LABEL BYTE\s*$")
+
+
+def publish_globals(lines):
+    """Give the globals in data/globals.json a linkable, mangled name.
+
+    ExportAsm.java already emits a label at every data slot - `D_6A3B08 LABEL BYTE` - but none of
+    them is PUBLIC, so nothing outside the assembly can link to one. A second label at the same
+    address, plus a PUBLIC directive, is all MASM needs: two labels on one address are two names
+    for the same bytes, and the original D_ label is left exactly where it was.
+
+    That is what makes a whole class of functions portable. `return (Vector3 *)&DAT_006a3b08;`
+    cannot be written in C++ without naming that address - and substituting a fresh zero vector is
+    wrong, because unported assembly still compares the pointer.
+
+    INDEX-PRESERVING BY CONSTRUCTION, like hand_over(): it rewrites one line in place rather than
+    inserting, because `procs` holds line indices into this same list and the padding loop that
+    follows would be reading stale positions otherwise.
+    """
+    if not os.path.exists(GLOBALS):
+        return 0
+
+    with open(GLOBALS, encoding="utf-8") as f:
+        wanted = json.load(f).get("globals", {})
+
+    by_addr = {}
+    for addr, info in wanted.items():
+        by_addr["D_%X" % int(addr, 16)] = info
+
+    published = 0
+    for i, line in enumerate(lines):
+        m = DATA_LABEL.match(line)
+        if not m:
+            continue
+
+        info = by_addr.get("D_%X" % int(m.group(1), 16))
+        if not info:
+            continue
+
+        lines[i] = "\n".join([
+            "PUBLIC %s" % info["mangled"],
+            "%s LABEL BYTE" % info["mangled"],
+            line.rstrip(),
+        ])
+        published += 1
+
+    missing = sorted(set(by_addr) - {"D_%X" % int(a, 16) for a in wanted})
+    for name in missing:
+        print("  no data label in the assembly for %s" % name)
+
+    return published
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--write", action="store_true",
@@ -138,6 +193,12 @@ def main():
 
     marks = scan_headers(CODE)
     lines, procs = read_procs(ASM)
+
+    # Before anything that moves lines about - see publish_globals' own note on why it is
+    # index-preserving.
+    published = publish_globals(lines)
+    if published:
+        print("globals given a linkable name: %d" % published)
 
     # Hand over the vftable of every class whose constructor or destructor is ARTS_EXPORT.
     # A polymorphic class cannot be ported without this: the moment MSVC sees a ctor or dtor

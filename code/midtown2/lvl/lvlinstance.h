@@ -62,7 +62,7 @@ public:
     ARTS_EXPORT virtual dgPhysEntity* AttachEntity();
 
     // ?GetVelocity@lvlInstance@@UAEABVVector3@@XZ
-    ARTS_IMPORT virtual const Vector3& GetVelocity();
+    ARTS_EXPORT virtual const Vector3& GetVelocity();
 
     // ?Detach@lvlInstance@@UAEXXZ
     ARTS_EXPORT virtual void Detach();
