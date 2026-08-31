@@ -328,8 +328,9 @@ def drop_empty_sections(lines):
                 continue
 
         # The section that follows leads with its own blank line, which would otherwise be left
-        # stranded directly under the opening brace.
-        if not line.strip() and out and out[-1] == "{":
+        # stranded directly under the opening brace, or doubled where a nested-type declaration
+        # already ended with one.
+        if not line.strip() and out and (out[-1] == "{" or not out[-1].strip()):
             continue
 
         out.append(line)
@@ -1371,12 +1372,32 @@ def main():
     #
     # Run to a fixpoint, because a backfilled class can itself embed another one.
     data_only = set()
-    pending = list(classes)
+
+    # A NESTED TYPE NEEDS ITS OWNER COMPLETE, and that is a third way to depend on a class - one the
+    # backfill did not cover. ?Queue@ioEventQueue@@SAXW4ioEventType@ioEvent@@HHH@Z names
+    # ioEvent::ioEventType, and a nested name cannot be reached through a forward declaration of its
+    # owner, so ioEvent needs a real header even though ioEventQueue only ever holds an ioEvent&.
+    #
+    # Derived from the mangled names rather than from NESTED, which is not built until later. The
+    # owner group requires a leading letter, so the far commoner W4<Name>@1@ spelling - "nested in
+    # the class that owns this symbol" - cannot match, which is right: that owner is already in
+    # `classes`. The named-owner form occurs for four pairs in the binary (audManager::AUDTYPE,
+    # audObject::AUD_OBJECTSTATUS, gfxImage::gfxImageFormat, ioEvent::ioEventType) and the first
+    # three own code, so this adds exactly one class.
+    nested_owners = set()
+    for sym in syms:
+        for m in re.finditer(r"W4[A-Za-z_]\w*@([A-Za-z_]\w*)@", sym.get("mangled") or ""):
+            nested_owners.add(m.group(1))
+
+    pending = list(classes) + sorted(nested_owners)
     while pending:
         cur = pending.pop()
         info = LAYOUT.get(cur)
 
         wanted = []
+        if cur in nested_owners:
+            wanted.append(cur)
+
         base = base_of(cur)
         if base:
             wanted.append(base)
@@ -1418,7 +1439,17 @@ def main():
     # MSVC spells a nested enum W4<Name>@1@ in the mangled name. That is the only reliable way
     # to tell one from a nested struct here, since TYPE_TAGS holds no nested names.
     for s2 in syms:
-        for m in re.finditer(r"W4([A-Za-z_]\w*)@1@", s2.get("mangled") or ""):
+        # `@1@` is "nested in the class owning this symbol"; a NAMED owner appears when the enum is
+        # nested in a DIFFERENT class from the one owning the symbol, which is exactly ioEventQueue
+        # naming ioEvent::ioEventType. Without the second spelling the type is taken for a struct
+        # and declared `struct ioEventType;` - an incomplete type used by value, leaving ioEvent at
+        # 0xC instead of 0x10.
+        #
+        # The named-owner form covers four pairs in the binary and three are already recorded via
+        # `@1@`, so this adds exactly one name. Note the matching scan in emit_class stays `@1@`:
+        # there it means "nested in THIS class", and widening it would declare ioEventType inside
+        # ioEventQueue, which is not where it lives.
+        for m in re.finditer(r"W4([A-Za-z_]\w*)@(?:1|[A-Za-z_]\w*)@", s2.get("mangled") or ""):
             NESTED_ENUMS.add(m.group(1))
 
     nested_re = re.compile(r"\b([A-Za-z_]\w*)::([A-Za-z_]\w*)\b")

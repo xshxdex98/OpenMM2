@@ -23,22 +23,17 @@
 
 #include "core/arts.h"
 
-#include "ioevent.h"
-
-class ioEventQueue
+class ioEvent
 {
 public:
-    // ?Command@ioEventQueue@@SAXPAX@Z
-    ARTS_IMPORT static void Command(void* modifiers);
+    enum ioEventType : i32;
 
-    // ?Peek@ioEventQueue@@SA_NAAUioEvent@@AAH@Z
-    ARTS_IMPORT static bool Peek(ioEvent& event, i32& index);
-
-    // ?Pop@ioEventQueue@@SA_NAAUioEvent@@@Z
-    ARTS_IMPORT static bool Pop(ioEvent& arg1);
-
-    // ?Queue@ioEventQueue@@SAXW4ioEventType@ioEvent@@HHH@Z
-    ARTS_IMPORT static void Queue(ioEvent::ioEventType type, i32 x, i32 y, i32 modifiers);
+public:
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    ioEventType Type; // 0x000
+    i32 X; // 0x004
+    i32 Y; // 0x008
+    i32 Modifiers; // 0x00C
 };
 
-// check_size(ioEventQueue, 0x1); // size known, members are not - cannot verify
+check_size(ioEvent, 0x10);
