@@ -51,25 +51,25 @@ public:
     ARTS_IMPORT virtual bool TestSphere(const Vector3& arg1, f32 arg2, phImpact* arg3, u32 arg4, i32 arg5) const;
 
     // ?PromoteInstance@dgPhysManager@@UAEPAVphColliderBase@@PAVphInstance@@@Z
-    ARTS_IMPORT virtual phColliderBase* PromoteInstance(phInstance* arg1);
+    ARTS_EXPORT virtual phColliderBase* PromoteInstance(phInstance* arg1);
 
     // ?DemoteInstance@dgPhysManager@@UAEXPAVphInstance@@@Z
-    ARTS_IMPORT virtual void DemoteInstance(phInstance* arg1);
+    ARTS_EXPORT virtual void DemoteInstance(phInstance* arg1);
 
     // ?KillInstance@dgPhysManager@@UAEXPAVphInstance@@@Z
-    ARTS_IMPORT virtual void KillInstance(phInstance* arg1);
+    ARTS_EXPORT virtual void KillInstance(phInstance* arg1);
 
     // ?DisableInstance@dgPhysManager@@UAEXPAVphInstance@@@Z
-    ARTS_IMPORT virtual void DisableInstance(phInstance* arg1);
+    ARTS_EXPORT virtual void DisableInstance(phInstance* arg1);
 
     // ?EnableInstance@dgPhysManager@@UAEXPAVphInstance@@H@Z
-    ARTS_IMPORT virtual void EnableInstance(phInstance* arg1, i32 arg2);
+    ARTS_EXPORT virtual void EnableInstance(phInstance* arg1, i32 arg2);
 
     // ?GetCollider@dgPhysManager@@UBEPAVphColliderBase@@PBVphInstance@@@Z
-    ARTS_IMPORT virtual phColliderBase* GetCollider(const phInstance* arg1) const;
+    ARTS_EXPORT virtual phColliderBase* GetCollider(const phInstance* arg1) const;
 
     // ?CreateInstance@dgPhysManager@@UAEPAVphInstance@@XZ
-    ARTS_IMPORT virtual phInstance* CreateInstance();
+    ARTS_EXPORT virtual phInstance* CreateInstance();
 
     // ?Collide@dgPhysManager@@QAE_NAAVlvlSegment@@PAVlvlIntersection@@HPAVlvlInstance@@HH@Z
     ARTS_IMPORT bool Collide(lvlSegment& arg1, lvlIntersection* arg2, i32 arg3, lvlInstance* arg4, i32 arg5, i32 arg6);
@@ -87,7 +87,7 @@ public:
     ARTS_IMPORT void DeclareMover(lvlInstance* info, i32 glyph_index, i32 pvertices);
 
     // ?Draw@dgPhysManager@@QAEXXZ
-    ARTS_IMPORT void Draw();
+    ARTS_EXPORT void Draw();
 
     // ?GatherCollidables@dgPhysManager@@QAEXPAUCollisionTableEntry@1@@Z
     ARTS_IMPORT void GatherCollidables(dgPhysManager::CollisionTableEntry* arg1);

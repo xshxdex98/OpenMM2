@@ -1,0 +1,18 @@
+{
+ "_comment": [
+  "dgPhysManager's inherited phPhysicsManager interface, none of which MM2 implements: the class",
+  "keeps a fixed pool of dgBangerActives and drives collision through CollideInstances, so the",
+  "phInstance-based API has no MM2 meaning and every override returns null or does nothing.",
+  "Draw is a debug hook compiled out of the retail build."
+ ],
+ "ported": [
+  "?Draw@dgPhysManager@@QAEXXZ",
+  "?PromoteInstance@dgPhysManager@@UAEPAVphColliderBase@@PAVphInstance@@@Z",
+  "?DemoteInstance@dgPhysManager@@UAEXPAVphInstance@@@Z",
+  "?KillInstance@dgPhysManager@@UAEXPAVphInstance@@@Z",
+  "?DisableInstance@dgPhysManager@@UAEXPAVphInstance@@@Z",
+  "?EnableInstance@dgPhysManager@@UAEXPAVphInstance@@H@Z",
+  "?GetCollider@dgPhysManager@@UBEPAVphColliderBase@@PBVphInstance@@@Z",
+  "?CreateInstance@dgPhysManager@@UAEPAVphInstance@@XZ"
+ ]
+}
