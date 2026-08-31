@@ -145,13 +145,23 @@ def main():
                 rejected.append((cls, name, why))
                 continue
 
-            layouts[cls] = OrderedDict(
+            merged_entry = OrderedDict(
                 kind=info.get("kind", "struct"),
                 size=size,
                 members=members,
                 source=name,
                 confidence="CONFIRMED",
             )
+
+            # KEEP THE EVIDENCE. A carrier that documents where its layout came from holds the only
+            # record of why the class looks the way it does, and rebuilding the entry from five
+            # fixed keys threw it away - so a hand-read landing here lost its provenance, while one
+            # that merely CORRECTS an existing entry kept it. That asymmetry is an accident of which
+            # branch runs, not a decision anyone made.
+            if info.get("evidence"):
+                merged_entry["evidence"] = info["evidence"]
+
+            layouts[cls] = merged_entry
             merged.append((cls, name, size, len(members)))
 
     print("merged %d classes:" % len(merged))

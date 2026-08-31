@@ -18,6 +18,7 @@ every field after it.
 import json
 import os
 import re
+import sys
 from collections import OrderedDict
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -25,7 +26,7 @@ ROOT = os.path.dirname(HERE)
 
 TYPES = os.environ.get("MM2_TYPES",
                        os.path.join(ROOT, "MM2_RE_KIT", "MM2_PSEUDOCODE", "_ALL_TYPES.h"))
-OUT = os.path.join(ROOT, "data", "layouts.json")
+OUT = os.environ.get("MM2_LAYOUTS_OUT", os.path.join(ROOT, "data", "layouts.json"))
 
 HEAD = re.compile(r"^(struct|union)\s+(\S+)\s+//\s+sizeof=0x([0-9A-Fa-f]+)\s*$")
 MEMBER = re.compile(r"^\s*/\*\s*0x([0-9A-Fa-f]+)\s*\*/\s*(.+?)\s*;\s*$")
@@ -195,6 +196,36 @@ def main():
     print("  members total           : %d" % fields)
     print("  still unnamed (gap/field): %d (%.0f%%)" % (gaps, 100.0 * gaps / max(fields, 1)))
     print("  unparsed member lines   : %d" % unnamed)
+
+    # THIS FILE IS NOT A PURE FUNCTION OF _ALL_TYPES.h, AND THIS SCRIPT CANNOT REBUILD IT.
+    #
+    # data/layouts.json is a merge: the kit parsed here, plus every data/layouts_*.json carrier,
+    # plus 28 sizes read by hand out of the retail binary. Nothing restores that last group -
+    # data/layouts_short_fix.json holds them with `size: null` DELIBERATELY, so merge_layouts.py
+    # cannot auto-apply a size that has no member list behind it, and its own _meta says so.
+    # Overwriting the merged file therefore silently reverts every one of them.
+    #
+    # Measured: a full replay of layouts.py -> merge_layouts --write -> apply_names --write over an
+    # unchanged tree changes 38 entries, 29 of them sizes. Every one of the 29 that an independent
+    # source can arbitrate is CORRECT in the committed file and WRONG after regeneration.
+    # HostRaceMenu is 0x1B8, which the 1999 compiler emitted as `operator new(440)` immediately
+    # before the constructor call; regeneration makes it 0x270, because the kit embeds a bogus
+    # RaceMenuBase at offset 0. 28 of the 29 would fail build gate 2 loudly. gfxMaterial would not,
+    # having no clean allocation site to measure against, and would revert in silence.
+    #
+    # So the committed file is the authority and this script is one of its inputs. It refuses to
+    # act like the generator unless told to in as many words.
+    if os.path.exists(OUT) and "--force" not in sys.argv:
+        print("")
+        print("REFUSING to overwrite %s" % OUT)
+        print("")
+        print("  That file is a MERGE, not this script's output. It carries 28 hand-read sizes")
+        print("  nothing here can restore. Regenerating changes 38 entries, and every size it")
+        print("  changes is one the binary contradicts. See data/layouts_short_fix.json.")
+        print("")
+        print("  Parse the kit without touching it:  MM2_LAYOUTS_OUT=<path> py tools/layouts.py")
+        print("  Overwrite anyway, deliberately:     py tools/layouts.py --force")
+        return
 
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(types, f, indent=1)
