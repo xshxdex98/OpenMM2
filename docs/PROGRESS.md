@@ -19,7 +19,7 @@ Two numbers matter and they are different:
 | | | |
 |---|--:|---|
 | Ported | 2.11% | `#...........................` |
-| Ready to port | 71.5% | `####################........` |
+| Ready to port | 71.6% | `####################........` |
 | Size known, members not | 13.1% | `####........................` |
 
 | Metric | Value |
@@ -29,7 +29,7 @@ Two numbers matter and they are different:
 | Machine code | 1.7 MB |
 | Code ported | 36.2 KB |
 | Classes | 535 |
-| Classes with a member layout | 303 (57%) |
+| Classes with a member layout | 304 (57%) |
 | Classes with only a size | 47 |
 | Virtual methods | 1938 |
 | Vftables | 340 |
@@ -49,7 +49,7 @@ layout is known.
 | `mm` | 106 | 1732 | 329.8 KB | 19.2% | 0.4% | 67% |
 | `ai` | 42 | 773 | 245.2 KB | 14.3% | 0.5% | 59% |
 | `ph` | 27 | 437 | 164.2 KB | 9.5% | 0.0% | 75% |
-| `veh` | 34 | 585 | 91.5 KB | 5.3% | 1.0% | 88% |
+| `veh` | 34 | 585 | 91.5 KB | 5.3% | 1.0% | 91% |
 | `gfx` | 13 | 189 | 46.6 KB | 2.7% | 13.3% | 55% |
 | `sdl` | 4 | 37 | 46.5 KB | 2.7% | 0.0% | 100% |
 | `dg` | 28 | 263 | 44.3 KB | 2.6% | 0.0% | 54% |
@@ -88,7 +88,7 @@ layout is known.
 - **1938 virtual methods across 340 vftables.** Constructors must be ported together
   with every virtual of their class, or the vtable the compiler emits will not link.
 - Largest class not yet ported: **`aiVehiclePhysics`** at 58.7 KB.
-- **232 classes (490.8 KB, 29% of code) have no known layout** and are blocked: their
+- **231 classes (487.9 KB, 28% of code) have no known layout** and are blocked: their
   member offsets would have to be guessed, which is how you get silent corruption.
 
 ### Biggest blocked classes

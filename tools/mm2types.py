@@ -39,6 +39,30 @@ VSLOT = re.compile(r"^\s*/\*\s*0x([0-9A-Fa-f]+)\s*\*/\s*.*?\)\s*(\w+)\s*;\s*$")
 # hex digits so it cannot match the VSLOT form above, whose comments are slot offsets.
 PLAIN = re.compile(r"^\s*/\*\s*0x([0-9A-Fa-f]{4})\s*\*/\s+(.+?)\s+(\w+)\s*(\[\d+\])?\s*;\s*$")
 
+# THE KIT MISSPELLS ONE CLASS, and the misspelling is faithfully recovered rather than introduced
+# here: `MM2::vehWeelCheap` is how the community IDB's MM2Hook-derived type set writes it, and it
+# appears that way in _ALL_TYPES.h and in the kit's own inventory.
+#
+# The retail binary disagrees, and the linker map is the authority on a name. All eight mangled
+# symbols in data/symbols.json spell it vehWheelCheap - ??0vehWheelCheap@@QAE@XZ at 0x0059D790,
+# ?Update@vehWheelCheap@@UAEXXZ at 0x0059D970 - and vehWeelCheap appears in no symbol at all. The
+# kit's Ghidra side agrees; only the MM2Hook side is wrong.
+#
+# Corrected HERE, where the kit is read, rather than in a data file. A data patch would be undone
+# the next time anyone runs mm2types.py, and fixing it at the source keeps sizes, fields, bases and
+# every member type string consistent in one place - which matters because genheaders.size_of()
+# reads MM2T["sizes"] directly. Left uncorrected it produced TWO headers for one class: an empty
+# vehwheelcheap.h holding the methods, and a vehweelcheap.h holding the layout under a name the
+# linker has never heard of.
+TYPOS = {"vehWeelCheap": "vehWheelCheap"}
+
+
+def despell(text):
+    """The kit's spelling of a class name, corrected to the binary's."""
+    for wrong, right in TYPOS.items():
+        text = text.replace(wrong, right)
+    return text
+
 
 def parse():
     sizes = OrderedDict()
@@ -55,7 +79,7 @@ def parse():
 
             m = HEAD.match(line)
             if m:
-                name, size = m.group(1), int(m.group(2), 16)
+                name, size = despell(m.group(1)), int(m.group(2), 16)
 
                 if name.endswith("_vtbl"):
                     cur, cur_vtbl = None, name[:-5]
@@ -81,14 +105,14 @@ def parse():
                 continue
 
             m = BASE.match(line)
-            if m and m.group(1) != cur:
-                bases[cur] = m.group(1)
+            if m and despell(m.group(1)) != cur:
+                bases[cur] = despell(m.group(1))
                 continue
 
             m = FIELD.search(line)
             if m:
                 fields[cur].append(OrderedDict(
-                    offset=int(m.group(1)), type=m.group(2), name=m.group(3)))
+                    offset=int(m.group(1)), type=despell(m.group(2)), name=m.group(3)))
                 continue
 
             # The IDB's own recovered layouts, written with the offset in the comment:
@@ -108,7 +132,7 @@ def parse():
             m = PLAIN.match(line)
             if m:
                 offset = int(m.group(1), 16)
-                ftype, name, array = m.group(2).strip(), m.group(3), m.group(4)
+                ftype, name, array = despell(m.group(2).strip()), m.group(3), m.group(4)
                 if array:
                     ftype += array
                 fields[cur].append(OrderedDict(offset=offset, type=ftype, name=name))

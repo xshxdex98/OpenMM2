@@ -24,8 +24,13 @@
 #include "core/arts.h"
 
 #include "arts7/asnode.h"
+#include "lvl/lvlintersection.h"
+#include "lvl/lvlsegment.h"
+#include "lvl/lvlsegmentinfo.h"
+#include "vector7/matrix34.h"
+#include "vector7/vector3.h"
 
-class Vector3;
+class Base_vtbl;
 class aiVehicleData;
 class phInertialCS;
 
@@ -46,8 +51,31 @@ public:
 
     // ?Init@vehWheelCheap@@QAEXPAVVector3@@PAVaiVehicleData@@PAVphInertialCS@@@Z
     ARTS_IMPORT void Init(Vector3* arg1, aiVehicleData* arg2, phInertialCS* arg3);
+
+public:
+    // Members from 0x018; everything below that belongs to asNode.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    phInertialCS* InertialCS; // 0x018
+    f32 Spring; // 0x01C
+    f32 Damping; // 0x020
+    lvlSegment Segment; // 0x024
+    lvlIntersection Intersection; // 0x04C
+    lvlSegmentInfo SegmentInfo; // 0x0E8
+    i32 Grounded; // 0x0F4
+    Vector3 Position; // 0x0F8
+    f32 Radius; // 0x104
+    f32 Gap; // 0x108
+    f32 field_10C; // 0x10C
+    f32 field_110; // 0x110
+    f32 field_114; // 0x114
+    f32 RubberSpring; // 0x118
+    f32 RubberDamp; // 0x11C
+    f32 Limit; // 0x120
+    f32 field_124; // 0x124
+    Matrix34 Matrix; // 0x128
+    Matrix34 Matrix2; // 0x158
 };
 
 // ??_7vehWheelCheap@@6B@
 // vtable at 0x005B8790
-// check_size(vehWheelCheap, 0x18); // size known, members are not - cannot verify
+check_size(vehWheelCheap, 0x188);

@@ -291,7 +291,7 @@
   "vehTrailer": 4152,
   "vehTrailerInstance": 40,
   "vehTransmission": 244,
-  "vehWeelCheap": 392,
+  "vehWheelCheap": 392,
   "vehWheel": 620,
   "vehWheelPtx": 120,
   "vglVCT1_t": 32,
@@ -1703,22 +1703,22 @@
    },
    {
     "offset": 1244,
-    "type": "MM2::vehWeelCheap",
+    "type": "MM2::vehWheelCheap",
     "name": "WheelFrontLeft"
    },
    {
     "offset": 1636,
-    "type": "MM2::vehWeelCheap",
+    "type": "MM2::vehWheelCheap",
     "name": "WheelFrontRight"
    },
    {
     "offset": 2028,
-    "type": "MM2::vehWeelCheap",
+    "type": "MM2::vehWheelCheap",
     "name": "WheelBackLeft"
    },
    {
     "offset": 2420,
-    "type": "MM2::vehWeelCheap",
+    "type": "MM2::vehWheelCheap",
     "name": "WheelBackRight"
    }
   ],
@@ -12058,7 +12058,7 @@
     "name": "GearBias"
    }
   ],
-  "vehWeelCheap": [
+  "vehWheelCheap": [
    {
     "offset": 24,
     "type": "MM2::phInertialCS *",
@@ -12763,7 +12763,7 @@
   "vehTrailer": "dgPhysEntity",
   "vehTrailerInstance": "lvlInstance",
   "vehTransmission": "asNode",
-  "vehWeelCheap": "asNode",
+  "vehWheelCheap": "asNode",
   "vehWheel": "asNode",
   "vehWheelPtx": "asNode"
  },
@@ -22067,7 +22067,7 @@
     "name": "GetDirName"
    }
   ],
-  "vehWeelCheap": [
+  "vehWheelCheap": [
    {
     "slot": 1,
     "name": "Cull"

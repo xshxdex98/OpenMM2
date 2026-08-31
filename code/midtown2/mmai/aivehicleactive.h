@@ -28,7 +28,7 @@
 #include "dg/dgphysentity.h"
 #include "ph/phinertialcs.h"
 #include "ph/phsleep.h"
-#include "veh/vehweelcheap.h"
+#include "veh/vehwheelcheap.h"
 
 class Base_vtbl;
 struct ImpactCBData;
@@ -91,10 +91,10 @@ public:
     lvlInstance* Instance; // 0x2D4
     phInertialCS ICS; // 0x2D8
     phSleep Sleep; // 0x48C
-    vehWeelCheap WheelFrontLeft; // 0x4DC
-    vehWeelCheap WheelFrontRight; // 0x664
-    vehWeelCheap WheelBackLeft; // 0x7EC
-    vehWeelCheap WheelBackRight; // 0x974
+    vehWheelCheap WheelFrontLeft; // 0x4DC
+    vehWheelCheap WheelFrontRight; // 0x664
+    vehWheelCheap WheelBackLeft; // 0x7EC
+    vehWheelCheap WheelBackRight; // 0x974
 };
 
 // ??_7aiVehicleActive@@6B@

@@ -5151,7 +5151,7 @@
     {
      "name": "WheelFrontLeft",
      "offset": 1244,
-     "type": "vehWeelCheap",
+     "type": "vehWheelCheap",
      "count": 0,
      "width": 392,
      "src": "kit"
@@ -5159,7 +5159,7 @@
     {
      "name": "WheelFrontRight",
      "offset": 1636,
-     "type": "vehWeelCheap",
+     "type": "vehWheelCheap",
      "count": 0,
      "width": 392,
      "src": "kit"
@@ -5167,7 +5167,7 @@
     {
      "name": "WheelBackLeft",
      "offset": 2028,
-     "type": "vehWeelCheap",
+     "type": "vehWheelCheap",
      "count": 0,
      "width": 392,
      "src": "kit"
@@ -5175,7 +5175,7 @@
     {
      "name": "WheelBackRight",
      "offset": 2420,
-     "type": "vehWeelCheap",
+     "type": "vehWheelCheap",
      "count": 0,
      "width": 392,
      "src": "kit"
@@ -24128,214 +24128,6 @@
    "source": "MM2_RE_KIT",
    "confidence": "CONFIRMED"
   },
-  "vehWeelCheap": {
-   "kind": "class",
-   "size": 392,
-   "members": [
-    {
-     "name": "__vftable",
-     "offset": 0,
-     "type": "Base_vtbl*",
-     "count": 0,
-     "width": 4,
-     "src": "kit"
-    },
-    {
-     "name": "next",
-     "offset": 4,
-     "type": "asNode*",
-     "count": 0,
-     "width": 4,
-     "src": "kit"
-    },
-    {
-     "name": "child",
-     "offset": 8,
-     "type": "asNode*",
-     "count": 0,
-     "width": 4,
-     "src": "kit"
-    },
-    {
-     "name": "parent",
-     "offset": 12,
-     "type": "asNode*",
-     "count": 0,
-     "width": 4,
-     "src": "kit"
-    },
-    {
-     "name": "flags",
-     "offset": 16,
-     "type": "u32",
-     "count": 0,
-     "width": 4,
-     "src": "kit"
-    },
-    {
-     "name": "name",
-     "offset": 20,
-     "type": "i8*",
-     "count": 0,
-     "width": 4,
-     "src": "kit"
-    },
-    {
-     "name": "InertialCS",
-     "offset": 24,
-     "type": "phInertialCS*",
-     "count": 0,
-     "width": 4,
-     "src": "kit"
-    },
-    {
-     "name": "Spring",
-     "offset": 28,
-     "type": "f32",
-     "count": 0,
-     "width": 4,
-     "src": "kit"
-    },
-    {
-     "name": "Damping",
-     "offset": 32,
-     "type": "f32",
-     "count": 0,
-     "width": 4,
-     "src": "kit"
-    },
-    {
-     "name": "Segment",
-     "offset": 36,
-     "type": "lvlSegment",
-     "count": 0,
-     "width": 40,
-     "src": "kit"
-    },
-    {
-     "name": "Intersection",
-     "offset": 76,
-     "type": "lvlIntersection",
-     "count": 0,
-     "width": 156,
-     "src": "kit"
-    },
-    {
-     "name": "SegmentInfo",
-     "offset": 232,
-     "type": "lvlSegmentInfo",
-     "count": 0,
-     "width": 12,
-     "src": "kit"
-    },
-    {
-     "name": "Grounded",
-     "offset": 244,
-     "type": "i32",
-     "count": 0,
-     "width": 4,
-     "src": "kit"
-    },
-    {
-     "name": "Position",
-     "offset": 248,
-     "type": "Vector3",
-     "count": 0,
-     "width": 12,
-     "src": "kit"
-    },
-    {
-     "name": "Radius",
-     "offset": 260,
-     "type": "f32",
-     "count": 0,
-     "width": 4,
-     "src": "kit"
-    },
-    {
-     "name": "Gap",
-     "offset": 264,
-     "type": "f32",
-     "count": 0,
-     "width": 4,
-     "src": "kit"
-    },
-    {
-     "name": "field_10C",
-     "offset": 268,
-     "type": "f32",
-     "count": 0,
-     "width": 4,
-     "src": "kit"
-    },
-    {
-     "name": "field_110",
-     "offset": 272,
-     "type": "f32",
-     "count": 0,
-     "width": 4,
-     "src": "kit"
-    },
-    {
-     "name": "field_114",
-     "offset": 276,
-     "type": "f32",
-     "count": 0,
-     "width": 4,
-     "src": "kit"
-    },
-    {
-     "name": "RubberSpring",
-     "offset": 280,
-     "type": "f32",
-     "count": 0,
-     "width": 4,
-     "src": "kit"
-    },
-    {
-     "name": "RubberDamp",
-     "offset": 284,
-     "type": "f32",
-     "count": 0,
-     "width": 4,
-     "src": "kit"
-    },
-    {
-     "name": "Limit",
-     "offset": 288,
-     "type": "f32",
-     "count": 0,
-     "width": 4,
-     "src": "kit"
-    },
-    {
-     "name": "field_124",
-     "offset": 292,
-     "type": "f32",
-     "count": 0,
-     "width": 4,
-     "src": "kit"
-    },
-    {
-     "name": "Matrix",
-     "offset": 296,
-     "type": "Matrix34",
-     "count": 0,
-     "width": 48,
-     "src": "kit"
-    },
-    {
-     "name": "Matrix2",
-     "offset": 344,
-     "type": "Matrix34",
-     "count": 0,
-     "width": 48,
-     "src": "kit"
-    }
-   ],
-   "source": "MM2_RE_KIT",
-   "confidence": "CONFIRMED"
-  },
   "vehWheel": {
    "kind": "class",
    "size": 620,
@@ -25018,6 +24810,214 @@
      "type": "lvlMaterial*",
      "count": 0,
      "width": 4,
+     "src": "kit"
+    }
+   ],
+   "source": "MM2_RE_KIT",
+   "confidence": "CONFIRMED"
+  },
+  "vehWheelCheap": {
+   "kind": "class",
+   "size": 392,
+   "members": [
+    {
+     "name": "__vftable",
+     "offset": 0,
+     "type": "Base_vtbl*",
+     "count": 0,
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "next",
+     "offset": 4,
+     "type": "asNode*",
+     "count": 0,
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "child",
+     "offset": 8,
+     "type": "asNode*",
+     "count": 0,
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "parent",
+     "offset": 12,
+     "type": "asNode*",
+     "count": 0,
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "flags",
+     "offset": 16,
+     "type": "u32",
+     "count": 0,
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "name",
+     "offset": 20,
+     "type": "i8*",
+     "count": 0,
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "InertialCS",
+     "offset": 24,
+     "type": "phInertialCS*",
+     "count": 0,
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Spring",
+     "offset": 28,
+     "type": "f32",
+     "count": 0,
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Damping",
+     "offset": 32,
+     "type": "f32",
+     "count": 0,
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Segment",
+     "offset": 36,
+     "type": "lvlSegment",
+     "count": 0,
+     "width": 40,
+     "src": "kit"
+    },
+    {
+     "name": "Intersection",
+     "offset": 76,
+     "type": "lvlIntersection",
+     "count": 0,
+     "width": 156,
+     "src": "kit"
+    },
+    {
+     "name": "SegmentInfo",
+     "offset": 232,
+     "type": "lvlSegmentInfo",
+     "count": 0,
+     "width": 12,
+     "src": "kit"
+    },
+    {
+     "name": "Grounded",
+     "offset": 244,
+     "type": "i32",
+     "count": 0,
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Position",
+     "offset": 248,
+     "type": "Vector3",
+     "count": 0,
+     "width": 12,
+     "src": "kit"
+    },
+    {
+     "name": "Radius",
+     "offset": 260,
+     "type": "f32",
+     "count": 0,
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Gap",
+     "offset": 264,
+     "type": "f32",
+     "count": 0,
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_10C",
+     "offset": 268,
+     "type": "f32",
+     "count": 0,
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_110",
+     "offset": 272,
+     "type": "f32",
+     "count": 0,
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_114",
+     "offset": 276,
+     "type": "f32",
+     "count": 0,
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "RubberSpring",
+     "offset": 280,
+     "type": "f32",
+     "count": 0,
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "RubberDamp",
+     "offset": 284,
+     "type": "f32",
+     "count": 0,
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Limit",
+     "offset": 288,
+     "type": "f32",
+     "count": 0,
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "field_124",
+     "offset": 292,
+     "type": "f32",
+     "count": 0,
+     "width": 4,
+     "src": "kit"
+    },
+    {
+     "name": "Matrix",
+     "offset": 296,
+     "type": "Matrix34",
+     "count": 0,
+     "width": 48,
+     "src": "kit"
+    },
+    {
+     "name": "Matrix2",
+     "offset": 344,
+     "type": "Matrix34",
+     "count": 0,
+     "width": 48,
      "src": "kit"
     }
    ],
