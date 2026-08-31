@@ -23,16 +23,10 @@
 
 #include "core/arts.h"
 
-#include "lvl/lvltrackmanager.h"
 #include "misc/base.h"
-#include "ph/phcolliderjointed.h"
 
+class Base_vtbl;
 class phCollider;
-class vehCarDamage;
-class vehCarModel;
-class vehCarSim;
-class vehFeedback;
-class vehWheelPtx;
 
 class dgPhysEntity : public Base
 {
@@ -61,30 +55,9 @@ public:
 public:
     // Members from 0x004; everything below that belongs to Base.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    phColliderJointed JointedCollider; // 0x004
-    u32 field_B4; // 0x0B4
-    vehCarSim* pSim; // 0x0B8
-    vehCarModel* pModel; // 0x0BC
-    vehCarDamage* pCarDamage; // 0x0C0
-    vehWheelPtx* pWheelPtx; // 0x0C4
-    u32 field_C8; // 0x0C8
-    u32 pVehStuck; // 0x0CC
-    u32 pVehGyro; // 0x0D0
-    u32 field_D4; // 0x0D4
-    u32 field_D8; // 0x0D8
-    u32 field_DC; // 0x0DC
-    u32 field_E0; // 0x0E0
-    vehFeedback* pFeedback; // 0x0E4
-    u32 field_E8; // 0x0E8
-    u32 field_EC; // 0x0EC
-    u8 field_F0[4]; // 0x0F0
-    lvlTrackManager LvlTrackManager_F4; // 0x0F4
-    lvlTrackManager LvlTrackManager_14C; // 0x14C
-    lvlTrackManager LvlTrackManager_1A4; // 0x1A4
-    lvlTrackManager LvlTrackManager_1FC; // 0x1FC
-    u32 field_254; // 0x254
+    u8 buffer[176]; // 0x004
 };
 
 // ??_7dgPhysEntity@@6B@
 // vtable at 0x005B0BD8
-check_size(dgPhysEntity, 0x258);
+check_size(dgPhysEntity, 0xB4);

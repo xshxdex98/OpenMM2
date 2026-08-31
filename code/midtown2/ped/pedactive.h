@@ -78,4 +78,4 @@ public:
 
 // ??_7pedActive@@6B@
 // vtable at 0x005B639C
-// check_size(pedActive, 0x258); // size known, members are not - cannot verify
+// check_size(pedActive, 0xB8); // size known, members are not - cannot verify

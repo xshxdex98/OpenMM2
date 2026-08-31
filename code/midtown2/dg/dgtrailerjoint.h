@@ -24,11 +24,12 @@
 #include "core/arts.h"
 
 #include "ph/phjoint.h"
+#include "vector7/matrix34.h"
+#include "vector7/vector3.h"
 
-class Matrix34;
-class Vector3;
 class datParser;
 class phInertialCS;
+class phJoint_vtbl;
 
 class dgTrailerJoint : public phJoint
 {
@@ -128,8 +129,13 @@ public:
 
     // ?Update@dgTrailerJoint@@QAEXXZ
     ARTS_IMPORT void Update();
+
+public:
+    // Members from 0x06C; everything below that belongs to phJoint.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    i8 gap[176]; // 0x06C
 };
 
 // ??_7dgTrailerJoint@@6BphJoint@@@
 // vtable at 0x005B8638
-// check_size(dgTrailerJoint, 0x11C); // size known, members are not - cannot verify
+check_size(dgTrailerJoint, 0x11C);

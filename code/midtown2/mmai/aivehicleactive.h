@@ -82,9 +82,13 @@ public:
     ARTS_IMPORT void UpdateDamage();
 
 public:
-    // Members from 0x258; everything below that belongs to dgPhysEntity.
+    // Members from 0x0B4; everything below that belongs to dgPhysEntity.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    u8 pad_258[112]; // 0x258
+    datCallback* CallBack; // 0x0B4
+    asParticles Particles; // 0x0B8
+    asParticles Particles2; // 0x10C
+    asBirthRule BirthRule; // 0x160
+    asBirthRule BirthRule2; // 0x214
     f32 CurDamage; // 0x2C8
     f32 MaxDamage; // 0x2CC
     i32 field_2D0; // 0x2D0

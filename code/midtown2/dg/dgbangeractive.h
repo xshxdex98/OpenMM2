@@ -64,9 +64,10 @@ public:
     ARTS_IMPORT void Detach();
 
 public:
-    // Members from 0x258; everything below that belongs to dgPhysEntity.
+    // Members from 0x0B4; everything below that belongs to dgPhysEntity.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    u8 pad_258[20]; // 0x258
+    i32 ID; // 0x0B4
+    phInertialCS ICS; // 0x0B8
     phSleep Sleep; // 0x26C
     lvlInstance* Instance; // 0x2BC
     asParticles Particles; // 0x2C0

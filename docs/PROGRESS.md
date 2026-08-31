@@ -19,8 +19,8 @@ Two numbers matter and they are different:
 | | | |
 |---|--:|---|
 | Ported | 2.11% | `#...........................` |
-| Ready to port | 71.6% | `####################........` |
-| Size known, members not | 13.1% | `####........................` |
+| Ready to port | 72.3% | `####################........` |
+| Size known, members not | 12.4% | `###.........................` |
 
 | Metric | Value |
 |---|--:|
@@ -29,8 +29,8 @@ Two numbers matter and they are different:
 | Machine code | 1.7 MB |
 | Code ported | 36.2 KB |
 | Classes | 535 |
-| Classes with a member layout | 304 (57%) |
-| Classes with only a size | 47 |
+| Classes with a member layout | 305 (57%) |
+| Classes with only a size | 46 |
 | Virtual methods | 1938 |
 | Vftables | 340 |
 | `game.asm` remaining | 23.2 MB, 10879 PROCs |
@@ -52,7 +52,7 @@ layout is known.
 | `veh` | 34 | 585 | 91.5 KB | 5.3% | 1.0% | 91% |
 | `gfx` | 13 | 189 | 46.6 KB | 2.7% | 13.3% | 55% |
 | `sdl` | 4 | 37 | 46.5 KB | 2.7% | 0.0% | 100% |
-| `dg` | 28 | 263 | 44.3 KB | 2.6% | 0.0% | 54% |
+| `dg` | 28 | 263 | 44.3 KB | 2.6% | 0.0% | 80% |
 | `lvl` | 18 | 221 | 36.3 KB | 2.1% | 0.0% | 68% |
 | `as` | 18 | 246 | 34.9 KB | 2.0% | 0.0% | 84% |
 | `aud` | 19 | 322 | 23.9 KB | 1.4% | 0.0% | 0% |
@@ -88,7 +88,7 @@ layout is known.
 - **1938 virtual methods across 340 vftables.** Constructors must be ported together
   with every virtual of their class, or the vtable the compiler emits will not link.
 - Largest class not yet ported: **`aiVehiclePhysics`** at 58.7 KB.
-- **231 classes (487.9 KB, 28% of code) have no known layout** and are blocked: their
+- **230 classes (476.3 KB, 28% of code) have no known layout** and are blocked: their
   member offsets would have to be guessed, which is how you get silent corruption.
 
 ### Biggest blocked classes
@@ -102,13 +102,13 @@ Recovering these layouts unblocks the most code per unit of effort.
 | `gfxPipeline` | 57 | 21.1 KB |
 | `phContactMgr` | 37 | 15.6 KB |
 | `mmPlayer` | 39 | 13.3 KB |
-| `dgTrailerJoint` | 33 | 11.6 KB |
 | `mmMultiBlitz` | 20 | 7.2 KB |
 | `phCollision` | 7 | 7.0 KB |
 | `mmSingleCircuit` | 30 | 6.8 KB |
 | `mmSingleRace` | 30 | 6.8 KB |
 | `aiPoliceOfficer` | 25 | 6.6 KB |
 | `mmSingleBlitz` | 26 | 6.3 KB |
+| `AudioOptions` | 34 | 6.3 KB |
 
 ### Biggest ready classes
 
