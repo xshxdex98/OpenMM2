@@ -1,0 +1,27 @@
+{
+ "_comment": [
+  "lvlInstance's trivial virtuals - the base cases of the per-instance dispatch that runs for",
+  "every object in the city each frame. Each is one instruction in the binary.",
+  "",
+  "GetVelocity (0x004643A0) and GetRadius (0x004643E0) are deliberately NOT here: they return a",
+  "static Vector3 at 0x006A3B08 and index a 0x20-stride table at 0x006316D0, and porting them",
+  "before those globals are symbolised would bake a hard-coded address into C++."
+ ],
+ "ported": [
+  "?Detach@lvlInstance@@UAEXXZ",
+  "?IsCollidable@lvlInstance@@UAE_NXZ",
+  "?IsTerrainCollidable@lvlInstance@@UAE_NXZ",
+  "?IsLandmark@lvlInstance@@UAE_NXZ",
+  "?Reset@lvlInstance@@UAEXXZ",
+  "?GetNumLightSources@lvlInstance@@UAEHXZ",
+  "?GetEntity@lvlInstance@@UAEPAVdgPhysEntity@@XZ",
+  "?AttachEntity@lvlInstance@@UAEPAVdgPhysEntity@@XZ",
+  "?SetVariant@lvlInstance@@UAEXH@Z",
+  "?DrawShadow@lvlInstance@@UAEXXZ",
+  "?DrawShadowMap@lvlInstance@@UAEXXZ",
+  "?DrawGlow@lvlInstance@@UAEXXZ",
+  "?DrawReflected@lvlInstance@@UAEXM@Z",
+  "?SetupGfxLights@lvlInstance@@UAEHABVMatrix34@@@Z",
+  "?DrawReflectedParts@lvlInstance@@UAEXH@Z"
+ ]
+}

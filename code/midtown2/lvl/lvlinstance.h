@@ -44,64 +44,64 @@ public:
     ARTS_IMPORT ~lvlInstance();
 
     // ?Reset@lvlInstance@@UAEXXZ
-    ARTS_IMPORT virtual void Reset();
+    ARTS_EXPORT virtual void Reset();
 
     // ?IsVisible@lvlInstance@@UAEHABVgfxViewport@@@Z
     ARTS_IMPORT virtual i32 IsVisible(const gfxViewport& viewport);
 
     // ?SetVariant@lvlInstance@@UAEXH@Z
-    ARTS_IMPORT virtual void SetVariant(i32 arg1);
+    ARTS_EXPORT virtual void SetVariant(i32 arg1);
 
     // ?GetRadius@lvlInstance@@UAE?BMXZ
     ARTS_IMPORT virtual const f32 GetRadius();
 
     // ?GetEntity@lvlInstance@@UAEPAVdgPhysEntity@@XZ
-    ARTS_IMPORT virtual dgPhysEntity* GetEntity();
+    ARTS_EXPORT virtual dgPhysEntity* GetEntity();
 
     // ?AttachEntity@lvlInstance@@UAEPAVdgPhysEntity@@XZ
-    ARTS_IMPORT virtual dgPhysEntity* AttachEntity();
+    ARTS_EXPORT virtual dgPhysEntity* AttachEntity();
 
     // ?GetVelocity@lvlInstance@@UAEABVVector3@@XZ
     ARTS_IMPORT virtual const Vector3& GetVelocity();
 
     // ?Detach@lvlInstance@@UAEXXZ
-    ARTS_IMPORT virtual void Detach();
+    ARTS_EXPORT virtual void Detach();
 
     // ?DrawShadow@lvlInstance@@UAEXXZ
-    ARTS_IMPORT virtual void DrawShadow();
+    ARTS_EXPORT virtual void DrawShadow();
 
     // ?DrawShadowMap@lvlInstance@@UAEXXZ
-    ARTS_IMPORT virtual void DrawShadowMap();
+    ARTS_EXPORT virtual void DrawShadowMap();
 
     // ?DrawGlow@lvlInstance@@UAEXXZ
-    ARTS_IMPORT virtual void DrawGlow();
+    ARTS_EXPORT virtual void DrawGlow();
 
     // ?DrawReflected@lvlInstance@@UAEXM@Z
-    ARTS_IMPORT virtual void DrawReflected(f32 arg1);
+    ARTS_EXPORT virtual void DrawReflected(f32 arg1);
 
     // ?DrawReflectedParts@lvlInstance@@UAEXH@Z
-    ARTS_IMPORT virtual void DrawReflectedParts(i32 arg1);
+    ARTS_EXPORT virtual void DrawReflectedParts(i32 arg1);
 
     // ?Init@lvlInstance@@UAEHPBDABVMatrix34@@H@Z
     ARTS_IMPORT virtual i32 Init(const char* arg1, const Matrix34& arg2, i32 arg3);
 
     // ?IsLandmark@lvlInstance@@UAE_NXZ
-    ARTS_IMPORT virtual bool IsLandmark();
+    ARTS_EXPORT virtual bool IsLandmark();
 
     // ?IsCollidable@lvlInstance@@UAE_NXZ
-    ARTS_IMPORT virtual bool IsCollidable();
+    ARTS_EXPORT virtual bool IsCollidable();
 
     // ?IsTerrainCollidable@lvlInstance@@UAE_NXZ
-    ARTS_IMPORT virtual bool IsTerrainCollidable();
+    ARTS_EXPORT virtual bool IsTerrainCollidable();
 
     // ?GetNumLightSources@lvlInstance@@UAEHXZ
-    ARTS_IMPORT virtual i32 GetNumLightSources();
+    ARTS_EXPORT virtual i32 GetNumLightSources();
 
     // ?GetLightInfo@lvlInstance@@UAEXHPAVcltLight@@@Z
     ARTS_IMPORT virtual void GetLightInfo(i32 arg1, cltLight* arg2);
 
     // ?SetupGfxLights@lvlInstance@@UAEHABVMatrix34@@@Z
-    ARTS_IMPORT virtual i32 SetupGfxLights(const Matrix34& arg1);
+    ARTS_EXPORT virtual i32 SetupGfxLights(const Matrix34& arg1);
 
     // ?GetBound@lvlInstance@@UAEPBVphBound@@H@Z
     ARTS_IMPORT virtual const phBound* GetBound(i32 arg1);
