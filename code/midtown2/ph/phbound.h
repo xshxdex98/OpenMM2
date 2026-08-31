@@ -44,31 +44,31 @@ public:
     ARTS_IMPORT virtual i32 GetNumMaterials() const;
 
     // ?SetFriction@phBound@@UAEMXZ
-    ARTS_IMPORT virtual f32 SetFriction();
+    ARTS_EXPORT virtual f32 SetFriction();
 
     // ?SetFriction@phBound@@UAEXM@Z
-    ARTS_IMPORT virtual void SetFriction(f32 arg1);
+    ARTS_EXPORT virtual void SetFriction(f32 arg1);
 
     // ?SetElasticity@phBound@@UAEMXZ
-    ARTS_IMPORT virtual f32 SetElasticity();
+    ARTS_EXPORT virtual f32 SetElasticity();
 
     // ?SetElasticity@phBound@@UAEXM@Z
-    ARTS_IMPORT virtual void SetElasticity(f32 arg1);
+    ARTS_EXPORT virtual void SetElasticity(f32 arg1);
 
     // ?TestSphere@phBound@@UBE_NABVVector3@@MAAVphImpactBase@@@Z
-    ARTS_IMPORT virtual bool TestSphere(const Vector3& arg1, f32 arg2, phImpactBase& arg3) const;
+    ARTS_EXPORT virtual bool TestSphere(const Vector3& arg1, f32 arg2, phImpactBase& arg3) const;
 
     // ?TestSphere@phBound@@UBE_NABVVector3@@MAAV2@1AAM@Z
-    ARTS_IMPORT virtual bool TestSphere(const Vector3& arg1, f32 arg2, Vector3& arg3, Vector3& arg4, f32& arg5) const;
+    ARTS_EXPORT virtual bool TestSphere(const Vector3& arg1, f32 arg2, Vector3& arg3, Vector3& arg4, f32& arg5) const;
 
     // ?ModifyInvMassMatrix@phBound@@UBEXPAVMatrix34@@HABVVector3@@1@Z
-    ARTS_IMPORT virtual void ModifyInvMassMatrix(Matrix34* arg1, i32 arg2, const Vector3& arg3, const Vector3& arg4) const;
+    ARTS_EXPORT virtual void ModifyInvMassMatrix(Matrix34* arg1, i32 arg2, const Vector3& arg3, const Vector3& arg4) const;
 
     // ?ModifyInvMassMatrix@phBound@@UBEXPAVMatrix34@@HABVVector3@@@Z
-    ARTS_IMPORT virtual void ModifyInvMassMatrix(Matrix34* arg1, i32 arg2, const Vector3& arg3) const;
+    ARTS_EXPORT virtual void ModifyInvMassMatrix(Matrix34* arg1, i32 arg2, const Vector3& arg3) const;
 
     // ?EffectiveMass@phBound@@UBEMABVVector3@@0HM@Z
-    ARTS_IMPORT virtual f32 EffectiveMass(const Vector3& arg1, const Vector3& arg2, i32 arg3, f32 arg4) const;
+    ARTS_EXPORT virtual f32 EffectiveMass(const Vector3& arg1, const Vector3& arg2, i32 arg3, f32 arg4) const;
 
     // ?GetVertex@phBound@@UBEABVVector3@@H@Z
     ARTS_IMPORT virtual const Vector3& GetVertex(i32 arg1) const;

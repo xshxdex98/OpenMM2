@@ -58,7 +58,7 @@ public:
     ARTS_IMPORT virtual void PreDraw();
 
     // ?PostDraw@cityLevel@@UAEXXZ
-    ARTS_IMPORT virtual void PostDraw();
+    ARTS_EXPORT virtual void PostDraw();
 
     // ?Draw@cityLevel@@UAEXABVgfxViewport@@I@Z
     ARTS_IMPORT virtual void Draw(const gfxViewport& p_open, u32 arg2);
@@ -82,13 +82,13 @@ public:
     ARTS_IMPORT virtual i32 GetVisitList(i32* __formal, i32 arg2, const Vector3& arg3, const Vector3& arg4, i32 arg5, i32 arg6);
 
     // ?Collide@cityLevel@@UAE_NHAAVlvlSegment@@PAVlvlIntersection@@@Z
-    ARTS_IMPORT virtual bool Collide(i32 arg1, lvlSegment& arg2, lvlIntersection* arg3);
+    ARTS_EXPORT virtual bool Collide(i32 arg1, lvlSegment& arg2, lvlIntersection* arg3);
 
     // ?GetBoundSphere@cityLevel@@UAE_NAAVVector4@@H@Z
     ARTS_IMPORT virtual bool GetBoundSphere(Vector4& arg1, i32 arg2);
 
     // ?GetBound@cityLevel@@UAEPBVlvlLevelBound@@XZ
-    ARTS_IMPORT virtual const lvlLevelBound* GetBound();
+    ARTS_EXPORT virtual const lvlLevelBound* GetBound();
 
     // ?SetObjectDetail@cityLevel@@UAEXH@Z
     ARTS_IMPORT virtual void SetObjectDetail(i32 lod);
@@ -97,10 +97,10 @@ public:
     ARTS_IMPORT virtual f32 GetWaterLevel(i32 arg1) const;
 
     // ?GetLightingIntensity@cityLevel@@UBEMABVVector3@@@Z
-    ARTS_IMPORT virtual f32 GetLightingIntensity(const Vector3& arg1) const;
+    ARTS_EXPORT virtual f32 GetLightingIntensity(const Vector3& arg1) const;
 
     // ?SetPtxHeight@cityLevel@@UAEXAAVasParticles@@@Z
-    ARTS_IMPORT virtual void SetPtxHeight(asParticles& arg1);
+    ARTS_EXPORT virtual void SetPtxHeight(asParticles& arg1);
 
     // ?GetEnvMap@cityLevel@@UAEPAVgfxTexture@@HABVVector3@@AAM@Z
     ARTS_IMPORT virtual gfxTexture* GetEnvMap(i32 arg1, const Vector3& arg2, f32& arg3);
@@ -112,7 +112,7 @@ public:
     ARTS_IMPORT void EnableSky(bool arg1);
 
     // ?GetLastStartRoom@cityLevel@@QAEHXZ
-    ARTS_IMPORT i32 GetLastStartRoom();
+    ARTS_EXPORT i32 GetLastStartRoom();
 
     // ?GetTouchedNeighborsR@cityLevel@@QAEHPAHHHABVVector4@@H@Z
     ARTS_IMPORT i32 GetTouchedNeighborsR(i32* p_open, i32 arg2, i32 arg3, const Vector4& arg4, i32 arg5);

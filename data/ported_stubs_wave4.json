@@ -1,0 +1,29 @@
+{
+ "_comment": [
+  "Wave 4: phBound's nine defaults and cityLevel's six constant answers.",
+  "",
+  "phBound's SetFriction/SetElasticity are each a PAIR overloaded on parameters - f32 Name()",
+  "reads, void Name(f32) writes - and the reader returns 0.5 for both. An earlier pass misread",
+  "these as dropped x87 returns; the kit has the value, and the mistake was in extracting one",
+  "body for every overload of a name rather than matching the signature.",
+  "",
+  "Excluded: cityLevel::GetWaterLevel returns the unsymbolised global at 0x0062998C."
+ ],
+ "ported": [
+  "?SetFriction@phBound@@UAEMXZ",
+  "?SetFriction@phBound@@UAEXM@Z",
+  "?SetElasticity@phBound@@UAEMXZ",
+  "?SetElasticity@phBound@@UAEXM@Z",
+  "?TestSphere@phBound@@UBE_NABVVector3@@MAAVphImpactBase@@@Z",
+  "?TestSphere@phBound@@UBE_NABVVector3@@MAAV2@1AAM@Z",
+  "?ModifyInvMassMatrix@phBound@@UBEXPAVMatrix34@@HABVVector3@@1@Z",
+  "?ModifyInvMassMatrix@phBound@@UBEXPAVMatrix34@@HABVVector3@@@Z",
+  "?EffectiveMass@phBound@@UBEMABVVector3@@0HM@Z",
+  "?PostDraw@cityLevel@@UAEXXZ",
+  "?Collide@cityLevel@@UAE_NHAAVlvlSegment@@PAVlvlIntersection@@@Z",
+  "?GetBound@cityLevel@@UAEPBVlvlLevelBound@@XZ",
+  "?GetLightingIntensity@cityLevel@@UBEMABVVector3@@@Z",
+  "?SetPtxHeight@cityLevel@@UAEXAAVasParticles@@@Z",
+  "?GetLastStartRoom@cityLevel@@QAEHXZ"
+ ]
+}
