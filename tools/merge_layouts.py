@@ -61,6 +61,71 @@ def tiles(members, size):
     return True, ""
 
 
+# CARRIER PRECEDENCE, STATED RATHER THAN INHERITED FROM THE FILENAMES.
+#
+# This loop used to iterate sorted(glob(...)), so alphabetical order WAS the precedence rule, and
+# it favoured the weaker source. layouts_from_ctors.json sorts before layouts_round4.json, inserts
+# first, and round4 is then refused against it - costing mmJaxis seven recovered 1999 names and
+# retyping six floats as i32. Two more classes, camTrackCS and mmTimer, are correct today only
+# because `c` sorts before `k`, and for those the loss would be a SIZE.
+#
+# Ranked by evidential strength, from what each file says about itself:
+#
+#   1. hand-read off the binary - a decoded instruction stream, not a tool's output. Within this
+#      tier order is chronological supersession and must be written down, not derived.
+#   2. layouts_kit.json - the recovered IDA/MM2Hook type library. Authoritative for NAMES and
+#      TYPES, and the only source with 1999 field names for whole classes.
+#   3. layouts_from_datparser.json - names from datParser::AddRecord string literals, genuine 1999
+#      artifacts, but partial by construction so it can only ever contribute names.
+#   4. layouts_from_serialization.json - Hex-Rays derived, with its own internal evidence ranking.
+#   5. layouts_from_ctors.json - constructor machine code. Recovers OFFSETS and SIZES and nothing
+#      else: every field comes out i32 field_NN whatever it holds, as its own _note says.
+#
+# THE LADDER INVERTS FOR SIZE. layouts_from_ctors outranks layouts_kit there, and provably: the
+# kit records camTrackCS as 0x110, which is merely sizeof(camCarCS), its base, and mmTimer as
+# 0x18, which is sizeof(asNode). mmHUD constructs three mmTimers at stride 0x30, not 0x18. A
+# ctors size beats a kit size; a kit member list beats a ctors member list. Collapsing the two
+# into one ladder regresses camTrackCS to 0x110 and mmTimer to 0x18.
+ORDER = [
+    "layouts_round5.json",
+    "layouts_corrections.json",
+    "layouts_round4.json",
+    "layouts_gfx_round3.json",
+    "layouts_gfx_round2.json",
+    "layouts_gfx_recovered.json",
+    "layouts_vector7_round3.json",
+    "layouts_short_fix.json",
+    "layouts_kit.json",
+    "layouts_from_datparser.json",
+    "layouts_from_serialization.json",
+    "layouts_from_ctors.json",
+]
+
+# Sources whose SIZE outranks the kit's, per the inversion above.
+SIZE_OVER_KIT = {"layouts_from_ctors.json"}
+
+
+def carriers():
+    """Every data/layouts_*.json, in declared precedence order.
+
+    A carrier on disk that nobody has ranked is an error rather than something to place by its
+    filename - that silent placement is the whole defect this replaces.
+    """
+    found = {os.path.basename(x) for x in glob.glob(os.path.join(ROOT, "data", "layouts_*.json"))}
+    found.discard("layouts.json")
+
+    unranked = sorted(found - set(ORDER))
+    if unranked:
+        sys.exit("unranked layout carriers: %s\n"
+                 "Add each to ORDER in tools/merge_layouts.py, deliberately." % ", ".join(unranked))
+
+    return [(n, os.path.join(ROOT, "data", n)) for n in ORDER if n in found]
+
+
+def rank(name):
+    return ORDER.index(name) if name in ORDER else len(ORDER)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--write", action="store_true", help="apply; without it nothing is modified")
@@ -72,10 +137,11 @@ def main():
     before = len(layouts)
     merged, rejected = [], []
 
-    for path in sorted(glob.glob(os.path.join(ROOT, "data", "layouts_*.json"))):
-        name = os.path.basename(path)
-        if name == "layouts.json":
-            continue
+    # Which carrier supplied each entry, so a later one can be compared against it by RANK rather
+    # than by which happened to run first.
+    owner = {}
+
+    for name, path in carriers():
 
         with open(path, encoding="utf-8") as f:
             data = json.load(f)
@@ -105,13 +171,52 @@ def main():
                 # entry inline, and the size check below still applies - a correction may respell
                 # the bytes at a known offset, never change how many there are.
                 if info.get("source") == "hand-analysis":
+                    # Rank applies here too. Two carriers can both be hand-reads, and without this
+                    # the later one simply overwrote the earlier regardless of which supersedes
+                    # which - layouts_corrections silently replacing layouts_round5's account of
+                    # dgUnhitMtxBangerInstance, losing the evidence that its 16-byte gap is NOT
+                    # attested by any instruction.
+                    if cls in owner and rank(name) >= rank(owner[cls]):
+                        rejected.append((cls, name, "outranked by %s" % owner[cls]))
+                        continue
                     if existing.get("size") != info.get("size"):
                         rejected.append((cls, name, "correction says sizeof=0x%X, layouts.json "
                                          "says 0x%X" % (info.get("size") or 0,
                                                         existing.get("size") or 0)))
                         continue
                     layouts[cls] = info
+                    owner[cls] = name
                     merged.append((cls, name, info.get("size"), len(info.get("members") or [])))
+                    continue
+
+                # AN INCUMBENT FROM ANOTHER CARRIER IS NOT THE IDA TYPE LIBRARY, and rule 1 was
+                # refusing against it as though it were. Compare by declared rank instead. The
+                # size lock below still applies, so this can improve names and types and can never
+                # move a size.
+                if cls in owner:
+                    if rank(name) >= rank(owner[cls]):
+                        rejected.append((cls, name, "outranked by %s" % owner[cls]))
+                        continue
+                    if existing.get("size") != info.get("size"):
+                        rejected.append((cls, name, "%s says sizeof=0x%X, %s says 0x%X"
+                                         % (name, info.get("size") or 0, owner[cls],
+                                            existing.get("size") or 0)))
+                        continue
+
+                    members = info.get("members") or []
+                    ok, why = tiles(members, info.get("size"))
+                    if not ok:
+                        rejected.append((cls, name, why))
+                        continue
+
+                    entry = OrderedDict(existing)
+                    entry["members"] = members
+                    entry["source"] = name
+                    if info.get("evidence"):
+                        entry["evidence"] = info["evidence"]
+                    layouts[cls] = entry
+                    owner[cls] = name
+                    merged.append((cls, name, info.get("size"), len(members)))
                     continue
 
                 from_kit = (info.get("source") == "MM2_RE_KIT")
@@ -162,6 +267,7 @@ def main():
                 merged_entry["evidence"] = info["evidence"]
 
             layouts[cls] = merged_entry
+            owner[cls] = name
             merged.append((cls, name, size, len(members)))
 
     print("merged %d classes:" % len(merged))
