@@ -96,14 +96,14 @@ public:
     ARTS_IMPORT void SetViewport(f32 arg1, f32 arg2, f32 arg3, f32 arg4, i32 arg5);
 
     // ?SetWorld@asCamera@@QAEXAAVMatrix34@@@Z
-    ARTS_IMPORT void SetWorld(Matrix34& unused);
+    ARTS_EXPORT void SetWorld(Matrix34& unused);
 
     // ?SphereVisible@asCamera@@QAEMABVVector3@@MPAM@Z
     ARTS_IMPORT f32 SphereVisible(const Vector3& arg1, f32 arg2, f32* arg3);
 
 private:
     // ?Regen@asCamera@@AAEXXZ
-    ARTS_IMPORT void Regen();
+    ARTS_EXPORT void Regen();
 
 public:
     // Members from 0x018; everything below that belongs to asNode.

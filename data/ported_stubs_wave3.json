@@ -1,0 +1,31 @@
+{
+ "_comment": [
+  "Wave 3. Bodies from MM2_RE_KIT/GHIDRA_DECOMP; access levels taken from the mangled names -",
+  "MAE is protected (asFileIO), AAE is private (asCamera::Regen, DMusicObject::RatePort),",
+  "SAX is static (gfxPacket).",
+  "",
+  "Excluded: asFileIO::GetClassName and camBaseCS::GetDirName return string literals, grouped",
+  "with the other string ports; asCamera::GetViewportWidth/Height read through",
+  "gfxPipeline::m_Viewport at 0x164/0x168 and belong with the gfxViewport work."
+ ],
+ "ported": [
+  "?FileIO@asFileIO@@MAEXAAVdatParser@@@Z",
+  "?AfterLoad@asFileIO@@MAEXXZ",
+  "?BeforeSave@asFileIO@@MAEXXZ",
+  "?InAccident@aiObstacle@@UAEHXZ",
+  "?BreakThreshold@aiObstacle@@UAEMXZ",
+  "?Drivable@aiObstacle@@UAEHXZ",
+  "?ForceCPV@gfxPacket@@SAXI@Z",
+  "?BeginRef@gfxPacket@@SAXXZ",
+  "?BeginProp@gfxPacket@@SAXXZ",
+  "?MakeList@gfxPacket@@SAPAVgfxPacketList@@PAV1@@Z",
+  "?FindBestPort@DMusicObject@@QAEHAAU_DMUS_PORTCAPS@@@Z",
+  "?GetNumPorts@DMusicObject@@QAEHXZ",
+  "?RatePort@DMusicObject@@AAEHAAU_DMUS_PORTCAPS@@@Z",
+  "?MakeActive@camBaseCS@@UAEXXZ",
+  "?UpdateInput@camBaseCS@@UAEXXZ",
+  "?SetST@camBaseCS@@UAEXPAM@Z",
+  "?SetWorld@asCamera@@QAEXAAVMatrix34@@@Z",
+  "?Regen@asCamera@@AAEXXZ"
+ ]
+}

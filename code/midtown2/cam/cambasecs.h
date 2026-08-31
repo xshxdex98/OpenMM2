@@ -50,16 +50,16 @@ public:
     ARTS_IMPORT virtual const char* GetDirName();
 
     // ?MakeActive@camBaseCS@@UAEXXZ
-    ARTS_IMPORT virtual void MakeActive();
+    ARTS_EXPORT virtual void MakeActive();
 
     // ?UpdateInput@camBaseCS@@UAEXXZ
-    ARTS_IMPORT virtual void UpdateInput();
+    ARTS_EXPORT virtual void UpdateInput();
 
     // ?ForceMatrixDelta@camBaseCS@@UAEXABVVector3@@@Z
     ARTS_IMPORT virtual void ForceMatrixDelta(const Vector3& arg1);
 
     // ?SetST@camBaseCS@@UAEXPAM@Z
-    ARTS_IMPORT virtual void SetST(f32* arg1);
+    ARTS_EXPORT virtual void SetST(f32* arg1);
 
     // ?IsViewCSInTransition@camBaseCS@@QAEHXZ
     ARTS_IMPORT i32 IsViewCSInTransition();

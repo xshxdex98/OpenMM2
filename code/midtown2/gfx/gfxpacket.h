@@ -44,10 +44,10 @@ public:
     ARTS_IMPORT static void AutoSetPacking(u32 arg1, u32 arg2, const u8* arg3);
 
     // ?BeginProp@gfxPacket@@SAXXZ
-    ARTS_IMPORT static void BeginProp();
+    ARTS_EXPORT static void BeginProp();
 
     // ?BeginRef@gfxPacket@@SAXXZ
-    ARTS_IMPORT static void BeginRef();
+    ARTS_EXPORT static void BeginRef();
 
     // ?Clone@gfxPacket@@QBEPAV1@XZ
     ARTS_IMPORT gfxPacket* Clone() const;
@@ -65,7 +65,7 @@ public:
     ARTS_IMPORT static void DrawList(const gfxPacketList* arg1);
 
     // ?ForceCPV@gfxPacket@@SAXI@Z
-    ARTS_IMPORT static void ForceCPV(u32 arg1);
+    ARTS_EXPORT static void ForceCPV(u32 arg1);
 
     // ?FreeAllVertexBuffers@gfxPacket@@SAXXZ
     ARTS_IMPORT static void FreeAllVertexBuffers();
@@ -86,7 +86,7 @@ public:
     ARTS_IMPORT void GetTri(i32*const out, i32 index) const;
 
     // ?MakeList@gfxPacket@@SAPAVgfxPacketList@@PAV1@@Z
-    ARTS_IMPORT static gfxPacketList* MakeList(gfxPacket* arg1);
+    ARTS_EXPORT static gfxPacketList* MakeList(gfxPacket* arg1);
 
     // ?OrthoMap@gfxPacket@@QAEXM@Z
     ARTS_IMPORT void OrthoMap(f32 arg1);

@@ -49,7 +49,7 @@ public:
     ARTS_IMPORT i32 CreateComposer();
 
     // ?FindBestPort@DMusicObject@@QAEHAAU_DMUS_PORTCAPS@@@Z
-    ARTS_IMPORT i32 FindBestPort(_DMUS_PORTCAPS& arg1);
+    ARTS_EXPORT i32 FindBestPort(_DMUS_PORTCAPS& arg1);
 
     // ?FindMSSoftWareSynth@DMusicObject@@QAEHAAU_DMUS_PORTCAPS@@@Z
     ARTS_IMPORT i32 FindMSSoftWareSynth(_DMUS_PORTCAPS& arg1);
@@ -58,7 +58,7 @@ public:
     ARTS_IMPORT DMusicWaveBuffer* GetDMusicWaveBuffer();
 
     // ?GetNumPorts@DMusicObject@@QAEHXZ
-    ARTS_IMPORT i32 GetNumPorts();
+    ARTS_EXPORT i32 GetNumPorts();
 
     // ?HandleNotifications@DMusicObject@@QAEXXZ
     ARTS_IMPORT void HandleNotifications();
@@ -125,7 +125,7 @@ private:
     ARTS_IMPORT i32 InitPort(IDirectSound* arg1, ulong arg2, i32 arg3, ulong arg4, ulong arg5);
 
     // ?RatePort@DMusicObject@@AAEHAAU_DMUS_PORTCAPS@@@Z
-    ARTS_IMPORT i32 RatePort(_DMUS_PORTCAPS& arg1);
+    ARTS_EXPORT i32 RatePort(_DMUS_PORTCAPS& arg1);
 
     // ?SetGrooveLevel@DMusicObject@@AAEHEE@Z
     ARTS_IMPORT i32 SetGrooveLevel(u8 arg1, u8 arg2);

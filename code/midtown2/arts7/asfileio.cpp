@@ -1,6 +1,5 @@
 /*
     OpenMM2 - An Open Source Re-Implementation of Midtown Madness 2
-    Copyright (C) 2026 The OpenMM2 contributors
 
     Structure, conventions and the arts/core runtime follow Open1560 by Brick,
     an Open Source Re-Implementation of Midtown Madness 1. Copyright (C) 2020 Brick.
@@ -19,27 +18,29 @@
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#pragma once
+// asFileIO is the mixin that gives a class DAT-file persistence. Its three hooks are protected
+// (`MAE` in the mangled name, not `UAE`) and all three are empty in the base: a class with nothing
+// to persist inherits them and registers no fields.
+//
+// GetClassName is not here. It returns the string literal at 0x005DD920 through a const char*,
+// and the string ports are grouped separately.
 
-#include "core/arts.h"
+#include "asfileio.h"
 
-class aiObstacle
+#include "data7/datparser.h"
+
+// ?FileIO@asFileIO@@MAEXAAVdatParser@@@Z - 0x005979B0
+void asFileIO::FileIO(datParser& arg1)
 {
-public:
-    // ?InAccident@aiObstacle@@UAEHXZ
-    ARTS_EXPORT virtual i32 InAccident();
+    (void) arg1;
+}
 
-    // ?BreakThreshold@aiObstacle@@UAEMXZ
-    ARTS_EXPORT virtual f32 BreakThreshold();
+// ?AfterLoad@asFileIO@@MAEXXZ - 0x00595AE0
+void asFileIO::AfterLoad()
+{}
 
-    // ?Drivable@aiObstacle@@UAEHXZ
-    ARTS_EXPORT virtual i32 Drivable();
+// ?BeforeSave@asFileIO@@MAEXXZ - 0x00595AF0
+void asFileIO::BeforeSave()
+{}
 
-public:
-    // Offset order is mandatory - the original code reads these at fixed offsets.
-    aiObstacle* Next; // 0x004
-};
-
-// ??_7aiObstacle@@6B@
-// vtable at 0x005B5A3C
-check_size(aiObstacle, 0x8);
+define_dummy_symbol(arts7_asfileio);
