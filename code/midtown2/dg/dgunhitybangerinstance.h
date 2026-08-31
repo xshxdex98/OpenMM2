@@ -50,9 +50,8 @@ public:
     ARTS_IMPORT virtual u32 SizeOf();
 
 public:
-    // Members from 0x018; everything below that belongs to dgUnhitBangerInstance.
+    // Members from 0x028; everything below that belongs to dgUnhitBangerInstance.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i8 gap[16]; // 0x018
     Vector3 Position; // 0x028
     f32 XAxis; // 0x034
     f32 ZAxis; // 0x038

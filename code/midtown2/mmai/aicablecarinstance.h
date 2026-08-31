@@ -56,4 +56,4 @@ public:
 
 // ??_7aiCableCarInstance@@6B@
 // vtable at 0x005B5658
-// check_size(aiCableCarInstance, 0x18); // size known, members are not - cannot verify
+// check_size(aiCableCarInstance, 0x28); // size known, members are not - cannot verify

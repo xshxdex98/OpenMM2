@@ -79,7 +79,9 @@ public:
 public:
     // Members from 0x014; everything below that belongs to lvlInstance.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    u16 BangerId; // 0x014
+    u16 DataPack; // 0x014
+    u8 pad_16[2]; // 0x016
+    i8 gap[16]; // 0x018
 };
 
-check_size(dgBangerInstance, 0x18);
+check_size(dgBangerInstance, 0x28);

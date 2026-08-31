@@ -30,7 +30,6 @@ class Vector3;
 class dgBangerData;
 class dgHitBangerInstance;
 class lvlInstance;
-class lvlInstance_vtbl;
 
 class dgUnhitBangerInstance : public dgBangerInstance
 {
@@ -65,4 +64,4 @@ public:
 
 // ??_7dgUnhitBangerInstance@@6B@
 // vtable at 0x005B56D4
-// check_size(dgUnhitBangerInstance, 0x18); // size known, members are not - cannot verify
+// check_size(dgUnhitBangerInstance, 0x28); // size known, members are not - cannot verify

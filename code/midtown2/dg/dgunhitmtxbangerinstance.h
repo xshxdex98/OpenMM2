@@ -45,9 +45,8 @@ public:
     ARTS_IMPORT virtual u32 SizeOf();
 
 public:
-    // Members from 0x018; everything below that belongs to dgUnhitBangerInstance.
+    // Members from 0x028; everything below that belongs to dgUnhitBangerInstance.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    u8 gap[16]; // 0x018
     Matrix34 Matrix; // 0x028
 };
 
