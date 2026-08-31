@@ -5,6 +5,7 @@
   "evidence, and tools/asm.py's publish_globals() for how the name reaches the linker."
  ],
  "ported": [
-  "?GetVelocity@lvlInstance@@UAEABVVector3@@XZ"
+  "?GetVelocity@lvlInstance@@UAEABVVector3@@XZ",
+  "?GetVertex@phBound@@UBEABVVector3@@H@Z"
  ]
 }

@@ -30,14 +30,11 @@
 // The rest say "no contact" and "change nothing", which is the safe answer for a volume with no
 // geometry: TestSphere reports a miss, ModifyInvMassMatrix leaves the mass matrix alone, and
 // EffectiveMass hands back the mass it was given.
-//
-// GetVertex is NOT ported, even though the zero vector it returns now has a name. Its extent is
-// recorded as 48 bytes and data still points at 0x00487740, sixteen bytes in, so stripping it
-// would delete something else that is referenced - build gate 6 catches it. The blocker is the
-// recorded extent, not the global.
+
 
 #include "phbound.h"
 
+#include "misc/freefuncs.h"
 #include "vector7/matrix34.h"
 #include "vector7/vector3.h"
 
@@ -130,6 +127,18 @@ f32 phBound::EffectiveMass(const Vector3& arg1, const Vector3& arg2, i32 arg3, f
     (void) arg3;
 
     return arg4;
+}
+
+// ?GetVertex@phBound@@UBEABVVector3@@H@Z - 0x00487730
+//
+// The base bound has no vertices, so every index answers with the shared zero vector at 0x006A3B08
+// rather than reading past an array that is not there. Eight bytes in the binary; the map records
+// 48, and the dword gate 6 used to object to is in the next function.
+const Vector3& phBound::GetVertex(i32 arg1) const
+{
+    (void) arg1;
+
+    return ARTS_ZERO_VECTOR3;
 }
 
 define_dummy_symbol(ph_phbound);

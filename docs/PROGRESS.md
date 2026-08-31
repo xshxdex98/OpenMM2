@@ -18,22 +18,22 @@ Two numbers matter and they are different:
 
 | | | |
 |---|--:|---|
-| Ported | 2.23% | `#...........................` |
+| Ported | 2.25% | `#...........................` |
 | Ready to port | 72.3% | `####################........` |
 | Size known, members not | 12.4% | `###.........................` |
 
 | Metric | Value |
 |---|--:|
 | Functions | 9307 |
-| Functions ported | 431 |
+| Functions ported | 433 |
 | Machine code | 1.7 MB |
-| Code ported | 38.4 KB |
+| Code ported | 38.7 KB |
 | Classes | 535 |
 | Classes with a member layout | 305 (57%) |
 | Classes with only a size | 46 |
 | Virtual methods | 1938 |
 | Vftables | 340 |
-| `game.asm` remaining | 23.2 MB, 10745 PROCs |
+| `game.asm` remaining | 23.2 MB, 10743 PROCs |
 
 The size of `game.asm` *is* the progress bar: it starts holding the whole game and
 shrinks with every function ported.
@@ -47,8 +47,8 @@ layout is known.
 |---|--:|--:|--:|--:|--:|--:|
 | `misc` | 128 | 3559 | 512.7 KB | 29.8% | 5.2% | 80% |
 | `mm` | 106 | 1732 | 329.8 KB | 19.2% | 0.4% | 67% |
-| `ai` | 42 | 773 | 245.2 KB | 14.3% | 0.6% | 59% |
-| `ph` | 27 | 437 | 164.2 KB | 9.5% | 0.1% | 75% |
+| `ai` | 42 | 773 | 245.2 KB | 14.3% | 0.7% | 59% |
+| `ph` | 27 | 437 | 164.2 KB | 9.5% | 0.2% | 75% |
 | `veh` | 34 | 585 | 91.5 KB | 5.3% | 1.1% | 91% |
 | `gfx` | 13 | 189 | 46.6 KB | 2.7% | 13.4% | 55% |
 | `sdl` | 4 | 37 | 46.5 KB | 2.7% | 0.0% | 100% |
@@ -133,10 +133,6 @@ Layout known, so these can be started today.
 
 | Date | Ported | Code ported | game.asm |
 |---|--:|--:|--:|
-| 2026-08-30 | 2.15% | 37.0 KB | 23.2 MB |
-| 2026-08-30 | 2.15% | 37.0 KB | 23.2 MB |
-| 2026-08-30 | 2.17% | 37.3 KB | 23.2 MB |
-| 2026-08-30 | 2.17% | 37.3 KB | 23.2 MB |
 | 2026-08-30 | 2.19% | 37.6 KB | 23.2 MB |
 | 2026-08-30 | 2.19% | 37.6 KB | 23.2 MB |
 | 2026-08-30 | 2.19% | 37.6 KB | 23.2 MB |
@@ -148,6 +144,10 @@ Layout known, so these can be started today.
 | 2026-08-30 | 2.23% | 38.4 KB | 23.2 MB |
 | 2026-08-30 | 2.23% | 38.4 KB | 23.2 MB |
 | 2026-08-30 | 2.23% | 38.4 KB | 23.2 MB |
+| 2026-08-30 | 2.23% | 38.4 KB | 23.2 MB |
+| 2026-08-30 | 2.25% | 38.7 KB | 23.2 MB |
+| 2026-08-30 | 2.25% | 38.7 KB | 23.2 MB |
+| 2026-08-30 | 2.25% | 38.7 KB | 23.2 MB |
 
 Each run of `tools/progress.py` appends a snapshot to
 `data/progress_history.jsonl`; pass `--no-record` to print without recording.

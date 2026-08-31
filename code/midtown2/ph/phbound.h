@@ -71,7 +71,7 @@ public:
     ARTS_EXPORT virtual f32 EffectiveMass(const Vector3& arg1, const Vector3& arg2, i32 arg3, f32 arg4) const;
 
     // ?GetVertex@phBound@@UBEABVVector3@@H@Z
-    ARTS_IMPORT virtual const Vector3& GetVertex(i32 arg1) const;
+    ARTS_EXPORT virtual const Vector3& GetVertex(i32 arg1) const;
 
     // ?CalculateSphereFromBoundingBox@phBound@@QAEXXZ
     ARTS_IMPORT void CalculateSphereFromBoundingBox();

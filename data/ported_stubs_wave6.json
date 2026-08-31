@@ -28,6 +28,7 @@
   "?UpdateGameInput@mmMultiCR@@UAEXH@Z",
   "?GetWaypoints@mmMultiCR@@UAEPAVmmWaypoints@@XZ",
   "?SelectTeams@mmMultiCR@@AAEHXZ",
-  "?SendSetup@mmMultiCR@@AAEXK@Z"
+  "?SendSetup@mmMultiCR@@AAEXK@Z",
+  "?Type@aiVehicleAmbient@@UAEHXZ"
  ]
 }

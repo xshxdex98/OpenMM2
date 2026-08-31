@@ -505,12 +505,23 @@ def main():
     # a function that is still referenced, and the byte verifiers cannot see it because the bytes
     # it destroys are inside a region that is *expected* to differ.
     step(6, "verifying ported extents do not swallow other code")
+    # THE PRISTINE COPY, not the working one. The gate measures the PROC that will actually be
+    # stripped rather than the map's distance-to-next-symbol, and step 7 strips from pristine - so
+    # that is the file holding every PROC. Pointing it at the working assembly reads whatever the
+    # LAST build left behind, where the already-stripped functions have no PROC at all and the
+    # measurement silently falls back to the map size.
     res = subprocess.run([sys.executable, os.path.join(HERE, "verify_extents.py")],
-                         capture_output=True, text=True)
+                         capture_output=True, text=True,
+                         env=dict(os.environ, MM2_ASM=ASM_PRISTINE))
     for line in res.stdout.splitlines():
         if line.strip():
             print("  " + line.strip())
     if res.returncode != 0:
+        # Print stderr too. Without this a gate that CRASHES is indistinguishable from a gate that
+        # fails its check - both showed one line of "FAILED" and no reason at all.
+        for line in (res.stderr or "").splitlines():
+            if line.strip():
+                print("  " + line.rstrip())
         sys.exit("FAILED: a ported function's extent swallows code that data still points into")
 
     step(7, "stripping ported functions from the assembly")

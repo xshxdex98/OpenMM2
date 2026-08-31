@@ -27,14 +27,19 @@
 // CurrentLane is the other one worth reading together: an ambient car and a subway both report a
 // real lane, but the PLAYER reports -1. The player is not on the rail network at all, so every
 // lane query about them has to fail rather than return a plausible lane.
-//
-// aiVehicleAmbient::Type is NOT ported, though it is one instruction. data/symbols.json records
-// its extent as 208 bytes - distance to the next symbol, not the function - and data still points
-// at 0x00551CD0, 0x00551CF0 and 0x00551D40 inside that range. Stripping it would delete code that
-// is still referenced, which build gate 6 catches. It becomes portable once the extent is
-// narrowed, not by overriding the gate.
+
 
 #include "aivehicleambient.h"
+
+// ?Type@aiVehicleAmbient@@UAEHXZ
+//
+// 0 - the default traffic car. Three bytes in the binary, though data/symbols.json records the
+// extent as 208: that is the distance to the next known symbol, and the addresses gate 6 used to
+// object to lie in the NEIGHBOUR, not in this function.
+i32 aiVehicleAmbient::Type()
+{
+    return 0;
+}
 
 // ?DrawId@aiVehicleAmbient@@UAEXXZ
 //

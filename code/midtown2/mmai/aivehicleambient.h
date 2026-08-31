@@ -41,7 +41,7 @@ public:
     ARTS_IMPORT virtual void Reset();
 
     // ?Type@aiVehicleAmbient@@UAEHXZ
-    ARTS_IMPORT virtual i32 Type();
+    ARTS_EXPORT virtual i32 Type();
 
     // ?DrawId@aiVehicleAmbient@@UAEXXZ
     ARTS_EXPORT virtual void DrawId();

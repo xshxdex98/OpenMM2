@@ -20,6 +20,22 @@ vftable slots alike.
 
 Pointing at a function's first byte is normal and allowed - that is an ordinary reference to the
 function itself, which the linker retargets to the reimplementation.
+
+THE RANGE IS THE PROC'S OWN BYTE COUNT, NOT THE MAP'S SIZE. The map records distance to the next
+known symbol, which for 6,813 of 9,306 code symbols is larger than the function - by a median of
+nine bytes, the inter-function alignment ExportAsm already emits separately, and sometimes by far
+more. `?Type@aiVehicleAmbient@@UAEHXZ` is three bytes and the map calls it 208;
+`?GetVertex@phBound@@UBEABVVector3@@H@Z` is eight and the map calls it 48.
+
+Measuring the wrong range does not make this gate safer, it makes it wrong in both directions. It
+rejects functions that are perfectly safe to port - both of those, on data lying in a NEIGHBOUR
+rather than in them - and it would equally miss a hazard in a function the map UNDER-states, which
+36 symbols are.
+
+What is actually removed is the PROC, and tools/asm.py measures exactly that with emitted_bytes().
+Using the same number here means the gate tests the operation that will really happen. The kit's
+own control-flow boundaries (MM2_RE_KIT/inventory/functions.csv) agree with the PROC count on both
+examples above, which is the independent confirmation that the PROC is the honest extent.
 """
 import json
 import os
@@ -30,6 +46,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 
+import asm
 from pe import IMAGE_BASE
 from verify_data import sections
 
@@ -45,6 +62,11 @@ def main():
         syms = json.load(f)
 
     by_name = {s["mangled"]: s for s in syms if s.get("code") and s.get("size")}
+
+    # The bytes tools/asm.py will actually remove, keyed by symbol. Falls back to the map's size
+    # for anything with no PROC, which is over-conservative in the safe direction.
+    lines, procs = asm.read_procs(asm.ASM)
+    proc_bytes = {m: asm.emitted_bytes(lines[a:b + 1]) for m, (a, b) in procs.items()}
 
     _, retail = sections(RETAIL)
 
@@ -68,7 +90,8 @@ def main():
         if not f:
             continue
         checked += 1
-        start, size = f["rva"], f["size"]
+        start = f["rva"]
+        size = proc_bytes.get(m, f["size"])
         # Strictly inside: the first byte is an ordinary reference to the function itself.
         hits = sorted(v for v in targets if start < v < start + size)
         if hits:
