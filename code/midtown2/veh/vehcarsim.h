@@ -58,7 +58,7 @@ public:
     ARTS_IMPORT i32 BottomedOut();
 
     // ?ClearDamage@vehCarSim@@QAEXXZ
-    ARTS_IMPORT void ClearDamage();
+    ARTS_EXPORT void ClearDamage();
 
     // ?ConfigureDrivetrain@vehCarSim@@QAEXXZ
     ARTS_IMPORT void ConfigureDrivetrain();

@@ -53,16 +53,16 @@ public:
     ARTS_IMPORT virtual void FileIO(datParser& arg1);
 
     // ?AfterLoad@camPovCS@@UAEXXZ
-    ARTS_IMPORT virtual void AfterLoad();
+    ARTS_EXPORT virtual void AfterLoad();
 
     // ?GetClassName@camPovCS@@UAEPADXZ
     ARTS_IMPORT virtual char* GetClassName();
 
     // ?MakeActive@camPovCS@@UAEXXZ
-    ARTS_IMPORT virtual void MakeActive();
+    ARTS_EXPORT virtual void MakeActive();
 
     // ?UpdateInput@camPovCS@@UAEXXZ
-    ARTS_IMPORT virtual void UpdateInput();
+    ARTS_EXPORT virtual void UpdateInput();
 
 private:
     // ?UpdatePOV@camPovCS@@AAEXXZ

@@ -51,7 +51,7 @@ public:
     ARTS_IMPORT virtual void Update();
 
     // ?PostUpdate@vehTrailer@@UAEXXZ
-    ARTS_IMPORT virtual void PostUpdate();
+    ARTS_EXPORT virtual void PostUpdate();
 
     // ?GetICS@vehTrailer@@UAEPAVphInertialCS@@XZ
     ARTS_IMPORT virtual phInertialCS* GetICS();

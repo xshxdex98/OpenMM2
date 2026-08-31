@@ -50,16 +50,16 @@ public:
     ARTS_IMPORT virtual void FileIO(datParser& renderer);
 
     // ?AfterLoad@camTrackCS@@UAEXXZ
-    ARTS_IMPORT virtual void AfterLoad();
+    ARTS_EXPORT virtual void AfterLoad();
 
     // ?GetClassName@camTrackCS@@UAEPADXZ
     ARTS_IMPORT virtual char* GetClassName();
 
     // ?MakeActive@camTrackCS@@UAEXXZ
-    ARTS_IMPORT virtual void MakeActive();
+    ARTS_EXPORT virtual void MakeActive();
 
     // ?UpdateInput@camTrackCS@@UAEXXZ
-    ARTS_IMPORT virtual void UpdateInput();
+    ARTS_EXPORT virtual void UpdateInput();
 
     // ?SwingToRear@camTrackCS@@QAEXXZ
     ARTS_IMPORT void SwingToRear();
@@ -87,7 +87,7 @@ private:
     ARTS_IMPORT void UpdateHill();
 
     // ?UpdateSwing@camTrackCS@@AAEXXZ
-    ARTS_IMPORT void UpdateSwing();
+    ARTS_EXPORT void UpdateSwing();
 
     // ?UpdateTrack@camTrackCS@@AAEXXZ
     ARTS_IMPORT void UpdateTrack();

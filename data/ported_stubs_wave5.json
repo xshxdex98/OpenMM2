@@ -1,0 +1,27 @@
+{
+ "_comment": [
+  "Wave 5. Every body read from MM2_RE_KIT/GHIDRA_DECOMP matched on the FULL SIGNATURE, not on",
+  "the function name - the phBound lesson.",
+  "",
+  "camPovCS::AfterLoad and camTrackCS::AfterLoad are not stubs: both write CameraNear at 0x08C,",
+  "0.1f for the cockpit view and 0.5f for the track camera.",
+  "",
+  "Deferred: vehCarModel's accessors and vehTrailer's GetInst/GetICS read through their classes'",
+  "own fields and wait on those layouts being named; the GetClassName/GetDirName family returns",
+  "string literals and is grouped separately."
+ ],
+ "ported": [
+  "?MakeActive@camPovCS@@UAEXXZ",
+  "?UpdateInput@camPovCS@@UAEXXZ",
+  "?AfterLoad@camPovCS@@UAEXXZ",
+  "?MakeActive@camTrackCS@@UAEXXZ",
+  "?AfterLoad@camTrackCS@@UAEXXZ",
+  "?UpdateInput@camTrackCS@@UAEXXZ",
+  "?UpdateSwing@camTrackCS@@AAEXXZ",
+  "?AttachEntity@vehCarModel@@UAEPAVdgPhysEntity@@XZ",
+  "?DrawReflected@vehCarModel@@UAEXM@Z",
+  "?SizeOf@vehCarModel@@UAEIXZ",
+  "?ClearDamage@vehCarSim@@QAEXXZ",
+  "?PostUpdate@vehTrailer@@UAEXXZ"
+ ]
+}

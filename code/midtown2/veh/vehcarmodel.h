@@ -60,7 +60,7 @@ public:
     ARTS_IMPORT virtual dgPhysEntity* GetEntity();
 
     // ?AttachEntity@vehCarModel@@UAEPAVdgPhysEntity@@XZ
-    ARTS_IMPORT virtual dgPhysEntity* AttachEntity();
+    ARTS_EXPORT virtual dgPhysEntity* AttachEntity();
 
     // ?GetVelocity@vehCarModel@@UAEABVVector3@@XZ
     ARTS_IMPORT virtual const Vector3& GetVelocity();
@@ -78,10 +78,10 @@ public:
     ARTS_IMPORT virtual void DrawGlow();
 
     // ?DrawReflected@vehCarModel@@UAEXM@Z
-    ARTS_IMPORT virtual void DrawReflected(f32 arg1);
+    ARTS_EXPORT virtual void DrawReflected(f32 arg1);
 
     // ?SizeOf@vehCarModel@@UAEIXZ
-    ARTS_IMPORT virtual u32 SizeOf();
+    ARTS_EXPORT virtual u32 SizeOf();
 
     // ?BreakElectrics@vehCarModel@@QAEXABVVector3@@@Z
     ARTS_IMPORT void BreakElectrics(const Vector3& arg1);
