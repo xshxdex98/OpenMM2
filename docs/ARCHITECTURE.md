@@ -162,10 +162,17 @@ ask what it cannot express.**
 1. Find a candidate, and screen it **before** writing any code against three tests:
    - `tools/verify_arity.py` - the mangled name's stack bytes must equal the code's `ret imm16`.
    - Step 6's test - no dword in `.data`/`.rdata` may point strictly inside the extent.
-   - Purity - no calls and no absolute addresses, so it needs nothing from `LINKABLE_GLOBALS` and
-     no unrecovered layout.
+   - Purity - no calls and no absolute addresses, so it needs no named global and no unrecovered
+     layout.
 
-   544 unported functions pass the first two. 146 pass all three.
+   **3,360 unported functions pass all three.** That figure was 146 until step 6 was corrected to
+   measure the PROC it actually strips rather than the map's distance-to-the-next-symbol, which is
+   larger than the function for 6,813 of 9,306 code symbols and was rejecting 895 functions on
+   dwords lying in a NEIGHBOUR. `verify_arity.py` was never affected - it already read the kit's
+   real extents - and it rules out only 12 symbols outright.
+
+   A function needing a global is no longer blocked either: `data/globals.json` gives one a
+   linkable name and `tools/asm.py` publishes it over the label ExportAsm already emits.
 2. Read the **disassembly** (`py tools/disasm.py name=VA`), not only the decompilation.
 3. Write the C++ and flip `ARTS_IMPORT` to `ARTS_EXPORT`.
 4. Add the mangled symbol to a `data/ported_*.json`.
