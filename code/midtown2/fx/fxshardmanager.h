@@ -26,7 +26,9 @@
 #include "arts7/asnode.h"
 #include "vector7/vector3.h"
 
+class Base_vtbl;
 class Matrix34;
+class fxShard;
 class modShader;
 
 class fxShardManager : public asNode
@@ -72,8 +74,25 @@ protected:
 
     // ?NumInstances@fxShardManager@@1HA
     ARTS_IMPORT static i32 NumInstances;
+
+public:
+    // Members from 0x018; everything below that belongs to asNode.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    fxShard* Shards; // 0x018
+    i32 ShardCount; // 0x01C
+    i32 LastShardIndex; // 0x020
+    f32 ImpulseThreshold; // 0x024
+    f32 ImpulseEmitRatio; // 0x028
+    f32 XDamp; // 0x02C
+    f32 YDamp; // 0x030
+    f32 ZDamp; // 0x034
+    f32 RotationSpeedBase; // 0x038
+    f32 SpeedThreshold; // 0x03C
+    i32 InstanceNumber; // 0x040
+    modShader* ShaderSet; // 0x044
+    i32 ShaderCount; // 0x048
 };
 
 // ??_7fxShardManager@@6B@
 // vtable at 0x005B1930
-// check_size(fxShardManager, 0x4C); // size known, members are not - cannot verify
+check_size(fxShardManager, 0x4C);

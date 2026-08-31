@@ -23,10 +23,15 @@
 
 #include "core/arts.h"
 
+#include "vector7/vector2.h"
+#include "vector7/vector3.h"
+
 #include "lvlfixedroty.h"
 
 class Matrix34;
 class gfxViewport;
+class lvlInstance;
+class lvlInstance_vtbl;
 
 class lvlLandmark : public lvlFixedRotY
 {

@@ -24,8 +24,11 @@
 #include "core/arts.h"
 
 #include "arts7/asnode.h"
+#include "vector7/vector3.h"
 
+class Base_vtbl;
 class datParser;
+class vehCarSim;
 
 class vehAero : public asNode
 {
@@ -48,19 +51,13 @@ public:
 public:
     // Members from 0x018; everything below that belongs to asNode.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i32 field_18; // 0x018
-    i32 field_1C; // 0x01C
-    i32 AngCDamp; // 0x020
-    i32 field_24; // 0x024
-    i32 field_28; // 0x028
-    i32 AngVelDamp; // 0x02C
-    i32 field_30; // 0x030
-    i32 field_34; // 0x034
-    i32 AngVel2Damp; // 0x038
-    i32 field_3C; // 0x03C
-    i32 field_40; // 0x040
-    i32 Drag; // 0x044
-    i32 Down; // 0x048
+    i32 EnableAero; // 0x018
+    vehCarSim* m_CarSimPtr; // 0x01C
+    Vector3 AngCDamp; // 0x020
+    Vector3 AngVelDamp; // 0x02C
+    Vector3 AngVel2Damp; // 0x038
+    f32 Drag; // 0x044
+    f32 Down; // 0x048
 };
 
 // ??_7vehAero@@6B@

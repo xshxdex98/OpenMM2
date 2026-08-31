@@ -30,6 +30,7 @@ class Vector3;
 class dgBangerData;
 class dgHitBangerInstance;
 class lvlInstance;
+class lvlInstance_vtbl;
 
 class dgUnhitBangerInstance : public dgBangerInstance
 {

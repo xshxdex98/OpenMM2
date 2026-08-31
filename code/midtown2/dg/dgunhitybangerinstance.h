@@ -23,10 +23,13 @@
 
 #include "core/arts.h"
 
+#include "vector7/vector3.h"
+
 #include "dgunhitbangerinstance.h"
 
 class Matrix34;
-class Vector3;
+class lvlInstance;
+class lvlInstance_vtbl;
 
 class dgUnhitYBangerInstance : public dgUnhitBangerInstance
 {
@@ -45,8 +48,16 @@ public:
 
     // ?SizeOf@dgUnhitYBangerInstance@@UAEIXZ
     ARTS_IMPORT virtual u32 SizeOf();
+
+public:
+    // Members from 0x018; everything below that belongs to dgUnhitBangerInstance.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    i8 gap[16]; // 0x018
+    Vector3 Position; // 0x028
+    f32 XAxis; // 0x034
+    f32 ZAxis; // 0x038
 };
 
 // ??_7dgUnhitYBangerInstance@@6B@
 // vtable at 0x005B150C
-// check_size(dgUnhitYBangerInstance, 0x3C); // size known, members are not - cannot verify
+check_size(dgUnhitYBangerInstance, 0x3C);

@@ -24,12 +24,17 @@
 #include "core/arts.h"
 
 #include "arts7/asnode.h"
+#include "vector7/vector2.h"
+#include "vector7/vector3.h"
 
+class Base_vtbl;
 class Matrix34;
 struct OppIconInfo;
-class Vector3;
+class asMeshSetForm;
 class datParser;
 class mmGame;
+class mmPlayer;
+class mmWaypoints;
 
 class mmHudMap : public asNode
 {
@@ -129,44 +134,42 @@ private:
 public:
     // Members from 0x018; everything below that belongs to asNode.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    u8 field_18[4]; // 0x018
-    i32 field_1C; // 0x01C
-    i32 field_20; // 0x020
-    i32 field_24; // 0x024
-    i32 field_28; // 0x028
-    u8 field_2C[12]; // 0x02C
-    i32 field_38; // 0x038
-    u8 field_3C; // 0x03C
-    u8 field_3D; // 0x03D
-    u8 field_3E[2]; // 0x03E
-    i32 field_40; // 0x040
-    i32 field_44; // 0x044
-    u8 field_48[4]; // 0x048
-    f32 ApproachRate; // 0x04C  "Approach Rate"
-    f32 field_50; // 0x050
+    mmWaypoints* Waypoints; // 0x018
+    i32 ShowWaypoints; // 0x01C
+    Vector3* GoldLocation; // 0x020
+    Vector3* BankLocation; // 0x024
+    Vector3* HideoutLocation; // 0x028
+    i32 field_2C; // 0x02C
+    mmPlayer* Player; // 0x030
+    OppIconInfo* IconInfo; // 0x034
+    i32 ShowAllCops; // 0x038
+    bool MapOnLeft; // 0x03C
+    bool MapMissing; // 0x03D
+    u8 pad_3E[2]; // 0x03E
+    i32 LastNonFSMapMode; // 0x040
+    i32 MapMode; // 0x044
+    Matrix34* PlayerMatrix; // 0x048
+    f32 ApproachRate; // 0x04C
+    f32 ZoomLevel; // 0x050
     f32 ZoomInDist; // 0x054
     f32 ZoomOutDist; // 0x058
-    f32 ZoomInDistFS; // 0x05C
+    f32 ZoonInDistFS; // 0x05C
     f32 ZoomOutDistFS; // 0x060
-    f32 field_64; // 0x064
+    f32 IconScale; // 0x064
     f32 IconScaleMin; // 0x068
     f32 IconScaleMax; // 0x06C
     f32 IconScaleMinFS; // 0x070
     f32 IconScaleMaxFS; // 0x074
-    f32 OceanColor; // 0x078  "Ocean Color"
-    f32 field_7C; // 0x07C
-    f32 field_80; // 0x080
-    f32 Size; // 0x084
-    f32 field_88; // 0x088
-    f32 Pos; // 0x08C
-    f32 field_90; // 0x090
-    u8 field_94[4]; // 0x094
-    i32 field_98; // 0x098
-    u8 field_9C[32]; // 0x09C
-    u16 field_BC; // 0x0BC
-    u8 field_BE[2]; // 0x0BE
-    i32 field_C0; // 0x0C0
-    i32 field_C4; // 0x0C4
+    Vector3 BackgroundColor; // 0x078
+    Vector2 Size; // 0x084
+    Vector2 Position; // 0x08C
+    i32 Viewport; // 0x094
+    asMeshSetForm* HudmapModel; // 0x098
+    u8 gap[32]; // 0x09C
+    i16 NumOpponents; // 0x0BC
+    u8 pad_BE[2]; // 0x0BE
+    asMeshSetForm* HudmapSquareModel; // 0x0C0
+    asMeshSetForm* HudmapTriModel; // 0x0C4
 };
 
 // ??_7mmHudMap@@6B@

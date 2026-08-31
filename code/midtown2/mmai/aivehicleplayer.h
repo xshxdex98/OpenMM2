@@ -27,6 +27,7 @@
 
 class Matrix34;
 class Vector3;
+class aiObstacle_vtbl;
 class aiPath;
 class vehCar;
 
@@ -86,8 +87,13 @@ public:
 
     // ?Attach@aiVehiclePlayer@@QAEXPAVvehCar@@@Z
     ARTS_IMPORT void Attach(vehCar* arg1);
+
+public:
+    // Members from 0x010; everything below that belongs to aiVehicle.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    u8 pad_10[32]; // 0x010
 };
 
 // ??_7aiVehiclePlayer@@6B@
 // vtable at 0x005B55AC
-// check_size(aiVehiclePlayer, 0x30); // size known, members are not - cannot verify
+check_size(aiVehiclePlayer, 0x30);

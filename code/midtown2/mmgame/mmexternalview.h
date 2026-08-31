@@ -27,9 +27,13 @@
 
 #include "mmgearindicator.h"
 #include "mmlineargauge.h"
+#include "mmslidinggauge.h"
 #include "mmspeedindicator.h"
 
+class Base_vtbl;
+class gfxBitmap;
 class mmPlayer;
+class vehCarSim;
 
 class mmExternalView : public asNode
 {
@@ -61,22 +65,22 @@ public:
 public:
     // Members from 0x018; everything below that belongs to asNode.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    u8 field_18[8]; // 0x018
-    i32 field_20; // 0x020
-    i32 field_24; // 0x024
-    i32 field_28; // 0x028
-    i32 field_2C; // 0x02C
+    vehCarSim* CarSim; // 0x018
+    mmPlayer* Player; // 0x01C
+    i32 DestX; // 0x020
+    i32 DestY; // 0x024
+    gfxBitmap* MouseBar; // 0x028
+    gfxBitmap* MouseAr; // 0x02C
     i32 field_30; // 0x030
     i32 field_34; // 0x034
     i32 field_38; // 0x038
-    i32 field_3C; // 0x03C
+    i32 field_3c; // 0x03C
     i32 field_40; // 0x040
     i32 field_44; // 0x044
-    mmLinearGauge field_48; // 0x048
-    mmLinearGauge field_68; // 0x068
-    u8 field_88[4]; // 0x088
-    mmGearIndicator field_8C; // 0x08C
-    mmSpeedIndicator field_CC; // 0x0CC
+    mmLinearGauge LinearGauge; // 0x048
+    mmSlidingGauge SlidingGauge; // 0x068
+    mmGearIndicator GearIndicator; // 0x08C
+    mmSpeedIndicator SpeedIndicator; // 0x0CC
 };
 
 // ??_7mmExternalView@@6B@

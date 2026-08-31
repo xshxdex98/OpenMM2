@@ -25,6 +25,8 @@
 
 #include "misc/base.h"
 
+class Base_vtbl;
+
 class asCullable : public Base
 {
 public:

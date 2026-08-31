@@ -23,42 +23,16 @@
 
 #include "core/arts.h"
 
-#include "lvl/lvlintersectionpoint.h"
+#include "ph/phintersection.h"
 #include "vector7/vector3.h"
+
+#include "lvlintersectionpoint.h"
 
 class phBound;
 class phPolygon;
 
-class phIntersection
+class lvlIntersection : public phIntersection
 {
-public:
-    // ??0phIntersection@@QAE@XZ
-    ARTS_IMPORT phIntersection();
-
-public:
-    // Offset order is mandatory - the original code reads these at fixed offsets.
-    lvlIntersectionPoint IntersectionPoint; // 0x000
-    i32 PolyIndex; // 0x024
-    i32 field_28; // 0x028
-    i32 field_2C; // 0x02C
-    i32 field_30; // 0x030
-    Vector3 StartPos; // 0x034
-    Vector3 EndPos; // 0x040
-    Vector3 field_4C; // 0x04C
-    phPolygon* Poly; // 0x058
-    i32 MaterialIndex; // 0x05C
-    i32 field_60; // 0x060
-    i32 field_64; // 0x064
-    i32 field_68; // 0x068
-    phBound* Bound; // 0x06C
-    f32 field_70; // 0x070
-    i32 field_74; // 0x074
-    f32 field_78; // 0x078
-    Vector3 field_7C; // 0x07C
-    Vector3 field_88; // 0x088
-    f32 field_94; // 0x094
-    i16 Flags; // 0x098
-    u8 pad_9A[2]; // 0x09A
 };
 
-check_size(phIntersection, 0x9C);
+// check_size(lvlIntersection, 0x9C); // size known, members are not - cannot verify

@@ -23,11 +23,15 @@
 
 #include "core/arts.h"
 
+#include "vector7/vector2.h"
+#include "vector7/vector3.h"
+
 #include "lvlfixedany.h"
 
 class Matrix34;
-class Vector3;
 class gfxViewport;
+class lvlInstance;
+class lvlInstance_vtbl;
 
 class lvlFixedRotY : public lvlFixedAny
 {
@@ -49,8 +53,14 @@ public:
 
     // ?SizeOf@lvlFixedRotY@@UAEIXZ
     ARTS_IMPORT virtual u32 SizeOf();
+
+public:
+    // Members from 0x014; everything below that belongs to lvlFixedAny.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    Vector3 Position; // 0x014
+    Vector2 XAxis; // 0x020
 };
 
 // ??_7lvlFixedRotY@@6B@
 // vtable at 0x005B1B78
-// check_size(lvlFixedRotY, 0x28); // size known, members are not - cannot verify
+check_size(lvlFixedRotY, 0x28);

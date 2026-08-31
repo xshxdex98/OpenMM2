@@ -26,6 +26,7 @@
 #include "arts7/asnode.h"
 #include "vector7/matrix34.h"
 
+class Base_vtbl;
 class datParser;
 class vehCarSim;
 class vehWheel;
@@ -57,17 +58,17 @@ public:
 public:
     // Members from 0x018; everything below that belongs to asNode.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i32 field_18; // 0x018
-    Matrix34 field_1C; // 0x01C
-    Matrix34 field_4C; // 0x04C
-    i32 field_7C; // 0x07C
-    i32 field_80; // 0x080
-    i32 field_84; // 0x084
-    i32 field_88; // 0x088
-    i32 field_8C; // 0x08C
-    i32 field_90; // 0x090
-    i32 TorqueCoef; // 0x094
-    i32 DampCoef; // 0x098
+    vehCarSim* CarSim; // 0x018
+    Matrix34 AxlePivot; // 0x01C
+    Matrix34 AxleMatrix; // 0x04C
+    vehWheel* LeftWheel; // 0x07C
+    vehWheel* RightWheel; // 0x080
+    f32 unknown132; // 0x084
+    f32 unknown136; // 0x088
+    f32 ScaledTorqueCoef; // 0x08C
+    f32 ScaledDampCoef; // 0x090
+    f32 TorqueCoef; // 0x094
+    f32 DampCoef; // 0x098
 };
 
 // ??_7vehAxle@@6B@

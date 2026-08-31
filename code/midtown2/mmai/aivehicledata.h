@@ -24,8 +24,11 @@
 #include "core/arts.h"
 
 #include "arts7/asnode.h"
+#include "vector7/vector3.h"
 
+class Base_vtbl;
 class datParser;
+class dgBoundBox;
 
 class aiVehicleData : public asNode
 {
@@ -47,8 +50,30 @@ public:
 
     // ?SetFricElas@aiVehicleData@@QAEXXZ
     ARTS_IMPORT void SetFricElas();
+
+public:
+    // Members from 0x018; everything below that belongs to asNode.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    Vector3 Size; // 0x018
+    Vector3 MaxAng; // 0x024
+    Vector3 CG; // 0x030
+    Vector3 WheelPositions[6]; // 0x03C
+    f32 Mass; // 0x084
+    f32 Friction; // 0x088
+    f32 Elasticity; // 0x08C
+    f32 MaxDamage; // 0x090
+    f32 PtxThresh; // 0x094
+    f32 Spring; // 0x098
+    f32 Damping; // 0x09C
+    f32 RubberSpring; // 0x0A0
+    f32 RubberDamp; // 0x0A4
+    f32 Limit; // 0x0A8
+    f32 WheelRadius; // 0x0AC
+    i32 unknown176; // 0x0B0
+    i32 DataId; // 0x0B4
+    dgBoundBox* BoundingBox; // 0x0B8
 };
 
 // ??_7aiVehicleData@@6B@
 // vtable at 0x005B5C20
-// check_size(aiVehicleData, 0xBC); // size known, members are not - cannot verify
+check_size(aiVehicleData, 0xBC);

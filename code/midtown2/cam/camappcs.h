@@ -23,8 +23,14 @@
 
 #include "core/arts.h"
 
+#include "vector7/matrix34.h"
+#include "vector7/vector3.h"
+
 #include "cambasecs.h"
 
+class Base_vtbl;
+class asNode;
+class camViewCS;
 class datParser;
 
 class camAppCS : public camBaseCS
@@ -56,34 +62,23 @@ private:
 public:
     // Members from 0x090; everything below that belongs to camBaseCS.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i32 field_90; // 0x090
-    i32 TrackTo; // 0x094
-    f32 field_98; // 0x098
-    i32 field_9C; // 0x09C
+    Matrix34* unk_90; // 0x090
+    Vector3 TrackTo; // 0x094
     i32 ApproachOn; // 0x0A0
     i32 AppAppOn; // 0x0A4
-    i32 AppRot; // 0x0A8
-    i32 AppXRot; // 0x0AC
-    i32 AppYPos; // 0x0B0
-    i32 AppXZPos; // 0x0B4
+    f32 AppRot; // 0x0A8
+    f32 AppXRot; // 0x0AC
+    f32 AppYPos; // 0x0B0
+    f32 AppXZPos; // 0x0B4
     f32 AppApp; // 0x0B8
-    i32 AppRotMin; // 0x0BC
-    i32 AppPosMin; // 0x0C0
-    i32 LookAbove; // 0x0C4
-    i32 field_C8; // 0x0C8
-    i32 MaxDist; // 0x0CC
-    i32 MinDist; // 0x0D0
+    f32 AppRotMin; // 0x0BC
+    f32 AppPosMin; // 0x0C0
+    f32 LookAbove; // 0x0C4
+    void* unk_C8; // 0x0C8
+    f32 MaxDist; // 0x0CC
+    f32 MinDist; // 0x0D0
     f32 LookAt; // 0x0D4
-    i32 field_D8; // 0x0D8
-    i32 field_DC; // 0x0DC
-    i32 field_E0; // 0x0E0
-    u8 field_E4[12]; // 0x0E4
-    i32 field_F0; // 0x0F0
-    i32 field_F4; // 0x0F4
-    i32 field_F8; // 0x0F8
-    i32 field_FC; // 0x0FC
-    i32 field_100; // 0x100
-    i32 field_104; // 0x104
+    Matrix34 unk_D8; // 0x0D8
 };
 
 // ??_7camAppCS@@6B@

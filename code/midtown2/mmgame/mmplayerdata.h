@@ -26,6 +26,8 @@
 #include "mminfobase.h"
 #include "mmplayerrecord.h"
 
+class mmInfoBase_vtbl;
+
 class mmPlayerData : public mmInfoBase
 {
 public:

@@ -25,7 +25,10 @@
 
 #include "arts7/asnode.h"
 
-class aiVehicleActive;
+#include "aivehicleactive.h"
+#include "aivehicledata.h"
+
+class Base_vtbl;
 class aiVehicleInstance;
 
 class aiVehicleManager : public asNode
@@ -64,13 +67,11 @@ public:
 public:
     // Members from 0x018; everything below that belongs to asNode.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    u8 field_18[6016]; // 0x018
-    i32 field_1798; // 0x1798
-    i32 field_179C; // 0x179C
-    u8 field_17A0[90108]; // 0x17A0
-    u16 field_1779C; // 0x1779C
-    u8 field_1779E[2]; // 0x1779E
-    i32 field_177A0; // 0x177A0
+    aiVehicleData VehicleDatas[32]; // 0x018
+    i32 NumVehicleDatas; // 0x1798
+    aiVehicleActive* ActiveActives[32]; // 0x179C
+    aiVehicleActive AiVehicleActives[32]; // 0x181C
+    u8 pad_1779C[8]; // 0x1779C
 };
 
 // ??_7aiVehicleManager@@6B@

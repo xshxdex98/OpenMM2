@@ -90,8 +90,8 @@ void mmSlidingGauge::Draw()
     i32 travel = extent - BitmapDimension;
     i32 offset = static_cast<i32>(static_cast<f64>(*MinValue) / *MaxValue * travel);
 
-    i32 x = DestX + ExternalView->field_20;
-    i32 y = DestY + ExternalView->field_24;
+    i32 x = DestX + ExternalView->DestX;
+    i32 y = DestY + ExternalView->DestY;
 
     if (DimensionType)
         gfxPipeline::CopyBitmap(x, y, gauge, offset, 0, BitmapDimension, gauge->Height, true);
@@ -101,7 +101,7 @@ void mmSlidingGauge::Draw()
     // The label overlay is identical to mmLinearGauge's - same source rectangle, same origin.
     if (BitmapLabel)
     {
-        gfxPipeline::CopyBitmap(DestX + ExternalView->field_20, DestY + ExternalView->field_24,
+        gfxPipeline::CopyBitmap(DestX + ExternalView->DestX, DestY + ExternalView->DestY,
             BitmapLabel, 0, 0, BitmapLabel->Width, BitmapLabel->Height, true);
     }
 }

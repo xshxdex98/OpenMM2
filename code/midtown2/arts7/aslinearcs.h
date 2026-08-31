@@ -27,6 +27,8 @@
 
 #include "asnode.h"
 
+class Base_vtbl;
+
 class asLinearCS : public asNode
 {
 public:
@@ -63,7 +65,7 @@ public:
     Matrix34 field_18; // 0x018
     Matrix34 field_48; // 0x048
     i32 field_78; // 0x078
-    i32 field_7C; // 0x07C
+    i32 field_7c; // 0x07C
 };
 
 // ??_7asLinearCS@@6B@

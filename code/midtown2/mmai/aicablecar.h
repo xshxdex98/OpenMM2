@@ -23,12 +23,11 @@
 
 #include "core/arts.h"
 
-#include "aicablecaraudio.h"
-#include "airailset.h"
 #include "aivehicle.h"
 
 class Matrix34;
 class Vector3;
+class aiObstacle_vtbl;
 class aiPath;
 
 class aiCableCar : public aiVehicle
@@ -119,19 +118,7 @@ private:
 public:
     // Members from 0x010; everything below that belongs to aiVehicle.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    u8 field_10[20]; // 0x010
-    i32 field_24; // 0x024
-    i32 field_28; // 0x028
-    i32 field_2C; // 0x02C
-    i32 field_30; // 0x030
-    i32 field_34; // 0x034
-    i32 field_38; // 0x038
-    i32 field_3C; // 0x03C
-    i32 field_40; // 0x040
-    i32 field_44; // 0x044
-    aiRailSet field_48; // 0x048
-    u8 field_C8[32]; // 0x0C8
-    aiCableCarAudio field_E8; // 0x0E8
+    u8 pad_10[372]; // 0x010
 };
 
 // ??_7aiCableCar@@6B@

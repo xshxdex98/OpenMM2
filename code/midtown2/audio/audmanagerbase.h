@@ -25,6 +25,7 @@
 
 #include "arts7/asnode.h"
 
+class Base_vtbl;
 class audManager;
 class audSoundBankHdr;
 

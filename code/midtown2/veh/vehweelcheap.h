@@ -24,46 +24,39 @@
 #include "core/arts.h"
 
 #include "arts7/asnode.h"
+#include "lvl/lvlintersection.h"
+#include "lvl/lvlsegment.h"
+#include "lvl/lvlsegmentinfo.h"
+#include "vector7/matrix34.h"
+#include "vector7/vector3.h"
 
 class Base_vtbl;
-class datParser;
-class vehCarSim;
+class phInertialCS;
 
-class vehGyro : public asNode
+class vehWeelCheap : public asNode
 {
-public:
-    // ??0vehGyro@@QAE@XZ
-    ARTS_IMPORT vehGyro();
-
-    // ??1vehGyro@@UAE@XZ
-    ARTS_IMPORT virtual ~vehGyro();
-
-    // ?Update@vehGyro@@UAEXXZ
-    ARTS_IMPORT virtual void Update();
-
-    // ?FileIO@vehGyro@@UAEXAAVdatParser@@@Z
-    ARTS_IMPORT virtual void FileIO(datParser& arg1);
-
-    // ?GetClassName@vehGyro@@UAEPADXZ
-    ARTS_IMPORT virtual char* GetClassName();
-
-    // ?GetDirName@vehGyro@@UAEPBDXZ
-    ARTS_IMPORT virtual const char* GetDirName();
-
-    // ?Init@vehGyro@@QAEXPAVvehCarSim@@PBD@Z
-    ARTS_IMPORT void Init(vehCarSim* arg1, const char* arg2);
-
 public:
     // Members from 0x018; everything below that belongs to asNode.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    vehCarSim* m_CarSimPtr; // 0x018
-    f32 Drift; // 0x01C
-    f32 Spin180; // 0x020
-    f32 Reverse180; // 0x024
-    f32 Pitch; // 0x028
-    f32 Roll; // 0x02C
+    phInertialCS* InertialCS; // 0x018
+    f32 Spring; // 0x01C
+    f32 Damping; // 0x020
+    lvlSegment Segment; // 0x024
+    lvlIntersection Intersection; // 0x04C
+    lvlSegmentInfo SegmentInfo; // 0x0E8
+    i32 Grounded; // 0x0F4
+    Vector3 Position; // 0x0F8
+    f32 Radius; // 0x104
+    f32 Gap; // 0x108
+    f32 field_10C; // 0x10C
+    f32 field_110; // 0x110
+    f32 field_114; // 0x114
+    f32 RubberSpring; // 0x118
+    f32 RubberDamp; // 0x11C
+    f32 Limit; // 0x120
+    f32 field_124; // 0x124
+    Matrix34 Matrix; // 0x128
+    Matrix34 Matrix2; // 0x158
 };
 
-// ??_7vehGyro@@6B@
-// vtable at 0x005B2E84
-check_size(vehGyro, 0x30);
+check_size(vehWeelCheap, 0x188);

@@ -27,7 +27,10 @@
 #include "vector7/matrix34.h"
 #include "vector7/vector3.h"
 
+class AudSoundBase;
+class Base_vtbl;
 class mmPlayer;
+class mmWaypointObject;
 
 class mmWaypoints : public asNode
 {
@@ -127,29 +130,35 @@ public:
     // Members from 0x018; everything below that belongs to asNode.
     // Offset order is mandatory - the original code reads these at fixed offsets.
     i32 field_18; // 0x018
-    u8 field_1C; // 0x01C
-    u8 field_1D; // 0x01D
-    u8 field_1E; // 0x01E
-    u8 field_1F[1]; // 0x01F
+    i32 field_1C; // 0x01C
     i32 field_20; // 0x020
-    i32 field_24; // 0x024
+    mmWaypointObject** WaypointObjects; // 0x024
     i32 field_28; // 0x028
-    i32 field_2C; // 0x02C
-    i32 field_30; // 0x030
+    i32 CurrentGoalWayPt; // 0x02C
+    i32 WaypointCount; // 0x030
     i32 field_34; // 0x034
     i32 field_38; // 0x038
     i32 field_3C; // 0x03C
     i32 field_40; // 0x040
-    void* field_44; // 0x044
+    i32 field_44; // 0x044
     i32 field_48; // 0x048
     i32 field_4C; // 0x04C
     i32 field_50; // 0x050
     i32 field_54; // 0x054
-    u8 field_58[40]; // 0x058
+    i32 field_58; // 0x058
+    i32 field_5C; // 0x05C
+    i32 field_60; // 0x060
+    i32 field_64; // 0x064
+    i32 field_68; // 0x068
+    i32 field_6C; // 0x06C
+    i32 field_70; // 0x070
+    i32 field_74; // 0x074
+    i32 field_78; // 0x078
+    i32 field_7C; // 0x07C
     i32 field_80; // 0x080
-    i32 field_84; // 0x084
-    void* field_88; // 0x088
-    void* field_8C; // 0x08C
+    mmPlayer* Player; // 0x084
+    AudSoundBase* WaypointSound; // 0x088
+    AudSoundBase* LastWaypointSound; // 0x08C
 };
 
 // ??_7mmWaypoints@@6B@

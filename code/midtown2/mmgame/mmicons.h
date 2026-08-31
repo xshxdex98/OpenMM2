@@ -24,9 +24,12 @@
 #include "core/arts.h"
 
 #include "arts7/asnode.h"
+#include "vector7/matrix44.h"
 
+class Base_vtbl;
 class Matrix34;
 struct OppIconInfo;
+class gfxTexture;
 
 class mmIcons : public asNode
 {
@@ -52,45 +55,16 @@ public:
 public:
     // Members from 0x018; everything below that belongs to asNode.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i32 field_18; // 0x018
-    i32 field_1C; // 0x01C
-    i32 field_20; // 0x020
-    i32 field_24; // 0x024
-    f32 field_28; // 0x028
-    i32 field_2C; // 0x02C
-    i32 field_30; // 0x030
-    f32 field_34; // 0x034
-    i32 field_38; // 0x038
-    i32 field_3C; // 0x03C
-    i32 field_40; // 0x040
-    i32 field_44; // 0x044
-    i32 field_48; // 0x048
-    i32 field_4C; // 0x04C
-    i32 field_50; // 0x050
-    i32 field_54; // 0x054
-    i32 field_58; // 0x058
-    f32 field_5C; // 0x05C
-    i32 field_60; // 0x060
-    f32 field_64; // 0x064
-    i32 field_68; // 0x068
-    i32 field_6C; // 0x06C
-    f32 field_70; // 0x070
-    f32 field_74; // 0x074
-    i32 field_78; // 0x078
-    i32 field_7C; // 0x07C
-    i32 field_80; // 0x080
-    i32 field_84; // 0x084
-    i32 field_88; // 0x088
-    i32 field_8C; // 0x08C
-    i32 field_90; // 0x090
-    i32 field_94; // 0x094
-    i32 field_98; // 0x098
-    i32 field_9C; // 0x09C
-    u8 field_A0[8]; // 0x0A0
-    i32 field_A8; // 0x0A8
-    u8 field_AC[4]; // 0x0AC
+    gfxTexture* IconTexture; // 0x018
+    Matrix44 TriangleMtx; // 0x01C
+    Matrix44 IconMtx; // 0x05C
+    i32 OpponentCount; // 0x09C
+    f32 MinDistance; // 0x0A0
+    f32 MaxDistance; // 0x0A4
+    Matrix34* Transform; // 0x0A8
+    OppIconInfo* IconInfo; // 0x0AC
     f32 field_B0; // 0x0B0
-    u8 field_B4[4]; // 0x0B4
+    i32 IconMode; // 0x0B4
     i32 field_B8; // 0x0B8
 };
 

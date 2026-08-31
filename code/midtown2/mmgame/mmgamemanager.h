@@ -23,7 +23,21 @@
 
 #include "core/arts.h"
 
+#include "arts7/ascamera.h"
 #include "arts7/asnode.h"
+
+class Base_vtbl;
+class mmGame;
+class mmMultiBlitz;
+class mmMultiCR;
+class mmMultiCircuit;
+class mmMultiRace;
+class mmMultiRoam;
+class mmSingleBlitz;
+class mmSingleCircuit;
+class mmSingleRace;
+class mmSingleRoam;
+class mmSingleStunt;
 
 class mmGameManager : public asNode
 {
@@ -58,8 +72,25 @@ public:
 private:
     // ?Instance@mmGameManager@@0PAV1@A
     ARTS_IMPORT static mmGameManager* Instance;
+
+public:
+    // Members from 0x018; everything below that belongs to asNode.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    asCamera m_Camera; // 0x018
+    mmGame* m_CurrentGame; // 0x188
+    mmSingleRoam* m_SingleRoamGame; // 0x18C
+    mmSingleRace* m_SingleRaceGame; // 0x190
+    mmSingleStunt* m_SingleStuntGame; // 0x194
+    mmSingleCircuit* m_SingleCircuitGame; // 0x198
+    mmSingleBlitz* m_SingleBlitzGame; // 0x19C
+    mmMultiRace* m_MultiRaceGame; // 0x1A0
+    mmMultiRoam* m_MultiRoamGame; // 0x1A4
+    mmMultiCR* m_MultiCRGame; // 0x1A8
+    mmMultiCircuit* m_MultiCircuitGame; // 0x1AC
+    mmMultiBlitz* m_MultiBlitzGame; // 0x1B0
+    i32 NumUpdateCallsSinceReset; // 0x1B4
 };
 
 // ??_7mmGameManager@@6B@
 // vtable at 0x005B0368
-// check_size(mmGameManager, 0x1B8); // size known, members are not - cannot verify
+check_size(mmGameManager, 0x1B8);

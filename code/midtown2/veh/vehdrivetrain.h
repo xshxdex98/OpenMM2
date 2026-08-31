@@ -25,8 +25,11 @@
 
 #include "arts7/asnode.h"
 
+class Base_vtbl;
 class datParser;
 class vehCarSim;
+class vehEngine;
+class vehTransmission;
 class vehWheel;
 
 class vehDrivetrain : public asNode
@@ -77,11 +80,13 @@ public:
 public:
     // Members from 0x018; everything below that belongs to asNode.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i32 field_18; // 0x018
-    i32 field_1C; // 0x01C
-    i32 field_20; // 0x020
-    i32 field_24; // 0x024
-    u8 field_28[24]; // 0x028
+    vehCarSim* m_CarSimPtr; // 0x018
+    vehEngine* m_AttachedEngine; // 0x01C
+    vehTransmission* m_AttachedTransmission; // 0x020
+    i32 WheelCount; // 0x024
+    vehWheel* Wheels[4]; // 0x028
+    f32 DynamicAmount; // 0x038
+    f32 unknown60; // 0x03C
     f32 AngInertia; // 0x040
     f32 BrakeDynamicCoef; // 0x044
     f32 BrakeStaticCoef; // 0x048

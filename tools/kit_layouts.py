@@ -114,12 +114,26 @@ def with_base(cls, fields, sizes, bases, seen=None):
     seen = seen or set()
     own = sorted((f for f in fields.get(cls, []) if f.get("name") and f.get("offset") is not None),
                  key=lambda f: f["offset"])
-    if not own or own[0]["offset"] == 0:
+    # A CLASS THE KIT WRITES AS NOTHING BUT AN EMBEDDED BASE IS A PURE ALIAS, not a class with no
+    # layout:
+    #
+    #     struct MM2::lvlIntersectionPoint // sizeof=0x24 { MM2::phIntersectionPoint ; };
+    #     struct MM2::asCullable           // sizeof=0x4  { MM2::Base ; };
+    #
+    # Returning an empty list for those did not just lose the alias. asCullable returning nothing
+    # cost asNode its vtable pointer, so asNode flattened from 0x04 and convert() refused it for
+    # "first member is at 0x4, not 0" - and with asNode refused, every class under it was refused
+    # too. That is why phIntersection could never find lvlIntersectionPoint.
+    #
+    # Splicing the base in is only sound when the two report the same sizeof. That equality is what
+    # makes "pure alias" a fact about the recovered data rather than an assumption about it.
+    if own and own[0]["offset"] == 0:
         return own, None
 
     base = bases.get(cls)
     if not base:
-        return None, "starts at 0x%X with no base recorded" % own[0]["offset"]
+        return None, ("no own fields and no base recorded" if not own else
+                      "starts at 0x%X with no base recorded" % own[0]["offset"])
     if base in seen:
         return None, "cycle through %s" % base
     if base not in fields:
@@ -127,10 +141,13 @@ def with_base(cls, fields, sizes, bases, seen=None):
 
     # The base must account for exactly the space before the first own member. If it does not, the
     # two are describing different objects and splicing them would invent a layout.
+    # For an alias there is no first own member to measure against, so the class's own sizeof is
+    # the thing the base has to account for.
+    want = own[0]["offset"] if own else sizes.get(cls)
     base_size = sizes.get(base)
-    if base_size != own[0]["offset"]:
+    if base_size != want:
         return None, ("base %s is 0x%X but own members start at 0x%X"
-                      % (base, base_size or 0, own[0]["offset"]))
+                      % (base, base_size or 0, want or 0))
 
     inherited, why = with_base(base, fields, sizes, bases, seen | {cls})
     if inherited is None:

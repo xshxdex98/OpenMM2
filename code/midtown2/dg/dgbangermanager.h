@@ -25,6 +25,7 @@
 
 #include "arts7/asnode.h"
 
+class Base_vtbl;
 class dgHitBangerInstance;
 
 class dgBangerManager : public asNode
@@ -58,9 +59,9 @@ protected:
 public:
     // Members from 0x018; everything below that belongs to asNode.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i32 field_18; // 0x018
-    i32 field_1C; // 0x01C
-    i32 field_20; // 0x020
+    dgHitBangerInstance* HitBangerPool; // 0x018
+    i32 CurPoolIndex; // 0x01C
+    i32 PoolSize; // 0x020
 };
 
 // ??_7dgBangerManager@@6B@

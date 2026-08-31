@@ -28,6 +28,7 @@
 #include "dg/dgphysentity.h"
 #include "ph/phinertialcs.h"
 #include "ph/phsleep.h"
+#include "veh/vehweelcheap.h"
 
 class Base_vtbl;
 struct ImpactCBData;

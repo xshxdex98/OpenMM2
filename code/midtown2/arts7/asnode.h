@@ -106,6 +106,7 @@ public:
     ARTS_IMPORT void SwitchTo(i32 index);
 
 public:
+    // Members from 0x004; everything below that belongs to asCullable.
     // Offset order is mandatory - the original code reads these at fixed offsets.
     asNode* Next; // 0x004
     asNode* Children; // 0x008

@@ -64,6 +64,7 @@ private:
     ARTS_IMPORT void Reposition();
 
 public:
+    // Members from 0x058; everything below that belongs to dgUnhitMtxBangerInstance.
     // Offset order is mandatory - the original code reads these at fixed offsets.
     i32 field_58; // 0x058
     i32 field_5C; // 0x05C

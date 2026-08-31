@@ -27,7 +27,10 @@
 
 #include "asnode.h"
 
+class Base_vtbl;
 class Vector3;
+class modShader;
+class modStatic;
 
 class asMeshSetForm : public asNode
 {
@@ -62,13 +65,13 @@ public:
 public:
     // Members from 0x018; everything below that belongs to asNode.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i32 field_18; // 0x018
-    i32 field_1C; // 0x01C
-    i32 field_20; // 0x020
-    i32 field_24; // 0x024
-    u8 field_28[4]; // 0x028
-    i32 field_2C; // 0x02C
-    Matrix34 field_30; // 0x030
+    modStatic* ModStatic; // 0x018
+    i32 VariantCount; // 0x01C
+    modShader** Shaders; // 0x020
+    modShader* ChosenShaderSet; // 0x024
+    i32 dword_28; // 0x028
+    i32 Flags; // 0x02C
+    Matrix34 Matrix; // 0x030
 };
 
 // ??_7asMeshSetForm@@6B@

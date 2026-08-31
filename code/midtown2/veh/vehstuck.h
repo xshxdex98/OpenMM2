@@ -24,8 +24,11 @@
 #include "core/arts.h"
 
 #include "arts7/asnode.h"
+#include "vector7/vector3.h"
 
+class Base_vtbl;
 class datParser;
+class phInertialCS;
 class vehCarSim;
 
 class vehStuck : public asNode
@@ -60,8 +63,25 @@ public:
 
     // ?Pegged@vehStuck@@QAEHXZ
     ARTS_IMPORT i32 Pegged();
+
+public:
+    // Members from 0x018; everything below that belongs to asNode.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    i32 State; // 0x018
+    f32 StuckTime; // 0x01C
+    Vector3 LastImpactPos; // 0x020
+    f32 TimeThresh; // 0x02C
+    f32 PosThresh; // 0x030
+    f32 MoveThresh; // 0x034
+    f32 PosThreshSqr; // 0x038
+    f32 MoveThreshSqr; // 0x03C
+    f32 Turn; // 0x040
+    f32 Rotation; // 0x044
+    f32 Translation; // 0x048
+    phInertialCS* m_InertialCSPtr; // 0x04C
+    vehCarSim* m_CarSimPtr; // 0x050
 };
 
 // ??_7vehStuck@@6B@
 // vtable at 0x005B2EB8
-// check_size(vehStuck, 0x54); // size known, members are not - cannot verify
+check_size(vehStuck, 0x54);

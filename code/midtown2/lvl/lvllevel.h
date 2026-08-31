@@ -94,6 +94,7 @@ protected:
     ARTS_IMPORT static bool sm_PhysicsMode;
 
 public:
+    // Members from 0x004; everything below that belongs to asCullable.
     // Offset order is mandatory - the original code reads these at fixed offsets.
     u16 field_4; // 0x004
     u8 field_6[2]; // 0x006

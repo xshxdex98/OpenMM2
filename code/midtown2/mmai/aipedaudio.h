@@ -25,6 +25,8 @@
 
 #include "audio/audcreaturecontainer.h"
 
+class Vector3;
+
 class aiPedAudio : public AudCreatureContainer
 {
 public:

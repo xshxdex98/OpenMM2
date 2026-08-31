@@ -23,10 +23,14 @@
 
 #include "core/arts.h"
 
+#include "vector7/matrix34.h"
+#include "vector7/vector3.h"
+
 #include "camcarcs.h"
 
-class Matrix34;
-class Vector3;
+class Base_vtbl;
+class asNode;
+class camViewCS;
 class vehCar;
 
 class camAICS : public camCarCS

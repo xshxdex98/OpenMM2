@@ -25,6 +25,7 @@
 
 #include "arts7/asnode.h"
 
+class Base_vtbl;
 class Matrix34;
 class Vector3;
 
@@ -52,8 +53,13 @@ public:
 private:
     // ?ReColorArrow@mmArrow@@AAEXH@Z
     ARTS_IMPORT void ReColorArrow(i32 arg1);
+
+public:
+    // Members from 0x018; everything below that belongs to asNode.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    u8 _buffer[80]; // 0x018
 };
 
 // ??_7mmArrow@@6B@
 // vtable at 0x005B0CAC
-// check_size(mmArrow, 0x68); // size known, members are not - cannot verify
+check_size(mmArrow, 0x68);

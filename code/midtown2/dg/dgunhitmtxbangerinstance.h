@@ -23,9 +23,10 @@
 
 #include "core/arts.h"
 
+#include "vector7/matrix34.h"
+
 #include "dgunhitbangerinstance.h"
 
-class Matrix34;
 class Vector3;
 
 class dgUnhitMtxBangerInstance : public dgUnhitBangerInstance
@@ -42,8 +43,14 @@ public:
 
     // ?SizeOf@dgUnhitMtxBangerInstance@@UAEIXZ
     ARTS_IMPORT virtual u32 SizeOf();
+
+public:
+    // Members from 0x018; everything below that belongs to dgUnhitBangerInstance.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    u8 gap[16]; // 0x018
+    Matrix34 Matrix; // 0x028
 };
 
 // ??_7dgUnhitMtxBangerInstance@@6B@
 // vtable at 0x005B1494
-// check_size(dgUnhitMtxBangerInstance, 0x58); // size known, members are not - cannot verify
+check_size(dgUnhitMtxBangerInstance, 0x58);

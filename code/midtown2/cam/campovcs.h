@@ -23,9 +23,16 @@
 
 #include "core/arts.h"
 
+#include "vector7/matrix34.h"
+#include "vector7/vector3.h"
+
 #include "camcarcs.h"
 
+class Base_vtbl;
+class asNode;
+class camViewCS;
 class datParser;
+class vehCar;
 
 class camPovCS : public camCarCS
 {
@@ -64,20 +71,14 @@ private:
 public:
     // Members from 0x110; everything below that belongs to camCarCS.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i32 field_110; // 0x110
-    i32 Offset; // 0x114
-    f32 field_118; // 0x118
-    i32 field_11C; // 0x11C
-    i32 ReverseOffset; // 0x120
-    f32 field_124; // 0x124
-    f32 field_128; // 0x128
-    i32 POVJitterAmp; // 0x12C
-    i32 field_130; // 0x130
-    i32 field_134; // 0x134
-    i32 field_138; // 0x138
-    i32 field_13C; // 0x13C
-    i32 Pitch; // 0x140
-    i32 field_144; // 0x144
+    i32 unk_110; // 0x110
+    Vector3 Offset; // 0x114
+    Vector3 ReverseOffset; // 0x120
+    f32 POVJitterAmp; // 0x12C
+    Vector3 unk_130; // 0x130
+    f32 Angle; // 0x13C
+    f32 Pitch; // 0x140
+    f32 Yaw; // 0x144
 };
 
 // ??_7camPovCS@@6B@

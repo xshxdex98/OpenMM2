@@ -23,9 +23,15 @@
 
 #include "core/arts.h"
 
+#include "vector7/matrix34.h"
 #include "vector7/vector3.h"
 
 #include "camcarcs.h"
+
+class Base_vtbl;
+class asNode;
+class camViewCS;
+class vehCar;
 
 class camPointCS : public camCarCS
 {
@@ -65,8 +71,19 @@ public:
 
     // ?SetVel@camPointCS@@QAEXAAVVector3@@@Z
     ARTS_IMPORT void SetVel(Vector3& arg1);
+
+public:
+    // Members from 0x110; everything below that belongs to camCarCS.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    Vector3 position; // 0x110
+    Vector3 velocity; // 0x11C
+    f32 unk_128; // 0x128
+    f32 maxDist; // 0x12C
+    f32 appRate; // 0x130
+    f32 minDist; // 0x134
+    f32 unk_138; // 0x138
 };
 
 // ??_7camPointCS@@6B@
 // vtable at 0x005B4FD8
-// check_size(camPointCS, 0x13C); // size known, members are not - cannot verify
+check_size(camPointCS, 0x13C);

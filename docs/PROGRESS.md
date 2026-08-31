@@ -19,8 +19,8 @@ Two numbers matter and they are different:
 | | | |
 |---|--:|---|
 | Ported | 2.11% | `#...........................` |
-| Ready to port | 70.1% | `####################........` |
-| Size known, members not | 14.4% | `####........................` |
+| Ready to port | 71.5% | `####################........` |
+| Size known, members not | 13.1% | `####........................` |
 
 | Metric | Value |
 |---|--:|
@@ -29,8 +29,8 @@ Two numbers matter and they are different:
 | Machine code | 1.7 MB |
 | Code ported | 36.2 KB |
 | Classes | 535 |
-| Classes with a member layout | 283 (53%) |
-| Classes with only a size | 67 |
+| Classes with a member layout | 303 (57%) |
+| Classes with only a size | 47 |
 | Virtual methods | 1938 |
 | Vftables | 340 |
 | `game.asm` remaining | 23.2 MB, 10879 PROCs |
@@ -46,17 +46,17 @@ layout is known.
 | Subsystem | Classes | Functions | Code | Share | Ported | Ready |
 |---|--:|--:|--:|--:|--:|--:|
 | `misc` | 128 | 3559 | 512.7 KB | 29.8% | 5.1% | 80% |
-| `mm` | 106 | 1732 | 329.8 KB | 19.2% | 0.4% | 64% |
+| `mm` | 106 | 1732 | 329.8 KB | 19.2% | 0.4% | 67% |
 | `ai` | 42 | 773 | 245.2 KB | 14.3% | 0.5% | 59% |
 | `ph` | 27 | 437 | 164.2 KB | 9.5% | 0.0% | 75% |
-| `veh` | 34 | 585 | 91.5 KB | 5.3% | 1.0% | 84% |
+| `veh` | 34 | 585 | 91.5 KB | 5.3% | 1.0% | 88% |
 | `gfx` | 13 | 189 | 46.6 KB | 2.7% | 13.3% | 55% |
-| `sdl` | 4 | 37 | 46.5 KB | 2.7% | 0.0% | 99% |
-| `dg` | 28 | 263 | 44.3 KB | 2.6% | 0.0% | 53% |
-| `lvl` | 18 | 221 | 36.3 KB | 2.1% | 0.0% | 66% |
+| `sdl` | 4 | 37 | 46.5 KB | 2.7% | 0.0% | 100% |
+| `dg` | 28 | 263 | 44.3 KB | 2.6% | 0.0% | 54% |
+| `lvl` | 18 | 221 | 36.3 KB | 2.1% | 0.0% | 68% |
 | `as` | 18 | 246 | 34.9 KB | 2.0% | 0.0% | 84% |
 | `aud` | 19 | 322 | 23.9 KB | 1.4% | 0.0% | 0% |
-| `cam` | 12 | 136 | 22.1 KB | 1.3% | 0.0% | 68% |
+| `cam` | 12 | 136 | 22.1 KB | 1.3% | 0.0% | 79% |
 | `cr` | 15 | 125 | 19.8 KB | 1.2% | 0.2% | 35% |
 | `mod` | 4 | 44 | 16.8 KB | 1.0% | 0.7% | 100% |
 | `giz` | 12 | 134 | 13.2 KB | 0.8% | 0.0% | 49% |
@@ -65,7 +65,7 @@ layout is known.
 | `lt` | 4 | 41 | 10.0 KB | 0.6% | 0.0% | 98% |
 | `ped` | 5 | 48 | 6.8 KB | 0.4% | 0.0% | 68% |
 | `ptx` | 2 | 11 | 5.2 KB | 0.3% | 0.0% | 0% |
-| `fx` | 3 | 25 | 5.0 KB | 0.3% | 0.0% | 72% |
+| `fx` | 3 | 25 | 5.0 KB | 0.3% | 0.0% | 100% |
 | `io` | 6 | 33 | 3.8 KB | 0.2% | 0.0% | 36% |
 | `zip` | 2 | 18 | 3.2 KB | 0.2% | 0.0% | 100% |
 | `mem` | 2 | 25 | 2.9 KB | 0.2% | 0.0% | 100% |
@@ -88,7 +88,7 @@ layout is known.
 - **1938 virtual methods across 340 vftables.** Constructors must be ported together
   with every virtual of their class, or the vtable the compiler emits will not link.
 - Largest class not yet ported: **`aiVehiclePhysics`** at 58.7 KB.
-- **252 classes (513.6 KB, 30% of code) have no known layout** and are blocked: their
+- **232 classes (490.8 KB, 29% of code) have no known layout** and are blocked: their
   member offsets would have to be guessed, which is how you get silent corruption.
 
 ### Biggest blocked classes

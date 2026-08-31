@@ -26,6 +26,7 @@
 #include "arts7/asnode.h"
 #include "data7/datcallback.h"
 
+class Base_vtbl;
 class Matrix34;
 class Vector3;
 class camCarCS;
@@ -74,18 +75,18 @@ public:
 public:
     // Members from 0x018; everything below that belongs to asNode.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i32 field_18; // 0x018
-    u8 field_1C[8]; // 0x01C
-    datCallback field_24; // 0x024
-    i32 field_30; // 0x030
-    i32 field_34; // 0x034
-    i32 field_38; // 0x038
-    u8 field_3C; // 0x03C
-    u8 field_3D[3]; // 0x03D
-    f32 field_40; // 0x040
-    f32 field_44; // 0x044
-    u8 field_48; // 0x048
-    u8 field_49[3]; // 0x049
+    i32 unk_18; // 0x018
+    i32 unk_1C; // 0x01C
+    i32 unk_20; // 0x020
+    datCallback callback; // 0x024
+    camCarCS* carCS; // 0x030
+    void* unk_34; // 0x034
+    void* transitionCS; // 0x038
+    bool unk_3C; // 0x03C
+    u8 pad_3D[3]; // 0x03D
+    f32 unk_40; // 0x040
+    f32 unk_44; // 0x044
+    i32 unk_48; // 0x048
 };
 
 // ??_7camViewCS@@6B@

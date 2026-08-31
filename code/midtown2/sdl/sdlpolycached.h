@@ -23,6 +23,9 @@
 
 #include "core/arts.h"
 
+#include "vector7/vector3.h"
+#include "vector7/vector4.h"
+
 #include "sdlpoly.h"
 
 class sdlPolyCached : public sdlPoly
@@ -30,6 +33,11 @@ class sdlPolyCached : public sdlPoly
 public:
     // ?InitFromPoly@sdlPolyCached@@QAEXPBVsdlPoly@@@Z
     ARTS_IMPORT void InitFromPoly(const sdlPoly* arg1);
+
+public:
+    // Members from 0x060; everything below that belongs to sdlPoly.
+    // Offset order is mandatory - the original code reads these at fixed offsets.
+    Vector3 Verts[4]; // 0x060
 };
 
-// check_size(sdlPolyCached, 0x90); // size known, members are not - cannot verify
+check_size(sdlPolyCached, 0x90);

@@ -53,6 +53,7 @@ public:
     ARTS_IMPORT void Update();
 
 public:
+    // Members from 0x004; everything below that belongs to asCullable.
     // Offset order is mandatory - the original code reads these at fixed offsets.
     i32 field_4; // 0x004
     asSparkLut* asSparkLut; // 0x008

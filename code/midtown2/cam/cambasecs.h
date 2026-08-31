@@ -26,7 +26,9 @@
 #include "arts7/asnode.h"
 #include "vector7/matrix34.h"
 
+class Base_vtbl;
 class Vector3;
+class camViewCS;
 class datParser;
 
 class camBaseCS : public asNode
@@ -68,11 +70,11 @@ public:
 public:
     // Members from 0x018; everything below that belongs to asNode.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    u16 field_18; // 0x018
-    u8 field_1A[2]; // 0x01A
-    Matrix34 field_1C; // 0x01C
-    Matrix34 field_4C; // 0x04C
-    i32 field_7C; // 0x07C
+    u16 unk_18; // 0x018
+    u16 unk_1A; // 0x01A
+    Matrix34 matrix_1; // 0x01C
+    Matrix34 matrix_2; // 0x04C
+    camViewCS* view; // 0x07C
     f32 BlendTime; // 0x080
     f32 BlendGoal; // 0x084
     f32 CameraFOV; // 0x088

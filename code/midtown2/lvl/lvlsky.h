@@ -62,6 +62,7 @@ public:
     ARTS_IMPORT void SetupFog(f32 arg1);
 
 public:
+    // Members from 0x004; everything below that belongs to asCullable.
     // Offset order is mandatory - the original code reads these at fixed offsets.
     modStatic* HighModel; // 0x004
     modShader** pShaders; // 0x008

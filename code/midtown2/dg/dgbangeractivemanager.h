@@ -25,7 +25,9 @@
 
 #include "arts7/asnode.h"
 
-class dgBangerActive;
+#include "dgbangeractive.h"
+
+class Base_vtbl;
 class dgBangerInstance;
 
 class dgBangerActiveManager : public asNode
@@ -62,9 +64,9 @@ protected:
 public:
     // Members from 0x018; everything below that belongs to asNode.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    i32 field_18; // 0x018
-    u8 field_1C[25468]; // 0x01C
-    i32 field_6398; // 0x6398
+    dgBangerActive** ActiveInstances[32]; // 0x018
+    dgBangerActive BangerPool[32]; // 0x098
+    i32 NumActive; // 0x6398
 };
 
 // ??_7dgBangerActiveManager@@6B@

@@ -28,7 +28,9 @@
 #include "vector7/vector2.h"
 #include "vector7/vector3.h"
 
+class Base_vtbl;
 class Vector4;
+class mmWaypointInstance;
 
 class mmWaypointObject : public asNode
 {
@@ -90,23 +92,19 @@ public:
 public:
     // Members from 0x018; everything below that belongs to asNode.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    u8 field_18[4]; // 0x018
-    i32 field_1C; // 0x01C
-    i32 field_20; // 0x020
+    i32 field_18; // 0x018
+    i32 WaypointType; // 0x01C
+    i32 HitFlag; // 0x020
     i32 field_24; // 0x024
-    i32 field_28; // 0x028
-    i32 field_2C; // 0x02C
-    i32 field_30; // 0x030
-    i32 field_34; // 0x034
-    i32 field_38; // 0x038
-    i32 field_3C; // 0x03C
-    f32 field_40; // 0x040
-    f32 field_44; // 0x044
-    f32 field_48; // 0x048
-    i32 field_4C; // 0x04C
-    u8 field_50[4]; // 0x050
-    i32 field_54; // 0x054
-    f32 field_58; // 0x058
+    i32 HitRoom; // 0x028
+    mmWaypointInstance* WaypointInstance; // 0x02C
+    Vector2 RightGatePt; // 0x030
+    Vector2 LeftGatePt; // 0x038
+    Vector3 Position; // 0x040
+    f32 Heading; // 0x04C
+    i32 HeadingType; // 0x050
+    f32 Radius; // 0x054
+    i32 field_58; // 0x058
 };
 
 // ??_7mmWaypointObject@@6B@

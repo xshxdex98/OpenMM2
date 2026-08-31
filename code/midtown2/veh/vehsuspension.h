@@ -26,6 +26,7 @@
 #include "arts7/asnode.h"
 #include "vector7/matrix34.h"
 
+class Base_vtbl;
 class vehCarSim;
 class vehWheel;
 
@@ -53,11 +54,11 @@ public:
 public:
     // Members from 0x018; everything below that belongs to asNode.
     // Offset order is mandatory - the original code reads these at fixed offsets.
-    Matrix34 field_18; // 0x018
-    Matrix34 field_48; // 0x048
-    u8 field_78[4]; // 0x078
-    i32 field_7C; // 0x07C
-    f32 field_80; // 0x080
+    Matrix34 SuspensionPivot; // 0x018
+    Matrix34 SuspensionMatrix; // 0x048
+    vehCarSim* CarSim; // 0x078
+    vehWheel* Wheel; // 0x07C
+    f32 unknown128; // 0x080
     i32 Mode; // 0x084
 };
 
