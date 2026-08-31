@@ -64,7 +64,7 @@ __declspec(naked) void __cdecl _CIsin()
         fnstsw  ax
         test    ah, 4          ; C2 - argument was out of range, nothing was computed
         jz      done
-    reduce:
+        ; falls through here when C2 was set: reduce and retry
         fldpi
         fadd    st(0), st(0)   ; 2*pi
         fxch    st(1)
@@ -88,7 +88,7 @@ __declspec(naked) void __cdecl _CIcos()
         fnstsw  ax
         test    ah, 4
         jz      done
-    reduce:
+        ; falls through here when C2 was set: reduce and retry
         fldpi
         fadd    st(0), st(0)
         fxch    st(1)

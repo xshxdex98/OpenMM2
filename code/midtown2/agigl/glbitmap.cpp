@@ -40,9 +40,6 @@ define_dummy_symbol(agigl_glbitmap);
 
 #    include "data7/printer.h"
 
-// gfx/gfxbitmap.h names IDirectDrawSurface7 without declaring it.
-class IDirectDrawSurface7;
-
 #    include "gfx/gfxbitmap.h"
 #    include "gfx/gfximage.h"
 

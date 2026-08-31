@@ -55,7 +55,7 @@ define_dummy_symbol(agigl_glgfxpipeline);
 
 // gfx/gfxbitmap.h names IDirectDrawSurface7 without declaring it. Declared here so the include
 // parses; see docs/opengl_plan.md.
-class IDirectDrawSurface7;
+struct IDirectDrawSurface7;
 
 #    include "gfx/gfxbitmap.h"
 
