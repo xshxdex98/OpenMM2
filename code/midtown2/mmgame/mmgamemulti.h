@@ -57,13 +57,13 @@ public:
     ARTS_IMPORT virtual void InitOtherPlayers();
 
     // ?UpdateDebugKeyInput@mmGameMulti@@UAEXH@Z
-    ARTS_IMPORT virtual void UpdateDebugKeyInput(i32 arg1);
+    ARTS_EXPORT virtual void UpdateDebugKeyInput(i32 arg1);
 
     // ?UpdateGame@mmGameMulti@@UAEXXZ
     ARTS_IMPORT virtual void UpdateGame();
 
     // ?NextRace@mmGameMulti@@UAEXXZ
-    ARTS_IMPORT virtual void NextRace();
+    ARTS_EXPORT virtual void NextRace();
 
     // ?HitWaterHandler@mmGameMulti@@UAEXXZ
     ARTS_IMPORT virtual void HitWaterHandler();
@@ -138,7 +138,7 @@ public:
     ARTS_IMPORT void SendBootMsg(ulong arg1);
 
     // ?SendCarTuning@mmGameMulti@@QAEXPBDK@Z
-    ARTS_IMPORT void SendCarTuning(const char* arg1, ulong arg2);
+    ARTS_EXPORT void SendCarTuning(const char* arg1, ulong arg2);
 
     // ?SendHostCars@mmGameMulti@@QAEXK@Z
     ARTS_IMPORT void SendHostCars(ulong arg1);
@@ -165,7 +165,7 @@ public:
     ARTS_IMPORT void SystemMessageCB(void* arg1, void* arg2);
 
     // ?UpdateNetWorkAudio@mmGameMulti@@QAEXXZ
-    ARTS_IMPORT void UpdateNetWorkAudio();
+    ARTS_EXPORT void UpdateNetWorkAudio();
 
     // ?UpdateScore@mmGameMulti@@QAEXXZ
     ARTS_IMPORT void UpdateScore();

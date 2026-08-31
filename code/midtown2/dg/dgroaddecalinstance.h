@@ -46,16 +46,16 @@ public:
     ARTS_IMPORT virtual const Matrix34& GetMatrix(Matrix34& arg1);
 
     // ?SetMatrix@dgRoadDecalInstance@@UAEXABVMatrix34@@@Z
-    ARTS_IMPORT virtual void SetMatrix(const Matrix34& arg1);
+    ARTS_EXPORT virtual void SetMatrix(const Matrix34& arg1);
 
     // ?Draw@dgRoadDecalInstance@@UAEXH@Z
-    ARTS_IMPORT virtual void Draw(i32 arg1);
+    ARTS_EXPORT virtual void Draw(i32 arg1);
 
     // ?DrawShadow@dgRoadDecalInstance@@UAEXXZ
     ARTS_IMPORT virtual void DrawShadow();
 
     // ?SizeOf@dgRoadDecalInstance@@UAEIXZ
-    ARTS_IMPORT virtual u32 SizeOf();
+    ARTS_EXPORT virtual u32 SizeOf();
 
 public:
     // Members from 0x014; everything below that belongs to lvlInstance.

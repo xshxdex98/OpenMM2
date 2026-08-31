@@ -38,28 +38,28 @@ public:
     ARTS_IMPORT void AddClient(eqEventMonitor* arg1);
 
     // ?BeginGfx@eqEventHandler@@QAEHHHH@Z
-    ARTS_IMPORT i32 BeginGfx(i32 arg1, i32 arg2, i32 arg3);
+    ARTS_EXPORT i32 BeginGfx(i32 arg1, i32 arg2, i32 arg3);
 
     // ?ClearActive@eqEventHandler@@QAEXH@Z
-    ARTS_IMPORT void ClearActive(i32 arg1);
+    ARTS_EXPORT void ClearActive(i32 arg1);
 
     // ?EKeyName@eqEventHandler@@SAPADH@Z
     ARTS_IMPORT static char* EKeyName(i32 arg1);
 
     // ?EndGfx@eqEventHandler@@QAEXXZ
-    ARTS_IMPORT void EndGfx();
+    ARTS_EXPORT void EndGfx();
 
     // ?MinimizeApp@eqEventHandler@@QAEXH@Z
-    ARTS_IMPORT void MinimizeApp(i32 arg1);
+    ARTS_EXPORT void MinimizeApp(i32 arg1);
 
     // ?RemoveClient@eqEventHandler@@QAEXPAVeqEventMonitor@@@Z
     ARTS_IMPORT void RemoveClient(eqEventMonitor* arg1);
 
     // ?RestoreApp@eqEventHandler@@QAEXXZ
-    ARTS_IMPORT void RestoreApp();
+    ARTS_EXPORT void RestoreApp();
 
     // ?SetActive@eqEventHandler@@QAEXH@Z
-    ARTS_IMPORT void SetActive(i32 arg1);
+    ARTS_EXPORT void SetActive(i32 arg1);
 
     // ?Update@eqEventHandler@@QAEXXZ
     ARTS_IMPORT void Update();

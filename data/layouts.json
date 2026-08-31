@@ -130154,7 +130154,7 @@
    },
    {
     "offset": 72,
-    "type": "mmGame::mmGame::mmGame::mmGame::mmPlayer*",
+    "type": "mmPlayer*",
     "name": "pPlayer",
     "count": 0,
     "width": 4
@@ -299041,7 +299041,7 @@
    },
    {
     "offset": 140,
-    "type": "UIIconW::UIIconW::mmToggle*",
+    "type": "mmToggle*",
     "name": "pToggle",
     "count": 0,
     "width": 4

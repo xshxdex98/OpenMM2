@@ -35,7 +35,7 @@ public:
     ARTS_IMPORT virtual ~dgPhysEntity();
 
     // ?PreUpdate@dgPhysEntity@@UAEXXZ
-    ARTS_IMPORT virtual void PreUpdate();
+    ARTS_EXPORT virtual void PreUpdate();
 
     // ?Update@dgPhysEntity@@UAEXXZ
     ARTS_IMPORT virtual void Update();
@@ -44,13 +44,13 @@ public:
     ARTS_IMPORT virtual phCollider* GetCollider();
 
     // ?DetachMe@dgPhysEntity@@UAEXXZ
-    ARTS_IMPORT virtual void DetachMe();
+    ARTS_EXPORT virtual void DetachMe();
 
     // ?RequiresTerrainCollision@dgPhysEntity@@UAE_NXZ
-    ARTS_IMPORT virtual bool RequiresTerrainCollision();
+    ARTS_EXPORT virtual bool RequiresTerrainCollision();
 
     // ?FirstImpactCallback@dgPhysEntity@@UAEXXZ
-    ARTS_IMPORT virtual void FirstImpactCallback();
+    ARTS_EXPORT virtual void FirstImpactCallback();
 
 public:
     // Members from 0x004; everything below that belongs to Base.

@@ -26,6 +26,7 @@
 #include "arts7/asnode.h"
 
 class Vector3;
+class mmPlayer;
 class mmPopup;
 
 class mmGame : public asNode
@@ -129,7 +130,7 @@ public:
     // Members from 0x018; everything below that belongs to asNode.
     // Offset order is mandatory - the original code reads these at fixed offsets.
     u8 gap10[48]; // 0x018
-    mmGame::mmGame::mmGame::mmGame::mmPlayer* pPlayer; // 0x048
+    mmPlayer* pPlayer; // 0x048
     u8 field_4C[64]; // 0x04C
     void* field_8C; // 0x08C
     u8 field_90[4]; // 0x090

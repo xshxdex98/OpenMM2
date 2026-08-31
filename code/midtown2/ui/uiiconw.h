@@ -31,6 +31,7 @@
 
 struct LocString;
 class mmTextNode;
+class mmToggle;
 
 class UIIconW : public uiWidget
 {
@@ -57,7 +58,7 @@ public:
     // Members from 0x06C; everything below that belongs to uiWidget.
     // Offset order is mandatory - the original code reads these at fixed offsets.
     u8 field_6C[32]; // 0x06C
-    UIIconW::UIIconW::mmToggle* pToggle; // 0x08C
+    mmToggle* pToggle; // 0x08C
     mmTextNode* pText; // 0x090
     datCallback Callback; // 0x094
     u32 field_A0; // 0x0A0

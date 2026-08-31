@@ -53,6 +53,20 @@ SCALARS = {
 ARRAY = re.compile(r"^(.*?)\s*\[(\d+)\]$")
 
 
+# IDA SOMETIMES OVER-QUALIFIES A TYPE WITH ITS OWN OWNER, REPEATEDLY. _ALL_TYPES.h:52801 spells
+# mmGame's player pointer `struct mmGame::mmGame::mmGame::mmGame::mmPlayer *`, which is not a type
+# and is not what the class holds - mmPlayer is a top-level class in the same subsystem.
+#
+# Requiring the qualifier to repeat is what keeps this from touching a genuine nested name: a real
+# Owner::Nested appears once, and one occurrence is left alone.
+REPEATED_SCOPE = re.compile(r"(\w+)::(?:::)+")
+
+
+def unqualify(text):
+    """Drop a scope qualifier that IDA repeated - see REPEATED_SCOPE."""
+    return REPEATED_SCOPE.sub("", text)
+
+
 def map_member(text):
     """`_BYTE[32] gap54` -> ('u8', 'gap54', 32). `aiPedestrian * Peds` -> ('aiPedestrian*', 'Peds', 0)."""
     text = text.strip()

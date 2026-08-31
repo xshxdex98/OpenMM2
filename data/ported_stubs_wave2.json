@@ -1,0 +1,32 @@
+{
+ "_comment": [
+  "Wave 2 of the empty-default seam. Every body read from MM2_RE_KIT/GHIDRA_DECOMP.",
+  "",
+  "Excluded, with reasons: dgRoadDecalInstance::GetMatrix returns const Matrix34& while the",
+  "binary returns null - a null reference is UB to write in C++; MixerCTL::WindowProc is private",
+  "and needs HWND__, which belongs in pcwindis; asFileIO::GetClassName returns a string literal",
+  "through a const char*, which is grouped with the other GetClassName ports."
+ ],
+ "ported": [
+  "?BeginGfx@eqEventHandler@@QAEHHHH@Z",
+  "?EndGfx@eqEventHandler@@QAEXXZ",
+  "?RestoreApp@eqEventHandler@@QAEXXZ",
+  "?MinimizeApp@eqEventHandler@@QAEXH@Z",
+  "?SetActive@eqEventHandler@@QAEXH@Z",
+  "?ClearActive@eqEventHandler@@QAEXH@Z",
+  "?PreUpdate@dgPhysEntity@@UAEXXZ",
+  "?DetachMe@dgPhysEntity@@UAEXXZ",
+  "?RequiresTerrainCollision@dgPhysEntity@@UAE_NXZ",
+  "?FirstImpactCallback@dgPhysEntity@@UAEXXZ",
+  "?SetMatrix@dgRoadDecalInstance@@UAEXABVMatrix34@@@Z",
+  "?Draw@dgRoadDecalInstance@@UAEXH@Z",
+  "?SizeOf@dgRoadDecalInstance@@UAEIXZ",
+  "?RefreshAll@MixerCTL@@QAEXK@Z",
+  "?GetWaveVolume@MixerCTL@@QAEMXZ",
+  "?GetCDVolume@MixerCTL@@QAEMXZ",
+  "?NextRace@mmGameMulti@@UAEXXZ",
+  "?UpdateDebugKeyInput@mmGameMulti@@UAEXH@Z",
+  "?SendCarTuning@mmGameMulti@@QAEXPBDK@Z",
+  "?UpdateNetWorkAudio@mmGameMulti@@QAEXXZ"
+ ]
+}

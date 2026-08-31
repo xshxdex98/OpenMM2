@@ -18,22 +18,22 @@ Two numbers matter and they are different:
 
 | | | |
 |---|--:|---|
-| Ported | 2.15% | `#...........................` |
+| Ported | 2.17% | `#...........................` |
 | Ready to port | 72.3% | `####################........` |
 | Size known, members not | 12.4% | `###.........................` |
 
 | Metric | Value |
 |---|--:|
 | Functions | 9307 |
-| Functions ported | 347 |
+| Functions ported | 367 |
 | Machine code | 1.7 MB |
-| Code ported | 37.0 KB |
+| Code ported | 37.3 KB |
 | Classes | 535 |
 | Classes with a member layout | 305 (57%) |
 | Classes with only a size | 46 |
 | Virtual methods | 1938 |
 | Vftables | 340 |
-| `game.asm` remaining | 23.2 MB, 10829 PROCs |
+| `game.asm` remaining | 23.2 MB, 10809 PROCs |
 
 The size of `game.asm` *is* the progress bar: it starts holding the whole game and
 shrinks with every function ported.
@@ -52,7 +52,7 @@ layout is known.
 | `veh` | 34 | 585 | 91.5 KB | 5.3% | 1.0% | 91% |
 | `gfx` | 13 | 189 | 46.6 KB | 2.7% | 13.3% | 55% |
 | `sdl` | 4 | 37 | 46.5 KB | 2.7% | 0.0% | 100% |
-| `dg` | 28 | 263 | 44.3 KB | 2.6% | 0.3% | 80% |
+| `dg` | 28 | 263 | 44.3 KB | 2.6% | 0.5% | 80% |
 | `lvl` | 18 | 221 | 36.3 KB | 2.1% | 0.9% | 68% |
 | `as` | 18 | 246 | 34.9 KB | 2.0% | 0.1% | 84% |
 | `aud` | 19 | 322 | 23.9 KB | 1.4% | 0.0% | 0% |
@@ -70,7 +70,7 @@ layout is known.
 | `zip` | 2 | 18 | 3.2 KB | 0.2% | 0.0% | 100% |
 | `mem` | 2 | 25 | 2.9 KB | 0.2% | 0.0% | 100% |
 | `mc` | 1 | 10 | 2.5 KB | 0.1% | 0.0% | 0% |
-| `eq` | 3 | 27 | 2.3 KB | 0.1% | 0.0% | 100% |
+| `eq` | 3 | 27 | 2.3 KB | 0.1% | 4.2% | 100% |
 | `par` | 1 | 11 | 1.6 KB | 0.1% | 0.0% | 0% |
 | `ui` | 2 | 33 | 1.6 KB | 0.1% | 7.0% | 100% |
 | `sf` | 1 | 12 | 1.1 KB | 0.1% | 0.0% | 100% |
@@ -135,12 +135,12 @@ Layout known, so these can be started today.
 |---|--:|--:|--:|
 | 2026-08-30 | 2.11% | 36.2 KB | 23.2 MB |
 | 2026-08-30 | 2.11% | 36.2 KB | 23.2 MB |
-| 2026-08-30 | 2.11% | 36.2 KB | 23.2 MB |
-| 2026-08-30 | 2.11% | 36.2 KB | 23.2 MB |
 | 2026-08-30 | 2.12% | 36.5 KB | 23.2 MB |
 | 2026-08-30 | 2.12% | 36.5 KB | 23.2 MB |
 | 2026-08-30 | 2.12% | 36.5 KB | 23.2 MB |
 | 2026-08-30 | 2.13% | 36.6 KB | 23.2 MB |
+| 2026-08-30 | 2.15% | 37.0 KB | 23.2 MB |
+| 2026-08-30 | 2.15% | 37.0 KB | 23.2 MB |
 | 2026-08-30 | 2.15% | 37.0 KB | 23.2 MB |
 | 2026-08-30 | 2.15% | 37.0 KB | 23.2 MB |
 | 2026-08-30 | 2.15% | 37.0 KB | 23.2 MB |

@@ -54,7 +54,7 @@ public:
     ARTS_IMPORT f32 GetCDBalance();
 
     // ?GetCDVolume@MixerCTL@@QAEMXZ
-    ARTS_IMPORT f32 GetCDVolume();
+    ARTS_EXPORT f32 GetCDVolume();
 
     // ?GetMixerBalance@MixerCTL@@QAEMK@Z
     ARTS_IMPORT f32 GetMixerBalance(ulong arg1);
@@ -63,13 +63,13 @@ public:
     ARTS_IMPORT f32 GetWaveBalance();
 
     // ?GetWaveVolume@MixerCTL@@QAEMXZ
-    ARTS_IMPORT f32 GetWaveVolume();
+    ARTS_EXPORT f32 GetWaveVolume();
 
     // ?Init@MixerCTL@@QAEKXZ
     ARTS_IMPORT ulong Init();
 
     // ?RefreshAll@MixerCTL@@QAEXK@Z
-    ARTS_IMPORT void RefreshAll(ulong arg1);
+    ARTS_EXPORT void RefreshAll(ulong arg1);
 
     // ?SetDeviceNum@MixerCTL@@QAEXI@Z
     ARTS_IMPORT void SetDeviceNum(u32 arg1);
