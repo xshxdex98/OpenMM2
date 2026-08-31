@@ -1,0 +1,37 @@
+{
+ "_comment": [
+  "Empty and constant-returning defaults from four base/UI classes, read out of",
+  "MM2_RE_KIT/GHIDRA_DECOMP and confirmed one instruction each in the binary.",
+  "",
+  "Deliberately excluded: phBound's ?SetFriction@phBound@@UAEMXZ and",
+  "?SetElasticity@phBound@@UAEMXZ, which return M with no arguments - they are getters, and",
+  "Ghidra shows `return;` because it dropped the x87 return value. Also cityLevel::GetWaterLevel,",
+  "which returns the unsymbolised global _DAT_0062998C.",
+  "",
+  "Also excluded: uiWidget::Action and ::CaptureAction, which take an eqEvent BY VALUE. eqEvent has no recovered layout anywhere - forward-declared in six headers, defined in none - and a by-value parameter needs the complete type."
+ ],
+ "ported": [
+  "?EvalMouseX@uiWidget@@UAEXM@Z",
+  "?ReturnDescription@uiWidget@@UAEPADXZ",
+  "?SetPosition@uiWidget@@UAEXMM@Z",
+  "?GetScreenHeight@uiWidget@@UAEMXZ",
+  "?AddToolTip@uiWidget@@QAEXPAVUIMenu@@PAULocString@@@Z",
+  "?ClampToWorld@lvlLevel@@UAE_NAAVVector3@@@Z",
+  "?SetObjectDetail@lvlLevel@@UAEXH@Z",
+  "?Collide@lvlLevel@@UAE_NHAAVlvlSegment@@PAVlvlIntersection@@@Z",
+  "?GetBoundSphere@lvlLevel@@UAE_NAAVVector4@@H@Z",
+  "?GetEnvMap@lvlLevel@@UAEPAVgfxTexture@@HABVVector3@@AAM@Z",
+  "?UpdatePaused@aiMap@@UAEXXZ",
+  "?Cull@aiMap@@UAEXXZ",
+  "?DrawNextVisibleAmbient@aiMap@@QAEXXZ",
+  "?DrawX@aiMap@@QAEXAAVVector3@@@Z",
+  "?DrawFinalCheckPoint@aiMap@@QAEXXZ",
+  "?SetDescription@NetSelectMenu@@QAEXPAULocString@@@Z",
+  "?ShowTCPIPNetSessions@NetSelectMenu@@QAEXXZ",
+  "?DisableSessions@NetSelectMenu@@QAEXXZ",
+  "?ReparentWidgets@NetSelectMenu@@QAEXH@Z",
+  "?WidgetSwitch@NetSelectMenu@@QAEXHH@Z",
+  "?AddWidgetToList@NetSelectMenu@@QAEXHPAVuiWidget@@@Z",
+  "?SetTCPLocalButton@NetSelectMenu@@QAEXH@Z"
+ ]
+}

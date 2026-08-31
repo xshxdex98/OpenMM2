@@ -66,19 +66,19 @@ public:
     ARTS_IMPORT virtual void Switch(i32 arg1);
 
     // ?EvalMouseX@uiWidget@@UAEXM@Z
-    ARTS_IMPORT virtual void EvalMouseX(f32 arg1);
+    ARTS_EXPORT virtual void EvalMouseX(f32 arg1);
 
     // ?ReturnDescription@uiWidget@@UAEPADXZ
-    ARTS_IMPORT virtual char* ReturnDescription();
+    ARTS_EXPORT virtual char* ReturnDescription();
 
     // ?SetPosition@uiWidget@@UAEXMM@Z
-    ARTS_IMPORT virtual void SetPosition(f32 arg1, f32 arg2);
+    ARTS_EXPORT virtual void SetPosition(f32 arg1, f32 arg2);
 
     // ?GetScreenHeight@uiWidget@@UAEMXZ
-    ARTS_IMPORT virtual f32 GetScreenHeight();
+    ARTS_EXPORT virtual f32 GetScreenHeight();
 
     // ?AddToolTip@uiWidget@@QAEXPAVUIMenu@@PAULocString@@@Z
-    ARTS_IMPORT void AddToolTip(UIMenu* arg1, LocString* arg2);
+    ARTS_EXPORT void AddToolTip(UIMenu* arg1, LocString* arg2);
 
     // ?ResetToolTip@uiWidget@@QAEXXZ
     ARTS_IMPORT void ResetToolTip();

@@ -58,7 +58,7 @@ public:
     ARTS_IMPORT virtual ~aiMap();
 
     // ?Cull@aiMap@@UAEXXZ
-    ARTS_IMPORT virtual void Cull();
+    ARTS_EXPORT virtual void Cull();
 
     // ?Update@aiMap@@UAEXXZ
     ARTS_IMPORT virtual void Update();
@@ -67,7 +67,7 @@ public:
     ARTS_IMPORT virtual void Reset();
 
     // ?UpdatePaused@aiMap@@UAEXXZ
-    ARTS_IMPORT virtual void UpdatePaused();
+    ARTS_EXPORT virtual void UpdatePaused();
 
     // ?AddAmbient@aiMap@@QAEXPAVaiVehicleSpline@@@Z
     ARTS_IMPORT void AddAmbient(aiVehicleSpline* arg1);
@@ -145,19 +145,19 @@ public:
     ARTS_IMPORT void DrawAppRoads();
 
     // ?DrawFinalCheckPoint@aiMap@@QAEXXZ
-    ARTS_IMPORT void DrawFinalCheckPoint();
+    ARTS_EXPORT void DrawFinalCheckPoint();
 
     // ?DrawMap@aiMap@@QAEXXZ
     ARTS_IMPORT void DrawMap();
 
     // ?DrawNextVisibleAmbient@aiMap@@QAEXXZ
-    ARTS_IMPORT void DrawNextVisibleAmbient();
+    ARTS_EXPORT void DrawNextVisibleAmbient();
 
     // ?DrawPathIds@aiMap@@QAEXXZ
     ARTS_IMPORT void DrawPathIds();
 
     // ?DrawX@aiMap@@QAEXAAVVector3@@@Z
-    ARTS_IMPORT void DrawX(Vector3& arg1);
+    ARTS_EXPORT void DrawX(Vector3& arg1);
 
     // ?Dump@aiMap@@QAEXXZ
     ARTS_IMPORT void Dump();

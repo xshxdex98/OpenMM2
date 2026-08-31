@@ -52,7 +52,7 @@ public:
     ARTS_IMPORT void AddModem(char* renderer, i32 DrawList);
 
     // ?AddWidgetToList@NetSelectMenu@@QAEXHPAVuiWidget@@@Z
-    ARTS_IMPORT void AddWidgetToList(i32 arg1, uiWidget* arg2);
+    ARTS_EXPORT void AddWidgetToList(i32 arg1, uiWidget* arg2);
 
     // ?BuildComs@NetSelectMenu@@QAEXXZ
     ARTS_IMPORT void BuildComs();
@@ -61,7 +61,7 @@ public:
     ARTS_IMPORT void ClearProtocol();
 
     // ?DisableSessions@NetSelectMenu@@QAEXXZ
-    ARTS_IMPORT void DisableSessions();
+    ARTS_EXPORT void DisableSessions();
 
     // ?EnableSearchLabel@NetSelectMenu@@QAEX_N@Z
     ARTS_IMPORT void EnableSearchLabel(bool arg1);
@@ -100,13 +100,13 @@ public:
     ARTS_IMPORT void ProtocolBack();
 
     // ?ReparentWidgets@NetSelectMenu@@QAEXH@Z
-    ARTS_IMPORT void ReparentWidgets(i32 arg1);
+    ARTS_EXPORT void ReparentWidgets(i32 arg1);
 
     // ?SetComs@NetSelectMenu@@QAEXXZ
     ARTS_IMPORT void SetComs();
 
     // ?SetDescription@NetSelectMenu@@QAEXPAULocString@@@Z
-    ARTS_IMPORT void SetDescription(LocString* arg1);
+    ARTS_EXPORT void SetDescription(LocString* arg1);
 
     // ?SetIPAddress@NetSelectMenu@@QAEXPAD@Z
     ARTS_IMPORT void SetIPAddress(char* arg1);
@@ -130,16 +130,16 @@ public:
     ARTS_IMPORT void SetSession(char* arg1, i32 arg2);
 
     // ?SetTCPLocalButton@NetSelectMenu@@QAEXH@Z
-    ARTS_IMPORT void SetTCPLocalButton(i32 arg1);
+    ARTS_EXPORT void SetTCPLocalButton(i32 arg1);
 
     // ?SetTCPNetButton@NetSelectMenu@@QAEXH@Z
     ARTS_IMPORT void SetTCPNetButton(i32 arg1);
 
     // ?ShowTCPIPNetSessions@NetSelectMenu@@QAEXXZ
-    ARTS_IMPORT void ShowTCPIPNetSessions();
+    ARTS_EXPORT void ShowTCPIPNetSessions();
 
     // ?WidgetSwitch@NetSelectMenu@@QAEXHH@Z
-    ARTS_IMPORT void WidgetSwitch(i32 arg1, i32 arg2);
+    ARTS_EXPORT void WidgetSwitch(i32 arg1, i32 arg2);
 
 public:
     // Members from 0x08C; everything below that belongs to UIMenu.
